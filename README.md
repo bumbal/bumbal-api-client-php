@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/bumbal/bumbal-client-api-php.git"
+      "url": "https://github.com/bumbal/bumbal-api-client-php.git"
     }
   ],
   "require": {
-    "bumbal/bumbal-client-api-php": "*@dev"
+    "bumbal/bumbal-api-client-php": "*@dev"
   }
 }
 ```
