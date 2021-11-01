@@ -54,7 +54,8 @@ class ZoneOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_zone_ranges' => 'bool'
+        'include_zone_ranges' => 'bool',
+        'include_brands' => 'bool'
     ];
 
     /**
@@ -62,7 +63,8 @@ class ZoneOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_zone_ranges' => null
+        'include_zone_ranges' => null,
+        'include_brands' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class ZoneOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_zone_ranges' => 'include_zone_ranges'
+        'include_zone_ranges' => 'include_zone_ranges',
+        'include_brands' => 'include_brands'
     ];
 
 
@@ -89,7 +92,8 @@ class ZoneOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_zone_ranges' => 'setIncludeZoneRanges'
+        'include_zone_ranges' => 'setIncludeZoneRanges',
+        'include_brands' => 'setIncludeBrands'
     ];
 
 
@@ -98,7 +102,8 @@ class ZoneOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_zone_ranges' => 'getIncludeZoneRanges'
+        'include_zone_ranges' => 'getIncludeZoneRanges',
+        'include_brands' => 'getIncludeBrands'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class ZoneOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_zone_ranges'] = isset($data['include_zone_ranges']) ? $data['include_zone_ranges'] : null;
+        $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;
     }
 
     /**
@@ -177,6 +183,27 @@ class ZoneOptionsModel implements ArrayAccess
     public function setIncludeZoneRanges($include_zone_ranges)
     {
         $this->container['include_zone_ranges'] = $include_zone_ranges;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_brands
+     * @return bool
+     */
+    public function getIncludeBrands()
+    {
+        return $this->container['include_brands'];
+    }
+
+    /**
+     * Sets include_brands
+     * @param bool $include_brands 
+     * @return $this
+     */
+    public function setIncludeBrands($include_brands)
+    {
+        $this->container['include_brands'] = $include_brands;
 
         return $this;
     }

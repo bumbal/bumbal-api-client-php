@@ -113,6 +113,13 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "value_options"
+     */
+    public function testPropertyValueOptions()
+    {
+    }
+
+    /**
      * Test attribute "setting_updated_at"
      */
     public function testPropertySettingUpdatedAt()

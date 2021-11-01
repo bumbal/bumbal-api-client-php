@@ -83,6 +83,16 @@ class LinkApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for retrieveListLink
+     *
+     * Retrieve List of Links.
+     *
+     */
+    public function testRetrieveListLink()
+    {
+    }
+
+    /**
      * Test case for updateLink
      *
      * Update a specific link object.

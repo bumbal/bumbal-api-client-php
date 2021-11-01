@@ -58,7 +58,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'filters' => '\BumbalClient\Model\ZoneFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string'
+        'sorting_column' => 'string',
+        'sorting_direction' => 'string',
+        'search_text' => 'string',
+        'count_only' => 'bool'
     ];
 
     /**
@@ -70,7 +73,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'filters' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_text' => null
+        'sorting_column' => null,
+        'sorting_direction' => null,
+        'search_text' => null,
+        'count_only' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +98,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text'
+        'sorting_column' => 'sorting_column',
+        'sorting_direction' => 'sorting_direction',
+        'search_text' => 'search_text',
+        'count_only' => 'count_only'
     ];
 
 
@@ -105,7 +114,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'sorting_column' => 'setSortingColumn',
+        'sorting_direction' => 'setSortingDirection',
+        'search_text' => 'setSearchText',
+        'count_only' => 'setCountOnly'
     ];
 
 
@@ -118,7 +130,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'sorting_column' => 'getSortingColumn',
+        'sorting_direction' => 'getSortingDirection',
+        'search_text' => 'getSearchText',
+        'count_only' => 'getCountOnly'
     ];
 
     public static function attributeMap()
@@ -136,8 +151,34 @@ class ZoneRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
+    const SORTING_COLUMN_NAME = 'name';
+    const SORTING_DIRECTION_ASC = 'asc';
+    const SORTING_DIRECTION_DESC = 'desc';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingColumnAllowableValues()
+    {
+        return [
+            self::SORTING_COLUMN_NAME,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingDirectionAllowableValues()
+    {
+        return [
+            self::SORTING_DIRECTION_ASC,
+            self::SORTING_DIRECTION_DESC,
+        ];
+    }
     
 
     /**
@@ -156,7 +197,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
+        $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
 
     /**
@@ -167,6 +211,22 @@ class ZoneRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'sorting_column', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'sorting_direction', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
 
         return $invalid_properties;
     }
@@ -180,6 +240,14 @@ class ZoneRetrieveListArguments implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -269,6 +337,66 @@ class ZoneRetrieveListArguments implements ArrayAccess
     }
 
     /**
+     * Gets sorting_column
+     * @return string
+     */
+    public function getSortingColumn()
+    {
+        return $this->container['sorting_column'];
+    }
+
+    /**
+     * Sets sorting_column
+     * @param string $sorting_column Sorting Column
+     * @return $this
+     */
+    public function setSortingColumn($sorting_column)
+    {
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!is_null($sorting_column) && !in_array($sorting_column, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sorting_column', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['sorting_column'] = $sorting_column;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_direction
+     * @return string
+     */
+    public function getSortingDirection()
+    {
+        return $this->container['sorting_direction'];
+    }
+
+    /**
+     * Sets sorting_direction
+     * @param string $sorting_direction Sorting Direction
+     * @return $this
+     */
+    public function setSortingDirection($sorting_direction)
+    {
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!is_null($sorting_direction) && !in_array($sorting_direction, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sorting_direction', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['sorting_direction'] = $sorting_direction;
+
+        return $this;
+    }
+
+    /**
      * Gets search_text
      * @return string
      */
@@ -285,6 +413,27 @@ class ZoneRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_only
+     * @return bool
+     */
+    public function getCountOnly()
+    {
+        return $this->container['count_only'];
+    }
+
+    /**
+     * Sets count_only
+     * @param bool $count_only 
+     * @return $this
+     */
+    public function setCountOnly($count_only)
+    {
+        $this->container['count_only'] = $count_only;
 
         return $this;
     }

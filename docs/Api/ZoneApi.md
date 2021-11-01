@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListZone**
-> \BumbalClient\Model\ZoneModel[] retrieveListZone($arguments)
+> \BumbalClient\Model\ZoneListResponse retrieveListZone($arguments)
 
 Retrieve List of Zone
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ZoneModel[]**](../Model/ZoneModel.md)
+[**\BumbalClient\Model\ZoneListResponse**](../Model/ZoneListResponse.md)
 
 ### Authorization
 

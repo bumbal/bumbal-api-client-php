@@ -175,6 +175,90 @@ class LinkApi
     }
 
     /**
+     * Operation retrieveListLink
+     *
+     * Retrieve List of Links
+     *
+     * @param \BumbalClient\Model\LinkRetrieveListArguments $arguments Link RetrieveList Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\LinkListResponse[]
+     */
+    public function retrieveListLink($arguments)
+    {
+        list($response) = $this->retrieveListLinkWithHttpInfo($arguments);
+        return $response;
+    }
+
+    /**
+     * Operation retrieveListLinkWithHttpInfo
+     *
+     * Retrieve List of Links
+     *
+     * @param \BumbalClient\Model\LinkRetrieveListArguments $arguments Link RetrieveList Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\LinkListResponse[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function retrieveListLinkWithHttpInfo($arguments)
+    {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling retrieveListLink');
+        }
+        // parse inputs
+        $resourcePath = "/link";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\LinkListResponse[]',
+                '/link'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\LinkListResponse[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\LinkListResponse[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation updateLink
      *
      * Update a specific link object

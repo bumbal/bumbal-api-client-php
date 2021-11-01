@@ -60,7 +60,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_id' => 'string',
         'uom_name' => 'string',
         'uom' => '\BumbalClient\Model\UomModel',
-        'values_uom' => '\BumbalClient\Model\UomModel'
+        'values_uom' => '\BumbalClient\Model\UomModel',
+        'sys' => 'bool'
     ];
 
     /**
@@ -74,7 +75,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_id' => null,
         'uom_name' => null,
         'uom' => null,
-        'values_uom' => null
+        'values_uom' => null,
+        'sys' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +100,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_id' => 'uom_id',
         'uom_name' => 'uom_name',
         'uom' => 'uom',
-        'values_uom' => 'values_uom'
+        'values_uom' => 'values_uom',
+        'sys' => 'sys'
     ];
 
 
@@ -113,7 +116,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_id' => 'setUomId',
         'uom_name' => 'setUomName',
         'uom' => 'setUom',
-        'values_uom' => 'setValuesUom'
+        'values_uom' => 'setValuesUom',
+        'sys' => 'setSys'
     ];
 
 
@@ -128,7 +132,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_id' => 'getUomId',
         'uom_name' => 'getUomName',
         'uom' => 'getUom',
-        'values_uom' => 'getValuesUom'
+        'values_uom' => 'getValuesUom',
+        'sys' => 'getSys'
     ];
 
     public static function attributeMap()
@@ -169,6 +174,7 @@ class CapacityTypeModel implements ArrayAccess
         $this->container['uom_name'] = isset($data['uom_name']) ? $data['uom_name'] : null;
         $this->container['uom'] = isset($data['uom']) ? $data['uom'] : null;
         $this->container['values_uom'] = isset($data['values_uom']) ? $data['values_uom'] : null;
+        $this->container['sys'] = isset($data['sys']) ? $data['sys'] : null;
     }
 
     /**
@@ -339,6 +345,27 @@ class CapacityTypeModel implements ArrayAccess
     public function setValuesUom($values_uom)
     {
         $this->container['values_uom'] = $values_uom;
+
+        return $this;
+    }
+
+    /**
+     * Gets sys
+     * @return bool
+     */
+    public function getSys()
+    {
+        return $this->container['sys'];
+    }
+
+    /**
+     * Sets sys
+     * @param bool $sys created by system boolean
+     * @return $this
+     */
+    public function setSys($sys)
+    {
+        $this->container['sys'] = $sys;
 
         return $this;
     }

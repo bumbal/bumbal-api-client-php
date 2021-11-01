@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 
-**sorting_column** | **string** | Sorting Column | [optional] 
+**sorting_column** | **string** | Sorting Column. Option include_party_name has to be set for party_name as the sorting column. Option include_booking_account has to be set for account_name as the sorting column. | [optional] 
 **sorting_direction** | **string** | Sorting Direction | [optional] 
 **as_list** | **bool** |  | [optional] 
 **count_only** | **bool** |  | [optional] 

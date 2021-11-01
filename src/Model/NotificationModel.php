@@ -56,6 +56,7 @@ class NotificationModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'object_type' => 'int',
+        'title' => 'string',
         'object_type_name' => 'string',
         'object_id' => 'int',
         'notification_category_id' => 'int',
@@ -78,6 +79,7 @@ class NotificationModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'object_type' => 'int64',
+        'title' => null,
         'object_type_name' => null,
         'object_id' => null,
         'notification_category_id' => null,
@@ -110,6 +112,7 @@ class NotificationModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'object_type' => 'object_type',
+        'title' => 'title',
         'object_type_name' => 'object_type_name',
         'object_id' => 'object_id',
         'notification_category_id' => 'notification_category_id',
@@ -133,6 +136,7 @@ class NotificationModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'object_type' => 'setObjectType',
+        'title' => 'setTitle',
         'object_type_name' => 'setObjectTypeName',
         'object_id' => 'setObjectId',
         'notification_category_id' => 'setNotificationCategoryId',
@@ -156,6 +160,7 @@ class NotificationModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'object_type' => 'getObjectType',
+        'title' => 'getTitle',
         'object_type_name' => 'getObjectTypeName',
         'object_id' => 'getObjectId',
         'notification_category_id' => 'getNotificationCategoryId',
@@ -204,6 +209,7 @@ class NotificationModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
         $this->container['notification_category_id'] = isset($data['notification_category_id']) ? $data['notification_category_id'] : null;
@@ -282,6 +288,27 @@ class NotificationModel implements ArrayAccess
     public function setObjectType($object_type)
     {
         $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     * @param string $title Notification title
+     * @return $this
+     */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
 
         return $this;
     }

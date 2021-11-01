@@ -59,6 +59,7 @@ class SettingsModel implements ArrayAccess
         'settings_group_name' => 'string',
         'key' => 'string',
         'value' => 'string',
+        'value_options' => '\BumbalClient\Model\ValueOptionModel[]',
         'setting_updated_at' => '\DateTime',
         'setting_updated_by' => 'int',
         'setting_updated_by_user' => '\BumbalClient\Model\UsersModel'
@@ -74,6 +75,7 @@ class SettingsModel implements ArrayAccess
         'settings_group_name' => null,
         'key' => null,
         'value' => null,
+        'value_options' => null,
         'setting_updated_at' => 'date-time',
         'setting_updated_by' => null,
         'setting_updated_by_user' => null
@@ -99,6 +101,7 @@ class SettingsModel implements ArrayAccess
         'settings_group_name' => 'settings_group_name',
         'key' => 'key',
         'value' => 'value',
+        'value_options' => 'value_options',
         'setting_updated_at' => 'setting_updated_at',
         'setting_updated_by' => 'setting_updated_by',
         'setting_updated_by_user' => 'setting_updated_by_user'
@@ -115,6 +118,7 @@ class SettingsModel implements ArrayAccess
         'settings_group_name' => 'setSettingsGroupName',
         'key' => 'setKey',
         'value' => 'setValue',
+        'value_options' => 'setValueOptions',
         'setting_updated_at' => 'setSettingUpdatedAt',
         'setting_updated_by' => 'setSettingUpdatedBy',
         'setting_updated_by_user' => 'setSettingUpdatedByUser'
@@ -131,6 +135,7 @@ class SettingsModel implements ArrayAccess
         'settings_group_name' => 'getSettingsGroupName',
         'key' => 'getKey',
         'value' => 'getValue',
+        'value_options' => 'getValueOptions',
         'setting_updated_at' => 'getSettingUpdatedAt',
         'setting_updated_by' => 'getSettingUpdatedBy',
         'setting_updated_by_user' => 'getSettingUpdatedByUser'
@@ -198,6 +203,7 @@ class SettingsModel implements ArrayAccess
         $this->container['settings_group_name'] = isset($data['settings_group_name']) ? $data['settings_group_name'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['value_options'] = isset($data['value_options']) ? $data['value_options'] : null;
         $this->container['setting_updated_at'] = isset($data['setting_updated_at']) ? $data['setting_updated_at'] : null;
         $this->container['setting_updated_by'] = isset($data['setting_updated_by']) ? $data['setting_updated_by'] : null;
         $this->container['setting_updated_by_user'] = isset($data['setting_updated_by_user']) ? $data['setting_updated_by_user'] : null;
@@ -350,6 +356,27 @@ class SettingsModel implements ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets value_options
+     * @return \BumbalClient\Model\ValueOptionModel[]
+     */
+    public function getValueOptions()
+    {
+        return $this->container['value_options'];
+    }
+
+    /**
+     * Sets value_options
+     * @param \BumbalClient\Model\ValueOptionModel[] $value_options 
+     * @return $this
+     */
+    public function setValueOptions($value_options)
+    {
+        $this->container['value_options'] = $value_options;
 
         return $this;
     }

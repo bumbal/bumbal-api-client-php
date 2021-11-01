@@ -458,7 +458,7 @@ class RecurrenceApi
      *
      * @param \BumbalClient\Model\RecurrenceRetrieveListArguments $arguments Recurrence RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\RecurrenceModel[]
+     * @return \BumbalClient\Model\RecurrenceListResponse
      */
     public function retrieveListRecurrence($arguments)
     {
@@ -473,7 +473,7 @@ class RecurrenceApi
      *
      * @param \BumbalClient\Model\RecurrenceRetrieveListArguments $arguments Recurrence RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\RecurrenceModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\RecurrenceListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListRecurrenceWithHttpInfo($arguments)
     {
@@ -518,15 +518,15 @@ class RecurrenceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\RecurrenceModel[]',
+                '\BumbalClient\Model\RecurrenceListResponse',
                 '/recurrence'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RecurrenceModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RecurrenceListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RecurrenceModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RecurrenceListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **zone_ranges** | [**\BumbalClient\Model\ZoneRangeModel[]**](ZoneRangeModel.md) |  | [optional] 
+**brands** | [**\BumbalClient\Model\BrandModel[]**](BrandModel.md) |  | [optional] 
 **zone_created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **zone_updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **zone_created_by** | **int** | created_by user id | [optional] 

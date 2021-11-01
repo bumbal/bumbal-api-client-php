@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListRecurrence**
-> \BumbalClient\Model\RecurrenceModel[] retrieveListRecurrence($arguments)
+> \BumbalClient\Model\RecurrenceListResponse retrieveListRecurrence($arguments)
 
 Retrieve List of Recurrences
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\RecurrenceModel[]**](../Model/RecurrenceModel.md)
+[**\BumbalClient\Model\RecurrenceListResponse**](../Model/RecurrenceListResponse.md)
 
 ### Authorization
 

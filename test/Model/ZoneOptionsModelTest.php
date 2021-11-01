@@ -83,4 +83,11 @@ class ZoneOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeZoneRanges()
     {
     }
+
+    /**
+     * Test attribute "include_brands"
+     */
+    public function testPropertyIncludeBrands()
+    {
+    }
 }

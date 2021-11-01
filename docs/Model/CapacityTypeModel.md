@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **uom_name** | **string** | Unit of Measurement Name | [optional] 
 **uom** | [**\BumbalClient\Model\UomModel**](UomModel.md) |  | [optional] 
 **values_uom** | [**\BumbalClient\Model\UomModel**](UomModel.md) |  | [optional] 
+**sys** | **bool** | created by system boolean | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

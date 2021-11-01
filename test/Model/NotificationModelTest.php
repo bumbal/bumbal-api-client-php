@@ -92,6 +92,13 @@ class NotificationModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
+    {
+    }
+
+    /**
      * Test attribute "object_type_name"
      */
     public function testPropertyObjectTypeName()

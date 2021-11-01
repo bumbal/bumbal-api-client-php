@@ -85,6 +85,13 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "co_driver_ids"
+     */
+    public function testPropertyCoDriverIds()
+    {
+    }
+
+    /**
      * Test attribute "nr"
      */
     public function testPropertyNr()

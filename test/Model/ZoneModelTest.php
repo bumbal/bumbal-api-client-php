@@ -127,6 +127,13 @@ class ZoneModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "brands"
+     */
+    public function testPropertyBrands()
+    {
+    }
+
+    /**
      * Test attribute "zone_created_at"
      */
     public function testPropertyZoneCreatedAt()

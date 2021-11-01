@@ -56,7 +56,8 @@ class SettingsOptionsModel implements ArrayAccess
     protected static $swaggerTypes = [
         'include_settings_group_name' => 'bool',
         'include_record_info' => 'bool',
-        'include_record_object' => 'bool'
+        'include_record_object' => 'bool',
+        'include_value_options' => 'bool'
     ];
 
     /**
@@ -66,7 +67,8 @@ class SettingsOptionsModel implements ArrayAccess
     protected static $swaggerFormats = [
         'include_settings_group_name' => null,
         'include_record_info' => null,
-        'include_record_object' => null
+        'include_record_object' => null,
+        'include_value_options' => null
     ];
 
     public static function swaggerTypes()
@@ -86,7 +88,8 @@ class SettingsOptionsModel implements ArrayAccess
     protected static $attributeMap = [
         'include_settings_group_name' => 'include_settings_group_name',
         'include_record_info' => 'include_record_info',
-        'include_record_object' => 'include_record_object'
+        'include_record_object' => 'include_record_object',
+        'include_value_options' => 'include_value_options'
     ];
 
 
@@ -97,7 +100,8 @@ class SettingsOptionsModel implements ArrayAccess
     protected static $setters = [
         'include_settings_group_name' => 'setIncludeSettingsGroupName',
         'include_record_info' => 'setIncludeRecordInfo',
-        'include_record_object' => 'setIncludeRecordObject'
+        'include_record_object' => 'setIncludeRecordObject',
+        'include_value_options' => 'setIncludeValueOptions'
     ];
 
 
@@ -108,7 +112,8 @@ class SettingsOptionsModel implements ArrayAccess
     protected static $getters = [
         'include_settings_group_name' => 'getIncludeSettingsGroupName',
         'include_record_info' => 'getIncludeRecordInfo',
-        'include_record_object' => 'getIncludeRecordObject'
+        'include_record_object' => 'getIncludeRecordObject',
+        'include_value_options' => 'getIncludeValueOptions'
     ];
 
     public static function attributeMap()
@@ -145,6 +150,7 @@ class SettingsOptionsModel implements ArrayAccess
         $this->container['include_settings_group_name'] = isset($data['include_settings_group_name']) ? $data['include_settings_group_name'] : null;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
         $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
+        $this->container['include_value_options'] = isset($data['include_value_options']) ? $data['include_value_options'] : null;
     }
 
     /**
@@ -231,6 +237,27 @@ class SettingsOptionsModel implements ArrayAccess
     public function setIncludeRecordObject($include_record_object)
     {
         $this->container['include_record_object'] = $include_record_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_value_options
+     * @return bool
+     */
+    public function getIncludeValueOptions()
+    {
+        return $this->container['include_value_options'];
+    }
+
+    /**
+     * Sets include_value_options
+     * @param bool $include_value_options 
+     * @return $this
+     */
+    public function setIncludeValueOptions($include_value_options)
+    {
+        $this->container['include_value_options'] = $include_value_options;
 
         return $this;
     }
