@@ -225,6 +225,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_equipment_ids"
+     */
+    public function testPropertyIncludeEquipmentIds()
+    {
+    }
+
+    /**
      * Test attribute "include_gps_locations"
      */
     public function testPropertyIncludeGpsLocations()

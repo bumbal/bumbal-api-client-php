@@ -1,6 +1,6 @@
 <?php
 /**
- * NoteModelTest
+ * ServiceWindowsSchemeModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * NoteModelTest Class Doc Comment
+ * ServiceWindowsSchemeModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description NoteModel
+// * @description ServiceWindowsSchemeModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NoteModelTest extends \PHPUnit_Framework_TestCase
+class ServiceWindowsSchemeModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "NoteModel"
+     * Test "ServiceWindowsSchemeModel"
      */
-    public function testNoteModel()
+    public function testServiceWindowsSchemeModel()
     {
     }
 
@@ -85,121 +85,114 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "object_type_name"
+     * Test attribute "name"
      */
-    public function testPropertyObjectTypeName()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "object_id"
+     * Test attribute "even_weeks"
      */
-    public function testPropertyObjectId()
+    public function testPropertyEvenWeeks()
     {
     }
 
     /**
-     * Test attribute "object_link"
+     * Test attribute "odd_weeks"
      */
-    public function testPropertyObjectLink()
+    public function testPropertyOddWeeks()
     {
     }
 
     /**
-     * Test attribute "note_category_id"
+     * Test attribute "tags"
      */
-    public function testPropertyNoteCategoryId()
+    public function testPropertyTags()
     {
     }
 
     /**
-     * Test attribute "note_category_name"
+     * Test attribute "zones"
      */
-    public function testPropertyNoteCategoryName()
+    public function testPropertyZones()
     {
     }
 
     /**
-     * Test attribute "visible_for_driver"
+     * Test attribute "brands"
      */
-    public function testPropertyVisibleForDriver()
+    public function testPropertyBrands()
     {
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "monday"
      */
-    public function testPropertyTitle()
+    public function testPropertyMonday()
     {
     }
 
     /**
-     * Test attribute "updated_by_name"
+     * Test attribute "tuesday"
      */
-    public function testPropertyUpdatedByName()
+    public function testPropertyTuesday()
     {
     }
 
     /**
-     * Test attribute "content"
+     * Test attribute "wednesday"
      */
-    public function testPropertyContent()
+    public function testPropertyWednesday()
     {
     }
 
     /**
-     * Test attribute "files"
+     * Test attribute "thursday"
      */
-    public function testPropertyFiles()
+    public function testPropertyThursday()
     {
     }
 
     /**
-     * Test attribute "links"
+     * Test attribute "friday"
      */
-    public function testPropertyLinks()
+    public function testPropertyFriday()
     {
     }
 
     /**
-     * Test attribute "meta_data"
+     * Test attribute "saturday"
      */
-    public function testPropertyMetaData()
+    public function testPropertySaturday()
     {
     }
 
     /**
-     * Test attribute "active"
+     * Test attribute "sunday"
      */
-    public function testPropertyActive()
+    public function testPropertySunday()
     {
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "min_days_ahead"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyMinDaysAhead()
     {
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "max_days_ahead"
      */
-    public function testPropertyUpdatedAt()
+    public function testPropertyMaxDaysAhead()
     {
     }
 
     /**
-     * Test attribute "created_by"
+     * Test attribute "service_windows"
      */
-    public function testPropertyCreatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "updated_by"
-     */
-    public function testPropertyUpdatedBy()
+    public function testPropertyServiceWindows()
     {
     }
 }

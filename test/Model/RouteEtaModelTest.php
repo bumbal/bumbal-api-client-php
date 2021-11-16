@@ -260,6 +260,13 @@ class RouteEtaModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "equipment_ids"
+     */
+    public function testPropertyEquipmentIds()
+    {
+    }
+
+    /**
      * Test attribute "planned_start_duration"
      */
     public function testPropertyPlannedStartDuration()

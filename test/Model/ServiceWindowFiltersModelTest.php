@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModelTest
+ * ServiceWindowFiltersModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ZoneFiltersModelTest Class Doc Comment
+ * ServiceWindowFiltersModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ZoneFiltersModel
+// * @description ServiceWindowFiltersModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
+class ServiceWindowFiltersModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,16 @@ class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ZoneFiltersModel"
+     * Test "ServiceWindowFiltersModel"
      */
-    public function testZoneFiltersModel()
+    public function testServiceWindowFiltersModel()
+    {
+    }
+
+    /**
+     * Test attribute "service_windows_scheme_id"
+     */
+    public function testPropertyServiceWindowsSchemeId()
     {
     }
 

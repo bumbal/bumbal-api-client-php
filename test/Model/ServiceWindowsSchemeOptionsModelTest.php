@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModelTest
+ * ServiceWindowsSchemeOptionsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ZoneFiltersModelTest Class Doc Comment
+ * ServiceWindowsSchemeOptionsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ZoneFiltersModel
+// * @description ServiceWindowsSchemeOptionsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
+class ServiceWindowsSchemeOptionsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,16 +71,30 @@ class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ZoneFiltersModel"
+     * Test "ServiceWindowsSchemeOptionsModel"
      */
-    public function testZoneFiltersModel()
+    public function testServiceWindowsSchemeOptionsModel()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "include_tags"
      */
-    public function testPropertyId()
+    public function testPropertyIncludeTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_zones"
+     */
+    public function testPropertyIncludeZones()
+    {
+    }
+
+    /**
+     * Test attribute "include_brands"
+     */
+    public function testPropertyIncludeBrands()
     {
     }
 }

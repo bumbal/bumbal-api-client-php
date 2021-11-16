@@ -298,6 +298,13 @@ Class | Method | HTTP request | Description
 *SaywhenApi* | [**saywhenRetrievePortalURL**](docs/Api/SaywhenApi.md#saywhenretrieveportalurl) | **GET** /saywhen/retrieve-portal-url/{activityId} | Retrieve SayWhen Portal URL
 *SaywhenApi* | [**saywhenRetrievePortalURLs**](docs/Api/SaywhenApi.md#saywhenretrieveportalurls) | **PUT** /saywhen/retrieve-portal-urls | Retrieve SayWhen Portal URLs
 *SaywhenApi* | [**saywhenRetrieveStatus**](docs/Api/SaywhenApi.md#saywhenretrievestatus) | **GET** /saywhen/retrieve-status/{activityId} | Retrieve SayWhen Status
+*ServicewindowApi* | [**retrieveListServiceWindow**](docs/Api/ServicewindowApi.md#retrievelistservicewindow) | **PUT** /service-window | Retrieve a list of service windows
+*ServicewindowApi* | [**retrieveServiceWindow**](docs/Api/ServicewindowApi.md#retrieveservicewindow) | **GET** /service-window/{servicewindowid} | Retrieve a single service window
+*ServicewindowApi* | [**setServiceWindow**](docs/Api/ServicewindowApi.md#setservicewindow) | **POST** /service-window/set | Add or update a service window
+*ServicewindowsschemeApi* | [**deleteServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#deleteservicewindowsscheme) | **DELETE** /serviceWindowsScheme/{ServiceWindowsSchemeId} | Delete a service windows scheme
+*ServicewindowsschemeApi* | [**retrieveListServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#retrievelistservicewindowsscheme) | **PUT** /service-windows-scheme | Retrieve a list of service windows schemes
+*ServicewindowsschemeApi* | [**retrieveServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#retrieveservicewindowsscheme) | **GET** /service-windows-scheme/{serviceWindowsSchemeId} | Retrieve a single service windows scheme
+*ServicewindowsschemeApi* | [**setServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#setservicewindowsscheme) | **POST** /service-windows-scheme/set | Add or update a service windows scheme
 *SettingsApi* | [**getConstants**](docs/Api/SettingsApi.md#getconstants) | **GET** /settings/get-constants | getConstants, returns in structure &#39;string&#39;:&#39;string&#39;, can contain rounding errors for floating points
 *SettingsApi* | [**getConstantsReversed**](docs/Api/SettingsApi.md#getconstantsreversed) | **GET** /settings/get-constants-reversed | getConstantsReversed, returns in structure &#39;string&#39;:int/float
 *SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settings
@@ -706,6 +713,17 @@ Class | Method | HTTP request | Description
  - [SayWhenConfigModel](docs/Model/SayWhenConfigModel.md)
  - [SayWhenRetrievePortalURLsArguments](docs/Model/SayWhenRetrievePortalURLsArguments.md)
  - [SayWhenVisitModel](docs/Model/SayWhenVisitModel.md)
+ - [ServiceWindowDayModel](docs/Model/ServiceWindowDayModel.md)
+ - [ServiceWindowFiltersModel](docs/Model/ServiceWindowFiltersModel.md)
+ - [ServiceWindowListResponse](docs/Model/ServiceWindowListResponse.md)
+ - [ServiceWindowModel](docs/Model/ServiceWindowModel.md)
+ - [ServiceWindowOptionsModel](docs/Model/ServiceWindowOptionsModel.md)
+ - [ServiceWindowRetrieveListArguments](docs/Model/ServiceWindowRetrieveListArguments.md)
+ - [ServiceWindowsSchemeFiltersModel](docs/Model/ServiceWindowsSchemeFiltersModel.md)
+ - [ServiceWindowsSchemeListResponse](docs/Model/ServiceWindowsSchemeListResponse.md)
+ - [ServiceWindowsSchemeModel](docs/Model/ServiceWindowsSchemeModel.md)
+ - [ServiceWindowsSchemeOptionsModel](docs/Model/ServiceWindowsSchemeOptionsModel.md)
+ - [ServiceWindowsSchemeRetrieveListArguments](docs/Model/ServiceWindowsSchemeRetrieveListArguments.md)
  - [SettingsFiltersModel](docs/Model/SettingsFiltersModel.md)
  - [SettingsGetConstantsResponse](docs/Model/SettingsGetConstantsResponse.md)
  - [SettingsGetConstantsReversedResponse](docs/Model/SettingsGetConstantsReversedResponse.md)

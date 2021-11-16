@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModel
+ * ServiceWindowsSchemeFiltersModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneFiltersModel Class Doc Comment
+ * ServiceWindowsSchemeFiltersModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModel implements ArrayAccess
+class ServiceWindowsSchemeFiltersModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,18 @@ class ZoneFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneFiltersModel';
+    protected static $swaggerModelName = 'ServiceWindowsSchemeFiltersModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]'
+        'id' => 'int[]',
+        'name' => 'string[]',
+        'tag_names' => 'string[]',
+        'zone_names' => 'string[]',
+        'brand_names' => 'string[]'
     ];
 
     /**
@@ -62,7 +66,11 @@ class ZoneFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null
+        'id' => null,
+        'name' => null,
+        'tag_names' => null,
+        'zone_names' => null,
+        'brand_names' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +88,11 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'name' => 'name',
+        'tag_names' => 'tag_names',
+        'zone_names' => 'zone_names',
+        'brand_names' => 'brand_names'
     ];
 
 
@@ -89,7 +101,11 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'name' => 'setName',
+        'tag_names' => 'setTagNames',
+        'zone_names' => 'setZoneNames',
+        'brand_names' => 'setBrandNames'
     ];
 
 
@@ -98,7 +114,11 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'name' => 'getName',
+        'tag_names' => 'getTagNames',
+        'zone_names' => 'getZoneNames',
+        'brand_names' => 'getBrandNames'
     ];
 
     public static function attributeMap()
@@ -133,6 +153,10 @@ class ZoneFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['brand_names'] = isset($data['brand_names']) ? $data['brand_names'] : null;
     }
 
     /**
@@ -171,12 +195,96 @@ class ZoneFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id zone id's
+     * @param int[] $id Service window scheme id's to filter by
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string[]
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string[] $name Name of the service windows scheme(s) to filter by
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return string[]
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param string[] $tag_names tags to filter by
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return string[]
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param string[] $zone_names zones to filter by
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_names
+     * @return string[]
+     */
+    public function getBrandNames()
+    {
+        return $this->container['brand_names'];
+    }
+
+    /**
+     * Sets brand_names
+     * @param string[] $brand_names brands to filter by
+     * @return $this
+     */
+    public function setBrandNames($brand_names)
+    {
+        $this->container['brand_names'] = $brand_names;
 
         return $this;
     }

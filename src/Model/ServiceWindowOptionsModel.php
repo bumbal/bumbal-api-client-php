@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModel
+ * ServiceWindowOptionsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneFiltersModel Class Doc Comment
+ * ServiceWindowOptionsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModel implements ArrayAccess
+class ServiceWindowOptionsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,14 @@ class ZoneFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneFiltersModel';
+    protected static $swaggerModelName = 'ServiceWindowOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]'
+        
     ];
 
     /**
@@ -62,7 +62,7 @@ class ZoneFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null
+        
     ];
 
     public static function swaggerTypes()
@@ -80,7 +80,7 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        
     ];
 
 
@@ -89,7 +89,7 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        
     ];
 
 
@@ -98,7 +98,7 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        
     ];
 
     public static function attributeMap()
@@ -132,7 +132,6 @@ class ZoneFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -159,27 +158,6 @@ class ZoneFiltersModel implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets id
-     * @return int[]
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int[] $id zone id's
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

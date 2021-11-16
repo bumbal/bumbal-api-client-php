@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **trailer_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **trailer** | [**\BumbalClient\Model\TrailerModel**](TrailerModel.md) |  | [optional] 
 **equipment** | [**\BumbalClient\Model\EquipmentModel[]**](EquipmentModel.md) |  | [optional] 
+**equipment_ids** | **int[]** | Unique Identifier(s) for equipment on route | [optional] 
 **planned_start_duration** | **int** | Duration for start activity | [optional] 
 **planned_end_duration** | **int** | Duration for end activity | [optional] 
 **max_speed** | **int** | Max Speed in km/h | [optional] 

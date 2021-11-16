@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModelTest
+ * ServiceWindowListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ZoneFiltersModelTest Class Doc Comment
+ * ServiceWindowListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description ZoneFiltersModel
+// * @description ServiceWindowListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
+class ServiceWindowListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,16 +71,37 @@ class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ZoneFiltersModel"
+     * Test "ServiceWindowListResponse"
      */
-    public function testZoneFiltersModel()
+    public function testServiceWindowListResponse()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "items"
      */
-    public function testPropertyId()
+    public function testPropertyItems()
+    {
+    }
+
+    /**
+     * Test attribute "count_filtered"
+     */
+    public function testPropertyCountFiltered()
+    {
+    }
+
+    /**
+     * Test attribute "count_unfiltered"
+     */
+    public function testPropertyCountUnfiltered()
+    {
+    }
+
+    /**
+     * Test attribute "count_limited"
+     */
+    public function testPropertyCountLimited()
     {
     }
 }

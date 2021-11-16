@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModelTest
+ * ServiceWindowRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ZoneFiltersModelTest Class Doc Comment
+ * ServiceWindowRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description ZoneFiltersModel
+// * @description ServiceWindowRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
+class ServiceWindowRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,16 +71,58 @@ class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ZoneFiltersModel"
+     * Test "ServiceWindowRetrieveListArguments"
      */
-    public function testZoneFiltersModel()
+    public function testServiceWindowRetrieveListArguments()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "options"
      */
-    public function testPropertyId()
+    public function testPropertyOptions()
+    {
+    }
+
+    /**
+     * Test attribute "filters"
+     */
+    public function testPropertyFilters()
+    {
+    }
+
+    /**
+     * Test attribute "limit"
+     */
+    public function testPropertyLimit()
+    {
+    }
+
+    /**
+     * Test attribute "offset"
+     */
+    public function testPropertyOffset()
+    {
+    }
+
+    /**
+     * Test attribute "search_text"
+     */
+    public function testPropertySearchText()
+    {
+    }
+
+    /**
+     * Test attribute "count_only"
+     */
+    public function testPropertyCountOnly()
+    {
+    }
+
+    /**
+     * Test attribute "as_list"
+     */
+    public function testPropertyAsList()
     {
     }
 }

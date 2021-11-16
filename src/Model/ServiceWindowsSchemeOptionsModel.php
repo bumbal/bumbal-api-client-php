@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModel
+ * ServiceWindowsSchemeOptionsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneFiltersModel Class Doc Comment
+ * ServiceWindowsSchemeOptionsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModel implements ArrayAccess
+class ServiceWindowsSchemeOptionsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,16 @@ class ZoneFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneFiltersModel';
+    protected static $swaggerModelName = 'ServiceWindowsSchemeOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]'
+        'include_tags' => 'bool',
+        'include_zones' => 'bool',
+        'include_brands' => 'bool'
     ];
 
     /**
@@ -62,7 +64,9 @@ class ZoneFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null
+        'include_tags' => null,
+        'include_zones' => null,
+        'include_brands' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +84,9 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'include_tags' => 'include_tags',
+        'include_zones' => 'include_zones',
+        'include_brands' => 'include_brands'
     ];
 
 
@@ -89,7 +95,9 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'include_tags' => 'setIncludeTags',
+        'include_zones' => 'setIncludeZones',
+        'include_brands' => 'setIncludeBrands'
     ];
 
 
@@ -98,7 +106,9 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'include_tags' => 'getIncludeTags',
+        'include_zones' => 'getIncludeZones',
+        'include_brands' => 'getIncludeBrands'
     ];
 
     public static function attributeMap()
@@ -132,7 +142,9 @@ class ZoneFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
+        $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
+        $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;
     }
 
     /**
@@ -161,22 +173,64 @@ class ZoneFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int[]
+     * Gets include_tags
+     * @return bool
      */
-    public function getId()
+    public function getIncludeTags()
     {
-        return $this->container['id'];
+        return $this->container['include_tags'];
     }
 
     /**
-     * Sets id
-     * @param int[] $id zone id's
+     * Sets include_tags
+     * @param bool $include_tags Include tags in listview
      * @return $this
      */
-    public function setId($id)
+    public function setIncludeTags($include_tags)
     {
-        $this->container['id'] = $id;
+        $this->container['include_tags'] = $include_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_zones
+     * @return bool
+     */
+    public function getIncludeZones()
+    {
+        return $this->container['include_zones'];
+    }
+
+    /**
+     * Sets include_zones
+     * @param bool $include_zones Include zones in listview
+     * @return $this
+     */
+    public function setIncludeZones($include_zones)
+    {
+        $this->container['include_zones'] = $include_zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_brands
+     * @return bool
+     */
+    public function getIncludeBrands()
+    {
+        return $this->container['include_brands'];
+    }
+
+    /**
+     * Sets include_brands
+     * @param bool $include_brands Include brands in listview
+     * @return $this
+     */
+    public function setIncludeBrands($include_brands)
+    {
+        $this->container['include_brands'] = $include_brands;
 
         return $this;
     }

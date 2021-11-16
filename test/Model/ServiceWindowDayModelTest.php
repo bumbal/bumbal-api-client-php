@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModelTest
+ * ServiceWindowDayModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ZoneFiltersModelTest Class Doc Comment
+ * ServiceWindowDayModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ZoneFiltersModel
+// * @description ServiceWindowDayModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
+class ServiceWindowDayModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,16 +71,30 @@ class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ZoneFiltersModel"
+     * Test "ServiceWindowDayModel"
      */
-    public function testZoneFiltersModel()
+    public function testServiceWindowDayModel()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "before_cut_off"
      */
-    public function testPropertyId()
+    public function testPropertyBeforeCutOff()
+    {
+    }
+
+    /**
+     * Test attribute "cut_off_time"
+     */
+    public function testPropertyCutOffTime()
+    {
+    }
+
+    /**
+     * Test attribute "after_cut_off"
+     */
+    public function testPropertyAfterCutOff()
     {
     }
 }

@@ -68,10 +68,10 @@ class NoteModel implements ArrayAccess
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'active' => 'bool',
-        'note_created_at' => '\DateTime',
-        'note_updated_at' => '\DateTime',
-        'note_created_by' => 'int',
-        'note_updated_by' => 'int'
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'created_by' => 'int',
+        'updated_by' => 'int'
     ];
 
     /**
@@ -93,10 +93,10 @@ class NoteModel implements ArrayAccess
         'links' => null,
         'meta_data' => null,
         'active' => null,
-        'note_created_at' => 'date-time',
-        'note_updated_at' => 'date-time',
-        'note_created_by' => null,
-        'note_updated_by' => null
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
+        'created_by' => null,
+        'updated_by' => null
     ];
 
     public static function swaggerTypes()
@@ -128,10 +128,10 @@ class NoteModel implements ArrayAccess
         'links' => 'links',
         'meta_data' => 'meta_data',
         'active' => 'active',
-        'note_created_at' => 'note_created_at',
-        'note_updated_at' => 'note_updated_at',
-        'note_created_by' => 'note_created_by',
-        'note_updated_by' => 'note_updated_by'
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'created_by' => 'created_by',
+        'updated_by' => 'updated_by'
     ];
 
 
@@ -154,10 +154,10 @@ class NoteModel implements ArrayAccess
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'active' => 'setActive',
-        'note_created_at' => 'setNoteCreatedAt',
-        'note_updated_at' => 'setNoteUpdatedAt',
-        'note_created_by' => 'setNoteCreatedBy',
-        'note_updated_by' => 'setNoteUpdatedBy'
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'created_by' => 'setCreatedBy',
+        'updated_by' => 'setUpdatedBy'
     ];
 
 
@@ -180,10 +180,10 @@ class NoteModel implements ArrayAccess
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'active' => 'getActive',
-        'note_created_at' => 'getNoteCreatedAt',
-        'note_updated_at' => 'getNoteUpdatedAt',
-        'note_created_by' => 'getNoteCreatedBy',
-        'note_updated_by' => 'getNoteUpdatedBy'
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'created_by' => 'getCreatedBy',
+        'updated_by' => 'getUpdatedBy'
     ];
 
     public static function attributeMap()
@@ -231,10 +231,10 @@ class NoteModel implements ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['note_created_at'] = isset($data['note_created_at']) ? $data['note_created_at'] : null;
-        $this->container['note_updated_at'] = isset($data['note_updated_at']) ? $data['note_updated_at'] : null;
-        $this->container['note_created_by'] = isset($data['note_created_by']) ? $data['note_created_by'] : null;
-        $this->container['note_updated_by'] = isset($data['note_updated_by']) ? $data['note_updated_by'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
+        $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
     }
 
     /**
@@ -557,85 +557,85 @@ class NoteModel implements ArrayAccess
     }
 
     /**
-     * Gets note_created_at
+     * Gets created_at
      * @return \DateTime
      */
-    public function getNoteCreatedAt()
+    public function getCreatedAt()
     {
-        return $this->container['note_created_at'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets note_created_at
-     * @param \DateTime $note_created_at created_at date time
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
      * @return $this
      */
-    public function setNoteCreatedAt($note_created_at)
+    public function setCreatedAt($created_at)
     {
-        $this->container['note_created_at'] = $note_created_at;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets note_updated_at
+     * Gets updated_at
      * @return \DateTime
      */
-    public function getNoteUpdatedAt()
+    public function getUpdatedAt()
     {
-        return $this->container['note_updated_at'];
+        return $this->container['updated_at'];
     }
 
     /**
-     * Sets note_updated_at
-     * @param \DateTime $note_updated_at updated_at date time
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
      * @return $this
      */
-    public function setNoteUpdatedAt($note_updated_at)
+    public function setUpdatedAt($updated_at)
     {
-        $this->container['note_updated_at'] = $note_updated_at;
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
 
     /**
-     * Gets note_created_by
+     * Gets created_by
      * @return int
      */
-    public function getNoteCreatedBy()
+    public function getCreatedBy()
     {
-        return $this->container['note_created_by'];
+        return $this->container['created_by'];
     }
 
     /**
-     * Sets note_created_by
-     * @param int $note_created_by created_by user id
+     * Sets created_by
+     * @param int $created_by created_by user id
      * @return $this
      */
-    public function setNoteCreatedBy($note_created_by)
+    public function setCreatedBy($created_by)
     {
-        $this->container['note_created_by'] = $note_created_by;
+        $this->container['created_by'] = $created_by;
 
         return $this;
     }
 
     /**
-     * Gets note_updated_by
+     * Gets updated_by
      * @return int
      */
-    public function getNoteUpdatedBy()
+    public function getUpdatedBy()
     {
-        return $this->container['note_updated_by'];
+        return $this->container['updated_by'];
     }
 
     /**
-     * Sets note_updated_by
-     * @param int $note_updated_by updated_by user id
+     * Sets updated_by
+     * @param int $updated_by updated_by user id
      * @return $this
      */
-    public function setNoteUpdatedBy($note_updated_by)
+    public function setUpdatedBy($updated_by)
     {
-        $this->container['note_updated_by'] = $note_updated_by;
+        $this->container['updated_by'] = $updated_by;
 
         return $this;
     }

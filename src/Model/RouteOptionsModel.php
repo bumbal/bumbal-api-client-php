@@ -75,6 +75,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_info' => 'bool',
         'include_equipment_info_car' => 'bool',
         'include_equipment' => 'bool',
+        'include_equipment_ids' => 'bool',
         'include_gps_locations' => 'bool',
         'include_pause' => 'bool',
         'include_activity_ids' => 'bool',
@@ -113,6 +114,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_info' => null,
         'include_equipment_info_car' => null,
         'include_equipment' => null,
+        'include_equipment_ids' => null,
         'include_gps_locations' => null,
         'include_pause' => null,
         'include_activity_ids' => null,
@@ -161,6 +163,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_info' => 'include_driver_info',
         'include_equipment_info_car' => 'include_equipment_info_car',
         'include_equipment' => 'include_equipment',
+        'include_equipment_ids' => 'include_equipment_ids',
         'include_gps_locations' => 'include_gps_locations',
         'include_pause' => 'include_pause',
         'include_activity_ids' => 'include_activity_ids',
@@ -200,6 +203,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_equipment_info_car' => 'setIncludeEquipmentInfoCar',
         'include_equipment' => 'setIncludeEquipment',
+        'include_equipment_ids' => 'setIncludeEquipmentIds',
         'include_gps_locations' => 'setIncludeGpsLocations',
         'include_pause' => 'setIncludePause',
         'include_activity_ids' => 'setIncludeActivityIds',
@@ -239,6 +243,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_equipment_info_car' => 'getIncludeEquipmentInfoCar',
         'include_equipment' => 'getIncludeEquipment',
+        'include_equipment_ids' => 'getIncludeEquipmentIds',
         'include_gps_locations' => 'getIncludeGpsLocations',
         'include_pause' => 'getIncludePause',
         'include_activity_ids' => 'getIncludeActivityIds',
@@ -303,6 +308,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_equipment_info_car'] = isset($data['include_equipment_info_car']) ? $data['include_equipment_info_car'] : null;
         $this->container['include_equipment'] = isset($data['include_equipment']) ? $data['include_equipment'] : null;
+        $this->container['include_equipment_ids'] = isset($data['include_equipment_ids']) ? $data['include_equipment_ids'] : null;
         $this->container['include_gps_locations'] = isset($data['include_gps_locations']) ? $data['include_gps_locations'] : null;
         $this->container['include_pause'] = isset($data['include_pause']) ? $data['include_pause'] : null;
         $this->container['include_activity_ids'] = isset($data['include_activity_ids']) ? $data['include_activity_ids'] : null;
@@ -777,6 +783,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeEquipment($include_equipment)
     {
         $this->container['include_equipment'] = $include_equipment;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_equipment_ids
+     * @return bool
+     */
+    public function getIncludeEquipmentIds()
+    {
+        return $this->container['include_equipment_ids'];
+    }
+
+    /**
+     * Sets include_equipment_ids
+     * @param bool $include_equipment_ids 
+     * @return $this
+     */
+    public function setIncludeEquipmentIds($include_equipment_ids)
+    {
+        $this->container['include_equipment_ids'] = $include_equipment_ids;
 
         return $this;
     }

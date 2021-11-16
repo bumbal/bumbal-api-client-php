@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModel
+ * ServiceWindowModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneFiltersModel Class Doc Comment
+ * ServiceWindowModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModel implements ArrayAccess
+class ServiceWindowModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,18 @@ class ZoneFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneFiltersModel';
+    protected static $swaggerModelName = 'ServiceWindowModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]'
+        'id' => 'int',
+        'service_windows_scheme_id' => 'int',
+        'week_day' => 'int',
+        'time_from' => 'string',
+        'time_to' => 'string'
     ];
 
     /**
@@ -62,7 +66,11 @@ class ZoneFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null
+        'id' => 'int64',
+        'service_windows_scheme_id' => 'int64',
+        'week_day' => 'int64',
+        'time_from' => null,
+        'time_to' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +88,11 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'service_windows_scheme_id' => 'service_windows_scheme_id',
+        'week_day' => 'week_day',
+        'time_from' => 'time_from',
+        'time_to' => 'time_to'
     ];
 
 
@@ -89,7 +101,11 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'service_windows_scheme_id' => 'setServiceWindowsSchemeId',
+        'week_day' => 'setWeekDay',
+        'time_from' => 'setTimeFrom',
+        'time_to' => 'setTimeTo'
     ];
 
 
@@ -98,7 +114,11 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'service_windows_scheme_id' => 'getServiceWindowsSchemeId',
+        'week_day' => 'getWeekDay',
+        'time_from' => 'getTimeFrom',
+        'time_to' => 'getTimeTo'
     ];
 
     public static function attributeMap()
@@ -133,6 +153,10 @@ class ZoneFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['service_windows_scheme_id'] = isset($data['service_windows_scheme_id']) ? $data['service_windows_scheme_id'] : null;
+        $this->container['week_day'] = isset($data['week_day']) ? $data['week_day'] : null;
+        $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
+        $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
     }
 
     /**
@@ -162,7 +186,7 @@ class ZoneFiltersModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int[]
+     * @return int
      */
     public function getId()
     {
@@ -171,12 +195,96 @@ class ZoneFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id zone id's
+     * @param int $id Unique ID
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_windows_scheme_id
+     * @return int
+     */
+    public function getServiceWindowsSchemeId()
+    {
+        return $this->container['service_windows_scheme_id'];
+    }
+
+    /**
+     * Sets service_windows_scheme_id
+     * @param int $service_windows_scheme_id Service windows scheme ID
+     * @return $this
+     */
+    public function setServiceWindowsSchemeId($service_windows_scheme_id)
+    {
+        $this->container['service_windows_scheme_id'] = $service_windows_scheme_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets week_day
+     * @return int
+     */
+    public function getWeekDay()
+    {
+        return $this->container['week_day'];
+    }
+
+    /**
+     * Sets week_day
+     * @param int $week_day Week day
+     * @return $this
+     */
+    public function setWeekDay($week_day)
+    {
+        $this->container['week_day'] = $week_day;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_from
+     * @return string
+     */
+    public function getTimeFrom()
+    {
+        return $this->container['time_from'];
+    }
+
+    /**
+     * Sets time_from
+     * @param string $time_from time from
+     * @return $this
+     */
+    public function setTimeFrom($time_from)
+    {
+        $this->container['time_from'] = $time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_to
+     * @return string
+     */
+    public function getTimeTo()
+    {
+        return $this->container['time_to'];
+    }
+
+    /**
+     * Sets time_to
+     * @param string $time_to time to
+     * @return $this
+     */
+    public function setTimeTo($time_to)
+    {
+        $this->container['time_to'] = $time_to;
 
         return $this;
     }

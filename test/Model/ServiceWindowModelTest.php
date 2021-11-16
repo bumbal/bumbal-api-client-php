@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModelTest
+ * ServiceWindowModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ZoneFiltersModelTest Class Doc Comment
+ * ServiceWindowModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ZoneFiltersModel
+// * @description ServiceWindowModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
+class ServiceWindowModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ZoneFiltersModel"
+     * Test "ServiceWindowModel"
      */
-    public function testZoneFiltersModel()
+    public function testServiceWindowModel()
     {
     }
 
@@ -81,6 +81,34 @@ class ZoneFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "service_windows_scheme_id"
+     */
+    public function testPropertyServiceWindowsSchemeId()
+    {
+    }
+
+    /**
+     * Test attribute "week_day"
+     */
+    public function testPropertyWeekDay()
+    {
+    }
+
+    /**
+     * Test attribute "time_from"
+     */
+    public function testPropertyTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "time_to"
+     */
+    public function testPropertyTimeTo()
     {
     }
 }

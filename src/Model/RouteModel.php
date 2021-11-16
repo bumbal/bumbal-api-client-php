@@ -79,6 +79,7 @@ class RouteModel implements ArrayAccess
         'trailer_link' => '\BumbalClient\Model\LinkModel[]',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'equipment' => '\BumbalClient\Model\EquipmentModel[]',
+        'equipment_ids' => 'int[]',
         'planned_start_duration' => 'int',
         'planned_end_duration' => 'int',
         'max_speed' => 'int',
@@ -157,6 +158,7 @@ class RouteModel implements ArrayAccess
         'trailer_link' => null,
         'trailer' => null,
         'equipment' => null,
+        'equipment_ids' => null,
         'planned_start_duration' => null,
         'planned_end_duration' => null,
         'max_speed' => 'int64',
@@ -245,6 +247,7 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'trailer_link',
         'trailer' => 'trailer',
         'equipment' => 'equipment',
+        'equipment_ids' => 'equipment_ids',
         'planned_start_duration' => 'planned_start_duration',
         'planned_end_duration' => 'planned_end_duration',
         'max_speed' => 'max_speed',
@@ -324,6 +327,7 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'setTrailerLink',
         'trailer' => 'setTrailer',
         'equipment' => 'setEquipment',
+        'equipment_ids' => 'setEquipmentIds',
         'planned_start_duration' => 'setPlannedStartDuration',
         'planned_end_duration' => 'setPlannedEndDuration',
         'max_speed' => 'setMaxSpeed',
@@ -403,6 +407,7 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'getTrailerLink',
         'trailer' => 'getTrailer',
         'equipment' => 'getEquipment',
+        'equipment_ids' => 'getEquipmentIds',
         'planned_start_duration' => 'getPlannedStartDuration',
         'planned_end_duration' => 'getPlannedEndDuration',
         'max_speed' => 'getMaxSpeed',
@@ -543,6 +548,7 @@ class RouteModel implements ArrayAccess
         $this->container['trailer_link'] = isset($data['trailer_link']) ? $data['trailer_link'] : null;
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['equipment'] = isset($data['equipment']) ? $data['equipment'] : null;
+        $this->container['equipment_ids'] = isset($data['equipment_ids']) ? $data['equipment_ids'] : null;
         $this->container['planned_start_duration'] = isset($data['planned_start_duration']) ? $data['planned_start_duration'] : null;
         $this->container['planned_end_duration'] = isset($data['planned_end_duration']) ? $data['planned_end_duration'] : null;
         $this->container['max_speed'] = isset($data['max_speed']) ? $data['max_speed'] : null;
@@ -1179,6 +1185,27 @@ class RouteModel implements ArrayAccess
     public function setEquipment($equipment)
     {
         $this->container['equipment'] = $equipment;
+
+        return $this;
+    }
+
+    /**
+     * Gets equipment_ids
+     * @return int[]
+     */
+    public function getEquipmentIds()
+    {
+        return $this->container['equipment_ids'];
+    }
+
+    /**
+     * Sets equipment_ids
+     * @param int[] $equipment_ids Unique Identifier(s) for equipment on route
+     * @return $this
+     */
+    public function setEquipmentIds($equipment_ids)
+    {
+        $this->container['equipment_ids'] = $equipment_ids;
 
         return $this;
     }

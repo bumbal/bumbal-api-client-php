@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModel
+ * ServiceWindowListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneFiltersModel Class Doc Comment
+ * ServiceWindowListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModel implements ArrayAccess
+class ServiceWindowListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,17 @@ class ZoneFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneFiltersModel';
+    protected static $swaggerModelName = 'ServiceWindowListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]'
+        'items' => '\BumbalClient\Model\ServiceWindowModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -62,7 +65,10 @@ class ZoneFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +86,10 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -89,7 +98,10 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -98,7 +110,10 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -132,7 +147,10 @@ class ZoneFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -161,22 +179,85 @@ class ZoneFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int[]
+     * Gets items
+     * @return \BumbalClient\Model\ServiceWindowModel[]
      */
-    public function getId()
+    public function getItems()
     {
-        return $this->container['id'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets id
-     * @param int[] $id zone id's
+     * Sets items
+     * @param \BumbalClient\Model\ServiceWindowModel[] $items 
      * @return $this
      */
-    public function setId($id)
+    public function setItems($items)
     {
-        $this->container['id'] = $id;
+        $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_filtered
+     * @return int
+     */
+    public function getCountFiltered()
+    {
+        return $this->container['count_filtered'];
+    }
+
+    /**
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
+     * @return $this
+     */
+    public function setCountFiltered($count_filtered)
+    {
+        $this->container['count_filtered'] = $count_filtered;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_unfiltered
+     * @return int
+     */
+    public function getCountUnfiltered()
+    {
+        return $this->container['count_unfiltered'];
+    }
+
+    /**
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
+     * @return $this
+     */
+    public function setCountUnfiltered($count_unfiltered)
+    {
+        $this->container['count_unfiltered'] = $count_unfiltered;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_limited
+     * @return int
+     */
+    public function getCountLimited()
+    {
+        return $this->container['count_limited'];
+    }
+
+    /**
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
+     * @return $this
+     */
+    public function setCountLimited($count_limited)
+    {
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

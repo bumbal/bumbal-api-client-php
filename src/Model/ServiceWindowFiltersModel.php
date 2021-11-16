@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModel
+ * ServiceWindowFiltersModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneFiltersModel Class Doc Comment
+ * ServiceWindowFiltersModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModel implements ArrayAccess
+class ServiceWindowFiltersModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,13 +47,14 @@ class ZoneFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneFiltersModel';
+    protected static $swaggerModelName = 'ServiceWindowFiltersModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'service_windows_scheme_id' => 'int[]',
         'id' => 'int[]'
     ];
 
@@ -62,6 +63,7 @@ class ZoneFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'service_windows_scheme_id' => null,
         'id' => null
     ];
 
@@ -80,6 +82,7 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'service_windows_scheme_id' => 'service_windows_scheme_id',
         'id' => 'id'
     ];
 
@@ -89,6 +92,7 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'service_windows_scheme_id' => 'setServiceWindowsSchemeId',
         'id' => 'setId'
     ];
 
@@ -98,6 +102,7 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'service_windows_scheme_id' => 'getServiceWindowsSchemeId',
         'id' => 'getId'
     ];
 
@@ -132,6 +137,7 @@ class ZoneFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['service_windows_scheme_id'] = isset($data['service_windows_scheme_id']) ? $data['service_windows_scheme_id'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
@@ -161,6 +167,27 @@ class ZoneFiltersModel implements ArrayAccess
 
 
     /**
+     * Gets service_windows_scheme_id
+     * @return int[]
+     */
+    public function getServiceWindowsSchemeId()
+    {
+        return $this->container['service_windows_scheme_id'];
+    }
+
+    /**
+     * Sets service_windows_scheme_id
+     * @param int[] $service_windows_scheme_id Service windows scheme ID's
+     * @return $this
+     */
+    public function setServiceWindowsSchemeId($service_windows_scheme_id)
+    {
+        $this->container['service_windows_scheme_id'] = $service_windows_scheme_id;
+
+        return $this;
+    }
+
+    /**
      * Gets id
      * @return int[]
      */
@@ -171,7 +198,7 @@ class ZoneFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id zone id's
+     * @param int[] $id Unique identifier(s)
      * @return $this
      */
     public function setId($id)

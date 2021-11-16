@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneFiltersModel
+ * ServiceWindowDayModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneFiltersModel Class Doc Comment
+ * ServiceWindowDayModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneFiltersModel implements ArrayAccess
+class ServiceWindowDayModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,16 @@ class ZoneFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneFiltersModel';
+    protected static $swaggerModelName = 'ServiceWindowDayModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]'
+        'before_cut_off' => 'int',
+        'cut_off_time' => 'string',
+        'after_cut_off' => 'int'
     ];
 
     /**
@@ -62,7 +64,9 @@ class ZoneFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null
+        'before_cut_off' => null,
+        'cut_off_time' => null,
+        'after_cut_off' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +84,9 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'before_cut_off' => 'before_cut_off',
+        'cut_off_time' => 'cut_off_time',
+        'after_cut_off' => 'after_cut_off'
     ];
 
 
@@ -89,7 +95,9 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'before_cut_off' => 'setBeforeCutOff',
+        'cut_off_time' => 'setCutOffTime',
+        'after_cut_off' => 'setAfterCutOff'
     ];
 
 
@@ -98,7 +106,9 @@ class ZoneFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'before_cut_off' => 'getBeforeCutOff',
+        'cut_off_time' => 'getCutOffTime',
+        'after_cut_off' => 'getAfterCutOff'
     ];
 
     public static function attributeMap()
@@ -132,7 +142,9 @@ class ZoneFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['before_cut_off'] = isset($data['before_cut_off']) ? $data['before_cut_off'] : null;
+        $this->container['cut_off_time'] = isset($data['cut_off_time']) ? $data['cut_off_time'] : null;
+        $this->container['after_cut_off'] = isset($data['after_cut_off']) ? $data['after_cut_off'] : null;
     }
 
     /**
@@ -161,22 +173,64 @@ class ZoneFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int[]
+     * Gets before_cut_off
+     * @return int
      */
-    public function getId()
+    public function getBeforeCutOff()
     {
-        return $this->container['id'];
+        return $this->container['before_cut_off'];
     }
 
     /**
-     * Sets id
-     * @param int[] $id zone id's
+     * Sets before_cut_off
+     * @param int $before_cut_off 
      * @return $this
      */
-    public function setId($id)
+    public function setBeforeCutOff($before_cut_off)
     {
-        $this->container['id'] = $id;
+        $this->container['before_cut_off'] = $before_cut_off;
+
+        return $this;
+    }
+
+    /**
+     * Gets cut_off_time
+     * @return string
+     */
+    public function getCutOffTime()
+    {
+        return $this->container['cut_off_time'];
+    }
+
+    /**
+     * Sets cut_off_time
+     * @param string $cut_off_time 
+     * @return $this
+     */
+    public function setCutOffTime($cut_off_time)
+    {
+        $this->container['cut_off_time'] = $cut_off_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets after_cut_off
+     * @return int
+     */
+    public function getAfterCutOff()
+    {
+        return $this->container['after_cut_off'];
+    }
+
+    /**
+     * Sets after_cut_off
+     * @param int $after_cut_off 
+     * @return $this
+     */
+    public function setAfterCutOff($after_cut_off)
+    {
+        $this->container['after_cut_off'] = $after_cut_off;
 
         return $this;
     }
