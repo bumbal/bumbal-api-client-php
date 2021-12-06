@@ -118,7 +118,7 @@ class ServicewindowsschemeApi
             throw new \InvalidArgumentException('Missing the required parameter $service_windows_scheme_id when calling deleteServiceWindowsScheme');
         }
         // parse inputs
-        $resourcePath = "/serviceWindowsScheme/{ServiceWindowsSchemeId}";
+        $resourcePath = "/service-windows-scheme/{serviceWindowsSchemeId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -158,7 +158,7 @@ class ServicewindowsschemeApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/serviceWindowsScheme/{ServiceWindowsSchemeId}'
+                '/service-windows-scheme/{serviceWindowsSchemeId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -181,7 +181,7 @@ class ServicewindowsschemeApi
      *
      * @param \BumbalClient\Model\ServiceWindowsSchemeRetrieveListArguments $arguments Service Windows Scheme RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ServiceWindowsSchemeModel[]
+     * @return \BumbalClient\Model\ServiceWindowsSchemeListResponse
      */
     public function retrieveListServiceWindowsScheme($arguments)
     {
@@ -196,7 +196,7 @@ class ServicewindowsschemeApi
      *
      * @param \BumbalClient\Model\ServiceWindowsSchemeRetrieveListArguments $arguments Service Windows Scheme RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ServiceWindowsSchemeModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ServiceWindowsSchemeListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListServiceWindowsSchemeWithHttpInfo($arguments)
     {
@@ -241,15 +241,15 @@ class ServicewindowsschemeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ServiceWindowsSchemeModel[]',
+                '\BumbalClient\Model\ServiceWindowsSchemeListResponse',
                 '/service-windows-scheme'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ServiceWindowsSchemeModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ServiceWindowsSchemeListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ServiceWindowsSchemeModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ServiceWindowsSchemeListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -303,7 +303,7 @@ class ServicewindowsschemeApi
         // path params
         if ($service_windows_scheme_id !== null) {
             $resourcePath = str_replace(
-                "{" . "ServiceWindowsSchemeId" . "}",
+                "{" . "serviceWindowsSchemeId" . "}",
                 $this->apiClient->getSerializer()->toPathValue($service_windows_scheme_id),
                 $resourcePath
             );

@@ -148,6 +148,13 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "initials"
+     */
+    public function testPropertyInitials()
+    {
+    }
+
+    /**
      * Test attribute "email"
      */
     public function testPropertyEmail()

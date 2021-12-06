@@ -54,8 +54,8 @@ class ServiceWindowsSchemeRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ServiceWindowOptionsModel',
-        'filters' => '\BumbalClient\Model\ServiceWindowFiltersModel',
+        'options' => '\BumbalClient\Model\ServiceWindowsSchemeOptionsModel',
+        'filters' => '\BumbalClient\Model\ServiceWindowsSchemeFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string',
@@ -262,7 +262,7 @@ class ServiceWindowsSchemeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\Model\ServiceWindowOptionsModel
+     * @return \BumbalClient\Model\ServiceWindowsSchemeOptionsModel
      */
     public function getOptions()
     {
@@ -271,7 +271,7 @@ class ServiceWindowsSchemeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\ServiceWindowOptionsModel $options 
+     * @param \BumbalClient\Model\ServiceWindowsSchemeOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -283,7 +283,7 @@ class ServiceWindowsSchemeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\ServiceWindowFiltersModel
+     * @return \BumbalClient\Model\ServiceWindowsSchemeFiltersModel
      */
     public function getFilters()
     {
@@ -292,7 +292,7 @@ class ServiceWindowsSchemeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ServiceWindowFiltersModel $filters 
+     * @param \BumbalClient\Model\ServiceWindowsSchemeFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

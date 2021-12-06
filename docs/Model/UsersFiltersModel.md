@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **party_id** | **int[]** | Associated Party IDs | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
+**system** | **bool[]** | System users | [optional] 
+**activated** | **bool[]** | Activated users | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

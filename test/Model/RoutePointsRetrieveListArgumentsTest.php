@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityStatsModelTest
+ * RoutePointsRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ActivityStatsModelTest Class Doc Comment
+ * RoutePointsRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description ActivityStatsModel
+// * @description RoutePointsRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
+class RoutePointsRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,51 +71,16 @@ class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ActivityStatsModel"
+     * Test "RoutePointsRetrieveListArguments"
      */
-    public function testActivityStatsModel()
+    public function testRoutePointsRetrieveListArguments()
     {
     }
 
     /**
-     * Test attribute "nr_of_package_lines"
+     * Test attribute "route_ids"
      */
-    public function testPropertyNrOfPackageLines()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_bundled_activities"
-     */
-    public function testPropertyNrOfBundledActivities()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_transactions"
-     */
-    public function testPropertyNrOfTransactions()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_notes"
-     */
-    public function testPropertyNrOfNotes()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_irregularities"
-     */
-    public function testPropertyNrOfIrregularities()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_files"
-     */
-    public function testPropertyNrOfFiles()
+    public function testPropertyRouteIds()
     {
     }
 }

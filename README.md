@@ -82,6 +82,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
 *ActivityApi* | [**lockActivity**](docs/Api/ActivityApi.md#lockactivity) | **POST** /activity/lock | Lock activities which satisfy set filters
+*ActivityApi* | [**lockActivityOnRoute**](docs/Api/ActivityApi.md#lockactivityonroute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
+*ActivityApi* | [**lockActivityOnRouteAndTime**](docs/Api/ActivityApi.md#lockactivityonrouteandtime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
 *ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
@@ -150,6 +152,7 @@ Class | Method | HTTP request | Description
 *LinkApi* | [**updateLink**](docs/Api/LinkApi.md#updatelink) | **PUT** /link/{linkId} | Update a specific link object
 *LogApi* | [**retrieveListLog**](docs/Api/LogApi.md#retrievelistlog) | **PUT** /log | Retrieve List of Log messages
 *LogApi* | [**setLog**](docs/Api/LogApi.md#setlog) | **POST** /log/set | Post a Log message
+*ManualwebhookApi* | [**manualWebHookTrigger**](docs/Api/ManualwebhookApi.md#manualwebhooktrigger) | **POST** /manual-web-hook/trigger | Trigger a webhook
 *MetadataApi* | [**createMetaData**](docs/Api/MetadataApi.md#createmetadata) | **POST** /metadata | Add a new MetaData
 *MetadataApi* | [**deleteMetaData**](docs/Api/MetadataApi.md#deletemetadata) | **DELETE** /metadata/{metadataId} | Delete a MetaData entry
 *MetadataApi* | [**retrieveListMetaData**](docs/Api/MetadataApi.md#retrievelistmetadata) | **PUT** /metadata | Retrieve List of MetaData
@@ -280,6 +283,8 @@ Class | Method | HTTP request | Description
 *QuestionnairetemplatequestiontextApi* | [**updateQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#updatequestionnairetemplatequestiontext) | **PUT** /questionnaire-template-question-text/{questionnaire-template-question-textId} | Update a specific QuestionnaireTemplateQuestionText object
 *QuestionnairetypeApi* | [**retrieveListQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievelistquestionnairetype) | **PUT** /questionnaire-type | Retrieve List of QuestionnaireType
 *QuestionnairetypeApi* | [**retrieveQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievequestionnairetype) | **GET** /questionnaire-type/{questionnaire-typeId} | Retrieve a QuestionnaireType
+*RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
+*RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 *RecurrenceApi* | [**getRuns**](docs/Api/RecurrenceApi.md#getruns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
@@ -295,13 +300,15 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**routeStoreGeoLocations**](docs/Api/RouteApi.md#routestoregeolocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
 *RouteApi* | [**setRoute**](docs/Api/RouteApi.md#setroute) | **POST** /route/set | Set (create or update) an Route
 *RouteApi* | [**updateRoute**](docs/Api/RouteApi.md#updateroute) | **PUT** /route/{routeId} | Update a Route
+*RoutepointsApi* | [**retrieveListRoutePoints**](docs/Api/RoutepointsApi.md#retrievelistroutepoints) | **PUT** /route-points | Find Route Points for multiple routes by route ID
+*RoutepointsApi* | [**retrieveRoutePoints**](docs/Api/RoutepointsApi.md#retrieveroutepoints) | **GET** /route-points/{routeId} | Find Route Points by route ID
 *SaywhenApi* | [**saywhenRetrievePortalURL**](docs/Api/SaywhenApi.md#saywhenretrieveportalurl) | **GET** /saywhen/retrieve-portal-url/{activityId} | Retrieve SayWhen Portal URL
 *SaywhenApi* | [**saywhenRetrievePortalURLs**](docs/Api/SaywhenApi.md#saywhenretrieveportalurls) | **PUT** /saywhen/retrieve-portal-urls | Retrieve SayWhen Portal URLs
 *SaywhenApi* | [**saywhenRetrieveStatus**](docs/Api/SaywhenApi.md#saywhenretrievestatus) | **GET** /saywhen/retrieve-status/{activityId} | Retrieve SayWhen Status
 *ServicewindowApi* | [**retrieveListServiceWindow**](docs/Api/ServicewindowApi.md#retrievelistservicewindow) | **PUT** /service-window | Retrieve a list of service windows
-*ServicewindowApi* | [**retrieveServiceWindow**](docs/Api/ServicewindowApi.md#retrieveservicewindow) | **GET** /service-window/{servicewindowid} | Retrieve a single service window
+*ServicewindowApi* | [**retrieveServiceWindow**](docs/Api/ServicewindowApi.md#retrieveservicewindow) | **GET** /service-window/{serviceWindowId} | Retrieve a single service window
 *ServicewindowApi* | [**setServiceWindow**](docs/Api/ServicewindowApi.md#setservicewindow) | **POST** /service-window/set | Add or update a service window
-*ServicewindowsschemeApi* | [**deleteServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#deleteservicewindowsscheme) | **DELETE** /serviceWindowsScheme/{ServiceWindowsSchemeId} | Delete a service windows scheme
+*ServicewindowsschemeApi* | [**deleteServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#deleteservicewindowsscheme) | **DELETE** /service-windows-scheme/{serviceWindowsSchemeId} | Delete a service windows scheme
 *ServicewindowsschemeApi* | [**retrieveListServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#retrievelistservicewindowsscheme) | **PUT** /service-windows-scheme | Retrieve a list of service windows schemes
 *ServicewindowsschemeApi* | [**retrieveServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#retrieveservicewindowsscheme) | **GET** /service-windows-scheme/{serviceWindowsSchemeId} | Retrieve a single service windows scheme
 *ServicewindowsschemeApi* | [**setServiceWindowsScheme**](docs/Api/ServicewindowsschemeApi.md#setservicewindowsscheme) | **POST** /service-windows-scheme/set | Add or update a service windows scheme
@@ -353,6 +360,7 @@ Class | Method | HTTP request | Description
 *UnsuccessfulreasonApi* | [**updateUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#updateunsuccessfulreason) | **PUT** /unsuccessful-reason/{unsuccessful-reasonId} | Update a specific UnsuccessfulReason object
 *UomApi* | [**retrieveListUom**](docs/Api/UomApi.md#retrievelistuom) | **PUT** /uom | Retrieve List of Uom&#39;s
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
+*UsersApi* | [**deleteUser**](docs/Api/UsersApi.md#deleteuser) | **DELETE** /users/{userId} | Delete a user
 *UsersApi* | [**retrieveListUserNotification**](docs/Api/UsersApi.md#retrievelistusernotification) | **PUT** /users/notification | Retrieve List of UserNotification
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
@@ -566,6 +574,7 @@ Class | Method | HTTP request | Description
  - [LogModel](docs/Model/LogModel.md)
  - [LogOptionsModel](docs/Model/LogOptionsModel.md)
  - [LogRetrieveListArguments](docs/Model/LogRetrieveListArguments.md)
+ - [ManualWebHookModel](docs/Model/ManualWebHookModel.md)
  - [MetaDataFiltersModel](docs/Model/MetaDataFiltersModel.md)
  - [MetaDataListResponse](docs/Model/MetaDataListResponse.md)
  - [MetaDataModel](docs/Model/MetaDataModel.md)
@@ -704,6 +713,9 @@ Class | Method | HTTP request | Description
  - [RouteListResponse](docs/Model/RouteListResponse.md)
  - [RouteModel](docs/Model/RouteModel.md)
  - [RouteOptionsModel](docs/Model/RouteOptionsModel.md)
+ - [RoutePointsModel](docs/Model/RoutePointsModel.md)
+ - [RoutePointsModelPoints](docs/Model/RoutePointsModelPoints.md)
+ - [RoutePointsRetrieveListArguments](docs/Model/RoutePointsRetrieveListArguments.md)
  - [RouteRetrieveListArguments](docs/Model/RouteRetrieveListArguments.md)
  - [RouteStoreGeoLocations](docs/Model/RouteStoreGeoLocations.md)
  - [RoutesEtaArguments](docs/Model/RoutesEtaArguments.md)

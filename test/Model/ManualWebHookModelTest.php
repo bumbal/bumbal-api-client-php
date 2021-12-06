@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityStatsModelTest
+ * ManualWebHookModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ActivityStatsModelTest Class Doc Comment
+ * ManualWebHookModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ActivityStatsModel
+// * @description ManualWebHookModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
+class ManualWebHookModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,51 +71,30 @@ class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ActivityStatsModel"
+     * Test "ManualWebHookModel"
      */
-    public function testActivityStatsModel()
+    public function testManualWebHookModel()
     {
     }
 
     /**
-     * Test attribute "nr_of_package_lines"
+     * Test attribute "object_id"
      */
-    public function testPropertyNrOfPackageLines()
+    public function testPropertyObjectId()
     {
     }
 
     /**
-     * Test attribute "nr_of_bundled_activities"
+     * Test attribute "web_hook_name"
      */
-    public function testPropertyNrOfBundledActivities()
+    public function testPropertyWebHookName()
     {
     }
 
     /**
-     * Test attribute "nr_of_transactions"
+     * Test attribute "extra_payload"
      */
-    public function testPropertyNrOfTransactions()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_notes"
-     */
-    public function testPropertyNrOfNotes()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_irregularities"
-     */
-    public function testPropertyNrOfIrregularities()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_files"
-     */
-    public function testPropertyNrOfFiles()
+    public function testPropertyExtraPayload()
     {
     }
 }

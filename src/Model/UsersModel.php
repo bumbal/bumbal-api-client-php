@@ -64,6 +64,7 @@ class UsersModel implements ArrayAccess
         'name_prefix' => 'string',
         'last_name' => 'string',
         'full_name' => 'string',
+        'initials' => 'string',
         'email' => 'string',
         'password' => 'string',
         'lang_code' => 'string',
@@ -72,6 +73,7 @@ class UsersModel implements ArrayAccess
         'pause_id' => 'int',
         'speed_factor' => 'double',
         'duration_factor' => 'double',
+        'activated' => 'bool',
         'removed' => 'bool',
         'active' => 'bool',
         'tags' => '\BumbalClient\Model\TagModel[]',
@@ -97,6 +99,7 @@ class UsersModel implements ArrayAccess
         'name_prefix' => null,
         'last_name' => null,
         'full_name' => null,
+        'initials' => null,
         'email' => null,
         'password' => null,
         'lang_code' => null,
@@ -105,6 +108,7 @@ class UsersModel implements ArrayAccess
         'pause_id' => 'int64',
         'speed_factor' => 'double',
         'duration_factor' => 'double',
+        'activated' => null,
         'removed' => null,
         'active' => null,
         'tags' => null,
@@ -140,6 +144,7 @@ class UsersModel implements ArrayAccess
         'name_prefix' => 'name_prefix',
         'last_name' => 'last_name',
         'full_name' => 'full_name',
+        'initials' => 'initials',
         'email' => 'email',
         'password' => 'password',
         'lang_code' => 'lang_code',
@@ -148,6 +153,7 @@ class UsersModel implements ArrayAccess
         'pause_id' => 'pause_id',
         'speed_factor' => 'speed_factor',
         'duration_factor' => 'duration_factor',
+        'activated' => 'activated',
         'removed' => 'removed',
         'active' => 'active',
         'tags' => 'tags',
@@ -174,6 +180,7 @@ class UsersModel implements ArrayAccess
         'name_prefix' => 'setNamePrefix',
         'last_name' => 'setLastName',
         'full_name' => 'setFullName',
+        'initials' => 'setInitials',
         'email' => 'setEmail',
         'password' => 'setPassword',
         'lang_code' => 'setLangCode',
@@ -182,6 +189,7 @@ class UsersModel implements ArrayAccess
         'pause_id' => 'setPauseId',
         'speed_factor' => 'setSpeedFactor',
         'duration_factor' => 'setDurationFactor',
+        'activated' => 'setActivated',
         'removed' => 'setRemoved',
         'active' => 'setActive',
         'tags' => 'setTags',
@@ -208,6 +216,7 @@ class UsersModel implements ArrayAccess
         'name_prefix' => 'getNamePrefix',
         'last_name' => 'getLastName',
         'full_name' => 'getFullName',
+        'initials' => 'getInitials',
         'email' => 'getEmail',
         'password' => 'getPassword',
         'lang_code' => 'getLangCode',
@@ -216,6 +225,7 @@ class UsersModel implements ArrayAccess
         'pause_id' => 'getPauseId',
         'speed_factor' => 'getSpeedFactor',
         'duration_factor' => 'getDurationFactor',
+        'activated' => 'getActivated',
         'removed' => 'getRemoved',
         'active' => 'getActive',
         'tags' => 'getTags',
@@ -287,6 +297,7 @@ class UsersModel implements ArrayAccess
         $this->container['name_prefix'] = isset($data['name_prefix']) ? $data['name_prefix'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
+        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
@@ -295,6 +306,7 @@ class UsersModel implements ArrayAccess
         $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
         $this->container['speed_factor'] = isset($data['speed_factor']) ? $data['speed_factor'] : null;
         $this->container['duration_factor'] = isset($data['duration_factor']) ? $data['duration_factor'] : null;
+        $this->container['activated'] = isset($data['activated']) ? $data['activated'] : null;
         $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -562,6 +574,27 @@ class UsersModel implements ArrayAccess
     }
 
     /**
+     * Gets initials
+     * @return string
+     */
+    public function getInitials()
+    {
+        return $this->container['initials'];
+    }
+
+    /**
+     * Sets initials
+     * @param string $initials user password (set only, no read)
+     * @return $this
+     */
+    public function setInitials($initials)
+    {
+        $this->container['initials'] = $initials;
+
+        return $this;
+    }
+
+    /**
      * Gets email
      * @return string
      */
@@ -725,6 +758,27 @@ class UsersModel implements ArrayAccess
     public function setDurationFactor($duration_factor)
     {
         $this->container['duration_factor'] = $duration_factor;
+
+        return $this;
+    }
+
+    /**
+     * Gets activated
+     * @return bool
+     */
+    public function getActivated()
+    {
+        return $this->container['activated'];
+    }
+
+    /**
+     * Sets activated
+     * @param bool $activated Whether user is activated or not
+     * @return $this
+     */
+    public function setActivated($activated)
+    {
+        $this->container['activated'] = $activated;
 
         return $this;
     }

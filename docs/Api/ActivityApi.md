@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
 [**lockActivity**](ActivityApi.md#lockActivity) | **POST** /activity/lock | Lock activities which satisfy set filters
+[**lockActivityOnRoute**](ActivityApi.md#lockActivityOnRoute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
+[**lockActivityOnRouteAndTime**](ActivityApi.md#lockActivityOnRouteAndTime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
 [**setActivity**](ActivityApi.md#setActivity) | **POST** /activity/set | Set (create or update) an Activity
@@ -89,6 +91,106 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->lockActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filters** | [**\BumbalClient\Model\ActivityFiltersModel**](../Model/ActivityFiltersModel.md)| Request Filters |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **lockActivityOnRoute**
+> \BumbalClient\Model\ApiResponse lockActivityOnRoute($filters)
+
+Lock activities on route which satisfy set filters
+
+Lock activities on route which satisfy set filters
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$filters = new \BumbalClient\Model\ActivityFiltersModel(); // \BumbalClient\Model\ActivityFiltersModel | Request Filters
+
+try {
+    $result = $api_instance->lockActivityOnRoute($filters);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->lockActivityOnRoute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filters** | [**\BumbalClient\Model\ActivityFiltersModel**](../Model/ActivityFiltersModel.md)| Request Filters |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **lockActivityOnRouteAndTime**
+> \BumbalClient\Model\ApiResponse lockActivityOnRouteAndTime($filters)
+
+Lock activities on route and time which satisfy set filters
+
+Lock activities on route and time which satisfy set filters
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$filters = new \BumbalClient\Model\ActivityFiltersModel(); // \BumbalClient\Model\ActivityFiltersModel | Request Filters
+
+try {
+    $result = $api_instance->lockActivityOnRouteAndTime($filters);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->lockActivityOnRouteAndTime: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -99,6 +99,13 @@ class ServiceWindowsSchemeFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tag_ids"
+     */
+    public function testPropertyTagIds()
+    {
+    }
+
+    /**
      * Test attribute "zone_names"
      */
     public function testPropertyZoneNames()
@@ -106,9 +113,23 @@ class ServiceWindowsSchemeFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "zone_ids"
+     */
+    public function testPropertyZoneIds()
+    {
+    }
+
+    /**
      * Test attribute "brand_names"
      */
     public function testPropertyBrandNames()
+    {
+    }
+
+    /**
+     * Test attribute "brand_ids"
+     */
+    public function testPropertyBrandIds()
     {
     }
 }

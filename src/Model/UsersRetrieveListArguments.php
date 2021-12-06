@@ -153,6 +153,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     const SORTING_COLUMN_SEARCH_ZIP = 'search_zip';
     const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
+    const SORTING_COLUMN_ACTIVATED = 'activated';
     const SORTING_DIRECTION_ASC = 'asc';
     const SORTING_DIRECTION_DESC = 'desc';
     
@@ -167,6 +168,7 @@ class UsersRetrieveListArguments implements ArrayAccess
         return [
             self::SORTING_COLUMN_SEARCH_ZIP,
             self::SORTING_COLUMN_DATE_TIME_FROM,
+            self::SORTING_COLUMN_ACTIVATED,
         ];
     }
     

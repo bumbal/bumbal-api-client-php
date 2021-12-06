@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **last_name** | **string** | Last Name | [optional] 
 **name_prefix** | **string** | Name Prefix | [optional] 
 **full_name** | **string** | Full name | [optional] 
+**initials** | **string** | Full name | [optional] 
 **email** | **string** | Email | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 

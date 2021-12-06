@@ -125,4 +125,18 @@ class UsersFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyZoneNames()
     {
     }
+
+    /**
+     * Test attribute "system"
+     */
+    public function testPropertySystem()
+    {
+    }
+
+    /**
+     * Test attribute "activated"
+     */
+    public function testPropertyActivated()
+    {
+    }
 }

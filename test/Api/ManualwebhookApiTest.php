@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersApiTest
+ * ManualwebhookApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \BumbalClient\ApiException;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * UsersApiTest Class Doc Comment
+ * ManualwebhookApiTest Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UsersApiTest extends \PHPUnit_Framework_TestCase
+class ManualwebhookApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,82 +73,12 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for checkCredentialsUser
+     * Test case for manualWebHookTrigger
      *
-     * Checks the credentials of a User.
-     *
-     */
-    public function testCheckCredentialsUser()
-    {
-    }
-
-    /**
-     * Test case for deleteUser
-     *
-     * Delete a user.
+     * Trigger a webhook.
      *
      */
-    public function testDeleteUser()
-    {
-    }
-
-    /**
-     * Test case for retrieveListUserNotification
-     *
-     * Retrieve List of UserNotification.
-     *
-     */
-    public function testRetrieveListUserNotification()
-    {
-    }
-
-    /**
-     * Test case for retrieveListUsers
-     *
-     * Retrieve List of Users.
-     *
-     */
-    public function testRetrieveListUsers()
-    {
-    }
-
-    /**
-     * Test case for retrieveUsers
-     *
-     * Retrieve a Users.
-     *
-     */
-    public function testRetrieveUsers()
-    {
-    }
-
-    /**
-     * Test case for setUser
-     *
-     * Set (create or update) a User.
-     *
-     */
-    public function testSetUser()
-    {
-    }
-
-    /**
-     * Test case for setUserNotification
-     *
-     * Create a new UserNotification or update an existing one.
-     *
-     */
-    public function testSetUserNotification()
-    {
-    }
-
-    /**
-     * Test case for updateUsers
-     *
-     * Update a Users.
-     *
-     */
-    public function testUpdateUsers()
+    public function testManualWebHookTrigger()
     {
     }
 }

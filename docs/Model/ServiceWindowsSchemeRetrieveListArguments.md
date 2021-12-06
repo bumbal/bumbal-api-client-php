@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\ServiceWindowOptionsModel**](ServiceWindowOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\ServiceWindowFiltersModel**](ServiceWindowFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\ServiceWindowsSchemeOptionsModel**](ServiceWindowsSchemeOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\ServiceWindowsSchemeFiltersModel**](ServiceWindowsSchemeFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

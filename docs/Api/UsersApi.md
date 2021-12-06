@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /users/check-credentials | Checks the credentials of a User
+[**deleteUser**](UsersApi.md#deleteUser) | **DELETE** /users/{userId} | Delete a user
 [**retrieveListUserNotification**](UsersApi.md#retrieveListUserNotification) | **PUT** /users/notification | Retrieve List of UserNotification
 [**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Users
 [**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{usersId} | Retrieve a Users
@@ -53,6 +54,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteUser**
+> \BumbalClient\Model\ApiResponse deleteUser($user_id)
+
+Delete a user
+
+Delete a user
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\UsersApi();
+$user_id = 789; // int | ID of user to delete
+
+try {
+    $result = $api_instance->deleteUser($user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->deleteUser: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**| ID of user to delete |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

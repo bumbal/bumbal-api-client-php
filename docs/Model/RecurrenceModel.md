@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **recurrence_type_name** | **string** | recurrence typename, activity or route | [optional] 
 **start_date** | [**\DateTime**](\DateTime.md) | Start date | [optional] 
 **end_date** | [**\DateTime**](\DateTime.md) | End date | [optional] 
+**period_name** | **string** | period name | [optional] 
 **period_id** | **int** | recurrence period_id, 1:day, 2:week, 3:month | [optional] 
 **recurrence_period_name** | **string** | recurrence period name: day, week or month | [optional] 
 **frequency** | **int** | period frequency of recurrence (2 &#x3D; repeat each 2 days/weeks/months) | [optional] 
@@ -25,6 +26,7 @@ Name | Type | Description | Notes
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **updated_by_name** | **string** | Recurrence updated by user full name | [optional] 
+**object_id** | **int** | ID of the object | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

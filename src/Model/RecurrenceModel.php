@@ -61,6 +61,7 @@ class RecurrenceModel implements ArrayAccess
         'recurrence_type_name' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
+        'period_name' => 'string',
         'period_id' => 'int',
         'recurrence_period_name' => 'string',
         'frequency' => 'int',
@@ -75,7 +76,8 @@ class RecurrenceModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'updated_by_name' => 'string'
+        'updated_by_name' => 'string',
+        'object_id' => 'int'
     ];
 
     /**
@@ -90,6 +92,7 @@ class RecurrenceModel implements ArrayAccess
         'recurrence_type_name' => null,
         'start_date' => 'date-time',
         'end_date' => 'date-time',
+        'period_name' => null,
         'period_id' => null,
         'recurrence_period_name' => null,
         'frequency' => 'int64',
@@ -104,7 +107,8 @@ class RecurrenceModel implements ArrayAccess
         'meta_data' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
-        'updated_by_name' => null
+        'updated_by_name' => null,
+        'object_id' => null
     ];
 
     public static function swaggerTypes()
@@ -129,6 +133,7 @@ class RecurrenceModel implements ArrayAccess
         'recurrence_type_name' => 'recurrence_type_name',
         'start_date' => 'start_date',
         'end_date' => 'end_date',
+        'period_name' => 'period_name',
         'period_id' => 'period_id',
         'recurrence_period_name' => 'recurrence_period_name',
         'frequency' => 'frequency',
@@ -143,7 +148,8 @@ class RecurrenceModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
-        'updated_by_name' => 'updated_by_name'
+        'updated_by_name' => 'updated_by_name',
+        'object_id' => 'object_id'
     ];
 
 
@@ -159,6 +165,7 @@ class RecurrenceModel implements ArrayAccess
         'recurrence_type_name' => 'setRecurrenceTypeName',
         'start_date' => 'setStartDate',
         'end_date' => 'setEndDate',
+        'period_name' => 'setPeriodName',
         'period_id' => 'setPeriodId',
         'recurrence_period_name' => 'setRecurrencePeriodName',
         'frequency' => 'setFrequency',
@@ -173,7 +180,8 @@ class RecurrenceModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
-        'updated_by_name' => 'setUpdatedByName'
+        'updated_by_name' => 'setUpdatedByName',
+        'object_id' => 'setObjectId'
     ];
 
 
@@ -189,6 +197,7 @@ class RecurrenceModel implements ArrayAccess
         'recurrence_type_name' => 'getRecurrenceTypeName',
         'start_date' => 'getStartDate',
         'end_date' => 'getEndDate',
+        'period_name' => 'getPeriodName',
         'period_id' => 'getPeriodId',
         'recurrence_period_name' => 'getRecurrencePeriodName',
         'frequency' => 'getFrequency',
@@ -203,7 +212,8 @@ class RecurrenceModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
-        'updated_by_name' => 'getUpdatedByName'
+        'updated_by_name' => 'getUpdatedByName',
+        'object_id' => 'getObjectId'
     ];
 
     public static function attributeMap()
@@ -274,6 +284,7 @@ class RecurrenceModel implements ArrayAccess
         $this->container['recurrence_type_name'] = isset($data['recurrence_type_name']) ? $data['recurrence_type_name'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['end_date'] = isset($data['end_date']) ? $data['end_date'] : null;
+        $this->container['period_name'] = isset($data['period_name']) ? $data['period_name'] : null;
         $this->container['period_id'] = isset($data['period_id']) ? $data['period_id'] : null;
         $this->container['recurrence_period_name'] = isset($data['recurrence_period_name']) ? $data['recurrence_period_name'] : null;
         $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
@@ -289,6 +300,7 @@ class RecurrenceModel implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
     }
 
     /**
@@ -492,6 +504,27 @@ class RecurrenceModel implements ArrayAccess
     public function setEndDate($end_date)
     {
         $this->container['end_date'] = $end_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets period_name
+     * @return string
+     */
+    public function getPeriodName()
+    {
+        return $this->container['period_name'];
+    }
+
+    /**
+     * Sets period_name
+     * @param string $period_name period name
+     * @return $this
+     */
+    public function setPeriodName($period_name)
+    {
+        $this->container['period_name'] = $period_name;
 
         return $this;
     }
@@ -816,6 +849,27 @@ class RecurrenceModel implements ArrayAccess
     public function setUpdatedByName($updated_by_name)
     {
         $this->container['updated_by_name'] = $updated_by_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_id
+     * @return int
+     */
+    public function getObjectId()
+    {
+        return $this->container['object_id'];
+    }
+
+    /**
+     * Sets object_id
+     * @param int $object_id ID of the object
+     * @return $this
+     */
+    public function setObjectId($object_id)
+    {
+        $this->container['object_id'] = $object_id;
 
         return $this;
     }

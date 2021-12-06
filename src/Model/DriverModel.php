@@ -64,6 +64,7 @@ class DriverModel implements ArrayAccess
         'last_name' => 'string',
         'name_prefix' => 'string',
         'full_name' => 'string',
+        'initials' => 'string',
         'email' => 'string',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
@@ -97,6 +98,7 @@ class DriverModel implements ArrayAccess
         'last_name' => null,
         'name_prefix' => null,
         'full_name' => null,
+        'initials' => null,
         'email' => null,
         'tags' => null,
         'zones' => null,
@@ -140,6 +142,7 @@ class DriverModel implements ArrayAccess
         'last_name' => 'last_name',
         'name_prefix' => 'name_prefix',
         'full_name' => 'full_name',
+        'initials' => 'initials',
         'email' => 'email',
         'tags' => 'tags',
         'zones' => 'zones',
@@ -174,6 +177,7 @@ class DriverModel implements ArrayAccess
         'last_name' => 'setLastName',
         'name_prefix' => 'setNamePrefix',
         'full_name' => 'setFullName',
+        'initials' => 'setInitials',
         'email' => 'setEmail',
         'tags' => 'setTags',
         'zones' => 'setZones',
@@ -208,6 +212,7 @@ class DriverModel implements ArrayAccess
         'last_name' => 'getLastName',
         'name_prefix' => 'getNamePrefix',
         'full_name' => 'getFullName',
+        'initials' => 'getInitials',
         'email' => 'getEmail',
         'tags' => 'getTags',
         'zones' => 'getZones',
@@ -267,6 +272,7 @@ class DriverModel implements ArrayAccess
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['name_prefix'] = isset($data['name_prefix']) ? $data['name_prefix'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
+        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
@@ -516,6 +522,27 @@ class DriverModel implements ArrayAccess
     public function setFullName($full_name)
     {
         $this->container['full_name'] = $full_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets initials
+     * @return string
+     */
+    public function getInitials()
+    {
+        return $this->container['initials'];
+    }
+
+    /**
+     * Sets initials
+     * @param string $initials Full name
+     * @return $this
+     */
+    public function setInitials($initials)
+    {
+        $this->container['initials'] = $initials;
 
         return $this;
     }

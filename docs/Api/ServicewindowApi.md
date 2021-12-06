@@ -5,12 +5,12 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**retrieveListServiceWindow**](ServicewindowApi.md#retrieveListServiceWindow) | **PUT** /service-window | Retrieve a list of service windows
-[**retrieveServiceWindow**](ServicewindowApi.md#retrieveServiceWindow) | **GET** /service-window/{servicewindowid} | Retrieve a single service window
+[**retrieveServiceWindow**](ServicewindowApi.md#retrieveServiceWindow) | **GET** /service-window/{serviceWindowId} | Retrieve a single service window
 [**setServiceWindow**](ServicewindowApi.md#setServiceWindow) | **POST** /service-window/set | Add or update a service window
 
 
 # **retrieveListServiceWindow**
-> \BumbalClient\Model\ServiceWindowModel[] retrieveListServiceWindow($arguments)
+> \BumbalClient\Model\ServiceWindowListResponse retrieveListServiceWindow($arguments)
 
 Retrieve a list of service windows
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ServiceWindowModel[]**](../Model/ServiceWindowModel.md)
+[**\BumbalClient\Model\ServiceWindowListResponse**](../Model/ServiceWindowListResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveServiceWindow**
-> \BumbalClient\Model\ServiceWindowsSchemeModel retrieveServiceWindow($servicewindowsscheme_id)
+> \BumbalClient\Model\ServiceWindowModel retrieveServiceWindow($service_window_id)
 
 Retrieve a single service window
 
@@ -77,10 +77,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ServicewindowApi();
-$servicewindowsscheme_id = 789; // int | ID of Service windows scheme to retrieve
+$service_window_id = 789; // int | ID of Service windows scheme to retrieve
 
 try {
-    $result = $api_instance->retrieveServiceWindow($servicewindowsscheme_id);
+    $result = $api_instance->retrieveServiceWindow($service_window_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ServicewindowApi->retrieveServiceWindow: ', $e->getMessage(), PHP_EOL;
@@ -92,11 +92,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **servicewindowsscheme_id** | **int**| ID of Service windows scheme to retrieve |
+ **service_window_id** | **int**| ID of Service windows scheme to retrieve |
 
 ### Return type
 
-[**\BumbalClient\Model\ServiceWindowsSchemeModel**](../Model/ServiceWindowsSchemeModel.md)
+[**\BumbalClient\Model\ServiceWindowModel**](../Model/ServiceWindowModel.md)
 
 ### Authorization
 

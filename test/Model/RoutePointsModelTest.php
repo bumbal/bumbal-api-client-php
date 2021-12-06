@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityStatsModelTest
+ * RoutePointsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ActivityStatsModelTest Class Doc Comment
+ * RoutePointsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ActivityStatsModel
+// * @description RoutePointsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
+class RoutePointsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,51 +71,23 @@ class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ActivityStatsModel"
+     * Test "RoutePointsModel"
      */
-    public function testActivityStatsModel()
+    public function testRoutePointsModel()
     {
     }
 
     /**
-     * Test attribute "nr_of_package_lines"
+     * Test attribute "route_id"
      */
-    public function testPropertyNrOfPackageLines()
+    public function testPropertyRouteId()
     {
     }
 
     /**
-     * Test attribute "nr_of_bundled_activities"
+     * Test attribute "points"
      */
-    public function testPropertyNrOfBundledActivities()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_transactions"
-     */
-    public function testPropertyNrOfTransactions()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_notes"
-     */
-    public function testPropertyNrOfNotes()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_irregularities"
-     */
-    public function testPropertyNrOfIrregularities()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_files"
-     */
-    public function testPropertyNrOfFiles()
+    public function testPropertyPoints()
     {
     }
 }

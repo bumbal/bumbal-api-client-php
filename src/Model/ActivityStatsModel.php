@@ -58,7 +58,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_bundled_activities' => 'int',
         'nr_of_transactions' => 'int',
         'nr_of_notes' => 'int',
-        'nr_of_irregularities' => 'int'
+        'nr_of_irregularities' => 'int',
+        'nr_of_files' => 'int'
     ];
 
     /**
@@ -70,7 +71,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_bundled_activities' => 'int64',
         'nr_of_transactions' => 'int64',
         'nr_of_notes' => 'int64',
-        'nr_of_irregularities' => 'int64'
+        'nr_of_irregularities' => 'int64',
+        'nr_of_files' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -92,7 +94,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_bundled_activities' => 'nr_of_bundled_activities',
         'nr_of_transactions' => 'nr_of_transactions',
         'nr_of_notes' => 'nr_of_notes',
-        'nr_of_irregularities' => 'nr_of_irregularities'
+        'nr_of_irregularities' => 'nr_of_irregularities',
+        'nr_of_files' => 'nr_of_files'
     ];
 
 
@@ -105,7 +108,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_bundled_activities' => 'setNrOfBundledActivities',
         'nr_of_transactions' => 'setNrOfTransactions',
         'nr_of_notes' => 'setNrOfNotes',
-        'nr_of_irregularities' => 'setNrOfIrregularities'
+        'nr_of_irregularities' => 'setNrOfIrregularities',
+        'nr_of_files' => 'setNrOfFiles'
     ];
 
 
@@ -118,7 +122,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_bundled_activities' => 'getNrOfBundledActivities',
         'nr_of_transactions' => 'getNrOfTransactions',
         'nr_of_notes' => 'getNrOfNotes',
-        'nr_of_irregularities' => 'getNrOfIrregularities'
+        'nr_of_irregularities' => 'getNrOfIrregularities',
+        'nr_of_files' => 'getNrOfFiles'
     ];
 
     public static function attributeMap()
@@ -157,6 +162,7 @@ class ActivityStatsModel implements ArrayAccess
         $this->container['nr_of_transactions'] = isset($data['nr_of_transactions']) ? $data['nr_of_transactions'] : null;
         $this->container['nr_of_notes'] = isset($data['nr_of_notes']) ? $data['nr_of_notes'] : null;
         $this->container['nr_of_irregularities'] = isset($data['nr_of_irregularities']) ? $data['nr_of_irregularities'] : null;
+        $this->container['nr_of_files'] = isset($data['nr_of_files']) ? $data['nr_of_files'] : null;
     }
 
     /**
@@ -285,6 +291,27 @@ class ActivityStatsModel implements ArrayAccess
     public function setNrOfIrregularities($nr_of_irregularities)
     {
         $this->container['nr_of_irregularities'] = $nr_of_irregularities;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_files
+     * @return int
+     */
+    public function getNrOfFiles()
+    {
+        return $this->container['nr_of_files'];
+    }
+
+    /**
+     * Sets nr_of_files
+     * @param int $nr_of_files nr of files
+     * @return $this
+     */
+    public function setNrOfFiles($nr_of_files)
+    {
+        $this->container['nr_of_files'] = $nr_of_files;
 
         return $this;
     }

@@ -127,6 +127,13 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "period_name"
+     */
+    public function testPropertyPeriodName()
+    {
+    }
+
+    /**
      * Test attribute "period_id"
      */
     public function testPropertyPeriodId()
@@ -228,6 +235,13 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "updated_by_name"
      */
     public function testPropertyUpdatedByName()
+    {
+    }
+
+    /**
+     * Test attribute "object_id"
+     */
+    public function testPropertyObjectId()
     {
     }
 }

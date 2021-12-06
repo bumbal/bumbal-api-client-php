@@ -94,7 +94,7 @@ class ServicewindowApi
      *
      * @param \BumbalClient\Model\ServiceWindowRetrieveListArguments $arguments Service Window RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ServiceWindowModel[]
+     * @return \BumbalClient\Model\ServiceWindowListResponse
      */
     public function retrieveListServiceWindow($arguments)
     {
@@ -109,7 +109,7 @@ class ServicewindowApi
      *
      * @param \BumbalClient\Model\ServiceWindowRetrieveListArguments $arguments Service Window RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ServiceWindowModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ServiceWindowListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListServiceWindowWithHttpInfo($arguments)
     {
@@ -154,15 +154,15 @@ class ServicewindowApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ServiceWindowModel[]',
+                '\BumbalClient\Model\ServiceWindowListResponse',
                 '/service-window'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ServiceWindowModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ServiceWindowListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ServiceWindowModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ServiceWindowListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -176,13 +176,13 @@ class ServicewindowApi
      *
      * Retrieve a single service window
      *
-     * @param int $servicewindowsscheme_id ID of Service windows scheme to retrieve (required)
+     * @param int $service_window_id ID of Service windows scheme to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ServiceWindowsSchemeModel
+     * @return \BumbalClient\Model\ServiceWindowModel
      */
-    public function retrieveServiceWindow($servicewindowsscheme_id)
+    public function retrieveServiceWindow($service_window_id)
     {
-        list($response) = $this->retrieveServiceWindowWithHttpInfo($servicewindowsscheme_id);
+        list($response) = $this->retrieveServiceWindowWithHttpInfo($service_window_id);
         return $response;
     }
 
@@ -191,18 +191,18 @@ class ServicewindowApi
      *
      * Retrieve a single service window
      *
-     * @param int $servicewindowsscheme_id ID of Service windows scheme to retrieve (required)
+     * @param int $service_window_id ID of Service windows scheme to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ServiceWindowsSchemeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ServiceWindowModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveServiceWindowWithHttpInfo($servicewindowsscheme_id)
+    public function retrieveServiceWindowWithHttpInfo($service_window_id)
     {
-        // verify the required parameter 'servicewindowsscheme_id' is set
-        if ($servicewindowsscheme_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $servicewindowsscheme_id when calling retrieveServiceWindow');
+        // verify the required parameter 'service_window_id' is set
+        if ($service_window_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $service_window_id when calling retrieveServiceWindow');
         }
         // parse inputs
-        $resourcePath = "/service-window/{servicewindowid}";
+        $resourcePath = "/service-window/{serviceWindowId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -214,10 +214,10 @@ class ServicewindowApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($servicewindowsscheme_id !== null) {
+        if ($service_window_id !== null) {
             $resourcePath = str_replace(
-                "{" . "ServicewindowsschemeId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($servicewindowsscheme_id),
+                "{" . "serviceWindowId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($service_window_id),
                 $resourcePath
             );
         }
@@ -241,15 +241,15 @@ class ServicewindowApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ServiceWindowsSchemeModel',
-                '/service-window/{servicewindowid}'
+                '\BumbalClient\Model\ServiceWindowModel',
+                '/service-window/{serviceWindowId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ServiceWindowsSchemeModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ServiceWindowModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ServiceWindowsSchemeModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ServiceWindowModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

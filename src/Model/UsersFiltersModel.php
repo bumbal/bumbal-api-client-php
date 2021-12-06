@@ -60,7 +60,9 @@ class UsersFiltersModel implements ArrayAccess
         'role_id' => 'int[]',
         'party_id' => 'int[]',
         'tag_names' => 'string[]',
-        'zone_names' => 'string[]'
+        'zone_names' => 'string[]',
+        'system' => 'bool[]',
+        'activated' => 'bool[]'
     ];
 
     /**
@@ -74,7 +76,9 @@ class UsersFiltersModel implements ArrayAccess
         'role_id' => null,
         'party_id' => null,
         'tag_names' => null,
-        'zone_names' => null
+        'zone_names' => null,
+        'system' => null,
+        'activated' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +102,9 @@ class UsersFiltersModel implements ArrayAccess
         'role_id' => 'role_id',
         'party_id' => 'party_id',
         'tag_names' => 'tag_names',
-        'zone_names' => 'zone_names'
+        'zone_names' => 'zone_names',
+        'system' => 'system',
+        'activated' => 'activated'
     ];
 
 
@@ -113,7 +119,9 @@ class UsersFiltersModel implements ArrayAccess
         'role_id' => 'setRoleId',
         'party_id' => 'setPartyId',
         'tag_names' => 'setTagNames',
-        'zone_names' => 'setZoneNames'
+        'zone_names' => 'setZoneNames',
+        'system' => 'setSystem',
+        'activated' => 'setActivated'
     ];
 
 
@@ -128,7 +136,9 @@ class UsersFiltersModel implements ArrayAccess
         'role_id' => 'getRoleId',
         'party_id' => 'getPartyId',
         'tag_names' => 'getTagNames',
-        'zone_names' => 'getZoneNames'
+        'zone_names' => 'getZoneNames',
+        'system' => 'getSystem',
+        'activated' => 'getActivated'
     ];
 
     public static function attributeMap()
@@ -169,6 +179,8 @@ class UsersFiltersModel implements ArrayAccess
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['system'] = isset($data['system']) ? $data['system'] : null;
+        $this->container['activated'] = isset($data['activated']) ? $data['activated'] : null;
     }
 
     /**
@@ -339,6 +351,48 @@ class UsersFiltersModel implements ArrayAccess
     public function setZoneNames($zone_names)
     {
         $this->container['zone_names'] = $zone_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets system
+     * @return bool[]
+     */
+    public function getSystem()
+    {
+        return $this->container['system'];
+    }
+
+    /**
+     * Sets system
+     * @param bool[] $system System users
+     * @return $this
+     */
+    public function setSystem($system)
+    {
+        $this->container['system'] = $system;
+
+        return $this;
+    }
+
+    /**
+     * Gets activated
+     * @return bool[]
+     */
+    public function getActivated()
+    {
+        return $this->container['activated'];
+    }
+
+    /**
+     * Sets activated
+     * @param bool[] $activated Activated users
+     * @return $this
+     */
+    public function setActivated($activated)
+    {
+        $this->container['activated'] = $activated;
 
         return $this;
     }

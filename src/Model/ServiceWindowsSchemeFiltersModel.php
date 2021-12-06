@@ -57,8 +57,11 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
         'id' => 'int[]',
         'name' => 'string[]',
         'tag_names' => 'string[]',
+        'tag_ids' => 'int[]',
         'zone_names' => 'string[]',
-        'brand_names' => 'string[]'
+        'zone_ids' => 'int[]',
+        'brand_names' => 'string[]',
+        'brand_ids' => 'int[]'
     ];
 
     /**
@@ -69,8 +72,11 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
         'id' => null,
         'name' => null,
         'tag_names' => null,
+        'tag_ids' => null,
         'zone_names' => null,
-        'brand_names' => null
+        'zone_ids' => null,
+        'brand_names' => null,
+        'brand_ids' => null
     ];
 
     public static function swaggerTypes()
@@ -91,8 +97,11 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
         'id' => 'id',
         'name' => 'name',
         'tag_names' => 'tag_names',
+        'tag_ids' => 'tag_ids',
         'zone_names' => 'zone_names',
-        'brand_names' => 'brand_names'
+        'zone_ids' => 'zone_ids',
+        'brand_names' => 'brand_names',
+        'brand_ids' => 'brand_ids'
     ];
 
 
@@ -104,8 +113,11 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
         'id' => 'setId',
         'name' => 'setName',
         'tag_names' => 'setTagNames',
+        'tag_ids' => 'setTagIds',
         'zone_names' => 'setZoneNames',
-        'brand_names' => 'setBrandNames'
+        'zone_ids' => 'setZoneIds',
+        'brand_names' => 'setBrandNames',
+        'brand_ids' => 'setBrandIds'
     ];
 
 
@@ -117,8 +129,11 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
         'id' => 'getId',
         'name' => 'getName',
         'tag_names' => 'getTagNames',
+        'tag_ids' => 'getTagIds',
         'zone_names' => 'getZoneNames',
-        'brand_names' => 'getBrandNames'
+        'zone_ids' => 'getZoneIds',
+        'brand_names' => 'getBrandNames',
+        'brand_ids' => 'getBrandIds'
     ];
 
     public static function attributeMap()
@@ -155,8 +170,11 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['zone_ids'] = isset($data['zone_ids']) ? $data['zone_ids'] : null;
         $this->container['brand_names'] = isset($data['brand_names']) ? $data['brand_names'] : null;
+        $this->container['brand_ids'] = isset($data['brand_ids']) ? $data['brand_ids'] : null;
     }
 
     /**
@@ -248,6 +266,27 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets tag_ids
+     * @return int[]
+     */
+    public function getTagIds()
+    {
+        return $this->container['tag_ids'];
+    }
+
+    /**
+     * Sets tag_ids
+     * @param int[] $tag_ids tag ID's to filter by
+     * @return $this
+     */
+    public function setTagIds($tag_ids)
+    {
+        $this->container['tag_ids'] = $tag_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets zone_names
      * @return string[]
      */
@@ -269,6 +308,27 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets zone_ids
+     * @return int[]
+     */
+    public function getZoneIds()
+    {
+        return $this->container['zone_ids'];
+    }
+
+    /**
+     * Sets zone_ids
+     * @param int[] $zone_ids zone ID's to filter by
+     * @return $this
+     */
+    public function setZoneIds($zone_ids)
+    {
+        $this->container['zone_ids'] = $zone_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets brand_names
      * @return string[]
      */
@@ -285,6 +345,27 @@ class ServiceWindowsSchemeFiltersModel implements ArrayAccess
     public function setBrandNames($brand_names)
     {
         $this->container['brand_names'] = $brand_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_ids
+     * @return int[]
+     */
+    public function getBrandIds()
+    {
+        return $this->container['brand_ids'];
+    }
+
+    /**
+     * Sets brand_ids
+     * @param int[] $brand_ids brand ID's to filter by
+     * @return $this
+     */
+    public function setBrandIds($brand_ids)
+    {
+        $this->container['brand_ids'] = $brand_ids;
 
         return $this;
     }

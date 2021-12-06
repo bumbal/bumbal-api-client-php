@@ -93,6 +93,26 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for lockActivityOnRoute
+     *
+     * Lock activities on route which satisfy set filters.
+     *
+     */
+    public function testLockActivityOnRoute()
+    {
+    }
+
+    /**
+     * Test case for lockActivityOnRouteAndTime
+     *
+     * Lock activities on route and time which satisfy set filters.
+     *
+     */
+    public function testLockActivityOnRouteAndTime()
+    {
+    }
+
+    /**
      * Test case for retrieveActivity
      *
      * Find activity by ID.

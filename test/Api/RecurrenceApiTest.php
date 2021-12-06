@@ -73,6 +73,26 @@ class RecurrenceApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createActivityRecurrence
+     *
+     * create a activity recurrence.
+     *
+     */
+    public function testCreateActivityRecurrence()
+    {
+    }
+
+    /**
+     * Test case for createRouteRecurrence
+     *
+     * create a route recurrence.
+     *
+     */
+    public function testCreateRouteRecurrence()
+    {
+    }
+
+    /**
      * Test case for deleteRecurrence
      *
      * Delete an Recurrence.

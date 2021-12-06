@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteServiceWindowsScheme**](ServicewindowsschemeApi.md#deleteServiceWindowsScheme) | **DELETE** /serviceWindowsScheme/{ServiceWindowsSchemeId} | Delete a service windows scheme
+[**deleteServiceWindowsScheme**](ServicewindowsschemeApi.md#deleteServiceWindowsScheme) | **DELETE** /service-windows-scheme/{serviceWindowsSchemeId} | Delete a service windows scheme
 [**retrieveListServiceWindowsScheme**](ServicewindowsschemeApi.md#retrieveListServiceWindowsScheme) | **PUT** /service-windows-scheme | Retrieve a list of service windows schemes
 [**retrieveServiceWindowsScheme**](ServicewindowsschemeApi.md#retrieveServiceWindowsScheme) | **GET** /service-windows-scheme/{serviceWindowsSchemeId} | Retrieve a single service windows scheme
 [**setServiceWindowsScheme**](ServicewindowsschemeApi.md#setServiceWindowsScheme) | **POST** /service-windows-scheme/set | Add or update a service windows scheme
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListServiceWindowsScheme**
-> \BumbalClient\Model\ServiceWindowsSchemeModel[] retrieveListServiceWindowsScheme($arguments)
+> \BumbalClient\Model\ServiceWindowsSchemeListResponse retrieveListServiceWindowsScheme($arguments)
 
 Retrieve a list of service windows schemes
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ServiceWindowsSchemeModel[]**](../Model/ServiceWindowsSchemeModel.md)
+[**\BumbalClient\Model\ServiceWindowsSchemeListResponse**](../Model/ServiceWindowsSchemeListResponse.md)
 
 ### Authorization
 

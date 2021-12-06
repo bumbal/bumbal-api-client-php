@@ -88,11 +88,179 @@ class RecurrenceApi
     }
 
     /**
+     * Operation createActivityRecurrence
+     *
+     * create a activity recurrence
+     *
+     * @param \BumbalClient\Model\RecurrenceModel $body Recurrence object that needs to be created (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function createActivityRecurrence($body)
+    {
+        list($response) = $this->createActivityRecurrenceWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation createActivityRecurrenceWithHttpInfo
+     *
+     * create a activity recurrence
+     *
+     * @param \BumbalClient\Model\RecurrenceModel $body Recurrence object that needs to be created (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createActivityRecurrenceWithHttpInfo($body)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling createActivityRecurrence');
+        }
+        // parse inputs
+        $resourcePath = "/recurrence/create-activity-recurrence";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/recurrence/create-activity-recurrence'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createRouteRecurrence
+     *
+     * create a route recurrence
+     *
+     * @param \BumbalClient\Model\RecurrenceModel $body Recurrence object that needs to be created (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function createRouteRecurrence($body)
+    {
+        list($response) = $this->createRouteRecurrenceWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation createRouteRecurrenceWithHttpInfo
+     *
+     * create a route recurrence
+     *
+     * @param \BumbalClient\Model\RecurrenceModel $body Recurrence object that needs to be created (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createRouteRecurrenceWithHttpInfo($body)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling createRouteRecurrence');
+        }
+        // parse inputs
+        $resourcePath = "/recurrence/create-route-recurrence";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/recurrence/create-route-recurrence'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteRecurrence
      *
      * Delete an Recurrence
      *
-     * @param int $recurrence_id ID of recurrence to update (required)
+     * @param int $recurrence_id ID of recurrence to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
@@ -107,7 +275,7 @@ class RecurrenceApi
      *
      * Delete an Recurrence
      *
-     * @param int $recurrence_id ID of recurrence to update (required)
+     * @param int $recurrence_id ID of recurrence to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
