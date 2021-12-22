@@ -139,4 +139,11 @@ class DriverUnavailabilityModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyLinks()
     {
     }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
 }

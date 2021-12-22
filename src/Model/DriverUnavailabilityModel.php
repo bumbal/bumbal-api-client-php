@@ -62,7 +62,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'user_link' => '\BumbalClient\Model\LinkModel',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'links' => '\BumbalClient\Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'active' => 'bool'
     ];
 
     /**
@@ -78,7 +79,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'user_link' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
-        'links' => null
+        'links' => null,
+        'active' => null
     ];
 
     public static function swaggerTypes()
@@ -104,7 +106,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'user_link' => 'user_link',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
-        'links' => 'links'
+        'links' => 'links',
+        'active' => 'active'
     ];
 
 
@@ -121,7 +124,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'user_link' => 'setUserLink',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'active' => 'setActive'
     ];
 
 
@@ -138,7 +142,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'user_link' => 'getUserLink',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'active' => 'getActive'
     ];
 
     public static function attributeMap()
@@ -181,6 +186,7 @@ class DriverUnavailabilityModel implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -393,6 +399,27 @@ class DriverUnavailabilityModel implements ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active if active=0: Driver Unavailability has been removed and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

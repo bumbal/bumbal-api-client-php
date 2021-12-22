@@ -54,7 +54,7 @@ class RoutePointsRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'route_ids' => 'null[]'
+        'route_ids' => 'int[]'
     ];
 
     /**
@@ -62,7 +62,7 @@ class RoutePointsRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'route_ids' => null
+        'route_ids' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -162,7 +162,7 @@ class RoutePointsRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets route_ids
-     * @return null[]
+     * @return int[]
      */
     public function getRouteIds()
     {
@@ -171,7 +171,7 @@ class RoutePointsRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets route_ids
-     * @param null[] $route_ids RouteIds
+     * @param int[] $route_ids RouteIds, maxItems=10 to prevent memory limit errors
      * @return $this
      */
     public function setRouteIds($route_ids)
