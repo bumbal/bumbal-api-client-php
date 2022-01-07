@@ -675,37 +675,31 @@ class ActivityModel implements ArrayAccess
     const ACTIVITY_TYPE_NAME_DEPOT = 'depot';
     const ACTIVITY_TYPE_NAME_DRIVER_END = 'driver_end';
     const ACTIVITY_TYPE_NAME_DRIVER_START = 'driver_start';
+    const ACTIVITY_TYPE_NAME_DRIVER_UNAVAILABLE = 'driver_unavailable';
     const ACTIVITY_TYPE_NAME_DROPOFF = 'dropoff';
+    const ACTIVITY_TYPE_NAME_EQUIPMENT_END = 'equipment_end';
+    const ACTIVITY_TYPE_NAME_EQUIPMENT_START = 'equipment_start';
     const ACTIVITY_TYPE_NAME_GAS_REFILL = 'gas_refill';
     const ACTIVITY_TYPE_NAME_INTERIOR_WASH = 'interior_wash';
     const ACTIVITY_TYPE_NAME_MAINTENANCE = 'maintenance';
     const ACTIVITY_TYPE_NAME_MAINTENANCE_PLANNED = 'maintenance_planned';
     const ACTIVITY_TYPE_NAME_MAINTENANCE_UNPLANNED = 'maintenance_unplanned';
     const ACTIVITY_TYPE_NAME_OTHER = 'other';
+    const ACTIVITY_TYPE_NAME_OTHER_END = 'other_end';
+    const ACTIVITY_TYPE_NAME_OTHER_START = 'other_start';
     const ACTIVITY_TYPE_NAME_PAUSE = 'pause';
     const ACTIVITY_TYPE_NAME_PICKUP = 'pickup';
     const ACTIVITY_TYPE_NAME_ROUTE_END = 'route_end';
     const ACTIVITY_TYPE_NAME_ROUTE_START = 'route_start';
     const ACTIVITY_TYPE_NAME_SANITARY = 'sanitary';
     const ACTIVITY_TYPE_NAME_STOP = 'stop';
+    const ACTIVITY_TYPE_NAME_TRAILER_ATTACH = 'trailer_attach';
+    const ACTIVITY_TYPE_NAME_TRAILER_DETACH = 'trailer_detach';
     const ACTIVITY_TYPE_NAME_UNPLANNED_STOP = 'unplanned_stop';
+    const ACTIVITY_TYPE_NAME_UNSUCCESSFUL = 'unsuccessful';
     const ACTIVITY_TYPE_NAME_USER_OTHER = 'user_other';
     const ACTIVITY_TYPE_NAME_WAIT = 'wait';
-    const ACTIVITY_TYPE_NAME_BREAKDOWN = 'breakdown';
-    const ACTIVITY_TYPE_NAME_SANITARY = 'sanitary';
-    const ACTIVITY_TYPE_NAME_OTHER_START = 'other_start';
-    const ACTIVITY_TYPE_NAME_OTHER_END = 'other_end';
-    const ACTIVITY_TYPE_NAME_EQUIPMENT_START = 'equipment_start';
-    const ACTIVITY_TYPE_NAME_EQUIPMENT_END = 'equipment_end';
-    const ACTIVITY_TYPE_NAME_MAINTENANCE = 'maintenance';
-    const ACTIVITY_TYPE_NAME_CAR_WASH = 'car_wash';
-    const ACTIVITY_TYPE_NAME_DEPOT = 'depot';
-    const ACTIVITY_TYPE_NAME_COMBI = 'combi';
-    const ACTIVITY_TYPE_NAME_INTERIOR_WASH = 'interior_wash';
-    const ACTIVITY_TYPE_NAME_OTHER = 'other';
-    const ACTIVITY_TYPE_NAME_BUNDLED = 'bundled';
-    const ACTIVITY_TYPE_NAME_DRIVER_UNAVAILABLE = 'driver_unavailable';
-    const ACTIVITY_TYPE_NAME_UNSUCCESSFUL = 'unsuccessful';
+    const ACTIVITY_TYPE_NAME_XML_UNSPECIFIED = 'xml_unspecified';
     const ACTIVITY_TYPE_ID_1 = 1;
     const ACTIVITY_TYPE_ID_2 = 2;
     const ACTIVITY_TYPE_ID_3 = 3;
@@ -760,37 +754,31 @@ class ActivityModel implements ArrayAccess
             self::ACTIVITY_TYPE_NAME_DEPOT,
             self::ACTIVITY_TYPE_NAME_DRIVER_END,
             self::ACTIVITY_TYPE_NAME_DRIVER_START,
+            self::ACTIVITY_TYPE_NAME_DRIVER_UNAVAILABLE,
             self::ACTIVITY_TYPE_NAME_DROPOFF,
+            self::ACTIVITY_TYPE_NAME_EQUIPMENT_END,
+            self::ACTIVITY_TYPE_NAME_EQUIPMENT_START,
             self::ACTIVITY_TYPE_NAME_GAS_REFILL,
             self::ACTIVITY_TYPE_NAME_INTERIOR_WASH,
             self::ACTIVITY_TYPE_NAME_MAINTENANCE,
             self::ACTIVITY_TYPE_NAME_MAINTENANCE_PLANNED,
             self::ACTIVITY_TYPE_NAME_MAINTENANCE_UNPLANNED,
             self::ACTIVITY_TYPE_NAME_OTHER,
+            self::ACTIVITY_TYPE_NAME_OTHER_END,
+            self::ACTIVITY_TYPE_NAME_OTHER_START,
             self::ACTIVITY_TYPE_NAME_PAUSE,
             self::ACTIVITY_TYPE_NAME_PICKUP,
             self::ACTIVITY_TYPE_NAME_ROUTE_END,
             self::ACTIVITY_TYPE_NAME_ROUTE_START,
             self::ACTIVITY_TYPE_NAME_SANITARY,
             self::ACTIVITY_TYPE_NAME_STOP,
+            self::ACTIVITY_TYPE_NAME_TRAILER_ATTACH,
+            self::ACTIVITY_TYPE_NAME_TRAILER_DETACH,
             self::ACTIVITY_TYPE_NAME_UNPLANNED_STOP,
+            self::ACTIVITY_TYPE_NAME_UNSUCCESSFUL,
             self::ACTIVITY_TYPE_NAME_USER_OTHER,
             self::ACTIVITY_TYPE_NAME_WAIT,
-            self::ACTIVITY_TYPE_NAME_BREAKDOWN,
-            self::ACTIVITY_TYPE_NAME_SANITARY,
-            self::ACTIVITY_TYPE_NAME_OTHER_START,
-            self::ACTIVITY_TYPE_NAME_OTHER_END,
-            self::ACTIVITY_TYPE_NAME_EQUIPMENT_START,
-            self::ACTIVITY_TYPE_NAME_EQUIPMENT_END,
-            self::ACTIVITY_TYPE_NAME_MAINTENANCE,
-            self::ACTIVITY_TYPE_NAME_CAR_WASH,
-            self::ACTIVITY_TYPE_NAME_DEPOT,
-            self::ACTIVITY_TYPE_NAME_COMBI,
-            self::ACTIVITY_TYPE_NAME_INTERIOR_WASH,
-            self::ACTIVITY_TYPE_NAME_OTHER,
-            self::ACTIVITY_TYPE_NAME_BUNDLED,
-            self::ACTIVITY_TYPE_NAME_DRIVER_UNAVAILABLE,
-            self::ACTIVITY_TYPE_NAME_UNSUCCESSFUL,
+            self::ACTIVITY_TYPE_NAME_XML_UNSPECIFIED,
         ];
     }
     
