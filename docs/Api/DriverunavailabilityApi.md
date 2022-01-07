@@ -28,6 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverunavailabilityApi();
 $body = new \BumbalClient\Model\DriverUnavailabilityModel(); // \BumbalClient\Model\DriverUnavailabilityModel | DriverUnavailability object that needs to be created
@@ -53,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -78,6 +82,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverunavailabilityApi();
 $driverunavailability_id = 789; // int | ID of DriverUnavailability to delete
@@ -103,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -128,6 +136,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverunavailabilityApi();
 $driverunavailability_id = 789; // int | ID of DriverUnavailability to retrieve
@@ -157,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -182,6 +194,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverunavailabilityApi();
 $arguments = new \BumbalClient\Model\DriverUnavailabilityRetrieveListArguments(); // \BumbalClient\Model\DriverUnavailabilityRetrieveListArguments | DriverUnavailability RetrieveList Arguments
@@ -207,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -232,6 +248,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverunavailabilityApi();
 $body = new \BumbalClient\Model\DriverUnavailabilityModel(); // \BumbalClient\Model\DriverUnavailabilityModel | DriverUnavailability object
@@ -257,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -282,6 +302,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverunavailabilityApi();
 $driverunavailability_id = 789; // int | ID of the DriverUnavailability object to update
@@ -309,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 

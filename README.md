@@ -60,6 +60,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of the activity to delete
@@ -292,6 +296,7 @@ Class | Method | HTTP request | Description
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
 *RecurrenceApi* | [**updateRecurrence**](docs/Api/RecurrenceApi.md#updaterecurrence) | **PUT** /recurrence/{recurrenceId} | Update a Recurrence
+*RouteApi* | [**blockRoutes**](docs/Api/RouteApi.md#blockroutes) | **POST** /route/block-routes | Block routes which satisfy set filters
 *RouteApi* | [**createRoute**](docs/Api/RouteApi.md#createroute) | **POST** /route | Add a new Route
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
 *RouteApi* | [**getExecutableActivities**](docs/Api/RouteApi.md#getexecutableactivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
@@ -299,6 +304,7 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
 *RouteApi* | [**routeStoreGeoLocations**](docs/Api/RouteApi.md#routestoregeolocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
 *RouteApi* | [**setRoute**](docs/Api/RouteApi.md#setroute) | **POST** /route/set | Set (create or update) an Route
+*RouteApi* | [**unblockRoutes**](docs/Api/RouteApi.md#unblockroutes) | **POST** /route/unblock-routes | Unblock routes which satisfy set filters
 *RouteApi* | [**updateRoute**](docs/Api/RouteApi.md#updateroute) | **PUT** /route/{routeId} | Update a Route
 *RoutepointsApi* | [**retrieveListRoutePoints**](docs/Api/RoutepointsApi.md#retrievelistroutepoints) | **PUT** /route-points | Find Route Points for multiple routes by route ID
 *RoutepointsApi* | [**retrieveRoutePoints**](docs/Api/RoutepointsApi.md#retrieveroutepoints) | **GET** /route-points/{routeId} | Find Route Points by route ID
@@ -838,6 +844,12 @@ Class | Method | HTTP request | Description
 
 - **Type**: API key
 - **API key parameter name**: ApiKey
+- **Location**: HTTP header
+
+## jwt
+
+- **Type**: API key
+- **API key parameter name**: Authorization
 - **Location**: HTTP header
 
 

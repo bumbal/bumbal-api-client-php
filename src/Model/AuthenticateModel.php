@@ -177,7 +177,7 @@ class AuthenticateModel implements ArrayAccess
 
     /**
      * Sets token
-     * @param string $token your access token
+     * @param string $token your access token. If request was made with 'return_jwt', then this token will be a JWT token. Use this token in a header Authorization:Bearer <jwt goes here>. This token currently has an expiration time of 8 hours, but will also be invalidated when signing out
      * @return $this
      */
     public function setToken($token)

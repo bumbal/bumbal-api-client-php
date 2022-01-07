@@ -149,6 +149,11 @@ class NoteApi
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -232,6 +237,11 @@ class NoteApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
         try {
@@ -360,6 +370,11 @@ class NoteApi
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -439,6 +454,11 @@ class NoteApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
         try {

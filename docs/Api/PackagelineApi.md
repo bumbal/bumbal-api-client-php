@@ -28,6 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
 $body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine model
@@ -53,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -78,6 +82,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
 $package_line_id = 789; // int | ID of the package-line to delete
@@ -103,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -128,6 +136,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
 $arguments = new \BumbalClient\Model\PackageLineRetrieveListArguments(); // \BumbalClient\Model\PackageLineRetrieveListArguments | PackageLine RetrieveList Arguments
@@ -153,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -178,6 +190,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
 $package_line_id = 789; // int | ID of package-line to return
@@ -229,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -254,6 +270,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
 $body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine model
@@ -279,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 
@@ -304,6 +324,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
 $body = new \BumbalClient\Model\PackageLineUpdateArguments(); // \BumbalClient\Model\PackageLineUpdateArguments | PackageLine Update object that contains all information about this update
@@ -329,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
 
 ### HTTP request headers
 

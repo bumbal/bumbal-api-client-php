@@ -90,4 +90,11 @@ class CredentialsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPassword()
     {
     }
+
+    /**
+     * Test attribute "return_jwt"
+     */
+    public function testPropertyReturnJwt()
+    {
+    }
 }

@@ -73,6 +73,16 @@ class RouteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for blockRoutes
+     *
+     * Block routes which satisfy set filters.
+     *
+     */
+    public function testBlockRoutes()
+    {
+    }
+
+    /**
      * Test case for createRoute
      *
      * Add a new Route.
@@ -139,6 +149,16 @@ class RouteApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetRoute()
+    {
+    }
+
+    /**
+     * Test case for unblockRoutes
+     *
+     * Unblock routes which satisfy set filters.
+     *
+     */
+    public function testUnblockRoutes()
     {
     }
 

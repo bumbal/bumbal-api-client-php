@@ -55,7 +55,8 @@ class CredentialsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'email' => 'string',
-        'password' => 'string'
+        'password' => 'string',
+        'return_jwt' => 'bool'
     ];
 
     /**
@@ -64,7 +65,8 @@ class CredentialsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'email' => null,
-        'password' => null
+        'password' => null,
+        'return_jwt' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,8 @@ class CredentialsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'email' => 'email',
-        'password' => 'password'
+        'password' => 'password',
+        'return_jwt' => 'return_jwt'
     ];
 
 
@@ -93,7 +96,8 @@ class CredentialsModel implements ArrayAccess
      */
     protected static $setters = [
         'email' => 'setEmail',
-        'password' => 'setPassword'
+        'password' => 'setPassword',
+        'return_jwt' => 'setReturnJwt'
     ];
 
 
@@ -103,7 +107,8 @@ class CredentialsModel implements ArrayAccess
      */
     protected static $getters = [
         'email' => 'getEmail',
-        'password' => 'getPassword'
+        'password' => 'getPassword',
+        'return_jwt' => 'getReturnJwt'
     ];
 
     public static function attributeMap()
@@ -139,6 +144,7 @@ class CredentialsModel implements ArrayAccess
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['return_jwt'] = isset($data['return_jwt']) ? $data['return_jwt'] : null;
     }
 
     /**
@@ -204,6 +210,27 @@ class CredentialsModel implements ArrayAccess
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets return_jwt
+     * @return bool
+     */
+    public function getReturnJwt()
+    {
+        return $this->container['return_jwt'];
+    }
+
+    /**
+     * Sets return_jwt
+     * @param bool $return_jwt Set to true for requesting a jwt token
+     * @return $this
+     */
+    public function setReturnJwt($return_jwt)
+    {
+        $this->container['return_jwt'] = $return_jwt;
 
         return $this;
     }

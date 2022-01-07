@@ -291,7 +291,7 @@ class TransactionModel implements ArrayAccess
 
     /**
      * Sets transaction_type
-     * @param int $transaction_type Type of Transaction, 2 = pin
+     * @param int $transaction_type Type of Transaction: 1 = cash, 2 = pin, 3 = online
      * @return $this
      */
     public function setTransactionType($transaction_type)
@@ -312,7 +312,7 @@ class TransactionModel implements ArrayAccess
 
     /**
      * Sets paid
-     * @param bool $paid if paid=0: the transaction has't been fullfilled yet
+     * @param bool $paid If paid = 0: the transaction has not been fullfilled yet
      * @return $this
      */
     public function setPaid($paid)
@@ -333,7 +333,7 @@ class TransactionModel implements ArrayAccess
 
     /**
      * Sets failed
-     * @param bool $failed if failed=1: the transaction has failed
+     * @param bool $failed if failed = 1: the transaction has failed
      * @return $this
      */
     public function setFailed($failed)

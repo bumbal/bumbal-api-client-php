@@ -88,6 +88,95 @@ class RouteApi
     }
 
     /**
+     * Operation blockRoutes
+     *
+     * Block routes which satisfy set filters
+     *
+     * @param \BumbalClient\Model\RouteFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function blockRoutes($filters)
+    {
+        list($response) = $this->blockRoutesWithHttpInfo($filters);
+        return $response;
+    }
+
+    /**
+     * Operation blockRoutesWithHttpInfo
+     *
+     * Block routes which satisfy set filters
+     *
+     * @param \BumbalClient\Model\RouteFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function blockRoutesWithHttpInfo($filters)
+    {
+        // verify the required parameter 'filters' is set
+        if ($filters === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $filters when calling blockRoutes');
+        }
+        // parse inputs
+        $resourcePath = "/route/block-routes";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($filters)) {
+            $_tempBody = $filters;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/route/block-routes'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation createRoute
      *
      * Add a new Route
@@ -141,6 +230,11 @@ class RouteApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
         try {
@@ -239,6 +333,11 @@ class RouteApi
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -323,6 +422,11 @@ class RouteApi
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -406,6 +510,11 @@ class RouteApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
         try {
@@ -574,6 +683,11 @@ class RouteApi
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -658,6 +772,11 @@ class RouteApi
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -738,6 +857,11 @@ class RouteApi
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -748,6 +872,95 @@ class RouteApi
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
                 '/route/set'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation unblockRoutes
+     *
+     * Unblock routes which satisfy set filters
+     *
+     * @param \BumbalClient\Model\RouteFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function unblockRoutes($filters)
+    {
+        list($response) = $this->unblockRoutesWithHttpInfo($filters);
+        return $response;
+    }
+
+    /**
+     * Operation unblockRoutesWithHttpInfo
+     *
+     * Unblock routes which satisfy set filters
+     *
+     * @param \BumbalClient\Model\RouteFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function unblockRoutesWithHttpInfo($filters)
+    {
+        // verify the required parameter 'filters' is set
+        if ($filters === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $filters when calling unblockRoutes');
+        }
+        // parse inputs
+        $resourcePath = "/route/unblock-routes";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($filters)) {
+            $_tempBody = $filters;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/route/unblock-routes'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -824,6 +1037,11 @@ class RouteApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
         if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
         try {

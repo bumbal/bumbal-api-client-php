@@ -691,6 +691,21 @@ class ActivityModel implements ArrayAccess
     const ACTIVITY_TYPE_NAME_UNPLANNED_STOP = 'unplanned_stop';
     const ACTIVITY_TYPE_NAME_USER_OTHER = 'user_other';
     const ACTIVITY_TYPE_NAME_WAIT = 'wait';
+    const ACTIVITY_TYPE_NAME_BREAKDOWN = 'breakdown';
+    const ACTIVITY_TYPE_NAME_SANITARY = 'sanitary';
+    const ACTIVITY_TYPE_NAME_OTHER_START = 'other_start';
+    const ACTIVITY_TYPE_NAME_OTHER_END = 'other_end';
+    const ACTIVITY_TYPE_NAME_EQUIPMENT_START = 'equipment_start';
+    const ACTIVITY_TYPE_NAME_EQUIPMENT_END = 'equipment_end';
+    const ACTIVITY_TYPE_NAME_MAINTENANCE = 'maintenance';
+    const ACTIVITY_TYPE_NAME_CAR_WASH = 'car_wash';
+    const ACTIVITY_TYPE_NAME_DEPOT = 'depot';
+    const ACTIVITY_TYPE_NAME_COMBI = 'combi';
+    const ACTIVITY_TYPE_NAME_INTERIOR_WASH = 'interior_wash';
+    const ACTIVITY_TYPE_NAME_OTHER = 'other';
+    const ACTIVITY_TYPE_NAME_BUNDLED = 'bundled';
+    const ACTIVITY_TYPE_NAME_DRIVER_UNAVAILABLE = 'driver_unavailable';
+    const ACTIVITY_TYPE_NAME_UNSUCCESSFUL = 'unsuccessful';
     const ACTIVITY_TYPE_ID_1 = 1;
     const ACTIVITY_TYPE_ID_2 = 2;
     const ACTIVITY_TYPE_ID_3 = 3;
@@ -716,6 +731,8 @@ class ActivityModel implements ArrayAccess
     const ACTIVITY_TYPE_ID_30 = 30;
     const ACTIVITY_TYPE_ID_31 = 31;
     const ACTIVITY_TYPE_ID_32 = 32;
+    const ACTIVITY_TYPE_ID_33 = 33;
+    const ACTIVITY_TYPE_ID_34 = 34;
     const STATUS_NAME_INCOMPLETE = 'activity_incomplete';
     const STATUS_NAME__NEW = 'activity_new';
     const STATUS_NAME_ACCEPTED = 'activity_accepted';
@@ -759,6 +776,21 @@ class ActivityModel implements ArrayAccess
             self::ACTIVITY_TYPE_NAME_UNPLANNED_STOP,
             self::ACTIVITY_TYPE_NAME_USER_OTHER,
             self::ACTIVITY_TYPE_NAME_WAIT,
+            self::ACTIVITY_TYPE_NAME_BREAKDOWN,
+            self::ACTIVITY_TYPE_NAME_SANITARY,
+            self::ACTIVITY_TYPE_NAME_OTHER_START,
+            self::ACTIVITY_TYPE_NAME_OTHER_END,
+            self::ACTIVITY_TYPE_NAME_EQUIPMENT_START,
+            self::ACTIVITY_TYPE_NAME_EQUIPMENT_END,
+            self::ACTIVITY_TYPE_NAME_MAINTENANCE,
+            self::ACTIVITY_TYPE_NAME_CAR_WASH,
+            self::ACTIVITY_TYPE_NAME_DEPOT,
+            self::ACTIVITY_TYPE_NAME_COMBI,
+            self::ACTIVITY_TYPE_NAME_INTERIOR_WASH,
+            self::ACTIVITY_TYPE_NAME_OTHER,
+            self::ACTIVITY_TYPE_NAME_BUNDLED,
+            self::ACTIVITY_TYPE_NAME_DRIVER_UNAVAILABLE,
+            self::ACTIVITY_TYPE_NAME_UNSUCCESSFUL,
         ];
     }
     
@@ -794,6 +826,8 @@ class ActivityModel implements ArrayAccess
             self::ACTIVITY_TYPE_ID_30,
             self::ACTIVITY_TYPE_ID_31,
             self::ACTIVITY_TYPE_ID_32,
+            self::ACTIVITY_TYPE_ID_33,
+            self::ACTIVITY_TYPE_ID_34,
         ];
     }
     
@@ -1376,7 +1410,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets locked
-     * @param int $locked Activity locked status. 0= not locked. 1= locked on a Route and time. 2= locke don route only.
+     * @param int $locked Activity locked status. 0 = not locked. 1 = locked on route and time. 2 = locked on route.
      * @return $this
      */
     public function setLocked($locked)
