@@ -60,7 +60,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_party_name' => 'bool',
         'include_pause' => 'bool',
         'include_zones' => 'bool',
-        'include_driver_unavailabilities' => 'bool'
+        'include_driver_unavailabilities' => 'bool',
+        'include_links' => 'bool'
     ];
 
     /**
@@ -74,7 +75,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_party_name' => null,
         'include_pause' => null,
         'include_zones' => null,
-        'include_driver_unavailabilities' => null
+        'include_driver_unavailabilities' => null,
+        'include_links' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +100,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_party_name' => 'include_party_name',
         'include_pause' => 'include_pause',
         'include_zones' => 'include_zones',
-        'include_driver_unavailabilities' => 'include_driver_unavailabilities'
+        'include_driver_unavailabilities' => 'include_driver_unavailabilities',
+        'include_links' => 'include_links'
     ];
 
 
@@ -113,7 +116,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_party_name' => 'setIncludePartyName',
         'include_pause' => 'setIncludePause',
         'include_zones' => 'setIncludeZones',
-        'include_driver_unavailabilities' => 'setIncludeDriverUnavailabilities'
+        'include_driver_unavailabilities' => 'setIncludeDriverUnavailabilities',
+        'include_links' => 'setIncludeLinks'
     ];
 
 
@@ -128,7 +132,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_party_name' => 'getIncludePartyName',
         'include_pause' => 'getIncludePause',
         'include_zones' => 'getIncludeZones',
-        'include_driver_unavailabilities' => 'getIncludeDriverUnavailabilities'
+        'include_driver_unavailabilities' => 'getIncludeDriverUnavailabilities',
+        'include_links' => 'getIncludeLinks'
     ];
 
     public static function attributeMap()
@@ -169,6 +174,7 @@ class UsersOptionsModel implements ArrayAccess
         $this->container['include_pause'] = isset($data['include_pause']) ? $data['include_pause'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_driver_unavailabilities'] = isset($data['include_driver_unavailabilities']) ? $data['include_driver_unavailabilities'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
     }
 
     /**
@@ -339,6 +345,27 @@ class UsersOptionsModel implements ArrayAccess
     public function setIncludeDriverUnavailabilities($include_driver_unavailabilities)
     {
         $this->container['include_driver_unavailabilities'] = $include_driver_unavailabilities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links 
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
 
         return $this;
     }

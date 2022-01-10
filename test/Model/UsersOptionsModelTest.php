@@ -125,4 +125,11 @@ class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeDriverUnavailabilities()
     {
     }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
 }

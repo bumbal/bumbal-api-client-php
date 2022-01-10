@@ -58,7 +58,8 @@ class FileOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'bool',
         'include_file_tags' => 'bool',
         'include_file_record_info' => 'bool',
-        'include_file_base64' => 'bool'
+        'include_file_base64' => 'bool',
+        'include_links' => 'bool'
     ];
 
     /**
@@ -70,7 +71,8 @@ class FileOptionsModel implements ArrayAccess
         'include_tag_type_name' => null,
         'include_file_tags' => null,
         'include_file_record_info' => null,
-        'include_file_base64' => null
+        'include_file_base64' => null,
+        'include_links' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +94,8 @@ class FileOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'include_tag_type_name',
         'include_file_tags' => 'include_file_tags',
         'include_file_record_info' => 'include_file_record_info',
-        'include_file_base64' => 'include_file_base64'
+        'include_file_base64' => 'include_file_base64',
+        'include_links' => 'include_links'
     ];
 
 
@@ -105,7 +108,8 @@ class FileOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'setIncludeTagTypeName',
         'include_file_tags' => 'setIncludeFileTags',
         'include_file_record_info' => 'setIncludeFileRecordInfo',
-        'include_file_base64' => 'setIncludeFileBase64'
+        'include_file_base64' => 'setIncludeFileBase64',
+        'include_links' => 'setIncludeLinks'
     ];
 
 
@@ -118,7 +122,8 @@ class FileOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'getIncludeTagTypeName',
         'include_file_tags' => 'getIncludeFileTags',
         'include_file_record_info' => 'getIncludeFileRecordInfo',
-        'include_file_base64' => 'getIncludeFileBase64'
+        'include_file_base64' => 'getIncludeFileBase64',
+        'include_links' => 'getIncludeLinks'
     ];
 
     public static function attributeMap()
@@ -157,6 +162,7 @@ class FileOptionsModel implements ArrayAccess
         $this->container['include_file_tags'] = isset($data['include_file_tags']) ? $data['include_file_tags'] : null;
         $this->container['include_file_record_info'] = isset($data['include_file_record_info']) ? $data['include_file_record_info'] : null;
         $this->container['include_file_base64'] = isset($data['include_file_base64']) ? $data['include_file_base64'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
     }
 
     /**
@@ -285,6 +291,27 @@ class FileOptionsModel implements ArrayAccess
     public function setIncludeFileBase64($include_file_base64)
     {
         $this->container['include_file_base64'] = $include_file_base64;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links 
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
 
         return $this;
     }

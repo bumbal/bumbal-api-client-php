@@ -111,4 +111,11 @@ class FileOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeFileBase64()
     {
     }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
 }
