@@ -125,4 +125,11 @@ class VehicleOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeVehicleTags()
     {
     }
+
+    /**
+     * Test attribute "include_tag_type_name"
+     */
+    public function testPropertyIncludeTagTypeName()
+    {
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * TrailerOptionsModelTest
+ * AppliedCapacityModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * TrailerOptionsModelTest Class Doc Comment
+ * AppliedCapacityModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description TrailerOptionsModel
+// * @description AppliedCapacityModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
+class AppliedCapacityModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,44 @@ class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TrailerOptionsModel"
+     * Test "AppliedCapacityModel"
      */
-    public function testTrailerOptionsModel()
+    public function testAppliedCapacityModel()
     {
     }
 
     /**
-     * Test attribute "include_trailer_tags"
+     * Test attribute "capacity_type_id"
      */
-    public function testPropertyIncludeTrailerTags()
+    public function testPropertyCapacityTypeId()
     {
     }
 
     /**
-     * Test attribute "include_tag_type_name"
+     * Test attribute "capacity_type_name"
      */
-    public function testPropertyIncludeTagTypeName()
+    public function testPropertyCapacityTypeName()
     {
     }
 
     /**
-     * Test attribute "include_trailer_meta_data"
+     * Test attribute "uom_id"
      */
-    public function testPropertyIncludeTrailerMetaData()
+    public function testPropertyUomId()
     {
     }
 
     /**
-     * Test attribute "include_trailer_links"
+     * Test attribute "uom_name"
      */
-    public function testPropertyIncludeTrailerLinks()
+    public function testPropertyUomName()
     {
     }
 
     /**
-     * Test attribute "include_updated_by_name"
+     * Test attribute "capacity_value"
      */
-    public function testPropertyIncludeUpdatedByName()
+    public function testPropertyCapacityValue()
     {
     }
 }

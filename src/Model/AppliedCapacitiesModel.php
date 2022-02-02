@@ -1,6 +1,6 @@
 <?php
 /**
- * TrailerOptionsModel
+ * AppliedCapacitiesModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * TrailerOptionsModel Class Doc Comment
+ * AppliedCapacitiesModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrailerOptionsModel implements ArrayAccess
+class AppliedCapacitiesModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,19 @@ class TrailerOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TrailerOptionsModel';
+    protected static $swaggerModelName = 'AppliedCapacitiesModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_trailer_tags' => 'bool',
-        'include_tag_type_name' => 'bool',
-        'include_trailer_meta_data' => 'bool',
-        'include_trailer_links' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'route' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'trailer' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'vehicle' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'equipment' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'activity' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'totals' => '\BumbalClient\Model\AppliedCapacityModel[]'
     ];
 
     /**
@@ -66,11 +67,12 @@ class TrailerOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_trailer_tags' => null,
-        'include_tag_type_name' => null,
-        'include_trailer_meta_data' => null,
-        'include_trailer_links' => null,
-        'include_updated_by_name' => null
+        'route' => null,
+        'trailer' => null,
+        'vehicle' => null,
+        'equipment' => null,
+        'activity' => null,
+        'totals' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +90,12 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_trailer_tags' => 'include_trailer_tags',
-        'include_tag_type_name' => 'include_tag_type_name',
-        'include_trailer_meta_data' => 'include_trailer_meta_data',
-        'include_trailer_links' => 'include_trailer_links',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'route' => 'route',
+        'trailer' => 'trailer',
+        'vehicle' => 'vehicle',
+        'equipment' => 'equipment',
+        'activity' => 'activity',
+        'totals' => 'totals'
     ];
 
 
@@ -101,11 +104,12 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_trailer_tags' => 'setIncludeTrailerTags',
-        'include_tag_type_name' => 'setIncludeTagTypeName',
-        'include_trailer_meta_data' => 'setIncludeTrailerMetaData',
-        'include_trailer_links' => 'setIncludeTrailerLinks',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'route' => 'setRoute',
+        'trailer' => 'setTrailer',
+        'vehicle' => 'setVehicle',
+        'equipment' => 'setEquipment',
+        'activity' => 'setActivity',
+        'totals' => 'setTotals'
     ];
 
 
@@ -114,11 +118,12 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_trailer_tags' => 'getIncludeTrailerTags',
-        'include_tag_type_name' => 'getIncludeTagTypeName',
-        'include_trailer_meta_data' => 'getIncludeTrailerMetaData',
-        'include_trailer_links' => 'getIncludeTrailerLinks',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'route' => 'getRoute',
+        'trailer' => 'getTrailer',
+        'vehicle' => 'getVehicle',
+        'equipment' => 'getEquipment',
+        'activity' => 'getActivity',
+        'totals' => 'getTotals'
     ];
 
     public static function attributeMap()
@@ -152,11 +157,12 @@ class TrailerOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_trailer_tags'] = isset($data['include_trailer_tags']) ? $data['include_trailer_tags'] : null;
-        $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
-        $this->container['include_trailer_meta_data'] = isset($data['include_trailer_meta_data']) ? $data['include_trailer_meta_data'] : null;
-        $this->container['include_trailer_links'] = isset($data['include_trailer_links']) ? $data['include_trailer_links'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['route'] = isset($data['route']) ? $data['route'] : null;
+        $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
+        $this->container['vehicle'] = isset($data['vehicle']) ? $data['vehicle'] : null;
+        $this->container['equipment'] = isset($data['equipment']) ? $data['equipment'] : null;
+        $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
+        $this->container['totals'] = isset($data['totals']) ? $data['totals'] : null;
     }
 
     /**
@@ -185,106 +191,127 @@ class TrailerOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_trailer_tags
-     * @return bool
+     * Gets route
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
      */
-    public function getIncludeTrailerTags()
+    public function getRoute()
     {
-        return $this->container['include_trailer_tags'];
+        return $this->container['route'];
     }
 
     /**
-     * Sets include_trailer_tags
-     * @param bool $include_trailer_tags 
+     * Sets route
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $route 
      * @return $this
      */
-    public function setIncludeTrailerTags($include_trailer_tags)
+    public function setRoute($route)
     {
-        $this->container['include_trailer_tags'] = $include_trailer_tags;
+        $this->container['route'] = $route;
 
         return $this;
     }
 
     /**
-     * Gets include_tag_type_name
-     * @return bool
+     * Gets trailer
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
      */
-    public function getIncludeTagTypeName()
+    public function getTrailer()
     {
-        return $this->container['include_tag_type_name'];
+        return $this->container['trailer'];
     }
 
     /**
-     * Sets include_tag_type_name
-     * @param bool $include_tag_type_name 
+     * Sets trailer
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $trailer 
      * @return $this
      */
-    public function setIncludeTagTypeName($include_tag_type_name)
+    public function setTrailer($trailer)
     {
-        $this->container['include_tag_type_name'] = $include_tag_type_name;
+        $this->container['trailer'] = $trailer;
 
         return $this;
     }
 
     /**
-     * Gets include_trailer_meta_data
-     * @return bool
+     * Gets vehicle
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
      */
-    public function getIncludeTrailerMetaData()
+    public function getVehicle()
     {
-        return $this->container['include_trailer_meta_data'];
+        return $this->container['vehicle'];
     }
 
     /**
-     * Sets include_trailer_meta_data
-     * @param bool $include_trailer_meta_data 
+     * Sets vehicle
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $vehicle 
      * @return $this
      */
-    public function setIncludeTrailerMetaData($include_trailer_meta_data)
+    public function setVehicle($vehicle)
     {
-        $this->container['include_trailer_meta_data'] = $include_trailer_meta_data;
+        $this->container['vehicle'] = $vehicle;
 
         return $this;
     }
 
     /**
-     * Gets include_trailer_links
-     * @return bool
+     * Gets equipment
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
      */
-    public function getIncludeTrailerLinks()
+    public function getEquipment()
     {
-        return $this->container['include_trailer_links'];
+        return $this->container['equipment'];
     }
 
     /**
-     * Sets include_trailer_links
-     * @param bool $include_trailer_links 
+     * Sets equipment
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $equipment 
      * @return $this
      */
-    public function setIncludeTrailerLinks($include_trailer_links)
+    public function setEquipment($equipment)
     {
-        $this->container['include_trailer_links'] = $include_trailer_links;
+        $this->container['equipment'] = $equipment;
 
         return $this;
     }
 
     /**
-     * Gets include_updated_by_name
-     * @return bool
+     * Gets activity
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
      */
-    public function getIncludeUpdatedByName()
+    public function getActivity()
     {
-        return $this->container['include_updated_by_name'];
+        return $this->container['activity'];
     }
 
     /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
+     * Sets activity
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $activity 
      * @return $this
      */
-    public function setIncludeUpdatedByName($include_updated_by_name)
+    public function setActivity($activity)
     {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['activity'] = $activity;
+
+        return $this;
+    }
+
+    /**
+     * Gets totals
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
+     */
+    public function getTotals()
+    {
+        return $this->container['totals'];
+    }
+
+    /**
+     * Sets totals
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $totals 
+     * @return $this
+     */
+    public function setTotals($totals)
+    {
+        $this->container['totals'] = $totals;
 
         return $this;
     }

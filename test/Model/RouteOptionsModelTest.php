@@ -300,4 +300,11 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeAppliedCapacities()
     {
     }
+
+    /**
+     * Test attribute "include_applied_capacities_v2"
+     */
+    public function testPropertyIncludeAppliedCapacitiesV2()
+    {
+    }
 }

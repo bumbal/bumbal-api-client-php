@@ -114,7 +114,7 @@ class RouteEtaModel implements ArrayAccess
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
         'planned_capacities' => 'object',
-        'applied_capacities' => 'object',
+        'applied_capacities' => '\BumbalClient\Model\AppliedCapacitiesModel',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_ids' => 'int[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
@@ -1932,7 +1932,7 @@ class RouteEtaModel implements ArrayAccess
 
     /**
      * Gets applied_capacities
-     * @return object
+     * @return \BumbalClient\Model\AppliedCapacitiesModel
      */
     public function getAppliedCapacities()
     {
@@ -1941,7 +1941,7 @@ class RouteEtaModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param \BumbalClient\Model\AppliedCapacitiesModel $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)

@@ -1,6 +1,6 @@
 <?php
 /**
- * TrailerOptionsModelTest
+ * ActivityModelAppliedCapacitiesTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * TrailerOptionsModelTest Class Doc Comment
+ * ActivityModelAppliedCapacitiesTest Class Doc Comment
  *
  * @category    Class */
-// * @description TrailerOptionsModel
+// * @description 
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ActivityModelAppliedCapacitiesTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,16 @@ class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TrailerOptionsModel"
+     * Test "ActivityModelAppliedCapacities"
      */
-    public function testTrailerOptionsModel()
+    public function testActivityModelAppliedCapacities()
     {
     }
 
     /**
-     * Test attribute "include_trailer_tags"
+     * Test attribute "applied_capacities"
      */
-    public function testPropertyIncludeTrailerTags()
-    {
-    }
-
-    /**
-     * Test attribute "include_tag_type_name"
-     */
-    public function testPropertyIncludeTagTypeName()
-    {
-    }
-
-    /**
-     * Test attribute "include_trailer_meta_data"
-     */
-    public function testPropertyIncludeTrailerMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_trailer_links"
-     */
-    public function testPropertyIncludeTrailerLinks()
-    {
-    }
-
-    /**
-     * Test attribute "include_updated_by_name"
-     */
-    public function testPropertyIncludeUpdatedByName()
+    public function testPropertyAppliedCapacities()
     {
     }
 }

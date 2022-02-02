@@ -50,6 +50,7 @@ Name | Type | Description | Notes
 **include_capacities** | **bool** |  | [optional] 
 **include_filled_capacities** | **bool** |  | [optional] 
 **include_applied_capacities** | **bool** |  | [optional] 
+**include_applied_capacities_v2** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
 **include_brand_name** | **bool** |  | [optional] 
 **include_brand_colours** | **bool** |  | [optional] 

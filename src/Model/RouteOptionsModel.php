@@ -85,7 +85,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_notes' => 'bool',
         'include_links' => 'bool',
         'include_meta_data' => 'bool',
-        'include_applied_capacities' => 'bool'
+        'include_applied_capacities' => 'bool',
+        'include_applied_capacities_v2' => 'bool'
     ];
 
     /**
@@ -124,7 +125,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_notes' => null,
         'include_links' => null,
         'include_meta_data' => null,
-        'include_applied_capacities' => null
+        'include_applied_capacities' => null,
+        'include_applied_capacities_v2' => null
     ];
 
     public static function swaggerTypes()
@@ -173,7 +175,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_notes' => 'include_notes',
         'include_links' => 'include_links',
         'include_meta_data' => 'include_meta_data',
-        'include_applied_capacities' => 'include_applied_capacities'
+        'include_applied_capacities' => 'include_applied_capacities',
+        'include_applied_capacities_v2' => 'include_applied_capacities_v2'
     ];
 
 
@@ -213,7 +216,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_notes' => 'setIncludeNotes',
         'include_links' => 'setIncludeLinks',
         'include_meta_data' => 'setIncludeMetaData',
-        'include_applied_capacities' => 'setIncludeAppliedCapacities'
+        'include_applied_capacities' => 'setIncludeAppliedCapacities',
+        'include_applied_capacities_v2' => 'setIncludeAppliedCapacitiesV2'
     ];
 
 
@@ -253,7 +257,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_notes' => 'getIncludeNotes',
         'include_links' => 'getIncludeLinks',
         'include_meta_data' => 'getIncludeMetaData',
-        'include_applied_capacities' => 'getIncludeAppliedCapacities'
+        'include_applied_capacities' => 'getIncludeAppliedCapacities',
+        'include_applied_capacities_v2' => 'getIncludeAppliedCapacitiesV2'
     ];
 
     public static function attributeMap()
@@ -319,6 +324,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
+        $this->container['include_applied_capacities_v2'] = isset($data['include_applied_capacities_v2']) ? $data['include_applied_capacities_v2'] : null;
     }
 
     /**
@@ -1014,6 +1020,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeAppliedCapacities($include_applied_capacities)
     {
         $this->container['include_applied_capacities'] = $include_applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_applied_capacities_v2
+     * @return bool
+     */
+    public function getIncludeAppliedCapacitiesV2()
+    {
+        return $this->container['include_applied_capacities_v2'];
+    }
+
+    /**
+     * Sets include_applied_capacities_v2
+     * @param bool $include_applied_capacities_v2 
+     * @return $this
+     */
+    public function setIncludeAppliedCapacitiesV2($include_applied_capacities_v2)
+    {
+        $this->container['include_applied_capacities_v2'] = $include_applied_capacities_v2;
 
         return $this;
     }

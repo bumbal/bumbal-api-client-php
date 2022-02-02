@@ -1,6 +1,6 @@
 <?php
 /**
- * TrailerOptionsModel
+ * AddressValidationResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * TrailerOptionsModel Class Doc Comment
+ * AddressValidationResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrailerOptionsModel implements ArrayAccess
+class AddressValidationResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,16 @@ class TrailerOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TrailerOptionsModel';
+    protected static $swaggerModelName = 'AddressValidationResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_trailer_tags' => 'bool',
-        'include_tag_type_name' => 'bool',
-        'include_trailer_meta_data' => 'bool',
-        'include_trailer_links' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'valid' => 'bool',
+        'certainty' => 'int',
+        'address' => '\BumbalClient\Model\AddressModel'
     ];
 
     /**
@@ -66,11 +64,9 @@ class TrailerOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_trailer_tags' => null,
-        'include_tag_type_name' => null,
-        'include_trailer_meta_data' => null,
-        'include_trailer_links' => null,
-        'include_updated_by_name' => null
+        'valid' => null,
+        'certainty' => null,
+        'address' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +84,9 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_trailer_tags' => 'include_trailer_tags',
-        'include_tag_type_name' => 'include_tag_type_name',
-        'include_trailer_meta_data' => 'include_trailer_meta_data',
-        'include_trailer_links' => 'include_trailer_links',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'valid' => 'valid',
+        'certainty' => 'certainty',
+        'address' => 'address'
     ];
 
 
@@ -101,11 +95,9 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_trailer_tags' => 'setIncludeTrailerTags',
-        'include_tag_type_name' => 'setIncludeTagTypeName',
-        'include_trailer_meta_data' => 'setIncludeTrailerMetaData',
-        'include_trailer_links' => 'setIncludeTrailerLinks',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'valid' => 'setValid',
+        'certainty' => 'setCertainty',
+        'address' => 'setAddress'
     ];
 
 
@@ -114,11 +106,9 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_trailer_tags' => 'getIncludeTrailerTags',
-        'include_tag_type_name' => 'getIncludeTagTypeName',
-        'include_trailer_meta_data' => 'getIncludeTrailerMetaData',
-        'include_trailer_links' => 'getIncludeTrailerLinks',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'valid' => 'getValid',
+        'certainty' => 'getCertainty',
+        'address' => 'getAddress'
     ];
 
     public static function attributeMap()
@@ -152,11 +142,9 @@ class TrailerOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_trailer_tags'] = isset($data['include_trailer_tags']) ? $data['include_trailer_tags'] : null;
-        $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
-        $this->container['include_trailer_meta_data'] = isset($data['include_trailer_meta_data']) ? $data['include_trailer_meta_data'] : null;
-        $this->container['include_trailer_links'] = isset($data['include_trailer_links']) ? $data['include_trailer_links'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['valid'] = isset($data['valid']) ? $data['valid'] : null;
+        $this->container['certainty'] = isset($data['certainty']) ? $data['certainty'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
     }
 
     /**
@@ -185,106 +173,64 @@ class TrailerOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_trailer_tags
+     * Gets valid
      * @return bool
      */
-    public function getIncludeTrailerTags()
+    public function getValid()
     {
-        return $this->container['include_trailer_tags'];
+        return $this->container['valid'];
     }
 
     /**
-     * Sets include_trailer_tags
-     * @param bool $include_trailer_tags 
+     * Sets valid
+     * @param bool $valid Indicates if a location was found for the address and the minimum_certainty requirement was met.
      * @return $this
      */
-    public function setIncludeTrailerTags($include_trailer_tags)
+    public function setValid($valid)
     {
-        $this->container['include_trailer_tags'] = $include_trailer_tags;
+        $this->container['valid'] = $valid;
 
         return $this;
     }
 
     /**
-     * Gets include_tag_type_name
-     * @return bool
+     * Gets certainty
+     * @return int
      */
-    public function getIncludeTagTypeName()
+    public function getCertainty()
     {
-        return $this->container['include_tag_type_name'];
+        return $this->container['certainty'];
     }
 
     /**
-     * Sets include_tag_type_name
-     * @param bool $include_tag_type_name 
+     * Sets certainty
+     * @param int $certainty Certainty that latitude/longitude fields in address are accurate expressed as an integer between 0 and 100. When the valid field is false, certainty will always be set to 0
      * @return $this
      */
-    public function setIncludeTagTypeName($include_tag_type_name)
+    public function setCertainty($certainty)
     {
-        $this->container['include_tag_type_name'] = $include_tag_type_name;
+        $this->container['certainty'] = $certainty;
 
         return $this;
     }
 
     /**
-     * Gets include_trailer_meta_data
-     * @return bool
+     * Gets address
+     * @return \BumbalClient\Model\AddressModel
      */
-    public function getIncludeTrailerMetaData()
+    public function getAddress()
     {
-        return $this->container['include_trailer_meta_data'];
+        return $this->container['address'];
     }
 
     /**
-     * Sets include_trailer_meta_data
-     * @param bool $include_trailer_meta_data 
+     * Sets address
+     * @param \BumbalClient\Model\AddressModel $address Address model containing the latitude and longitude fields
      * @return $this
      */
-    public function setIncludeTrailerMetaData($include_trailer_meta_data)
+    public function setAddress($address)
     {
-        $this->container['include_trailer_meta_data'] = $include_trailer_meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_trailer_links
-     * @return bool
-     */
-    public function getIncludeTrailerLinks()
-    {
-        return $this->container['include_trailer_links'];
-    }
-
-    /**
-     * Sets include_trailer_links
-     * @param bool $include_trailer_links 
-     * @return $this
-     */
-    public function setIncludeTrailerLinks($include_trailer_links)
-    {
-        $this->container['include_trailer_links'] = $include_trailer_links;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_updated_by_name
-     * @return bool
-     */
-    public function getIncludeUpdatedByName()
-    {
-        return $this->container['include_updated_by_name'];
-    }
-
-    /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
-     * @return $this
-     */
-    public function setIncludeUpdatedByName($include_updated_by_name)
-    {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['address'] = $address;
 
         return $this;
     }

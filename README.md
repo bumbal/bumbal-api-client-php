@@ -99,9 +99,10 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**deleteAddress**](docs/Api/AddressApi.md#deleteaddress) | **DELETE** /address/{addressId} | Delete an address
 *AddressApi* | [**retrieveAddress**](docs/Api/AddressApi.md#retrieveaddress) | **GET** /address/{addressId} | Retrieve a Address
 *AddressApi* | [**retrieveListAddress**](docs/Api/AddressApi.md#retrievelistaddress) | **PUT** /address | Retrieve List of Addresses
-*AddressApi* | [**reverseGeoCodeAddress**](docs/Api/AddressApi.md#reversegeocodeaddress) | **POST** /address/reverse-geo-code | Reverse Geo Code a address
+*AddressApi* | [**reverseGeoCodeAddress**](docs/Api/AddressApi.md#reversegeocodeaddress) | **POST** /address/reverse-geo-code | Reverse Geo Code an address
 *AddressApi* | [**setAddress**](docs/Api/AddressApi.md#setaddress) | **POST** /address/set | Add a new Address
 *AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /address/{addressId} | Update a address
+*AddressApi* | [**validateAddress**](docs/Api/AddressApi.md#validateaddress) | **GET** /address/validate | Validate an address
 *AddressappliedApi* | [**retrieveAddressApplied**](docs/Api/AddressappliedApi.md#retrieveaddressapplied) | **GET** /address-applied/{addressId} | Retrieve an Applied Address
 *AddressappliedApi* | [**updateAddressApplied**](docs/Api/AddressappliedApi.md#updateaddressapplied) | **PUT** /address-applied/{addressId} | Update a AddressApplied
 *AssignmentApi* | [**deleteAssignment**](docs/Api/AssignmentApi.md#deleteassignment) | **DELETE** /assignment/{assignmentId} | Delete an assignment
@@ -401,6 +402,7 @@ Class | Method | HTTP request | Description
  - [ActivityForToRouteModel](docs/Model/ActivityForToRouteModel.md)
  - [ActivityListResponse](docs/Model/ActivityListResponse.md)
  - [ActivityModel](docs/Model/ActivityModel.md)
+ - [ActivityModelAppliedCapacities](docs/Model/ActivityModelAppliedCapacities.md)
  - [ActivityOptionsModel](docs/Model/ActivityOptionsModel.md)
  - [ActivityRetrieveListArguments](docs/Model/ActivityRetrieveListArguments.md)
  - [ActivityStatsModel](docs/Model/ActivityStatsModel.md)
@@ -423,6 +425,7 @@ Class | Method | HTTP request | Description
  - [AddressRetrieveListArguments](docs/Model/AddressRetrieveListArguments.md)
  - [AddressReverseGeoCodeArguments](docs/Model/AddressReverseGeoCodeArguments.md)
  - [AddressReverseGeoCodeResponse](docs/Model/AddressReverseGeoCodeResponse.md)
+ - [AddressValidationResponse](docs/Model/AddressValidationResponse.md)
  - [AllowedDriverModel](docs/Model/AllowedDriverModel.md)
  - [ApiResponse](docs/Model/ApiResponse.md)
  - [ApiResponse1](docs/Model/ApiResponse1.md)
@@ -485,6 +488,8 @@ Class | Method | HTTP request | Description
  - [ApiResponse7](docs/Model/ApiResponse7.md)
  - [ApiResponse8](docs/Model/ApiResponse8.md)
  - [ApiResponse9](docs/Model/ApiResponse9.md)
+ - [AppliedCapacitiesModel](docs/Model/AppliedCapacitiesModel.md)
+ - [AppliedCapacityModel](docs/Model/AppliedCapacityModel.md)
  - [ApplyPlanningArguments](docs/Model/ApplyPlanningArguments.md)
  - [ApplyPlanningDataModel](docs/Model/ApplyPlanningDataModel.md)
  - [ApplyPlanningFiltersModel](docs/Model/ApplyPlanningFiltersModel.md)

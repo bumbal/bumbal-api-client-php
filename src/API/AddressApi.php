@@ -363,7 +363,7 @@ class AddressApi
     /**
      * Operation reverseGeoCodeAddress
      *
-     * Reverse Geo Code a address
+     * Reverse Geo Code an address
      *
      * @param \BumbalClient\Model\AddressReverseGeoCodeArguments $arguments Address Reverse GeoCode Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -378,7 +378,7 @@ class AddressApi
     /**
      * Operation reverseGeoCodeAddressWithHttpInfo
      *
-     * Reverse Geo Code a address
+     * Reverse Geo Code an address
      *
      * @param \BumbalClient\Model\AddressReverseGeoCodeArguments $arguments Address Reverse GeoCode Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -625,6 +625,134 @@ class AddressApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation validateAddress
+     *
+     * Validate an address
+     *
+     * @param string $city City (required)
+     * @param string $iso_country Country in ISO 3166-1 alpha 2 (required)
+     * @param string $street Street (optional)
+     * @param string $house_nr House Number (optional)
+     * @param string $house_nr_addendum House Number Annex (optional)
+     * @param string $zipcode Zipcode (optional)
+     * @param int $minimum_certainty Minimum required certainty as an int between 0 and 100 (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\AddressValidationResponse
+     */
+    public function validateAddress($city, $iso_country, $street = null, $house_nr = null, $house_nr_addendum = null, $zipcode = null, $minimum_certainty = null)
+    {
+        list($response) = $this->validateAddressWithHttpInfo($city, $iso_country, $street, $house_nr, $house_nr_addendum, $zipcode, $minimum_certainty);
+        return $response;
+    }
+
+    /**
+     * Operation validateAddressWithHttpInfo
+     *
+     * Validate an address
+     *
+     * @param string $city City (required)
+     * @param string $iso_country Country in ISO 3166-1 alpha 2 (required)
+     * @param string $street Street (optional)
+     * @param string $house_nr House Number (optional)
+     * @param string $house_nr_addendum House Number Annex (optional)
+     * @param string $zipcode Zipcode (optional)
+     * @param int $minimum_certainty Minimum required certainty as an int between 0 and 100 (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\AddressValidationResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function validateAddressWithHttpInfo($city, $iso_country, $street = null, $house_nr = null, $house_nr_addendum = null, $zipcode = null, $minimum_certainty = null)
+    {
+        // verify the required parameter 'city' is set
+        if ($city === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $city when calling validateAddress');
+        }
+        // verify the required parameter 'iso_country' is set
+        if ($iso_country === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $iso_country when calling validateAddress');
+        }
+        // parse inputs
+        $resourcePath = "/address/validate";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // query params
+        if ($street !== null) {
+            $queryParams['street'] = $this->apiClient->getSerializer()->toQueryValue($street);
+        }
+        // query params
+        if ($house_nr !== null) {
+            $queryParams['house_nr'] = $this->apiClient->getSerializer()->toQueryValue($house_nr);
+        }
+        // query params
+        if ($house_nr_addendum !== null) {
+            $queryParams['house_nr_addendum'] = $this->apiClient->getSerializer()->toQueryValue($house_nr_addendum);
+        }
+        // query params
+        if ($zipcode !== null) {
+            $queryParams['zipcode'] = $this->apiClient->getSerializer()->toQueryValue($zipcode);
+        }
+        // query params
+        if ($city !== null) {
+            $queryParams['city'] = $this->apiClient->getSerializer()->toQueryValue($city);
+        }
+        // query params
+        if ($iso_country !== null) {
+            $queryParams['iso_country'] = $this->apiClient->getSerializer()->toQueryValue($iso_country);
+        }
+        // query params
+        if ($minimum_certainty !== null) {
+            $queryParams['minimum_certainty'] = $this->apiClient->getSerializer()->toQueryValue($minimum_certainty);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\AddressValidationResponse',
+                '/address/validate'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressValidationResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressValidationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

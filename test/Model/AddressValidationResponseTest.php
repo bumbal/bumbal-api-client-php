@@ -1,6 +1,6 @@
 <?php
 /**
- * TrailerOptionsModelTest
+ * AddressValidationResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * TrailerOptionsModelTest Class Doc Comment
+ * AddressValidationResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description TrailerOptionsModel
+// * @description AddressValidationResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
+class AddressValidationResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,30 @@ class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TrailerOptionsModel"
+     * Test "AddressValidationResponse"
      */
-    public function testTrailerOptionsModel()
+    public function testAddressValidationResponse()
     {
     }
 
     /**
-     * Test attribute "include_trailer_tags"
+     * Test attribute "valid"
      */
-    public function testPropertyIncludeTrailerTags()
+    public function testPropertyValid()
     {
     }
 
     /**
-     * Test attribute "include_tag_type_name"
+     * Test attribute "certainty"
      */
-    public function testPropertyIncludeTagTypeName()
+    public function testPropertyCertainty()
     {
     }
 
     /**
-     * Test attribute "include_trailer_meta_data"
+     * Test attribute "address"
      */
-    public function testPropertyIncludeTrailerMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_trailer_links"
-     */
-    public function testPropertyIncludeTrailerLinks()
-    {
-    }
-
-    /**
-     * Test attribute "include_updated_by_name"
-     */
-    public function testPropertyIncludeUpdatedByName()
+    public function testPropertyAddress()
     {
     }
 }

@@ -122,7 +122,7 @@ class ActivityModel implements ArrayAccess
         'allowed_driver_ids' => 'int[]',
         'allowed_drivers' => '\BumbalClient\Model\AllowedDriverModel[]',
         'allowed_drivers_links' => '\BumbalClient\Model\LinkModel[]',
-        'applied_capacities' => 'object',
+        'applied_capacities' => '\BumbalClient\Model\ActivityModelAppliedCapacities',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
         'payments' => '\BumbalClient\Model\PaymentModel[]',
@@ -2481,7 +2481,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets applied_capacities
-     * @return object
+     * @return \BumbalClient\Model\ActivityModelAppliedCapacities
      */
     public function getAppliedCapacities()
     {
@@ -2490,7 +2490,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param \BumbalClient\Model\ActivityModelAppliedCapacities $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)

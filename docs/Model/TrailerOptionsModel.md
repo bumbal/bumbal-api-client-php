@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **include_trailer_tags** | **bool** |  | [optional] 
+**include_tag_type_name** | **bool** |  | [optional] 
 **include_trailer_meta_data** | **bool** |  | [optional] 
 **include_trailer_links** | **bool** |  | [optional] 
 **include_updated_by_name** | **bool** |  | [optional] 

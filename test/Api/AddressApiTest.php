@@ -105,7 +105,7 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for reverseGeoCodeAddress
      *
-     * Reverse Geo Code a address.
+     * Reverse Geo Code an address.
      *
      */
     public function testReverseGeoCodeAddress()
@@ -129,6 +129,16 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testUpdateAddress()
+    {
+    }
+
+    /**
+     * Test case for validateAddress
+     *
+     * Validate an address.
+     *
+     */
+    public function testValidateAddress()
     {
     }
 }

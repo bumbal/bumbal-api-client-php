@@ -1,6 +1,6 @@
 <?php
 /**
- * TrailerOptionsModelTest
+ * AppliedCapacitiesModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * TrailerOptionsModelTest Class Doc Comment
+ * AppliedCapacitiesModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description TrailerOptionsModel
+// * @description AppliedCapacitiesModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
+class AppliedCapacitiesModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,51 @@ class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TrailerOptionsModel"
+     * Test "AppliedCapacitiesModel"
      */
-    public function testTrailerOptionsModel()
+    public function testAppliedCapacitiesModel()
     {
     }
 
     /**
-     * Test attribute "include_trailer_tags"
+     * Test attribute "route"
      */
-    public function testPropertyIncludeTrailerTags()
+    public function testPropertyRoute()
     {
     }
 
     /**
-     * Test attribute "include_tag_type_name"
+     * Test attribute "trailer"
      */
-    public function testPropertyIncludeTagTypeName()
+    public function testPropertyTrailer()
     {
     }
 
     /**
-     * Test attribute "include_trailer_meta_data"
+     * Test attribute "vehicle"
      */
-    public function testPropertyIncludeTrailerMetaData()
+    public function testPropertyVehicle()
     {
     }
 
     /**
-     * Test attribute "include_trailer_links"
+     * Test attribute "equipment"
      */
-    public function testPropertyIncludeTrailerLinks()
+    public function testPropertyEquipment()
     {
     }
 
     /**
-     * Test attribute "include_updated_by_name"
+     * Test attribute "activity"
      */
-    public function testPropertyIncludeUpdatedByName()
+    public function testPropertyActivity()
+    {
+    }
+
+    /**
+     * Test attribute "totals"
+     */
+    public function testPropertyTotals()
     {
     }
 }

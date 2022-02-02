@@ -63,7 +63,7 @@ Name | Type | Description | Notes
 **start_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **end_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **planned_capacities** | **object** |  | [optional] 
-**applied_capacities** | **object** |  | [optional] 
+**applied_capacities** | [**\BumbalClient\Model\AppliedCapacitiesModel**](AppliedCapacitiesModel.md) |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **activity_ids** | **int[]** | activity ids on route in order of execution | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 

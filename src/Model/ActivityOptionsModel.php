@@ -101,6 +101,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'bool',
         'include_filled_capacities' => 'bool',
         'include_applied_capacities' => 'bool',
+        'include_applied_capacities_v2' => 'bool',
         'include_zones' => 'bool',
         'include_brand_name' => 'bool',
         'include_brand_colours' => 'bool',
@@ -178,6 +179,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => null,
         'include_filled_capacities' => null,
         'include_applied_capacities' => null,
+        'include_applied_capacities_v2' => null,
         'include_zones' => null,
         'include_brand_name' => null,
         'include_brand_colours' => null,
@@ -265,6 +267,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'include_capacities',
         'include_filled_capacities' => 'include_filled_capacities',
         'include_applied_capacities' => 'include_applied_capacities',
+        'include_applied_capacities_v2' => 'include_applied_capacities_v2',
         'include_zones' => 'include_zones',
         'include_brand_name' => 'include_brand_name',
         'include_brand_colours' => 'include_brand_colours',
@@ -343,6 +346,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'setIncludeCapacities',
         'include_filled_capacities' => 'setIncludeFilledCapacities',
         'include_applied_capacities' => 'setIncludeAppliedCapacities',
+        'include_applied_capacities_v2' => 'setIncludeAppliedCapacitiesV2',
         'include_zones' => 'setIncludeZones',
         'include_brand_name' => 'setIncludeBrandName',
         'include_brand_colours' => 'setIncludeBrandColours',
@@ -421,6 +425,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'getIncludeCapacities',
         'include_filled_capacities' => 'getIncludeFilledCapacities',
         'include_applied_capacities' => 'getIncludeAppliedCapacities',
+        'include_applied_capacities_v2' => 'getIncludeAppliedCapacitiesV2',
         'include_zones' => 'getIncludeZones',
         'include_brand_name' => 'getIncludeBrandName',
         'include_brand_colours' => 'getIncludeBrandColours',
@@ -524,6 +529,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
         $this->container['include_filled_capacities'] = isset($data['include_filled_capacities']) ? $data['include_filled_capacities'] : null;
         $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
+        $this->container['include_applied_capacities_v2'] = isset($data['include_applied_capacities_v2']) ? $data['include_applied_capacities_v2'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_brand_name'] = isset($data['include_brand_name']) ? $data['include_brand_name'] : null;
         $this->container['include_brand_colours'] = isset($data['include_brand_colours']) ? $data['include_brand_colours'] : null;
@@ -1557,6 +1563,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeAppliedCapacities($include_applied_capacities)
     {
         $this->container['include_applied_capacities'] = $include_applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_applied_capacities_v2
+     * @return bool
+     */
+    public function getIncludeAppliedCapacitiesV2()
+    {
+        return $this->container['include_applied_capacities_v2'];
+    }
+
+    /**
+     * Sets include_applied_capacities_v2
+     * @param bool $include_applied_capacities_v2 
+     * @return $this
+     */
+    public function setIncludeAppliedCapacitiesV2($include_applied_capacities_v2)
+    {
+        $this->container['include_applied_capacities_v2'] = $include_applied_capacities_v2;
 
         return $this;
     }

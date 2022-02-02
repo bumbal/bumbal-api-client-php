@@ -1,6 +1,6 @@
 <?php
 /**
- * TrailerOptionsModel
+ * AppliedCapacityModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * TrailerOptionsModel Class Doc Comment
+ * AppliedCapacityModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrailerOptionsModel implements ArrayAccess
+class AppliedCapacityModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,18 @@ class TrailerOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TrailerOptionsModel';
+    protected static $swaggerModelName = 'AppliedCapacityModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_trailer_tags' => 'bool',
-        'include_tag_type_name' => 'bool',
-        'include_trailer_meta_data' => 'bool',
-        'include_trailer_links' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'capacity_type_id' => 'int',
+        'capacity_type_name' => 'string',
+        'uom_id' => 'int',
+        'uom_name' => 'string',
+        'capacity_value' => 'int'
     ];
 
     /**
@@ -66,11 +66,11 @@ class TrailerOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_trailer_tags' => null,
-        'include_tag_type_name' => null,
-        'include_trailer_meta_data' => null,
-        'include_trailer_links' => null,
-        'include_updated_by_name' => null
+        'capacity_type_id' => 'int64',
+        'capacity_type_name' => null,
+        'uom_id' => 'int64',
+        'uom_name' => null,
+        'capacity_value' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -88,11 +88,11 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_trailer_tags' => 'include_trailer_tags',
-        'include_tag_type_name' => 'include_tag_type_name',
-        'include_trailer_meta_data' => 'include_trailer_meta_data',
-        'include_trailer_links' => 'include_trailer_links',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'capacity_type_id' => 'capacity_type_id',
+        'capacity_type_name' => 'capacity_type_name',
+        'uom_id' => 'uom_id',
+        'uom_name' => 'uom_name',
+        'capacity_value' => 'capacity_value'
     ];
 
 
@@ -101,11 +101,11 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_trailer_tags' => 'setIncludeTrailerTags',
-        'include_tag_type_name' => 'setIncludeTagTypeName',
-        'include_trailer_meta_data' => 'setIncludeTrailerMetaData',
-        'include_trailer_links' => 'setIncludeTrailerLinks',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'capacity_type_id' => 'setCapacityTypeId',
+        'capacity_type_name' => 'setCapacityTypeName',
+        'uom_id' => 'setUomId',
+        'uom_name' => 'setUomName',
+        'capacity_value' => 'setCapacityValue'
     ];
 
 
@@ -114,11 +114,11 @@ class TrailerOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_trailer_tags' => 'getIncludeTrailerTags',
-        'include_tag_type_name' => 'getIncludeTagTypeName',
-        'include_trailer_meta_data' => 'getIncludeTrailerMetaData',
-        'include_trailer_links' => 'getIncludeTrailerLinks',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'capacity_type_id' => 'getCapacityTypeId',
+        'capacity_type_name' => 'getCapacityTypeName',
+        'uom_id' => 'getUomId',
+        'uom_name' => 'getUomName',
+        'capacity_value' => 'getCapacityValue'
     ];
 
     public static function attributeMap()
@@ -152,11 +152,11 @@ class TrailerOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_trailer_tags'] = isset($data['include_trailer_tags']) ? $data['include_trailer_tags'] : null;
-        $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
-        $this->container['include_trailer_meta_data'] = isset($data['include_trailer_meta_data']) ? $data['include_trailer_meta_data'] : null;
-        $this->container['include_trailer_links'] = isset($data['include_trailer_links']) ? $data['include_trailer_links'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['capacity_type_id'] = isset($data['capacity_type_id']) ? $data['capacity_type_id'] : null;
+        $this->container['capacity_type_name'] = isset($data['capacity_type_name']) ? $data['capacity_type_name'] : null;
+        $this->container['uom_id'] = isset($data['uom_id']) ? $data['uom_id'] : null;
+        $this->container['uom_name'] = isset($data['uom_name']) ? $data['uom_name'] : null;
+        $this->container['capacity_value'] = isset($data['capacity_value']) ? $data['capacity_value'] : null;
     }
 
     /**
@@ -185,106 +185,106 @@ class TrailerOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_trailer_tags
-     * @return bool
+     * Gets capacity_type_id
+     * @return int
      */
-    public function getIncludeTrailerTags()
+    public function getCapacityTypeId()
     {
-        return $this->container['include_trailer_tags'];
+        return $this->container['capacity_type_id'];
     }
 
     /**
-     * Sets include_trailer_tags
-     * @param bool $include_trailer_tags 
+     * Sets capacity_type_id
+     * @param int $capacity_type_id Capacity type ID
      * @return $this
      */
-    public function setIncludeTrailerTags($include_trailer_tags)
+    public function setCapacityTypeId($capacity_type_id)
     {
-        $this->container['include_trailer_tags'] = $include_trailer_tags;
+        $this->container['capacity_type_id'] = $capacity_type_id;
 
         return $this;
     }
 
     /**
-     * Gets include_tag_type_name
-     * @return bool
+     * Gets capacity_type_name
+     * @return string
      */
-    public function getIncludeTagTypeName()
+    public function getCapacityTypeName()
     {
-        return $this->container['include_tag_type_name'];
+        return $this->container['capacity_type_name'];
     }
 
     /**
-     * Sets include_tag_type_name
-     * @param bool $include_tag_type_name 
+     * Sets capacity_type_name
+     * @param string $capacity_type_name Capacity type name
      * @return $this
      */
-    public function setIncludeTagTypeName($include_tag_type_name)
+    public function setCapacityTypeName($capacity_type_name)
     {
-        $this->container['include_tag_type_name'] = $include_tag_type_name;
+        $this->container['capacity_type_name'] = $capacity_type_name;
 
         return $this;
     }
 
     /**
-     * Gets include_trailer_meta_data
-     * @return bool
+     * Gets uom_id
+     * @return int
      */
-    public function getIncludeTrailerMetaData()
+    public function getUomId()
     {
-        return $this->container['include_trailer_meta_data'];
+        return $this->container['uom_id'];
     }
 
     /**
-     * Sets include_trailer_meta_data
-     * @param bool $include_trailer_meta_data 
+     * Sets uom_id
+     * @param int $uom_id Unit of measurement ID
      * @return $this
      */
-    public function setIncludeTrailerMetaData($include_trailer_meta_data)
+    public function setUomId($uom_id)
     {
-        $this->container['include_trailer_meta_data'] = $include_trailer_meta_data;
+        $this->container['uom_id'] = $uom_id;
 
         return $this;
     }
 
     /**
-     * Gets include_trailer_links
-     * @return bool
+     * Gets uom_name
+     * @return string
      */
-    public function getIncludeTrailerLinks()
+    public function getUomName()
     {
-        return $this->container['include_trailer_links'];
+        return $this->container['uom_name'];
     }
 
     /**
-     * Sets include_trailer_links
-     * @param bool $include_trailer_links 
+     * Sets uom_name
+     * @param string $uom_name Unit of measurement name
      * @return $this
      */
-    public function setIncludeTrailerLinks($include_trailer_links)
+    public function setUomName($uom_name)
     {
-        $this->container['include_trailer_links'] = $include_trailer_links;
+        $this->container['uom_name'] = $uom_name;
 
         return $this;
     }
 
     /**
-     * Gets include_updated_by_name
-     * @return bool
+     * Gets capacity_value
+     * @return int
      */
-    public function getIncludeUpdatedByName()
+    public function getCapacityValue()
     {
-        return $this->container['include_updated_by_name'];
+        return $this->container['capacity_value'];
     }
 
     /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
+     * Sets capacity_value
+     * @param int $capacity_value Capacity value
      * @return $this
      */
-    public function setIncludeUpdatedByName($include_updated_by_name)
+    public function setCapacityValue($capacity_value)
     {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['capacity_value'] = $capacity_value;
 
         return $this;
     }
