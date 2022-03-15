@@ -86,7 +86,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_links' => 'bool',
         'include_meta_data' => 'bool',
         'include_applied_capacities' => 'bool',
-        'include_applied_capacities_v2' => 'bool'
+        'include_applied_capacities_v2' => 'bool',
+        'include_capacities' => 'bool'
     ];
 
     /**
@@ -126,7 +127,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_links' => null,
         'include_meta_data' => null,
         'include_applied_capacities' => null,
-        'include_applied_capacities_v2' => null
+        'include_applied_capacities_v2' => null,
+        'include_capacities' => null
     ];
 
     public static function swaggerTypes()
@@ -176,7 +178,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_links' => 'include_links',
         'include_meta_data' => 'include_meta_data',
         'include_applied_capacities' => 'include_applied_capacities',
-        'include_applied_capacities_v2' => 'include_applied_capacities_v2'
+        'include_applied_capacities_v2' => 'include_applied_capacities_v2',
+        'include_capacities' => 'include_capacities'
     ];
 
 
@@ -217,7 +220,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_links' => 'setIncludeLinks',
         'include_meta_data' => 'setIncludeMetaData',
         'include_applied_capacities' => 'setIncludeAppliedCapacities',
-        'include_applied_capacities_v2' => 'setIncludeAppliedCapacitiesV2'
+        'include_applied_capacities_v2' => 'setIncludeAppliedCapacitiesV2',
+        'include_capacities' => 'setIncludeCapacities'
     ];
 
 
@@ -258,7 +262,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_links' => 'getIncludeLinks',
         'include_meta_data' => 'getIncludeMetaData',
         'include_applied_capacities' => 'getIncludeAppliedCapacities',
-        'include_applied_capacities_v2' => 'getIncludeAppliedCapacitiesV2'
+        'include_applied_capacities_v2' => 'getIncludeAppliedCapacitiesV2',
+        'include_capacities' => 'getIncludeCapacities'
     ];
 
     public static function attributeMap()
@@ -325,6 +330,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
         $this->container['include_applied_capacities_v2'] = isset($data['include_applied_capacities_v2']) ? $data['include_applied_capacities_v2'] : null;
+        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
     }
 
     /**
@@ -1041,6 +1047,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeAppliedCapacitiesV2($include_applied_capacities_v2)
     {
         $this->container['include_applied_capacities_v2'] = $include_applied_capacities_v2;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_capacities
+     * @return bool
+     */
+    public function getIncludeCapacities()
+    {
+        return $this->container['include_capacities'];
+    }
+
+    /**
+     * Sets include_capacities
+     * @param bool $include_capacities 
+     * @return $this
+     */
+    public function setIncludeCapacities($include_capacities)
+    {
+        $this->container['include_capacities'] = $include_capacities;
 
         return $this;
     }

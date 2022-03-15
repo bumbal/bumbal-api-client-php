@@ -189,13 +189,13 @@ class QuestionnairetemplateApi
      *
      * Delete an QuestionnaireTemplate entry
      *
-     * @param int $notification_id ID of QuestionnaireTemplate to delete (required)
+     * @param int $questionnaire_template_id ID of QuestionnaireTemplate to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse31
      */
-    public function deleteQuestionnaireTemplate($notification_id)
+    public function deleteQuestionnaireTemplate($questionnaire_template_id)
     {
-        list($response) = $this->deleteQuestionnaireTemplateWithHttpInfo($notification_id);
+        list($response) = $this->deleteQuestionnaireTemplateWithHttpInfo($questionnaire_template_id);
         return $response;
     }
 
@@ -204,15 +204,15 @@ class QuestionnairetemplateApi
      *
      * Delete an QuestionnaireTemplate entry
      *
-     * @param int $notification_id ID of QuestionnaireTemplate to delete (required)
+     * @param int $questionnaire_template_id ID of QuestionnaireTemplate to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse31, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteQuestionnaireTemplateWithHttpInfo($notification_id)
+    public function deleteQuestionnaireTemplateWithHttpInfo($questionnaire_template_id)
     {
-        // verify the required parameter 'notification_id' is set
-        if ($notification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_id when calling deleteQuestionnaireTemplate');
+        // verify the required parameter 'questionnaire_template_id' is set
+        if ($questionnaire_template_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $questionnaire_template_id when calling deleteQuestionnaireTemplate');
         }
         // parse inputs
         $resourcePath = "/questionnaire-template/{questionnaire-templateId}";
@@ -227,10 +227,10 @@ class QuestionnairetemplateApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($notification_id !== null) {
+        if ($questionnaire_template_id !== null) {
             $resourcePath = str_replace(
-                "{" . "notificationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($notification_id),
+                "{" . "questionnaire-templateId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($questionnaire_template_id),
                 $resourcePath
             );
         }

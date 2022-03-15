@@ -72,7 +72,8 @@ class RouteFiltersModel implements ArrayAccess
         'tag_names' => 'string[]',
         'zone_names' => 'string[]',
         'optimized' => 'bool[]',
-        'blocked' => 'bool[]'
+        'blocked' => 'bool[]',
+        'nr_of_stops' => 'int[]'
     ];
 
     /**
@@ -98,7 +99,8 @@ class RouteFiltersModel implements ArrayAccess
         'tag_names' => null,
         'zone_names' => null,
         'optimized' => null,
-        'blocked' => null
+        'blocked' => null,
+        'nr_of_stops' => null
     ];
 
     public static function swaggerTypes()
@@ -134,7 +136,8 @@ class RouteFiltersModel implements ArrayAccess
         'tag_names' => 'tag_names',
         'zone_names' => 'zone_names',
         'optimized' => 'optimized',
-        'blocked' => 'blocked'
+        'blocked' => 'blocked',
+        'nr_of_stops' => 'nr_of_stops'
     ];
 
 
@@ -161,7 +164,8 @@ class RouteFiltersModel implements ArrayAccess
         'tag_names' => 'setTagNames',
         'zone_names' => 'setZoneNames',
         'optimized' => 'setOptimized',
-        'blocked' => 'setBlocked'
+        'blocked' => 'setBlocked',
+        'nr_of_stops' => 'setNrOfStops'
     ];
 
 
@@ -188,7 +192,8 @@ class RouteFiltersModel implements ArrayAccess
         'tag_names' => 'getTagNames',
         'zone_names' => 'getZoneNames',
         'optimized' => 'getOptimized',
-        'blocked' => 'getBlocked'
+        'blocked' => 'getBlocked',
+        'nr_of_stops' => 'getNrOfStops'
     ];
 
     public static function attributeMap()
@@ -241,6 +246,7 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
+        $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
     }
 
     /**
@@ -663,6 +669,27 @@ class RouteFiltersModel implements ArrayAccess
     public function setBlocked($blocked)
     {
         $this->container['blocked'] = $blocked;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_stops
+     * @return int[]
+     */
+    public function getNrOfStops()
+    {
+        return $this->container['nr_of_stops'];
+    }
+
+    /**
+     * Sets nr_of_stops
+     * @param int[] $nr_of_stops Number of stops
+     * @return $this
+     */
+    public function setNrOfStops($nr_of_stops)
+    {
+        $this->container['nr_of_stops'] = $nr_of_stops;
 
         return $this;
     }

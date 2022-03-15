@@ -55,9 +55,7 @@ class ApiResponse37 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'message' => 'string',
-        'type' => 'string',
-        'code' => 'float',
-        'additional_data' => 'object'
+        'code' => 'float'
     ];
 
     /**
@@ -66,9 +64,7 @@ class ApiResponse37 implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'message' => null,
-        'type' => null,
-        'code' => null,
-        'additional_data' => null
+        'code' => null
     ];
 
     public static function swaggerTypes()
@@ -87,9 +83,7 @@ class ApiResponse37 implements ArrayAccess
      */
     protected static $attributeMap = [
         'message' => 'message',
-        'type' => 'type',
-        'code' => 'code',
-        'additional_data' => 'additional_data'
+        'code' => 'code'
     ];
 
 
@@ -99,9 +93,7 @@ class ApiResponse37 implements ArrayAccess
      */
     protected static $setters = [
         'message' => 'setMessage',
-        'type' => 'setType',
-        'code' => 'setCode',
-        'additional_data' => 'setAdditionalData'
+        'code' => 'setCode'
     ];
 
 
@@ -111,9 +103,7 @@ class ApiResponse37 implements ArrayAccess
      */
     protected static $getters = [
         'message' => 'getMessage',
-        'type' => 'getType',
-        'code' => 'getCode',
-        'additional_data' => 'getAdditionalData'
+        'code' => 'getCode'
     ];
 
     public static function attributeMap()
@@ -148,9 +138,7 @@ class ApiResponse37 implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['additional_data'] = isset($data['additional_data']) ? $data['additional_data'] : null;
     }
 
     /**
@@ -189,33 +177,12 @@ class ApiResponse37 implements ArrayAccess
 
     /**
      * Sets message
-     * @param string $message Message describing the code
+     * @param string $message Message describing the error
      * @return $this
      */
     public function setMessage($message)
     {
         $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Ready
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
 
         return $this;
     }
@@ -231,33 +198,12 @@ class ApiResponse37 implements ArrayAccess
 
     /**
      * Sets code
-     * @param float $code 
+     * @param float $code Error code
      * @return $this
      */
     public function setCode($code)
     {
         $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets additional_data
-     * @return object
-     */
-    public function getAdditionalData()
-    {
-        return $this->container['additional_data'];
-    }
-
-    /**
-     * Sets additional_data
-     * @param object $additional_data
-     * @return $this
-     */
-    public function setAdditionalData($additional_data)
-    {
-        $this->container['additional_data'] = $additional_data;
 
         return $this;
     }

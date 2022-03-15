@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
 **brands** | [**\BumbalClient\Model\BrandModel[]**](BrandModel.md) |  | [optional] 
+**no_tags** | **bool** | No tags boolean value | [optional] 
+**no_zones** | **bool** | No zones boolean value | [optional] 
 **monday** | **object** | ServiceWindowDayModel containing the cut off information | [optional] 
 **tuesday** | **object** | ServiceWindowDayModel containing the cut off information | [optional] 
 **wednesday** | **object** | ServiceWindowDayModel containing the cut off information | [optional] 

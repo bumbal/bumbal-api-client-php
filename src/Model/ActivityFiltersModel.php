@@ -99,7 +99,8 @@ class ActivityFiltersModel implements ArrayAccess
         'created_at_since' => '\DateTime',
         'created_at_till' => '\DateTime',
         'time_slots_created_at_since' => '\DateTime',
-        'time_slots_created_at_till' => '\DateTime'
+        'time_slots_created_at_till' => '\DateTime',
+        'depot_address_id' => 'int[]'
     ];
 
     /**
@@ -152,7 +153,8 @@ class ActivityFiltersModel implements ArrayAccess
         'created_at_since' => 'date-time',
         'created_at_till' => 'date-time',
         'time_slots_created_at_since' => 'date-time',
-        'time_slots_created_at_till' => 'date-time'
+        'time_slots_created_at_till' => 'date-time',
+        'depot_address_id' => null
     ];
 
     public static function swaggerTypes()
@@ -215,7 +217,8 @@ class ActivityFiltersModel implements ArrayAccess
         'created_at_since' => 'created_at_since',
         'created_at_till' => 'created_at_till',
         'time_slots_created_at_since' => 'time_slots_created_at_since',
-        'time_slots_created_at_till' => 'time_slots_created_at_till'
+        'time_slots_created_at_till' => 'time_slots_created_at_till',
+        'depot_address_id' => 'depot_address_id'
     ];
 
 
@@ -269,7 +272,8 @@ class ActivityFiltersModel implements ArrayAccess
         'created_at_since' => 'setCreatedAtSince',
         'created_at_till' => 'setCreatedAtTill',
         'time_slots_created_at_since' => 'setTimeSlotsCreatedAtSince',
-        'time_slots_created_at_till' => 'setTimeSlotsCreatedAtTill'
+        'time_slots_created_at_till' => 'setTimeSlotsCreatedAtTill',
+        'depot_address_id' => 'setDepotAddressId'
     ];
 
 
@@ -323,7 +327,8 @@ class ActivityFiltersModel implements ArrayAccess
         'created_at_since' => 'getCreatedAtSince',
         'created_at_till' => 'getCreatedAtTill',
         'time_slots_created_at_since' => 'getTimeSlotsCreatedAtSince',
-        'time_slots_created_at_till' => 'getTimeSlotsCreatedAtTill'
+        'time_slots_created_at_till' => 'getTimeSlotsCreatedAtTill',
+        'depot_address_id' => 'getDepotAddressId'
     ];
 
     public static function attributeMap()
@@ -403,6 +408,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['created_at_till'] = isset($data['created_at_till']) ? $data['created_at_till'] : null;
         $this->container['time_slots_created_at_since'] = isset($data['time_slots_created_at_since']) ? $data['time_slots_created_at_since'] : null;
         $this->container['time_slots_created_at_till'] = isset($data['time_slots_created_at_till']) ? $data['time_slots_created_at_till'] : null;
+        $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
     }
 
     /**
@@ -1392,6 +1398,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setTimeSlotsCreatedAtTill($time_slots_created_at_till)
     {
         $this->container['time_slots_created_at_till'] = $time_slots_created_at_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets depot_address_id
+     * @return int[]
+     */
+    public function getDepotAddressId()
+    {
+        return $this->container['depot_address_id'];
+    }
+
+    /**
+     * Sets depot_address_id
+     * @param int[] $depot_address_id Depot address ID(s)
+     * @return $this
+     */
+    public function setDepotAddressId($depot_address_id)
+    {
+        $this->container['depot_address_id'] = $depot_address_id;
 
         return $this;
     }

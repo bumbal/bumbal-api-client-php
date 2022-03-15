@@ -5,15 +5,15 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#createQuestionnaireTemplateQuestion) | **POST** /questionnaire-template-question | Add a new QuestionnaireTemplateQuestion
-[**deleteQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#deleteQuestionnaireTemplateQuestion) | **DELETE** /questionnaire-template-question/{questionnaire-template-questionId} | Delete an QuestionnaireTemplateQuestion entry
+[**deleteQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#deleteQuestionnaireTemplateQuestion) | **DELETE** /questionnaire-template-question/{questionnaireTemplateQuestionId} | Delete an QuestionnaireTemplateQuestion entry
 [**retrieveListQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#retrieveListQuestionnaireTemplateQuestion) | **PUT** /questionnaire-template-question | Retrieve List of QuestionnaireTemplateQuestion
-[**retrieveQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#retrieveQuestionnaireTemplateQuestion) | **GET** /questionnaire-template-question/{questionnaire-template-questionId} | Retrieve a QuestionnaireTemplateQuestion
+[**retrieveQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#retrieveQuestionnaireTemplateQuestion) | **GET** /questionnaire-template-question/{questionnaireTemplateQuestionId} | Retrieve a QuestionnaireTemplateQuestion
 [**setQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#setQuestionnaireTemplateQuestion) | **POST** /questionnaire-template-question/set | Set (create or update) a QuestionnaireTemplateQuestion
-[**updateQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#updateQuestionnaireTemplateQuestion) | **PUT** /questionnaire-template-question/{questionnaire-template-questionId} | Update a specific QuestionnaireTemplateQuestion object
+[**updateQuestionnaireTemplateQuestion**](QuestionnairetemplatequestionApi.md#updateQuestionnaireTemplateQuestion) | **PUT** /questionnaire-template-question/{questionnaireTemplateQuestionId} | Update a specific QuestionnaireTemplateQuestion object
 
 
 # **createQuestionnaireTemplateQuestion**
-> \BumbalClient\Model\ApiResponse37 createQuestionnaireTemplateQuestion($body)
+> \BumbalClient\Model\ApiResponse38 createQuestionnaireTemplateQuestion($body)
 
 Add a new QuestionnaireTemplateQuestion
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse37**](../Model/ApiResponse37.md)
+[**\BumbalClient\Model\ApiResponse38**](../Model/ApiResponse38.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplateQuestion**
-> \BumbalClient\Model\ApiResponse36 deleteQuestionnaireTemplateQuestion($notification_id)
+> \BumbalClient\Model\ApiResponse36 deleteQuestionnaireTemplateQuestion($questionnaire_template_question_id)
 
 Delete an QuestionnaireTemplateQuestion entry
 
@@ -88,10 +88,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestionApi();
-$notification_id = 789; // int | ID of QuestionnaireTemplateQuestion to delete
+$questionnaire_template_question_id = 789; // int | ID of QuestionnaireTemplateQuestion to delete
 
 try {
-    $result = $api_instance->deleteQuestionnaireTemplateQuestion($notification_id);
+    $result = $api_instance->deleteQuestionnaireTemplateQuestion($questionnaire_template_question_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestionApi->deleteQuestionnaireTemplateQuestion: ', $e->getMessage(), PHP_EOL;
@@ -103,7 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireTemplateQuestion to delete |
+ **questionnaire_template_question_id** | **int**| ID of QuestionnaireTemplateQuestion to delete |
 
 ### Return type
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveQuestionnaireTemplateQuestion**
-> \BumbalClient\Model\QuestionnaireTemplateQuestionModel retrieveQuestionnaireTemplateQuestion($notification_id)
+> \BumbalClient\Model\QuestionnaireTemplateQuestionModel retrieveQuestionnaireTemplateQuestion($questionnaire_template_question_id)
 
 Retrieve a QuestionnaireTemplateQuestion
 
@@ -196,10 +196,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestionApi();
-$notification_id = 789; // int | ID of QuestionnaireTemplateQuestion to retrieve
+$questionnaire_template_question_id = 789; // int | ID of QuestionnaireTemplateQuestion to retrieve
 
 try {
-    $result = $api_instance->retrieveQuestionnaireTemplateQuestion($notification_id);
+    $result = $api_instance->retrieveQuestionnaireTemplateQuestion($questionnaire_template_question_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestionApi->retrieveQuestionnaireTemplateQuestion: ', $e->getMessage(), PHP_EOL;
@@ -211,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireTemplateQuestion to retrieve |
+ **questionnaire_template_question_id** | **int**| ID of QuestionnaireTemplateQuestion to retrieve |
 
 ### Return type
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestion**
-> \BumbalClient\Model\ApiResponse35 updateQuestionnaireTemplateQuestion($notification_id, $body)
+> \BumbalClient\Model\ApiResponse35 updateQuestionnaireTemplateQuestion($questionnaire_template_question_id, $body)
 
 Update a specific QuestionnaireTemplateQuestion object
 
@@ -304,11 +304,11 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestionApi();
-$notification_id = 789; // int | ID of the QuestionnaireTemplateQuestion object to update
+$questionnaire_template_question_id = 789; // int | ID of the QuestionnaireTemplateQuestion object to update
 $body = new \BumbalClient\Model\QuestionnaireTemplateQuestionModel(); // \BumbalClient\Model\QuestionnaireTemplateQuestionModel | QuestionnaireTemplateQuestion object that needs to be updated
 
 try {
-    $result = $api_instance->updateQuestionnaireTemplateQuestion($notification_id, $body);
+    $result = $api_instance->updateQuestionnaireTemplateQuestion($questionnaire_template_question_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestionApi->updateQuestionnaireTemplateQuestion: ', $e->getMessage(), PHP_EOL;
@@ -320,7 +320,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of the QuestionnaireTemplateQuestion object to update |
+ **questionnaire_template_question_id** | **int**| ID of the QuestionnaireTemplateQuestion object to update |
  **body** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionModel**](../Model/QuestionnaireTemplateQuestionModel.md)| QuestionnaireTemplateQuestion object that needs to be updated | [optional]
 
 ### Return type

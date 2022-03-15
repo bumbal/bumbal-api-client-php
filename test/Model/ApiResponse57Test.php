@@ -85,9 +85,23 @@ class ApiResponse57Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
      * Test attribute "code"
      */
     public function testPropertyCode()
+    {
+    }
+
+    /**
+     * Test attribute "additional_data"
+     */
+    public function testPropertyAdditionalData()
     {
     }
 }

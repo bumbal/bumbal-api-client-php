@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **zone_names** | **string[]** | Zone names | [optional] 
 **optimized** | **bool[]** | Optimized status of Route. | [optional] 
 **blocked** | **bool[]** | Blocked status of Route | [optional] 
+**nr_of_stops** | **int[]** | Number of stops | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

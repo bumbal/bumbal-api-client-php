@@ -61,6 +61,8 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'tags' => '\BumbalClient\Model\TagModel[]',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
         'brands' => '\BumbalClient\Model\BrandModel[]',
+        'no_tags' => 'bool',
+        'no_zones' => 'bool',
         'monday' => 'object',
         'tuesday' => 'object',
         'wednesday' => 'object',
@@ -85,6 +87,8 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'tags' => null,
         'zones' => null,
         'brands' => null,
+        'no_tags' => null,
+        'no_zones' => null,
         'monday' => null,
         'tuesday' => null,
         'wednesday' => null,
@@ -119,6 +123,8 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'tags' => 'tags',
         'zones' => 'zones',
         'brands' => 'brands',
+        'no_tags' => 'no_tags',
+        'no_zones' => 'no_zones',
         'monday' => 'monday',
         'tuesday' => 'tuesday',
         'wednesday' => 'wednesday',
@@ -144,6 +150,8 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'tags' => 'setTags',
         'zones' => 'setZones',
         'brands' => 'setBrands',
+        'no_tags' => 'setNoTags',
+        'no_zones' => 'setNoZones',
         'monday' => 'setMonday',
         'tuesday' => 'setTuesday',
         'wednesday' => 'setWednesday',
@@ -169,6 +177,8 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'tags' => 'getTags',
         'zones' => 'getZones',
         'brands' => 'getBrands',
+        'no_tags' => 'getNoTags',
+        'no_zones' => 'getNoZones',
         'monday' => 'getMonday',
         'tuesday' => 'getTuesday',
         'wednesday' => 'getWednesday',
@@ -219,6 +229,8 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
         $this->container['brands'] = isset($data['brands']) ? $data['brands'] : null;
+        $this->container['no_tags'] = isset($data['no_tags']) ? $data['no_tags'] : null;
+        $this->container['no_zones'] = isset($data['no_zones']) ? $data['no_zones'] : null;
         $this->container['monday'] = isset($data['monday']) ? $data['monday'] : null;
         $this->container['tuesday'] = isset($data['tuesday']) ? $data['tuesday'] : null;
         $this->container['wednesday'] = isset($data['wednesday']) ? $data['wednesday'] : null;
@@ -399,6 +411,48 @@ class ServiceWindowsSchemeModel implements ArrayAccess
     public function setBrands($brands)
     {
         $this->container['brands'] = $brands;
+
+        return $this;
+    }
+
+    /**
+     * Gets no_tags
+     * @return bool
+     */
+    public function getNoTags()
+    {
+        return $this->container['no_tags'];
+    }
+
+    /**
+     * Sets no_tags
+     * @param bool $no_tags No tags boolean value
+     * @return $this
+     */
+    public function setNoTags($no_tags)
+    {
+        $this->container['no_tags'] = $no_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets no_zones
+     * @return bool
+     */
+    public function getNoZones()
+    {
+        return $this->container['no_zones'];
+    }
+
+    /**
+     * Sets no_zones
+     * @param bool $no_zones No zones boolean value
+     * @return $this
+     */
+    public function setNoZones($no_zones)
+    {
+        $this->container['no_zones'] = $no_zones;
 
         return $this;
     }

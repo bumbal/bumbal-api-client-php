@@ -93,6 +93,16 @@ class QuestionnairetemplatequestionoptionApiTest extends \PHPUnit_Framework_Test
     }
 
     /**
+     * Test case for findPossibleFollowUpQuestions
+     *
+     * find possible follow up questions.
+     *
+     */
+    public function testFindPossibleFollowUpQuestions()
+    {
+    }
+
+    /**
      * Test case for getPossibleFollowUpQuestions
      *
      * get possible follow up questions.

@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplate**
-> \BumbalClient\Model\ApiResponse31 deleteQuestionnaireTemplate($notification_id)
+> \BumbalClient\Model\ApiResponse31 deleteQuestionnaireTemplate($questionnaire_template_id)
 
 Delete an QuestionnaireTemplate entry
 
@@ -88,10 +88,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplateApi();
-$notification_id = 789; // int | ID of QuestionnaireTemplate to delete
+$questionnaire_template_id = 789; // int | ID of QuestionnaireTemplate to delete
 
 try {
-    $result = $api_instance->deleteQuestionnaireTemplate($notification_id);
+    $result = $api_instance->deleteQuestionnaireTemplate($questionnaire_template_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplateApi->deleteQuestionnaireTemplate: ', $e->getMessage(), PHP_EOL;
@@ -103,7 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireTemplate to delete |
+ **questionnaire_template_id** | **int**| ID of QuestionnaireTemplate to delete |
 
 ### Return type
 

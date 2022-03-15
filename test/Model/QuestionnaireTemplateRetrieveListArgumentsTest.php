@@ -125,4 +125,11 @@ class QuestionnaireTemplateRetrieveListArgumentsTest extends \PHPUnit_Framework_
     public function testPropertySearchText()
     {
     }
+
+    /**
+     * Test attribute "as_list"
+     */
+    public function testPropertyAsList()
+    {
+    }
 }

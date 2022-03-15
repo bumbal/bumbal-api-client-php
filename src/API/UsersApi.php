@@ -651,7 +651,7 @@ class UsersApi
      *
      * @param \BumbalClient\Model\UserNotificationModel $body UserNotification object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse54
+     * @return \BumbalClient\Model\ApiResponse56
      */
     public function setUserNotification($body = null)
     {
@@ -666,7 +666,7 @@ class UsersApi
      *
      * @param \BumbalClient\Model\UserNotificationModel $body UserNotification object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse54, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse56, HTTP status code, HTTP response headers (array of strings)
      */
     public function setUserNotificationWithHttpInfo($body = null)
     {
@@ -712,15 +712,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse54',
+                '\BumbalClient\Model\ApiResponse56',
                 '/users/notification'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse54', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse56', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse54', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse56', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

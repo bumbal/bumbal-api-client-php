@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse48 createQuestionnaireTemplateQuestionText($body)
+> \BumbalClient\Model\ApiResponse50 createQuestionnaireTemplateQuestionText($body)
 
 Add a new QuestionnaireTemplateQuestionText
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse48**](../Model/ApiResponse48.md)
+[**\BumbalClient\Model\ApiResponse50**](../Model/ApiResponse50.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse47 deleteQuestionnaireTemplateQuestionText($notification_id)
+> \BumbalClient\Model\ApiResponse49 deleteQuestionnaireTemplateQuestionText($notification_id)
 
 Delete an QuestionnaireTemplateQuestionText entry
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse47**](../Model/ApiResponse47.md)
+[**\BumbalClient\Model\ApiResponse49**](../Model/ApiResponse49.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse46 updateQuestionnaireTemplateQuestionText($notification_id, $body)
+> \BumbalClient\Model\ApiResponse48 updateQuestionnaireTemplateQuestionText($notification_id, $body)
 
 Update a specific QuestionnaireTemplateQuestionText object
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse46**](../Model/ApiResponse46.md)
+[**\BumbalClient\Model\ApiResponse48**](../Model/ApiResponse48.md)
 
 ### Authorization
 

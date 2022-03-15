@@ -127,6 +127,20 @@ class ServiceWindowsSchemeModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "no_tags"
+     */
+    public function testPropertyNoTags()
+    {
+    }
+
+    /**
+     * Test attribute "no_zones"
+     */
+    public function testPropertyNoZones()
+    {
+    }
+
+    /**
      * Test attribute "monday"
      */
     public function testPropertyMonday()

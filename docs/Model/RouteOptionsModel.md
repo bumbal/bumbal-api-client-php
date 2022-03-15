@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **include_meta_data** | **bool** |  | [optional] 
 **include_applied_capacities** | **bool** |  | [optional] 
 **include_applied_capacities_v2** | **bool** |  | [optional] 
+**include_capacities** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

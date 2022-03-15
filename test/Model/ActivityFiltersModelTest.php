@@ -398,4 +398,11 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTimeSlotsCreatedAtTill()
     {
     }
+
+    /**
+     * Test attribute "depot_address_id"
+     */
+    public function testPropertyDepotAddressId()
+    {
+    }
 }

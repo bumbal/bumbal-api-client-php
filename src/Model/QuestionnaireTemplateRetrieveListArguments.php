@@ -60,7 +60,8 @@ class QuestionnaireTemplateRetrieveListArguments implements ArrayAccess
         'offset' => 'int',
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
-        'search_text' => 'string'
+        'search_text' => 'string',
+        'as_list' => 'bool'
     ];
 
     /**
@@ -74,7 +75,8 @@ class QuestionnaireTemplateRetrieveListArguments implements ArrayAccess
         'offset' => 'int64',
         'sorting_column' => null,
         'sorting_direction' => null,
-        'search_text' => null
+        'search_text' => null,
+        'as_list' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +100,8 @@ class QuestionnaireTemplateRetrieveListArguments implements ArrayAccess
         'offset' => 'offset',
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
-        'search_text' => 'search_text'
+        'search_text' => 'search_text',
+        'as_list' => 'as_list'
     ];
 
 
@@ -113,7 +116,8 @@ class QuestionnaireTemplateRetrieveListArguments implements ArrayAccess
         'offset' => 'setOffset',
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
-        'search_text' => 'setSearchText'
+        'search_text' => 'setSearchText',
+        'as_list' => 'setAsList'
     ];
 
 
@@ -128,7 +132,8 @@ class QuestionnaireTemplateRetrieveListArguments implements ArrayAccess
         'offset' => 'getOffset',
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
-        'search_text' => 'getSearchText'
+        'search_text' => 'getSearchText',
+        'as_list' => 'getAsList'
     ];
 
     public static function attributeMap()
@@ -201,6 +206,7 @@ class QuestionnaireTemplateRetrieveListArguments implements ArrayAccess
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
     }
 
     /**
@@ -413,6 +419,27 @@ class QuestionnaireTemplateRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets as_list
+     * @return bool
+     */
+    public function getAsList()
+    {
+        return $this->container['as_list'];
+    }
+
+    /**
+     * Sets as_list
+     * @param bool $as_list 
+     * @return $this
+     */
+    public function setAsList($as_list)
+    {
+        $this->container['as_list'] = $as_list;
 
         return $this;
     }

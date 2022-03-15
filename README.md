@@ -113,6 +113,9 @@ Class | Method | HTTP request | Description
 *AuthenticateApi* | [**authenticateCheckToken**](docs/Api/AuthenticateApi.md#authenticatechecktoken) | **GET** /authenticate/check-token | Check a token for validity
 *AuthenticateApi* | [**authenticateSignIn**](docs/Api/AuthenticateApi.md#authenticatesignin) | **POST** /authenticate/sign-in | Sign In with your user credentials
 *AuthenticateApi* | [**authenticateSignOut**](docs/Api/AuthenticateApi.md#authenticatesignout) | **GET** /authenticate/sign-out | Sign out
+*BlockeddateApi* | [**deleteBlockedDate**](docs/Api/BlockeddateApi.md#deleteblockeddate) | **DELETE** /blocked-date/{blockedDateId} | Delete a blocked date
+*BlockeddateApi* | [**retrieveListBlockedDate**](docs/Api/BlockeddateApi.md#retrievelistblockeddate) | **PUT** /blocked-date | Retrieve List of blocked dates
+*BlockeddateApi* | [**setBlockedDate**](docs/Api/BlockeddateApi.md#setblockeddate) | **POST** /blocked-date/set | Set (create or update) a blocked date
 *BrandApi* | [**createBrand**](docs/Api/BrandApi.md#createbrand) | **POST** /brand | Add a new Brand
 *BrandApi* | [**deleteBrand**](docs/Api/BrandApi.md#deletebrand) | **DELETE** /brand/{brandId} | Delete a Brand
 *BrandApi* | [**retrieveBrand**](docs/Api/BrandApi.md#retrievebrand) | **GET** /brand/{brandId} | Retrieve a Brand
@@ -262,13 +265,14 @@ Class | Method | HTTP request | Description
 *QuestionnairetemplateApi* | [**updateQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#updatequestionnairetemplate) | **PUT** /questionnaire-template/{questionnaire-templateId} | Update a specific QuestionnaireTemplate object
 *QuestionnairetemplategetlanguagesApi* | [**getQuestionnaireTemplateLanguages**](docs/Api/QuestionnairetemplategetlanguagesApi.md#getquestionnairetemplatelanguages) | **GET** /questionnaire-template/get-languages/{questionnaire-templateId} | Retrieves all set languages for an QuestionnaireTemplate entry
 *QuestionnairetemplatequestionApi* | [**createQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#createquestionnairetemplatequestion) | **POST** /questionnaire-template-question | Add a new QuestionnaireTemplateQuestion
-*QuestionnairetemplatequestionApi* | [**deleteQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#deletequestionnairetemplatequestion) | **DELETE** /questionnaire-template-question/{questionnaire-template-questionId} | Delete an QuestionnaireTemplateQuestion entry
+*QuestionnairetemplatequestionApi* | [**deleteQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#deletequestionnairetemplatequestion) | **DELETE** /questionnaire-template-question/{questionnaireTemplateQuestionId} | Delete an QuestionnaireTemplateQuestion entry
 *QuestionnairetemplatequestionApi* | [**retrieveListQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#retrievelistquestionnairetemplatequestion) | **PUT** /questionnaire-template-question | Retrieve List of QuestionnaireTemplateQuestion
-*QuestionnairetemplatequestionApi* | [**retrieveQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#retrievequestionnairetemplatequestion) | **GET** /questionnaire-template-question/{questionnaire-template-questionId} | Retrieve a QuestionnaireTemplateQuestion
+*QuestionnairetemplatequestionApi* | [**retrieveQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#retrievequestionnairetemplatequestion) | **GET** /questionnaire-template-question/{questionnaireTemplateQuestionId} | Retrieve a QuestionnaireTemplateQuestion
 *QuestionnairetemplatequestionApi* | [**setQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#setquestionnairetemplatequestion) | **POST** /questionnaire-template-question/set | Set (create or update) a QuestionnaireTemplateQuestion
-*QuestionnairetemplatequestionApi* | [**updateQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#updatequestionnairetemplatequestion) | **PUT** /questionnaire-template-question/{questionnaire-template-questionId} | Update a specific QuestionnaireTemplateQuestion object
+*QuestionnairetemplatequestionApi* | [**updateQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#updatequestionnairetemplatequestion) | **PUT** /questionnaire-template-question/{questionnaireTemplateQuestionId} | Update a specific QuestionnaireTemplateQuestion object
 *QuestionnairetemplatequestionoptionApi* | [**createQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#createquestionnairetemplatequestionoption) | **POST** /questionnaire-template-question-option | Add a new QuestionnaireTemplateQuestionOption
 *QuestionnairetemplatequestionoptionApi* | [**deleteQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#deletequestionnairetemplatequestionoption) | **DELETE** /questionnaire-template-question-option/{questionnaire-template-question-optionId} | Delete an QuestionnaireTemplateQuestionOption entry
+*QuestionnairetemplatequestionoptionApi* | [**findPossibleFollowUpQuestions**](docs/Api/QuestionnairetemplatequestionoptionApi.md#findpossiblefollowupquestions) | **POST** /questionnaire-template-question-option/find-possible-followup-questions | find possible follow up questions
 *QuestionnairetemplatequestionoptionApi* | [**getPossibleFollowUpQuestions**](docs/Api/QuestionnairetemplatequestionoptionApi.md#getpossiblefollowupquestions) | **POST** /questionnaire-template-question-option/get-possible-followup-questions | get possible follow up questions
 *QuestionnairetemplatequestionoptionApi* | [**retrieveListQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#retrievelistquestionnairetemplatequestionoption) | **PUT** /questionnaire-template-question-option | Retrieve List of QuestionnaireTemplateQuestionOption
 *QuestionnairetemplatequestionoptionApi* | [**retrieveQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#retrievequestionnairetemplatequestionoption) | **GET** /questionnaire-template-question-option/{questionnaire-template-question-optionId} | Retrieve a QuestionnaireTemplateQuestionOption
@@ -484,6 +488,8 @@ Class | Method | HTTP request | Description
  - [ApiResponse55](docs/Model/ApiResponse55.md)
  - [ApiResponse56](docs/Model/ApiResponse56.md)
  - [ApiResponse57](docs/Model/ApiResponse57.md)
+ - [ApiResponse58](docs/Model/ApiResponse58.md)
+ - [ApiResponse59](docs/Model/ApiResponse59.md)
  - [ApiResponse6](docs/Model/ApiResponse6.md)
  - [ApiResponse7](docs/Model/ApiResponse7.md)
  - [ApiResponse8](docs/Model/ApiResponse8.md)
@@ -508,6 +514,11 @@ Class | Method | HTTP request | Description
  - [AvailabilityFollowUpTimeSlotModel](docs/Model/AvailabilityFollowUpTimeSlotModel.md)
  - [AvailabilityTimeSlotImpactModel](docs/Model/AvailabilityTimeSlotImpactModel.md)
  - [AvailabilityTimeSlotModel](docs/Model/AvailabilityTimeSlotModel.md)
+ - [BlockedDateFiltersModel](docs/Model/BlockedDateFiltersModel.md)
+ - [BlockedDateListResponse](docs/Model/BlockedDateListResponse.md)
+ - [BlockedDateModel](docs/Model/BlockedDateModel.md)
+ - [BlockedDateOptionsModel](docs/Model/BlockedDateOptionsModel.md)
+ - [BlockedDateRetrieveListArguments](docs/Model/BlockedDateRetrieveListArguments.md)
  - [BrandColourFiltersModel](docs/Model/BrandColourFiltersModel.md)
  - [BrandColourModel](docs/Model/BrandColourModel.md)
  - [BrandColourOptionsModel](docs/Model/BrandColourOptionsModel.md)
@@ -689,6 +700,7 @@ Class | Method | HTTP request | Description
  - [QuestionnaireTemplateQuestionOptionListResponse](docs/Model/QuestionnaireTemplateQuestionOptionListResponse.md)
  - [QuestionnaireTemplateQuestionOptionModel](docs/Model/QuestionnaireTemplateQuestionOptionModel.md)
  - [QuestionnaireTemplateQuestionOptionOptionsModel](docs/Model/QuestionnaireTemplateQuestionOptionOptionsModel.md)
+ - [QuestionnaireTemplateQuestionOptionPossibleQuestionsModel](docs/Model/QuestionnaireTemplateQuestionOptionPossibleQuestionsModel.md)
  - [QuestionnaireTemplateQuestionOptionRetrieveListArguments](docs/Model/QuestionnaireTemplateQuestionOptionRetrieveListArguments.md)
  - [QuestionnaireTemplateQuestionOptionTextFiltersModel](docs/Model/QuestionnaireTemplateQuestionOptionTextFiltersModel.md)
  - [QuestionnaireTemplateQuestionOptionTextListResponse](docs/Model/QuestionnaireTemplateQuestionOptionTextListResponse.md)

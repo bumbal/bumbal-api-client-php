@@ -49,6 +49,7 @@ Name | Type | Description | Notes
 **created_at_till** | [**\DateTime**](\DateTime.md) | Filter by activity created at till | [optional] 
 **time_slots_created_at_since** | [**\DateTime**](\DateTime.md) | Filter by time_slots created at since | [optional] 
 **time_slots_created_at_till** | [**\DateTime**](\DateTime.md) | Filter by time_slots created at till | [optional] 
+**depot_address_id** | **int[]** | Depot address ID(s) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

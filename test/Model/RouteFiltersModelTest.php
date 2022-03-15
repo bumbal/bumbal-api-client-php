@@ -209,4 +209,11 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBlocked()
     {
     }
+
+    /**
+     * Test attribute "nr_of_stops"
+     */
+    public function testPropertyNrOfStops()
+    {
+    }
 }
