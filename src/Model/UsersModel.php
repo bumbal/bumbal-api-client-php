@@ -81,6 +81,7 @@ class UsersModel implements ArrayAccess
         'zones' => '\BumbalClient\Model\ZoneModel[]',
         'zone_names' => 'string[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'driver_unavailabilities' => '\BumbalClient\Model\DriverUnavailabilityModel[]'
     ];
 
@@ -116,6 +117,7 @@ class UsersModel implements ArrayAccess
         'zones' => null,
         'zone_names' => null,
         'links' => null,
+        'meta_data' => null,
         'driver_unavailabilities' => null
     ];
 
@@ -161,6 +163,7 @@ class UsersModel implements ArrayAccess
         'zones' => 'zones',
         'zone_names' => 'zone_names',
         'links' => 'links',
+        'meta_data' => 'meta_data',
         'driver_unavailabilities' => 'driver_unavailabilities'
     ];
 
@@ -197,6 +200,7 @@ class UsersModel implements ArrayAccess
         'zones' => 'setZones',
         'zone_names' => 'setZoneNames',
         'links' => 'setLinks',
+        'meta_data' => 'setMetaData',
         'driver_unavailabilities' => 'setDriverUnavailabilities'
     ];
 
@@ -233,6 +237,7 @@ class UsersModel implements ArrayAccess
         'zones' => 'getZones',
         'zone_names' => 'getZoneNames',
         'links' => 'getLinks',
+        'meta_data' => 'getMetaData',
         'driver_unavailabilities' => 'getDriverUnavailabilities'
     ];
 
@@ -314,6 +319,7 @@ class UsersModel implements ArrayAccess
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['driver_unavailabilities'] = isset($data['driver_unavailabilities']) ? $data['driver_unavailabilities'] : null;
     }
 
@@ -926,6 +932,27 @@ class UsersModel implements ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }

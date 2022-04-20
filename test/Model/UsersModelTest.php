@@ -267,6 +267,13 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+    }
+
+    /**
      * Test attribute "driver_unavailabilities"
      */
     public function testPropertyDriverUnavailabilities()
