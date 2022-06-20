@@ -73,7 +73,8 @@ class RouteFiltersModel implements ArrayAccess
         'zone_names' => 'string[]',
         'optimized' => 'bool[]',
         'blocked' => 'bool[]',
-        'nr_of_stops' => 'int[]'
+        'nr_of_stops' => 'int[]',
+        'search_text' => 'string'
     ];
 
     /**
@@ -100,7 +101,8 @@ class RouteFiltersModel implements ArrayAccess
         'zone_names' => null,
         'optimized' => null,
         'blocked' => null,
-        'nr_of_stops' => null
+        'nr_of_stops' => null,
+        'search_text' => null
     ];
 
     public static function swaggerTypes()
@@ -137,7 +139,8 @@ class RouteFiltersModel implements ArrayAccess
         'zone_names' => 'zone_names',
         'optimized' => 'optimized',
         'blocked' => 'blocked',
-        'nr_of_stops' => 'nr_of_stops'
+        'nr_of_stops' => 'nr_of_stops',
+        'search_text' => 'search_text'
     ];
 
 
@@ -165,7 +168,8 @@ class RouteFiltersModel implements ArrayAccess
         'zone_names' => 'setZoneNames',
         'optimized' => 'setOptimized',
         'blocked' => 'setBlocked',
-        'nr_of_stops' => 'setNrOfStops'
+        'nr_of_stops' => 'setNrOfStops',
+        'search_text' => 'setSearchText'
     ];
 
 
@@ -193,7 +197,8 @@ class RouteFiltersModel implements ArrayAccess
         'zone_names' => 'getZoneNames',
         'optimized' => 'getOptimized',
         'blocked' => 'getBlocked',
-        'nr_of_stops' => 'getNrOfStops'
+        'nr_of_stops' => 'getNrOfStops',
+        'search_text' => 'getSearchText'
     ];
 
     public static function attributeMap()
@@ -247,6 +252,7 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
+        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
     }
 
     /**
@@ -690,6 +696,27 @@ class RouteFiltersModel implements ArrayAccess
     public function setNrOfStops($nr_of_stops)
     {
         $this->container['nr_of_stops'] = $nr_of_stops;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_text
+     * @return string
+     */
+    public function getSearchText()
+    {
+        return $this->container['search_text'];
+    }
+
+    /**
+     * Sets search_text
+     * @param string $search_text free search through text and numeric type columns
+     * @return $this
+     */
+    public function setSearchText($search_text)
+    {
+        $this->container['search_text'] = $search_text;
 
         return $this;
     }

@@ -225,6 +225,13 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "opening_hours"
+     */
+    public function testPropertyOpeningHours()
+    {
+    }
+
+    /**
      * Test attribute "duration"
      */
     public function testPropertyDuration()

@@ -1,6 +1,6 @@
 <?php
 /**
- * RecurrenceOptionsModelTest
+ * RecurrenceDeleteModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * RecurrenceOptionsModelTest Class Doc Comment
+ * RecurrenceDeleteModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description RecurrenceOptionsModel
+// * @description RecurrenceDeleteModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecurrenceOptionsModelTest extends \PHPUnit_Framework_TestCase
+class RecurrenceDeleteModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,30 +71,23 @@ class RecurrenceOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RecurrenceOptionsModel"
+     * Test "RecurrenceDeleteModel"
      */
-    public function testRecurrenceOptionsModel()
+    public function testRecurrenceDeleteModel()
     {
     }
 
     /**
-     * Test attribute "include_recurrence_meta_data"
+     * Test attribute "id"
      */
-    public function testPropertyIncludeRecurrenceMetaData()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "include_recurrence_links"
+     * Test attribute "remove_objects"
      */
-    public function testPropertyIncludeRecurrenceLinks()
-    {
-    }
-
-    /**
-     * Test attribute "include_recurrence_base"
-     */
-    public function testPropertyIncludeRecurrenceBase()
+    public function testPropertyRemoveObjects()
     {
     }
 }

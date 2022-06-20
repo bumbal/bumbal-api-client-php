@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **country_name** | **string** |  | [optional] 
 **time_from** | **string** |  | [optional] 
 **time_to** | **string** |  | [optional] 
+**opening_hours** | [**\BumbalClient\Model\OpeningHoursRuleModel[]**](OpeningHoursRuleModel.md) |  | [optional] 
 **duration** | **int** | Default duration for activities on this address in minutes | [optional] 
 **address_type_names** | **string[]** | Address Type names | [optional] 
 **emails** | [**\BumbalClient\Model\EmailModel[]**](EmailModel.md) |  | [optional] 

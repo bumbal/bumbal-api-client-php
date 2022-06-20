@@ -295,12 +295,13 @@ Class | Method | HTTP request | Description
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
+*RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 *RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 *RecurrenceApi* | [**getRuns**](docs/Api/RecurrenceApi.md#getruns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
 *RecurrenceApi* | [**processRuns**](docs/Api/RecurrenceApi.md#processruns) | **POST** /recurrence/process-runs | Executes the the processes for the ids retrieved with get-runs
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
-*RecurrenceApi* | [**updateRecurrence**](docs/Api/RecurrenceApi.md#updaterecurrence) | **PUT** /recurrence/{recurrenceId} | Update a Recurrence
+*RecurrenceApi* | [**updateRecurrence**](docs/Api/RecurrenceApi.md#updaterecurrence) | **PUT** /recurrence/{recurrenceId} | Update a recurrence
 *RouteApi* | [**blockRoutes**](docs/Api/RouteApi.md#blockroutes) | **POST** /route/block-routes | Block routes which satisfy set filters
 *RouteApi* | [**createRoute**](docs/Api/RouteApi.md#createroute) | **POST** /route | Add a new Route
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
@@ -329,6 +330,8 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
 *SettingsApi* | [**setSetting**](docs/Api/SettingsApi.md#setsetting) | **POST** /settings/set | Set (update) Setting value
 *SettingsApi* | [**updateSettings**](docs/Api/SettingsApi.md#updatesettings) | **PUT** /settings/{settingsId} | Update a Settings
+*StatusHistoryApi* | [**retrieveStatusHistoryActivity**](docs/Api/StatusHistoryApi.md#retrievestatushistoryactivity) | **POST** /status-history/activity | Retrieve the status history of an activity
+*StatusHistoryApi* | [**retrieveStatusHistoryRoute**](docs/Api/StatusHistoryApi.md#retrievestatushistoryroute) | **POST** /status-history/route | Retrieve the status history of a route
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
 *SystemApi* | [**systemGetSayWhenConfig**](docs/Api/SystemApi.md#systemgetsaywhenconfig) | **GET** /system/get-say-when-config | Retrieve SayWhen System Configuration
 *SystemApi* | [**systemGetVariables**](docs/Api/SystemApi.md#systemgetvariables) | **GET** /system/get-variables | Retrieve System Variables
@@ -416,6 +419,7 @@ Class | Method | HTTP request | Description
  - [ActivityTypeOptionsModel](docs/Model/ActivityTypeOptionsModel.md)
  - [ActivityTypeRetrieveListArguments](docs/Model/ActivityTypeRetrieveListArguments.md)
  - [AddActivitiesToRouteArguments](docs/Model/AddActivitiesToRouteArguments.md)
+ - [AddActivitiesToRouteFiltersModel](docs/Model/AddActivitiesToRouteFiltersModel.md)
  - [AddActivitiesToRouteResponse](docs/Model/AddActivitiesToRouteResponse.md)
  - [AddTagToObjectArguments](docs/Model/AddTagToObjectArguments.md)
  - [AddTagToObjectDataModel](docs/Model/AddTagToObjectDataModel.md)
@@ -621,6 +625,7 @@ Class | Method | HTTP request | Description
  - [NotificationModel](docs/Model/NotificationModel.md)
  - [NotificationOptionsModel](docs/Model/NotificationOptionsModel.md)
  - [NotificationRetrieveListArguments](docs/Model/NotificationRetrieveListArguments.md)
+ - [OpeningHoursRuleModel](docs/Model/OpeningHoursRuleModel.md)
  - [PackageLineFiltersModel](docs/Model/PackageLineFiltersModel.md)
  - [PackageLineListResponse](docs/Model/PackageLineListResponse.md)
  - [PackageLineModel](docs/Model/PackageLineModel.md)
@@ -720,6 +725,7 @@ Class | Method | HTTP request | Description
  - [QuestionnaireTypeModel](docs/Model/QuestionnaireTypeModel.md)
  - [QuestionnaireTypeOptionsModel](docs/Model/QuestionnaireTypeOptionsModel.md)
  - [QuestionnaireTypeRetrieveListArguments](docs/Model/QuestionnaireTypeRetrieveListArguments.md)
+ - [RecurrenceDeleteModel](docs/Model/RecurrenceDeleteModel.md)
  - [RecurrenceFiltersModel](docs/Model/RecurrenceFiltersModel.md)
  - [RecurrenceFinishResponse](docs/Model/RecurrenceFinishResponse.md)
  - [RecurrenceGetRunsArguments](docs/Model/RecurrenceGetRunsArguments.md)
@@ -765,6 +771,9 @@ Class | Method | HTTP request | Description
  - [SettingsModel](docs/Model/SettingsModel.md)
  - [SettingsOptionsModel](docs/Model/SettingsOptionsModel.md)
  - [SettingsRetrieveListArguments](docs/Model/SettingsRetrieveListArguments.md)
+ - [StatusHistoryListModel](docs/Model/StatusHistoryListModel.md)
+ - [StatusHistoryModel](docs/Model/StatusHistoryModel.md)
+ - [StatusHistoryRequestModel](docs/Model/StatusHistoryRequestModel.md)
  - [SystemProviderFiltersModel](docs/Model/SystemProviderFiltersModel.md)
  - [SystemProviderListResponse](docs/Model/SystemProviderListResponse.md)
  - [SystemProviderModel](docs/Model/SystemProviderModel.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * RecurrenceOptionsModelTest
+ * StatusHistoryListModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * RecurrenceOptionsModelTest Class Doc Comment
+ * StatusHistoryListModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description RecurrenceOptionsModel
+// * @description StatusHistoryListModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecurrenceOptionsModelTest extends \PHPUnit_Framework_TestCase
+class StatusHistoryListModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,30 +71,16 @@ class RecurrenceOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RecurrenceOptionsModel"
+     * Test "StatusHistoryListModel"
      */
-    public function testRecurrenceOptionsModel()
+    public function testStatusHistoryListModel()
     {
     }
 
     /**
-     * Test attribute "include_recurrence_meta_data"
+     * Test attribute "data"
      */
-    public function testPropertyIncludeRecurrenceMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_recurrence_links"
-     */
-    public function testPropertyIncludeRecurrenceLinks()
-    {
-    }
-
-    /**
-     * Test attribute "include_recurrence_base"
-     */
-    public function testPropertyIncludeRecurrenceBase()
+    public function testPropertyData()
     {
     }
 }

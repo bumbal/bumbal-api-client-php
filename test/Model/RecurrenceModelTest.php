@@ -106,13 +106,6 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "recurrence_type_name"
-     */
-    public function testPropertyRecurrenceTypeName()
-    {
-    }
-
-    /**
      * Test attribute "start_date"
      */
     public function testPropertyStartDate()
@@ -127,6 +120,13 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "end_option"
+     */
+    public function testPropertyEndOption()
+    {
+    }
+
+    /**
      * Test attribute "period_name"
      */
     public function testPropertyPeriodName()
@@ -137,13 +137,6 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "period_id"
      */
     public function testPropertyPeriodId()
-    {
-    }
-
-    /**
-     * Test attribute "recurrence_period_name"
-     */
-    public function testPropertyRecurrencePeriodName()
     {
     }
 
@@ -204,9 +197,9 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "has_uncreated_objects"
      */
-    public function testPropertyTags()
+    public function testPropertyHasUncreatedObjects()
     {
     }
 
@@ -218,30 +211,79 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "base"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyBase()
     {
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "base_date"
      */
-    public function testPropertyUpdatedAt()
+    public function testPropertyBaseDate()
     {
     }
 
     /**
-     * Test attribute "updated_by_name"
+     * Test attribute "monday"
      */
-    public function testPropertyUpdatedByName()
+    public function testPropertyMonday()
     {
     }
 
     /**
-     * Test attribute "object_id"
+     * Test attribute "tuesday"
      */
-    public function testPropertyObjectId()
+    public function testPropertyTuesday()
+    {
+    }
+
+    /**
+     * Test attribute "wednesday"
+     */
+    public function testPropertyWednesday()
+    {
+    }
+
+    /**
+     * Test attribute "thursday"
+     */
+    public function testPropertyThursday()
+    {
+    }
+
+    /**
+     * Test attribute "friday"
+     */
+    public function testPropertyFriday()
+    {
+    }
+
+    /**
+     * Test attribute "saturday"
+     */
+    public function testPropertySaturday()
+    {
+    }
+
+    /**
+     * Test attribute "sunday"
+     */
+    public function testPropertySunday()
+    {
+    }
+
+    /**
+     * Test attribute "month_day"
+     */
+    public function testPropertyMonthDay()
+    {
+    }
+
+    /**
+     * Test attribute "monthly_option"
+     */
+    public function testPropertyMonthlyOption()
     {
     }
 }

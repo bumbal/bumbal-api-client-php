@@ -54,10 +54,9 @@ class RecurrenceOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_recurrence_tags' => 'bool',
         'include_recurrence_meta_data' => 'bool',
         'include_recurrence_links' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'include_recurrence_base' => 'bool'
     ];
 
     /**
@@ -65,10 +64,9 @@ class RecurrenceOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_recurrence_tags' => null,
         'include_recurrence_meta_data' => null,
         'include_recurrence_links' => null,
-        'include_updated_by_name' => null
+        'include_recurrence_base' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +84,9 @@ class RecurrenceOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_recurrence_tags' => 'include_recurrence_tags',
         'include_recurrence_meta_data' => 'include_recurrence_meta_data',
         'include_recurrence_links' => 'include_recurrence_links',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'include_recurrence_base' => 'include_recurrence_base'
     ];
 
 
@@ -98,10 +95,9 @@ class RecurrenceOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_recurrence_tags' => 'setIncludeRecurrenceTags',
         'include_recurrence_meta_data' => 'setIncludeRecurrenceMetaData',
         'include_recurrence_links' => 'setIncludeRecurrenceLinks',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'include_recurrence_base' => 'setIncludeRecurrenceBase'
     ];
 
 
@@ -110,10 +106,9 @@ class RecurrenceOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_recurrence_tags' => 'getIncludeRecurrenceTags',
         'include_recurrence_meta_data' => 'getIncludeRecurrenceMetaData',
         'include_recurrence_links' => 'getIncludeRecurrenceLinks',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'include_recurrence_base' => 'getIncludeRecurrenceBase'
     ];
 
     public static function attributeMap()
@@ -147,10 +142,9 @@ class RecurrenceOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_recurrence_tags'] = isset($data['include_recurrence_tags']) ? $data['include_recurrence_tags'] : null;
         $this->container['include_recurrence_meta_data'] = isset($data['include_recurrence_meta_data']) ? $data['include_recurrence_meta_data'] : null;
         $this->container['include_recurrence_links'] = isset($data['include_recurrence_links']) ? $data['include_recurrence_links'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['include_recurrence_base'] = isset($data['include_recurrence_base']) ? $data['include_recurrence_base'] : null;
     }
 
     /**
@@ -177,27 +171,6 @@ class RecurrenceOptionsModel implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets include_recurrence_tags
-     * @return bool
-     */
-    public function getIncludeRecurrenceTags()
-    {
-        return $this->container['include_recurrence_tags'];
-    }
-
-    /**
-     * Sets include_recurrence_tags
-     * @param bool $include_recurrence_tags 
-     * @return $this
-     */
-    public function setIncludeRecurrenceTags($include_recurrence_tags)
-    {
-        $this->container['include_recurrence_tags'] = $include_recurrence_tags;
-
-        return $this;
-    }
 
     /**
      * Gets include_recurrence_meta_data
@@ -242,22 +215,22 @@ class RecurrenceOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_updated_by_name
+     * Gets include_recurrence_base
      * @return bool
      */
-    public function getIncludeUpdatedByName()
+    public function getIncludeRecurrenceBase()
     {
-        return $this->container['include_updated_by_name'];
+        return $this->container['include_recurrence_base'];
     }
 
     /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
+     * Sets include_recurrence_base
+     * @param bool $include_recurrence_base 
      * @return $this
      */
-    public function setIncludeUpdatedByName($include_updated_by_name)
+    public function setIncludeRecurrenceBase($include_recurrence_base)
     {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['include_recurrence_base'] = $include_recurrence_base;
 
         return $this;
     }

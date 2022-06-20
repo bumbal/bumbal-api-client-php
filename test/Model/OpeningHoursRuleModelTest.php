@@ -1,6 +1,6 @@
 <?php
 /**
- * RecurrenceOptionsModelTest
+ * OpeningHoursRuleModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * RecurrenceOptionsModelTest Class Doc Comment
+ * OpeningHoursRuleModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description RecurrenceOptionsModel
+// * @description OpeningHoursRuleModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecurrenceOptionsModelTest extends \PHPUnit_Framework_TestCase
+class OpeningHoursRuleModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,30 +71,65 @@ class RecurrenceOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RecurrenceOptionsModel"
+     * Test "OpeningHoursRuleModel"
      */
-    public function testRecurrenceOptionsModel()
+    public function testOpeningHoursRuleModel()
     {
     }
 
     /**
-     * Test attribute "include_recurrence_meta_data"
+     * Test attribute "id"
      */
-    public function testPropertyIncludeRecurrenceMetaData()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "include_recurrence_links"
+     * Test attribute "address_id"
      */
-    public function testPropertyIncludeRecurrenceLinks()
+    public function testPropertyAddressId()
     {
     }
 
     /**
-     * Test attribute "include_recurrence_base"
+     * Test attribute "time_from"
      */
-    public function testPropertyIncludeRecurrenceBase()
+    public function testPropertyTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "time_to"
+     */
+    public function testPropertyTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "valid_date_from"
+     */
+    public function testPropertyValidDateFrom()
+    {
+    }
+
+    /**
+     * Test attribute "valid_date_to"
+     */
+    public function testPropertyValidDateTo()
+    {
+    }
+
+    /**
+     * Test attribute "weekday"
+     */
+    public function testPropertyWeekday()
+    {
+    }
+
+    /**
+     * Test attribute "precedence"
+     */
+    public function testPropertyPrecedence()
     {
     }
 }

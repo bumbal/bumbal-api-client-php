@@ -56,7 +56,8 @@ class ServiceWindowsSchemeOptionsModel implements ArrayAccess
     protected static $swaggerTypes = [
         'include_tags' => 'bool',
         'include_zones' => 'bool',
-        'include_brands' => 'bool'
+        'include_brands' => 'bool',
+        'include_service_windows' => 'bool'
     ];
 
     /**
@@ -66,7 +67,8 @@ class ServiceWindowsSchemeOptionsModel implements ArrayAccess
     protected static $swaggerFormats = [
         'include_tags' => null,
         'include_zones' => null,
-        'include_brands' => null
+        'include_brands' => null,
+        'include_service_windows' => null
     ];
 
     public static function swaggerTypes()
@@ -86,7 +88,8 @@ class ServiceWindowsSchemeOptionsModel implements ArrayAccess
     protected static $attributeMap = [
         'include_tags' => 'include_tags',
         'include_zones' => 'include_zones',
-        'include_brands' => 'include_brands'
+        'include_brands' => 'include_brands',
+        'include_service_windows' => 'include_service_windows'
     ];
 
 
@@ -97,7 +100,8 @@ class ServiceWindowsSchemeOptionsModel implements ArrayAccess
     protected static $setters = [
         'include_tags' => 'setIncludeTags',
         'include_zones' => 'setIncludeZones',
-        'include_brands' => 'setIncludeBrands'
+        'include_brands' => 'setIncludeBrands',
+        'include_service_windows' => 'setIncludeServiceWindows'
     ];
 
 
@@ -108,7 +112,8 @@ class ServiceWindowsSchemeOptionsModel implements ArrayAccess
     protected static $getters = [
         'include_tags' => 'getIncludeTags',
         'include_zones' => 'getIncludeZones',
-        'include_brands' => 'getIncludeBrands'
+        'include_brands' => 'getIncludeBrands',
+        'include_service_windows' => 'getIncludeServiceWindows'
     ];
 
     public static function attributeMap()
@@ -145,6 +150,7 @@ class ServiceWindowsSchemeOptionsModel implements ArrayAccess
         $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;
+        $this->container['include_service_windows'] = isset($data['include_service_windows']) ? $data['include_service_windows'] : null;
     }
 
     /**
@@ -231,6 +237,27 @@ class ServiceWindowsSchemeOptionsModel implements ArrayAccess
     public function setIncludeBrands($include_brands)
     {
         $this->container['include_brands'] = $include_brands;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_service_windows
+     * @return bool
+     */
+    public function getIncludeServiceWindows()
+    {
+        return $this->container['include_service_windows'];
+    }
+
+    /**
+     * Sets include_service_windows
+     * @param bool $include_service_windows Include brands in listview
+     * @return $this
+     */
+    public function setIncludeServiceWindows($include_service_windows)
+    {
+        $this->container['include_service_windows'] = $include_service_windows;
 
         return $this;
     }

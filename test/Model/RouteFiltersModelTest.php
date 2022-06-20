@@ -216,4 +216,11 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyNrOfStops()
     {
     }
+
+    /**
+     * Test attribute "search_text"
+     */
+    public function testPropertySearchText()
+    {
+    }
 }

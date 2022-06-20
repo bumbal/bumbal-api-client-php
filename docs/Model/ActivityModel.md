@@ -93,6 +93,7 @@ Name | Type | Description | Notes
 **bundled_activity_ids** | **int[]** | Ids of activities within bundle activity | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
+**recurrence_id** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
 **tag_ids** | **int[]** | Tag type ids | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 

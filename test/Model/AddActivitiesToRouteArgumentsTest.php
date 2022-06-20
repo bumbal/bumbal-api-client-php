@@ -97,4 +97,11 @@ class AddActivitiesToRouteArgumentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyOptions()
     {
     }
+
+    /**
+     * Test attribute "filters"
+     */
+    public function testPropertyFilters()
+    {
+    }
 }

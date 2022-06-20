@@ -1,6 +1,6 @@
 <?php
 /**
- * AddActivitiesToRouteArguments
+ * RecurrenceDeleteModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * AddActivitiesToRouteArguments Class Doc Comment
+ * RecurrenceDeleteModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddActivitiesToRouteArguments implements ArrayAccess
+class RecurrenceDeleteModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,15 @@ class AddActivitiesToRouteArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AddActivitiesToRouteArguments';
+    protected static $swaggerModelName = 'RecurrenceDeleteModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'route_id' => 'int',
-        'activities' => '\BumbalClient\Model\ActivityForToRouteModel[]',
-        'options' => 'map[string,bool]',
-        'filters' => '\BumbalClient\Model\AddActivitiesToRouteFiltersModel'
+        'id' => 'int',
+        'remove_objects' => 'bool'
     ];
 
     /**
@@ -65,10 +63,8 @@ class AddActivitiesToRouteArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'route_id' => 'int64',
-        'activities' => null,
-        'options' => null,
-        'filters' => null
+        'id' => 'int64',
+        'remove_objects' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +82,8 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'route_id' => 'route_id',
-        'activities' => 'activities',
-        'options' => 'options',
-        'filters' => 'filters'
+        'id' => 'id',
+        'remove_objects' => 'remove_objects'
     ];
 
 
@@ -98,10 +92,8 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'route_id' => 'setRouteId',
-        'activities' => 'setActivities',
-        'options' => 'setOptions',
-        'filters' => 'setFilters'
+        'id' => 'setId',
+        'remove_objects' => 'setRemoveObjects'
     ];
 
 
@@ -110,10 +102,8 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'route_id' => 'getRouteId',
-        'activities' => 'getActivities',
-        'options' => 'getOptions',
-        'filters' => 'getFilters'
+        'id' => 'getId',
+        'remove_objects' => 'getRemoveObjects'
     ];
 
     public static function attributeMap()
@@ -147,10 +137,8 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
-        $this->container['activities'] = isset($data['activities']) ? $data['activities'] : null;
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['remove_objects'] = isset($data['remove_objects']) ? $data['remove_objects'] : null;
     }
 
     /**
@@ -179,85 +167,43 @@ class AddActivitiesToRouteArguments implements ArrayAccess
 
 
     /**
-     * Gets route_id
+     * Gets id
      * @return int
      */
-    public function getRouteId()
+    public function getId()
     {
-        return $this->container['route_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets route_id
-     * @param int $route_id Unique ID of Route
+     * Sets id
+     * @param int $id Unique Identifier
      * @return $this
      */
-    public function setRouteId($route_id)
+    public function setId($id)
     {
-        $this->container['route_id'] = $route_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets activities
-     * @return \BumbalClient\Model\ActivityForToRouteModel[]
+     * Gets remove_objects
+     * @return bool
      */
-    public function getActivities()
+    public function getRemoveObjects()
     {
-        return $this->container['activities'];
+        return $this->container['remove_objects'];
     }
 
     /**
-     * Sets activities
-     * @param \BumbalClient\Model\ActivityForToRouteModel[] $activities 
+     * Sets remove_objects
+     * @param bool $remove_objects Remove recurrence objects
      * @return $this
      */
-    public function setActivities($activities)
+    public function setRemoveObjects($remove_objects)
     {
-        $this->container['activities'] = $activities;
-
-        return $this;
-    }
-
-    /**
-     * Gets options
-     * @return map[string,bool]
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param map[string,bool] $options 
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
-     * Gets filters
-     * @return \BumbalClient\Model\AddActivitiesToRouteFiltersModel
-     */
-    public function getFilters()
-    {
-        return $this->container['filters'];
-    }
-
-    /**
-     * Sets filters
-     * @param \BumbalClient\Model\AddActivitiesToRouteFiltersModel $filters 
-     * @return $this
-     */
-    public function setFilters($filters)
-    {
-        $this->container['filters'] = $filters;
+        $this->container['remove_objects'] = $remove_objects;
 
         return $this;
     }

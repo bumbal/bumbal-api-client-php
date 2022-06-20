@@ -103,6 +103,16 @@ class RecurrenceApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for deleteRecurrenceObject
+     *
+     * Delete a Recurrence.
+     *
+     */
+    public function testDeleteRecurrenceObject()
+    {
+    }
+
+    /**
      * Test case for finish
      *
      * Cleans up after the process run.
@@ -155,7 +165,7 @@ class RecurrenceApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateRecurrence
      *
-     * Update a Recurrence.
+     * Update a recurrence.
      *
      */
     public function testUpdateRecurrence()

@@ -358,6 +358,109 @@ class RecurrenceApi
     }
 
     /**
+     * Operation deleteRecurrenceObject
+     *
+     * Delete a Recurrence
+     *
+     * @param \BumbalClient\Model\RecurrenceDeleteModel $body Delete recurrence model (required)
+     * @param int $recurrence_id ID of recurrence to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function deleteRecurrenceObject($body, $recurrence_id)
+    {
+        list($response) = $this->deleteRecurrenceObjectWithHttpInfo($body, $recurrence_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteRecurrenceObjectWithHttpInfo
+     *
+     * Delete a Recurrence
+     *
+     * @param \BumbalClient\Model\RecurrenceDeleteModel $body Delete recurrence model (required)
+     * @param int $recurrence_id ID of recurrence to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteRecurrenceObjectWithHttpInfo($body, $recurrence_id)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling deleteRecurrenceObject');
+        }
+        // verify the required parameter 'recurrence_id' is set
+        if ($recurrence_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $recurrence_id when calling deleteRecurrenceObject');
+        }
+        // parse inputs
+        $resourcePath = "/recurrence/delete-recurrence";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($recurrence_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "recurrenceId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($recurrence_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/recurrence/delete-recurrence'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation finish
      *
      * Cleans up after the process run
@@ -833,32 +936,38 @@ class RecurrenceApi
     /**
      * Operation updateRecurrence
      *
-     * Update a Recurrence
+     * Update a recurrence
      *
      * @param int $recurrence_id ID of recurrence to update (required)
+     * @param \BumbalClient\Model\RecurrenceModel $body Recurrence object that needs to be updated (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updateRecurrence($recurrence_id)
+    public function updateRecurrence($recurrence_id, $body)
     {
-        list($response) = $this->updateRecurrenceWithHttpInfo($recurrence_id);
+        list($response) = $this->updateRecurrenceWithHttpInfo($recurrence_id, $body);
         return $response;
     }
 
     /**
      * Operation updateRecurrenceWithHttpInfo
      *
-     * Update a Recurrence
+     * Update a recurrence
      *
      * @param int $recurrence_id ID of recurrence to update (required)
+     * @param \BumbalClient\Model\RecurrenceModel $body Recurrence object that needs to be updated (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateRecurrenceWithHttpInfo($recurrence_id)
+    public function updateRecurrenceWithHttpInfo($recurrence_id, $body)
     {
         // verify the required parameter 'recurrence_id' is set
         if ($recurrence_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $recurrence_id when calling updateRecurrence');
+        }
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling updateRecurrence');
         }
         // parse inputs
         $resourcePath = "/recurrence/{recurrenceId}";
@@ -879,6 +988,11 @@ class RecurrenceApi
                 $this->apiClient->getSerializer()->toPathValue($recurrence_id),
                 $resourcePath
             );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
         }
 
         // for model (json/xml)

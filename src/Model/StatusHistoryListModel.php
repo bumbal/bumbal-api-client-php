@@ -1,6 +1,6 @@
 <?php
 /**
- * AddActivitiesToRouteArguments
+ * StatusHistoryListModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * AddActivitiesToRouteArguments Class Doc Comment
+ * StatusHistoryListModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddActivitiesToRouteArguments implements ArrayAccess
+class StatusHistoryListModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,14 @@ class AddActivitiesToRouteArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AddActivitiesToRouteArguments';
+    protected static $swaggerModelName = 'StatusHistoryListModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'route_id' => 'int',
-        'activities' => '\BumbalClient\Model\ActivityForToRouteModel[]',
-        'options' => 'map[string,bool]',
-        'filters' => '\BumbalClient\Model\AddActivitiesToRouteFiltersModel'
+        'data' => '\BumbalClient\Model\StatusHistoryModel[]'
     ];
 
     /**
@@ -65,10 +62,7 @@ class AddActivitiesToRouteArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'route_id' => 'int64',
-        'activities' => null,
-        'options' => null,
-        'filters' => null
+        'data' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +80,7 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'route_id' => 'route_id',
-        'activities' => 'activities',
-        'options' => 'options',
-        'filters' => 'filters'
+        'data' => 'data'
     ];
 
 
@@ -98,10 +89,7 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'route_id' => 'setRouteId',
-        'activities' => 'setActivities',
-        'options' => 'setOptions',
-        'filters' => 'setFilters'
+        'data' => 'setData'
     ];
 
 
@@ -110,10 +98,7 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'route_id' => 'getRouteId',
-        'activities' => 'getActivities',
-        'options' => 'getOptions',
-        'filters' => 'getFilters'
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -147,10 +132,7 @@ class AddActivitiesToRouteArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
-        $this->container['activities'] = isset($data['activities']) ? $data['activities'] : null;
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -179,85 +161,22 @@ class AddActivitiesToRouteArguments implements ArrayAccess
 
 
     /**
-     * Gets route_id
-     * @return int
+     * Gets data
+     * @return \BumbalClient\Model\StatusHistoryModel[]
      */
-    public function getRouteId()
+    public function getData()
     {
-        return $this->container['route_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets route_id
-     * @param int $route_id Unique ID of Route
+     * Sets data
+     * @param \BumbalClient\Model\StatusHistoryModel[] $data 
      * @return $this
      */
-    public function setRouteId($route_id)
+    public function setData($data)
     {
-        $this->container['route_id'] = $route_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets activities
-     * @return \BumbalClient\Model\ActivityForToRouteModel[]
-     */
-    public function getActivities()
-    {
-        return $this->container['activities'];
-    }
-
-    /**
-     * Sets activities
-     * @param \BumbalClient\Model\ActivityForToRouteModel[] $activities 
-     * @return $this
-     */
-    public function setActivities($activities)
-    {
-        $this->container['activities'] = $activities;
-
-        return $this;
-    }
-
-    /**
-     * Gets options
-     * @return map[string,bool]
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param map[string,bool] $options 
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
-     * Gets filters
-     * @return \BumbalClient\Model\AddActivitiesToRouteFiltersModel
-     */
-    public function getFilters()
-    {
-        return $this->container['filters'];
-    }
-
-    /**
-     * Sets filters
-     * @param \BumbalClient\Model\AddActivitiesToRouteFiltersModel $filters 
-     * @return $this
-     */
-    public function setFilters($filters)
-    {
-        $this->container['filters'] = $filters;
+        $this->container['data'] = $data;
 
         return $this;
     }

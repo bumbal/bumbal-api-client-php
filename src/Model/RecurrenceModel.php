@@ -57,13 +57,12 @@ class RecurrenceModel implements ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'type_id' => 'int',
-        'type_name' => 'int',
-        'recurrence_type_name' => 'string',
+        'type_name' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
+        'end_option' => 'string',
         'period_name' => 'string',
         'period_id' => 'int',
-        'recurrence_period_name' => 'string',
         'frequency' => 'int',
         'count' => 'int',
         'show_ahead' => 'int',
@@ -72,12 +71,19 @@ class RecurrenceModel implements ArrayAccess
         'next_run' => '\DateTime',
         'last_run' => '\DateTime',
         'active' => 'bool',
-        'tags' => '\BumbalClient\Model\TagModel[]',
+        'has_uncreated_objects' => 'bool',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime',
-        'updated_by_name' => 'string',
-        'object_id' => 'int'
+        'base' => 'string',
+        'base_date' => 'string',
+        'monday' => 'bool',
+        'tuesday' => 'bool',
+        'wednesday' => 'bool',
+        'thursday' => 'bool',
+        'friday' => 'bool',
+        'saturday' => 'bool',
+        'sunday' => 'bool',
+        'month_day' => 'bool',
+        'monthly_option' => 'string'
     ];
 
     /**
@@ -89,12 +95,11 @@ class RecurrenceModel implements ArrayAccess
         'name' => null,
         'type_id' => null,
         'type_name' => null,
-        'recurrence_type_name' => null,
         'start_date' => 'date-time',
         'end_date' => 'date-time',
+        'end_option' => null,
         'period_name' => null,
         'period_id' => null,
-        'recurrence_period_name' => null,
         'frequency' => 'int64',
         'count' => 'int64',
         'show_ahead' => 'int64',
@@ -103,12 +108,19 @@ class RecurrenceModel implements ArrayAccess
         'next_run' => 'date-time',
         'last_run' => 'date-time',
         'active' => null,
-        'tags' => null,
+        'has_uncreated_objects' => null,
         'meta_data' => null,
-        'created_at' => 'date-time',
-        'updated_at' => 'date-time',
-        'updated_by_name' => null,
-        'object_id' => null
+        'base' => null,
+        'base_date' => null,
+        'monday' => null,
+        'tuesday' => null,
+        'wednesday' => null,
+        'thursday' => null,
+        'friday' => null,
+        'saturday' => null,
+        'sunday' => null,
+        'month_day' => null,
+        'monthly_option' => null
     ];
 
     public static function swaggerTypes()
@@ -130,12 +142,11 @@ class RecurrenceModel implements ArrayAccess
         'name' => 'name',
         'type_id' => 'type_id',
         'type_name' => 'type_name',
-        'recurrence_type_name' => 'recurrence_type_name',
         'start_date' => 'start_date',
         'end_date' => 'end_date',
+        'end_option' => 'end_option',
         'period_name' => 'period_name',
         'period_id' => 'period_id',
-        'recurrence_period_name' => 'recurrence_period_name',
         'frequency' => 'frequency',
         'count' => 'count',
         'show_ahead' => 'show_ahead',
@@ -144,12 +155,19 @@ class RecurrenceModel implements ArrayAccess
         'next_run' => 'next_run',
         'last_run' => 'last_run',
         'active' => 'active',
-        'tags' => 'tags',
+        'has_uncreated_objects' => 'has_uncreated_objects',
         'meta_data' => 'meta_data',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at',
-        'updated_by_name' => 'updated_by_name',
-        'object_id' => 'object_id'
+        'base' => 'base',
+        'base_date' => 'base_date',
+        'monday' => 'monday',
+        'tuesday' => 'tuesday',
+        'wednesday' => 'wednesday',
+        'thursday' => 'thursday',
+        'friday' => 'friday',
+        'saturday' => 'saturday',
+        'sunday' => 'sunday',
+        'month_day' => 'month_day',
+        'monthly_option' => 'monthly_option'
     ];
 
 
@@ -162,12 +180,11 @@ class RecurrenceModel implements ArrayAccess
         'name' => 'setName',
         'type_id' => 'setTypeId',
         'type_name' => 'setTypeName',
-        'recurrence_type_name' => 'setRecurrenceTypeName',
         'start_date' => 'setStartDate',
         'end_date' => 'setEndDate',
+        'end_option' => 'setEndOption',
         'period_name' => 'setPeriodName',
         'period_id' => 'setPeriodId',
-        'recurrence_period_name' => 'setRecurrencePeriodName',
         'frequency' => 'setFrequency',
         'count' => 'setCount',
         'show_ahead' => 'setShowAhead',
@@ -176,12 +193,19 @@ class RecurrenceModel implements ArrayAccess
         'next_run' => 'setNextRun',
         'last_run' => 'setLastRun',
         'active' => 'setActive',
-        'tags' => 'setTags',
+        'has_uncreated_objects' => 'setHasUncreatedObjects',
         'meta_data' => 'setMetaData',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt',
-        'updated_by_name' => 'setUpdatedByName',
-        'object_id' => 'setObjectId'
+        'base' => 'setBase',
+        'base_date' => 'setBaseDate',
+        'monday' => 'setMonday',
+        'tuesday' => 'setTuesday',
+        'wednesday' => 'setWednesday',
+        'thursday' => 'setThursday',
+        'friday' => 'setFriday',
+        'saturday' => 'setSaturday',
+        'sunday' => 'setSunday',
+        'month_day' => 'setMonthDay',
+        'monthly_option' => 'setMonthlyOption'
     ];
 
 
@@ -194,12 +218,11 @@ class RecurrenceModel implements ArrayAccess
         'name' => 'getName',
         'type_id' => 'getTypeId',
         'type_name' => 'getTypeName',
-        'recurrence_type_name' => 'getRecurrenceTypeName',
         'start_date' => 'getStartDate',
         'end_date' => 'getEndDate',
+        'end_option' => 'getEndOption',
         'period_name' => 'getPeriodName',
         'period_id' => 'getPeriodId',
-        'recurrence_period_name' => 'getRecurrencePeriodName',
         'frequency' => 'getFrequency',
         'count' => 'getCount',
         'show_ahead' => 'getShowAhead',
@@ -208,12 +231,19 @@ class RecurrenceModel implements ArrayAccess
         'next_run' => 'getNextRun',
         'last_run' => 'getLastRun',
         'active' => 'getActive',
-        'tags' => 'getTags',
+        'has_uncreated_objects' => 'getHasUncreatedObjects',
         'meta_data' => 'getMetaData',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt',
-        'updated_by_name' => 'getUpdatedByName',
-        'object_id' => 'getObjectId'
+        'base' => 'getBase',
+        'base_date' => 'getBaseDate',
+        'monday' => 'getMonday',
+        'tuesday' => 'getTuesday',
+        'wednesday' => 'getWednesday',
+        'thursday' => 'getThursday',
+        'friday' => 'getFriday',
+        'saturday' => 'getSaturday',
+        'sunday' => 'getSunday',
+        'month_day' => 'getMonthDay',
+        'monthly_option' => 'getMonthlyOption'
     ];
 
     public static function attributeMap()
@@ -231,11 +261,16 @@ class RecurrenceModel implements ArrayAccess
         return self::$getters;
     }
 
-    const RECURRENCE_TYPE_NAME_ACTIVITY = 'activity';
-    const RECURRENCE_TYPE_NAME_ROUTE = 'route';
-    const RECURRENCE_PERIOD_NAME_DAY = 'day';
-    const RECURRENCE_PERIOD_NAME_WEEK = 'week';
-    const RECURRENCE_PERIOD_NAME_MONTH = 'month';
+    const TYPE_NAME_ACTIVITY = 'activity';
+    const TYPE_NAME_ROUTE = 'route';
+    const END_OPTION_NEVER = 'never';
+    const END_OPTION_INTERVAL_COUNT = 'interval_count';
+    const END_OPTION_DATE = 'date';
+    const PERIOD_NAME_DAY = 'day';
+    const PERIOD_NAME_WEEK = 'week';
+    const PERIOD_NAME_MONTH = 'month';
+    const MONTHLY_OPTION_BEGIN = 'begin';
+    const MONTHLY_OPTION_END = 'end';
     
 
     
@@ -243,11 +278,11 @@ class RecurrenceModel implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getRecurrenceTypeNameAllowableValues()
+    public function getTypeNameAllowableValues()
     {
         return [
-            self::RECURRENCE_TYPE_NAME_ACTIVITY,
-            self::RECURRENCE_TYPE_NAME_ROUTE,
+            self::TYPE_NAME_ACTIVITY,
+            self::TYPE_NAME_ROUTE,
         ];
     }
     
@@ -255,12 +290,37 @@ class RecurrenceModel implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getRecurrencePeriodNameAllowableValues()
+    public function getEndOptionAllowableValues()
     {
         return [
-            self::RECURRENCE_PERIOD_NAME_DAY,
-            self::RECURRENCE_PERIOD_NAME_WEEK,
-            self::RECURRENCE_PERIOD_NAME_MONTH,
+            self::END_OPTION_NEVER,
+            self::END_OPTION_INTERVAL_COUNT,
+            self::END_OPTION_DATE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPeriodNameAllowableValues()
+    {
+        return [
+            self::PERIOD_NAME_DAY,
+            self::PERIOD_NAME_WEEK,
+            self::PERIOD_NAME_MONTH,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getMonthlyOptionAllowableValues()
+    {
+        return [
+            self::MONTHLY_OPTION_BEGIN,
+            self::MONTHLY_OPTION_END,
         ];
     }
     
@@ -281,12 +341,11 @@ class RecurrenceModel implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type_id'] = isset($data['type_id']) ? $data['type_id'] : null;
         $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
-        $this->container['recurrence_type_name'] = isset($data['recurrence_type_name']) ? $data['recurrence_type_name'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['end_date'] = isset($data['end_date']) ? $data['end_date'] : null;
+        $this->container['end_option'] = isset($data['end_option']) ? $data['end_option'] : null;
         $this->container['period_name'] = isset($data['period_name']) ? $data['period_name'] : null;
         $this->container['period_id'] = isset($data['period_id']) ? $data['period_id'] : null;
-        $this->container['recurrence_period_name'] = isset($data['recurrence_period_name']) ? $data['recurrence_period_name'] : null;
         $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['show_ahead'] = isset($data['show_ahead']) ? $data['show_ahead'] : null;
@@ -295,12 +354,19 @@ class RecurrenceModel implements ArrayAccess
         $this->container['next_run'] = isset($data['next_run']) ? $data['next_run'] : null;
         $this->container['last_run'] = isset($data['last_run']) ? $data['last_run'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['has_uncreated_objects'] = isset($data['has_uncreated_objects']) ? $data['has_uncreated_objects'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
-        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['base'] = isset($data['base']) ? $data['base'] : null;
+        $this->container['base_date'] = isset($data['base_date']) ? $data['base_date'] : null;
+        $this->container['monday'] = isset($data['monday']) ? $data['monday'] : null;
+        $this->container['tuesday'] = isset($data['tuesday']) ? $data['tuesday'] : null;
+        $this->container['wednesday'] = isset($data['wednesday']) ? $data['wednesday'] : null;
+        $this->container['thursday'] = isset($data['thursday']) ? $data['thursday'] : null;
+        $this->container['friday'] = isset($data['friday']) ? $data['friday'] : null;
+        $this->container['saturday'] = isset($data['saturday']) ? $data['saturday'] : null;
+        $this->container['sunday'] = isset($data['sunday']) ? $data['sunday'] : null;
+        $this->container['month_day'] = isset($data['month_day']) ? $data['month_day'] : null;
+        $this->container['monthly_option'] = isset($data['monthly_option']) ? $data['monthly_option'] : null;
     }
 
     /**
@@ -312,18 +378,34 @@ class RecurrenceModel implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = $this->getRecurrenceTypeNameAllowableValues();
-        if (!in_array($this->container['recurrence_type_name'], $allowed_values)) {
+        $allowed_values = $this->getTypeNameAllowableValues();
+        if (!in_array($this->container['type_name'], $allowed_values)) {
             $invalid_properties[] = sprintf(
-                "invalid value for 'recurrence_type_name', must be one of '%s'",
+                "invalid value for 'type_name', must be one of '%s'",
                 implode("', '", $allowed_values)
             );
         }
 
-        $allowed_values = $this->getRecurrencePeriodNameAllowableValues();
-        if (!in_array($this->container['recurrence_period_name'], $allowed_values)) {
+        $allowed_values = $this->getEndOptionAllowableValues();
+        if (!in_array($this->container['end_option'], $allowed_values)) {
             $invalid_properties[] = sprintf(
-                "invalid value for 'recurrence_period_name', must be one of '%s'",
+                "invalid value for 'end_option', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getPeriodNameAllowableValues();
+        if (!in_array($this->container['period_name'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'period_name', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getMonthlyOptionAllowableValues();
+        if (!in_array($this->container['monthly_option'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'monthly_option', must be one of '%s'",
                 implode("', '", $allowed_values)
             );
         }
@@ -340,12 +422,20 @@ class RecurrenceModel implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = $this->getRecurrenceTypeNameAllowableValues();
-        if (!in_array($this->container['recurrence_type_name'], $allowed_values)) {
+        $allowed_values = $this->getTypeNameAllowableValues();
+        if (!in_array($this->container['type_name'], $allowed_values)) {
             return false;
         }
-        $allowed_values = $this->getRecurrencePeriodNameAllowableValues();
-        if (!in_array($this->container['recurrence_period_name'], $allowed_values)) {
+        $allowed_values = $this->getEndOptionAllowableValues();
+        if (!in_array($this->container['end_option'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getPeriodNameAllowableValues();
+        if (!in_array($this->container['period_name'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getMonthlyOptionAllowableValues();
+        if (!in_array($this->container['monthly_option'], $allowed_values)) {
             return false;
         }
         return true;
@@ -417,7 +507,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets type_name
-     * @return int
+     * @return string
      */
     public function getTypeName()
     {
@@ -426,42 +516,21 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets type_name
-     * @param int $type_name recurrence type_name, activity, route
+     * @param string $type_name recurrence type_name, activity, route
      * @return $this
      */
     public function setTypeName($type_name)
     {
-        $this->container['type_name'] = $type_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets recurrence_type_name
-     * @return string
-     */
-    public function getRecurrenceTypeName()
-    {
-        return $this->container['recurrence_type_name'];
-    }
-
-    /**
-     * Sets recurrence_type_name
-     * @param string $recurrence_type_name recurrence typename, activity or route
-     * @return $this
-     */
-    public function setRecurrenceTypeName($recurrence_type_name)
-    {
-        $allowed_values = $this->getRecurrenceTypeNameAllowableValues();
-        if (!is_null($recurrence_type_name) && !in_array($recurrence_type_name, $allowed_values)) {
+        $allowed_values = $this->getTypeNameAllowableValues();
+        if (!is_null($type_name) && !in_array($type_name, $allowed_values)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'recurrence_type_name', must be one of '%s'",
+                    "Invalid value for 'type_name', must be one of '%s'",
                     implode("', '", $allowed_values)
                 )
             );
         }
-        $this->container['recurrence_type_name'] = $recurrence_type_name;
+        $this->container['type_name'] = $type_name;
 
         return $this;
     }
@@ -509,6 +578,36 @@ class RecurrenceModel implements ArrayAccess
     }
 
     /**
+     * Gets end_option
+     * @return string
+     */
+    public function getEndOption()
+    {
+        return $this->container['end_option'];
+    }
+
+    /**
+     * Sets end_option
+     * @param string $end_option End option
+     * @return $this
+     */
+    public function setEndOption($end_option)
+    {
+        $allowed_values = $this->getEndOptionAllowableValues();
+        if (!is_null($end_option) && !in_array($end_option, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'end_option', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['end_option'] = $end_option;
+
+        return $this;
+    }
+
+    /**
      * Gets period_name
      * @return string
      */
@@ -519,11 +618,20 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets period_name
-     * @param string $period_name period name
+     * @param string $period_name recurrence period_name, 1:day, 2:week, 3:month
      * @return $this
      */
     public function setPeriodName($period_name)
     {
+        $allowed_values = $this->getPeriodNameAllowableValues();
+        if (!is_null($period_name) && !in_array($period_name, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'period_name', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
         $this->container['period_name'] = $period_name;
 
         return $this;
@@ -546,36 +654,6 @@ class RecurrenceModel implements ArrayAccess
     public function setPeriodId($period_id)
     {
         $this->container['period_id'] = $period_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets recurrence_period_name
-     * @return string
-     */
-    public function getRecurrencePeriodName()
-    {
-        return $this->container['recurrence_period_name'];
-    }
-
-    /**
-     * Sets recurrence_period_name
-     * @param string $recurrence_period_name recurrence period name: day, week or month
-     * @return $this
-     */
-    public function setRecurrencePeriodName($recurrence_period_name)
-    {
-        $allowed_values = $this->getRecurrencePeriodNameAllowableValues();
-        if (!is_null($recurrence_period_name) && !in_array($recurrence_period_name, $allowed_values)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'recurrence_period_name', must be one of '%s'",
-                    implode("', '", $allowed_values)
-                )
-            );
-        }
-        $this->container['recurrence_period_name'] = $recurrence_period_name;
 
         return $this;
     }
@@ -749,22 +827,22 @@ class RecurrenceModel implements ArrayAccess
     }
 
     /**
-     * Gets tags
-     * @return \BumbalClient\Model\TagModel[]
+     * Gets has_uncreated_objects
+     * @return bool
      */
-    public function getTags()
+    public function getHasUncreatedObjects()
     {
-        return $this->container['tags'];
+        return $this->container['has_uncreated_objects'];
     }
 
     /**
-     * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * Sets has_uncreated_objects
+     * @param bool $has_uncreated_objects If the recurrence has uncreated objects
      * @return $this
      */
-    public function setTags($tags)
+    public function setHasUncreatedObjects($has_uncreated_objects)
     {
-        $this->container['tags'] = $tags;
+        $this->container['has_uncreated_objects'] = $has_uncreated_objects;
 
         return $this;
     }
@@ -791,85 +869,241 @@ class RecurrenceModel implements ArrayAccess
     }
 
     /**
-     * Gets created_at
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param \DateTime $created_at created_at date time
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_by_name
+     * Gets base
      * @return string
      */
-    public function getUpdatedByName()
+    public function getBase()
     {
-        return $this->container['updated_by_name'];
+        return $this->container['base'];
     }
 
     /**
-     * Sets updated_by_name
-     * @param string $updated_by_name Recurrence updated by user full name
+     * Sets base
+     * @param string $base Recurrence base
      * @return $this
      */
-    public function setUpdatedByName($updated_by_name)
+    public function setBase($base)
     {
-        $this->container['updated_by_name'] = $updated_by_name;
+        $this->container['base'] = $base;
 
         return $this;
     }
 
     /**
-     * Gets object_id
-     * @return int
+     * Gets base_date
+     * @return string
      */
-    public function getObjectId()
+    public function getBaseDate()
     {
-        return $this->container['object_id'];
+        return $this->container['base_date'];
     }
 
     /**
-     * Sets object_id
-     * @param int $object_id ID of the object
+     * Sets base_date
+     * @param string $base_date Recurrence base date
      * @return $this
      */
-    public function setObjectId($object_id)
+    public function setBaseDate($base_date)
     {
-        $this->container['object_id'] = $object_id;
+        $this->container['base_date'] = $base_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets monday
+     * @return bool
+     */
+    public function getMonday()
+    {
+        return $this->container['monday'];
+    }
+
+    /**
+     * Sets monday
+     * @param bool $monday Monday
+     * @return $this
+     */
+    public function setMonday($monday)
+    {
+        $this->container['monday'] = $monday;
+
+        return $this;
+    }
+
+    /**
+     * Gets tuesday
+     * @return bool
+     */
+    public function getTuesday()
+    {
+        return $this->container['tuesday'];
+    }
+
+    /**
+     * Sets tuesday
+     * @param bool $tuesday Tuesday
+     * @return $this
+     */
+    public function setTuesday($tuesday)
+    {
+        $this->container['tuesday'] = $tuesday;
+
+        return $this;
+    }
+
+    /**
+     * Gets wednesday
+     * @return bool
+     */
+    public function getWednesday()
+    {
+        return $this->container['wednesday'];
+    }
+
+    /**
+     * Sets wednesday
+     * @param bool $wednesday Wednesday
+     * @return $this
+     */
+    public function setWednesday($wednesday)
+    {
+        $this->container['wednesday'] = $wednesday;
+
+        return $this;
+    }
+
+    /**
+     * Gets thursday
+     * @return bool
+     */
+    public function getThursday()
+    {
+        return $this->container['thursday'];
+    }
+
+    /**
+     * Sets thursday
+     * @param bool $thursday Thursday
+     * @return $this
+     */
+    public function setThursday($thursday)
+    {
+        $this->container['thursday'] = $thursday;
+
+        return $this;
+    }
+
+    /**
+     * Gets friday
+     * @return bool
+     */
+    public function getFriday()
+    {
+        return $this->container['friday'];
+    }
+
+    /**
+     * Sets friday
+     * @param bool $friday Friday
+     * @return $this
+     */
+    public function setFriday($friday)
+    {
+        $this->container['friday'] = $friday;
+
+        return $this;
+    }
+
+    /**
+     * Gets saturday
+     * @return bool
+     */
+    public function getSaturday()
+    {
+        return $this->container['saturday'];
+    }
+
+    /**
+     * Sets saturday
+     * @param bool $saturday Saturday
+     * @return $this
+     */
+    public function setSaturday($saturday)
+    {
+        $this->container['saturday'] = $saturday;
+
+        return $this;
+    }
+
+    /**
+     * Gets sunday
+     * @return bool
+     */
+    public function getSunday()
+    {
+        return $this->container['sunday'];
+    }
+
+    /**
+     * Sets sunday
+     * @param bool $sunday Sunday
+     * @return $this
+     */
+    public function setSunday($sunday)
+    {
+        $this->container['sunday'] = $sunday;
+
+        return $this;
+    }
+
+    /**
+     * Gets month_day
+     * @return bool
+     */
+    public function getMonthDay()
+    {
+        return $this->container['month_day'];
+    }
+
+    /**
+     * Sets month_day
+     * @param bool $month_day month day
+     * @return $this
+     */
+    public function setMonthDay($month_day)
+    {
+        $this->container['month_day'] = $month_day;
+
+        return $this;
+    }
+
+    /**
+     * Gets monthly_option
+     * @return string
+     */
+    public function getMonthlyOption()
+    {
+        return $this->container['monthly_option'];
+    }
+
+    /**
+     * Sets monthly_option
+     * @param string $monthly_option Recurrence occurs every beginning or ending of the month
+     * @return $this
+     */
+    public function setMonthlyOption($monthly_option)
+    {
+        $allowed_values = $this->getMonthlyOptionAllowableValues();
+        if (!is_null($monthly_option) && !in_array($monthly_option, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'monthly_option', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['monthly_option'] = $monthly_option;
 
         return $this;
     }

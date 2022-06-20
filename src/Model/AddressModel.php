@@ -75,6 +75,7 @@ class AddressModel implements ArrayAccess
         'country_name' => 'string',
         'time_from' => 'string',
         'time_to' => 'string',
+        'opening_hours' => '\BumbalClient\Model\OpeningHoursRuleModel[]',
         'duration' => 'int',
         'address_type_names' => 'string[]',
         'emails' => '\BumbalClient\Model\EmailModel[]',
@@ -117,6 +118,7 @@ class AddressModel implements ArrayAccess
         'country_name' => null,
         'time_from' => null,
         'time_to' => null,
+        'opening_hours' => null,
         'duration' => null,
         'address_type_names' => null,
         'emails' => null,
@@ -169,6 +171,7 @@ class AddressModel implements ArrayAccess
         'country_name' => 'country_name',
         'time_from' => 'time_from',
         'time_to' => 'time_to',
+        'opening_hours' => 'opening_hours',
         'duration' => 'duration',
         'address_type_names' => 'address_type_names',
         'emails' => 'emails',
@@ -212,6 +215,7 @@ class AddressModel implements ArrayAccess
         'country_name' => 'setCountryName',
         'time_from' => 'setTimeFrom',
         'time_to' => 'setTimeTo',
+        'opening_hours' => 'setOpeningHours',
         'duration' => 'setDuration',
         'address_type_names' => 'setAddressTypeNames',
         'emails' => 'setEmails',
@@ -255,6 +259,7 @@ class AddressModel implements ArrayAccess
         'country_name' => 'getCountryName',
         'time_from' => 'getTimeFrom',
         'time_to' => 'getTimeTo',
+        'opening_hours' => 'getOpeningHours',
         'duration' => 'getDuration',
         'address_type_names' => 'getAddressTypeNames',
         'emails' => 'getEmails',
@@ -323,6 +328,7 @@ class AddressModel implements ArrayAccess
         $this->container['country_name'] = isset($data['country_name']) ? $data['country_name'] : null;
         $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
         $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
+        $this->container['opening_hours'] = isset($data['opening_hours']) ? $data['opening_hours'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['address_type_names'] = isset($data['address_type_names']) ? $data['address_type_names'] : null;
         $this->container['emails'] = isset($data['emails']) ? $data['emails'] : null;
@@ -801,6 +807,27 @@ class AddressModel implements ArrayAccess
     public function setTimeTo($time_to)
     {
         $this->container['time_to'] = $time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets opening_hours
+     * @return \BumbalClient\Model\OpeningHoursRuleModel[]
+     */
+    public function getOpeningHours()
+    {
+        return $this->container['opening_hours'];
+    }
+
+    /**
+     * Sets opening_hours
+     * @param \BumbalClient\Model\OpeningHoursRuleModel[] $opening_hours 
+     * @return $this
+     */
+    public function setOpeningHours($opening_hours)
+    {
+        $this->container['opening_hours'] = $opening_hours;
 
         return $this;
     }

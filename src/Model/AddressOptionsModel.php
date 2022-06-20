@@ -56,6 +56,7 @@ class AddressOptionsModel implements ArrayAccess
     protected static $swaggerTypes = [
         'include_phone_nrs' => 'bool',
         'include_emails' => 'bool',
+        'include_opening_hours' => 'bool',
         'include_address_tags' => 'bool',
         'include_party_info' => 'bool',
         'include_party_name' => 'bool',
@@ -72,6 +73,7 @@ class AddressOptionsModel implements ArrayAccess
     protected static $swaggerFormats = [
         'include_phone_nrs' => null,
         'include_emails' => null,
+        'include_opening_hours' => null,
         'include_address_tags' => null,
         'include_party_info' => null,
         'include_party_name' => null,
@@ -98,6 +100,7 @@ class AddressOptionsModel implements ArrayAccess
     protected static $attributeMap = [
         'include_phone_nrs' => 'include_phone_nrs',
         'include_emails' => 'include_emails',
+        'include_opening_hours' => 'include_opening_hours',
         'include_address_tags' => 'include_address_tags',
         'include_party_info' => 'include_party_info',
         'include_party_name' => 'include_party_name',
@@ -115,6 +118,7 @@ class AddressOptionsModel implements ArrayAccess
     protected static $setters = [
         'include_phone_nrs' => 'setIncludePhoneNrs',
         'include_emails' => 'setIncludeEmails',
+        'include_opening_hours' => 'setIncludeOpeningHours',
         'include_address_tags' => 'setIncludeAddressTags',
         'include_party_info' => 'setIncludePartyInfo',
         'include_party_name' => 'setIncludePartyName',
@@ -132,6 +136,7 @@ class AddressOptionsModel implements ArrayAccess
     protected static $getters = [
         'include_phone_nrs' => 'getIncludePhoneNrs',
         'include_emails' => 'getIncludeEmails',
+        'include_opening_hours' => 'getIncludeOpeningHours',
         'include_address_tags' => 'getIncludeAddressTags',
         'include_party_info' => 'getIncludePartyInfo',
         'include_party_name' => 'getIncludePartyName',
@@ -174,6 +179,7 @@ class AddressOptionsModel implements ArrayAccess
     {
         $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
         $this->container['include_emails'] = isset($data['include_emails']) ? $data['include_emails'] : null;
+        $this->container['include_opening_hours'] = isset($data['include_opening_hours']) ? $data['include_opening_hours'] : null;
         $this->container['include_address_tags'] = isset($data['include_address_tags']) ? $data['include_address_tags'] : null;
         $this->container['include_party_info'] = isset($data['include_party_info']) ? $data['include_party_info'] : null;
         $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
@@ -246,6 +252,27 @@ class AddressOptionsModel implements ArrayAccess
     public function setIncludeEmails($include_emails)
     {
         $this->container['include_emails'] = $include_emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_opening_hours
+     * @return bool
+     */
+    public function getIncludeOpeningHours()
+    {
+        return $this->container['include_opening_hours'];
+    }
+
+    /**
+     * Sets include_opening_hours
+     * @param bool $include_opening_hours 
+     * @return $this
+     */
+    public function setIncludeOpeningHours($include_opening_hours)
+    {
+        $this->container['include_opening_hours'] = $include_opening_hours;
 
         return $this;
     }

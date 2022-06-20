@@ -92,6 +92,13 @@ class AddressOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_opening_hours"
+     */
+    public function testPropertyIncludeOpeningHours()
+    {
+    }
+
+    /**
      * Test attribute "include_address_tags"
      */
     public function testPropertyIncludeAddressTags()
