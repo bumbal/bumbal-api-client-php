@@ -91,4 +91,14 @@ class CommunicationApiTest extends \PHPUnit_Framework_TestCase
     public function testTriggerMessageCommunication()
     {
     }
+
+    /**
+     * Test case for triggerMessageCommunicationByMessageType
+     *
+     * Trigger Message to Communication by Message Type.
+     *
+     */
+    public function testTriggerMessageCommunicationByMessageType()
+    {
+    }
 }

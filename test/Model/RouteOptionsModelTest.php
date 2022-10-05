@@ -314,4 +314,11 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeCapacities()
     {
     }
+
+    /**
+     * Test attribute "include_recurrence"
+     */
+    public function testPropertyIncludeRecurrence()
+    {
+    }
 }

@@ -127,6 +127,13 @@ class ZoneRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "as_list"
+     */
+    public function testPropertyAsList()
+    {
+    }
+
+    /**
      * Test attribute "count_only"
      */
     public function testPropertyCountOnly()

@@ -90,4 +90,11 @@ class RoutePointsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPoints()
     {
     }
+
+    /**
+     * Test attribute "failed"
+     */
+    public function testPropertyFailed()
+    {
+    }
 }

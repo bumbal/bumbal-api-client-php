@@ -60,6 +60,8 @@ class VehicleRetrieveListArguments implements ArrayAccess
         'offset' => 'int',
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
+        'as_list' => 'bool',
+        'count_only' => 'bool',
         'search_text' => 'string'
     ];
 
@@ -74,6 +76,8 @@ class VehicleRetrieveListArguments implements ArrayAccess
         'offset' => 'int64',
         'sorting_column' => null,
         'sorting_direction' => null,
+        'as_list' => null,
+        'count_only' => null,
         'search_text' => null
     ];
 
@@ -98,6 +102,8 @@ class VehicleRetrieveListArguments implements ArrayAccess
         'offset' => 'offset',
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
+        'as_list' => 'as_list',
+        'count_only' => 'count_only',
         'search_text' => 'search_text'
     ];
 
@@ -113,6 +119,8 @@ class VehicleRetrieveListArguments implements ArrayAccess
         'offset' => 'setOffset',
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
+        'as_list' => 'setAsList',
+        'count_only' => 'setCountOnly',
         'search_text' => 'setSearchText'
     ];
 
@@ -128,6 +136,8 @@ class VehicleRetrieveListArguments implements ArrayAccess
         'offset' => 'getOffset',
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
+        'as_list' => 'getAsList',
+        'count_only' => 'getCountOnly',
         'search_text' => 'getSearchText'
     ];
 
@@ -200,6 +210,8 @@ class VehicleRetrieveListArguments implements ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
+        $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
     }
 
@@ -392,6 +404,48 @@ class VehicleRetrieveListArguments implements ArrayAccess
             );
         }
         $this->container['sorting_direction'] = $sorting_direction;
+
+        return $this;
+    }
+
+    /**
+     * Gets as_list
+     * @return bool
+     */
+    public function getAsList()
+    {
+        return $this->container['as_list'];
+    }
+
+    /**
+     * Sets as_list
+     * @param bool $as_list 
+     * @return $this
+     */
+    public function setAsList($as_list)
+    {
+        $this->container['as_list'] = $as_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_only
+     * @return bool
+     */
+    public function getCountOnly()
+    {
+        return $this->container['count_only'];
+    }
+
+    /**
+     * Sets count_only
+     * @param bool $count_only 
+     * @return $this
+     */
+    public function setCountOnly($count_only)
+    {
+        $this->container['count_only'] = $count_only;
 
         return $this;
     }

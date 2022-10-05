@@ -61,6 +61,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
         'search_text' => 'string',
+        'as_list' => 'bool',
         'count_only' => 'bool'
     ];
 
@@ -76,6 +77,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'sorting_column' => null,
         'sorting_direction' => null,
         'search_text' => null,
+        'as_list' => null,
         'count_only' => null
     ];
 
@@ -101,6 +103,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
         'search_text' => 'search_text',
+        'as_list' => 'as_list',
         'count_only' => 'count_only'
     ];
 
@@ -117,6 +120,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
         'search_text' => 'setSearchText',
+        'as_list' => 'setAsList',
         'count_only' => 'setCountOnly'
     ];
 
@@ -133,6 +137,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
         'search_text' => 'getSearchText',
+        'as_list' => 'getAsList',
         'count_only' => 'getCountOnly'
     ];
 
@@ -200,6 +205,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
         $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
 
@@ -413,6 +419,27 @@ class ZoneRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets as_list
+     * @return bool
+     */
+    public function getAsList()
+    {
+        return $this->container['as_list'];
+    }
+
+    /**
+     * Sets as_list
+     * @param bool $as_list 
+     * @return $this
+     */
+    public function setAsList($as_list)
+    {
+        $this->container['as_list'] = $as_list;
 
         return $this;
     }

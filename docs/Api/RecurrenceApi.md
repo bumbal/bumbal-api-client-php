@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createActivityRecurrence**](RecurrenceApi.md#createActivityRecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
 [**createRouteRecurrence**](RecurrenceApi.md#createRouteRecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
-[**deleteRecurrence**](RecurrenceApi.md#deleteRecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 [**deleteRecurrenceObject**](RecurrenceApi.md#deleteRecurrenceObject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 [**finish**](RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 [**getRuns**](RecurrenceApi.md#getRuns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
@@ -108,60 +107,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\BumbalClient\Model\RecurrenceModel**](../Model/RecurrenceModel.md)| Recurrence object that needs to be created |
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **deleteRecurrence**
-> \BumbalClient\Model\ApiResponse deleteRecurrence($recurrence_id)
-
-Delete an Recurrence
-
-Delete an Recurrence
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
-// Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-$api_instance = new BumbalClient\Api\RecurrenceApi();
-$recurrence_id = 789; // int | ID of recurrence to delete
-
-try {
-    $result = $api_instance->deleteRecurrence($recurrence_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling RecurrenceApi->deleteRecurrence: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **recurrence_id** | **int**| ID of recurrence to delete |
 
 ### Return type
 

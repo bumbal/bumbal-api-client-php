@@ -573,4 +573,18 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeActivityTags()
     {
     }
+
+    /**
+     * Test attribute "include_recurrence"
+     */
+    public function testPropertyIncludeRecurrence()
+    {
+    }
+
+    /**
+     * Test attribute "include_matching_route_ids"
+     */
+    public function testPropertyIncludeMatchingRouteIds()
+    {
+    }
 }

@@ -55,7 +55,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
-        'name' => 'string[]'
+        'name' => 'string[]',
+        'special' => 'bool[]',
+        'assignment_entry' => 'bool[]'
     ];
 
     /**
@@ -64,7 +66,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'name' => null
+        'name' => null,
+        'special' => null,
+        'assignment_entry' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +87,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name' => 'name'
+        'name' => 'name',
+        'special' => 'special',
+        'assignment_entry' => 'assignment_entry'
     ];
 
 
@@ -93,7 +99,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'name' => 'setName'
+        'name' => 'setName',
+        'special' => 'setSpecial',
+        'assignment_entry' => 'setAssignmentEntry'
     ];
 
 
@@ -103,7 +111,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'name' => 'getName'
+        'name' => 'getName',
+        'special' => 'getSpecial',
+        'assignment_entry' => 'getAssignmentEntry'
     ];
 
     public static function attributeMap()
@@ -139,6 +149,8 @@ class ActivityTypeFiltersModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['special'] = isset($data['special']) ? $data['special'] : null;
+        $this->container['assignment_entry'] = isset($data['assignment_entry']) ? $data['assignment_entry'] : null;
     }
 
     /**
@@ -204,6 +216,48 @@ class ActivityTypeFiltersModel implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets special
+     * @return bool[]
+     */
+    public function getSpecial()
+    {
+        return $this->container['special'];
+    }
+
+    /**
+     * Sets special
+     * @param bool[] $special special activities are ones which are not planned but simly added by the driver during the route execution
+     * @return $this
+     */
+    public function setSpecial($special)
+    {
+        $this->container['special'] = $special;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_entry
+     * @return bool[]
+     */
+    public function getAssignmentEntry()
+    {
+        return $this->container['assignment_entry'];
+    }
+
+    /**
+     * Sets assignment_entry
+     * @param bool[] $assignment_entry assignment_entry activity types are used for order entry forms
+     * @return $this
+     */
+    public function setAssignmentEntry($assignment_entry)
+    {
+        $this->container['assignment_entry'] = $assignment_entry;
 
         return $this;
     }

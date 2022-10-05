@@ -62,6 +62,7 @@ class ZoneModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'zone_ranges' => '\BumbalClient\Model\ZoneRangeModel[]',
         'brands' => '\BumbalClient\Model\BrandModel[]',
+        'brand_ids' => 'int[]',
         'zone_created_at' => '\DateTime',
         'zone_updated_at' => '\DateTime',
         'zone_created_by' => 'int',
@@ -81,6 +82,7 @@ class ZoneModel implements ArrayAccess
         'meta_data' => null,
         'zone_ranges' => null,
         'brands' => null,
+        'brand_ids' => null,
         'zone_created_at' => 'date-time',
         'zone_updated_at' => 'date-time',
         'zone_created_by' => null,
@@ -110,6 +112,7 @@ class ZoneModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'zone_ranges' => 'zone_ranges',
         'brands' => 'brands',
+        'brand_ids' => 'brand_ids',
         'zone_created_at' => 'zone_created_at',
         'zone_updated_at' => 'zone_updated_at',
         'zone_created_by' => 'zone_created_by',
@@ -130,6 +133,7 @@ class ZoneModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'zone_ranges' => 'setZoneRanges',
         'brands' => 'setBrands',
+        'brand_ids' => 'setBrandIds',
         'zone_created_at' => 'setZoneCreatedAt',
         'zone_updated_at' => 'setZoneUpdatedAt',
         'zone_created_by' => 'setZoneCreatedBy',
@@ -150,6 +154,7 @@ class ZoneModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'zone_ranges' => 'getZoneRanges',
         'brands' => 'getBrands',
+        'brand_ids' => 'getBrandIds',
         'zone_created_at' => 'getZoneCreatedAt',
         'zone_updated_at' => 'getZoneUpdatedAt',
         'zone_created_by' => 'getZoneCreatedBy',
@@ -195,6 +200,7 @@ class ZoneModel implements ArrayAccess
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['zone_ranges'] = isset($data['zone_ranges']) ? $data['zone_ranges'] : null;
         $this->container['brands'] = isset($data['brands']) ? $data['brands'] : null;
+        $this->container['brand_ids'] = isset($data['brand_ids']) ? $data['brand_ids'] : null;
         $this->container['zone_created_at'] = isset($data['zone_created_at']) ? $data['zone_created_at'] : null;
         $this->container['zone_updated_at'] = isset($data['zone_updated_at']) ? $data['zone_updated_at'] : null;
         $this->container['zone_created_by'] = isset($data['zone_created_by']) ? $data['zone_created_by'] : null;
@@ -390,6 +396,27 @@ class ZoneModel implements ArrayAccess
     public function setBrands($brands)
     {
         $this->container['brands'] = $brands;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_ids
+     * @return int[]
+     */
+    public function getBrandIds()
+    {
+        return $this->container['brand_ids'];
+    }
+
+    /**
+     * Sets brand_ids
+     * @param int[] $brand_ids Brand ID's
+     * @return $this
+     */
+    public function setBrandIds($brand_ids)
+    {
+        $this->container['brand_ids'] = $brand_ids;
 
         return $this;
     }

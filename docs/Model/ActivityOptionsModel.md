@@ -74,6 +74,8 @@ Name | Type | Description | Notes
 **include_activity_record_object** | **bool** | Deprecated! Use include_record_object instead | [optional] 
 **include_activity_notes** | **bool** | Deprecated! Use include_notes instead | [optional] 
 **include_activity_tags** | **bool** | Deprecated! Use include_tags instead | [optional] 
+**include_recurrence** | **bool** | Inlcude recurrence object | [optional] 
+**include_matching_route_ids** | **bool** | Include matching reoute ids | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

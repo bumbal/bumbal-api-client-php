@@ -90,4 +90,18 @@ class ActivityTypeFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyName()
     {
     }
+
+    /**
+     * Test attribute "special"
+     */
+    public function testPropertySpecial()
+    {
+    }
+
+    /**
+     * Test attribute "assignment_entry"
+     */
+    public function testPropertyAssignmentEntry()
+    {
+    }
 }

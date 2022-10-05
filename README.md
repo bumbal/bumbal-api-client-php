@@ -128,6 +128,11 @@ Class | Method | HTTP request | Description
 *CapacitytypeApi* | [**setCapacityType**](docs/Api/CapacitytypeApi.md#setcapacitytype) | **POST** /capacity-type/set | Set (create or update) an CapacityType
 *CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
+*CommunicationApi* | [**triggerMessageCommunicationByMessageType**](docs/Api/CommunicationApi.md#triggermessagecommunicationbymessagetype) | **POST** /communication/trigger-message-by-message-type | Trigger Message to Communication by Message Type
+*CommunicationtemplateApi* | [**createCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#createcommunicationtemplate) | **POST** /communication-template/set | Create a Communication Template
+*CommunicationtemplateApi* | [**deleteCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#deletecommunicationtemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communicationtemplate
+*CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communicationtemplate
+*CommunicationtemplateApi* | [**retrieveListTemplate**](docs/Api/CommunicationtemplateApi.md#retrievelisttemplate) | **PUT** /communication-template | Retrieve List of Templates
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
 *DriverApi* | [**retrieveDriver**](docs/Api/DriverApi.md#retrievedriver) | **GET** /driver/{driverId} | Find driver by ID
@@ -222,6 +227,7 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**autoPlanResult**](docs/Api/PlannerApi.md#autoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**changeActivitySequence**](docs/Api/PlannerApi.md#changeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
 *PlannerApi* | [**checkAvailability**](docs/Api/PlannerApi.md#checkavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
+*PlannerApi* | [**checkAvailabilityCaching**](docs/Api/PlannerApi.md#checkavailabilitycaching) | **POST** /planner/check-availability-caching | Retrieve the cached check-availability
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
@@ -294,7 +300,6 @@ Class | Method | HTTP request | Description
 *QuestionnairetypeApi* | [**retrieveQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievequestionnairetype) | **GET** /questionnaire-type/{questionnaire-typeId} | Retrieve a QuestionnaireType
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
-*RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 *RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 *RecurrenceApi* | [**getRuns**](docs/Api/RecurrenceApi.md#getruns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
@@ -330,8 +335,8 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
 *SettingsApi* | [**setSetting**](docs/Api/SettingsApi.md#setsetting) | **POST** /settings/set | Set (update) Setting value
 *SettingsApi* | [**updateSettings**](docs/Api/SettingsApi.md#updatesettings) | **PUT** /settings/{settingsId} | Update a Settings
-*StatusHistoryApi* | [**retrieveStatusHistoryActivity**](docs/Api/StatusHistoryApi.md#retrievestatushistoryactivity) | **POST** /status-history/activity | Retrieve the status history of an activity
-*StatusHistoryApi* | [**retrieveStatusHistoryRoute**](docs/Api/StatusHistoryApi.md#retrievestatushistoryroute) | **POST** /status-history/route | Retrieve the status history of a route
+*StatushistoryApi* | [**retrieveStatusHistoryActivity**](docs/Api/StatushistoryApi.md#retrievestatushistoryactivity) | **POST** /status-history/activity | Retrieve the status history of an activity
+*StatushistoryApi* | [**retrieveStatusHistoryRoute**](docs/Api/StatushistoryApi.md#retrievestatushistoryroute) | **POST** /status-history/route | Retrieve the status history of a route
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
 *SystemApi* | [**systemGetSayWhenConfig**](docs/Api/SystemApi.md#systemgetsaywhenconfig) | **GET** /system/get-say-when-config | Retrieve SayWhen System Configuration
 *SystemApi* | [**systemGetVariables**](docs/Api/SystemApi.md#systemgetvariables) | **GET** /system/get-variables | Retrieve System Variables
@@ -539,11 +544,19 @@ Class | Method | HTTP request | Description
  - [CapacityTypeOptionsModel](docs/Model/CapacityTypeOptionsModel.md)
  - [CapacityTypeRetrieveListArguments](docs/Model/CapacityTypeRetrieveListArguments.md)
  - [CheckAvailabilityArguments](docs/Model/CheckAvailabilityArguments.md)
+ - [CheckAvailabilityCacheArguments](docs/Model/CheckAvailabilityCacheArguments.md)
+ - [CheckAvailabilityCacheDataModel](docs/Model/CheckAvailabilityCacheDataModel.md)
+ - [CheckAvailabilityCacheFiltersModel](docs/Model/CheckAvailabilityCacheFiltersModel.md)
  - [CheckAvailabilityDataModel](docs/Model/CheckAvailabilityDataModel.md)
  - [CheckAvailabilityFiltersModel](docs/Model/CheckAvailabilityFiltersModel.md)
  - [CheckAvailabilityOptionsModel](docs/Model/CheckAvailabilityOptionsModel.md)
  - [CheckAvailabilityResponse](docs/Model/CheckAvailabilityResponse.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
+ - [CommunicationTemplateFiltersModel](docs/Model/CommunicationTemplateFiltersModel.md)
+ - [CommunicationTemplateListResponse](docs/Model/CommunicationTemplateListResponse.md)
+ - [CommunicationTemplateModel](docs/Model/CommunicationTemplateModel.md)
+ - [CommunicationTemplateOptionsModel](docs/Model/CommunicationTemplateOptionsModel.md)
+ - [CommunicationTemplateRetrieveListArguments](docs/Model/CommunicationTemplateRetrieveListArguments.md)
  - [CommunicationTriggerMessageModel](docs/Model/CommunicationTriggerMessageModel.md)
  - [CompartmentFiltersModel](docs/Model/CompartmentFiltersModel.md)
  - [CompartmentListResponse](docs/Model/CompartmentListResponse.md)

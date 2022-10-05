@@ -63,6 +63,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'brands' => '\BumbalClient\Model\BrandModel[]',
         'no_tags' => 'bool',
         'no_zones' => 'bool',
+        'activity_type_ids' => 'int[]',
         'monday' => 'object',
         'tuesday' => 'object',
         'wednesday' => 'object',
@@ -89,6 +90,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'brands' => null,
         'no_tags' => null,
         'no_zones' => null,
+        'activity_type_ids' => null,
         'monday' => null,
         'tuesday' => null,
         'wednesday' => null,
@@ -125,6 +127,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'brands' => 'brands',
         'no_tags' => 'no_tags',
         'no_zones' => 'no_zones',
+        'activity_type_ids' => 'activity_type_ids',
         'monday' => 'monday',
         'tuesday' => 'tuesday',
         'wednesday' => 'wednesday',
@@ -152,6 +155,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'brands' => 'setBrands',
         'no_tags' => 'setNoTags',
         'no_zones' => 'setNoZones',
+        'activity_type_ids' => 'setActivityTypeIds',
         'monday' => 'setMonday',
         'tuesday' => 'setTuesday',
         'wednesday' => 'setWednesday',
@@ -179,6 +183,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'brands' => 'getBrands',
         'no_tags' => 'getNoTags',
         'no_zones' => 'getNoZones',
+        'activity_type_ids' => 'getActivityTypeIds',
         'monday' => 'getMonday',
         'tuesday' => 'getTuesday',
         'wednesday' => 'getWednesday',
@@ -231,6 +236,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         $this->container['brands'] = isset($data['brands']) ? $data['brands'] : null;
         $this->container['no_tags'] = isset($data['no_tags']) ? $data['no_tags'] : null;
         $this->container['no_zones'] = isset($data['no_zones']) ? $data['no_zones'] : null;
+        $this->container['activity_type_ids'] = isset($data['activity_type_ids']) ? $data['activity_type_ids'] : null;
         $this->container['monday'] = isset($data['monday']) ? $data['monday'] : null;
         $this->container['tuesday'] = isset($data['tuesday']) ? $data['tuesday'] : null;
         $this->container['wednesday'] = isset($data['wednesday']) ? $data['wednesday'] : null;
@@ -453,6 +459,27 @@ class ServiceWindowsSchemeModel implements ArrayAccess
     public function setNoZones($no_zones)
     {
         $this->container['no_zones'] = $no_zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_type_ids
+     * @return int[]
+     */
+    public function getActivityTypeIds()
+    {
+        return $this->container['activity_type_ids'];
+    }
+
+    /**
+     * Sets activity_type_ids
+     * @param int[] $activity_type_ids Activity type ids
+     * @return $this
+     */
+    public function setActivityTypeIds($activity_type_ids)
+    {
+        $this->container['activity_type_ids'] = $activity_type_ids;
 
         return $this;
     }

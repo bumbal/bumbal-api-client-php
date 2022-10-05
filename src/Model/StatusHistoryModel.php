@@ -59,10 +59,10 @@ class StatusHistoryModel implements ArrayAccess
         'new_status_id' => 'int',
         'object_type' => 'int',
         'object_id' => 'int',
-        'record_snapshot' => 'int',
-        'status_history_created_by' => 'int',
-        'status_history_created_at' => 'int',
-        'user_first_name' => 'int',
+        'record_snapshot' => 'string',
+        'status_history_created_by' => 'string',
+        'status_history_created_at' => 'string',
+        'user_first_name' => 'string',
         'user_last_name' => 'string',
         'user_name_prefix' => 'string',
         'user_full_name' => 'string',
@@ -85,7 +85,7 @@ class StatusHistoryModel implements ArrayAccess
         'record_snapshot' => 'int64',
         'status_history_created_by' => 'int64',
         'status_history_created_at' => 'int64',
-        'user_first_name' => 'int64',
+        'user_first_name' => null,
         'user_last_name' => null,
         'user_name_prefix' => null,
         'user_full_name' => null,
@@ -357,7 +357,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Gets record_snapshot
-     * @return int
+     * @return string
      */
     public function getRecordSnapshot()
     {
@@ -366,7 +366,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets record_snapshot
-     * @param int $record_snapshot Service windows scheme ID
+     * @param string $record_snapshot Service windows scheme ID
      * @return $this
      */
     public function setRecordSnapshot($record_snapshot)
@@ -378,7 +378,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Gets status_history_created_by
-     * @return int
+     * @return string
      */
     public function getStatusHistoryCreatedBy()
     {
@@ -387,7 +387,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets status_history_created_by
-     * @param int $status_history_created_by Service windows scheme ID
+     * @param string $status_history_created_by Service windows scheme ID
      * @return $this
      */
     public function setStatusHistoryCreatedBy($status_history_created_by)
@@ -399,7 +399,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Gets status_history_created_at
-     * @return int
+     * @return string
      */
     public function getStatusHistoryCreatedAt()
     {
@@ -408,7 +408,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets status_history_created_at
-     * @param int $status_history_created_at Service windows scheme ID
+     * @param string $status_history_created_at Service windows scheme ID
      * @return $this
      */
     public function setStatusHistoryCreatedAt($status_history_created_at)
@@ -420,7 +420,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Gets user_first_name
-     * @return int
+     * @return string
      */
     public function getUserFirstName()
     {
@@ -429,7 +429,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets user_first_name
-     * @param int $user_first_name Week day
+     * @param string $user_first_name user first name
      * @return $this
      */
     public function setUserFirstName($user_first_name)
@@ -450,7 +450,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets user_last_name
-     * @param string $user_last_name time from
+     * @param string $user_last_name user last name
      * @return $this
      */
     public function setUserLastName($user_last_name)
@@ -471,7 +471,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets user_name_prefix
-     * @param string $user_name_prefix time to
+     * @param string $user_name_prefix User name prefix
      * @return $this
      */
     public function setUserNamePrefix($user_name_prefix)
@@ -492,7 +492,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets user_full_name
-     * @param string $user_full_name time to
+     * @param string $user_full_name User full name
      * @return $this
      */
     public function setUserFullName($user_full_name)
@@ -513,7 +513,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets user_email
-     * @param string $user_email time to
+     * @param string $user_email User email
      * @return $this
      */
     public function setUserEmail($user_email)
@@ -534,7 +534,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets user_uuid
-     * @param string $user_uuid time to
+     * @param string $user_uuid user uuid
      * @return $this
      */
     public function setUserUuid($user_uuid)
@@ -555,7 +555,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets old_status_name
-     * @param string $old_status_name time to
+     * @param string $old_status_name old status name
      * @return $this
      */
     public function setOldStatusName($old_status_name)
@@ -576,7 +576,7 @@ class StatusHistoryModel implements ArrayAccess
 
     /**
      * Sets new_status_name
-     * @param string $new_status_name time to
+     * @param string $new_status_name new status name
      * @return $this
      */
     public function setNewStatusName($new_status_name)

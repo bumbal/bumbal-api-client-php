@@ -62,7 +62,7 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'question' => 'string',
         'answer' => 'string',
         'chosen_options' => 'int[]',
-        'answer_options' => 'int[]',
+        'answer_options' => '\BumbalClient\Model\QuestionnaireQuestionOptionModel[]',
         'questionnaire_question_type_name' => 'string'
     ];
 
@@ -384,7 +384,7 @@ class QuestionnaireAnswerModel implements ArrayAccess
 
     /**
      * Gets answer_options
-     * @return int[]
+     * @return \BumbalClient\Model\QuestionnaireQuestionOptionModel[]
      */
     public function getAnswerOptions()
     {
@@ -393,7 +393,7 @@ class QuestionnaireAnswerModel implements ArrayAccess
 
     /**
      * Sets answer_options
-     * @param int[] $answer_options Answer options
+     * @param \BumbalClient\Model\QuestionnaireQuestionOptionModel[] $answer_options 
      * @return $this
      */
     public function setAnswerOptions($answer_options)

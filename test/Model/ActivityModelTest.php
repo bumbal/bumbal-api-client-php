@@ -435,6 +435,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "matching_route_ids"
+     */
+    public function testPropertyMatchingRouteIds()
+    {
+    }
+
+    /**
      * Test attribute "co_drivers"
      */
     public function testPropertyCoDrivers()

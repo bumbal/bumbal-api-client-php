@@ -252,7 +252,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets max_nr_of_days_with_availability
-     * @param int $max_nr_of_days_with_availability Availability check will continue to analyse days until there is no availability in the system anymore or the number of days with available time slots has reached the max_nr_of_days_with_availability
+     * @param int $max_nr_of_days_with_availability Availability check will continue to analyze days until there is no availability in the system anymore or the number of days with available time slots has reached the max_nr_of_days_with_availability
      * @return $this
      */
     public function setMaxNrOfDaysWithAvailability($max_nr_of_days_with_availability)

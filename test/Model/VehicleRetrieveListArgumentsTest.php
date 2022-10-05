@@ -120,6 +120,20 @@ class VehicleRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "as_list"
+     */
+    public function testPropertyAsList()
+    {
+    }
+
+    /**
+     * Test attribute "count_only"
+     */
+    public function testPropertyCountOnly()
+    {
+    }
+
+    /**
      * Test attribute "search_text"
      */
     public function testPropertySearchText()

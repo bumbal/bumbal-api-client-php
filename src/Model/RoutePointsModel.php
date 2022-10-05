@@ -55,7 +55,8 @@ class RoutePointsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'route_id' => 'int',
-        'points' => '\BumbalClient\Model\RoutePointsModelPoints'
+        'points' => '\BumbalClient\Model\RoutePointsModelPoints',
+        'failed' => 'string'
     ];
 
     /**
@@ -64,7 +65,8 @@ class RoutePointsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'route_id' => 'int64',
-        'points' => null
+        'points' => null,
+        'failed' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,8 @@ class RoutePointsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'route_id' => 'route_id',
-        'points' => 'points'
+        'points' => 'points',
+        'failed' => 'failed'
     ];
 
 
@@ -93,7 +96,8 @@ class RoutePointsModel implements ArrayAccess
      */
     protected static $setters = [
         'route_id' => 'setRouteId',
-        'points' => 'setPoints'
+        'points' => 'setPoints',
+        'failed' => 'setFailed'
     ];
 
 
@@ -103,7 +107,8 @@ class RoutePointsModel implements ArrayAccess
      */
     protected static $getters = [
         'route_id' => 'getRouteId',
-        'points' => 'getPoints'
+        'points' => 'getPoints',
+        'failed' => 'getFailed'
     ];
 
     public static function attributeMap()
@@ -139,6 +144,7 @@ class RoutePointsModel implements ArrayAccess
     {
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['points'] = isset($data['points']) ? $data['points'] : null;
+        $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
     }
 
     /**
@@ -204,6 +210,27 @@ class RoutePointsModel implements ArrayAccess
     public function setPoints($points)
     {
         $this->container['points'] = $points;
+
+        return $this;
+    }
+
+    /**
+     * Gets failed
+     * @return string
+     */
+    public function getFailed()
+    {
+        return $this->container['failed'];
+    }
+
+    /**
+     * Sets failed
+     * @param string $failed Reason why retrieving this route point failed
+     * @return $this
+     */
+    public function setFailed($failed)
+    {
+        $this->container['failed'] = $failed;
 
         return $this;
     }

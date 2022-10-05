@@ -123,6 +123,16 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for checkAvailabilityCaching
+     *
+     * Retrieve the cached check-availability.
+     *
+     */
+    public function testCheckAvailabilityCaching()
+    {
+    }
+
+    /**
      * Test case for checkAvailabilityResult
      *
      * Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled..

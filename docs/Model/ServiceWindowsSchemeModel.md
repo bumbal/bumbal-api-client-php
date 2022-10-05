@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **brands** | [**\BumbalClient\Model\BrandModel[]**](BrandModel.md) |  | [optional] 
 **no_tags** | **bool** | No tags boolean value | [optional] 
 **no_zones** | **bool** | No zones boolean value | [optional] 
+**activity_type_ids** | **int[]** | Activity type ids | [optional] 
 **monday** | **object** | ServiceWindowDayModel containing the cut off information | [optional] 
 **tuesday** | **object** | ServiceWindowDayModel containing the cut off information | [optional] 
 **wednesday** | **object** | ServiceWindowDayModel containing the cut off information | [optional] 

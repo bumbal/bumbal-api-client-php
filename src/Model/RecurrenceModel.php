@@ -83,7 +83,8 @@ class RecurrenceModel implements ArrayAccess
         'saturday' => 'bool',
         'sunday' => 'bool',
         'month_day' => 'bool',
-        'monthly_option' => 'string'
+        'monthly_option' => 'string',
+        'object_id' => 'int'
     ];
 
     /**
@@ -120,7 +121,8 @@ class RecurrenceModel implements ArrayAccess
         'saturday' => null,
         'sunday' => null,
         'month_day' => null,
-        'monthly_option' => null
+        'monthly_option' => null,
+        'object_id' => null
     ];
 
     public static function swaggerTypes()
@@ -167,7 +169,8 @@ class RecurrenceModel implements ArrayAccess
         'saturday' => 'saturday',
         'sunday' => 'sunday',
         'month_day' => 'month_day',
-        'monthly_option' => 'monthly_option'
+        'monthly_option' => 'monthly_option',
+        'object_id' => 'object_id'
     ];
 
 
@@ -205,7 +208,8 @@ class RecurrenceModel implements ArrayAccess
         'saturday' => 'setSaturday',
         'sunday' => 'setSunday',
         'month_day' => 'setMonthDay',
-        'monthly_option' => 'setMonthlyOption'
+        'monthly_option' => 'setMonthlyOption',
+        'object_id' => 'setObjectId'
     ];
 
 
@@ -243,7 +247,8 @@ class RecurrenceModel implements ArrayAccess
         'saturday' => 'getSaturday',
         'sunday' => 'getSunday',
         'month_day' => 'getMonthDay',
-        'monthly_option' => 'getMonthlyOption'
+        'monthly_option' => 'getMonthlyOption',
+        'object_id' => 'getObjectId'
     ];
 
     public static function attributeMap()
@@ -367,6 +372,7 @@ class RecurrenceModel implements ArrayAccess
         $this->container['sunday'] = isset($data['sunday']) ? $data['sunday'] : null;
         $this->container['month_day'] = isset($data['month_day']) ? $data['month_day'] : null;
         $this->container['monthly_option'] = isset($data['monthly_option']) ? $data['monthly_option'] : null;
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
     }
 
     /**
@@ -1104,6 +1110,27 @@ class RecurrenceModel implements ArrayAccess
             );
         }
         $this->container['monthly_option'] = $monthly_option;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_id
+     * @return int
+     */
+    public function getObjectId()
+    {
+        return $this->container['object_id'];
+    }
+
+    /**
+     * Sets object_id
+     * @param int $object_id ID of the object
+     * @return $this
+     */
+    public function setObjectId($object_id)
+    {
+        $this->container['object_id'] = $object_id;
 
         return $this;
     }

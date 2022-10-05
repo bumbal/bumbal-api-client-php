@@ -124,7 +124,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'bool',
         'include_activity_record_object' => 'bool',
         'include_activity_notes' => 'bool',
-        'include_activity_tags' => 'bool'
+        'include_activity_tags' => 'bool',
+        'include_recurrence' => 'bool',
+        'include_matching_route_ids' => 'bool'
     ];
 
     /**
@@ -202,7 +204,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => null,
         'include_activity_record_object' => null,
         'include_activity_notes' => null,
-        'include_activity_tags' => null
+        'include_activity_tags' => null,
+        'include_recurrence' => null,
+        'include_matching_route_ids' => null
     ];
 
     public static function swaggerTypes()
@@ -290,7 +294,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'include_activity_record_info',
         'include_activity_record_object' => 'include_activity_record_object',
         'include_activity_notes' => 'include_activity_notes',
-        'include_activity_tags' => 'include_activity_tags'
+        'include_activity_tags' => 'include_activity_tags',
+        'include_recurrence' => 'include_recurrence',
+        'include_matching_route_ids' => 'include_matching_route_ids'
     ];
 
 
@@ -369,7 +375,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'setIncludeActivityRecordInfo',
         'include_activity_record_object' => 'setIncludeActivityRecordObject',
         'include_activity_notes' => 'setIncludeActivityNotes',
-        'include_activity_tags' => 'setIncludeActivityTags'
+        'include_activity_tags' => 'setIncludeActivityTags',
+        'include_recurrence' => 'setIncludeRecurrence',
+        'include_matching_route_ids' => 'setIncludeMatchingRouteIds'
     ];
 
 
@@ -448,7 +456,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'getIncludeActivityRecordInfo',
         'include_activity_record_object' => 'getIncludeActivityRecordObject',
         'include_activity_notes' => 'getIncludeActivityNotes',
-        'include_activity_tags' => 'getIncludeActivityTags'
+        'include_activity_tags' => 'getIncludeActivityTags',
+        'include_recurrence' => 'getIncludeRecurrence',
+        'include_matching_route_ids' => 'getIncludeMatchingRouteIds'
     ];
 
     public static function attributeMap()
@@ -553,6 +563,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
         $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
         $this->container['include_activity_tags'] = isset($data['include_activity_tags']) ? $data['include_activity_tags'] : null;
+        $this->container['include_recurrence'] = isset($data['include_recurrence']) ? $data['include_recurrence'] : null;
+        $this->container['include_matching_route_ids'] = isset($data['include_matching_route_ids']) ? $data['include_matching_route_ids'] : null;
     }
 
     /**
@@ -2067,6 +2079,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityTags($include_activity_tags)
     {
         $this->container['include_activity_tags'] = $include_activity_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_recurrence
+     * @return bool
+     */
+    public function getIncludeRecurrence()
+    {
+        return $this->container['include_recurrence'];
+    }
+
+    /**
+     * Sets include_recurrence
+     * @param bool $include_recurrence Inlcude recurrence object
+     * @return $this
+     */
+    public function setIncludeRecurrence($include_recurrence)
+    {
+        $this->container['include_recurrence'] = $include_recurrence;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_matching_route_ids
+     * @return bool
+     */
+    public function getIncludeMatchingRouteIds()
+    {
+        return $this->container['include_matching_route_ids'];
+    }
+
+    /**
+     * Sets include_matching_route_ids
+     * @param bool $include_matching_route_ids Include matching reoute ids
+     * @return $this
+     */
+    public function setIncludeMatchingRouteIds($include_matching_route_ids)
+    {
+        $this->container['include_matching_route_ids'] = $include_matching_route_ids;
 
         return $this;
     }

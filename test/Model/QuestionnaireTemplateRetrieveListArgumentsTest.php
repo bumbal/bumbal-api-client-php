@@ -132,4 +132,11 @@ class QuestionnaireTemplateRetrieveListArgumentsTest extends \PHPUnit_Framework_
     public function testPropertyAsList()
     {
     }
+
+    /**
+     * Test attribute "count_only"
+     */
+    public function testPropertyCountOnly()
+    {
+    }
 }

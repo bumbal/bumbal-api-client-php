@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**autoPlanResult**](PlannerApi.md#autoPlanResult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 [**changeActivitySequence**](PlannerApi.md#changeActivitySequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
 [**checkAvailability**](PlannerApi.md#checkAvailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
+[**checkAvailabilityCaching**](PlannerApi.md#checkAvailabilityCaching) | **POST** /planner/check-availability-caching | Retrieve the cached check-availability
 [**checkAvailabilityResult**](PlannerApi.md#checkAvailabilityResult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 [**plannerAddActivitiesToRoute**](PlannerApi.md#plannerAddActivitiesToRoute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 [**removeActivitiesFromRoute**](PlannerApi.md#removeActivitiesFromRoute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
@@ -264,6 +265,60 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **checkAvailabilityCaching**
+> \BumbalClient\Model\ApiResponse checkAvailabilityCaching($arguments)
+
+Retrieve the cached check-availability
+
+Fetch the current availability for an activity from the cache. Check-availability caching should be enabled.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\CheckAvailabilityCacheArguments(); // \BumbalClient\Model\CheckAvailabilityCacheArguments | Request Arguments
+
+try {
+    $result = $api_instance->checkAvailabilityCaching($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PlannerApi->checkAvailabilityCaching: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\CheckAvailabilityCacheArguments**](../Model/CheckAvailabilityCacheArguments.md)| Request Arguments |
 
 ### Return type
 

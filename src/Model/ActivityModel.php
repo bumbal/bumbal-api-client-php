@@ -105,6 +105,7 @@ class ActivityModel implements ArrayAccess
         'route_nr_of_stops' => 'int',
         'route_overdue' => 'bool',
         'co_driver_ids' => 'int[]',
+        'matching_route_ids' => 'int[]',
         'co_drivers' => '\BumbalClient\Model\UsersModel[]',
         'user_id' => 'int',
         'driver_id' => 'int',
@@ -144,7 +145,7 @@ class ActivityModel implements ArrayAccess
         'bundled_activity_ids' => 'int[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
-        'recurrence_id' => '\BumbalClient\Model\RecurrenceModel',
+        'recurrence_id' => 'int',
         'tag_names' => 'string[]',
         'tag_ids' => 'int[]',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
@@ -224,6 +225,7 @@ class ActivityModel implements ArrayAccess
         'route_nr_of_stops' => null,
         'route_overdue' => null,
         'co_driver_ids' => null,
+        'matching_route_ids' => null,
         'co_drivers' => null,
         'user_id' => null,
         'driver_id' => null,
@@ -263,7 +265,7 @@ class ActivityModel implements ArrayAccess
         'bundled_activity_ids' => null,
         'tags' => null,
         'recurrence' => null,
-        'recurrence_id' => null,
+        'recurrence_id' => 'int64',
         'tag_names' => null,
         'tag_ids' => null,
         'zones' => null,
@@ -353,6 +355,7 @@ class ActivityModel implements ArrayAccess
         'route_nr_of_stops' => 'route_nr_of_stops',
         'route_overdue' => 'route_overdue',
         'co_driver_ids' => 'co_driver_ids',
+        'matching_route_ids' => 'matching_route_ids',
         'co_drivers' => 'co_drivers',
         'user_id' => 'user_id',
         'driver_id' => 'driver_id',
@@ -473,6 +476,7 @@ class ActivityModel implements ArrayAccess
         'route_nr_of_stops' => 'setRouteNrOfStops',
         'route_overdue' => 'setRouteOverdue',
         'co_driver_ids' => 'setCoDriverIds',
+        'matching_route_ids' => 'setMatchingRouteIds',
         'co_drivers' => 'setCoDrivers',
         'user_id' => 'setUserId',
         'driver_id' => 'setDriverId',
@@ -593,6 +597,7 @@ class ActivityModel implements ArrayAccess
         'route_nr_of_stops' => 'getRouteNrOfStops',
         'route_overdue' => 'getRouteOverdue',
         'co_driver_ids' => 'getCoDriverIds',
+        'matching_route_ids' => 'getMatchingRouteIds',
         'co_drivers' => 'getCoDrivers',
         'user_id' => 'getUserId',
         'driver_id' => 'getDriverId',
@@ -906,6 +911,7 @@ class ActivityModel implements ArrayAccess
         $this->container['route_nr_of_stops'] = isset($data['route_nr_of_stops']) ? $data['route_nr_of_stops'] : null;
         $this->container['route_overdue'] = isset($data['route_overdue']) ? $data['route_overdue'] : null;
         $this->container['co_driver_ids'] = isset($data['co_driver_ids']) ? $data['co_driver_ids'] : null;
+        $this->container['matching_route_ids'] = isset($data['matching_route_ids']) ? $data['matching_route_ids'] : null;
         $this->container['co_drivers'] = isset($data['co_drivers']) ? $data['co_drivers'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
@@ -2129,6 +2135,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets matching_route_ids
+     * @return int[]
+     */
+    public function getMatchingRouteIds()
+    {
+        return $this->container['matching_route_ids'];
+    }
+
+    /**
+     * Sets matching_route_ids
+     * @param int[] $matching_route_ids Matching route ID's
+     * @return $this
+     */
+    public function setMatchingRouteIds($matching_route_ids)
+    {
+        $this->container['matching_route_ids'] = $matching_route_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets co_drivers
      * @return \BumbalClient\Model\UsersModel[]
      */
@@ -2949,7 +2976,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets recurrence_id
-     * @return \BumbalClient\Model\RecurrenceModel
+     * @return int
      */
     public function getRecurrenceId()
     {
@@ -2958,7 +2985,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence_id
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence_id 
+     * @param int $recurrence_id Unique Recurrence Identifier
      * @return $this
      */
     public function setRecurrenceId($recurrence_id)

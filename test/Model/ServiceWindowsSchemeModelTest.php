@@ -141,6 +141,13 @@ class ServiceWindowsSchemeModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "activity_type_ids"
+     */
+    public function testPropertyActivityTypeIds()
+    {
+    }
+
+    /**
      * Test attribute "monday"
      */
     public function testPropertyMonday()
