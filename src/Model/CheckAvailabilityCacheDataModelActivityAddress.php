@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckAvailabilityCacheDataModel
+ * CheckAvailabilityCacheDataModelActivityAddress
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * CheckAvailabilityCacheDataModel Class Doc Comment
+ * CheckAvailabilityCacheDataModelActivityAddress Class Doc Comment
  *
  * @category    Class
+ * @description 
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckAvailabilityCacheDataModel implements ArrayAccess
+class CheckAvailabilityCacheDataModelActivityAddress implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +48,15 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CheckAvailabilityCacheDataModel';
+    protected static $swaggerModelName = 'CheckAvailabilityCacheDataModel_activity_address';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'activity' => '\BumbalClient\Model\CheckAvailabilityCacheDataModelActivity'
+        'zipcode' => 'string',
+        'iso_country' => 'string'
     ];
 
     /**
@@ -62,7 +64,8 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'activity' => null
+        'zipcode' => null,
+        'iso_country' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +83,8 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'activity' => 'activity'
+        'zipcode' => 'zipcode',
+        'iso_country' => 'iso_country'
     ];
 
 
@@ -89,7 +93,8 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'activity' => 'setActivity'
+        'zipcode' => 'setZipcode',
+        'iso_country' => 'setIsoCountry'
     ];
 
 
@@ -98,7 +103,8 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'activity' => 'getActivity'
+        'zipcode' => 'getZipcode',
+        'iso_country' => 'getIsoCountry'
     ];
 
     public static function attributeMap()
@@ -132,7 +138,8 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
+        $this->container['zipcode'] = isset($data['zipcode']) ? $data['zipcode'] : null;
+        $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
     }
 
     /**
@@ -144,6 +151,12 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['zipcode'] === null) {
+            $invalid_properties[] = "'zipcode' can't be null";
+        }
+        if ($this->container['iso_country'] === null) {
+            $invalid_properties[] = "'iso_country' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -156,27 +169,54 @@ class CheckAvailabilityCacheDataModel implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['zipcode'] === null) {
+            return false;
+        }
+        if ($this->container['iso_country'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets activity
-     * @return \BumbalClient\Model\CheckAvailabilityCacheDataModelActivity
+     * Gets zipcode
+     * @return string
      */
-    public function getActivity()
+    public function getZipcode()
     {
-        return $this->container['activity'];
+        return $this->container['zipcode'];
     }
 
     /**
-     * Sets activity
-     * @param \BumbalClient\Model\CheckAvailabilityCacheDataModelActivity $activity
+     * Sets zipcode
+     * @param string $zipcode 
      * @return $this
      */
-    public function setActivity($activity)
+    public function setZipcode($zipcode)
     {
-        $this->container['activity'] = $activity;
+        $this->container['zipcode'] = $zipcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets iso_country
+     * @return string
+     */
+    public function getIsoCountry()
+    {
+        return $this->container['iso_country'];
+    }
+
+    /**
+     * Sets iso_country
+     * @param string $iso_country 
+     * @return $this
+     */
+    public function setIsoCountry($iso_country)
+    {
+        $this->container['iso_country'] = $iso_country;
 
         return $this;
     }

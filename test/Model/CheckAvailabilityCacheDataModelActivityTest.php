@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsModelTest
+ * CheckAvailabilityCacheDataModelActivityTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * SettingsModelTest Class Doc Comment
+ * CheckAvailabilityCacheDataModelActivityTest Class Doc Comment
  *
  * @category    Class */
-// * @description SettingsModel
+// * @description 
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsModelTest extends \PHPUnit_Framework_TestCase
+class CheckAvailabilityCacheDataModelActivityTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,79 +71,37 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SettingsModel"
+     * Test "CheckAvailabilityCacheDataModelActivity"
      */
-    public function testSettingsModel()
+    public function testCheckAvailabilityCacheDataModelActivity()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "address"
      */
-    public function testPropertyId()
+    public function testPropertyAddress()
     {
     }
 
     /**
-     * Test attribute "settings_group_id"
+     * Test attribute "brand_name"
      */
-    public function testPropertySettingsGroupId()
+    public function testPropertyBrandName()
     {
     }
 
     /**
-     * Test attribute "settings_group_name"
+     * Test attribute "activity_type_name"
      */
-    public function testPropertySettingsGroupName()
+    public function testPropertyActivityTypeName()
     {
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "tag_names"
      */
-    public function testPropertyKey()
-    {
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
-    {
-    }
-
-    /**
-     * Test attribute "value_options"
-     */
-    public function testPropertyValueOptions()
-    {
-    }
-
-    /**
-     * Test attribute "obscured"
-     */
-    public function testPropertyObscured()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_at"
-     */
-    public function testPropertySettingUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by"
-     */
-    public function testPropertySettingUpdatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by_user"
-     */
-    public function testPropertySettingUpdatedByUser()
+    public function testPropertyTagNames()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsModelTest
+ * VehicleListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * SettingsModelTest Class Doc Comment
+ * VehicleListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description SettingsModel
+// * @description VehicleListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsModelTest extends \PHPUnit_Framework_TestCase
+class VehicleListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,79 +71,37 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SettingsModel"
+     * Test "VehicleListResponse"
      */
-    public function testSettingsModel()
+    public function testVehicleListResponse()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "items"
      */
-    public function testPropertyId()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "settings_group_id"
+     * Test attribute "count_filtered"
      */
-    public function testPropertySettingsGroupId()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "settings_group_name"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertySettingsGroupName()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "count_limited"
      */
-    public function testPropertyKey()
-    {
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
-    {
-    }
-
-    /**
-     * Test attribute "value_options"
-     */
-    public function testPropertyValueOptions()
-    {
-    }
-
-    /**
-     * Test attribute "obscured"
-     */
-    public function testPropertyObscured()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_at"
-     */
-    public function testPropertySettingUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by"
-     */
-    public function testPropertySettingUpdatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by_user"
-     */
-    public function testPropertySettingUpdatedByUser()
+    public function testPropertyCountLimited()
     {
     }
 }

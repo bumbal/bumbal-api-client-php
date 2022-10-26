@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListVehicle**
-> \BumbalClient\Model\VehicleModel[] retrieveListVehicle($arguments)
+> \BumbalClient\Model\VehicleListResponse retrieveListVehicle($arguments)
 
 Retrieve List of Vehicles
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\VehicleModel[]**](../Model/VehicleModel.md)
+[**\BumbalClient\Model\VehicleListResponse**](../Model/VehicleListResponse.md)
 
 ### Authorization
 

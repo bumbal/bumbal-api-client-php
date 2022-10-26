@@ -60,6 +60,7 @@ class SettingsModel implements ArrayAccess
         'key' => 'string',
         'value' => 'string',
         'value_options' => '\BumbalClient\Model\ValueOptionModel[]',
+        'obscured' => 'bool',
         'setting_updated_at' => '\DateTime',
         'setting_updated_by' => 'int',
         'setting_updated_by_user' => '\BumbalClient\Model\UsersModel'
@@ -76,6 +77,7 @@ class SettingsModel implements ArrayAccess
         'key' => null,
         'value' => null,
         'value_options' => null,
+        'obscured' => null,
         'setting_updated_at' => 'date-time',
         'setting_updated_by' => null,
         'setting_updated_by_user' => null
@@ -102,6 +104,7 @@ class SettingsModel implements ArrayAccess
         'key' => 'key',
         'value' => 'value',
         'value_options' => 'value_options',
+        'obscured' => 'obscured',
         'setting_updated_at' => 'setting_updated_at',
         'setting_updated_by' => 'setting_updated_by',
         'setting_updated_by_user' => 'setting_updated_by_user'
@@ -119,6 +122,7 @@ class SettingsModel implements ArrayAccess
         'key' => 'setKey',
         'value' => 'setValue',
         'value_options' => 'setValueOptions',
+        'obscured' => 'setObscured',
         'setting_updated_at' => 'setSettingUpdatedAt',
         'setting_updated_by' => 'setSettingUpdatedBy',
         'setting_updated_by_user' => 'setSettingUpdatedByUser'
@@ -136,6 +140,7 @@ class SettingsModel implements ArrayAccess
         'key' => 'getKey',
         'value' => 'getValue',
         'value_options' => 'getValueOptions',
+        'obscured' => 'getObscured',
         'setting_updated_at' => 'getSettingUpdatedAt',
         'setting_updated_by' => 'getSettingUpdatedBy',
         'setting_updated_by_user' => 'getSettingUpdatedByUser'
@@ -204,6 +209,7 @@ class SettingsModel implements ArrayAccess
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['value_options'] = isset($data['value_options']) ? $data['value_options'] : null;
+        $this->container['obscured'] = isset($data['obscured']) ? $data['obscured'] : null;
         $this->container['setting_updated_at'] = isset($data['setting_updated_at']) ? $data['setting_updated_at'] : null;
         $this->container['setting_updated_by'] = isset($data['setting_updated_by']) ? $data['setting_updated_by'] : null;
         $this->container['setting_updated_by_user'] = isset($data['setting_updated_by_user']) ? $data['setting_updated_by_user'] : null;
@@ -377,6 +383,27 @@ class SettingsModel implements ArrayAccess
     public function setValueOptions($value_options)
     {
         $this->container['value_options'] = $value_options;
+
+        return $this;
+    }
+
+    /**
+     * Gets obscured
+     * @return bool
+     */
+    public function getObscured()
+    {
+        return $this->container['obscured'];
+    }
+
+    /**
+     * Sets obscured
+     * @param bool $obscured If the return value is obscured because it is sensitive data
+     * @return $this
+     */
+    public function setObscured($obscured)
+    {
+        $this->container['obscured'] = $obscured;
 
         return $this;
     }

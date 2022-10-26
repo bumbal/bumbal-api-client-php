@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTrailer**
-> \BumbalClient\Model\TrailerModel[] retrieveListTrailer($arguments)
+> \BumbalClient\Model\TrailerListResponse retrieveListTrailer($arguments)
 
 Retrieve List of Trailers
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TrailerModel[]**](../Model/TrailerModel.md)
+[**\BumbalClient\Model\TrailerListResponse**](../Model/TrailerListResponse.md)
 
 ### Authorization
 

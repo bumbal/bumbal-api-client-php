@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **key** | **string** | Unique string key for setting identification | [optional] 
 **value** | **string** | Set value for setting | [optional] 
 **value_options** | [**\BumbalClient\Model\ValueOptionModel[]**](ValueOptionModel.md) |  | [optional] 
+**obscured** | **bool** | If the return value is obscured because it is sensitive data | [optional] 
 **setting_updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **setting_updated_by** | **int** | updated_by user id | [optional] 
 **setting_updated_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 

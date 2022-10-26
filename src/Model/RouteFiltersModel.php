@@ -66,6 +66,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => '\DateTime',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
+        'active' => 'int[]',
         'status_id' => 'int[]',
         'driver_id' => 'int[]',
         'recurrence_id' => 'int',
@@ -94,6 +95,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'date-time',
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
+        'active' => null,
         'status_id' => null,
         'driver_id' => null,
         'recurrence_id' => null,
@@ -132,6 +134,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'updated_at',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
+        'active' => 'active',
         'status_id' => 'status_id',
         'driver_id' => 'driver_id',
         'recurrence_id' => 'recurrence_id',
@@ -161,6 +164,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
+        'active' => 'setActive',
         'status_id' => 'setStatusId',
         'driver_id' => 'setDriverId',
         'recurrence_id' => 'setRecurrenceId',
@@ -190,6 +194,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
+        'active' => 'getActive',
         'status_id' => 'getStatusId',
         'driver_id' => 'getDriverId',
         'recurrence_id' => 'getRecurrenceId',
@@ -244,6 +249,7 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
@@ -528,6 +534,27 @@ class RouteFiltersModel implements ArrayAccess
     public function setUpdatedAtTill($updated_at_till)
     {
         $this->container['updated_at_till'] = $updated_at_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return int[]
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int[] $active Active status of route, 0 values represent deleted routes
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

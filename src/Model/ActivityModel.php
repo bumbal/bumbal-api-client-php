@@ -119,7 +119,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => '\BumbalClient\Model\AddressAppliedModel',
         'depot_address' => '\BumbalClient\Model\AddressModel',
         'depot_address_id' => 'int',
-        'depot_activity' => '\BumbalClient\Model\ActivityModel[]',
+        'depot_activity' => '\BumbalClient\Model\ActivityModel',
         'allowed_driver_ids' => 'int[]',
         'allowed_drivers' => '\BumbalClient\Model\AllowedDriverModel[]',
         'allowed_drivers_links' => '\BumbalClient\Model\LinkModel[]',
@@ -2430,7 +2430,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets depot_activity
-     * @return \BumbalClient\Model\ActivityModel[]
+     * @return \BumbalClient\Model\ActivityModel
      */
     public function getDepotActivity()
     {
@@ -2439,7 +2439,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets depot_activity
-     * @param \BumbalClient\Model\ActivityModel[] $depot_activity 
+     * @param \BumbalClient\Model\ActivityModel $depot_activity 
      * @return $this
      */
     public function setDepotActivity($depot_activity)
