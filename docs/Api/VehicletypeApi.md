@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveVehicleType**
-> \BumbalClient\Model\VehicleTypeModel retrieveVehicleType($provider_id)
+> \BumbalClient\Model\VehicleTypeModel retrieveVehicleType($vehicle_type_id)
 
 Retrieve a VehicleType
 
@@ -195,10 +195,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\VehicletypeApi();
-$provider_id = 789; // int | ID of VehicleType to retrieve
+$vehicle_type_id = 789; // int | ID of VehicleType to retrieve
 
 try {
-    $result = $api_instance->retrieveVehicleType($provider_id);
+    $result = $api_instance->retrieveVehicleType($vehicle_type_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VehicletypeApi->retrieveVehicleType: ', $e->getMessage(), PHP_EOL;
@@ -210,7 +210,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **provider_id** | **int**| ID of VehicleType to retrieve |
+ **vehicle_type_id** | **int**| ID of VehicleType to retrieve |
 
 ### Return type
 

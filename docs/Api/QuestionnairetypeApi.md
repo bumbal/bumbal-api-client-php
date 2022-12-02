@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveQuestionnaireType**
-> \BumbalClient\Model\QuestionnaireTypeModel retrieveQuestionnaireType($notification_id)
+> \BumbalClient\Model\QuestionnaireTypeModel retrieveQuestionnaireType($questionnaire_type_id)
 
 Retrieve a QuestionnaireType
 
@@ -84,10 +84,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetypeApi();
-$notification_id = 789; // int | ID of QuestionnaireType to retrieve
+$questionnaire_type_id = 789; // int | ID of QuestionnaireType to retrieve
 
 try {
-    $result = $api_instance->retrieveQuestionnaireType($notification_id);
+    $result = $api_instance->retrieveQuestionnaireType($questionnaire_type_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetypeApi->retrieveQuestionnaireType: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +99,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireType to retrieve |
+ **questionnaire_type_id** | **int**| ID of QuestionnaireType to retrieve |
 
 ### Return type
 

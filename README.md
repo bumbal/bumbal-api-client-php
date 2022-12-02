@@ -101,6 +101,7 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**retrieveListAddress**](docs/Api/AddressApi.md#retrievelistaddress) | **PUT** /address | Retrieve List of Addresses
 *AddressApi* | [**reverseGeoCodeAddress**](docs/Api/AddressApi.md#reversegeocodeaddress) | **POST** /address/reverse-geo-code | Reverse Geo Code an address
 *AddressApi* | [**setAddress**](docs/Api/AddressApi.md#setaddress) | **POST** /address/set | Add a new Address
+*AddressApi* | [**suggestAddress**](docs/Api/AddressApi.md#suggestaddress) | **POST** /address/suggest-address | Suggest an address
 *AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /address/{addressId} | Update a address
 *AddressApi* | [**validateAddress**](docs/Api/AddressApi.md#validateaddress) | **GET** /address/validate | Validate an address
 *AddressappliedApi* | [**retrieveAddressApplied**](docs/Api/AddressappliedApi.md#retrieveaddressapplied) | **GET** /address-applied/{addressId} | Retrieve an Applied Address
@@ -128,7 +129,6 @@ Class | Method | HTTP request | Description
 *CapacitytypeApi* | [**setCapacityType**](docs/Api/CapacitytypeApi.md#setcapacitytype) | **POST** /capacity-type/set | Set (create or update) an CapacityType
 *CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
-*CommunicationApi* | [**triggerMessageCommunicationByMessageType**](docs/Api/CommunicationApi.md#triggermessagecommunicationbymessagetype) | **POST** /communication/trigger-message-by-message-type | Trigger Message to Communication by Message Type
 *CommunicationtemplateApi* | [**createCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#createcommunicationtemplate) | **POST** /communication-template/set | Create a Communication Template
 *CommunicationtemplateApi* | [**deleteCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#deletecommunicationtemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communicationtemplate
 *CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communicationtemplate
@@ -156,9 +156,6 @@ Class | Method | HTTP request | Description
 *FileApi* | [**retrieveFile**](docs/Api/FileApi.md#retrievefile) | **GET** /file/{fileId} | Retrieve a File
 *FileApi* | [**retrieveListFile**](docs/Api/FileApi.md#retrievelistfile) | **PUT** /file | Retrieve List of Files
 *FileApi* | [**setFile**](docs/Api/FileApi.md#setfile) | **POST** /file/set | Create or Update a File Object
-*InstantmessagingApi* | [**instantMessagingList**](docs/Api/InstantmessagingApi.md#instantmessaginglist) | **POST** /instant-messaging/list | List conversations
-*InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
-*InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
 *LanguageApi* | [**retrieveListLanguage**](docs/Api/LanguageApi.md#retrievelistlanguage) | **PUT** /language | Retrieve List of Language
 *LinkApi* | [**deleteLink**](docs/Api/LinkApi.md#deletelink) | **DELETE** /link/{linkId} | Delete a link
 *LinkApi* | [**retrieveListLink**](docs/Api/LinkApi.md#retrievelistlink) | **PUT** /link | Retrieve List of Links
@@ -225,22 +222,16 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**applyPlanning**](docs/Api/PlannerApi.md#applyplanning) | **POST** /planner/apply-planning | Apply a planning schema
 *PlannerApi* | [**autoPlan**](docs/Api/PlannerApi.md#autoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 *PlannerApi* | [**autoPlanResult**](docs/Api/PlannerApi.md#autoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
-*PlannerApi* | [**changeActivitySequence**](docs/Api/PlannerApi.md#changeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
 *PlannerApi* | [**checkAvailability**](docs/Api/PlannerApi.md#checkavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 *PlannerApi* | [**checkAvailabilityCaching**](docs/Api/PlannerApi.md#checkavailabilitycaching) | **POST** /planner/check-availability-caching | Retrieve the cached check-availability
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
-*PortalApi* | [**createPortal**](docs/Api/PortalApi.md#createportal) | **POST** /portal | Add a new Portal
-*PortalApi* | [**deletePortal**](docs/Api/PortalApi.md#deleteportal) | **DELETE** /portal/{portalId} | Delete a Portal
 *PortalApi* | [**retrieveListPortal**](docs/Api/PortalApi.md#retrievelistportal) | **PUT** /portal | Retrieve List of Portals
 *PortalApi* | [**retrievePortal**](docs/Api/PortalApi.md#retrieveportal) | **GET** /portal/{portalId} | Retrieve a Portal
 *PortalApi* | [**setPortal**](docs/Api/PortalApi.md#setportal) | **POST** /portal/set | Set (create or update) a Portal
 *PortalApi* | [**updatePortal**](docs/Api/PortalApi.md#updateportal) | **PUT** /portal/{portalId} | Update a Portal
 *PortalcommunicationApi* | [**retrieveActivityByIdCommunication**](docs/Api/PortalcommunicationApi.md#retrieveactivitybyidcommunication) | **GET** /portal-communication/retrieve-activity-by-id/{activityId} | Retrieve an activity by ID
-*PortalcommunicationApi* | [**triggerMessageCommunicationByMessageType**](docs/Api/PortalcommunicationApi.md#triggermessagecommunicationbymessagetype) | **POST** /portal-communication/trigger-message-by-message-type | Trigger Message to Communication by Message Type
-*PortalsettingApi* | [**createPortalSetting**](docs/Api/PortalsettingApi.md#createportalsetting) | **POST** /portal-setting | Add a new PortalSetting
-*PortalsettingApi* | [**deletePortalSetting**](docs/Api/PortalsettingApi.md#deleteportalsetting) | **DELETE** /portal-setting/{portal-settingId} | Delete a PortalSetting
 *PortalsettingApi* | [**retrieveListPortalSetting**](docs/Api/PortalsettingApi.md#retrievelistportalsetting) | **PUT** /portal-setting | Retrieve List of Portal Settings
 *PortalsettingApi* | [**retrievePortalSetting**](docs/Api/PortalsettingApi.md#retrieveportalsetting) | **GET** /portal-setting/{portal-settingId} | Retrieve a PortalSetting
 *PortalsettingApi* | [**setPortalSetting**](docs/Api/PortalsettingApi.md#setportalsetting) | **POST** /portal-setting/set | Set (create or update) a PortalSetting
@@ -319,9 +310,6 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**updateRoute**](docs/Api/RouteApi.md#updateroute) | **PUT** /route/{routeId} | Update a Route
 *RoutepointsApi* | [**retrieveListRoutePoints**](docs/Api/RoutepointsApi.md#retrievelistroutepoints) | **PUT** /route-points | Find Route Points for multiple routes by route ID
 *RoutepointsApi* | [**retrieveRoutePoints**](docs/Api/RoutepointsApi.md#retrieveroutepoints) | **GET** /route-points/{routeId} | Find Route Points by route ID
-*SaywhenApi* | [**saywhenRetrievePortalURL**](docs/Api/SaywhenApi.md#saywhenretrieveportalurl) | **GET** /saywhen/retrieve-portal-url/{activityId} | Retrieve SayWhen Portal URL
-*SaywhenApi* | [**saywhenRetrievePortalURLs**](docs/Api/SaywhenApi.md#saywhenretrieveportalurls) | **PUT** /saywhen/retrieve-portal-urls | Retrieve SayWhen Portal URLs
-*SaywhenApi* | [**saywhenRetrieveStatus**](docs/Api/SaywhenApi.md#saywhenretrievestatus) | **GET** /saywhen/retrieve-status/{activityId} | Retrieve SayWhen Status
 *ServicewindowApi* | [**retrieveListServiceWindow**](docs/Api/ServicewindowApi.md#retrievelistservicewindow) | **PUT** /service-window | Retrieve a list of service windows
 *ServicewindowApi* | [**retrieveServiceWindow**](docs/Api/ServicewindowApi.md#retrieveservicewindow) | **GET** /service-window/{serviceWindowId} | Retrieve a single service window
 *ServicewindowApi* | [**setServiceWindow**](docs/Api/ServicewindowApi.md#setservicewindow) | **POST** /service-window/set | Add or update a service window
@@ -368,9 +356,9 @@ Class | Method | HTTP request | Description
 *TransactionApi* | [**retrieveTransaction**](docs/Api/TransactionApi.md#retrievetransaction) | **GET** /transaction/{transactionId} | Retrieve a Transaction
 *TransactionApi* | [**setTransaction**](docs/Api/TransactionApi.md#settransaction) | **POST** /transaction/set | Set (create or update) a Transaction
 *TransactionApi* | [**token**](docs/Api/TransactionApi.md#token) | **POST** /transaction/token | get a transaction token
-*TransactionApi* | [**token_0**](docs/Api/TransactionApi.md#token_0) | **POST** /transaction/token-is-paid | set a transaction to paid with token
-*TransactionApi* | [**token_1**](docs/Api/TransactionApi.md#token_1) | **POST** /transaction/token-is-cancelled | set a transaction to cancelled with token
-*TransactionApi* | [**token_2**](docs/Api/TransactionApi.md#token_2) | **POST** /transaction/token-has-failed | set a transaction to failed with token
+*TransactionApi* | [**tokenHasFailed**](docs/Api/TransactionApi.md#tokenhasfailed) | **POST** /transaction/token-has-failed | set a transaction to failed with token
+*TransactionApi* | [**tokenIsCancelled**](docs/Api/TransactionApi.md#tokeniscancelled) | **POST** /transaction/token-is-cancelled | set a transaction to cancelled with token
+*TransactionApi* | [**tokenIsPaid**](docs/Api/TransactionApi.md#tokenispaid) | **POST** /transaction/token-is-paid | set a transaction to paid with token
 *TransactionApi* | [**updateTransaction**](docs/Api/TransactionApi.md#updatetransaction) | **PUT** /transaction/{transactionId} | Update a specific Transaction object
 *UnsuccessfulreasonApi* | [**createUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#createunsuccessfulreason) | **POST** /unsuccessful-reason | Add a new UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**deleteUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#deleteunsuccessfulreason) | **DELETE** /unsuccessful-reason/{unsuccessful-reasonId} | Delete a UnsuccessfulReason entry
@@ -382,10 +370,10 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**deleteUser**](docs/Api/UsersApi.md#deleteuser) | **DELETE** /users/{userId} | Delete a user
 *UsersApi* | [**retrieveListUserNotification**](docs/Api/UsersApi.md#retrievelistusernotification) | **PUT** /users/notification | Retrieve List of UserNotification
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
-*UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
+*UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{userId} | Retrieve a Users
 *UsersApi* | [**setUser**](docs/Api/UsersApi.md#setuser) | **POST** /users/set | Set (create or update) a User
 *UsersApi* | [**setUserNotification**](docs/Api/UsersApi.md#setusernotification) | **POST** /users/notification | Create a new UserNotification or update an existing one
-*UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
+*UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{userId} | Update a Users
 *VehicleApi* | [**createVehicle**](docs/Api/VehicleApi.md#createvehicle) | **POST** /vehicle | Add a new vehicle
 *VehicleApi* | [**deleteVehicle**](docs/Api/VehicleApi.md#deletevehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle entry
 *VehicleApi* | [**retrieveListVehicle**](docs/Api/VehicleApi.md#retrievelistvehicle) | **PUT** /vehicle | Retrieve List of Vehicles
@@ -398,7 +386,6 @@ Class | Method | HTTP request | Description
 *VehicletypeApi* | [**retrieveVehicleType**](docs/Api/VehicletypeApi.md#retrievevehicletype) | **GET** /vehicle-type/{vehicleTypeId} | Retrieve a VehicleType
 *VehicletypeApi* | [**updateVehicleType**](docs/Api/VehicletypeApi.md#updatevehicletype) | **PUT** /vehicle-type/{vehicleTypeId} | Update a specific VehicleType object
 *WebhookApi* | [**triggerWebHook**](docs/Api/WebhookApi.md#triggerwebhook) | **POST** /web-hook/trigger | Trigger a webhook
-*WorkerApi* | [**addActionToWorkerStack**](docs/Api/WorkerApi.md#addactiontoworkerstack) | **POST** /worker/add-action-to-stack | Add Action To Worker Stack
 *ZoneApi* | [**createZone**](docs/Api/ZoneApi.md#createzone) | **POST** /zone | Add a new Zone
 *ZoneApi* | [**deleteZone**](docs/Api/ZoneApi.md#deletezone) | **DELETE** /zone/{zoneId} | Delete a Zone
 *ZoneApi* | [**retrieveListZone**](docs/Api/ZoneApi.md#retrievelistzone) | **PUT** /zone | Retrieve List of Zone
@@ -414,7 +401,6 @@ Class | Method | HTTP request | Description
  - [ActivityForToRouteModel](docs/Model/ActivityForToRouteModel.md)
  - [ActivityListResponse](docs/Model/ActivityListResponse.md)
  - [ActivityModel](docs/Model/ActivityModel.md)
- - [ActivityModelAppliedCapacities](docs/Model/ActivityModelAppliedCapacities.md)
  - [ActivityOptionsModel](docs/Model/ActivityOptionsModel.md)
  - [ActivityRetrieveListArguments](docs/Model/ActivityRetrieveListArguments.md)
  - [ActivityStatsModel](docs/Model/ActivityStatsModel.md)
@@ -438,6 +424,8 @@ Class | Method | HTTP request | Description
  - [AddressRetrieveListArguments](docs/Model/AddressRetrieveListArguments.md)
  - [AddressReverseGeoCodeArguments](docs/Model/AddressReverseGeoCodeArguments.md)
  - [AddressReverseGeoCodeResponse](docs/Model/AddressReverseGeoCodeResponse.md)
+ - [AddressSuggestionArguments](docs/Model/AddressSuggestionArguments.md)
+ - [AddressSuggestionResponse](docs/Model/AddressSuggestionResponse.md)
  - [AddressValidationResponse](docs/Model/AddressValidationResponse.md)
  - [AllowedDriverModel](docs/Model/AllowedDriverModel.md)
  - [ApiResponse](docs/Model/ApiResponse.md)
@@ -869,6 +857,7 @@ Class | Method | HTTP request | Description
  - [VehicleTypeRetrieveListArguments](docs/Model/VehicleTypeRetrieveListArguments.md)
  - [VehicleTypeSetResponse](docs/Model/VehicleTypeSetResponse.md)
  - [VehicleTypeUpdateResponse](docs/Model/VehicleTypeUpdateResponse.md)
+ - [WebhookModel](docs/Model/WebhookModel.md)
  - [ZoneFiltersModel](docs/Model/ZoneFiltersModel.md)
  - [ZoneListResponse](docs/Model/ZoneListResponse.md)
  - [ZoneModel](docs/Model/ZoneModel.md)
@@ -898,6 +887,6 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-gerb@bumbal.eu
+info@bumbal.eu
 
 

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **updated_at_since** | [**\DateTime**](\DateTime.md) | filter routes with an updated at date-time since this input | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | filter routes with an updated at date-time till this input | [optional] 
 **active** | **int[]** | Active status of route, 0 values represent deleted routes | [optional] 
+**status** | **string[]** | Route Status | [optional] 
 **status_id** | **int[]** |  | [optional] 
 **driver_id** | **int[]** |  | [optional] 
 **recurrence_id** | **int** | Recurrence ID | [optional] 

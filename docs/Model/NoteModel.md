@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
+**object_type** | **int** | Object type ID | [optional] 
 **object_type_name** | **string** | Object type name | [optional] 
 **object_id** | **int** | Object ID | [optional] 
 **object_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) |  | [optional] 

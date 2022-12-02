@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteRecurrenceObject**
-> \BumbalClient\Model\ApiResponse deleteRecurrenceObject($body, $recurrence_id)
+> \BumbalClient\Model\ApiResponse deleteRecurrenceObject($body)
 
 Delete a Recurrence
 
@@ -146,10 +146,9 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 
 $api_instance = new BumbalClient\Api\RecurrenceApi();
 $body = new \BumbalClient\Model\RecurrenceDeleteModel(); // \BumbalClient\Model\RecurrenceDeleteModel | Delete recurrence model
-$recurrence_id = 789; // int | ID of recurrence to delete
 
 try {
-    $result = $api_instance->deleteRecurrenceObject($body, $recurrence_id);
+    $result = $api_instance->deleteRecurrenceObject($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecurrenceApi->deleteRecurrenceObject: ', $e->getMessage(), PHP_EOL;
@@ -162,7 +161,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\BumbalClient\Model\RecurrenceDeleteModel**](../Model/RecurrenceDeleteModel.md)| Delete recurrence model |
- **recurrence_id** | **int**| ID of recurrence to delete |
 
 ### Return type
 

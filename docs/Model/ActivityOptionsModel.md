@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**include_activity_status** | **bool** |  | [optional] 
+**include_activity_status** | **bool** | Deprecated! Use include_status_name instead | [optional] 
 **include_activity_type_name** | **bool** |  | [optional] 
 **include_address** | **bool** | Include the address in the addressbook | [optional] 
 **include_address_applied** | **bool** | Include the addres applied to the activity (not the original addres from the address book) | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **include_meta_data** | **bool** |  | [optional] 
 **include_notes** | **bool** |  | [optional] 
 **include_package_lines** | **bool** |  | [optional] 
-**include_package_line_links** | **bool** |  | [optional] 
+**include_package_line_links** | **bool** | Deprecated! Use include_links instead | [optional] 
 **include_package_lines_info** | **bool** |  | [optional] 
 **include_phone_nrs** | **bool** |  | [optional] 
 **include_route** | **bool** |  | [optional] 
@@ -42,10 +42,10 @@ Name | Type | Description | Notes
 **include_record_info** | **bool** |  | [optional] 
 **include_record_object** | **bool** |  | [optional] 
 **include_tag_names** | **bool** |  | [optional] 
-**include_activity_note_tags** | **bool** |  | [optional] 
+**include_activity_note_tags** | **bool** | Deprecated! Use include_notes instead | [optional] 
 **include_depot_activity** | **bool** |  | [optional] 
 **include_depot_address** | **bool** |  | [optional] 
-**include_depot_address_object** | **bool** |  | [optional] 
+**include_depot_address_object** | **bool** | Deprecated! Use include_depot_address instead | [optional] 
 **include_capacity_object** | **bool** |  | [optional] 
 **include_capacities** | **bool** |  | [optional] 
 **include_filled_capacities** | **bool** |  | [optional] 

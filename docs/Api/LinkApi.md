@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **deleteLink**
-> \BumbalClient\Model\ApiResponse deleteLink($driver_id)
+> \BumbalClient\Model\ApiResponse deleteLink($link_id)
 
 Delete a link
 
@@ -31,10 +31,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\LinkApi();
-$driver_id = 789; // int | ID of the link to delete
+$link_id = 789; // int | ID of the link to delete
 
 try {
-    $result = $api_instance->deleteLink($driver_id);
+    $result = $api_instance->deleteLink($link_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LinkApi->deleteLink: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +46,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driver_id** | **int**| ID of the link to delete |
+ **link_id** | **int**| ID of the link to delete |
 
 ### Return type
 

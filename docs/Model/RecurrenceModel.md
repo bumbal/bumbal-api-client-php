@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 **sunday** | **bool** | Sunday | [optional] 
 **month_day** | **bool** | month day | [optional] 
 **monthly_option** | **string** | Recurrence occurs every beginning or ending of the month | [optional] 
-**object_id** | **int** | ID of the object | [optional] 
+**object_id** | **int** | ID of the object | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

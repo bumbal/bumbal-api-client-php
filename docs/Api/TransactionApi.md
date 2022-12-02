@@ -10,9 +10,9 @@ Method | HTTP request | Description
 [**retrieveTransaction**](TransactionApi.md#retrieveTransaction) | **GET** /transaction/{transactionId} | Retrieve a Transaction
 [**setTransaction**](TransactionApi.md#setTransaction) | **POST** /transaction/set | Set (create or update) a Transaction
 [**token**](TransactionApi.md#token) | **POST** /transaction/token | get a transaction token
-[**token_0**](TransactionApi.md#token_0) | **POST** /transaction/token-is-paid | set a transaction to paid with token
-[**token_1**](TransactionApi.md#token_1) | **POST** /transaction/token-is-cancelled | set a transaction to cancelled with token
-[**token_2**](TransactionApi.md#token_2) | **POST** /transaction/token-has-failed | set a transaction to failed with token
+[**tokenHasFailed**](TransactionApi.md#tokenHasFailed) | **POST** /transaction/token-has-failed | set a transaction to failed with token
+[**tokenIsCancelled**](TransactionApi.md#tokenIsCancelled) | **POST** /transaction/token-is-cancelled | set a transaction to cancelled with token
+[**tokenIsPaid**](TransactionApi.md#tokenIsPaid) | **POST** /transaction/token-is-paid | set a transaction to paid with token
 [**updateTransaction**](TransactionApi.md#updateTransaction) | **PUT** /transaction/{transactionId} | Update a specific Transaction object
 
 
@@ -340,12 +340,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **token_0**
-> \BumbalClient\Model\TransactionTokenIsPaidResponse token_0($arguments)
+# **tokenHasFailed**
+> \BumbalClient\Model\TransactionTokenHasFailedResponse tokenHasFailed($arguments)
 
-set a transaction to paid with token
+set a transaction to failed with token
 
-set a transaction to paid with token
+set a transaction to failed with token
 
 ### Example
 ```php
@@ -362,13 +362,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TransactionApi();
-$arguments = new \BumbalClient\Model\TransactionTokenIsPaidArguments(); // \BumbalClient\Model\TransactionTokenIsPaidArguments | Request Arguments
+$arguments = new \BumbalClient\Model\TransactionTokenHasFailedArguments(); // \BumbalClient\Model\TransactionTokenHasFailedArguments | Request Arguments
 
 try {
-    $result = $api_instance->token_0($arguments);
+    $result = $api_instance->tokenHasFailed($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionApi->token_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionApi->tokenHasFailed: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -377,11 +377,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TransactionTokenIsPaidArguments**](../Model/TransactionTokenIsPaidArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\TransactionTokenHasFailedArguments**](../Model/TransactionTokenHasFailedArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\TransactionTokenIsPaidResponse**](../Model/TransactionTokenIsPaidResponse.md)
+[**\BumbalClient\Model\TransactionTokenHasFailedResponse**](../Model/TransactionTokenHasFailedResponse.md)
 
 ### Authorization
 
@@ -394,8 +394,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **token_1**
-> \BumbalClient\Model\TransactionTokenIsCancelledResponse token_1($arguments)
+# **tokenIsCancelled**
+> \BumbalClient\Model\TransactionTokenIsCancelledResponse tokenIsCancelled($arguments)
 
 set a transaction to cancelled with token
 
@@ -419,10 +419,10 @@ $api_instance = new BumbalClient\Api\TransactionApi();
 $arguments = new \BumbalClient\Model\TransactionTokenIsCancelledArguments(); // \BumbalClient\Model\TransactionTokenIsCancelledArguments | Request Arguments
 
 try {
-    $result = $api_instance->token_1($arguments);
+    $result = $api_instance->tokenIsCancelled($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionApi->token_1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionApi->tokenIsCancelled: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -448,12 +448,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **token_2**
-> \BumbalClient\Model\TransactionTokenHasFailedResponse token_2($arguments)
+# **tokenIsPaid**
+> \BumbalClient\Model\TransactionTokenIsPaidResponse tokenIsPaid($arguments)
 
-set a transaction to failed with token
+set a transaction to paid with token
 
-set a transaction to failed with token
+set a transaction to paid with token
 
 ### Example
 ```php
@@ -470,13 +470,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TransactionApi();
-$arguments = new \BumbalClient\Model\TransactionTokenHasFailedArguments(); // \BumbalClient\Model\TransactionTokenHasFailedArguments | Request Arguments
+$arguments = new \BumbalClient\Model\TransactionTokenIsPaidArguments(); // \BumbalClient\Model\TransactionTokenIsPaidArguments | Request Arguments
 
 try {
-    $result = $api_instance->token_2($arguments);
+    $result = $api_instance->tokenIsPaid($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionApi->token_2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionApi->tokenIsPaid: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -485,11 +485,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TransactionTokenHasFailedArguments**](../Model/TransactionTokenHasFailedArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\TransactionTokenIsPaidArguments**](../Model/TransactionTokenIsPaidArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\TransactionTokenHasFailedResponse**](../Model/TransactionTokenHasFailedResponse.md)
+[**\BumbalClient\Model\TransactionTokenIsPaidResponse**](../Model/TransactionTokenIsPaidResponse.md)
 
 ### Authorization
 

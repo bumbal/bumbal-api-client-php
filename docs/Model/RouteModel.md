@@ -39,6 +39,8 @@ Name | Type | Description | Notes
 **cost_per_driving_minute** | **double** | Cost per driving minute | [optional] 
 **cost_per_waiting_minute** | **double** | Cost per waiting minute | [optional] 
 **cost_per_service_minute** | **double** | Cost per service minute | [optional] 
+**earliest_date** | [**\DateTime**](Date.md) | Write only! | [optional] 
+**latest_date** | [**\DateTime**](Date.md) | Write only! | [optional] 
 **earliest_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **latest_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **planned_date_time_from** | [**\DateTime**](\DateTime.md) | planned date-time from | [optional] 

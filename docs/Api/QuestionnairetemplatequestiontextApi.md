@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse49 deleteQuestionnaireTemplateQuestionText($notification_id)
+> \BumbalClient\Model\ApiResponse49 deleteQuestionnaireTemplateQuestionText($questionnaire_template_question_text_id)
 
 Delete an QuestionnaireTemplateQuestionText entry
 
@@ -88,10 +88,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestiontextApi();
-$notification_id = 789; // int | ID of QuestionnaireTemplateQuestionText to delete
+$questionnaire_template_question_text_id = 789; // int | ID of QuestionnaireTemplateQuestionText to delete
 
 try {
-    $result = $api_instance->deleteQuestionnaireTemplateQuestionText($notification_id);
+    $result = $api_instance->deleteQuestionnaireTemplateQuestionText($questionnaire_template_question_text_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestiontextApi->deleteQuestionnaireTemplateQuestionText: ', $e->getMessage(), PHP_EOL;
@@ -103,7 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireTemplateQuestionText to delete |
+ **questionnaire_template_question_text_id** | **int**| ID of QuestionnaireTemplateQuestionText to delete |
 
 ### Return type
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel retrieveQuestionnaireTemplateQuestionText($notification_id)
+> \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel retrieveQuestionnaireTemplateQuestionText($questionnaire_template_question_text_id)
 
 Retrieve a QuestionnaireTemplateQuestionText
 
@@ -196,10 +196,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestiontextApi();
-$notification_id = 789; // int | ID of QuestionnaireTemplateQuestionText to retrieve
+$questionnaire_template_question_text_id = 789; // int | ID of QuestionnaireTemplateQuestionText to retrieve
 
 try {
-    $result = $api_instance->retrieveQuestionnaireTemplateQuestionText($notification_id);
+    $result = $api_instance->retrieveQuestionnaireTemplateQuestionText($questionnaire_template_question_text_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestiontextApi->retrieveQuestionnaireTemplateQuestionText: ', $e->getMessage(), PHP_EOL;
@@ -211,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireTemplateQuestionText to retrieve |
+ **questionnaire_template_question_text_id** | **int**| ID of QuestionnaireTemplateQuestionText to retrieve |
 
 ### Return type
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse48 updateQuestionnaireTemplateQuestionText($notification_id, $body)
+> \BumbalClient\Model\ApiResponse48 updateQuestionnaireTemplateQuestionText($questionnaire_template_question_text_id, $body)
 
 Update a specific QuestionnaireTemplateQuestionText object
 
@@ -304,11 +304,11 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestiontextApi();
-$notification_id = 789; // int | ID of the QuestionnaireTemplateQuestionText object to update
+$questionnaire_template_question_text_id = 789; // int | ID of the QuestionnaireTemplateQuestionText object to update
 $body = new \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel(); // \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel | QuestionnaireTemplateQuestionText object that needs to be updated
 
 try {
-    $result = $api_instance->updateQuestionnaireTemplateQuestionText($notification_id, $body);
+    $result = $api_instance->updateQuestionnaireTemplateQuestionText($questionnaire_template_question_text_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestiontextApi->updateQuestionnaireTemplateQuestionText: ', $e->getMessage(), PHP_EOL;
@@ -320,7 +320,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of the QuestionnaireTemplateQuestionText object to update |
+ **questionnaire_template_question_text_id** | **int**| ID of the QuestionnaireTemplateQuestionText object to update |
  **body** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionTextModel**](../Model/QuestionnaireTemplateQuestionTextModel.md)| QuestionnaireTemplateQuestionText object that needs to be updated | [optional]
 
 ### Return type

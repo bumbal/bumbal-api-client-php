@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **triggerWebHook**
-> \BumbalClient\Model\ApiResponse triggerWebHook($object_id, $web_hook_name, $extra_payload)
+> \BumbalClient\Model\ApiResponse triggerWebHook($body)
 
 Trigger a webhook
 
@@ -29,12 +29,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\WebhookApi();
-$object_id = 56; // int | objectId
-$web_hook_name = array("web_hook_name_example"); // string[] | Name of this Web Hook
-$extra_payload = array(new \BumbalClient\Model\\BumbalClient\Model\PayloadItem()); // \BumbalClient\Model\PayloadItem[] | extra payload to be sent when the webhook is triggered
+$body = new \BumbalClient\Model\WebhookModel(); // \BumbalClient\Model\WebhookModel | Webhook to trigger with payload data
 
 try {
-    $result = $api_instance->triggerWebHook($object_id, $web_hook_name, $extra_payload);
+    $result = $api_instance->triggerWebHook($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->triggerWebHook: ', $e->getMessage(), PHP_EOL;
@@ -46,9 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **object_id** | **int**| objectId |
- **web_hook_name** | [**string[]**](../Model/string.md)| Name of this Web Hook |
- **extra_payload** | [**\BumbalClient\Model\PayloadItem[]**](../Model/\BumbalClient\Model\PayloadItem.md)| extra payload to be sent when the webhook is triggered | [optional]
+ **body** | [**\BumbalClient\Model\WebhookModel**](../Model/WebhookModel.md)| Webhook to trigger with payload data |
 
 ### Return type
 
@@ -60,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml, application/x-www-form-urlencoded
+ - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

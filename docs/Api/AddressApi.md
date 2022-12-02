@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**retrieveListAddress**](AddressApi.md#retrieveListAddress) | **PUT** /address | Retrieve List of Addresses
 [**reverseGeoCodeAddress**](AddressApi.md#reverseGeoCodeAddress) | **POST** /address/reverse-geo-code | Reverse Geo Code an address
 [**setAddress**](AddressApi.md#setAddress) | **POST** /address/set | Add a new Address
+[**suggestAddress**](AddressApi.md#suggestAddress) | **POST** /address/suggest-address | Suggest an address
 [**updateAddress**](AddressApi.md#updateAddress) | **PUT** /address/{addressId} | Update a address
 [**validateAddress**](AddressApi.md#validateAddress) | **GET** /address/validate | Validate an address
 
@@ -271,6 +272,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **suggestAddress**
+> \BumbalClient\Model\AddressSuggestionResponse suggestAddress($arguments)
+
+Suggest an address
+
+Suggest an address based on ISO country code, zipcode and house_nr. For now, this will only work properly for Dutch addresses.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\AddressApi();
+$arguments = new \BumbalClient\Model\AddressSuggestionArguments(); // \BumbalClient\Model\AddressSuggestionArguments | Address Suggestion Arguments
+
+try {
+    $result = $api_instance->suggestAddress($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AddressApi->suggestAddress: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\AddressSuggestionArguments**](../Model/AddressSuggestionArguments.md)| Address Suggestion Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\AddressSuggestionResponse**](../Model/AddressSuggestionResponse.md)
 
 ### Authorization
 

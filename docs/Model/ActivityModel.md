@@ -72,7 +72,7 @@ Name | Type | Description | Notes
 **allowed_driver_ids** | **int[]** | Unique Identifier(s) for allowed drivers in activity | [optional] 
 **allowed_drivers** | [**\BumbalClient\Model\AllowedDriverModel[]**](AllowedDriverModel.md) |  | [optional] 
 **allowed_drivers_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**applied_capacities** | [**\BumbalClient\Model\ActivityModelAppliedCapacities**](ActivityModelAppliedCapacities.md) |  | [optional] 
+**applied_capacities** | [**\BumbalClient\Model\AppliedCapacitiesModel**](AppliedCapacitiesModel.md) |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **package_lines** | [**\BumbalClient\Model\PackageLineModel[]**](PackageLineModel.md) |  | [optional] 
 **payments** | [**\BumbalClient\Model\PaymentModel[]**](PaymentModel.md) |  | [optional] 

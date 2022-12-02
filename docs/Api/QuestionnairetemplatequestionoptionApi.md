@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPossibleFollowUpQuestions**
-> \BumbalClient\Model\ApiResponse40 getPossibleFollowUpQuestions($questionnaire_template_question_id)
+> \BumbalClient\Model\ApiResponse40 getPossibleFollowUpQuestions($body)
 
 get possible follow up questions
 
@@ -198,10 +198,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestionoptionApi();
-$questionnaire_template_question_id = 789; // int | ID of QuestionnaireTemplateQuestion
+$body = new \BumbalClient\Model\QuestionnaireTemplateQuestionOptionPossibleQuestionsModel(); // \BumbalClient\Model\QuestionnaireTemplateQuestionOptionPossibleQuestionsModel | QuestionnaireTemplate object that needs to be updated
 
 try {
-    $result = $api_instance->getPossibleFollowUpQuestions($questionnaire_template_question_id);
+    $result = $api_instance->getPossibleFollowUpQuestions($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestionoptionApi->getPossibleFollowUpQuestions: ', $e->getMessage(), PHP_EOL;
@@ -213,7 +213,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **questionnaire_template_question_id** | **int**| ID of QuestionnaireTemplateQuestion |
+ **body** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionOptionPossibleQuestionsModel**](../Model/QuestionnaireTemplateQuestionOptionPossibleQuestionsModel.md)| QuestionnaireTemplate object that needs to be updated | [optional]
 
 ### Return type
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveQuestionnaireTemplateQuestionOption**
-> \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel retrieveQuestionnaireTemplateQuestionOption($notification_id)
+> \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel retrieveQuestionnaireTemplateQuestionOption($questionnaire_template_question_option_id)
 
 Retrieve a QuestionnaireTemplateQuestionOption
 
@@ -306,10 +306,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestionoptionApi();
-$notification_id = 789; // int | ID of QuestionnaireTemplateQuestionOption to retrieve
+$questionnaire_template_question_option_id = 789; // int | ID of QuestionnaireTemplateQuestionOption to retrieve
 
 try {
-    $result = $api_instance->retrieveQuestionnaireTemplateQuestionOption($notification_id);
+    $result = $api_instance->retrieveQuestionnaireTemplateQuestionOption($questionnaire_template_question_option_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestionoptionApi->retrieveQuestionnaireTemplateQuestionOption: ', $e->getMessage(), PHP_EOL;
@@ -321,7 +321,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireTemplateQuestionOption to retrieve |
+ **questionnaire_template_question_option_id** | **int**| ID of QuestionnaireTemplateQuestionOption to retrieve |
 
 ### Return type
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestionOption**
-> \BumbalClient\Model\ApiResponse39 updateQuestionnaireTemplateQuestionOption($notification_id, $body)
+> \BumbalClient\Model\ApiResponse39 updateQuestionnaireTemplateQuestionOption($questionnaire_template_question_option_id, $body)
 
 Update a specific QuestionnaireTemplateQuestionOption object
 
@@ -414,11 +414,11 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnairetemplatequestionoptionApi();
-$notification_id = 789; // int | ID of the QuestionnaireTemplateQuestionOption object to update
+$questionnaire_template_question_option_id = 789; // int | ID of the QuestionnaireTemplateQuestionOption object to update
 $body = new \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel(); // \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel | QuestionnaireTemplateQuestionOption object that needs to be updated
 
 try {
-    $result = $api_instance->updateQuestionnaireTemplateQuestionOption($notification_id, $body);
+    $result = $api_instance->updateQuestionnaireTemplateQuestionOption($questionnaire_template_question_option_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnairetemplatequestionoptionApi->updateQuestionnaireTemplateQuestionOption: ', $e->getMessage(), PHP_EOL;
@@ -430,7 +430,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of the QuestionnaireTemplateQuestionOption object to update |
+ **questionnaire_template_question_option_id** | **int**| ID of the QuestionnaireTemplateQuestionOption object to update |
  **body** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel**](../Model/QuestionnaireTemplateQuestionOptionModel.md)| QuestionnaireTemplateQuestionOption object that needs to be updated | [optional]
 
 ### Return type

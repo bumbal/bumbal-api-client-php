@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaire**
-> \BumbalClient\Model\ApiResponse27 deleteQuestionnaire($notification_id)
+> \BumbalClient\Model\ApiResponse27 deleteQuestionnaire($questionnaire_id)
 
 Delete an Questionnaire entry
 
@@ -88,10 +88,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireApi();
-$notification_id = 789; // int | ID of Questionnaire to delete
+$questionnaire_id = 789; // int | ID of Questionnaire to delete
 
 try {
-    $result = $api_instance->deleteQuestionnaire($notification_id);
+    $result = $api_instance->deleteQuestionnaire($questionnaire_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireApi->deleteQuestionnaire: ', $e->getMessage(), PHP_EOL;
@@ -103,7 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of Questionnaire to delete |
+ **questionnaire_id** | **int**| ID of Questionnaire to delete |
 
 ### Return type
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveQuestionnaire**
-> \BumbalClient\Model\QuestionnaireModel retrieveQuestionnaire($notification_id, $include_answers)
+> \BumbalClient\Model\QuestionnaireModel retrieveQuestionnaire($questionnaire_id, $include_answers)
 
 Retrieve a Questionnaire
 
@@ -304,11 +304,11 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireApi();
-$notification_id = 789; // int | ID of Questionnaire to retrieve
-$include_answers = true; // bool | Include answers
+$questionnaire_id = 789; // int | ID of Questionnaire to retrieve
+$include_answers = false; // bool | Include answers
 
 try {
-    $result = $api_instance->retrieveQuestionnaire($notification_id, $include_answers);
+    $result = $api_instance->retrieveQuestionnaire($questionnaire_id, $include_answers);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireApi->retrieveQuestionnaire: ', $e->getMessage(), PHP_EOL;
@@ -320,8 +320,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of Questionnaire to retrieve |
- **include_answers** | **bool**| Include answers |
+ **questionnaire_id** | **int**| ID of Questionnaire to retrieve |
+ **include_answers** | **bool**| Include answers | [optional] [default to false]
 
 ### Return type
 

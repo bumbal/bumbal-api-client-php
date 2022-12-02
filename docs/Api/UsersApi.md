@@ -8,10 +8,10 @@ Method | HTTP request | Description
 [**deleteUser**](UsersApi.md#deleteUser) | **DELETE** /users/{userId} | Delete a user
 [**retrieveListUserNotification**](UsersApi.md#retrieveListUserNotification) | **PUT** /users/notification | Retrieve List of UserNotification
 [**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Users
-[**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{usersId} | Retrieve a Users
+[**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{userId} | Retrieve a Users
 [**setUser**](UsersApi.md#setUser) | **POST** /users/set | Set (create or update) a User
 [**setUserNotification**](UsersApi.md#setUserNotification) | **POST** /users/notification | Create a new UserNotification or update an existing one
-[**updateUsers**](UsersApi.md#updateUsers) | **PUT** /users/{usersId} | Update a Users
+[**updateUsers**](UsersApi.md#updateUsers) | **PUT** /users/{userId} | Update a Users
 
 
 # **checkCredentialsUser**
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveUsers**
-> \BumbalClient\Model\UsersModel retrieveUsers($users_id)
+> \BumbalClient\Model\UsersModel retrieveUsers($user_id)
 
 Retrieve a Users
 
@@ -254,10 +254,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\UsersApi();
-$users_id = 789; // int | ID of users to retrieve
+$user_id = 789; // int | ID of users to retrieve
 
 try {
-    $result = $api_instance->retrieveUsers($users_id);
+    $result = $api_instance->retrieveUsers($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->retrieveUsers: ', $e->getMessage(), PHP_EOL;
@@ -269,7 +269,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **users_id** | **int**| ID of users to retrieve |
+ **user_id** | **int**| ID of users to retrieve |
 
 ### Return type
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUsers**
-> \BumbalClient\Model\ApiResponse updateUsers($users_id)
+> \BumbalClient\Model\ApiResponse updateUsers($user_id)
 
 Update a Users
 
@@ -416,10 +416,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\UsersApi();
-$users_id = 789; // int | ID of users to update
+$user_id = 789; // int | ID of users to update
 
 try {
-    $result = $api_instance->updateUsers($users_id);
+    $result = $api_instance->updateUsers($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->updateUsers: ', $e->getMessage(), PHP_EOL;
@@ -431,7 +431,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **users_id** | **int**| ID of users to update |
+ **user_id** | **int**| ID of users to update |
 
 ### Return type
 
