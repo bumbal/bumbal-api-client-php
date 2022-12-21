@@ -73,6 +73,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for bulkUpdateActivity
+     *
+     * Update multiple activities.
+     *
+     */
+    public function testBulkUpdateActivity()
+    {
+    }
+
+    /**
      * Test case for deleteActivity
      *
      * Delete an activity.

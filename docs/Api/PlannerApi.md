@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**checkAvailabilityResult**](PlannerApi.md#checkAvailabilityResult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 [**plannerAddActivitiesToRoute**](PlannerApi.md#plannerAddActivitiesToRoute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 [**removeActivitiesFromRoute**](PlannerApi.md#removeActivitiesFromRoute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
+[**updateRecurrenceRelations**](PlannerApi.md#updateRecurrenceRelations) | **POST** /planner/update-recurrence-relations | Update recurrence relations for follow routes
 
 
 # **applyPlanning**
@@ -430,6 +431,60 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **arguments** | [**\BumbalClient\Model\RemoveActivitiesFromRouteArguments**](../Model/RemoveActivitiesFromRouteArguments.md)| Request Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateRecurrenceRelations**
+> \BumbalClient\Model\ApiResponse updateRecurrenceRelations($arguments)
+
+Update recurrence relations for follow routes
+
+Update recurrence relations for follow routes
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\UpdateRecurrenceRelations(); // \BumbalClient\Model\UpdateRecurrenceRelations | Update recurrence relations arguments
+
+try {
+    $result = $api_instance->updateRecurrenceRelations($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PlannerApi->updateRecurrenceRelations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\UpdateRecurrenceRelations**](../Model/UpdateRecurrenceRelations.md)| Update recurrence relations arguments |
 
 ### Return type
 

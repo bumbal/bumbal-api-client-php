@@ -63,7 +63,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_type_names' => 'bool',
         'include_address_meta_data' => 'bool',
         'include_address_files' => 'bool',
-        'include_address_notes' => 'bool'
+        'include_address_notes' => 'bool',
+        'include_links' => 'bool'
     ];
 
     /**
@@ -80,7 +81,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_type_names' => null,
         'include_address_meta_data' => null,
         'include_address_files' => null,
-        'include_address_notes' => null
+        'include_address_notes' => null,
+        'include_links' => null
     ];
 
     public static function swaggerTypes()
@@ -107,7 +109,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_type_names' => 'include_address_type_names',
         'include_address_meta_data' => 'include_address_meta_data',
         'include_address_files' => 'include_address_files',
-        'include_address_notes' => 'include_address_notes'
+        'include_address_notes' => 'include_address_notes',
+        'include_links' => 'include_links'
     ];
 
 
@@ -125,7 +128,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_type_names' => 'setIncludeAddressTypeNames',
         'include_address_meta_data' => 'setIncludeAddressMetaData',
         'include_address_files' => 'setIncludeAddressFiles',
-        'include_address_notes' => 'setIncludeAddressNotes'
+        'include_address_notes' => 'setIncludeAddressNotes',
+        'include_links' => 'setIncludeLinks'
     ];
 
 
@@ -143,7 +147,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_type_names' => 'getIncludeAddressTypeNames',
         'include_address_meta_data' => 'getIncludeAddressMetaData',
         'include_address_files' => 'getIncludeAddressFiles',
-        'include_address_notes' => 'getIncludeAddressNotes'
+        'include_address_notes' => 'getIncludeAddressNotes',
+        'include_links' => 'getIncludeLinks'
     ];
 
     public static function attributeMap()
@@ -187,6 +192,7 @@ class AddressOptionsModel implements ArrayAccess
         $this->container['include_address_meta_data'] = isset($data['include_address_meta_data']) ? $data['include_address_meta_data'] : null;
         $this->container['include_address_files'] = isset($data['include_address_files']) ? $data['include_address_files'] : null;
         $this->container['include_address_notes'] = isset($data['include_address_notes']) ? $data['include_address_notes'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
     }
 
     /**
@@ -420,6 +426,27 @@ class AddressOptionsModel implements ArrayAccess
     public function setIncludeAddressNotes($include_address_notes)
     {
         $this->container['include_address_notes'] = $include_address_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links 
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
 
         return $this;
     }

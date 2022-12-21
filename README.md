@@ -66,13 +66,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$activity_id = 789; // int | ID of the activity to delete
+$body = new \BumbalClient\Model\ActivityBulkUpdateArguments(); // \BumbalClient\Model\ActivityBulkUpdateArguments | Activity object
 
 try {
-    $result = $api_instance->deleteActivity($activity_id);
+    $result = $api_instance->bulkUpdateActivity($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ActivityApi->deleteActivity: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ActivityApi->bulkUpdateActivity: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -84,6 +84,7 @@ All URIs are relative to *http://localhost/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ActivityApi* | [**bulkUpdateActivity**](docs/Api/ActivityApi.md#bulkupdateactivity) | **POST** /activity/bulk-update | Update multiple activities
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
 *ActivityApi* | [**lockActivity**](docs/Api/ActivityApi.md#lockactivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 *ActivityApi* | [**lockActivityOnRoute**](docs/Api/ActivityApi.md#lockactivityonroute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
@@ -227,6 +228,7 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
+*PlannerApi* | [**updateRecurrenceRelations**](docs/Api/PlannerApi.md#updaterecurrencerelations) | **POST** /planner/update-recurrence-relations | Update recurrence relations for follow routes
 *PortalApi* | [**retrieveListPortal**](docs/Api/PortalApi.md#retrievelistportal) | **PUT** /portal | Retrieve List of Portals
 *PortalApi* | [**retrievePortal**](docs/Api/PortalApi.md#retrieveportal) | **GET** /portal/{portalId} | Retrieve a Portal
 *PortalApi* | [**setPortal**](docs/Api/PortalApi.md#setportal) | **POST** /portal/set | Set (create or update) a Portal
@@ -396,6 +398,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ActivityBulkUpdateArguments](docs/Model/ActivityBulkUpdateArguments.md)
+ - [ActivityBulkUpdateModel](docs/Model/ActivityBulkUpdateModel.md)
  - [ActivityEtaModel](docs/Model/ActivityEtaModel.md)
  - [ActivityFiltersModel](docs/Model/ActivityFiltersModel.md)
  - [ActivityForToRouteModel](docs/Model/ActivityForToRouteModel.md)
@@ -830,6 +834,7 @@ Class | Method | HTTP request | Description
  - [UomModel](docs/Model/UomModel.md)
  - [UomOptionsModel](docs/Model/UomOptionsModel.md)
  - [UomRetrieveListArguments](docs/Model/UomRetrieveListArguments.md)
+ - [UpdateRecurrenceRelations](docs/Model/UpdateRecurrenceRelations.md)
  - [UserNotificationFiltersModel](docs/Model/UserNotificationFiltersModel.md)
  - [UserNotificationListResponse](docs/Model/UserNotificationListResponse.md)
  - [UserNotificationModel](docs/Model/UserNotificationModel.md)

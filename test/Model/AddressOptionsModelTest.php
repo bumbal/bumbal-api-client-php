@@ -146,4 +146,11 @@ class AddressOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeAddressNotes()
     {
     }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
 }

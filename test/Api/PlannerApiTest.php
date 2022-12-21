@@ -151,4 +151,14 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     public function testRemoveActivitiesFromRoute()
     {
     }
+
+    /**
+     * Test case for updateRecurrenceRelations
+     *
+     * Update recurrence relations for follow routes.
+     *
+     */
+    public function testUpdateRecurrenceRelations()
+    {
+    }
 }

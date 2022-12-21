@@ -4,6 +4,7 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**bulkUpdateActivity**](ActivityApi.md#bulkUpdateActivity) | **POST** /activity/bulk-update | Update multiple activities
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
 [**lockActivity**](ActivityApi.md#lockActivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 [**lockActivityOnRoute**](ActivityApi.md#lockActivityOnRoute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
@@ -15,6 +16,60 @@ Method | HTTP request | Description
 [**unsuccessful**](ActivityApi.md#unsuccessful) | **POST** /activity/unsuccessful | Report an unsuccessful activity
 [**updateActivity**](ActivityApi.md#updateActivity) | **PUT** /activity/{activityId} | Update a activity
 
+
+# **bulkUpdateActivity**
+> \BumbalClient\Model\ApiResponse bulkUpdateActivity($body)
+
+Update multiple activities
+
+Update multiple activities
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$body = new \BumbalClient\Model\ActivityBulkUpdateArguments(); // \BumbalClient\Model\ActivityBulkUpdateArguments | Activity object
+
+try {
+    $result = $api_instance->bulkUpdateActivity($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->bulkUpdateActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\ActivityBulkUpdateArguments**](../Model/ActivityBulkUpdateArguments.md)| Activity object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteActivity**
 > \BumbalClient\Model\ApiResponse deleteActivity($activity_id)
