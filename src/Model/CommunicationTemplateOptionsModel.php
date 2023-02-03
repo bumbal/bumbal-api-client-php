@@ -54,7 +54,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'exclude_template_content' => 'bool'
+        'exclude_template_content' => 'bool',
+        'include_mappings' => 'bool'
     ];
 
     /**
@@ -62,7 +63,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'exclude_template_content' => null
+        'exclude_template_content' => null,
+        'include_mappings' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'exclude_template_content' => 'exclude_template_content'
+        'exclude_template_content' => 'exclude_template_content',
+        'include_mappings' => 'include_mappings'
     ];
 
 
@@ -89,7 +92,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'exclude_template_content' => 'setExcludeTemplateContent'
+        'exclude_template_content' => 'setExcludeTemplateContent',
+        'include_mappings' => 'setIncludeMappings'
     ];
 
 
@@ -98,7 +102,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'exclude_template_content' => 'getExcludeTemplateContent'
+        'exclude_template_content' => 'getExcludeTemplateContent',
+        'include_mappings' => 'getIncludeMappings'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['exclude_template_content'] = isset($data['exclude_template_content']) ? $data['exclude_template_content'] : null;
+        $this->container['include_mappings'] = isset($data['include_mappings']) ? $data['include_mappings'] : null;
     }
 
     /**
@@ -177,6 +183,27 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
     public function setExcludeTemplateContent($exclude_template_content)
     {
         $this->container['exclude_template_content'] = $exclude_template_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_mappings
+     * @return bool
+     */
+    public function getIncludeMappings()
+    {
+        return $this->container['include_mappings'];
+    }
+
+    /**
+     * Sets include_mappings
+     * @param bool $include_mappings 
+     * @return $this
+     */
+    public function setIncludeMappings($include_mappings)
+    {
+        $this->container['include_mappings'] = $include_mappings;
 
         return $this;
     }

@@ -60,7 +60,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'subject' => 'string',
         'content_html' => 'string',
         'content_text' => 'string',
-        'include_attachments' => 'bool'
+        'include_attachments' => 'bool',
+        'mappings' => '\BumbalClient\Model\CommunicationMappingModel[]'
     ];
 
     /**
@@ -74,7 +75,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'subject' => null,
         'content_html' => null,
         'content_text' => null,
-        'include_attachments' => null
+        'include_attachments' => null,
+        'mappings' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +100,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'subject' => 'subject',
         'content_html' => 'content_html',
         'content_text' => 'content_text',
-        'include_attachments' => 'include_attachments'
+        'include_attachments' => 'include_attachments',
+        'mappings' => 'mappings'
     ];
 
 
@@ -113,7 +116,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'subject' => 'setSubject',
         'content_html' => 'setContentHtml',
         'content_text' => 'setContentText',
-        'include_attachments' => 'setIncludeAttachments'
+        'include_attachments' => 'setIncludeAttachments',
+        'mappings' => 'setMappings'
     ];
 
 
@@ -128,7 +132,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'subject' => 'getSubject',
         'content_html' => 'getContentHtml',
         'content_text' => 'getContentText',
-        'include_attachments' => 'getIncludeAttachments'
+        'include_attachments' => 'getIncludeAttachments',
+        'mappings' => 'getMappings'
     ];
 
     public static function attributeMap()
@@ -169,6 +174,7 @@ class CommunicationTemplateModel implements ArrayAccess
         $this->container['content_html'] = isset($data['content_html']) ? $data['content_html'] : null;
         $this->container['content_text'] = isset($data['content_text']) ? $data['content_text'] : null;
         $this->container['include_attachments'] = isset($data['include_attachments']) ? $data['include_attachments'] : null;
+        $this->container['mappings'] = isset($data['mappings']) ? $data['mappings'] : null;
     }
 
     /**
@@ -339,6 +345,27 @@ class CommunicationTemplateModel implements ArrayAccess
     public function setIncludeAttachments($include_attachments)
     {
         $this->container['include_attachments'] = $include_attachments;
+
+        return $this;
+    }
+
+    /**
+     * Gets mappings
+     * @return \BumbalClient\Model\CommunicationMappingModel[]
+     */
+    public function getMappings()
+    {
+        return $this->container['mappings'];
+    }
+
+    /**
+     * Sets mappings
+     * @param \BumbalClient\Model\CommunicationMappingModel[] $mappings 
+     * @return $this
+     */
+    public function setMappings($mappings)
+    {
+        $this->container['mappings'] = $mappings;
 
         return $this;
     }

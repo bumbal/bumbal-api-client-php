@@ -125,4 +125,11 @@ class CommunicationTemplateModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeAttachments()
     {
     }
+
+    /**
+     * Test attribute "mappings"
+     */
+    public function testPropertyMappings()
+    {
+    }
 }

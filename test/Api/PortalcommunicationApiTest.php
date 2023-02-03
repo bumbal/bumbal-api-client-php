@@ -81,4 +81,14 @@ class PortalcommunicationApiTest extends \PHPUnit_Framework_TestCase
     public function testRetrieveActivityByIdCommunication()
     {
     }
+
+    /**
+     * Test case for triggerMessageCommunicationByMessageType
+     *
+     * Trigger Message to Communication by Message Type.
+     *
+     */
+    public function testTriggerMessageCommunicationByMessageType()
+    {
+    }
 }

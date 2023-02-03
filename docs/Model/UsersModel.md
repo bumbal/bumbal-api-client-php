@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **active** | **bool** | Whether user is still active or not | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
+**driver** | **bool** | The user can also be used as driver | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 

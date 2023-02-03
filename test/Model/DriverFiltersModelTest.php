@@ -99,6 +99,13 @@ class DriverFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
+
+    /**
      * Test attribute "updated_at_since"
      */
     public function testPropertyUpdatedAtSince()

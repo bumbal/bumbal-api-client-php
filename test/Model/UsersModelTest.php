@@ -246,6 +246,13 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "driver"
+     */
+    public function testPropertyDriver()
+    {
+    }
+
+    /**
      * Test attribute "zones"
      */
     public function testPropertyZones()

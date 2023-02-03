@@ -461,4 +461,11 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDepotAddressId()
     {
     }
+
+    /**
+     * Test attribute "address_id"
+     */
+    public function testPropertyAddressId()
+    {
+    }
 }

@@ -78,6 +78,7 @@ class UsersModel implements ArrayAccess
         'active' => 'bool',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'tag_names' => 'string[]',
+        'driver' => 'bool',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
         'zone_names' => 'string[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
@@ -114,6 +115,7 @@ class UsersModel implements ArrayAccess
         'active' => null,
         'tags' => null,
         'tag_names' => null,
+        'driver' => null,
         'zones' => null,
         'zone_names' => null,
         'links' => null,
@@ -160,6 +162,7 @@ class UsersModel implements ArrayAccess
         'active' => 'active',
         'tags' => 'tags',
         'tag_names' => 'tag_names',
+        'driver' => 'driver',
         'zones' => 'zones',
         'zone_names' => 'zone_names',
         'links' => 'links',
@@ -197,6 +200,7 @@ class UsersModel implements ArrayAccess
         'active' => 'setActive',
         'tags' => 'setTags',
         'tag_names' => 'setTagNames',
+        'driver' => 'setDriver',
         'zones' => 'setZones',
         'zone_names' => 'setZoneNames',
         'links' => 'setLinks',
@@ -234,6 +238,7 @@ class UsersModel implements ArrayAccess
         'active' => 'getActive',
         'tags' => 'getTags',
         'tag_names' => 'getTagNames',
+        'driver' => 'getDriver',
         'zones' => 'getZones',
         'zone_names' => 'getZoneNames',
         'links' => 'getLinks',
@@ -316,6 +321,7 @@ class UsersModel implements ArrayAccess
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
@@ -869,6 +875,27 @@ class UsersModel implements ArrayAccess
     public function setTagNames($tag_names)
     {
         $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets driver
+     * @return bool
+     */
+    public function getDriver()
+    {
+        return $this->container['driver'];
+    }
+
+    /**
+     * Sets driver
+     * @param bool $driver The user can also be used as driver
+     * @return $this
+     */
+    public function setDriver($driver)
+    {
+        $this->container['driver'] = $driver;
 
         return $this;
     }

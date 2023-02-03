@@ -83,4 +83,11 @@ class CommunicationTemplateOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyExcludeTemplateContent()
     {
     }
+
+    /**
+     * Test attribute "include_mappings"
+     */
+    public function testPropertyIncludeMappings()
+    {
+    }
 }
