@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID | [optional] 
-**address_id** | **int** | Address ID asociated with this email address | [optional] 
+**address_id** | **int** | Address ID associated with this email address | [optional] 
 **email** | **string** | Email address | [optional] 
 **description** | **string** | Email address description | [optional] 
 **primary** | **bool** | primary Email address | [optional] 

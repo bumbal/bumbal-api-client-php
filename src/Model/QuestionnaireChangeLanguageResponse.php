@@ -189,7 +189,7 @@ class QuestionnaireChangeLanguageResponse implements ArrayAccess
 
     /**
      * Sets success
-     * @param int[] $success List with answer id's succesful updated
+     * @param int[] $success List with answer id's successful updated
      * @return $this
      */
     public function setSuccess($success)

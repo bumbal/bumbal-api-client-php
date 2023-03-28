@@ -1,6 +1,6 @@
 <?php
 /**
- * TransactionModel
+ * RecoveryOptionsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * TransactionModel Class Doc Comment
+ * RecoveryOptionsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TransactionModel implements ArrayAccess
+class RecoveryOptionsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,20 +47,20 @@ class TransactionModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TransactionModel';
+    protected static $swaggerModelName = 'RecoveryOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'active' => 'bool',
-        'activity_id' => 'int',
-        'amount' => 'int',
-        'transaction_type' => 'int',
-        'paid' => 'bool',
-        'failed' => 'bool'
+        'include_notes' => 'bool',
+        'include_record_info' => 'bool',
+        'include_activity_ids' => 'bool',
+        'include_links' => 'bool',
+        'include_meta_data' => 'bool',
+        'include_files' => 'bool',
+        'include_capacities' => 'bool'
     ];
 
     /**
@@ -68,13 +68,13 @@ class TransactionModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'active' => null,
-        'activity_id' => null,
-        'amount' => null,
-        'transaction_type' => null,
-        'paid' => null,
-        'failed' => null
+        'include_notes' => null,
+        'include_record_info' => null,
+        'include_activity_ids' => null,
+        'include_links' => null,
+        'include_meta_data' => null,
+        'include_files' => null,
+        'include_capacities' => null
     ];
 
     public static function swaggerTypes()
@@ -92,13 +92,13 @@ class TransactionModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'active' => 'active',
-        'activity_id' => 'activity_id',
-        'amount' => 'amount',
-        'transaction_type' => 'transaction_type',
-        'paid' => 'paid',
-        'failed' => 'failed'
+        'include_notes' => 'include_notes',
+        'include_record_info' => 'include_record_info',
+        'include_activity_ids' => 'include_activity_ids',
+        'include_links' => 'include_links',
+        'include_meta_data' => 'include_meta_data',
+        'include_files' => 'include_files',
+        'include_capacities' => 'include_capacities'
     ];
 
 
@@ -107,13 +107,13 @@ class TransactionModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'active' => 'setActive',
-        'activity_id' => 'setActivityId',
-        'amount' => 'setAmount',
-        'transaction_type' => 'setTransactionType',
-        'paid' => 'setPaid',
-        'failed' => 'setFailed'
+        'include_notes' => 'setIncludeNotes',
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_activity_ids' => 'setIncludeActivityIds',
+        'include_links' => 'setIncludeLinks',
+        'include_meta_data' => 'setIncludeMetaData',
+        'include_files' => 'setIncludeFiles',
+        'include_capacities' => 'setIncludeCapacities'
     ];
 
 
@@ -122,13 +122,13 @@ class TransactionModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'active' => 'getActive',
-        'activity_id' => 'getActivityId',
-        'amount' => 'getAmount',
-        'transaction_type' => 'getTransactionType',
-        'paid' => 'getPaid',
-        'failed' => 'getFailed'
+        'include_notes' => 'getIncludeNotes',
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_activity_ids' => 'getIncludeActivityIds',
+        'include_links' => 'getIncludeLinks',
+        'include_meta_data' => 'getIncludeMetaData',
+        'include_files' => 'getIncludeFiles',
+        'include_capacities' => 'getIncludeCapacities'
     ];
 
     public static function attributeMap()
@@ -162,13 +162,13 @@ class TransactionModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['transaction_type'] = isset($data['transaction_type']) ? $data['transaction_type'] : null;
-        $this->container['paid'] = isset($data['paid']) ? $data['paid'] : null;
-        $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
+        $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
+        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_activity_ids'] = isset($data['include_activity_ids']) ? $data['include_activity_ids'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
+        $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
+        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
     }
 
     /**
@@ -197,148 +197,148 @@ class TransactionModel implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int $id Unique Identifier
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
+     * Gets include_notes
      * @return bool
      */
-    public function getActive()
+    public function getIncludeNotes()
     {
-        return $this->container['active'];
+        return $this->container['include_notes'];
     }
 
     /**
-     * Sets active
-     * @param bool $active if active=0: Transaction has been removed and is no longer visible in any bumbal interface
+     * Sets include_notes
+     * @param bool $include_notes 
      * @return $this
      */
-    public function setActive($active)
+    public function setIncludeNotes($include_notes)
     {
-        $this->container['active'] = $active;
+        $this->container['include_notes'] = $include_notes;
 
         return $this;
     }
 
     /**
-     * Gets activity_id
-     * @return int
-     */
-    public function getActivityId()
-    {
-        return $this->container['activity_id'];
-    }
-
-    /**
-     * Sets activity_id
-     * @param int $activity_id activity id it belongs to
-     * @return $this
-     */
-    public function setActivityId($activity_id)
-    {
-        $this->container['activity_id'] = $activity_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets amount
-     * @return int
-     */
-    public function getAmount()
-    {
-        return $this->container['amount'];
-    }
-
-    /**
-     * Sets amount
-     * @param int $amount amount in cents, 42 euro is 4200 cents
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        $this->container['amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets transaction_type
-     * @return int
-     */
-    public function getTransactionType()
-    {
-        return $this->container['transaction_type'];
-    }
-
-    /**
-     * Sets transaction_type
-     * @param int $transaction_type Type of Transaction: 1 = cash, 2 = pin, 3 = online
-     * @return $this
-     */
-    public function setTransactionType($transaction_type)
-    {
-        $this->container['transaction_type'] = $transaction_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets paid
+     * Gets include_record_info
      * @return bool
      */
-    public function getPaid()
+    public function getIncludeRecordInfo()
     {
-        return $this->container['paid'];
+        return $this->container['include_record_info'];
     }
 
     /**
-     * Sets paid
-     * @param bool $paid If paid = 0: the transaction has not been fulfilled yet
+     * Sets include_record_info
+     * @param bool $include_record_info 
      * @return $this
      */
-    public function setPaid($paid)
+    public function setIncludeRecordInfo($include_record_info)
     {
-        $this->container['paid'] = $paid;
+        $this->container['include_record_info'] = $include_record_info;
 
         return $this;
     }
 
     /**
-     * Gets failed
+     * Gets include_activity_ids
      * @return bool
      */
-    public function getFailed()
+    public function getIncludeActivityIds()
     {
-        return $this->container['failed'];
+        return $this->container['include_activity_ids'];
     }
 
     /**
-     * Sets failed
-     * @param bool $failed if failed = 1: the transaction has failed
+     * Sets include_activity_ids
+     * @param bool $include_activity_ids 
      * @return $this
      */
-    public function setFailed($failed)
+    public function setIncludeActivityIds($include_activity_ids)
     {
-        $this->container['failed'] = $failed;
+        $this->container['include_activity_ids'] = $include_activity_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links 
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data 
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_files
+     * @return bool
+     */
+    public function getIncludeFiles()
+    {
+        return $this->container['include_files'];
+    }
+
+    /**
+     * Sets include_files
+     * @param bool $include_files 
+     * @return $this
+     */
+    public function setIncludeFiles($include_files)
+    {
+        $this->container['include_files'] = $include_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_capacities
+     * @return bool
+     */
+    public function getIncludeCapacities()
+    {
+        return $this->container['include_capacities'];
+    }
+
+    /**
+     * Sets include_capacities
+     * @param bool $include_capacities 
+     * @return $this
+     */
+    public function setIncludeCapacities($include_capacities)
+    {
+        $this->container['include_capacities'] = $include_capacities;
 
         return $this;
     }

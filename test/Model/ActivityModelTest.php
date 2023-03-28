@@ -582,6 +582,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "recoveries"
+     */
+    public function testPropertyRecoveries()
+    {
+    }
+
+    /**
      * Test attribute "payments"
      */
     public function testPropertyPayments()

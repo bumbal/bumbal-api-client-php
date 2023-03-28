@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **include_activity_status** | **bool** | Deprecated! Use include_status_name instead | [optional] 
 **include_activity_type_name** | **bool** |  | [optional] 
-**include_address** | **bool** | Include the address in the addressbook | [optional] 
-**include_address_applied** | **bool** | Include the addres applied to the activity (not the original addres from the address book) | [optional] 
+**include_address** | **bool** | Include the address from the address book | [optional] 
+**include_address_applied** | **bool** | Include the address applied to the activity (not the original address from the address book) | [optional] 
 **include_allowed_drivers** | **bool** |  | [optional] 
 **include_allowed_driver_ids** | **bool** |  | [optional] 
 **include_allowed_drivers_links** | **bool** |  | [optional] 
@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **include_meta_data** | **bool** |  | [optional] 
 **include_notes** | **bool** |  | [optional] 
 **include_package_lines** | **bool** |  | [optional] 
+**include_recoveries** | **bool** |  | [optional] 
 **include_package_line_links** | **bool** | Deprecated! Use include_links instead | [optional] 
 **include_package_lines_info** | **bool** |  | [optional] 
 **include_phone_nrs** | **bool** |  | [optional] 
@@ -64,7 +65,7 @@ Name | Type | Description | Notes
 **include_stats** | **bool** |  | [optional] 
 **include_packagelines_for_whole_route_on_start_activity** | **bool** |  | [optional] 
 **include_activity_meta_data** | **bool** | Deprecated! Use include_meta_data instead | [optional] 
-**include_address_object** | **bool** | Deprecated! Use include_adderess or include_address_applied instead | [optional] 
+**include_address_object** | **bool** | Deprecated! Use include_address or include_address_applied instead | [optional] 
 **include_car** | **bool** | Deprecated! Use include_vehicle instead | [optional] 
 **include_activity_links** | **bool** | Deprecated! Use include_links instead | [optional] 
 **include_activity_files** | **bool** | Deprecated! Use include_files instead | [optional] 
@@ -74,8 +75,8 @@ Name | Type | Description | Notes
 **include_activity_record_object** | **bool** | Deprecated! Use include_record_object instead | [optional] 
 **include_activity_notes** | **bool** | Deprecated! Use include_notes instead | [optional] 
 **include_activity_tags** | **bool** | Deprecated! Use include_tags instead | [optional] 
-**include_recurrence** | **bool** | Inlcude recurrence object | [optional] 
-**include_matching_route_ids** | **bool** | Include matching reoute ids | [optional] 
+**include_recurrence** | **bool** | Include recurrence object | [optional] 
+**include_matching_route_ids** | **bool** | Include matching route ids | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

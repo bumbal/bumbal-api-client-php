@@ -198,7 +198,7 @@ class CommunicationMessageTypeModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name Name of this messagetype
+     * @param string $name Name of this message type
      * @return $this
      */
     public function setName($name)

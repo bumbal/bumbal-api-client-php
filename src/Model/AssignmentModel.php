@@ -995,7 +995,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets assignment_removed
-     * @param bool $assignment_removed Assignment is removed (=true). Removed assignments are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed assignments are usually irrepairable.
+     * @param bool $assignment_removed Assignment is removed (=true). Removed assignments are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed assignments are usually irreparable.
      * @return $this
      */
     public function setAssignmentRemoved($assignment_removed)

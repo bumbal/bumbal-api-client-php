@@ -1,10 +1,10 @@
-# ValueOptionModel
+# RecoveryUpdateArguments
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** | The name of the value option (just as a description) | [optional] 
-**value** | **string** | The value of the value option (should be posted as value for the setting) | [optional] 
+**filters** | [**\BumbalClient\Model\RecoveryFiltersModel**](RecoveryFiltersModel.md) |  | [optional] 
+**data** | [**\BumbalClient\Model\RecoveryModel**](RecoveryModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

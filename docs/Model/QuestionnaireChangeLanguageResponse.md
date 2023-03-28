@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **int[]** | List with answer id&#39;s succesful updated | [optional] 
+**success** | **int[]** | List with answer id&#39;s successful updated | [optional] 
 **failed** | **int[]** | List with answer id&#39;s failed to update | [optional] 
 **new_lang_code** | **string** | New Language Code | [optional] 
 **old_lang_code** | **string** | Old Language code | [optional] 

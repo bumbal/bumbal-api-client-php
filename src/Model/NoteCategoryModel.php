@@ -252,7 +252,7 @@ class NoteCategoryModel implements ArrayAccess
 
     /**
      * Sets show_in_app
-     * @param bool $show_in_app Whether the note category notes should be visible for teh drivers usign the bumbal mobile app
+     * @param bool $show_in_app Whether the note category notes should be visible for the drivers in the mobile app
      * @return $this
      */
     public function setShowInApp($show_in_app)

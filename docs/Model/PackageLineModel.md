@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **package_type_name** | **string** | Type of the Packages in the package line | [optional] 
 **package_type_id** | **int** | ID of the package type for the packages in this PackageLine | [optional] 
 **barcode** | **string** | Barcode of this packageline | [optional] 
-**barcodes** | **string[]** | For every barcode in this array, a seperate packageline will be created | [optional] 
+**barcodes** | **string[]** | For every barcode in this array, a separate packageline will be created | [optional] 
 **action_type_id** | **string** | Action type name, 1:inbound, 2:outbound, 3:assess | [optional] 
 **action_type_name** | **string** | Action type name | [optional] 
 **checked_by_driver** | **bool** | boolean for whether or not the packages have been checked by the driver | [optional] 

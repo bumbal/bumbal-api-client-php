@@ -225,6 +225,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_recoveries"
+     */
+    public function testPropertyIncludeRecoveries()
+    {
+    }
+
+    /**
      * Test attribute "include_package_line_links"
      */
     public function testPropertyIncludePackageLineLinks()

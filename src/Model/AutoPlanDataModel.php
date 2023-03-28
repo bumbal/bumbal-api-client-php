@@ -204,7 +204,7 @@ class AutoPlanDataModel implements ArrayAccess
 
     /**
      * Sets availability_key
-     * @param string $availability_key unique key from availability result, used to reuse fromer result
+     * @param string $availability_key unique key from availability result, used to reuse former result
      * @return $this
      */
     public function setAvailabilityKey($availability_key)

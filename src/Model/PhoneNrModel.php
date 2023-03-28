@@ -256,7 +256,7 @@ class PhoneNrModel implements ArrayAccess
 
     /**
      * Sets address_id
-     * @param int $address_id Address ID asociated with this email address
+     * @param int $address_id Address ID associated with this email address
      * @return $this
      */
     public function setAddressId($address_id)

@@ -304,6 +304,12 @@ Class | Method | HTTP request | Description
 *QuestionnairetemplatequestiontextApi* | [**updateQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#updatequestionnairetemplatequestiontext) | **PUT** /questionnaire-template-question-text/{questionnaire-template-question-textId} | Update a specific QuestionnaireTemplateQuestionText object
 *QuestionnairetypeApi* | [**retrieveListQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievelistquestionnairetype) | **PUT** /questionnaire-type | Retrieve List of QuestionnaireType
 *QuestionnairetypeApi* | [**retrieveQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievequestionnairetype) | **GET** /questionnaire-type/{questionnaire-typeId} | Retrieve a QuestionnaireType
+*RecoveryApi* | [**createRecovery**](docs/Api/RecoveryApi.md#createrecovery) | **POST** /recovery | Add a new Recovery
+*RecoveryApi* | [**deleteRecovery**](docs/Api/RecoveryApi.md#deleterecovery) | **DELETE** /recovery/{recoveryId} | Delete a Recovery
+*RecoveryApi* | [**retrieveListRecovery**](docs/Api/RecoveryApi.md#retrievelistrecovery) | **PUT** /recovery | Retrieve List of Recoveries
+*RecoveryApi* | [**retrieveRecovery**](docs/Api/RecoveryApi.md#retrieverecovery) | **GET** /recovery/{recoveryId} | Retrieve a Recovery
+*RecoveryApi* | [**setRecovery**](docs/Api/RecoveryApi.md#setrecovery) | **POST** /recovery/set | Set (create or update) a Recovery
+*RecoveryApi* | [**updateRecovery**](docs/Api/RecoveryApi.md#updaterecovery) | **PUT** /recovery/{recoveryId} | Update a Recovery
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
@@ -763,6 +769,12 @@ Class | Method | HTTP request | Description
  - [QuestionnaireTypeModel](docs/Model/QuestionnaireTypeModel.md)
  - [QuestionnaireTypeOptionsModel](docs/Model/QuestionnaireTypeOptionsModel.md)
  - [QuestionnaireTypeRetrieveListArguments](docs/Model/QuestionnaireTypeRetrieveListArguments.md)
+ - [RecoveryFiltersModel](docs/Model/RecoveryFiltersModel.md)
+ - [RecoveryListResponse](docs/Model/RecoveryListResponse.md)
+ - [RecoveryModel](docs/Model/RecoveryModel.md)
+ - [RecoveryOptionsModel](docs/Model/RecoveryOptionsModel.md)
+ - [RecoveryRetrieveListArguments](docs/Model/RecoveryRetrieveListArguments.md)
+ - [RecoveryUpdateArguments](docs/Model/RecoveryUpdateArguments.md)
  - [RecurrenceDeleteModel](docs/Model/RecurrenceDeleteModel.md)
  - [RecurrenceFiltersModel](docs/Model/RecurrenceFiltersModel.md)
  - [RecurrenceFinishResponse](docs/Model/RecurrenceFinishResponse.md)

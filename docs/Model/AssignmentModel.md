@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **assignment_created_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
 **assignment_updated_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
 **assignment_active** | **bool** | Assignment is active (&#x3D;true). Inactive assignments are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. | [optional] 
-**assignment_removed** | **bool** | Assignment is removed (&#x3D;true). Removed assignments are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed assignments are usually irrepairable. | [optional] 
+**assignment_removed** | **bool** | Assignment is removed (&#x3D;true). Removed assignments are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed assignments are usually irreparable. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

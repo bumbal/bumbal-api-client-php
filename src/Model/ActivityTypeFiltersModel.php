@@ -231,7 +231,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets special
-     * @param bool[] $special special activities are ones which are not planned but simly added by the driver during the route execution
+     * @param bool[] $special Special activities are ones which are not planned, but simply added by the driver during the route execution
      * @return $this
      */
     public function setSpecial($special)

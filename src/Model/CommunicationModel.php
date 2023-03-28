@@ -183,7 +183,7 @@ class CommunicationModel implements ArrayAccess
 
     const SAYWHEN_STATUS_NAME_CANCELLED = 'cancelled';
     const SAYWHEN_STATUS_NAME_OFFERED = 'offered';
-    const SAYWHEN_STATUS_NAME_PREFFED = 'preffed';
+    const SAYWHEN_STATUS_NAME_PREFERRED = 'preferred';
     const SAYWHEN_STATUS_NAME_CONFIRMED = 'confirmed';
     const SAYWHEN_STATUS_NAME_ACCEPTED = 'accepted';
     const SAYWHEN_STATUS_NAME_PLANNED = 'planned';
@@ -202,7 +202,7 @@ class CommunicationModel implements ArrayAccess
         return [
             self::SAYWHEN_STATUS_NAME_CANCELLED,
             self::SAYWHEN_STATUS_NAME_OFFERED,
-            self::SAYWHEN_STATUS_NAME_PREFFED,
+            self::SAYWHEN_STATUS_NAME_PREFERRED,
             self::SAYWHEN_STATUS_NAME_CONFIRMED,
             self::SAYWHEN_STATUS_NAME_ACCEPTED,
             self::SAYWHEN_STATUS_NAME_PLANNED,
@@ -541,7 +541,7 @@ class CommunicationModel implements ArrayAccess
 
     /**
      * Sets saywhen_status_id
-     * @param int $saywhen_status_id Saywhen StatusId of this Activity, 1:cancelled, 2:offered, 3:preffed, 4:confirmed, 5:accepted, 6:planned, 7:scheduled, 8:started, 9:completed
+     * @param int $saywhen_status_id Saywhen StatusId of this Activity, 1:cancelled, 2:offered, 3:preferred, 4:confirmed, 5:accepted, 6:planned, 7:scheduled, 8:started, 9:completed
      * @return $this
      */
     public function setSaywhenStatusId($saywhen_status_id)

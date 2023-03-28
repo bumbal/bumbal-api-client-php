@@ -1,6 +1,6 @@
 <?php
 /**
- * EmailModel
+ * RecoveryUpdateArguments
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * EmailModel Class Doc Comment
+ * RecoveryUpdateArguments Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EmailModel implements ArrayAccess
+class RecoveryUpdateArguments implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,15 @@ class EmailModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'EmailModel';
+    protected static $swaggerModelName = 'RecoveryUpdateArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'address_id' => 'int',
-        'email' => 'string',
-        'description' => 'string',
-        'primary' => 'bool'
+        'filters' => '\BumbalClient\Model\RecoveryFiltersModel',
+        'data' => '\BumbalClient\Model\RecoveryModel'
     ];
 
     /**
@@ -66,11 +63,8 @@ class EmailModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'address_id' => 'int64',
-        'email' => null,
-        'description' => null,
-        'primary' => null
+        'filters' => null,
+        'data' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +82,8 @@ class EmailModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'address_id' => 'address_id',
-        'email' => 'email',
-        'description' => 'description',
-        'primary' => 'primary'
+        'filters' => 'filters',
+        'data' => 'data'
     ];
 
 
@@ -101,11 +92,8 @@ class EmailModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'address_id' => 'setAddressId',
-        'email' => 'setEmail',
-        'description' => 'setDescription',
-        'primary' => 'setPrimary'
+        'filters' => 'setFilters',
+        'data' => 'setData'
     ];
 
 
@@ -114,11 +102,8 @@ class EmailModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'address_id' => 'getAddressId',
-        'email' => 'getEmail',
-        'description' => 'getDescription',
-        'primary' => 'getPrimary'
+        'filters' => 'getFilters',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -152,11 +137,8 @@ class EmailModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -185,106 +167,43 @@ class EmailModel implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets filters
+     * @return \BumbalClient\Model\RecoveryFiltersModel
      */
-    public function getId()
+    public function getFilters()
     {
-        return $this->container['id'];
+        return $this->container['filters'];
     }
 
     /**
-     * Sets id
-     * @param int $id Unique ID
+     * Sets filters
+     * @param \BumbalClient\Model\RecoveryFiltersModel $filters 
      * @return $this
      */
-    public function setId($id)
+    public function setFilters($filters)
     {
-        $this->container['id'] = $id;
+        $this->container['filters'] = $filters;
 
         return $this;
     }
 
     /**
-     * Gets address_id
-     * @return int
+     * Gets data
+     * @return \BumbalClient\Model\RecoveryModel
      */
-    public function getAddressId()
+    public function getData()
     {
-        return $this->container['address_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets address_id
-     * @param int $address_id Address ID associated with this email address
+     * Sets data
+     * @param \BumbalClient\Model\RecoveryModel $data 
      * @return $this
      */
-    public function setAddressId($address_id)
+    public function setData($data)
     {
-        $this->container['address_id'] = $address_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email Email address
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     * @param string $description Email address description
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets primary
-     * @return bool
-     */
-    public function getPrimary()
-    {
-        return $this->container['primary'];
-    }
-
-    /**
-     * Sets primary
-     * @param bool $primary primary Email address
-     * @return $this
-     */
-    public function setPrimary($primary)
-    {
-        $this->container['primary'] = $primary;
+        $this->container['data'] = $data;
 
         return $this;
     }

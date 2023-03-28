@@ -330,7 +330,7 @@ class QuestionnaireAnswerModel implements ArrayAccess
 
     /**
      * Sets question
-     * @param string $question Textuale representation of the question
+     * @param string $question Textual representation of the question
      * @return $this
      */
     public function setQuestion($question)
@@ -351,7 +351,7 @@ class QuestionnaireAnswerModel implements ArrayAccess
 
     /**
      * Sets answer
-     * @param string $answer Textuale representation of the answer
+     * @param string $answer Textual representation of the answer
      * @return $this
      */
     public function setAnswer($answer)

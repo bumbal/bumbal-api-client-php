@@ -126,6 +126,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => '\BumbalClient\Model\AppliedCapacitiesModel',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
+        'recoveries' => '\BumbalClient\Model\RecoveryModel[]',
         'payments' => '\BumbalClient\Model\PaymentModel[]',
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'brand_id' => 'int',
@@ -246,6 +247,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => null,
         'capacities' => null,
         'package_lines' => null,
+        'recoveries' => null,
         'payments' => null,
         'time_slots' => null,
         'brand_id' => null,
@@ -376,6 +378,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'package_lines' => 'package_lines',
+        'recoveries' => 'recoveries',
         'payments' => 'payments',
         'time_slots' => 'time_slots',
         'brand_id' => 'brand_id',
@@ -497,6 +500,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'package_lines' => 'setPackageLines',
+        'recoveries' => 'setRecoveries',
         'payments' => 'setPayments',
         'time_slots' => 'setTimeSlots',
         'brand_id' => 'setBrandId',
@@ -618,6 +622,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'package_lines' => 'getPackageLines',
+        'recoveries' => 'getRecoveries',
         'payments' => 'getPayments',
         'time_slots' => 'getTimeSlots',
         'brand_id' => 'getBrandId',
@@ -932,6 +937,7 @@ class ActivityModel implements ArrayAccess
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
+        $this->container['recoveries'] = isset($data['recoveries']) ? $data['recoveries'] : null;
         $this->container['payments'] = isset($data['payments']) ? $data['payments'] : null;
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
@@ -2576,6 +2582,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets recoveries
+     * @return \BumbalClient\Model\RecoveryModel[]
+     */
+    public function getRecoveries()
+    {
+        return $this->container['recoveries'];
+    }
+
+    /**
+     * Sets recoveries
+     * @param \BumbalClient\Model\RecoveryModel[] $recoveries 
+     * @return $this
+     */
+    public function setRecoveries($recoveries)
+    {
+        $this->container['recoveries'] = $recoveries;
+
+        return $this;
+    }
+
+    /**
      * Gets payments
      * @return \BumbalClient\Model\PaymentModel[]
      */
@@ -3342,7 +3369,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_removed
-     * @param bool $activity_removed Activity is removed (=true). Removed activities are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed activities are usually irrepairable.
+     * @param bool $activity_removed Activity is removed (=true). Removed activities are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed activities are usually irreparable.
      * @return $this
      */
     public function setActivityRemoved($activity_removed)

@@ -177,7 +177,7 @@ class ValueOptionModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name The name of the value option (just as a discription)
+     * @param string $name The name of the value option (just as a description)
      * @return $this
      */
     public function setName($name)

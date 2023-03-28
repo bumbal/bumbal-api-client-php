@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID | [optional] 
-**address_id** | **int** | Address ID asociated with this email address | [optional] 
+**address_id** | **int** | Address ID associated with this email address | [optional] 
 **country_code** | **string** | Phone number Country Code | [optional] 
 **phone_nr_type_name** | **string** | Phone number type name | [optional] 
 **nr** | **string** | Phone number | [optional] 

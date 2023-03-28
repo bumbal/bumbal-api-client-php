@@ -1,6 +1,6 @@
 <?php
 /**
- * EmailModel
+ * RecoveryListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * EmailModel Class Doc Comment
+ * RecoveryListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EmailModel implements ArrayAccess
+class RecoveryListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,17 @@ class EmailModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'EmailModel';
+    protected static $swaggerModelName = 'RecoveryListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'address_id' => 'int',
-        'email' => 'string',
-        'description' => 'string',
-        'primary' => 'bool'
+        'items' => '\BumbalClient\Model\RecoveryModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -66,11 +65,10 @@ class EmailModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'address_id' => 'int64',
-        'email' => null,
-        'description' => null,
-        'primary' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +86,10 @@ class EmailModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'address_id' => 'address_id',
-        'email' => 'email',
-        'description' => 'description',
-        'primary' => 'primary'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -101,11 +98,10 @@ class EmailModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'address_id' => 'setAddressId',
-        'email' => 'setEmail',
-        'description' => 'setDescription',
-        'primary' => 'setPrimary'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -114,11 +110,10 @@ class EmailModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'address_id' => 'getAddressId',
-        'email' => 'getEmail',
-        'description' => 'getDescription',
-        'primary' => 'getPrimary'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -152,11 +147,10 @@ class EmailModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -185,106 +179,85 @@ class EmailModel implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets items
+     * @return \BumbalClient\Model\RecoveryModel[]
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     * @param \BumbalClient\Model\RecoveryModel[] $items 
+     * @return $this
+     */
+    public function setItems($items)
+    {
+        $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_filtered
      * @return int
      */
-    public function getId()
+    public function getCountFiltered()
     {
-        return $this->container['id'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets id
-     * @param int $id Unique ID
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setId($id)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['id'] = $id;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets address_id
+     * Gets count_unfiltered
      * @return int
      */
-    public function getAddressId()
+    public function getCountUnfiltered()
     {
-        return $this->container['address_id'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets address_id
-     * @param int $address_id Address ID associated with this email address
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setAddressId($address_id)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['address_id'] = $address_id;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets email
-     * @return string
+     * Gets count_limited
+     * @return int
      */
-    public function getEmail()
+    public function getCountLimited()
     {
-        return $this->container['email'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets email
-     * @param string $email Email address
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setEmail($email)
+    public function setCountLimited($count_limited)
     {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     * @param string $description Email address description
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets primary
-     * @return bool
-     */
-    public function getPrimary()
-    {
-        return $this->container['primary'];
-    }
-
-    /**
-     * Sets primary
-     * @param bool $primary primary Email address
-     * @return $this
-     */
-    public function setPrimary($primary)
-    {
-        $this->container['primary'] = $primary;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

@@ -75,6 +75,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_meta_data' => 'bool',
         'include_notes' => 'bool',
         'include_package_lines' => 'bool',
+        'include_recoveries' => 'bool',
         'include_package_line_links' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_phone_nrs' => 'bool',
@@ -155,6 +156,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_meta_data' => null,
         'include_notes' => null,
         'include_package_lines' => null,
+        'include_recoveries' => null,
         'include_package_line_links' => null,
         'include_package_lines_info' => null,
         'include_phone_nrs' => null,
@@ -245,6 +247,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_meta_data' => 'include_meta_data',
         'include_notes' => 'include_notes',
         'include_package_lines' => 'include_package_lines',
+        'include_recoveries' => 'include_recoveries',
         'include_package_line_links' => 'include_package_line_links',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_phone_nrs' => 'include_phone_nrs',
@@ -326,6 +329,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_meta_data' => 'setIncludeMetaData',
         'include_notes' => 'setIncludeNotes',
         'include_package_lines' => 'setIncludePackageLines',
+        'include_recoveries' => 'setIncludeRecoveries',
         'include_package_line_links' => 'setIncludePackageLineLinks',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_phone_nrs' => 'setIncludePhoneNrs',
@@ -407,6 +411,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_meta_data' => 'getIncludeMetaData',
         'include_notes' => 'getIncludeNotes',
         'include_package_lines' => 'getIncludePackageLines',
+        'include_recoveries' => 'getIncludeRecoveries',
         'include_package_line_links' => 'getIncludePackageLineLinks',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_phone_nrs' => 'getIncludePhoneNrs',
@@ -513,6 +518,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
         $this->container['include_package_lines'] = isset($data['include_package_lines']) ? $data['include_package_lines'] : null;
+        $this->container['include_recoveries'] = isset($data['include_recoveries']) ? $data['include_recoveries'] : null;
         $this->container['include_package_line_links'] = isset($data['include_package_line_links']) ? $data['include_package_line_links'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
@@ -645,7 +651,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address
-     * @param bool $include_address Include the address in the addressbook
+     * @param bool $include_address Include the address from the address book
      * @return $this
      */
     public function setIncludeAddress($include_address)
@@ -666,7 +672,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_applied
-     * @param bool $include_address_applied Include the addres applied to the activity (not the original addres from the address book)
+     * @param bool $include_address_applied Include the address applied to the activity (not the original address from the address book)
      * @return $this
      */
     public function setIncludeAddressApplied($include_address_applied)
@@ -1029,6 +1035,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludePackageLines($include_package_lines)
     {
         $this->container['include_package_lines'] = $include_package_lines;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_recoveries
+     * @return bool
+     */
+    public function getIncludeRecoveries()
+    {
+        return $this->container['include_recoveries'];
+    }
+
+    /**
+     * Sets include_recoveries
+     * @param bool $include_recoveries 
+     * @return $this
+     */
+    public function setIncludeRecoveries($include_recoveries)
+    {
+        $this->container['include_recoveries'] = $include_recoveries;
 
         return $this;
     }
@@ -1884,7 +1911,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_object
-     * @param bool $include_address_object Deprecated! Use include_adderess or include_address_applied instead
+     * @param bool $include_address_object Deprecated! Use include_address or include_address_applied instead
      * @return $this
      */
     public function setIncludeAddressObject($include_address_object)
@@ -2094,7 +2121,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_recurrence
-     * @param bool $include_recurrence Inlcude recurrence object
+     * @param bool $include_recurrence Include recurrence object
      * @return $this
      */
     public function setIncludeRecurrence($include_recurrence)
@@ -2115,7 +2142,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_matching_route_ids
-     * @param bool $include_matching_route_ids Include matching reoute ids
+     * @param bool $include_matching_route_ids Include matching route ids
      * @return $this
      */
     public function setIncludeMatchingRouteIds($include_matching_route_ids)
