@@ -189,7 +189,7 @@ class NotificationCategoryListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\NotificationCategoryModel[] $items 
+     * @param \BumbalClient\Model\NotificationCategoryModel[] $items
      * @return $this
      */
     public function setItems($items)

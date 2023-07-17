@@ -189,7 +189,7 @@ class RecurrenceListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\RecurrenceModel[] $items 
+     * @param \BumbalClient\Model\RecurrenceModel[] $items
      * @return $this
      */
     public function setItems($items)

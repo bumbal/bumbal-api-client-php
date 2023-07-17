@@ -189,7 +189,7 @@ class UnsuccessfulReasonListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\UnsuccessfulReasonModel[] $items 
+     * @param \BumbalClient\Model\UnsuccessfulReasonModel[] $items
      * @return $this
      */
     public function setItems($items)

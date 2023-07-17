@@ -154,8 +154,8 @@ class UsersRetrieveListArguments implements ArrayAccess
     const SORTING_COLUMN_SEARCH_ZIP = 'search_zip';
     const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
     const SORTING_COLUMN_ACTIVATED = 'activated';
-    const SORTING_DIRECTION_ASC = 'asc';
-    const SORTING_DIRECTION_DESC = 'desc';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
     
@@ -267,7 +267,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\UsersOptionsModel $options 
+     * @param \BumbalClient\Model\UsersOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -288,7 +288,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\UsersFiltersModel $filters 
+     * @param \BumbalClient\Model\UsersFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -309,7 +309,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -330,7 +330,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -411,7 +411,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -432,7 +432,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

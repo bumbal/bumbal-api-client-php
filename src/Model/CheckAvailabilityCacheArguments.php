@@ -177,7 +177,7 @@ class CheckAvailabilityCacheArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\CheckAvailabilityCacheDataModel $data 
+     * @param \BumbalClient\Model\CheckAvailabilityCacheDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -198,7 +198,7 @@ class CheckAvailabilityCacheArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\CheckAvailabilityCacheFiltersModel $filters 
+     * @param \BumbalClient\Model\CheckAvailabilityCacheFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

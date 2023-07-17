@@ -213,7 +213,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_addresses
-     * @param bool $include_addresses 
+     * @param bool $include_addresses
      * @return $this
      */
     public function setIncludeAddresses($include_addresses)
@@ -234,7 +234,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_user_meta_data
-     * @param bool $include_user_meta_data 
+     * @param bool $include_user_meta_data
      * @return $this
      */
     public function setIncludeUserMetaData($include_user_meta_data)
@@ -255,7 +255,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_user_tags
-     * @param bool $include_user_tags 
+     * @param bool $include_user_tags
      * @return $this
      */
     public function setIncludeUserTags($include_user_tags)
@@ -276,7 +276,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_party_name
-     * @param bool $include_party_name 
+     * @param bool $include_party_name
      * @return $this
      */
     public function setIncludePartyName($include_party_name)
@@ -297,7 +297,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_pause
-     * @param bool $include_pause 
+     * @param bool $include_pause
      * @return $this
      */
     public function setIncludePause($include_pause)
@@ -318,7 +318,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zones
-     * @param bool $include_zones 
+     * @param bool $include_zones
      * @return $this
      */
     public function setIncludeZones($include_zones)
@@ -339,7 +339,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_unavailabilities
-     * @param bool $include_driver_unavailabilities 
+     * @param bool $include_driver_unavailabilities
      * @return $this
      */
     public function setIncludeDriverUnavailabilities($include_driver_unavailabilities)
@@ -360,7 +360,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links 
+     * @param bool $include_links
      * @return $this
      */
     public function setIncludeLinks($include_links)

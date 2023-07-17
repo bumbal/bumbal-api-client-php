@@ -189,7 +189,7 @@ class NoteCategoryListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\NoteCategoryModel[] $items 
+     * @param \BumbalClient\Model\NoteCategoryModel[] $items
      * @return $this
      */
     public function setItems($items)

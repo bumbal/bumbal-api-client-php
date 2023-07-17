@@ -252,7 +252,7 @@ class ZoneRangeModel implements ArrayAccess
 
     /**
      * Sets iso_country
-     * @param string $iso_country 
+     * @param string $iso_country
      * @return $this
      */
     public function setIsoCountry($iso_country)

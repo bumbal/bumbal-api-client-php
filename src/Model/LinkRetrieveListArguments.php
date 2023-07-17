@@ -269,7 +269,7 @@ class LinkRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\LinkOptionsModel $options 
+     * @param \BumbalClient\Model\LinkOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -290,7 +290,7 @@ class LinkRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\LinkFiltersModel $filters 
+     * @param \BumbalClient\Model\LinkFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -311,7 +311,7 @@ class LinkRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -332,7 +332,7 @@ class LinkRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -413,7 +413,7 @@ class LinkRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -434,7 +434,7 @@ class LinkRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets count_only
-     * @param bool $count_only 
+     * @param bool $count_only
      * @return $this
      */
     public function setCountOnly($count_only)

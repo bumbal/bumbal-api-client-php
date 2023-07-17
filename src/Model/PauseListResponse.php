@@ -189,7 +189,7 @@ class PauseListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\PauseModel[] $items 
+     * @param \BumbalClient\Model\PauseModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -189,7 +189,7 @@ class ApplyPlanningDataModel implements ArrayAccess
 
     /**
      * Sets assigned
-     * @param object $assigned 
+     * @param object $assigned
      * @return $this
      */
     public function setAssigned($assigned)
@@ -210,7 +210,7 @@ class ApplyPlanningDataModel implements ArrayAccess
 
     /**
      * Sets unassigned
-     * @param object $unassigned 
+     * @param object $unassigned
      * @return $this
      */
     public function setUnassigned($unassigned)
@@ -231,7 +231,7 @@ class ApplyPlanningDataModel implements ArrayAccess
 
     /**
      * Sets routes
-     * @param object $routes 
+     * @param object $routes
      * @return $this
      */
     public function setRoutes($routes)
@@ -252,7 +252,7 @@ class ApplyPlanningDataModel implements ArrayAccess
 
     /**
      * Sets after_updates
-     * @param object $after_updates 
+     * @param object $after_updates
      * @return $this
      */
     public function setAfterUpdates($after_updates)

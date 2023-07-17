@@ -183,7 +183,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\AddTagToObjectDataModel $data 
+     * @param \BumbalClient\Model\AddTagToObjectDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -204,7 +204,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\AddTagToObjectOptionsModel $options 
+     * @param \BumbalClient\Model\AddTagToObjectOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -225,7 +225,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\AddTagToObjectFiltersModel $filters 
+     * @param \BumbalClient\Model\AddTagToObjectFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

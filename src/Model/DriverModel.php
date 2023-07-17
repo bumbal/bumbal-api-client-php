@@ -579,7 +579,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -600,7 +600,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @param \BumbalClient\Model\ZoneModel[] $zones
      * @return $this
      */
     public function setZones($zones)
@@ -663,7 +663,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -684,7 +684,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -747,7 +747,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -768,7 +768,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -780,7 +780,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets driver_created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDriverCreatedAt()
     {
@@ -789,7 +789,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets driver_created_at
-     * @param \DateTime $driver_created_at created_at date time
+     * @param \DateTime|string|null $driver_created_at created_at date time
      * @return $this
      */
     public function setDriverCreatedAt($driver_created_at)
@@ -801,7 +801,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets driver_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDriverUpdatedAt()
     {
@@ -810,7 +810,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets driver_updated_at
-     * @param \DateTime $driver_updated_at updated_at date time
+     * @param \DateTime|string|null $driver_updated_at updated_at date time
      * @return $this
      */
     public function setDriverUpdatedAt($driver_updated_at)

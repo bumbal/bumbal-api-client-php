@@ -189,7 +189,7 @@ class EquipmentListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\EquipmentModel[] $items 
+     * @param \BumbalClient\Model\EquipmentModel[] $items
      * @return $this
      */
     public function setItems($items)

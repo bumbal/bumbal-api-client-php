@@ -54,7 +54,10 @@ class CommunicationMappingFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'updated_at_since' => '\DateTime'
+        'updated_at_since' => '\DateTime',
+        'tag_names' => 'string[]',
+        'communication_message_type_id' => 'int[]',
+        'communication_message_type_names' => 'int[]'
     ];
 
     /**
@@ -62,7 +65,10 @@ class CommunicationMappingFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'updated_at_since' => 'date-time'
+        'updated_at_since' => 'date-time',
+        'tag_names' => null,
+        'communication_message_type_id' => null,
+        'communication_message_type_names' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +86,10 @@ class CommunicationMappingFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'updated_at_since' => 'updated_at_since'
+        'updated_at_since' => 'updated_at_since',
+        'tag_names' => 'tag_names',
+        'communication_message_type_id' => 'communication_message_type_id',
+        'communication_message_type_names' => 'communication_message_type_names'
     ];
 
 
@@ -89,7 +98,10 @@ class CommunicationMappingFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'updated_at_since' => 'setUpdatedAtSince'
+        'updated_at_since' => 'setUpdatedAtSince',
+        'tag_names' => 'setTagNames',
+        'communication_message_type_id' => 'setCommunicationMessageTypeId',
+        'communication_message_type_names' => 'setCommunicationMessageTypeNames'
     ];
 
 
@@ -98,7 +110,10 @@ class CommunicationMappingFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'updated_at_since' => 'getUpdatedAtSince'
+        'updated_at_since' => 'getUpdatedAtSince',
+        'tag_names' => 'getTagNames',
+        'communication_message_type_id' => 'getCommunicationMessageTypeId',
+        'communication_message_type_names' => 'getCommunicationMessageTypeNames'
     ];
 
     public static function attributeMap()
@@ -133,6 +148,9 @@ class CommunicationMappingFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['communication_message_type_id'] = isset($data['communication_message_type_id']) ? $data['communication_message_type_id'] : null;
+        $this->container['communication_message_type_names'] = isset($data['communication_message_type_names']) ? $data['communication_message_type_names'] : null;
     }
 
     /**
@@ -162,7 +180,7 @@ class CommunicationMappingFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -171,12 +189,75 @@ class CommunicationMappingFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime $updated_at_since Show updated since
+     * @param \DateTime|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
     {
         $this->container['updated_at_since'] = $updated_at_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return string[]
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param string[] $tag_names Tag names
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_message_type_id
+     * @return int[]
+     */
+    public function getCommunicationMessageTypeId()
+    {
+        return $this->container['communication_message_type_id'];
+    }
+
+    /**
+     * Sets communication_message_type_id
+     * @param int[] $communication_message_type_id Communication message type ID's
+     * @return $this
+     */
+    public function setCommunicationMessageTypeId($communication_message_type_id)
+    {
+        $this->container['communication_message_type_id'] = $communication_message_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_message_type_names
+     * @return int[]
+     */
+    public function getCommunicationMessageTypeNames()
+    {
+        return $this->container['communication_message_type_names'];
+    }
+
+    /**
+     * Sets communication_message_type_names
+     * @param int[] $communication_message_type_names Communication message type names
+     * @return $this
+     */
+    public function setCommunicationMessageTypeNames($communication_message_type_names)
+    {
+        $this->container['communication_message_type_names'] = $communication_message_type_names;
 
         return $this;
     }

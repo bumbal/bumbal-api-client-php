@@ -213,7 +213,7 @@ class VehicleOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tags
-     * @param bool $include_tags 
+     * @param bool $include_tags
      * @return $this
      */
     public function setIncludeTags($include_tags)
@@ -234,7 +234,7 @@ class VehicleOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links 
+     * @param bool $include_links
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -255,7 +255,7 @@ class VehicleOptionsModel implements ArrayAccess
 
     /**
      * Sets include_meta_data
-     * @param bool $include_meta_data 
+     * @param bool $include_meta_data
      * @return $this
      */
     public function setIncludeMetaData($include_meta_data)
@@ -276,7 +276,7 @@ class VehicleOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
+     * @param bool $include_updated_by_name
      * @return $this
      */
     public function setIncludeUpdatedByName($include_updated_by_name)

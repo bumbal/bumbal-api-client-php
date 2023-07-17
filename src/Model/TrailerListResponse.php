@@ -189,7 +189,7 @@ class TrailerListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\TrailerModel[] $items 
+     * @param \BumbalClient\Model\TrailerModel[] $items
      * @return $this
      */
     public function setItems($items)

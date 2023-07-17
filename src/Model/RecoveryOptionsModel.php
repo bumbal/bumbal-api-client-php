@@ -207,7 +207,7 @@ class RecoveryOptionsModel implements ArrayAccess
 
     /**
      * Sets include_notes
-     * @param bool $include_notes 
+     * @param bool $include_notes
      * @return $this
      */
     public function setIncludeNotes($include_notes)
@@ -228,7 +228,7 @@ class RecoveryOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -249,7 +249,7 @@ class RecoveryOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_ids
-     * @param bool $include_activity_ids 
+     * @param bool $include_activity_ids
      * @return $this
      */
     public function setIncludeActivityIds($include_activity_ids)
@@ -270,7 +270,7 @@ class RecoveryOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links 
+     * @param bool $include_links
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -291,7 +291,7 @@ class RecoveryOptionsModel implements ArrayAccess
 
     /**
      * Sets include_meta_data
-     * @param bool $include_meta_data 
+     * @param bool $include_meta_data
      * @return $this
      */
     public function setIncludeMetaData($include_meta_data)
@@ -312,7 +312,7 @@ class RecoveryOptionsModel implements ArrayAccess
 
     /**
      * Sets include_files
-     * @param bool $include_files 
+     * @param bool $include_files
      * @return $this
      */
     public function setIncludeFiles($include_files)
@@ -333,7 +333,7 @@ class RecoveryOptionsModel implements ArrayAccess
 
     /**
      * Sets include_capacities
-     * @param bool $include_capacities 
+     * @param bool $include_capacities
      * @return $this
      */
     public function setIncludeCapacities($include_capacities)

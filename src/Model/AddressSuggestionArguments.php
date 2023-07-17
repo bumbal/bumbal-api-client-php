@@ -183,7 +183,7 @@ class AddressSuggestionArguments implements ArrayAccess
 
     /**
      * Sets iso_country
-     * @param float $iso_country 
+     * @param float $iso_country
      * @return $this
      */
     public function setIsoCountry($iso_country)
@@ -204,7 +204,7 @@ class AddressSuggestionArguments implements ArrayAccess
 
     /**
      * Sets zipcode
-     * @param int $zipcode 
+     * @param int $zipcode
      * @return $this
      */
     public function setZipcode($zipcode)
@@ -225,7 +225,7 @@ class AddressSuggestionArguments implements ArrayAccess
 
     /**
      * Sets house_nr
-     * @param string $house_nr 
+     * @param string $house_nr
      * @return $this
      */
     public function setHouseNr($house_nr)

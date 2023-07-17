@@ -378,7 +378,7 @@ class QuestionnaireModel implements ArrayAccess
 
     /**
      * Sets answers
-     * @param \BumbalClient\Model\QuestionnaireAnswerModel[] $answers 
+     * @param \BumbalClient\Model\QuestionnaireAnswerModel[] $answers
      * @return $this
      */
     public function setAnswers($answers)

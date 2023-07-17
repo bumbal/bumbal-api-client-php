@@ -282,7 +282,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -303,7 +303,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -315,7 +315,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -324,7 +324,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -336,7 +336,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -345,7 +345,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * @param \DateTime|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)

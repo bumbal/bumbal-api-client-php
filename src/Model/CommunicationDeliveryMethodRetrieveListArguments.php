@@ -265,7 +265,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel $options 
+     * @param \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -286,7 +286,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel $filters 
+     * @param \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -367,7 +367,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -388,7 +388,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -409,7 +409,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -430,7 +430,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

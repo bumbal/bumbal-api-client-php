@@ -177,7 +177,7 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets exclude_template_content
-     * @param bool $exclude_template_content 
+     * @param bool $exclude_template_content
      * @return $this
      */
     public function setExcludeTemplateContent($exclude_template_content)
@@ -198,7 +198,7 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_mappings
-     * @param bool $include_mappings 
+     * @param bool $include_mappings
      * @return $this
      */
     public function setIncludeMappings($include_mappings)

@@ -189,7 +189,7 @@ class CommunicationTemplateListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\CommunicationTemplateModel[] $items 
+     * @param \BumbalClient\Model\CommunicationTemplateModel[] $items
      * @return $this
      */
     public function setItems($items)

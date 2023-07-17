@@ -171,7 +171,7 @@ class UserNotificationOptionsModel implements ArrayAccess
 
     /**
      * Sets include_notification
-     * @param bool $include_notification 
+     * @param bool $include_notification
      * @return $this
      */
     public function setIncludeNotification($include_notification)

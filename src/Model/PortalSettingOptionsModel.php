@@ -171,7 +171,7 @@ class PortalSettingOptionsModel implements ArrayAccess
 
     /**
      * Sets include_portal_name
-     * @param bool $include_portal_name 
+     * @param bool $include_portal_name
      * @return $this
      */
     public function setIncludePortalName($include_portal_name)

@@ -189,7 +189,7 @@ class LanguageListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\LanguageModel[] $items 
+     * @param \BumbalClient\Model\LanguageModel[] $items
      * @return $this
      */
     public function setItems($items)

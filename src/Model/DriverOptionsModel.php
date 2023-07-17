@@ -279,7 +279,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -300,7 +300,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_meta_data
-     * @param bool $include_meta_data 
+     * @param bool $include_meta_data
      * @return $this
      */
     public function setIncludeMetaData($include_meta_data)
@@ -321,7 +321,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tags
-     * @param bool $include_tags 
+     * @param bool $include_tags
      * @return $this
      */
     public function setIncludeTags($include_tags)
@@ -342,7 +342,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_names
-     * @param bool $include_tag_names 
+     * @param bool $include_tag_names
      * @return $this
      */
     public function setIncludeTagNames($include_tag_names)
@@ -363,7 +363,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_ids
-     * @param bool $include_tag_ids 
+     * @param bool $include_tag_ids
      * @return $this
      */
     public function setIncludeTagIds($include_tag_ids)
@@ -384,7 +384,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_addresses
-     * @param bool $include_addresses 
+     * @param bool $include_addresses
      * @return $this
      */
     public function setIncludeAddresses($include_addresses)
@@ -405,7 +405,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links 
+     * @param bool $include_links
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -426,7 +426,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_notes
-     * @param bool $include_notes 
+     * @param bool $include_notes
      * @return $this
      */
     public function setIncludeNotes($include_notes)
@@ -447,7 +447,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zones
-     * @param bool $include_zones 
+     * @param bool $include_zones
      * @return $this
      */
     public function setIncludeZones($include_zones)
@@ -468,7 +468,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zone_names
-     * @param bool $include_zone_names 
+     * @param bool $include_zone_names
      * @return $this
      */
     public function setIncludeZoneNames($include_zone_names)
@@ -489,7 +489,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zone_ids
-     * @param bool $include_zone_ids 
+     * @param bool $include_zone_ids
      * @return $this
      */
     public function setIncludeZoneIds($include_zone_ids)
@@ -510,7 +510,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_files
-     * @param bool $include_files 
+     * @param bool $include_files
      * @return $this
      */
     public function setIncludeFiles($include_files)

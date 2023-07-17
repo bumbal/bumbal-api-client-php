@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *ActivitytypeApi* | [**retrieveActivityType**](docs/Api/ActivitytypeApi.md#retrieveactivitytype) | **GET** /activity-type/{activityTypeId} | Find ActivityType by ID
 *ActivitytypeApi* | [**retrieveListActivityType**](docs/Api/ActivitytypeApi.md#retrievelistactivitytype) | **PUT** /activity-type | Retrieve List of ActivityTypes
 *AddressApi* | [**deleteAddress**](docs/Api/AddressApi.md#deleteaddress) | **DELETE** /address/{addressId} | Delete an address
+*AddressApi* | [**geoCodeAddress**](docs/Api/AddressApi.md#geocodeaddress) | **POST** /address/geo-code | GeoCode an address
 *AddressApi* | [**retrieveAddress**](docs/Api/AddressApi.md#retrieveaddress) | **GET** /address/{addressId} | Retrieve a Address
 *AddressApi* | [**retrieveListAddress**](docs/Api/AddressApi.md#retrievelistaddress) | **PUT** /address | Retrieve List of Addresses
 *AddressApi* | [**reverseGeoCodeAddress**](docs/Api/AddressApi.md#reversegeocodeaddress) | **POST** /address/reverse-geo-code | Reverse Geo Code an address
@@ -130,7 +131,10 @@ Class | Method | HTTP request | Description
 *CapacitytypeApi* | [**setCapacityType**](docs/Api/CapacitytypeApi.md#setcapacitytype) | **POST** /capacity-type/set | Set (create or update) an CapacityType
 *CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
+*CommunicationdeliveryApi* | [**retrieveCommunicationDeliveryMethod**](docs/Api/CommunicationdeliveryApi.md#retrievecommunicationdeliverymethod) | **GET** /communication-delivery-method/{communicationDeliveryMethodId} | Retrieve a communication delivery method
 *CommunicationdeliverymethodApi* | [**createCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#createcommunicationdeliverymethod) | **POST** /communication-delivery-method/set | Create a communication delivery method
+*CommunicationdeliverymethodApi* | [**deleteCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#deletecommunicationdeliverymethod) | **DELETE** /communication-delivery-method/{communicationDeliveryMethodId} | Delete a communication delivery method
+*CommunicationdeliverymethodApi* | [**retrieveListCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#retrievelistcommunicationdeliverymethod) | **PUT** /communication-delivery-method | Retrieve List of communication delivery methods
 *CommunicationmappingApi* | [**createCommunicationMapping**](docs/Api/CommunicationmappingApi.md#createcommunicationmapping) | **POST** /communication-mapping/set | Create or update a communication mapping
 *CommunicationmappingApi* | [**deleteCommunicationMapping**](docs/Api/CommunicationmappingApi.md#deletecommunicationmapping) | **DELETE** /communication-mapping/{communicationMappingId} | Delete a communication mapping
 *CommunicationmappingApi* | [**retrieveCommunicationMapping**](docs/Api/CommunicationmappingApi.md#retrievecommunicationmapping) | **GET** /communication-mapping/{communicationMappingId} | Retrieve a communication mapping
@@ -144,7 +148,7 @@ Class | Method | HTTP request | Description
 *CommunicationmessagetypesApi* | [**listCommunicationMessageTypes**](docs/Api/CommunicationmessagetypesApi.md#listcommunicationmessagetypes) | **PUT** /communication-message-type/get-list | List all CommunicationMessageTypes
 *CommunicationtemplateApi* | [**createCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#createcommunicationtemplate) | **POST** /communication-template/set | Create a Communication Template
 *CommunicationtemplateApi* | [**deleteCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#deletecommunicationtemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communicationtemplate
-*CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communicationtemplate
+*CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communication template
 *CommunicationtemplateApi* | [**retrieveListTemplate**](docs/Api/CommunicationtemplateApi.md#retrievelisttemplate) | **PUT** /communication-template | Retrieve List of Templates
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
@@ -245,8 +249,6 @@ Class | Method | HTTP request | Description
 *PortalApi* | [**retrievePortal**](docs/Api/PortalApi.md#retrieveportal) | **GET** /portal/{portalId} | Retrieve a Portal
 *PortalApi* | [**setPortal**](docs/Api/PortalApi.md#setportal) | **POST** /portal/set | Set (create or update) a Portal
 *PortalApi* | [**updatePortal**](docs/Api/PortalApi.md#updateportal) | **PUT** /portal/{portalId} | Update a Portal
-*PortalcommunicationApi* | [**retrieveActivityByIdCommunication**](docs/Api/PortalcommunicationApi.md#retrieveactivitybyidcommunication) | **GET** /portal-communication/retrieve-activity-by-id/{activityId} | Retrieve an activity by ID
-*PortalcommunicationApi* | [**triggerMessageCommunicationByMessageType**](docs/Api/PortalcommunicationApi.md#triggermessagecommunicationbymessagetype) | **POST** /portal-communication/trigger-message-by-message-type | Trigger Message to Communication by Message Type
 *PortalsettingApi* | [**retrieveListPortalSetting**](docs/Api/PortalsettingApi.md#retrievelistportalsetting) | **PUT** /portal-setting | Retrieve List of Portal Settings
 *PortalsettingApi* | [**retrievePortalSetting**](docs/Api/PortalsettingApi.md#retrieveportalsetting) | **GET** /portal-setting/{portal-settingId} | Retrieve a PortalSetting
 *PortalsettingApi* | [**setPortalSetting**](docs/Api/PortalsettingApi.md#setportalsetting) | **POST** /portal-setting/set | Set (create or update) a PortalSetting
@@ -441,6 +443,8 @@ Class | Method | HTTP request | Description
  - [AddTagToObjectOptionsModel](docs/Model/AddTagToObjectOptionsModel.md)
  - [AddressAppliedModel](docs/Model/AddressAppliedModel.md)
  - [AddressFiltersModel](docs/Model/AddressFiltersModel.md)
+ - [AddressGeoCodeArguments](docs/Model/AddressGeoCodeArguments.md)
+ - [AddressGeoCodeResponse](docs/Model/AddressGeoCodeResponse.md)
  - [AddressListResponse](docs/Model/AddressListResponse.md)
  - [AddressModel](docs/Model/AddressModel.md)
  - [AddressOptionsModel](docs/Model/AddressOptionsModel.md)

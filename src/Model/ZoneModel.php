@@ -306,7 +306,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets filter_tags
-     * @param object $filter_tags 
+     * @param object $filter_tags
      * @return $this
      */
     public function setFilterTags($filter_tags)
@@ -327,7 +327,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -348,7 +348,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -369,7 +369,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets zone_ranges
-     * @param \BumbalClient\Model\ZoneRangeModel[] $zone_ranges 
+     * @param \BumbalClient\Model\ZoneRangeModel[] $zone_ranges
      * @return $this
      */
     public function setZoneRanges($zone_ranges)
@@ -390,7 +390,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets brands
-     * @param \BumbalClient\Model\BrandModel[] $brands 
+     * @param \BumbalClient\Model\BrandModel[] $brands
      * @return $this
      */
     public function setBrands($brands)
@@ -423,7 +423,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets zone_created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getZoneCreatedAt()
     {
@@ -432,7 +432,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets zone_created_at
-     * @param \DateTime $zone_created_at created_at date time
+     * @param \DateTime|string|null $zone_created_at created_at date time
      * @return $this
      */
     public function setZoneCreatedAt($zone_created_at)
@@ -444,7 +444,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets zone_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getZoneUpdatedAt()
     {
@@ -453,7 +453,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets zone_updated_at
-     * @param \DateTime $zone_updated_at updated_at date time
+     * @param \DateTime|string|null $zone_updated_at updated_at date time
      * @return $this
      */
     public function setZoneUpdatedAt($zone_updated_at)

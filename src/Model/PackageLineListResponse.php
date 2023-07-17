@@ -189,7 +189,7 @@ class PackageLineListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\PackageLineModel[] $items 
+     * @param \BumbalClient\Model\PackageLineModel[] $items
      * @return $this
      */
     public function setItems($items)

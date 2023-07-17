@@ -189,7 +189,7 @@ class LinkListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\LinkModel[] $items 
+     * @param \BumbalClient\Model\LinkModel[] $items
      * @return $this
      */
     public function setItems($items)

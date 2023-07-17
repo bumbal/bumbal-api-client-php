@@ -159,8 +159,8 @@ class EquipmentRetrieveListArguments implements ArrayAccess
     const SORTING_COLUMN_NAME = 'name';
     const SORTING_COLUMN_REGISTRATION_NR = 'registration_nr';
     const SORTING_COLUMN_INFO = 'info';
-    const SORTING_DIRECTION_ASC = 'asc';
-    const SORTING_DIRECTION_DESC = 'desc';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
     
@@ -273,7 +273,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\EquipmentOptionsModel $options 
+     * @param \BumbalClient\Model\EquipmentOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -294,7 +294,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\EquipmentFiltersModel $filters 
+     * @param \BumbalClient\Model\EquipmentFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -315,7 +315,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -336,7 +336,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -417,7 +417,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -438,7 +438,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)
@@ -459,7 +459,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets count_only
-     * @param bool $count_only 
+     * @param bool $count_only
      * @return $this
      */
     public function setCountOnly($count_only)

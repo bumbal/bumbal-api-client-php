@@ -186,7 +186,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeFrom()
     {
@@ -195,7 +195,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from 
+     * @param \DateTime|string|null $date_time_from
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -207,7 +207,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeTo()
     {
@@ -216,7 +216,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to 
+     * @param \DateTime|string|null $date_time_to
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -228,7 +228,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_from
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getProposedPlanDateTimeFrom()
     {
@@ -237,7 +237,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_from
-     * @param \DateTime $proposed_plan_date_time_from 
+     * @param \DateTime|string|null $proposed_plan_date_time_from
      * @return $this
      */
     public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
@@ -249,7 +249,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_to
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getProposedPlanDateTimeTo()
     {
@@ -258,7 +258,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_to
-     * @param \DateTime $proposed_plan_date_time_to 
+     * @param \DateTime|string|null $proposed_plan_date_time_to
      * @return $this
      */
     public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
@@ -279,7 +279,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_driver
-     * @param \BumbalClient\Model\DriverModel $proposed_driver 
+     * @param \BumbalClient\Model\DriverModel $proposed_driver
      * @return $this
      */
     public function setProposedDriver($proposed_driver)

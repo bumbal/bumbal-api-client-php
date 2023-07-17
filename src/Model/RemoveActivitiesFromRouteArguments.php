@@ -171,7 +171,7 @@ class RemoveActivitiesFromRouteArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ActivityFiltersModel $filters 
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

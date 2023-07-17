@@ -189,7 +189,7 @@ class RoutesEtaResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\RouteEtaModel[] $items 
+     * @param \BumbalClient\Model\RouteEtaModel[] $items
      * @return $this
      */
     public function setItems($items)

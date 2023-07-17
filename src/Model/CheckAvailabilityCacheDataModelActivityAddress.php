@@ -35,7 +35,6 @@ use \ArrayAccess;
  * CheckAvailabilityCacheDataModelActivityAddress Class Doc Comment
  *
  * @category    Class
- * @description 
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -190,7 +189,7 @@ class CheckAvailabilityCacheDataModelActivityAddress implements ArrayAccess
 
     /**
      * Sets zipcode
-     * @param string $zipcode 
+     * @param string $zipcode
      * @return $this
      */
     public function setZipcode($zipcode)
@@ -211,7 +210,7 @@ class CheckAvailabilityCacheDataModelActivityAddress implements ArrayAccess
 
     /**
      * Sets iso_country
-     * @param string $iso_country 
+     * @param string $iso_country
      * @return $this
      */
     public function setIsoCountry($iso_country)

@@ -189,7 +189,7 @@ class RecoveryListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\RecoveryModel[] $items 
+     * @param \BumbalClient\Model\RecoveryModel[] $items
      * @return $this
      */
     public function setItems($items)

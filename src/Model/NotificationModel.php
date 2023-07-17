@@ -462,7 +462,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Gets notification_created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getNotificationCreatedAt()
     {
@@ -471,7 +471,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets notification_created_at
-     * @param \DateTime $notification_created_at created_at date time
+     * @param \DateTime|string|null $notification_created_at created_at date time
      * @return $this
      */
     public function setNotificationCreatedAt($notification_created_at)
@@ -483,7 +483,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Gets notification_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getNotificationUpdatedAt()
     {
@@ -492,7 +492,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets notification_updated_at
-     * @param \DateTime $notification_updated_at updated_at date time
+     * @param \DateTime|string|null $notification_updated_at updated_at date time
      * @return $this
      */
     public function setNotificationUpdatedAt($notification_updated_at)
@@ -555,7 +555,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets users
-     * @param \BumbalClient\Model\UserNotificationModel[] $users 
+     * @param \BumbalClient\Model\UserNotificationModel[] $users
      * @return $this
      */
     public function setUsers($users)

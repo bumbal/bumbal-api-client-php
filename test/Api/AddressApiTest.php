@@ -83,6 +83,16 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for geoCodeAddress
+     *
+     * GeoCode an address.
+     *
+     */
+    public function testGeoCodeAddress()
+    {
+    }
+
+    /**
      * Test case for retrieveAddress
      *
      * Retrieve a Address.

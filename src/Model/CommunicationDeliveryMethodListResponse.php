@@ -189,7 +189,7 @@ class CommunicationDeliveryMethodListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\CommunicationDeliveryMethodModel[] $items 
+     * @param \BumbalClient\Model\CommunicationDeliveryMethodModel[] $items
      * @return $this
      */
     public function setItems($items)

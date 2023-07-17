@@ -189,7 +189,7 @@ class CompartmentListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\CompartmentModel[] $items 
+     * @param \BumbalClient\Model\CompartmentModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -363,7 +363,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -384,7 +384,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -405,7 +405,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets compartments
-     * @param \BumbalClient\Model\CompartmentModel[] $compartments 
+     * @param \BumbalClient\Model\CompartmentModel[] $compartments
      * @return $this
      */
     public function setCompartments($compartments)
@@ -426,7 +426,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -468,7 +468,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -489,7 +489,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -510,7 +510,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -522,7 +522,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -531,7 +531,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -543,7 +543,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -552,7 +552,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * @param \DateTime|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -564,7 +564,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets created_by
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedBy()
     {
@@ -573,7 +573,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets created_by
-     * @param \DateTime $created_by created_at date time
+     * @param \DateTime|string|null $created_by created_at date time
      * @return $this
      */
     public function setCreatedBy($created_by)
@@ -585,7 +585,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets updated_by
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedBy()
     {
@@ -594,7 +594,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets updated_by
-     * @param \DateTime $updated_by updated_at date time
+     * @param \DateTime|string|null $updated_by updated_at date time
      * @return $this
      */
     public function setUpdatedBy($updated_by)
@@ -615,7 +615,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets created_by_user
-     * @param \BumbalClient\Model\UsersModel $created_by_user 
+     * @param \BumbalClient\Model\UsersModel $created_by_user
      * @return $this
      */
     public function setCreatedByUser($created_by_user)
@@ -636,7 +636,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets updated_by_user
-     * @param \BumbalClient\Model\UsersModel $updated_by_user 
+     * @param \BumbalClient\Model\UsersModel $updated_by_user
      * @return $this
      */
     public function setUpdatedByUser($updated_by_user)

@@ -189,7 +189,7 @@ class DriverUnavailabilityListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\DriverUnavailabilityModel[] $items 
+     * @param \BumbalClient\Model\DriverUnavailabilityModel[] $items
      * @return $this
      */
     public function setItems($items)

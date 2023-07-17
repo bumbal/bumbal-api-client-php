@@ -177,7 +177,7 @@ class VehicleTypeDeleteNotFoundResponse implements ArrayAccess
 
     /**
      * Sets code
-     * @param int $code 
+     * @param int $code
      * @return $this
      */
     public function setCode($code)

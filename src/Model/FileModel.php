@@ -261,7 +261,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -282,7 +282,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets uuid
-     * @param string $uuid 
+     * @param string $uuid
      * @return $this
      */
     public function setUuid($uuid)
@@ -303,7 +303,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets file_type_id
-     * @param int $file_type_id 
+     * @param int $file_type_id
      * @return $this
      */
     public function setFileTypeId($file_type_id)
@@ -324,7 +324,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets file_type_name
-     * @param string $file_type_name 
+     * @param string $file_type_name
      * @return $this
      */
     public function setFileTypeName($file_type_name)
@@ -345,7 +345,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets object_id
-     * @param int $object_id 
+     * @param int $object_id
      * @return $this
      */
     public function setObjectId($object_id)
@@ -408,7 +408,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets reference
-     * @param string $reference 
+     * @param string $reference
      * @return $this
      */
     public function setReference($reference)
@@ -429,7 +429,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets location
-     * @param string $location 
+     * @param string $location
      * @return $this
      */
     public function setLocation($location)
@@ -450,7 +450,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets base64
-     * @param string $base64 
+     * @param string $base64
      * @return $this
      */
     public function setBase64($base64)
@@ -471,7 +471,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -492,7 +492,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets created_by
-     * @param int $created_by 
+     * @param int $created_by
      * @return $this
      */
     public function setCreatedBy($created_by)
@@ -513,7 +513,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets updated_by
-     * @param int $updated_by 
+     * @param int $updated_by
      * @return $this
      */
     public function setUpdatedBy($updated_by)
@@ -525,7 +525,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -534,7 +534,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime $created_at created_at
+     * @param \DateTime|string|null $created_at created_at
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -546,7 +546,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -555,7 +555,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at updated_at
+     * @param \DateTime|string|null $updated_at updated_at
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -576,7 +576,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)

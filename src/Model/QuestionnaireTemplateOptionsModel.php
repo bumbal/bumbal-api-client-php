@@ -249,7 +249,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -270,7 +270,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_questions
-     * @param bool $include_questions 
+     * @param bool $include_questions
      * @return $this
      */
     public function setIncludeQuestions($include_questions)
@@ -291,7 +291,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_options
-     * @param bool $include_options 
+     * @param bool $include_options
      * @return $this
      */
     public function setIncludeOptions($include_options)
@@ -312,7 +312,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_texts
-     * @param bool $include_texts 
+     * @param bool $include_texts
      * @return $this
      */
     public function setIncludeTexts($include_texts)
@@ -333,7 +333,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_question_type_name
-     * @param bool $include_question_type_name 
+     * @param bool $include_question_type_name
      * @return $this
      */
     public function setIncludeQuestionTypeName($include_question_type_name)
@@ -354,7 +354,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zones
-     * @param bool $include_zones 
+     * @param bool $include_zones
      * @return $this
      */
     public function setIncludeZones($include_zones)
@@ -375,7 +375,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_brands
-     * @param bool $include_brands 
+     * @param bool $include_brands
      * @return $this
      */
     public function setIncludeBrands($include_brands)
@@ -396,7 +396,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_ids
-     * @param bool $include_tag_ids 
+     * @param bool $include_tag_ids
      * @return $this
      */
     public function setIncludeTagIds($include_tag_ids)
@@ -417,7 +417,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_names
-     * @param bool $include_tag_names 
+     * @param bool $include_tag_names
      * @return $this
      */
     public function setIncludeTagNames($include_tag_names)
@@ -438,7 +438,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tags
-     * @param bool $include_tags 
+     * @param bool $include_tags
      * @return $this
      */
     public function setIncludeTags($include_tags)
@@ -459,7 +459,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zone_ids
-     * @param bool $include_zone_ids 
+     * @param bool $include_zone_ids
      * @return $this
      */
     public function setIncludeZoneIds($include_zone_ids)
@@ -480,7 +480,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zone_names
-     * @param bool $include_zone_names 
+     * @param bool $include_zone_names
      * @return $this
      */
     public function setIncludeZoneNames($include_zone_names)
@@ -501,7 +501,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_brand_ids
-     * @param bool $include_brand_ids 
+     * @param bool $include_brand_ids
      * @return $this
      */
     public function setIncludeBrandIds($include_brand_ids)
@@ -522,7 +522,7 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
 
     /**
      * Sets include_brand_names
-     * @param bool $include_brand_names 
+     * @param bool $include_brand_names
      * @return $this
      */
     public function setIncludeBrandNames($include_brand_names)

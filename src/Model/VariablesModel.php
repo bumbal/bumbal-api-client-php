@@ -171,7 +171,7 @@ class VariablesModel implements ArrayAccess
 
     /**
      * Sets content
-     * @param string $content 
+     * @param string $content
      * @return $this
      */
     public function setContent($content)

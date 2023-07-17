@@ -189,7 +189,7 @@ class VehicleListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\VehicleModel[] $items 
+     * @param \BumbalClient\Model\VehicleModel[] $items
      * @return $this
      */
     public function setItems($items)

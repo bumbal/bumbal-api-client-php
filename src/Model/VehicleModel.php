@@ -702,7 +702,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -723,7 +723,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -744,7 +744,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -765,7 +765,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -786,7 +786,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -807,7 +807,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -819,7 +819,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -828,7 +828,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -840,7 +840,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -849,7 +849,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * @param \DateTime|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)

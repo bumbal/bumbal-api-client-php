@@ -189,7 +189,7 @@ class ActivityTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\ActivityTypeModel[] $items 
+     * @param \BumbalClient\Model\ActivityTypeModel[] $items
      * @return $this
      */
     public function setItems($items)

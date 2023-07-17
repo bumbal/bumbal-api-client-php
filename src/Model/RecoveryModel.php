@@ -644,7 +644,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -665,7 +665,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -707,7 +707,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -728,7 +728,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -749,7 +749,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -770,7 +770,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -782,7 +782,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -791,7 +791,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -803,7 +803,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -812,7 +812,7 @@ class RecoveryModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * @param \DateTime|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)

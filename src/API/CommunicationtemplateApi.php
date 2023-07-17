@@ -271,9 +271,9 @@ class CommunicationtemplateApi
     /**
      * Operation retrieveCommunicationTemplate
      *
-     * Retrieve a communicationtemplate
+     * Retrieve a communication template
      *
-     * @param int $communication_template_id ID of template to return (required)
+     * @param int $communication_template_id ID of communication template to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\CommunicationTemplateModel
      */
@@ -286,9 +286,9 @@ class CommunicationtemplateApi
     /**
      * Operation retrieveCommunicationTemplateWithHttpInfo
      *
-     * Retrieve a communicationtemplate
+     * Retrieve a communication template
      *
-     * @param int $communication_template_id ID of template to return (required)
+     * @param int $communication_template_id ID of communication template to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\CommunicationTemplateModel, HTTP status code, HTTP response headers (array of strings)
      */

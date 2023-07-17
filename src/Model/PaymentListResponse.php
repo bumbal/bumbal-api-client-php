@@ -189,7 +189,7 @@ class PaymentListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\PaymentModel[] $items 
+     * @param \BumbalClient\Model\PaymentModel[] $items
      * @return $this
      */
     public function setItems($items)

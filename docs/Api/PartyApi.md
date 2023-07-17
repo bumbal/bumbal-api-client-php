@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create or update an Party
 
-Create or update an Party. If id or links are set in the data, and a corresponding party    *     is found in Bumbal, an update will be performed.
+Create or update an Party. If id or links are set in the data, and a corresponding party   *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 Set (create or update) an Party
 
-Set (create or update) an Party. If id or links are set in the data, and a corresponding party             is found in Bumbal, an update will be performed.
+Set (create or update) an Party. If id or links are set in the data, and a corresponding party            is found in Bumbal, an update will be performed.
 
 ### Example
 ```php

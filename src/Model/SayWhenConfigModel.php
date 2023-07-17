@@ -189,7 +189,7 @@ class SayWhenConfigModel implements ArrayAccess
 
     /**
      * Sets planner_reference_mapping
-     * @param string $planner_reference_mapping 
+     * @param string $planner_reference_mapping
      * @return $this
      */
     public function setPlannerReferenceMapping($planner_reference_mapping)
@@ -210,7 +210,7 @@ class SayWhenConfigModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param string $meta_data 
+     * @param string $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -231,7 +231,7 @@ class SayWhenConfigModel implements ArrayAccess
 
     /**
      * Sets key_ring
-     * @param string $key_ring 
+     * @param string $key_ring
      * @return $this
      */
     public function setKeyRing($key_ring)
@@ -252,7 +252,7 @@ class SayWhenConfigModel implements ArrayAccess
 
     /**
      * Sets visit_type_map
-     * @param string $visit_type_map 
+     * @param string $visit_type_map
      * @return $this
      */
     public function setVisitTypeMap($visit_type_map)

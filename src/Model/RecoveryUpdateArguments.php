@@ -177,7 +177,7 @@ class RecoveryUpdateArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\RecoveryFiltersModel $filters 
+     * @param \BumbalClient\Model\RecoveryFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -198,7 +198,7 @@ class RecoveryUpdateArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\RecoveryModel $data 
+     * @param \BumbalClient\Model\RecoveryModel $data
      * @return $this
      */
     public function setData($data)

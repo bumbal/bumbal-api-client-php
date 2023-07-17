@@ -183,7 +183,7 @@ class ServiceWindowDayModel implements ArrayAccess
 
     /**
      * Sets before_cut_off
-     * @param int $before_cut_off 
+     * @param int $before_cut_off
      * @return $this
      */
     public function setBeforeCutOff($before_cut_off)
@@ -204,7 +204,7 @@ class ServiceWindowDayModel implements ArrayAccess
 
     /**
      * Sets cut_off_time
-     * @param string $cut_off_time 
+     * @param string $cut_off_time
      * @return $this
      */
     public function setCutOffTime($cut_off_time)
@@ -225,7 +225,7 @@ class ServiceWindowDayModel implements ArrayAccess
 
     /**
      * Sets after_cut_off
-     * @param int $after_cut_off 
+     * @param int $after_cut_off
      * @return $this
      */
     public function setAfterCutOff($after_cut_off)

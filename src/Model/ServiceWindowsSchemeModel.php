@@ -369,7 +369,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -390,7 +390,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @param \BumbalClient\Model\ZoneModel[] $zones
      * @return $this
      */
     public function setZones($zones)
@@ -411,7 +411,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
 
     /**
      * Sets brands
-     * @param \BumbalClient\Model\BrandModel[] $brands 
+     * @param \BumbalClient\Model\BrandModel[] $brands
      * @return $this
      */
     public function setBrands($brands)
@@ -684,7 +684,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
 
     /**
      * Sets service_windows
-     * @param \BumbalClient\Model\ServiceWindowModel[] $service_windows 
+     * @param \BumbalClient\Model\ServiceWindowModel[] $service_windows
      * @return $this
      */
     public function setServiceWindows($service_windows)

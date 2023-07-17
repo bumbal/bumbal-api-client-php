@@ -276,7 +276,7 @@ class OpeningHoursRuleModel implements ArrayAccess
 
     /**
      * Sets time_to
-     * @param string $time_to 
+     * @param string $time_to
      * @return $this
      */
     public function setTimeTo($time_to)
@@ -297,7 +297,7 @@ class OpeningHoursRuleModel implements ArrayAccess
 
     /**
      * Sets valid_date_from
-     * @param string $valid_date_from 
+     * @param string $valid_date_from
      * @return $this
      */
     public function setValidDateFrom($valid_date_from)
@@ -318,7 +318,7 @@ class OpeningHoursRuleModel implements ArrayAccess
 
     /**
      * Sets valid_date_to
-     * @param string $valid_date_to 
+     * @param string $valid_date_to
      * @return $this
      */
     public function setValidDateTo($valid_date_to)

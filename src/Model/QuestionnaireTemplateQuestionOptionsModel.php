@@ -189,7 +189,7 @@ class QuestionnaireTemplateQuestionOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -210,7 +210,7 @@ class QuestionnaireTemplateQuestionOptionsModel implements ArrayAccess
 
     /**
      * Sets include_options
-     * @param bool $include_options 
+     * @param bool $include_options
      * @return $this
      */
     public function setIncludeOptions($include_options)
@@ -231,7 +231,7 @@ class QuestionnaireTemplateQuestionOptionsModel implements ArrayAccess
 
     /**
      * Sets include_texts
-     * @param bool $include_texts 
+     * @param bool $include_texts
      * @return $this
      */
     public function setIncludeTexts($include_texts)
@@ -252,7 +252,7 @@ class QuestionnaireTemplateQuestionOptionsModel implements ArrayAccess
 
     /**
      * Sets include_question_type_name
-     * @param bool $include_question_type_name 
+     * @param bool $include_question_type_name
      * @return $this
      */
     public function setIncludeQuestionTypeName($include_question_type_name)

@@ -274,7 +274,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets available_timewindows
-     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $available_timewindows 
+     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $available_timewindows
      * @return $this
      */
     public function setAvailableTimewindows($available_timewindows)
@@ -295,7 +295,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets unavailable_timewindows
-     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $unavailable_timewindows 
+     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $unavailable_timewindows
      * @return $this
      */
     public function setUnavailableTimewindows($unavailable_timewindows)
@@ -307,7 +307,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Gets latest_analyzed_date
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getLatestAnalyzedDate()
     {
@@ -316,7 +316,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets latest_analyzed_date
-     * @param \DateTime $latest_analyzed_date 
+     * @param \DateTime|string|null $latest_analyzed_date
      * @return $this
      */
     public function setLatestAnalyzedDate($latest_analyzed_date)

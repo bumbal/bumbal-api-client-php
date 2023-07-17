@@ -177,7 +177,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\PackageLineFiltersModel $filters 
+     * @param \BumbalClient\Model\PackageLineFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -198,7 +198,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\PackageLineModel $data 
+     * @param \BumbalClient\Model\PackageLineModel $data
      * @return $this
      */
     public function setData($data)

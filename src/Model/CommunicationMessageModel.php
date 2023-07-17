@@ -282,7 +282,7 @@ class CommunicationMessageModel implements ArrayAccess
 
     /**
      * Sets communication_mapping
-     * @param \BumbalClient\Model\CommunicationTemplateModel $communication_mapping 
+     * @param \BumbalClient\Model\CommunicationTemplateModel $communication_mapping
      * @return $this
      */
     public function setCommunicationMapping($communication_mapping)
@@ -387,7 +387,7 @@ class CommunicationMessageModel implements ArrayAccess
 
     /**
      * Sets communication_message_history
-     * @param \BumbalClient\Model\CommunicationMessageHistoryModel[] $communication_message_history 
+     * @param \BumbalClient\Model\CommunicationMessageHistoryModel[] $communication_message_history
      * @return $this
      */
     public function setCommunicationMessageHistory($communication_message_history)

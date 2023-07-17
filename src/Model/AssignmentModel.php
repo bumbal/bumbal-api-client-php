@@ -482,7 +482,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets activities
-     * @param \BumbalClient\Model\ActivityModel[] $activities 
+     * @param \BumbalClient\Model\ActivityModel[] $activities
      * @return $this
      */
     public function setActivities($activities)
@@ -503,7 +503,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets booking_account
-     * @param \BumbalClient\Model\PartyModel $booking_account 
+     * @param \BumbalClient\Model\PartyModel $booking_account
      * @return $this
      */
     public function setBookingAccount($booking_account)
@@ -575,7 +575,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets party_link
-     * @param \BumbalClient\Model\LinkModel[] $party_link 
+     * @param \BumbalClient\Model\LinkModel[] $party_link
      * @return $this
      */
     public function setPartyLink($party_link)
@@ -692,7 +692,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeFrom()
     {
@@ -701,7 +701,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from Earliest start time of all Activities is this Assignment
+     * @param \DateTime|string|null $date_time_from Earliest start time of all Activities is this Assignment
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -713,7 +713,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeTo()
     {
@@ -722,7 +722,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to Latest end time of all Activities is this Assignment
+     * @param \DateTime|string|null $date_time_to Latest end time of all Activities is this Assignment
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -764,7 +764,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -785,7 +785,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -806,7 +806,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -827,7 +827,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -839,7 +839,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets assignment_created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getAssignmentCreatedAt()
     {
@@ -848,7 +848,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets assignment_created_at
-     * @param \DateTime $assignment_created_at created_at date time
+     * @param \DateTime|string|null $assignment_created_at created_at date time
      * @return $this
      */
     public function setAssignmentCreatedAt($assignment_created_at)
@@ -860,7 +860,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets assignment_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getAssignmentUpdatedAt()
     {
@@ -869,7 +869,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets assignment_updated_at
-     * @param \DateTime $assignment_updated_at updated_at date time
+     * @param \DateTime|string|null $assignment_updated_at updated_at date time
      * @return $this
      */
     public function setAssignmentUpdatedAt($assignment_updated_at)
@@ -932,7 +932,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets assignment_created_by_user
-     * @param \BumbalClient\Model\UsersModel $assignment_created_by_user 
+     * @param \BumbalClient\Model\UsersModel $assignment_created_by_user
      * @return $this
      */
     public function setAssignmentCreatedByUser($assignment_created_by_user)
@@ -953,7 +953,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets assignment_updated_by_user
-     * @param \BumbalClient\Model\UsersModel $assignment_updated_by_user 
+     * @param \BumbalClient\Model\UsersModel $assignment_updated_by_user
      * @return $this
      */
     public function setAssignmentUpdatedByUser($assignment_updated_by_user)

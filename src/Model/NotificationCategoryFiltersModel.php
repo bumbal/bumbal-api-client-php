@@ -177,7 +177,7 @@ class NotificationCategoryFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id 
+     * @param int[] $id
      * @return $this
      */
     public function setId($id)
@@ -198,7 +198,7 @@ class NotificationCategoryFiltersModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string[] $name 
+     * @param string[] $name
      * @return $this
      */
     public function setName($name)

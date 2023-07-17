@@ -113,6 +113,13 @@ class AutoPlanOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "in_reverse_sequence"
+     */
+    public function testPropertyInReverseSequence()
+    {
+    }
+
+    /**
      * Test attribute "do_not_apply_planning"
      */
     public function testPropertyDoNotApplyPlanning()

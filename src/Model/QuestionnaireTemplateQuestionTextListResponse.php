@@ -189,7 +189,7 @@ class QuestionnaireTemplateQuestionTextListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel[] $items 
+     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel[] $items
      * @return $this
      */
     public function setItems($items)

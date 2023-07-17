@@ -195,7 +195,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\ActivityTypeOptionsModel $options 
+     * @param \BumbalClient\Model\ActivityTypeOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -216,7 +216,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ActivityTypeFiltersModel $filters 
+     * @param \BumbalClient\Model\ActivityTypeFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -237,7 +237,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -258,7 +258,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -279,7 +279,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

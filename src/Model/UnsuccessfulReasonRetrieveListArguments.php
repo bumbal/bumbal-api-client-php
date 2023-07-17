@@ -153,8 +153,8 @@ class UnsuccessfulReasonRetrieveListArguments implements ArrayAccess
 
     const SORTING_COLUMN_ID = 'id';
     const SORTING_COLUMN_NAME = 'name';
-    const SORTING_DIRECTION_ASC = 'asc';
-    const SORTING_DIRECTION_DESC = 'desc';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
     
@@ -265,7 +265,7 @@ class UnsuccessfulReasonRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\UnsuccessfulReasonOptionsModel $options 
+     * @param \BumbalClient\Model\UnsuccessfulReasonOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -286,7 +286,7 @@ class UnsuccessfulReasonRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\UnsuccessfulReasonFiltersModel $filters 
+     * @param \BumbalClient\Model\UnsuccessfulReasonFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -307,7 +307,7 @@ class UnsuccessfulReasonRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -328,7 +328,7 @@ class UnsuccessfulReasonRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -409,7 +409,7 @@ class UnsuccessfulReasonRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -430,7 +430,7 @@ class UnsuccessfulReasonRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

@@ -189,7 +189,7 @@ class AssignmentListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\AssignmentModel[] $items 
+     * @param \BumbalClient\Model\AssignmentModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -189,7 +189,7 @@ class ServiceWindowsSchemeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\ServiceWindowsSchemeModel[] $items 
+     * @param \BumbalClient\Model\ServiceWindowsSchemeModel[] $items
      * @return $this
      */
     public function setItems($items)

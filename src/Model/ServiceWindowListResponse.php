@@ -189,7 +189,7 @@ class ServiceWindowListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\ServiceWindowModel[] $items 
+     * @param \BumbalClient\Model\ServiceWindowModel[] $items
      * @return $this
      */
     public function setItems($items)

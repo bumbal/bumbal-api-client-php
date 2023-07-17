@@ -201,7 +201,7 @@ class TagTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\TagTypeOptionsModel $options 
+     * @param \BumbalClient\Model\TagTypeOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -222,7 +222,7 @@ class TagTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\TagTypeFiltersModel $filters 
+     * @param \BumbalClient\Model\TagTypeFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -243,7 +243,7 @@ class TagTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -264,7 +264,7 @@ class TagTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -285,7 +285,7 @@ class TagTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -306,7 +306,7 @@ class TagTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

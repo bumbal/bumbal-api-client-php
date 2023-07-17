@@ -195,7 +195,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeFrom()
     {
@@ -204,7 +204,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from DateTime From
+     * @param \DateTime|string|null $date_time_from DateTime From
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -216,7 +216,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeTo()
     {
@@ -225,7 +225,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to DateTime To
+     * @param \DateTime|string|null $date_time_to DateTime To
      * @return $this
      */
     public function setDateTimeTo($date_time_to)

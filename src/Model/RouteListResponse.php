@@ -189,7 +189,7 @@ class RouteListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\RouteModel[] $items 
+     * @param \BumbalClient\Model\RouteModel[] $items
      * @return $this
      */
     public function setItems($items)

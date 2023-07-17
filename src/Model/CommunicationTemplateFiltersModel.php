@@ -189,7 +189,7 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -198,7 +198,7 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at Show updated since
+     * @param \DateTime|string|null $updated_at Show updated since
      * @return $this
      */
     public function setUpdatedAt($updated_at)

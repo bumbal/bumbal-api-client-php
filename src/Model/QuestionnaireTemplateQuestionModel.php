@@ -339,7 +339,7 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel[] $options 
+     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel[] $options
      * @return $this
      */
     public function setOptions($options)
@@ -360,7 +360,7 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
 
     /**
      * Sets texts
-     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel[] $texts 
+     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionTextModel[] $texts
      * @return $this
      */
     public function setTexts($texts)

@@ -189,7 +189,7 @@ class TagListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\TagModel[] $items 
+     * @param \BumbalClient\Model\TagModel[] $items
      * @return $this
      */
     public function setItems($items)

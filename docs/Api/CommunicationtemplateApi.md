@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCommunicationTemplate**](CommunicationtemplateApi.md#createCommunicationTemplate) | **POST** /communication-template/set | Create a Communication Template
 [**deleteCommunicationTemplate**](CommunicationtemplateApi.md#deleteCommunicationTemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communicationtemplate
-[**retrieveCommunicationTemplate**](CommunicationtemplateApi.md#retrieveCommunicationTemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communicationtemplate
+[**retrieveCommunicationTemplate**](CommunicationtemplateApi.md#retrieveCommunicationTemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communication template
 [**retrieveListTemplate**](CommunicationtemplateApi.md#retrieveListTemplate) | **PUT** /communication-template | Retrieve List of Templates
 
 
@@ -121,9 +121,9 @@ Name | Type | Description  | Notes
 # **retrieveCommunicationTemplate**
 > \BumbalClient\Model\CommunicationTemplateModel retrieveCommunicationTemplate($communication_template_id)
 
-Retrieve a communicationtemplate
+Retrieve a communication template
 
-Retrieve a communicationtemplate
+Retrieve a communication template
 
 ### Example
 ```php
@@ -140,7 +140,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\CommunicationtemplateApi();
-$communication_template_id = 789; // int | ID of template to return
+$communication_template_id = 789; // int | ID of communication template to return
 
 try {
     $result = $api_instance->retrieveCommunicationTemplate($communication_template_id);
@@ -155,7 +155,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **communication_template_id** | **int**| ID of template to return |
+ **communication_template_id** | **int**| ID of communication template to return |
 
 ### Return type
 

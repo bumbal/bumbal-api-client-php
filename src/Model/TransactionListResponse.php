@@ -189,7 +189,7 @@ class TransactionListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\TransactionModel[] $items 
+     * @param \BumbalClient\Model\TransactionModel[] $items
      * @return $this
      */
     public function setItems($items)

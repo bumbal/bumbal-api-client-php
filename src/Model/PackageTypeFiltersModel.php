@@ -294,7 +294,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -303,7 +303,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime $updated_at_since Show updated since
+     * @param \DateTime|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -315,7 +315,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -324,7 +324,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime $updated_at_till Show updated till
+     * @param \DateTime|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -492,7 +492,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -513,7 +513,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -723,7 +723,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -744,7 +744,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \BumbalClient\Model\LinkModel[] $activity_links 
+     * @param \BumbalClient\Model\LinkModel[] $activity_links
      * @return $this
      */
     public function setActivityLinks($activity_links)

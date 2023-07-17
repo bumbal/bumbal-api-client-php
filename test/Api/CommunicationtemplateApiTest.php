@@ -95,7 +95,7 @@ class CommunicationtemplateApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveCommunicationTemplate
      *
-     * Retrieve a communicationtemplate.
+     * Retrieve a communication template.
      *
      */
     public function testRetrieveCommunicationTemplate()

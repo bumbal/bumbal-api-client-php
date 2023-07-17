@@ -171,7 +171,7 @@ class AddActivitiesToRouteFiltersModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \BumbalClient\Model\ActivityFiltersModel $activity 
+     * @param \BumbalClient\Model\ActivityFiltersModel $activity
      * @return $this
      */
     public function setActivity($activity)

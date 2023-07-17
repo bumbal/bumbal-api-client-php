@@ -189,7 +189,7 @@ class ZoneListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\ZoneModel[] $items 
+     * @param \BumbalClient\Model\ZoneModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -198,7 +198,7 @@ class RouteStoreGeoLocations implements ArrayAccess
 
     /**
      * Sets geo_data
-     * @param object[] $geo_data 
+     * @param object[] $geo_data
      * @return $this
      */
     public function setGeoData($geo_data)

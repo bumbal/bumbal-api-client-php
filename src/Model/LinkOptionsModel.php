@@ -177,7 +177,7 @@ class LinkOptionsModel implements ArrayAccess
 
     /**
      * Sets include_object_type_name
-     * @param bool $include_object_type_name 
+     * @param bool $include_object_type_name
      * @return $this
      */
     public function setIncludeObjectTypeName($include_object_type_name)
@@ -198,7 +198,7 @@ class LinkOptionsModel implements ArrayAccess
 
     /**
      * Sets include_provider_name
-     * @param bool $include_provider_name 
+     * @param bool $include_provider_name
      * @return $this
      */
     public function setIncludeProviderName($include_provider_name)

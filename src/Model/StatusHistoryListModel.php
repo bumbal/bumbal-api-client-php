@@ -171,7 +171,7 @@ class StatusHistoryListModel implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\StatusHistoryModel[] $data 
+     * @param \BumbalClient\Model\StatusHistoryModel[] $data
      * @return $this
      */
     public function setData($data)

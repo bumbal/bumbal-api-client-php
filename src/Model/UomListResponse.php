@@ -189,7 +189,7 @@ class UomListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\UomModel[] $items 
+     * @param \BumbalClient\Model\UomModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -328,4 +328,11 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeRecurrence()
     {
     }
+
+    /**
+     * Test attribute "include_route_record_info"
+     */
+    public function testPropertyIncludeRouteRecordInfo()
+    {
+    }
 }

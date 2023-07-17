@@ -33,7 +33,7 @@ namespace BumbalClient;
  * CheckAvailabilityCacheDataModelActivityAddressTest Class Doc Comment
  *
  * @category    Class */
-// * @description 
+// * @description CheckAvailabilityCacheDataModelActivityAddress
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team

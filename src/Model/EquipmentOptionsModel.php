@@ -231,7 +231,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_type_name
-     * @param bool $include_equipment_type_name 
+     * @param bool $include_equipment_type_name
      * @return $this
      */
     public function setIncludeEquipmentTypeName($include_equipment_type_name)
@@ -252,7 +252,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_tags
-     * @param bool $include_equipment_tags 
+     * @param bool $include_equipment_tags
      * @return $this
      */
     public function setIncludeEquipmentTags($include_equipment_tags)
@@ -273,7 +273,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_type_name
-     * @param bool $include_tag_type_name 
+     * @param bool $include_tag_type_name
      * @return $this
      */
     public function setIncludeTagTypeName($include_tag_type_name)
@@ -294,7 +294,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_meta_data
-     * @param bool $include_equipment_meta_data 
+     * @param bool $include_equipment_meta_data
      * @return $this
      */
     public function setIncludeEquipmentMetaData($include_equipment_meta_data)
@@ -315,7 +315,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_files
-     * @param bool $include_equipment_files 
+     * @param bool $include_equipment_files
      * @return $this
      */
     public function setIncludeEquipmentFiles($include_equipment_files)
@@ -336,7 +336,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_files_meta_data
-     * @param bool $include_equipment_files_meta_data 
+     * @param bool $include_equipment_files_meta_data
      * @return $this
      */
     public function setIncludeEquipmentFilesMetaData($include_equipment_files_meta_data)
@@ -357,7 +357,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_notes
-     * @param bool $include_equipment_notes 
+     * @param bool $include_equipment_notes
      * @return $this
      */
     public function setIncludeEquipmentNotes($include_equipment_notes)
@@ -378,7 +378,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_note_tags
-     * @param bool $include_equipment_note_tags 
+     * @param bool $include_equipment_note_tags
      * @return $this
      */
     public function setIncludeEquipmentNoteTags($include_equipment_note_tags)
@@ -399,7 +399,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_links
-     * @param bool $include_equipment_links 
+     * @param bool $include_equipment_links
      * @return $this
      */
     public function setIncludeEquipmentLinks($include_equipment_links)
@@ -420,7 +420,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_capacities
-     * @param bool $include_capacities 
+     * @param bool $include_capacities
      * @return $this
      */
     public function setIncludeCapacities($include_capacities)
@@ -441,7 +441,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_applied_capacities
-     * @param bool $include_applied_capacities 
+     * @param bool $include_applied_capacities
      * @return $this
      */
     public function setIncludeAppliedCapacities($include_applied_capacities)

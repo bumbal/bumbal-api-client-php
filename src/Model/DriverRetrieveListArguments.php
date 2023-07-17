@@ -157,8 +157,8 @@ class DriverRetrieveListArguments implements ArrayAccess
     const SORTING_COLUMN_PREFIX = 'prefix';
     const SORTING_COLUMN_FULL_NAME = 'full_name';
     const SORTING_COLUMN_EMAIL = 'email';
-    const SORTING_DIRECTION_ASC = 'asc';
-    const SORTING_DIRECTION_DESC = 'desc';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
     
@@ -273,7 +273,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\DriverOptionsModel $options 
+     * @param \BumbalClient\Model\DriverOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -294,7 +294,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\DriverFiltersModel $filters 
+     * @param \BumbalClient\Model\DriverFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -315,7 +315,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -336,7 +336,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -417,7 +417,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -438,7 +438,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

@@ -148,8 +148,8 @@ class UomRetrieveListArguments implements ArrayAccess
 
     const SORTING_COLUMN_NAME = 'name';
     const SORTING_COLUMN_ID = 'id';
-    const SORTING_DIRECTION_ASC = 'asc';
-    const SORTING_DIRECTION_DESC = 'desc';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
     
@@ -259,7 +259,7 @@ class UomRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\UomOptionsModel $options 
+     * @param \BumbalClient\Model\UomOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -280,7 +280,7 @@ class UomRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\UomFiltersModel $filters 
+     * @param \BumbalClient\Model\UomFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -301,7 +301,7 @@ class UomRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -322,7 +322,7 @@ class UomRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -403,7 +403,7 @@ class UomRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

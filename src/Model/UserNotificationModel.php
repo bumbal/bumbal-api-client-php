@@ -354,7 +354,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Gets archive_date
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getArchiveDate()
     {
@@ -363,7 +363,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Sets archive_date
-     * @param \DateTime $archive_date Archive date
+     * @param \DateTime|string|null $archive_date Archive date
      * @return $this
      */
     public function setArchiveDate($archive_date)
@@ -375,7 +375,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Gets notification_created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getNotificationCreatedAt()
     {
@@ -384,7 +384,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Sets notification_created_at
-     * @param \DateTime $notification_created_at Creation date
+     * @param \DateTime|string|null $notification_created_at Creation date
      * @return $this
      */
     public function setNotificationCreatedAt($notification_created_at)
@@ -438,7 +438,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Gets notification_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getNotificationUpdatedAt()
     {
@@ -447,7 +447,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Sets notification_updated_at
-     * @param \DateTime $notification_updated_at Modification date
+     * @param \DateTime|string|null $notification_updated_at Modification date
      * @return $this
      */
     public function setNotificationUpdatedAt($notification_updated_at)

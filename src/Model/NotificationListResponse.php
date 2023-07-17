@@ -189,7 +189,7 @@ class NotificationListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\NotificationModel[] $items 
+     * @param \BumbalClient\Model\NotificationModel[] $items
      * @return $this
      */
     public function setItems($items)

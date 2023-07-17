@@ -263,7 +263,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -377,7 +377,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets value_options
-     * @param \BumbalClient\Model\ValueOptionModel[] $value_options 
+     * @param \BumbalClient\Model\ValueOptionModel[] $value_options
      * @return $this
      */
     public function setValueOptions($value_options)
@@ -410,7 +410,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Gets setting_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getSettingUpdatedAt()
     {
@@ -419,7 +419,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets setting_updated_at
-     * @param \DateTime $setting_updated_at updated_at date time
+     * @param \DateTime|string|null $setting_updated_at updated_at date time
      * @return $this
      */
     public function setSettingUpdatedAt($setting_updated_at)
@@ -461,7 +461,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets setting_updated_by_user
-     * @param \BumbalClient\Model\UsersModel $setting_updated_by_user 
+     * @param \BumbalClient\Model\UsersModel $setting_updated_by_user
      * @return $this
      */
     public function setSettingUpdatedByUser($setting_updated_by_user)

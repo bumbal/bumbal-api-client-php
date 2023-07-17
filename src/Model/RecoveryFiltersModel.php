@@ -234,7 +234,7 @@ class RecoveryFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -243,7 +243,7 @@ class RecoveryFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime $updated_at_since Show updated since
+     * @param \DateTime|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -255,7 +255,7 @@ class RecoveryFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -264,7 +264,7 @@ class RecoveryFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime $updated_at_till Show updated till
+     * @param \DateTime|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -411,7 +411,7 @@ class RecoveryFiltersModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -474,7 +474,7 @@ class RecoveryFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)

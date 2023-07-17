@@ -189,7 +189,7 @@ class BlockedDateListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\BlockedDateModel[] $items 
+     * @param \BumbalClient\Model\BlockedDateModel[] $items
      * @return $this
      */
     public function setItems($items)

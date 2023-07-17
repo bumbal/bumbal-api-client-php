@@ -83,4 +83,25 @@ class CommunicationMappingFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUpdatedAtSince()
     {
     }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "communication_message_type_id"
+     */
+    public function testPropertyCommunicationMessageTypeId()
+    {
+    }
+
+    /**
+     * Test attribute "communication_message_type_names"
+     */
+    public function testPropertyCommunicationMessageTypeNames()
+    {
+    }
 }

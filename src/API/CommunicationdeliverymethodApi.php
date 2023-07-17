@@ -175,4 +175,185 @@ class CommunicationdeliverymethodApi
             throw $e;
         }
     }
+
+    /**
+     * Operation deleteCommunicationDeliveryMethod
+     *
+     * Delete a communication delivery method
+     *
+     * @param int $communication_delivery_method_id ID of the communication delivery method to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function deleteCommunicationDeliveryMethod($communication_delivery_method_id)
+    {
+        list($response) = $this->deleteCommunicationDeliveryMethodWithHttpInfo($communication_delivery_method_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteCommunicationDeliveryMethodWithHttpInfo
+     *
+     * Delete a communication delivery method
+     *
+     * @param int $communication_delivery_method_id ID of the communication delivery method to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteCommunicationDeliveryMethodWithHttpInfo($communication_delivery_method_id)
+    {
+        // verify the required parameter 'communication_delivery_method_id' is set
+        if ($communication_delivery_method_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $communication_delivery_method_id when calling deleteCommunicationDeliveryMethod');
+        }
+        // parse inputs
+        $resourcePath = "/communication-delivery-method/{communicationDeliveryMethodId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($communication_delivery_method_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "communicationDeliveryMethodId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($communication_delivery_method_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/communication-delivery-method/{communicationDeliveryMethodId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation retrieveListCommunicationDeliveryMethod
+     *
+     * Retrieve List of communication delivery methods
+     *
+     * @param \BumbalClient\Model\CommunicationDeliveryMethodRetrieveListArguments $arguments communication delivery methods RetrieveList Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\CommunicationDeliveryMethodListResponse
+     */
+    public function retrieveListCommunicationDeliveryMethod($arguments)
+    {
+        list($response) = $this->retrieveListCommunicationDeliveryMethodWithHttpInfo($arguments);
+        return $response;
+    }
+
+    /**
+     * Operation retrieveListCommunicationDeliveryMethodWithHttpInfo
+     *
+     * Retrieve List of communication delivery methods
+     *
+     * @param \BumbalClient\Model\CommunicationDeliveryMethodRetrieveListArguments $arguments communication delivery methods RetrieveList Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\CommunicationDeliveryMethodListResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function retrieveListCommunicationDeliveryMethodWithHttpInfo($arguments)
+    {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling retrieveListCommunicationDeliveryMethod');
+        }
+        // parse inputs
+        $resourcePath = "/communication-delivery-method";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\CommunicationDeliveryMethodListResponse',
+                '/communication-delivery-method'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CommunicationDeliveryMethodListResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CommunicationDeliveryMethodListResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

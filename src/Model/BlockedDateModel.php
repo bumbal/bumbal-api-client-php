@@ -216,7 +216,7 @@ class BlockedDateModel implements ArrayAccess
 
     /**
      * Gets date
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDate()
     {
@@ -225,7 +225,7 @@ class BlockedDateModel implements ArrayAccess
 
     /**
      * Sets date
-     * @param \DateTime $date updated_at date time
+     * @param \DateTime|string|null $date updated_at date time
      * @return $this
      */
     public function setDate($date)

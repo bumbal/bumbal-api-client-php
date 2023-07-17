@@ -279,7 +279,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeTo()
     {
@@ -288,7 +288,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to date_time_to date time
+     * @param \DateTime|string|null $date_time_to date_time_to date time
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -300,7 +300,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getDateTimeFrom()
     {
@@ -309,7 +309,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from date_time_from date time
+     * @param \DateTime|string|null $date_time_from date_time_from date time
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -330,7 +330,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets user_link
-     * @param \BumbalClient\Model\LinkModel $user_link 
+     * @param \BumbalClient\Model\LinkModel $user_link
      * @return $this
      */
     public function setUserLink($user_link)
@@ -342,7 +342,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -351,7 +351,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -363,7 +363,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -372,7 +372,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * @param \DateTime|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -393,7 +393,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)

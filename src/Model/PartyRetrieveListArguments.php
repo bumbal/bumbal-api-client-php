@@ -207,7 +207,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\PartyOptionsModel $options 
+     * @param \BumbalClient\Model\PartyOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -228,7 +228,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\PartyFiltersModel $filters 
+     * @param \BumbalClient\Model\PartyFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -249,7 +249,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -270,7 +270,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -291,7 +291,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -312,7 +312,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)
@@ -333,7 +333,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets count_only
-     * @param bool $count_only 
+     * @param bool $count_only
      * @return $this
      */
     public function setCountOnly($count_only)

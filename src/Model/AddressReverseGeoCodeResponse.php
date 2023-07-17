@@ -171,7 +171,7 @@ class AddressReverseGeoCodeResponse implements ArrayAccess
 
     /**
      * Sets addresses
-     * @param \BumbalClient\Model\AddressModel[] $addresses 
+     * @param \BumbalClient\Model\AddressModel[] $addresses
      * @return $this
      */
     public function setAddresses($addresses)

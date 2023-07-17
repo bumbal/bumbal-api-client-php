@@ -189,7 +189,7 @@ class QuestionnaireTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\QuestionnaireTypeModel[] $items 
+     * @param \BumbalClient\Model\QuestionnaireTypeModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -189,7 +189,7 @@ class MetaDataListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\MetaDataModel[] $items 
+     * @param \BumbalClient\Model\MetaDataModel[] $items
      * @return $this
      */
     public function setItems($items)

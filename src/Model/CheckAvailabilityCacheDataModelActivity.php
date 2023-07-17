@@ -35,7 +35,6 @@ use \ArrayAccess;
  * CheckAvailabilityCacheDataModelActivity Class Doc Comment
  *
  * @category    Class
- * @description 
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -247,7 +246,7 @@ class CheckAvailabilityCacheDataModelActivity implements ArrayAccess
 
     /**
      * Sets brand_name
-     * @param string $brand_name 
+     * @param string $brand_name
      * @return $this
      */
     public function setBrandName($brand_name)
@@ -268,7 +267,7 @@ class CheckAvailabilityCacheDataModelActivity implements ArrayAccess
 
     /**
      * Sets duration
-     * @param int $duration 
+     * @param int $duration
      * @return $this
      */
     public function setDuration($duration)
@@ -289,7 +288,7 @@ class CheckAvailabilityCacheDataModelActivity implements ArrayAccess
 
     /**
      * Sets activity_type_name
-     * @param string $activity_type_name 
+     * @param string $activity_type_name
      * @return $this
      */
     public function setActivityTypeName($activity_type_name)
@@ -319,7 +318,7 @@ class CheckAvailabilityCacheDataModelActivity implements ArrayAccess
 
     /**
      * Sets tag_names
-     * @param string[] $tag_names 
+     * @param string[] $tag_names
      * @return $this
      */
     public function setTagNames($tag_names)

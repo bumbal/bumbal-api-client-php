@@ -225,7 +225,7 @@ class UomModel implements ArrayAccess
 
     /**
      * Sets uom_group
-     * @param \BumbalClient\Model\UomGroupModel $uom_group 
+     * @param \BumbalClient\Model\UomGroupModel $uom_group
      * @return $this
      */
     public function setUomGroup($uom_group)

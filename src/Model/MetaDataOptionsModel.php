@@ -177,7 +177,7 @@ class MetaDataOptionsModel implements ArrayAccess
 
     /**
      * Sets include_object_type_name
-     * @param bool $include_object_type_name 
+     * @param bool $include_object_type_name
      * @return $this
      */
     public function setIncludeObjectTypeName($include_object_type_name)
@@ -198,7 +198,7 @@ class MetaDataOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)

@@ -189,7 +189,7 @@ class PortalListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\PortalModel[] $items 
+     * @param \BumbalClient\Model\PortalModel[] $items
      * @return $this
      */
     public function setItems($items)

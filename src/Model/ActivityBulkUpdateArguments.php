@@ -177,7 +177,7 @@ class ActivityBulkUpdateArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ActivityFiltersModel $filters 
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -198,7 +198,7 @@ class ActivityBulkUpdateArguments implements ArrayAccess
 
     /**
      * Sets update_info
-     * @param \BumbalClient\Model\ActivityBulkUpdateModel $update_info 
+     * @param \BumbalClient\Model\ActivityBulkUpdateModel $update_info
      * @return $this
      */
     public function setUpdateInfo($update_info)

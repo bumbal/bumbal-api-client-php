@@ -297,7 +297,7 @@ class QuestionnaireQuestionModel implements ArrayAccess
 
     /**
      * Sets answer_options
-     * @param \BumbalClient\Model\QuestionnaireQuestionOptionModel[] $answer_options 
+     * @param \BumbalClient\Model\QuestionnaireQuestionOptionModel[] $answer_options
      * @return $this
      */
     public function setAnswerOptions($answer_options)

@@ -970,7 +970,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets compartments
-     * @param \BumbalClient\Model\CompartmentModel[] $compartments 
+     * @param \BumbalClient\Model\CompartmentModel[] $compartments
      * @return $this
      */
     public function setCompartments($compartments)
@@ -1012,7 +1012,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -1033,7 +1033,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -1075,7 +1075,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -1096,7 +1096,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1117,7 +1117,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -1138,7 +1138,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -1150,7 +1150,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -1159,7 +1159,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -1171,7 +1171,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -1180,7 +1180,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * @param \DateTime|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -1192,7 +1192,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets package_line_created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getPackageLineCreatedAt()
     {
@@ -1201,7 +1201,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets package_line_created_at
-     * @param \DateTime $package_line_created_at created_at date time
+     * @param \DateTime|string|null $package_line_created_at created_at date time
      * @return $this
      */
     public function setPackageLineCreatedAt($package_line_created_at)
@@ -1213,7 +1213,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets package_line_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getPackageLineUpdatedAt()
     {
@@ -1222,7 +1222,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets package_line_updated_at
-     * @param \DateTime $package_line_updated_at updated_at date time
+     * @param \DateTime|string|null $package_line_updated_at updated_at date time
      * @return $this
      */
     public function setPackageLineUpdatedAt($package_line_updated_at)

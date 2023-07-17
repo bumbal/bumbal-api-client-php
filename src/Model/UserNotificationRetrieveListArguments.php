@@ -263,7 +263,7 @@ class UserNotificationRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\UserNotificationOptionsModel $options 
+     * @param \BumbalClient\Model\UserNotificationOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -284,7 +284,7 @@ class UserNotificationRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\UserNotificationFiltersModel $filters 
+     * @param \BumbalClient\Model\UserNotificationFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -305,7 +305,7 @@ class UserNotificationRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -326,7 +326,7 @@ class UserNotificationRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -407,7 +407,7 @@ class UserNotificationRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

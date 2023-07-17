@@ -201,7 +201,7 @@ class AppliedCapacitiesModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \BumbalClient\Model\AppliedCapacityModel[] $route 
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $route
      * @return $this
      */
     public function setRoute($route)
@@ -222,7 +222,7 @@ class AppliedCapacitiesModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \BumbalClient\Model\AppliedCapacityModel[] $trailer 
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $trailer
      * @return $this
      */
     public function setTrailer($trailer)
@@ -243,7 +243,7 @@ class AppliedCapacitiesModel implements ArrayAccess
 
     /**
      * Sets vehicle
-     * @param \BumbalClient\Model\AppliedCapacityModel[] $vehicle 
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $vehicle
      * @return $this
      */
     public function setVehicle($vehicle)
@@ -264,7 +264,7 @@ class AppliedCapacitiesModel implements ArrayAccess
 
     /**
      * Sets equipment
-     * @param \BumbalClient\Model\AppliedCapacityModel[] $equipment 
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $equipment
      * @return $this
      */
     public function setEquipment($equipment)
@@ -285,7 +285,7 @@ class AppliedCapacitiesModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \BumbalClient\Model\AppliedCapacityModel[] $activity 
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $activity
      * @return $this
      */
     public function setActivity($activity)
@@ -306,7 +306,7 @@ class AppliedCapacitiesModel implements ArrayAccess
 
     /**
      * Sets totals
-     * @param \BumbalClient\Model\AppliedCapacityModel[] $totals 
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $totals
      * @return $this
      */
     public function setTotals($totals)

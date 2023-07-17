@@ -259,7 +259,7 @@ class QuestionnaireTemplateQuestionRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionsModel $options 
+     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -280,7 +280,7 @@ class QuestionnaireTemplateQuestionRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionFiltersModel $filters 
+     * @param \BumbalClient\Model\QuestionnaireTemplateQuestionFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -301,7 +301,7 @@ class QuestionnaireTemplateQuestionRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -322,7 +322,7 @@ class QuestionnaireTemplateQuestionRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -403,7 +403,7 @@ class QuestionnaireTemplateQuestionRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

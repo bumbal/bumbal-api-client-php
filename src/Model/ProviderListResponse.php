@@ -189,7 +189,7 @@ class ProviderListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\ProviderModel[] $items 
+     * @param \BumbalClient\Model\ProviderModel[] $items
      * @return $this
      */
     public function setItems($items)

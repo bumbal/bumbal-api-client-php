@@ -189,7 +189,7 @@ class CommunicationMessageTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\CommunicationMessageTypeModel[] $items 
+     * @param \BumbalClient\Model\CommunicationMessageTypeModel[] $items
      * @return $this
      */
     public function setItems($items)

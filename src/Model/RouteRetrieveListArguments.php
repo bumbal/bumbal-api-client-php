@@ -163,8 +163,8 @@ class RouteRetrieveListArguments implements ArrayAccess
     const SORTING_COLUMN_NAME = 'name';
     const SORTING_COLUMN_EARLIEST_DATE_TIME = 'earliest_date_time';
     const SORTING_COLUMN_LATEST_DATE_TIME = 'latest_date_time';
-    const SORTING_DIRECTION_ASC = 'asc';
-    const SORTING_DIRECTION_DESC = 'desc';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
     
@@ -281,7 +281,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\RouteOptionsModel $options 
+     * @param \BumbalClient\Model\RouteOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -302,7 +302,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\RouteFiltersModel $filters 
+     * @param \BumbalClient\Model\RouteFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -323,7 +323,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -344,7 +344,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -365,7 +365,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -446,7 +446,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)
@@ -467,7 +467,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets count_only
-     * @param bool $count_only 
+     * @param bool $count_only
      * @return $this
      */
     public function setCountOnly($count_only)

@@ -189,7 +189,7 @@ class LogListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\LogModel[] $items 
+     * @param \BumbalClient\Model\LogModel[] $items
      * @return $this
      */
     public function setItems($items)

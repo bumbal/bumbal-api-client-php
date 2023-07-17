@@ -189,7 +189,7 @@ class PartyListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\PartyModel[] $items 
+     * @param \BumbalClient\Model\PartyModel[] $items
      * @return $this
      */
     public function setItems($items)

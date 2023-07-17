@@ -189,7 +189,7 @@ class CommunicationMappingListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\CommunicationMappingModel[] $items 
+     * @param \BumbalClient\Model\CommunicationMappingModel[] $items
      * @return $this
      */
     public function setItems($items)

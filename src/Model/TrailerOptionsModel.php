@@ -219,7 +219,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tags
-     * @param bool $include_tags 
+     * @param bool $include_tags
      * @return $this
      */
     public function setIncludeTags($include_tags)
@@ -240,7 +240,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_names
-     * @param bool $include_tag_names 
+     * @param bool $include_tag_names
      * @return $this
      */
     public function setIncludeTagNames($include_tag_names)
@@ -261,7 +261,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_trailer_meta_data
-     * @param bool $include_trailer_meta_data 
+     * @param bool $include_trailer_meta_data
      * @return $this
      */
     public function setIncludeTrailerMetaData($include_trailer_meta_data)
@@ -282,7 +282,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links 
+     * @param bool $include_links
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -303,7 +303,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_trailer_files
-     * @param bool $include_trailer_files 
+     * @param bool $include_trailer_files
      * @return $this
      */
     public function setIncludeTrailerFiles($include_trailer_files)
@@ -324,7 +324,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_capacities
-     * @param bool $include_capacities 
+     * @param bool $include_capacities
      * @return $this
      */
     public function setIncludeCapacities($include_capacities)
@@ -345,7 +345,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_compartments
-     * @param bool $include_compartments 
+     * @param bool $include_compartments
      * @return $this
      */
     public function setIncludeCompartments($include_compartments)
@@ -366,7 +366,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -387,7 +387,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_object
-     * @param bool $include_record_object 
+     * @param bool $include_record_object
      * @return $this
      */
     public function setIncludeRecordObject($include_record_object)

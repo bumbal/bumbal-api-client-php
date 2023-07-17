@@ -177,7 +177,7 @@ class ZoneOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zone_ranges
-     * @param bool $include_zone_ranges 
+     * @param bool $include_zone_ranges
      * @return $this
      */
     public function setIncludeZoneRanges($include_zone_ranges)
@@ -198,7 +198,7 @@ class ZoneOptionsModel implements ArrayAccess
 
     /**
      * Sets include_brands
-     * @param bool $include_brands 
+     * @param bool $include_brands
      * @return $this
      */
     public function setIncludeBrands($include_brands)

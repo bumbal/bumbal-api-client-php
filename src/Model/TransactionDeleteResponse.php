@@ -189,7 +189,7 @@ class TransactionDeleteResponse implements ArrayAccess
 
     /**
      * Sets code
-     * @param int $code 
+     * @param int $code
      * @return $this
      */
     public function setCode($code)
@@ -252,7 +252,7 @@ class TransactionDeleteResponse implements ArrayAccess
 
     /**
      * Sets additional_data
-     * @param object $additional_data 
+     * @param object $additional_data
      * @return $this
      */
     public function setAdditionalData($additional_data)

@@ -59,6 +59,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         'allow_unplanned_activities' => 'bool',
         'consider_historic_traffic_info' => 'bool',
         'in_sequence' => 'bool',
+        'in_reverse_sequence' => 'bool',
         'do_not_apply_planning' => 'bool'
     ];
 
@@ -72,6 +73,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         'allow_unplanned_activities' => null,
         'consider_historic_traffic_info' => null,
         'in_sequence' => null,
+        'in_reverse_sequence' => null,
         'do_not_apply_planning' => null
     ];
 
@@ -95,6 +97,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         'allow_unplanned_activities' => 'allow_unplanned_activities',
         'consider_historic_traffic_info' => 'consider_historic_traffic_info',
         'in_sequence' => 'in_sequence',
+        'in_reverse_sequence' => 'in_reverse_sequence',
         'do_not_apply_planning' => 'do_not_apply_planning'
     ];
 
@@ -109,6 +112,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         'allow_unplanned_activities' => 'setAllowUnplannedActivities',
         'consider_historic_traffic_info' => 'setConsiderHistoricTrafficInfo',
         'in_sequence' => 'setInSequence',
+        'in_reverse_sequence' => 'setInReverseSequence',
         'do_not_apply_planning' => 'setDoNotApplyPlanning'
     ];
 
@@ -123,6 +127,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         'allow_unplanned_activities' => 'getAllowUnplannedActivities',
         'consider_historic_traffic_info' => 'getConsiderHistoricTrafficInfo',
         'in_sequence' => 'getInSequence',
+        'in_reverse_sequence' => 'getInReverseSequence',
         'do_not_apply_planning' => 'getDoNotApplyPlanning'
     ];
 
@@ -162,6 +167,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         $this->container['allow_unplanned_activities'] = isset($data['allow_unplanned_activities']) ? $data['allow_unplanned_activities'] : null;
         $this->container['consider_historic_traffic_info'] = isset($data['consider_historic_traffic_info']) ? $data['consider_historic_traffic_info'] : null;
         $this->container['in_sequence'] = isset($data['in_sequence']) ? $data['in_sequence'] : null;
+        $this->container['in_reverse_sequence'] = isset($data['in_reverse_sequence']) ? $data['in_reverse_sequence'] : null;
         $this->container['do_not_apply_planning'] = isset($data['do_not_apply_planning']) ? $data['do_not_apply_planning'] : null;
     }
 
@@ -201,7 +207,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous 
+     * @param bool $synchronous
      * @return $this
      */
     public function setSynchronous($synchronous)
@@ -222,7 +228,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets respond_after_apply_planning
-     * @param bool $respond_after_apply_planning 
+     * @param bool $respond_after_apply_planning
      * @return $this
      */
     public function setRespondAfterApplyPlanning($respond_after_apply_planning)
@@ -243,7 +249,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets allow_unplanned_activities
-     * @param bool $allow_unplanned_activities 
+     * @param bool $allow_unplanned_activities
      * @return $this
      */
     public function setAllowUnplannedActivities($allow_unplanned_activities)
@@ -264,7 +270,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets consider_historic_traffic_info
-     * @param bool $consider_historic_traffic_info 
+     * @param bool $consider_historic_traffic_info
      * @return $this
      */
     public function setConsiderHistoricTrafficInfo($consider_historic_traffic_info)
@@ -285,12 +291,33 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets in_sequence
-     * @param bool $in_sequence 
+     * @param bool $in_sequence
      * @return $this
      */
     public function setInSequence($in_sequence)
     {
         $this->container['in_sequence'] = $in_sequence;
+
+        return $this;
+    }
+
+    /**
+     * Gets in_reverse_sequence
+     * @return bool
+     */
+    public function getInReverseSequence()
+    {
+        return $this->container['in_reverse_sequence'];
+    }
+
+    /**
+     * Sets in_reverse_sequence
+     * @param bool $in_reverse_sequence
+     * @return $this
+     */
+    public function setInReverseSequence($in_reverse_sequence)
+    {
+        $this->container['in_reverse_sequence'] = $in_reverse_sequence;
 
         return $this;
     }
@@ -306,7 +333,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets do_not_apply_planning
-     * @param bool $do_not_apply_planning 
+     * @param bool $do_not_apply_planning
      * @return $this
      */
     public function setDoNotApplyPlanning($do_not_apply_planning)

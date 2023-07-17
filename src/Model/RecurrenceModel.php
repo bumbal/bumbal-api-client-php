@@ -549,7 +549,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets start_date
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getStartDate()
     {
@@ -558,7 +558,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets start_date
-     * @param \DateTime $start_date Start date
+     * @param \DateTime|string|null $start_date Start date
      * @return $this
      */
     public function setStartDate($start_date)
@@ -570,7 +570,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets end_date
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getEndDate()
     {
@@ -579,7 +579,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets end_date
-     * @param \DateTime $end_date End date
+     * @param \DateTime|string|null $end_date End date
      * @return $this
      */
     public function setEndDate($end_date)
@@ -777,7 +777,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets next_run
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getNextRun()
     {
@@ -786,7 +786,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets next_run
-     * @param \DateTime $next_run Next date on which a new recurrence will be added
+     * @param \DateTime|string|null $next_run Next date on which a new recurrence will be added
      * @return $this
      */
     public function setNextRun($next_run)
@@ -798,7 +798,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets last_run
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getLastRun()
     {
@@ -807,7 +807,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets last_run
-     * @param \DateTime $last_run Last date on which a new recurrence was added
+     * @param \DateTime|string|null $last_run Last date on which a new recurrence was added
      * @return $this
      */
     public function setLastRun($last_run)
@@ -870,7 +870,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

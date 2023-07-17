@@ -189,7 +189,7 @@ class UserNotificationListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\UserNotificationModel[] $items 
+     * @param \BumbalClient\Model\UserNotificationModel[] $items
      * @return $this
      */
     public function setItems($items)

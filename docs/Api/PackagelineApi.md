@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create or update an Package Line
 
-Create or update an PackageLine. If id or links are set in the data, and a corresponding package-line    *     is found in Bumbal, an update will be performed.
+Create or update an PackageLine. If id or links are set in the data, and a corresponding package-line   *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php

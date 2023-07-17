@@ -171,7 +171,7 @@ class UomOptionsModel implements ArrayAccess
 
     /**
      * Sets include_uom_group
-     * @param bool $include_uom_group 
+     * @param bool $include_uom_group
      * @return $this
      */
     public function setIncludeUomGroup($include_uom_group)

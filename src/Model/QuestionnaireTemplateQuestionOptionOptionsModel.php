@@ -171,7 +171,7 @@ class QuestionnaireTemplateQuestionOptionOptionsModel implements ArrayAccess
 
     /**
      * Sets include_texts
-     * @param bool $include_texts 
+     * @param bool $include_texts
      * @return $this
      */
     public function setIncludeTexts($include_texts)

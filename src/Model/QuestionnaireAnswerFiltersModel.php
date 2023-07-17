@@ -249,7 +249,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -258,7 +258,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime $updated_at_since Show updated since
+     * @param \DateTime|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -270,7 +270,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -279,7 +279,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime $updated_at_till Show updated till
+     * @param \DateTime|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)

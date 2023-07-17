@@ -312,7 +312,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Sets communication_template
-     * @param \BumbalClient\Model\CommunicationTemplateModel $communication_template 
+     * @param \BumbalClient\Model\CommunicationTemplateModel $communication_template
      * @return $this
      */
     public function setCommunicationTemplate($communication_template)
@@ -459,7 +459,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -501,7 +501,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @param \BumbalClient\Model\ZoneModel[] $zones
      * @return $this
      */
     public function setZones($zones)

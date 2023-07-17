@@ -273,7 +273,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets trailer_id
-     * @param int $trailer_id 
+     * @param int $trailer_id
      * @return $this
      */
     public function setTrailerId($trailer_id)
@@ -294,7 +294,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets filled_capacities
-     * @param \BumbalClient\Model\FilledCapacityModel[] $filled_capacities 
+     * @param \BumbalClient\Model\FilledCapacityModel[] $filled_capacities
      * @return $this
      */
     public function setFilledCapacities($filled_capacities)
@@ -315,7 +315,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets trailer_link
-     * @param \BumbalClient\Model\LinkModel[] $trailer_link 
+     * @param \BumbalClient\Model\LinkModel[] $trailer_link
      * @return $this
      */
     public function setTrailerLink($trailer_link)
@@ -336,7 +336,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -357,7 +357,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -378,7 +378,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_created_by
-     * @param \BumbalClient\Model\UsersModel $compartment_created_by 
+     * @param \BumbalClient\Model\UsersModel $compartment_created_by
      * @return $this
      */
     public function setCompartmentCreatedBy($compartment_created_by)
@@ -399,7 +399,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_updated_by
-     * @param \BumbalClient\Model\UsersModel $compartment_updated_by 
+     * @param \BumbalClient\Model\UsersModel $compartment_updated_by
      * @return $this
      */
     public function setCompartmentUpdatedBy($compartment_updated_by)
@@ -411,7 +411,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Gets compartment_created_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCompartmentCreatedAt()
     {
@@ -420,7 +420,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_created_at
-     * @param \DateTime $compartment_created_at created_at date time
+     * @param \DateTime|string|null $compartment_created_at created_at date time
      * @return $this
      */
     public function setCompartmentCreatedAt($compartment_created_at)
@@ -432,7 +432,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Gets compartment_updated_at
-     * @return \DateTime
+     * @return \DateTime|string|null
      */
     public function getCompartmentUpdatedAt()
     {
@@ -441,7 +441,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_updated_at
-     * @param \DateTime $compartment_updated_at updated_at date time
+     * @param \DateTime|string|null $compartment_updated_at updated_at date time
      * @return $this
      */
     public function setCompartmentUpdatedAt($compartment_updated_at)

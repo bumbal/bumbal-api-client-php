@@ -183,7 +183,7 @@ class CommunicationMessageOptionsModel implements ArrayAccess
 
     /**
      * Sets include_communication_mapping
-     * @param bool $include_communication_mapping 
+     * @param bool $include_communication_mapping
      * @return $this
      */
     public function setIncludeCommunicationMapping($include_communication_mapping)
@@ -204,7 +204,7 @@ class CommunicationMessageOptionsModel implements ArrayAccess
 
     /**
      * Sets include_message_content
-     * @param bool $include_message_content 
+     * @param bool $include_message_content
      * @return $this
      */
     public function setIncludeMessageContent($include_message_content)
@@ -225,7 +225,7 @@ class CommunicationMessageOptionsModel implements ArrayAccess
 
     /**
      * Sets include_communication_message_history
-     * @param bool $include_communication_message_history 
+     * @param bool $include_communication_message_history
      * @return $this
      */
     public function setIncludeCommunicationMessageHistory($include_communication_message_history)

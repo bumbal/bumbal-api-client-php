@@ -189,7 +189,7 @@ class UsersListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\UsersModel[] $items 
+     * @param \BumbalClient\Model\UsersModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -360,7 +360,7 @@ class CommunicationTemplateModel implements ArrayAccess
 
     /**
      * Sets mappings
-     * @param \BumbalClient\Model\CommunicationMappingModel[] $mappings 
+     * @param \BumbalClient\Model\CommunicationMappingModel[] $mappings
      * @return $this
      */
     public function setMappings($mappings)

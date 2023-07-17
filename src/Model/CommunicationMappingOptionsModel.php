@@ -201,7 +201,7 @@ class CommunicationMappingOptionsModel implements ArrayAccess
 
     /**
      * Sets include_template_name
-     * @param bool $include_template_name 
+     * @param bool $include_template_name
      * @return $this
      */
     public function setIncludeTemplateName($include_template_name)
@@ -222,7 +222,7 @@ class CommunicationMappingOptionsModel implements ArrayAccess
 
     /**
      * Sets include_template_object
-     * @param bool $include_template_object 
+     * @param bool $include_template_object
      * @return $this
      */
     public function setIncludeTemplateObject($include_template_object)
@@ -243,7 +243,7 @@ class CommunicationMappingOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tags
-     * @param bool $include_tags 
+     * @param bool $include_tags
      * @return $this
      */
     public function setIncludeTags($include_tags)
@@ -264,7 +264,7 @@ class CommunicationMappingOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_names
-     * @param bool $include_tag_names 
+     * @param bool $include_tag_names
      * @return $this
      */
     public function setIncludeTagNames($include_tag_names)
@@ -285,7 +285,7 @@ class CommunicationMappingOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zones
-     * @param bool $include_zones 
+     * @param bool $include_zones
      * @return $this
      */
     public function setIncludeZones($include_zones)
@@ -306,7 +306,7 @@ class CommunicationMappingOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zone_names
-     * @param bool $include_zone_names 
+     * @param bool $include_zone_names
      * @return $this
      */
     public function setIncludeZoneNames($include_zone_names)

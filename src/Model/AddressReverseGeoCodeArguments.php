@@ -189,7 +189,7 @@ class AddressReverseGeoCodeArguments implements ArrayAccess
 
     /**
      * Sets min_accuracy
-     * @param float $min_accuracy 
+     * @param float $min_accuracy
      * @return $this
      */
     public function setMinAccuracy($min_accuracy)
@@ -210,7 +210,7 @@ class AddressReverseGeoCodeArguments implements ArrayAccess
 
     /**
      * Sets distance
-     * @param int $distance 
+     * @param int $distance
      * @return $this
      */
     public function setDistance($distance)
@@ -231,7 +231,7 @@ class AddressReverseGeoCodeArguments implements ArrayAccess
 
     /**
      * Sets latitude
-     * @param string $latitude 
+     * @param string $latitude
      * @return $this
      */
     public function setLatitude($latitude)
@@ -252,7 +252,7 @@ class AddressReverseGeoCodeArguments implements ArrayAccess
 
     /**
      * Sets longitude
-     * @param string $longitude 
+     * @param string $longitude
      * @return $this
      */
     public function setLongitude($longitude)

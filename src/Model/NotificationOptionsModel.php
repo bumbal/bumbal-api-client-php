@@ -201,7 +201,7 @@ class NotificationOptionsModel implements ArrayAccess
 
     /**
      * Sets include_notification_files
-     * @param bool $include_notification_files 
+     * @param bool $include_notification_files
      * @return $this
      */
     public function setIncludeNotificationFiles($include_notification_files)
@@ -222,7 +222,7 @@ class NotificationOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by
-     * @param bool $include_updated_by 
+     * @param bool $include_updated_by
      * @return $this
      */
     public function setIncludeUpdatedBy($include_updated_by)
@@ -243,7 +243,7 @@ class NotificationOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -264,7 +264,7 @@ class NotificationOptionsModel implements ArrayAccess
 
     /**
      * Sets include_object_type_name
-     * @param bool $include_object_type_name 
+     * @param bool $include_object_type_name
      * @return $this
      */
     public function setIncludeObjectTypeName($include_object_type_name)
@@ -285,7 +285,7 @@ class NotificationOptionsModel implements ArrayAccess
 
     /**
      * Sets include_notification_category_name
-     * @param bool $include_notification_category_name 
+     * @param bool $include_notification_category_name
      * @return $this
      */
     public function setIncludeNotificationCategoryName($include_notification_category_name)
@@ -306,7 +306,7 @@ class NotificationOptionsModel implements ArrayAccess
 
     /**
      * Sets include_user_notification
-     * @param bool $include_user_notification 
+     * @param bool $include_user_notification
      * @return $this
      */
     public function setIncludeUserNotification($include_user_notification)
