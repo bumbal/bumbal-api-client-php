@@ -113,6 +113,13 @@ class VehicleModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "info"
+     */
+    public function testPropertyInfo()
+    {
+    }
+
+    /**
      * Test attribute "max_speed"
      */
     public function testPropertyMaxSpeed()

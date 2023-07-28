@@ -127,13 +127,6 @@ class SettingsGetConstantsResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "check_type"
-     */
-    public function testPropertyCheckType()
-    {
-    }
-
-    /**
      * Test attribute "activity_type"
      */
     public function testPropertyActivityType()

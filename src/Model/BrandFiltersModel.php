@@ -54,6 +54,7 @@ class BrandFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int[]',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
         'name' => 'string[]',
@@ -66,6 +67,7 @@ class BrandFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
         'name' => null,
@@ -88,6 +90,7 @@ class BrandFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
         'name' => 'name',
@@ -101,6 +104,7 @@ class BrandFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
         'name' => 'setName',
@@ -114,6 +118,7 @@ class BrandFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
         'name' => 'getName',
@@ -152,6 +157,7 @@ class BrandFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -183,6 +189,27 @@ class BrandFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int[]
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int[] $id Unique Identifier(s)
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets updated_at_since

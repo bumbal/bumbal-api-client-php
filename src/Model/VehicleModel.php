@@ -59,6 +59,7 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'string',
         'name' => 'string',
         'registration_nr' => 'string',
+        'info' => 'string',
         'max_speed' => 'int',
         'speed_factor' => 'double',
         'start_duration' => 'int',
@@ -90,6 +91,7 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => null,
         'name' => null,
         'registration_nr' => null,
+        'info' => null,
         'max_speed' => 'int64',
         'speed_factor' => 'double',
         'start_duration' => 'int64',
@@ -131,6 +133,7 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'vehicle_type_name',
         'name' => 'name',
         'registration_nr' => 'registration_nr',
+        'info' => 'info',
         'max_speed' => 'max_speed',
         'speed_factor' => 'speed_factor',
         'start_duration' => 'start_duration',
@@ -163,6 +166,7 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'setVehicleTypeName',
         'name' => 'setName',
         'registration_nr' => 'setRegistrationNr',
+        'info' => 'setInfo',
         'max_speed' => 'setMaxSpeed',
         'speed_factor' => 'setSpeedFactor',
         'start_duration' => 'setStartDuration',
@@ -195,6 +199,7 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'getVehicleTypeName',
         'name' => 'getName',
         'registration_nr' => 'getRegistrationNr',
+        'info' => 'getInfo',
         'max_speed' => 'getMaxSpeed',
         'speed_factor' => 'getSpeedFactor',
         'start_duration' => 'getStartDuration',
@@ -288,6 +293,7 @@ class VehicleModel implements ArrayAccess
         $this->container['vehicle_type_name'] = isset($data['vehicle_type_name']) ? $data['vehicle_type_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
+        $this->container['info'] = isset($data['info']) ? $data['info'] : null;
         $this->container['max_speed'] = isset($data['max_speed']) ? $data['max_speed'] : null;
         $this->container['speed_factor'] = isset($data['speed_factor']) ? $data['speed_factor'] : null;
         $this->container['start_duration'] = isset($data['start_duration']) ? $data['start_duration'] : null;
@@ -477,6 +483,27 @@ class VehicleModel implements ArrayAccess
     public function setRegistrationNr($registration_nr)
     {
         $this->container['registration_nr'] = $registration_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets info
+     * @return string
+     */
+    public function getInfo()
+    {
+        return $this->container['info'];
+    }
+
+    /**
+     * Sets info
+     * @param string $info Any extra information
+     * @return $this
+     */
+    public function setInfo($info)
+    {
+        $this->container['info'] = $info;
 
         return $this;
     }

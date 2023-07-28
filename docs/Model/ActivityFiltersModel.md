@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int[]** | Unique Identifier(s) | [optional] 
+**uuid** | **string[]** | Unique per activity | [optional] 
 **nr** | **string[]** | Activity nr | [optional] 
 **assignment_id** | **int[]** | Identifier(s) assignment(s) for activities | [optional] 
 **shipment_activity_id** | **int[]** | Unique Identifier(s) partner shipment activity | [optional] 

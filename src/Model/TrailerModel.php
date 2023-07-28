@@ -342,7 +342,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets info
-     * @param string $info name
+     * @param string $info Any extra information
      * @return $this
      */
     public function setInfo($info)

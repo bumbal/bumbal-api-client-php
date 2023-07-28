@@ -67,8 +67,6 @@ class PackageLineModel implements ArrayAccess
         'barcodes' => 'string[]',
         'action_type_id' => 'string',
         'action_type_name' => 'string',
-        'check_type_id' => 'string',
-        'check_type_name' => 'string',
         'checked_by_driver' => 'bool',
         'adr' => 'bool',
         'adr_class' => 'int',
@@ -113,8 +111,6 @@ class PackageLineModel implements ArrayAccess
         'barcodes' => null,
         'action_type_id' => null,
         'action_type_name' => null,
-        'check_type_id' => null,
-        'check_type_name' => null,
         'checked_by_driver' => null,
         'adr' => null,
         'adr_class' => 'int64',
@@ -169,8 +165,6 @@ class PackageLineModel implements ArrayAccess
         'barcodes' => 'barcodes',
         'action_type_id' => 'action_type_id',
         'action_type_name' => 'action_type_name',
-        'check_type_id' => 'check_type_id',
-        'check_type_name' => 'check_type_name',
         'checked_by_driver' => 'checked_by_driver',
         'adr' => 'ADR',
         'adr_class' => 'ADR_class',
@@ -216,8 +210,6 @@ class PackageLineModel implements ArrayAccess
         'barcodes' => 'setBarcodes',
         'action_type_id' => 'setActionTypeId',
         'action_type_name' => 'setActionTypeName',
-        'check_type_id' => 'setCheckTypeId',
-        'check_type_name' => 'setCheckTypeName',
         'checked_by_driver' => 'setCheckedByDriver',
         'adr' => 'setAdr',
         'adr_class' => 'setAdrClass',
@@ -263,8 +255,6 @@ class PackageLineModel implements ArrayAccess
         'barcodes' => 'getBarcodes',
         'action_type_id' => 'getActionTypeId',
         'action_type_name' => 'getActionTypeName',
-        'check_type_id' => 'getCheckTypeId',
-        'check_type_name' => 'getCheckTypeName',
         'checked_by_driver' => 'getCheckedByDriver',
         'adr' => 'getAdr',
         'adr_class' => 'getAdrClass',
@@ -320,10 +310,6 @@ class PackageLineModel implements ArrayAccess
     const ACTION_TYPE_NAME_INBOUND = 'inbound';
     const ACTION_TYPE_NAME_OUTBOUND = 'outbound';
     const ACTION_TYPE_NAME_ASSESS = 'assess';
-    const CHECK_TYPE_ID__1 = '1';
-    const CHECK_TYPE_ID__2 = '2';
-    const CHECK_TYPE_NAME_MANUAL = 'manual';
-    const CHECK_TYPE_NAME_SCAN = 'scan';
     
 
     
@@ -371,30 +357,6 @@ class PackageLineModel implements ArrayAccess
         ];
     }
     
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getCheckTypeIdAllowableValues()
-    {
-        return [
-            self::CHECK_TYPE_ID__1,
-            self::CHECK_TYPE_ID__2,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getCheckTypeNameAllowableValues()
-    {
-        return [
-            self::CHECK_TYPE_NAME_MANUAL,
-            self::CHECK_TYPE_NAME_SCAN,
-        ];
-    }
-    
 
     /**
      * Associative array for storing property values
@@ -421,8 +383,6 @@ class PackageLineModel implements ArrayAccess
         $this->container['barcodes'] = isset($data['barcodes']) ? $data['barcodes'] : null;
         $this->container['action_type_id'] = isset($data['action_type_id']) ? $data['action_type_id'] : null;
         $this->container['action_type_name'] = isset($data['action_type_name']) ? $data['action_type_name'] : null;
-        $this->container['check_type_id'] = isset($data['check_type_id']) ? $data['check_type_id'] : null;
-        $this->container['check_type_name'] = isset($data['check_type_name']) ? $data['check_type_name'] : null;
         $this->container['checked_by_driver'] = isset($data['checked_by_driver']) ? $data['checked_by_driver'] : null;
         $this->container['adr'] = isset($data['adr']) ? $data['adr'] : null;
         $this->container['adr_class'] = isset($data['adr_class']) ? $data['adr_class'] : null;
@@ -482,22 +442,6 @@ class PackageLineModel implements ArrayAccess
             );
         }
 
-        $allowed_values = $this->getCheckTypeIdAllowableValues();
-        if (!in_array($this->container['check_type_id'], $allowed_values)) {
-            $invalid_properties[] = sprintf(
-                "invalid value for 'check_type_id', must be one of '%s'",
-                implode("', '", $allowed_values)
-            );
-        }
-
-        $allowed_values = $this->getCheckTypeNameAllowableValues();
-        if (!in_array($this->container['check_type_name'], $allowed_values)) {
-            $invalid_properties[] = sprintf(
-                "invalid value for 'check_type_name', must be one of '%s'",
-                implode("', '", $allowed_values)
-            );
-        }
-
         return $invalid_properties;
     }
 
@@ -520,14 +464,6 @@ class PackageLineModel implements ArrayAccess
         }
         $allowed_values = $this->getActionTypeNameAllowableValues();
         if (!in_array($this->container['action_type_name'], $allowed_values)) {
-            return false;
-        }
-        $allowed_values = $this->getCheckTypeIdAllowableValues();
-        if (!in_array($this->container['check_type_id'], $allowed_values)) {
-            return false;
-        }
-        $allowed_values = $this->getCheckTypeNameAllowableValues();
-        if (!in_array($this->container['check_type_name'], $allowed_values)) {
             return false;
         }
         return true;
@@ -830,66 +766,6 @@ class PackageLineModel implements ArrayAccess
             );
         }
         $this->container['action_type_name'] = $action_type_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets check_type_id
-     * @return string
-     */
-    public function getCheckTypeId()
-    {
-        return $this->container['check_type_id'];
-    }
-
-    /**
-     * Sets check_type_id
-     * @param string $check_type_id Check type name, 1:manual, 2:scan
-     * @return $this
-     */
-    public function setCheckTypeId($check_type_id)
-    {
-        $allowed_values = $this->getCheckTypeIdAllowableValues();
-        if (!is_null($check_type_id) && !in_array($check_type_id, $allowed_values)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'check_type_id', must be one of '%s'",
-                    implode("', '", $allowed_values)
-                )
-            );
-        }
-        $this->container['check_type_id'] = $check_type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets check_type_name
-     * @return string
-     */
-    public function getCheckTypeName()
-    {
-        return $this->container['check_type_name'];
-    }
-
-    /**
-     * Sets check_type_name
-     * @param string $check_type_name Check type name
-     * @return $this
-     */
-    public function setCheckTypeName($check_type_name)
-    {
-        $allowed_values = $this->getCheckTypeNameAllowableValues();
-        if (!is_null($check_type_name) && !in_array($check_type_name, $allowed_values)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'check_type_name', must be one of '%s'",
-                    implode("', '", $allowed_values)
-                )
-            );
-        }
-        $this->container['check_type_name'] = $check_type_name;
 
         return $this;
     }

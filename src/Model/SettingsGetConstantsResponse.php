@@ -61,7 +61,6 @@ class SettingsGetConstantsResponse implements ArrayAccess
         'relation_type' => 'map[string,string]',
         'week_day' => 'map[string,string]',
         'action_type' => 'map[string,string]',
-        'check_type' => 'map[string,string]',
         'activity_type' => 'map[string,string]',
         'special_activity' => 'map[string,string]',
         'ae_activity' => 'map[string,string]',
@@ -116,7 +115,6 @@ class SettingsGetConstantsResponse implements ArrayAccess
         'relation_type' => null,
         'week_day' => null,
         'action_type' => null,
-        'check_type' => null,
         'activity_type' => null,
         'special_activity' => null,
         'ae_activity' => null,
@@ -181,7 +179,6 @@ class SettingsGetConstantsResponse implements ArrayAccess
         'relation_type' => 'relation_type',
         'week_day' => 'week_day',
         'action_type' => 'action_type',
-        'check_type' => 'check_type',
         'activity_type' => 'activity_type',
         'special_activity' => 'special_activity',
         'ae_activity' => 'ae_activity',
@@ -237,7 +234,6 @@ class SettingsGetConstantsResponse implements ArrayAccess
         'relation_type' => 'setRelationType',
         'week_day' => 'setWeekDay',
         'action_type' => 'setActionType',
-        'check_type' => 'setCheckType',
         'activity_type' => 'setActivityType',
         'special_activity' => 'setSpecialActivity',
         'ae_activity' => 'setAeActivity',
@@ -293,7 +289,6 @@ class SettingsGetConstantsResponse implements ArrayAccess
         'relation_type' => 'getRelationType',
         'week_day' => 'getWeekDay',
         'action_type' => 'getActionType',
-        'check_type' => 'getCheckType',
         'activity_type' => 'getActivityType',
         'special_activity' => 'getSpecialActivity',
         'ae_activity' => 'getAeActivity',
@@ -374,7 +369,6 @@ class SettingsGetConstantsResponse implements ArrayAccess
         $this->container['relation_type'] = isset($data['relation_type']) ? $data['relation_type'] : null;
         $this->container['week_day'] = isset($data['week_day']) ? $data['week_day'] : null;
         $this->container['action_type'] = isset($data['action_type']) ? $data['action_type'] : null;
-        $this->container['check_type'] = isset($data['check_type']) ? $data['check_type'] : null;
         $this->container['activity_type'] = isset($data['activity_type']) ? $data['activity_type'] : null;
         $this->container['special_activity'] = isset($data['special_activity']) ? $data['special_activity'] : null;
         $this->container['ae_activity'] = isset($data['ae_activity']) ? $data['ae_activity'] : null;
@@ -585,27 +579,6 @@ class SettingsGetConstantsResponse implements ArrayAccess
     public function setActionType($action_type)
     {
         $this->container['action_type'] = $action_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets check_type
-     * @return map[string,string]
-     */
-    public function getCheckType()
-    {
-        return $this->container['check_type'];
-    }
-
-    /**
-     * Sets check_type
-     * @param map[string,string] $check_type Check Types
-     * @return $this
-     */
-    public function setCheckType($check_type)
-    {
-        $this->container['check_type'] = $check_type;
 
         return $this;
     }

@@ -127,13 +127,6 @@ class SettingsGetConstantsReversedResponseTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
-     * Test attribute "check_type"
-     */
-    public function testPropertyCheckType()
-    {
-    }
-
-    /**
      * Test attribute "activity_type"
      */
     public function testPropertyActivityType()

@@ -337,7 +337,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets info
-     * @param string $info
+     * @param string $info Any extra information
      * @return $this
      */
     public function setInfo($info)

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **vehicle_type_name** | **string** | Bumbal id for vehicle_type | [optional] 
 **name** | **string** | name | [optional] 
 **registration_nr** | **string** | registration_nr | [optional] 
+**info** | **string** | Any extra information | [optional] 
 **max_speed** | **int** | Max Speed in km/h | [optional] 
 **speed_factor** | **double** | Speed Factor | [optional] 
 **start_duration** | **int** | Start duration of using this vehicle in minutes | [optional] 

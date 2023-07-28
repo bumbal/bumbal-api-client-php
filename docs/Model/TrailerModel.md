@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** | Unique Identifier | [optional] 
 **name** | **string** | name | [optional] 
 **registration_nr** | **string** | registration_nr | [optional] 
-**info** | **string** | name | [optional] 
+**info** | **string** | Any extra information | [optional] 
 **applied_capacities** | **object** |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **compartments** | [**\BumbalClient\Model\CompartmentModel[]**](CompartmentModel.md) |  | [optional] 

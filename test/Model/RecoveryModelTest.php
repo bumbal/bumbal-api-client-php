@@ -148,20 +148,6 @@ class RecoveryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "check_type_id"
-     */
-    public function testPropertyCheckTypeId()
-    {
-    }
-
-    /**
-     * Test attribute "check_type_name"
-     */
-    public function testPropertyCheckTypeName()
-    {
-    }
-
-    /**
      * Test attribute "checked_by_driver"
      */
     public function testPropertyCheckedByDriver()

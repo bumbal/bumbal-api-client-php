@@ -55,6 +55,7 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
+        'uuid' => 'string[]',
         'nr' => 'string[]',
         'assignment_id' => 'int[]',
         'shipment_activity_id' => 'int[]',
@@ -118,6 +119,7 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'uuid' => null,
         'nr' => null,
         'assignment_id' => null,
         'shipment_activity_id' => null,
@@ -191,6 +193,7 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'uuid' => 'uuid',
         'nr' => 'nr',
         'assignment_id' => 'assignment_id',
         'shipment_activity_id' => 'shipment_activity_id',
@@ -255,6 +258,7 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'nr' => 'setNr',
         'assignment_id' => 'setAssignmentId',
         'shipment_activity_id' => 'setShipmentActivityId',
@@ -319,6 +323,7 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'nr' => 'getNr',
         'assignment_id' => 'getAssignmentId',
         'shipment_activity_id' => 'getShipmentActivityId',
@@ -408,6 +413,7 @@ class ActivityFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['assignment_id'] = isset($data['assignment_id']) ? $data['assignment_id'] : null;
         $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
@@ -507,6 +513,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     * @return string[]
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     * @param string[] $uuid Unique per activity
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }
