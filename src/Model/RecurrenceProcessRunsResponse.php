@@ -55,7 +55,11 @@ class RecurrenceProcessRunsResponse implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'success' => 'bool',
-        'data' => 'object'
+        'data' => 'object',
+        'code' => 'int',
+        'type' => 'string',
+        'message' => 'string',
+        'additional_data' => 'object'
     ];
 
     /**
@@ -64,7 +68,11 @@ class RecurrenceProcessRunsResponse implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'success' => null,
-        'data' => null
+        'data' => null,
+        'code' => 'int32',
+        'type' => null,
+        'message' => null,
+        'additional_data' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +91,11 @@ class RecurrenceProcessRunsResponse implements ArrayAccess
      */
     protected static $attributeMap = [
         'success' => 'success',
-        'data' => 'data'
+        'data' => 'data',
+        'code' => 'code',
+        'type' => 'type',
+        'message' => 'message',
+        'additional_data' => 'additional_data'
     ];
 
 
@@ -93,7 +105,11 @@ class RecurrenceProcessRunsResponse implements ArrayAccess
      */
     protected static $setters = [
         'success' => 'setSuccess',
-        'data' => 'setData'
+        'data' => 'setData',
+        'code' => 'setCode',
+        'type' => 'setType',
+        'message' => 'setMessage',
+        'additional_data' => 'setAdditionalData'
     ];
 
 
@@ -103,7 +119,11 @@ class RecurrenceProcessRunsResponse implements ArrayAccess
      */
     protected static $getters = [
         'success' => 'getSuccess',
-        'data' => 'getData'
+        'data' => 'getData',
+        'code' => 'getCode',
+        'type' => 'getType',
+        'message' => 'getMessage',
+        'additional_data' => 'getAdditionalData'
     ];
 
     public static function attributeMap()
@@ -139,6 +159,10 @@ class RecurrenceProcessRunsResponse implements ArrayAccess
     {
         $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['additional_data'] = isset($data['additional_data']) ? $data['additional_data'] : null;
     }
 
     /**
@@ -204,6 +228,90 @@ class RecurrenceProcessRunsResponse implements ArrayAccess
     public function setData($data)
     {
         $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     * @return int
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param int $code
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+     * Sets message
+     * @param string $message
+     * @return $this
+     */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets additional_data
+     * @return object
+     */
+    public function getAdditionalData()
+    {
+        return $this->container['additional_data'];
+    }
+
+    /**
+     * Sets additional_data
+     * @param object $additional_data
+     * @return $this
+     */
+    public function setAdditionalData($additional_data)
+    {
+        $this->container['additional_data'] = $additional_data;
 
         return $this;
     }
