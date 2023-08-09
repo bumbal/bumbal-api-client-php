@@ -55,9 +55,8 @@ class CommunicationMessageOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_communication_mapping' => 'bool',
-        'include_communication_message_content' => 'bool',
-        'include_communication_message_history' => 'bool',
-        'include_communication_message_type_name' => 'bool'
+        'include_message_content' => 'bool',
+        'include_communication_message_history' => 'bool'
     ];
 
     /**
@@ -66,9 +65,8 @@ class CommunicationMessageOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_communication_mapping' => null,
-        'include_communication_message_content' => null,
-        'include_communication_message_history' => null,
-        'include_communication_message_type_name' => null
+        'include_message_content' => null,
+        'include_communication_message_history' => null
     ];
 
     public static function swaggerTypes()
@@ -87,9 +85,8 @@ class CommunicationMessageOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'include_communication_mapping' => 'include_communication_mapping',
-        'include_communication_message_content' => 'include_communication_message_content',
-        'include_communication_message_history' => 'include_communication_message_history',
-        'include_communication_message_type_name' => 'include_communication_message_type_name'
+        'include_message_content' => 'include_message_content',
+        'include_communication_message_history' => 'include_communication_message_history'
     ];
 
 
@@ -99,9 +96,8 @@ class CommunicationMessageOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'include_communication_mapping' => 'setIncludeCommunicationMapping',
-        'include_communication_message_content' => 'setIncludeCommunicationMessageContent',
-        'include_communication_message_history' => 'setIncludeCommunicationMessageHistory',
-        'include_communication_message_type_name' => 'setIncludeCommunicationMessageTypeName'
+        'include_message_content' => 'setIncludeMessageContent',
+        'include_communication_message_history' => 'setIncludeCommunicationMessageHistory'
     ];
 
 
@@ -111,9 +107,8 @@ class CommunicationMessageOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'include_communication_mapping' => 'getIncludeCommunicationMapping',
-        'include_communication_message_content' => 'getIncludeCommunicationMessageContent',
-        'include_communication_message_history' => 'getIncludeCommunicationMessageHistory',
-        'include_communication_message_type_name' => 'getIncludeCommunicationMessageTypeName'
+        'include_message_content' => 'getIncludeMessageContent',
+        'include_communication_message_history' => 'getIncludeCommunicationMessageHistory'
     ];
 
     public static function attributeMap()
@@ -147,10 +142,9 @@ class CommunicationMessageOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_communication_mapping'] = isset($data['include_communication_mapping']) ? $data['include_communication_mapping'] : false;
-        $this->container['include_communication_message_content'] = isset($data['include_communication_message_content']) ? $data['include_communication_message_content'] : false;
-        $this->container['include_communication_message_history'] = isset($data['include_communication_message_history']) ? $data['include_communication_message_history'] : false;
-        $this->container['include_communication_message_type_name'] = isset($data['include_communication_message_type_name']) ? $data['include_communication_message_type_name'] : false;
+        $this->container['include_communication_mapping'] = isset($data['include_communication_mapping']) ? $data['include_communication_mapping'] : null;
+        $this->container['include_message_content'] = isset($data['include_message_content']) ? $data['include_message_content'] : null;
+        $this->container['include_communication_message_history'] = isset($data['include_communication_message_history']) ? $data['include_communication_message_history'] : null;
     }
 
     /**
@@ -189,7 +183,7 @@ class CommunicationMessageOptionsModel implements ArrayAccess
 
     /**
      * Sets include_communication_mapping
-     * @param bool $include_communication_mapping Include the communication mapping model that is used for this message
+     * @param bool $include_communication_mapping
      * @return $this
      */
     public function setIncludeCommunicationMapping($include_communication_mapping)
@@ -200,22 +194,22 @@ class CommunicationMessageOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_communication_message_content
+     * Gets include_message_content
      * @return bool
      */
-    public function getIncludeCommunicationMessageContent()
+    public function getIncludeMessageContent()
     {
-        return $this->container['include_communication_message_content'];
+        return $this->container['include_message_content'];
     }
 
     /**
-     * Sets include_communication_message_content
-     * @param bool $include_communication_message_content Include the content of the communication message
+     * Sets include_message_content
+     * @param bool $include_message_content
      * @return $this
      */
-    public function setIncludeCommunicationMessageContent($include_communication_message_content)
+    public function setIncludeMessageContent($include_message_content)
     {
-        $this->container['include_communication_message_content'] = $include_communication_message_content;
+        $this->container['include_message_content'] = $include_message_content;
 
         return $this;
     }
@@ -231,33 +225,12 @@ class CommunicationMessageOptionsModel implements ArrayAccess
 
     /**
      * Sets include_communication_message_history
-     * @param bool $include_communication_message_history Include the message history
+     * @param bool $include_communication_message_history
      * @return $this
      */
     public function setIncludeCommunicationMessageHistory($include_communication_message_history)
     {
         $this->container['include_communication_message_history'] = $include_communication_message_history;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_communication_message_type_name
-     * @return bool
-     */
-    public function getIncludeCommunicationMessageTypeName()
-    {
-        return $this->container['include_communication_message_type_name'];
-    }
-
-    /**
-     * Sets include_communication_message_type_name
-     * @param bool $include_communication_message_type_name Include the message type name. This option only works when include_communication_mapping is also set to true!
-     * @return $this
-     */
-    public function setIncludeCommunicationMessageTypeName($include_communication_message_type_name)
-    {
-        $this->container['include_communication_message_type_name'] = $include_communication_message_type_name;
 
         return $this;
     }

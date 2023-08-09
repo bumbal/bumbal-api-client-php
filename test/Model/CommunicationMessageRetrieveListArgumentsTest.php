@@ -120,6 +120,13 @@ class CommunicationMessageRetrieveListArgumentsTest extends \PHPUnit_Framework_T
     }
 
     /**
+     * Test attribute "search_text"
+     */
+    public function testPropertySearchText()
+    {
+    }
+
+    /**
      * Test attribute "as_list"
      */
     public function testPropertyAsList()

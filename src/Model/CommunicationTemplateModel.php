@@ -61,13 +61,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'content_html' => 'string',
         'content_text' => 'string',
         'include_attachments' => 'bool',
-        'mappings' => '\BumbalClient\Model\CommunicationMappingModel[]',
-        'active' => 'bool',
-        'removed' => 'bool',
-        'created_by' => 'int',
-        'updated_by' => 'int',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'mappings' => '\BumbalClient\Model\CommunicationMappingModel[]'
     ];
 
     /**
@@ -82,13 +76,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'content_html' => null,
         'content_text' => null,
         'include_attachments' => null,
-        'mappings' => null,
-        'active' => null,
-        'removed' => null,
-        'created_by' => null,
-        'updated_by' => null,
-        'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'mappings' => null
     ];
 
     public static function swaggerTypes()
@@ -113,13 +101,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'content_html' => 'content_html',
         'content_text' => 'content_text',
         'include_attachments' => 'include_attachments',
-        'mappings' => 'mappings',
-        'active' => 'active',
-        'removed' => 'removed',
-        'created_by' => 'created_by',
-        'updated_by' => 'updated_by',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'mappings' => 'mappings'
     ];
 
 
@@ -135,13 +117,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'content_html' => 'setContentHtml',
         'content_text' => 'setContentText',
         'include_attachments' => 'setIncludeAttachments',
-        'mappings' => 'setMappings',
-        'active' => 'setActive',
-        'removed' => 'setRemoved',
-        'created_by' => 'setCreatedBy',
-        'updated_by' => 'setUpdatedBy',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'mappings' => 'setMappings'
     ];
 
 
@@ -157,13 +133,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'content_html' => 'getContentHtml',
         'content_text' => 'getContentText',
         'include_attachments' => 'getIncludeAttachments',
-        'mappings' => 'getMappings',
-        'active' => 'getActive',
-        'removed' => 'getRemoved',
-        'created_by' => 'getCreatedBy',
-        'updated_by' => 'getUpdatedBy',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'mappings' => 'getMappings'
     ];
 
     public static function attributeMap()
@@ -203,14 +173,8 @@ class CommunicationTemplateModel implements ArrayAccess
         $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
         $this->container['content_html'] = isset($data['content_html']) ? $data['content_html'] : null;
         $this->container['content_text'] = isset($data['content_text']) ? $data['content_text'] : null;
-        $this->container['include_attachments'] = isset($data['include_attachments']) ? $data['include_attachments'] : false;
+        $this->container['include_attachments'] = isset($data['include_attachments']) ? $data['include_attachments'] : null;
         $this->container['mappings'] = isset($data['mappings']) ? $data['mappings'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
-        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
-        $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -291,7 +255,7 @@ class CommunicationTemplateModel implements ArrayAccess
 
     /**
      * Sets description
-     * @param string $description Description of this template
+     * @param string $description Description of this Template
      * @return $this
      */
     public function setDescription($description)
@@ -402,132 +366,6 @@ class CommunicationTemplateModel implements ArrayAccess
     public function setMappings($mappings)
     {
         $this->container['mappings'] = $mappings;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->container['active'];
-    }
-
-    /**
-     * Sets active
-     * @param bool $active if active=0: Driver Unavailability has been removed and is no longer visible in any bumbal interface
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->container['active'] = $active;
-
-        return $this;
-    }
-
-    /**
-     * Gets removed
-     * @return bool
-     */
-    public function getRemoved()
-    {
-        return $this->container['removed'];
-    }
-
-    /**
-     * Sets removed
-     * @param bool $removed Whether user is removed or not
-     * @return $this
-     */
-    public function setRemoved($removed)
-    {
-        $this->container['removed'] = $removed;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_by
-     * @return int
-     */
-    public function getCreatedBy()
-    {
-        return $this->container['created_by'];
-    }
-
-    /**
-     * Sets created_by
-     * @param int $created_by created_by user id
-     * @return $this
-     */
-    public function setCreatedBy($created_by)
-    {
-        $this->container['created_by'] = $created_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_by
-     * @return int
-     */
-    public function getUpdatedBy()
-    {
-        return $this->container['updated_by'];
-    }
-
-    /**
-     * Sets updated_by
-     * @param int $updated_by updated_by user id
-     * @return $this
-     */
-    public function setUpdatedBy($updated_by)
-    {
-        $this->container['updated_by'] = $updated_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return \DateTime|string|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param \DateTime|string|null $created_at created_at date time
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return \DateTime|string|null
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param \DateTime|string|null $updated_at updated_at date time
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

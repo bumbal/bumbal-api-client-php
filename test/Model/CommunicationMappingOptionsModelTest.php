@@ -78,9 +78,23 @@ class CommunicationMappingOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_message_type_name"
+     * Test attribute "include_template_name"
      */
-    public function testPropertyIncludeMessageTypeName()
+    public function testPropertyIncludeTemplateName()
+    {
+    }
+
+    /**
+     * Test attribute "include_template_object"
+     */
+    public function testPropertyIncludeTemplateObject()
+    {
+    }
+
+    /**
+     * Test attribute "include_tags"
+     */
+    public function testPropertyIncludeTags()
     {
     }
 
@@ -92,16 +106,16 @@ class CommunicationMappingOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_template"
+     * Test attribute "include_zones"
      */
-    public function testPropertyIncludeTemplate()
+    public function testPropertyIncludeZones()
     {
     }
 
     /**
-     * Test attribute "include_mapping_record_info"
+     * Test attribute "include_zone_names"
      */
-    public function testPropertyIncludeMappingRecordInfo()
+    public function testPropertyIncludeZoneNames()
     {
     }
 }

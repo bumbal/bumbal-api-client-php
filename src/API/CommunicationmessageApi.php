@@ -88,9 +88,190 @@ class CommunicationmessageApi
     }
 
     /**
+     * Operation createCommunicationMessage
+     *
+     * Create a communicationmessage
+     *
+     * @param \BumbalClient\Model\CommunicationMessageModel $body CommunicationMessage object (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function createCommunicationMessage($body)
+    {
+        list($response) = $this->createCommunicationMessageWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation createCommunicationMessageWithHttpInfo
+     *
+     * Create a communicationmessage
+     *
+     * @param \BumbalClient\Model\CommunicationMessageModel $body CommunicationMessage object (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createCommunicationMessageWithHttpInfo($body)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling createCommunicationMessage');
+        }
+        // parse inputs
+        $resourcePath = "/communication-message/set";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/communication-message/set'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteCommunicationMessage
+     *
+     * Delete a communication message
+     *
+     * @param int $communication_message_id ID of the communication message to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function deleteCommunicationMessage($communication_message_id)
+    {
+        list($response) = $this->deleteCommunicationMessageWithHttpInfo($communication_message_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteCommunicationMessageWithHttpInfo
+     *
+     * Delete a communication message
+     *
+     * @param int $communication_message_id ID of the communication message to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteCommunicationMessageWithHttpInfo($communication_message_id)
+    {
+        // verify the required parameter 'communication_message_id' is set
+        if ($communication_message_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $communication_message_id when calling deleteCommunicationMessage');
+        }
+        // parse inputs
+        $resourcePath = "/communication-message/{communicationMessageId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($communication_message_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "communicationMessageId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($communication_message_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/communication-message/{communicationMessageId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveCommunicationMessage
      *
-     * Retrieve a communication message
+     * Retrieve a communicationmessage
      *
      * @param int $communication_message_id ID of template to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -105,7 +286,7 @@ class CommunicationmessageApi
     /**
      * Operation retrieveCommunicationMessageWithHttpInfo
      *
-     * Retrieve a communication message
+     * Retrieve a communicationmessage
      *
      * @param int $communication_message_id ID of template to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -118,7 +299,7 @@ class CommunicationmessageApi
             throw new \InvalidArgumentException('Missing the required parameter $communication_message_id when calling retrieveCommunicationMessage');
         }
         // parse inputs
-        $resourcePath = "/communication-message/{communicationMessageID}";
+        $resourcePath = "/communication-message/{communicationMessageId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -132,7 +313,7 @@ class CommunicationmessageApi
         // path params
         if ($communication_message_id !== null) {
             $resourcePath = str_replace(
-                "{" . "communicationMessageID" . "}",
+                "{" . "communicationMessageId" . "}",
                 $this->apiClient->getSerializer()->toPathValue($communication_message_id),
                 $resourcePath
             );
@@ -163,7 +344,7 @@ class CommunicationmessageApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\CommunicationMessageModel',
-                '/communication-message/{communicationMessageID}'
+                '/communication-message/{communicationMessageId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CommunicationMessageModel', $httpHeader), $statusCode, $httpHeader];

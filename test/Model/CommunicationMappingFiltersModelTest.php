@@ -78,13 +78,6 @@ class CommunicationMappingFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-    }
-
-    /**
      * Test attribute "updated_at_since"
      */
     public function testPropertyUpdatedAtSince()
@@ -99,16 +92,16 @@ class CommunicationMappingFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "message_type_id"
+     * Test attribute "communication_message_type_id"
      */
-    public function testPropertyMessageTypeId()
+    public function testPropertyCommunicationMessageTypeId()
     {
     }
 
     /**
-     * Test attribute "message_type_names"
+     * Test attribute "communication_message_type_names"
      */
-    public function testPropertyMessageTypeNames()
+    public function testPropertyCommunicationMessageTypeNames()
     {
     }
 }

@@ -83,4 +83,11 @@ class CommunicationTemplateFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyId()
     {
     }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+    }
 }

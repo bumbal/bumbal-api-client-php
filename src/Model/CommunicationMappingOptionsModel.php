@@ -54,10 +54,12 @@ class CommunicationMappingOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_message_type_name' => 'bool',
+        'include_template_name' => 'bool',
+        'include_template_object' => 'bool',
+        'include_tags' => 'bool',
         'include_tag_names' => 'bool',
-        'include_template' => 'bool',
-        'include_mapping_record_info' => 'bool'
+        'include_zones' => 'bool',
+        'include_zone_names' => 'bool'
     ];
 
     /**
@@ -65,10 +67,12 @@ class CommunicationMappingOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_message_type_name' => null,
+        'include_template_name' => null,
+        'include_template_object' => null,
+        'include_tags' => null,
         'include_tag_names' => null,
-        'include_template' => null,
-        'include_mapping_record_info' => null
+        'include_zones' => null,
+        'include_zone_names' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +90,12 @@ class CommunicationMappingOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_message_type_name' => 'include_message_type_name',
+        'include_template_name' => 'include_template_name',
+        'include_template_object' => 'include_template_object',
+        'include_tags' => 'include_tags',
         'include_tag_names' => 'include_tag_names',
-        'include_template' => 'include_template',
-        'include_mapping_record_info' => 'include_mapping_record_info'
+        'include_zones' => 'include_zones',
+        'include_zone_names' => 'include_zone_names'
     ];
 
 
@@ -98,10 +104,12 @@ class CommunicationMappingOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_message_type_name' => 'setIncludeMessageTypeName',
+        'include_template_name' => 'setIncludeTemplateName',
+        'include_template_object' => 'setIncludeTemplateObject',
+        'include_tags' => 'setIncludeTags',
         'include_tag_names' => 'setIncludeTagNames',
-        'include_template' => 'setIncludeTemplate',
-        'include_mapping_record_info' => 'setIncludeMappingRecordInfo'
+        'include_zones' => 'setIncludeZones',
+        'include_zone_names' => 'setIncludeZoneNames'
     ];
 
 
@@ -110,10 +118,12 @@ class CommunicationMappingOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_message_type_name' => 'getIncludeMessageTypeName',
+        'include_template_name' => 'getIncludeTemplateName',
+        'include_template_object' => 'getIncludeTemplateObject',
+        'include_tags' => 'getIncludeTags',
         'include_tag_names' => 'getIncludeTagNames',
-        'include_template' => 'getIncludeTemplate',
-        'include_mapping_record_info' => 'getIncludeMappingRecordInfo'
+        'include_zones' => 'getIncludeZones',
+        'include_zone_names' => 'getIncludeZoneNames'
     ];
 
     public static function attributeMap()
@@ -147,10 +157,12 @@ class CommunicationMappingOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_message_type_name'] = isset($data['include_message_type_name']) ? $data['include_message_type_name'] : false;
-        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : false;
-        $this->container['include_template'] = isset($data['include_template']) ? $data['include_template'] : false;
-        $this->container['include_mapping_record_info'] = isset($data['include_mapping_record_info']) ? $data['include_mapping_record_info'] : false;
+        $this->container['include_template_name'] = isset($data['include_template_name']) ? $data['include_template_name'] : null;
+        $this->container['include_template_object'] = isset($data['include_template_object']) ? $data['include_template_object'] : null;
+        $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
+        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
+        $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
+        $this->container['include_zone_names'] = isset($data['include_zone_names']) ? $data['include_zone_names'] : null;
     }
 
     /**
@@ -179,22 +191,64 @@ class CommunicationMappingOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_message_type_name
+     * Gets include_template_name
      * @return bool
      */
-    public function getIncludeMessageTypeName()
+    public function getIncludeTemplateName()
     {
-        return $this->container['include_message_type_name'];
+        return $this->container['include_template_name'];
     }
 
     /**
-     * Sets include_message_type_name
-     * @param bool $include_message_type_name
+     * Sets include_template_name
+     * @param bool $include_template_name
      * @return $this
      */
-    public function setIncludeMessageTypeName($include_message_type_name)
+    public function setIncludeTemplateName($include_template_name)
     {
-        $this->container['include_message_type_name'] = $include_message_type_name;
+        $this->container['include_template_name'] = $include_template_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_template_object
+     * @return bool
+     */
+    public function getIncludeTemplateObject()
+    {
+        return $this->container['include_template_object'];
+    }
+
+    /**
+     * Sets include_template_object
+     * @param bool $include_template_object
+     * @return $this
+     */
+    public function setIncludeTemplateObject($include_template_object)
+    {
+        $this->container['include_template_object'] = $include_template_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tags
+     * @return bool
+     */
+    public function getIncludeTags()
+    {
+        return $this->container['include_tags'];
+    }
+
+    /**
+     * Sets include_tags
+     * @param bool $include_tags
+     * @return $this
+     */
+    public function setIncludeTags($include_tags)
+    {
+        $this->container['include_tags'] = $include_tags;
 
         return $this;
     }
@@ -221,43 +275,43 @@ class CommunicationMappingOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_template
+     * Gets include_zones
      * @return bool
      */
-    public function getIncludeTemplate()
+    public function getIncludeZones()
     {
-        return $this->container['include_template'];
+        return $this->container['include_zones'];
     }
 
     /**
-     * Sets include_template
-     * @param bool $include_template
+     * Sets include_zones
+     * @param bool $include_zones
      * @return $this
      */
-    public function setIncludeTemplate($include_template)
+    public function setIncludeZones($include_zones)
     {
-        $this->container['include_template'] = $include_template;
+        $this->container['include_zones'] = $include_zones;
 
         return $this;
     }
 
     /**
-     * Gets include_mapping_record_info
+     * Gets include_zone_names
      * @return bool
      */
-    public function getIncludeMappingRecordInfo()
+    public function getIncludeZoneNames()
     {
-        return $this->container['include_mapping_record_info'];
+        return $this->container['include_zone_names'];
     }
 
     /**
-     * Sets include_mapping_record_info
-     * @param bool $include_mapping_record_info
+     * Sets include_zone_names
+     * @param bool $include_zone_names
      * @return $this
      */
-    public function setIncludeMappingRecordInfo($include_mapping_record_info)
+    public function setIncludeZoneNames($include_zone_names)
     {
-        $this->container['include_mapping_record_info'] = $include_mapping_record_info;
+        $this->container['include_zone_names'] = $include_zone_names;
 
         return $this;
     }

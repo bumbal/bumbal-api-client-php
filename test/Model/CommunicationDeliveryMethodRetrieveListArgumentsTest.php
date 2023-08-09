@@ -78,6 +78,13 @@ class CommunicationDeliveryMethodRetrieveListArgumentsTest extends \PHPUnit_Fram
     }
 
     /**
+     * Test attribute "options"
+     */
+    public function testPropertyOptions()
+    {
+    }
+
+    /**
      * Test attribute "filters"
      */
     public function testPropertyFilters()

@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listCommunicationMessageTypes**](CommunicationmessagetypeApi.md#listCommunicationMessageTypes) | **PUT** /communication-message-type | List all CommunicationMessageTypes
-[**retrieveCommunicationMessageType**](CommunicationmessagetypeApi.md#retrieveCommunicationMessageType) | **GET** /communication-message-type/{communicationMessageTypeID} | Retrieve a communication message type
+[**createCommunicationMessageType**](CommunicationmessagetypeApi.md#createCommunicationMessageType) | **POST** /communication-message-type/set | Create a communicationmessagetype
+[**deleteCommunicationMessageType**](CommunicationmessagetypeApi.md#deleteCommunicationMessageType) | **DELETE** /communication-message-type/{communicationMessageTypeId} | Delete a communication message type
 
 
-# **listCommunicationMessageTypes**
-> \BumbalClient\Model\CommunicationMessageTypeListResponse listCommunicationMessageTypes($arguments)
+# **createCommunicationMessageType**
+> \BumbalClient\Model\ApiResponse createCommunicationMessageType($body)
 
-List all CommunicationMessageTypes
+Create a communicationmessagetype
 
-List all communication message types
+Create a communication message type
 
 ### Example
 ```php
@@ -30,13 +30,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\CommunicationmessagetypeApi();
-$arguments = new \BumbalClient\Model\CommunicationMessageTypeRetrieveListArguments(); // \BumbalClient\Model\CommunicationMessageTypeRetrieveListArguments | Communication Message Type RetrieveList Arguments
+$body = new \BumbalClient\Model\CommunicationMessageTypeModel(); // \BumbalClient\Model\CommunicationMessageTypeModel | CommunicationMessageType object
 
 try {
-    $result = $api_instance->listCommunicationMessageTypes($arguments);
+    $result = $api_instance->createCommunicationMessageType($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CommunicationmessagetypeApi->listCommunicationMessageTypes: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CommunicationmessagetypeApi->createCommunicationMessageType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\CommunicationMessageTypeRetrieveListArguments**](../Model/CommunicationMessageTypeRetrieveListArguments.md)| Communication Message Type RetrieveList Arguments |
+ **body** | [**\BumbalClient\Model\CommunicationMessageTypeModel**](../Model/CommunicationMessageTypeModel.md)| CommunicationMessageType object |
 
 ### Return type
 
-[**\BumbalClient\Model\CommunicationMessageTypeListResponse**](../Model/CommunicationMessageTypeListResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -62,12 +62,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **retrieveCommunicationMessageType**
-> \BumbalClient\Model\CommunicationMessageTypeModel retrieveCommunicationMessageType($communication_message_type_id)
+# **deleteCommunicationMessageType**
+> \BumbalClient\Model\ApiResponse deleteCommunicationMessageType($communication_message_type_id)
 
-Retrieve a communication message type
+Delete a communication message type
 
-Retrieve a communication message type
+Delete a communication message type
 
 ### Example
 ```php
@@ -84,13 +84,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\CommunicationmessagetypeApi();
-$communication_message_type_id = 789; // int | ID of communication message type to return
+$communication_message_type_id = 789; // int | ID of the communication message type to delete
 
 try {
-    $result = $api_instance->retrieveCommunicationMessageType($communication_message_type_id);
+    $result = $api_instance->deleteCommunicationMessageType($communication_message_type_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CommunicationmessagetypeApi->retrieveCommunicationMessageType: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CommunicationmessagetypeApi->deleteCommunicationMessageType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -99,11 +99,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **communication_message_type_id** | **int**| ID of communication message type to return |
+ **communication_message_type_id** | **int**| ID of the communication message type to delete |
 
 ### Return type
 
-[**\BumbalClient\Model\CommunicationMessageTypeModel**](../Model/CommunicationMessageTypeModel.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

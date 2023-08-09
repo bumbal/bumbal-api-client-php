@@ -54,8 +54,7 @@ class CommunicationDeliveryMethodFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
-        'name' => 'string[]'
+        
     ];
 
     /**
@@ -63,8 +62,7 @@ class CommunicationDeliveryMethodFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'name' => null
+        
     ];
 
     public static function swaggerTypes()
@@ -82,8 +80,7 @@ class CommunicationDeliveryMethodFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name'
+        
     ];
 
 
@@ -92,8 +89,7 @@ class CommunicationDeliveryMethodFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName'
+        
     ];
 
 
@@ -102,8 +98,7 @@ class CommunicationDeliveryMethodFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName'
+        
     ];
 
     public static function attributeMap()
@@ -137,8 +132,6 @@ class CommunicationDeliveryMethodFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -165,48 +158,6 @@ class CommunicationDeliveryMethodFiltersModel implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets id
-     * @return int[]
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int[] $id Communication delivery method ID's
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string[]
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string[] $name Communication delivery method names
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

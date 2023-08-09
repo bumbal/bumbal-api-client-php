@@ -54,7 +54,8 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]'
+        'id' => 'int[]',
+        'updated_at' => '\DateTime'
     ];
 
     /**
@@ -62,7 +63,8 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null
+        'id' => null,
+        'updated_at' => 'date-time'
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -89,7 +92,8 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -98,7 +102,8 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -171,12 +177,33 @@ class CommunicationTemplateFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id Communication template id's
+     * @param int[] $id Driver id's
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime|string|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime|string|null $updated_at Show updated since
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

@@ -16,8 +16,6 @@ Name | Type | Description | Notes
 **barcodes** | **string[]** | For every barcode in this array, a separate packageline will be created | [optional] 
 **action_type_id** | **string** | Action type name, 1:inbound, 2:outbound, 3:assess | [optional] 
 **action_type_name** | **string** | Action type name | [optional] 
-**check_type_id** | **string** | Check type name, 1:manual, 2:scan | [optional] 
-**check_type_name** | **string** | Check type name | [optional] 
 **checked_by_driver** | **bool** | boolean for whether or not the packages have been checked by the driver | [optional] 
 **adr** | **bool** | boolean for whether or not the packages in this package line should be considered as ADR | [optional] 
 **adr_class** | **int** | ADR class of packages in package line | [optional] 

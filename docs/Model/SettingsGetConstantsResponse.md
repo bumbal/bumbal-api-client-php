@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **relation_type** | **map[string,string]** | Relation Types | [optional] 
 **week_day** | **map[string,string]** | Names of the days in the week | [optional] 
 **action_type** | **map[string,string]** | Action Types | [optional] 
-**check_type** | **map[string,string]** | Check Types | [optional] 
 **activity_type** | **map[string,string]** | Activity Types | [optional] 
 **special_activity** | **map[string,string]** | Special Activities | [optional] 
 **ae_activity** | **map[string,string]** | EA Activity | [optional] 

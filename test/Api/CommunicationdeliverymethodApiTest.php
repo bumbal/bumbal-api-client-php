@@ -73,12 +73,22 @@ class CommunicationdeliverymethodApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for retrieveCommunicationDeliveryMethod
+     * Test case for createCommunicationDeliveryMethod
      *
-     * Retrieve a communication delivery method.
+     * Create a communication delivery method.
      *
      */
-    public function testRetrieveCommunicationDeliveryMethod()
+    public function testCreateCommunicationDeliveryMethod()
+    {
+    }
+
+    /**
+     * Test case for deleteCommunicationDeliveryMethod
+     *
+     * Delete a communication delivery method.
+     *
+     */
+    public function testDeleteCommunicationDeliveryMethod()
     {
     }
 

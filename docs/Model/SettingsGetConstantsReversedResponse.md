@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **relation_type** | **object** | Relation Types | [optional] 
 **week_day** | **object** | Names of the days in the week | [optional] 
 **action_type** | **object** | Action Types | [optional] 
-**check_type** | **object** | Check Types | [optional] 
 **activity_type** | **object** | Activity Types | [optional] 
 **special_activity** | **object** | Special Activities | [optional] 
 **ae_activity** | **object** | EA Activity | [optional] 

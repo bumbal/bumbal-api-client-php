@@ -75,7 +75,7 @@ class CommunicationtemplateApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createCommunicationTemplate
      *
-     * Create a communication Template.
+     * Create a Communication Template.
      *
      */
     public function testCreateCommunicationTemplate()
@@ -85,7 +85,7 @@ class CommunicationtemplateApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteCommunicationTemplate
      *
-     * Delete a communication template.
+     * Delete a communicationtemplate.
      *
      */
     public function testDeleteCommunicationTemplate()
@@ -105,7 +105,7 @@ class CommunicationtemplateApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveListTemplate
      *
-     * Retrieve list of templates.
+     * Retrieve List of Templates.
      *
      */
     public function testRetrieveListTemplate()

@@ -5,19 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Identifier | [optional] 
 **activity_id** | **int** | Activity ID | [optional] 
-**message_type** | **string** | Type of message | [optional] 
-**message_type_name** | **string** | Message type name | [optional] 
-**scheduled_at** | **string** | When the message is scheduled | [optional] 
-**executed_at** | **string** | When the message is executed | [optional] 
-**status_id** | **int** | The status of the message (0 &#x3D; new, 1 &#x3D; scheduled, 2 &#x3D; processing, 3 &#x3D; sending, 4 &#x3D; send) | [optional] 
-**communication_mapping_id** | **int** | The mapping used for this message | [optional] 
+**communication_mapping_id** | **int** | Activity ID | [optional] 
 **communication_mapping** | [**\BumbalClient\Model\CommunicationTemplateModel**](CommunicationTemplateModel.md) |  | [optional] 
-**communication_message_history** | [**\BumbalClient\Model\CommunicationMessageHistoryModel[]**](CommunicationMessageHistoryModel.md) | All the history events for a message (sorted chronologically) | [optional] 
-**communication_message_content** | [**\BumbalClient\Model\CommunicationMessageContentModel**](CommunicationMessageContentModel.md) |  | [optional] 
-**created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
-**updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
-**created_by** | **int** | created_by user id | [optional] 
-**updated_by** | **int** | updated_by user id | [optional] 
+**recipient** | **string** | recipient | [optional] 
+**subject** | **string** | subject | [optional] 
+**html_content** | **string** | HTML content | [optional] 
+**text_content** | **string** | text content | [optional] 
+**communication_message_history** | [**\BumbalClient\Model\CommunicationMessageHistoryModel[]**](CommunicationMessageHistoryModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

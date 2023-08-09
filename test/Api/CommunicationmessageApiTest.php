@@ -73,9 +73,29 @@ class CommunicationmessageApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createCommunicationMessage
+     *
+     * Create a communicationmessage.
+     *
+     */
+    public function testCreateCommunicationMessage()
+    {
+    }
+
+    /**
+     * Test case for deleteCommunicationMessage
+     *
+     * Delete a communication message.
+     *
+     */
+    public function testDeleteCommunicationMessage()
+    {
+    }
+
+    /**
      * Test case for retrieveCommunicationMessage
      *
-     * Retrieve a communication message.
+     * Retrieve a communicationmessage.
      *
      */
     public function testRetrieveCommunicationMessage()
