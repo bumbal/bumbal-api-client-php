@@ -90,32 +90,4 @@ class RecurrenceGetRunsResponseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyData()
     {
     }
-
-    /**
-     * Test attribute "code"
-     */
-    public function testPropertyCode()
-    {
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
-
-    /**
-     * Test attribute "message"
-     */
-    public function testPropertyMessage()
-    {
-    }
-
-    /**
-     * Test attribute "additional_data"
-     */
-    public function testPropertyAdditionalData()
-    {
-    }
 }

@@ -134,20 +134,6 @@ class EquipmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "applied_capacities"
-     */
-    public function testPropertyAppliedCapacities()
-    {
-    }
-
-    /**
-     * Test attribute "capacities"
-     */
-    public function testPropertyCapacities()
-    {
-    }
-
-    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

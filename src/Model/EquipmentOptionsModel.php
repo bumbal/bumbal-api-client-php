@@ -62,9 +62,7 @@ class EquipmentOptionsModel implements ArrayAccess
         'include_equipment_files_meta_data' => 'bool',
         'include_equipment_notes' => 'bool',
         'include_equipment_note_tags' => 'bool',
-        'include_equipment_links' => 'bool',
-        'include_capacities' => 'bool',
-        'include_applied_capacities' => 'bool'
+        'include_equipment_links' => 'bool'
     ];
 
     /**
@@ -80,9 +78,7 @@ class EquipmentOptionsModel implements ArrayAccess
         'include_equipment_files_meta_data' => null,
         'include_equipment_notes' => null,
         'include_equipment_note_tags' => null,
-        'include_equipment_links' => null,
-        'include_capacities' => null,
-        'include_applied_capacities' => null
+        'include_equipment_links' => null
     ];
 
     public static function swaggerTypes()
@@ -108,9 +104,7 @@ class EquipmentOptionsModel implements ArrayAccess
         'include_equipment_files_meta_data' => 'include_equipment_files_meta_data',
         'include_equipment_notes' => 'include_equipment_notes',
         'include_equipment_note_tags' => 'include_equipment_note_tags',
-        'include_equipment_links' => 'include_equipment_links',
-        'include_capacities' => 'include_capacities',
-        'include_applied_capacities' => 'include_applied_capacities'
+        'include_equipment_links' => 'include_equipment_links'
     ];
 
 
@@ -127,9 +121,7 @@ class EquipmentOptionsModel implements ArrayAccess
         'include_equipment_files_meta_data' => 'setIncludeEquipmentFilesMetaData',
         'include_equipment_notes' => 'setIncludeEquipmentNotes',
         'include_equipment_note_tags' => 'setIncludeEquipmentNoteTags',
-        'include_equipment_links' => 'setIncludeEquipmentLinks',
-        'include_capacities' => 'setIncludeCapacities',
-        'include_applied_capacities' => 'setIncludeAppliedCapacities'
+        'include_equipment_links' => 'setIncludeEquipmentLinks'
     ];
 
 
@@ -146,9 +138,7 @@ class EquipmentOptionsModel implements ArrayAccess
         'include_equipment_files_meta_data' => 'getIncludeEquipmentFilesMetaData',
         'include_equipment_notes' => 'getIncludeEquipmentNotes',
         'include_equipment_note_tags' => 'getIncludeEquipmentNoteTags',
-        'include_equipment_links' => 'getIncludeEquipmentLinks',
-        'include_capacities' => 'getIncludeCapacities',
-        'include_applied_capacities' => 'getIncludeAppliedCapacities'
+        'include_equipment_links' => 'getIncludeEquipmentLinks'
     ];
 
     public static function attributeMap()
@@ -191,8 +181,6 @@ class EquipmentOptionsModel implements ArrayAccess
         $this->container['include_equipment_notes'] = isset($data['include_equipment_notes']) ? $data['include_equipment_notes'] : null;
         $this->container['include_equipment_note_tags'] = isset($data['include_equipment_note_tags']) ? $data['include_equipment_note_tags'] : null;
         $this->container['include_equipment_links'] = isset($data['include_equipment_links']) ? $data['include_equipment_links'] : null;
-        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
-        $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
     }
 
     /**
@@ -405,48 +393,6 @@ class EquipmentOptionsModel implements ArrayAccess
     public function setIncludeEquipmentLinks($include_equipment_links)
     {
         $this->container['include_equipment_links'] = $include_equipment_links;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_capacities
-     * @return bool
-     */
-    public function getIncludeCapacities()
-    {
-        return $this->container['include_capacities'];
-    }
-
-    /**
-     * Sets include_capacities
-     * @param bool $include_capacities
-     * @return $this
-     */
-    public function setIncludeCapacities($include_capacities)
-    {
-        $this->container['include_capacities'] = $include_capacities;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_applied_capacities
-     * @return bool
-     */
-    public function getIncludeAppliedCapacities()
-    {
-        return $this->container['include_applied_capacities'];
-    }
-
-    /**
-     * Sets include_applied_capacities
-     * @param bool $include_applied_capacities
-     * @return $this
-     */
-    public function setIncludeAppliedCapacities($include_applied_capacities)
-    {
-        $this->container['include_applied_capacities'] = $include_applied_capacities;
 
         return $this;
     }

@@ -139,18 +139,4 @@ class EquipmentOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeEquipmentLinks()
     {
     }
-
-    /**
-     * Test attribute "include_capacities"
-     */
-    public function testPropertyIncludeCapacities()
-    {
-    }
-
-    /**
-     * Test attribute "include_applied_capacities"
-     */
-    public function testPropertyIncludeAppliedCapacities()
-    {
-    }
 }

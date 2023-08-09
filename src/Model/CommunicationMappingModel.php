@@ -55,19 +55,20 @@ class CommunicationMappingModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'communication_template_id' => 'int',
-        'communication_template_name' => 'string',
-        'communication_template' => '\BumbalClient\Model\CommunicationTemplateModel',
-        'communication_delivery_method_id' => 'int',
-        'communication_delivery_method_name' => 'string',
-        'communication_message_type_id' => 'int',
-        'communication_message_type_name' => 'string',
+        'template_id' => 'int',
+        'template' => '\BumbalClient\Model\CommunicationTemplateModel',
+        'delivery_method_id' => 'int',
+        'delivery_method_name' => 'string',
+        'message_type_id' => 'int',
+        'message_type_name' => 'string',
         'no_tags' => 'bool',
         'tag_names' => 'string[]',
-        'tags' => '\BumbalClient\Model\TagModel[]',
-        'no_zones' => 'bool',
-        'zones' => '\BumbalClient\Model\ZoneModel[]',
-        'zone_names' => 'string[]'
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'created_by' => 'int',
+        'updated_by' => 'int',
+        'active' => 'bool',
+        'removed' => 'bool'
     ];
 
     /**
@@ -76,19 +77,20 @@ class CommunicationMappingModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'communication_template_id' => null,
-        'communication_template_name' => null,
-        'communication_template' => null,
-        'communication_delivery_method_id' => null,
-        'communication_delivery_method_name' => null,
-        'communication_message_type_id' => null,
-        'communication_message_type_name' => null,
+        'template_id' => null,
+        'template' => null,
+        'delivery_method_id' => null,
+        'delivery_method_name' => null,
+        'message_type_id' => null,
+        'message_type_name' => null,
         'no_tags' => null,
         'tag_names' => null,
-        'tags' => null,
-        'no_zones' => null,
-        'zones' => null,
-        'zone_names' => null
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
+        'created_by' => null,
+        'updated_by' => null,
+        'active' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -107,19 +109,20 @@ class CommunicationMappingModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'communication_template_id' => 'communication_template_id',
-        'communication_template_name' => 'communication_template_name',
-        'communication_template' => 'communication_template',
-        'communication_delivery_method_id' => 'communication_delivery_method_id',
-        'communication_delivery_method_name' => 'communication_delivery_method_name',
-        'communication_message_type_id' => 'communication_message_type_id',
-        'communication_message_type_name' => 'communication_message_type_name',
+        'template_id' => 'template_id',
+        'template' => 'template',
+        'delivery_method_id' => 'delivery_method_id',
+        'delivery_method_name' => 'delivery_method_name',
+        'message_type_id' => 'message_type_id',
+        'message_type_name' => 'message_type_name',
         'no_tags' => 'no_tags',
         'tag_names' => 'tag_names',
-        'tags' => 'tags',
-        'no_zones' => 'no_zones',
-        'zones' => 'zones',
-        'zone_names' => 'zone_names'
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'created_by' => 'created_by',
+        'updated_by' => 'updated_by',
+        'active' => 'active',
+        'removed' => 'removed'
     ];
 
 
@@ -129,19 +132,20 @@ class CommunicationMappingModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'communication_template_id' => 'setCommunicationTemplateId',
-        'communication_template_name' => 'setCommunicationTemplateName',
-        'communication_template' => 'setCommunicationTemplate',
-        'communication_delivery_method_id' => 'setCommunicationDeliveryMethodId',
-        'communication_delivery_method_name' => 'setCommunicationDeliveryMethodName',
-        'communication_message_type_id' => 'setCommunicationMessageTypeId',
-        'communication_message_type_name' => 'setCommunicationMessageTypeName',
+        'template_id' => 'setTemplateId',
+        'template' => 'setTemplate',
+        'delivery_method_id' => 'setDeliveryMethodId',
+        'delivery_method_name' => 'setDeliveryMethodName',
+        'message_type_id' => 'setMessageTypeId',
+        'message_type_name' => 'setMessageTypeName',
         'no_tags' => 'setNoTags',
         'tag_names' => 'setTagNames',
-        'tags' => 'setTags',
-        'no_zones' => 'setNoZones',
-        'zones' => 'setZones',
-        'zone_names' => 'setZoneNames'
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'created_by' => 'setCreatedBy',
+        'updated_by' => 'setUpdatedBy',
+        'active' => 'setActive',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -151,19 +155,20 @@ class CommunicationMappingModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'communication_template_id' => 'getCommunicationTemplateId',
-        'communication_template_name' => 'getCommunicationTemplateName',
-        'communication_template' => 'getCommunicationTemplate',
-        'communication_delivery_method_id' => 'getCommunicationDeliveryMethodId',
-        'communication_delivery_method_name' => 'getCommunicationDeliveryMethodName',
-        'communication_message_type_id' => 'getCommunicationMessageTypeId',
-        'communication_message_type_name' => 'getCommunicationMessageTypeName',
+        'template_id' => 'getTemplateId',
+        'template' => 'getTemplate',
+        'delivery_method_id' => 'getDeliveryMethodId',
+        'delivery_method_name' => 'getDeliveryMethodName',
+        'message_type_id' => 'getMessageTypeId',
+        'message_type_name' => 'getMessageTypeName',
         'no_tags' => 'getNoTags',
         'tag_names' => 'getTagNames',
-        'tags' => 'getTags',
-        'no_zones' => 'getNoZones',
-        'zones' => 'getZones',
-        'zone_names' => 'getZoneNames'
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'created_by' => 'getCreatedBy',
+        'updated_by' => 'getUpdatedBy',
+        'active' => 'getActive',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -198,19 +203,20 @@ class CommunicationMappingModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['communication_template_id'] = isset($data['communication_template_id']) ? $data['communication_template_id'] : null;
-        $this->container['communication_template_name'] = isset($data['communication_template_name']) ? $data['communication_template_name'] : null;
-        $this->container['communication_template'] = isset($data['communication_template']) ? $data['communication_template'] : null;
-        $this->container['communication_delivery_method_id'] = isset($data['communication_delivery_method_id']) ? $data['communication_delivery_method_id'] : null;
-        $this->container['communication_delivery_method_name'] = isset($data['communication_delivery_method_name']) ? $data['communication_delivery_method_name'] : null;
-        $this->container['communication_message_type_id'] = isset($data['communication_message_type_id']) ? $data['communication_message_type_id'] : null;
-        $this->container['communication_message_type_name'] = isset($data['communication_message_type_name']) ? $data['communication_message_type_name'] : null;
+        $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;
+        $this->container['template'] = isset($data['template']) ? $data['template'] : null;
+        $this->container['delivery_method_id'] = isset($data['delivery_method_id']) ? $data['delivery_method_id'] : null;
+        $this->container['delivery_method_name'] = isset($data['delivery_method_name']) ? $data['delivery_method_name'] : null;
+        $this->container['message_type_id'] = isset($data['message_type_id']) ? $data['message_type_id'] : null;
+        $this->container['message_type_name'] = isset($data['message_type_name']) ? $data['message_type_name'] : null;
         $this->container['no_tags'] = isset($data['no_tags']) ? $data['no_tags'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['no_zones'] = isset($data['no_zones']) ? $data['no_zones'] : null;
-        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
-        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
+        $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -260,148 +266,127 @@ class CommunicationMappingModel implements ArrayAccess
     }
 
     /**
-     * Gets communication_template_id
+     * Gets template_id
      * @return int
      */
-    public function getCommunicationTemplateId()
+    public function getTemplateId()
     {
-        return $this->container['communication_template_id'];
+        return $this->container['template_id'];
     }
 
     /**
-     * Sets communication_template_id
-     * @param int $communication_template_id Template ID
+     * Sets template_id
+     * @param int $template_id Template ID
      * @return $this
      */
-    public function setCommunicationTemplateId($communication_template_id)
+    public function setTemplateId($template_id)
     {
-        $this->container['communication_template_id'] = $communication_template_id;
+        $this->container['template_id'] = $template_id;
 
         return $this;
     }
 
     /**
-     * Gets communication_template_name
-     * @return string
-     */
-    public function getCommunicationTemplateName()
-    {
-        return $this->container['communication_template_name'];
-    }
-
-    /**
-     * Sets communication_template_name
-     * @param string $communication_template_name Template Name
-     * @return $this
-     */
-    public function setCommunicationTemplateName($communication_template_name)
-    {
-        $this->container['communication_template_name'] = $communication_template_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets communication_template
+     * Gets template
      * @return \BumbalClient\Model\CommunicationTemplateModel
      */
-    public function getCommunicationTemplate()
+    public function getTemplate()
     {
-        return $this->container['communication_template'];
+        return $this->container['template'];
     }
 
     /**
-     * Sets communication_template
-     * @param \BumbalClient\Model\CommunicationTemplateModel $communication_template
+     * Sets template
+     * @param \BumbalClient\Model\CommunicationTemplateModel $template
      * @return $this
      */
-    public function setCommunicationTemplate($communication_template)
+    public function setTemplate($template)
     {
-        $this->container['communication_template'] = $communication_template;
+        $this->container['template'] = $template;
 
         return $this;
     }
 
     /**
-     * Gets communication_delivery_method_id
+     * Gets delivery_method_id
      * @return int
      */
-    public function getCommunicationDeliveryMethodId()
+    public function getDeliveryMethodId()
     {
-        return $this->container['communication_delivery_method_id'];
+        return $this->container['delivery_method_id'];
     }
 
     /**
-     * Sets communication_delivery_method_id
-     * @param int $communication_delivery_method_id Delivery Method ID
+     * Sets delivery_method_id
+     * @param int $delivery_method_id Delivery Method ID
      * @return $this
      */
-    public function setCommunicationDeliveryMethodId($communication_delivery_method_id)
+    public function setDeliveryMethodId($delivery_method_id)
     {
-        $this->container['communication_delivery_method_id'] = $communication_delivery_method_id;
+        $this->container['delivery_method_id'] = $delivery_method_id;
 
         return $this;
     }
 
     /**
-     * Gets communication_delivery_method_name
+     * Gets delivery_method_name
      * @return string
      */
-    public function getCommunicationDeliveryMethodName()
+    public function getDeliveryMethodName()
     {
-        return $this->container['communication_delivery_method_name'];
+        return $this->container['delivery_method_name'];
     }
 
     /**
-     * Sets communication_delivery_method_name
-     * @param string $communication_delivery_method_name Delivery Method Name
+     * Sets delivery_method_name
+     * @param string $delivery_method_name Delivery Method Name
      * @return $this
      */
-    public function setCommunicationDeliveryMethodName($communication_delivery_method_name)
+    public function setDeliveryMethodName($delivery_method_name)
     {
-        $this->container['communication_delivery_method_name'] = $communication_delivery_method_name;
+        $this->container['delivery_method_name'] = $delivery_method_name;
 
         return $this;
     }
 
     /**
-     * Gets communication_message_type_id
+     * Gets message_type_id
      * @return int
      */
-    public function getCommunicationMessageTypeId()
+    public function getMessageTypeId()
     {
-        return $this->container['communication_message_type_id'];
+        return $this->container['message_type_id'];
     }
 
     /**
-     * Sets communication_message_type_id
-     * @param int $communication_message_type_id MessageType ID
+     * Sets message_type_id
+     * @param int $message_type_id Message type ID
      * @return $this
      */
-    public function setCommunicationMessageTypeId($communication_message_type_id)
+    public function setMessageTypeId($message_type_id)
     {
-        $this->container['communication_message_type_id'] = $communication_message_type_id;
+        $this->container['message_type_id'] = $message_type_id;
 
         return $this;
     }
 
     /**
-     * Gets communication_message_type_name
+     * Gets message_type_name
      * @return string
      */
-    public function getCommunicationMessageTypeName()
+    public function getMessageTypeName()
     {
-        return $this->container['communication_message_type_name'];
+        return $this->container['message_type_name'];
     }
 
     /**
-     * Sets communication_message_type_name
-     * @param string $communication_message_type_name MessageType Name
+     * Sets message_type_name
+     * @param string $message_type_name Message type name
      * @return $this
      */
-    public function setCommunicationMessageTypeName($communication_message_type_name)
+    public function setMessageTypeName($message_type_name)
     {
-        $this->container['communication_message_type_name'] = $communication_message_type_name;
+        $this->container['message_type_name'] = $message_type_name;
 
         return $this;
     }
@@ -417,7 +402,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Sets no_tags
-     * @param bool $no_tags No Tag Flag
+     * @param bool $no_tags No tag flag
      * @return $this
      */
     public function setNoTags($no_tags)
@@ -449,85 +434,127 @@ class CommunicationMappingModel implements ArrayAccess
     }
 
     /**
-     * Gets tags
-     * @return \BumbalClient\Model\TagModel[]
+     * Gets created_at
+     * @return \DateTime|string|null
      */
-    public function getTags()
+    public function getCreatedAt()
     {
-        return $this->container['tags'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * Sets created_at
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
-    public function setTags($tags)
+    public function setCreatedAt($created_at)
     {
-        $this->container['tags'] = $tags;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets no_zones
+     * Gets updated_at
+     * @return \DateTime|string|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime|string|null $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by
+     * @return int
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['created_by'];
+    }
+
+    /**
+     * Sets created_by
+     * @param int $created_by created_by user id
+     * @return $this
+     */
+    public function setCreatedBy($created_by)
+    {
+        $this->container['created_by'] = $created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by
+     * @return int
+     */
+    public function getUpdatedBy()
+    {
+        return $this->container['updated_by'];
+    }
+
+    /**
+     * Sets updated_by
+     * @param int $updated_by updated_by user id
+     * @return $this
+     */
+    public function setUpdatedBy($updated_by)
+    {
+        $this->container['updated_by'] = $updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
      * @return bool
      */
-    public function getNoZones()
+    public function getActive()
     {
-        return $this->container['no_zones'];
+        return $this->container['active'];
     }
 
     /**
-     * Sets no_zones
-     * @param bool $no_zones No zones Flag
+     * Sets active
+     * @param bool $active Mapping is active (=true).
      * @return $this
      */
-    public function setNoZones($no_zones)
+    public function setActive($active)
     {
-        $this->container['no_zones'] = $no_zones;
+        $this->container['active'] = $active;
 
         return $this;
     }
 
     /**
-     * Gets zones
-     * @return \BumbalClient\Model\ZoneModel[]
+     * Gets removed
+     * @return bool
      */
-    public function getZones()
+    public function getRemoved()
     {
-        return $this->container['zones'];
+        return $this->container['removed'];
     }
 
     /**
-     * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones
+     * Sets removed
+     * @param bool $removed Mapping is removed (=true).
      * @return $this
      */
-    public function setZones($zones)
+    public function setRemoved($removed)
     {
-        $this->container['zones'] = $zones;
-
-        return $this;
-    }
-
-    /**
-     * Gets zone_names
-     * @return string[]
-     */
-    public function getZoneNames()
-    {
-        return $this->container['zone_names'];
-    }
-
-    /**
-     * Sets zone_names
-     * @param string[] $zone_names Zone names
-     * @return $this
-     */
-    public function setZoneNames($zone_names)
-    {
-        $this->container['zone_names'] = $zone_names;
+        $this->container['removed'] = $removed;
 
         return $this;
     }

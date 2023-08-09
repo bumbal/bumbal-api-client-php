@@ -73,22 +73,22 @@ class CommunicationmessagetypeApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createCommunicationMessageType
+     * Test case for listCommunicationMessageTypes
      *
-     * Create a communicationmessagetype.
+     * List all CommunicationMessageTypes.
      *
      */
-    public function testCreateCommunicationMessageType()
+    public function testListCommunicationMessageTypes()
     {
     }
 
     /**
-     * Test case for deleteCommunicationMessageType
+     * Test case for retrieveCommunicationMessageType
      *
-     * Delete a communication message type.
+     * Retrieve a communication message type.
      *
      */
-    public function testDeleteCommunicationMessageType()
+    public function testRetrieveCommunicationMessageType()
     {
     }
 }

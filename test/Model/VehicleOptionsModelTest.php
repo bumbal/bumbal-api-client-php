@@ -132,4 +132,11 @@ class VehicleOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeTagTypeName()
     {
     }
+
+    /**
+     * Test attribute "include_capacities"
+     */
+    public function testPropertyIncludeCapacities()
+    {
+    }
 }

@@ -54,8 +54,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\CommunicationDeliveryMethodOptionsModel',
-        'filters' => '\BumbalClient\Model\CommunicationDeliveryMethodOptionsModel',
+        'filters' => '\BumbalClient\Model\CommunicationDeliveryMethodFiltersModel',
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
         'limit' => 'int',
@@ -69,7 +68,6 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'options' => null,
         'filters' => null,
         'sorting_column' => null,
         'sorting_direction' => null,
@@ -94,7 +92,6 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'options' => 'options',
         'filters' => 'filters',
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
@@ -110,7 +107,6 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'options' => 'setOptions',
         'filters' => 'setFilters',
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
@@ -126,7 +122,6 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'options' => 'getOptions',
         'filters' => 'getFilters',
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
@@ -195,9 +190,8 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
-        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
+        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : 'id';
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -255,29 +249,8 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
 
     /**
-     * Gets options
-     * @return \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel $options
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
      * Gets filters
-     * @return \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel
+     * @return \BumbalClient\Model\CommunicationDeliveryMethodFiltersModel
      */
     public function getFilters()
     {
@@ -286,7 +259,7 @@ class CommunicationDeliveryMethodRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\CommunicationDeliveryMethodOptionsModel $filters
+     * @param \BumbalClient\Model\CommunicationDeliveryMethodFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

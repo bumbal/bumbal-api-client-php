@@ -54,13 +54,12 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\CommunicationTemplateOptionsModel',
-        'filters' => '\BumbalClient\Model\CommunicationTemplateFiltersModel',
+        'options' => '\BumbalClient\Model\CommunicationMessageOptionsModel',
+        'filters' => '\BumbalClient\Model\CommunicationMessageFiltersModel',
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string',
         'as_list' => 'bool'
     ];
 
@@ -75,7 +74,6 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
         'sorting_direction' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_text' => null,
         'as_list' => null
     ];
 
@@ -100,7 +98,6 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
         'sorting_direction' => 'sorting_direction',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text',
         'as_list' => 'as_list'
     ];
 
@@ -116,7 +113,6 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
         'sorting_direction' => 'setSortingDirection',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText',
         'as_list' => 'setAsList'
     ];
 
@@ -132,7 +128,6 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
         'sorting_direction' => 'getSortingDirection',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText',
         'as_list' => 'getAsList'
     ];
 
@@ -151,7 +146,7 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
-    const SORTING_COLUMN_ID = 'id';
+    const SORTING_COLUMN_ID = 'communication_message.id';
     const SORTING_DIRECTION_ASC = 'ASC';
     const SORTING_DIRECTION_DESC = 'DESC';
     
@@ -195,12 +190,11 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
     {
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
-        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
+        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : 'communication_message.id';
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
-        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : true;
     }
 
     /**
@@ -254,7 +248,7 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\Model\CommunicationTemplateOptionsModel
+     * @return \BumbalClient\Model\CommunicationMessageOptionsModel
      */
     public function getOptions()
     {
@@ -263,7 +257,7 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\CommunicationTemplateOptionsModel $options
+     * @param \BumbalClient\Model\CommunicationMessageOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -275,7 +269,7 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\CommunicationTemplateFiltersModel
+     * @return \BumbalClient\Model\CommunicationMessageFiltersModel
      */
     public function getFilters()
     {
@@ -284,7 +278,7 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\CommunicationTemplateFiltersModel $filters
+     * @param \BumbalClient\Model\CommunicationMessageFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -392,27 +386,6 @@ class CommunicationMessageRetrieveListArguments implements ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * Gets search_text
-     * @return string
-     */
-    public function getSearchText()
-    {
-        return $this->container['search_text'];
-    }
-
-    /**
-     * Sets search_text
-     * @param string $search_text
-     * @return $this
-     */
-    public function setSearchText($search_text)
-    {
-        $this->container['search_text'] = $search_text;
 
         return $this;
     }

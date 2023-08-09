@@ -61,7 +61,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_meta_data' => 'bool',
         'include_vehicle_links' => 'bool',
         'include_vehicle_tags' => 'bool',
-        'include_tag_type_name' => 'bool'
+        'include_tag_type_name' => 'bool',
+        'include_capacities' => 'bool'
     ];
 
     /**
@@ -76,7 +77,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_meta_data' => null,
         'include_vehicle_links' => null,
         'include_vehicle_tags' => null,
-        'include_tag_type_name' => null
+        'include_tag_type_name' => null,
+        'include_capacities' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_meta_data' => 'include_vehicle_meta_data',
         'include_vehicle_links' => 'include_vehicle_links',
         'include_vehicle_tags' => 'include_vehicle_tags',
-        'include_tag_type_name' => 'include_tag_type_name'
+        'include_tag_type_name' => 'include_tag_type_name',
+        'include_capacities' => 'include_capacities'
     ];
 
 
@@ -117,7 +120,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_meta_data' => 'setIncludeVehicleMetaData',
         'include_vehicle_links' => 'setIncludeVehicleLinks',
         'include_vehicle_tags' => 'setIncludeVehicleTags',
-        'include_tag_type_name' => 'setIncludeTagTypeName'
+        'include_tag_type_name' => 'setIncludeTagTypeName',
+        'include_capacities' => 'setIncludeCapacities'
     ];
 
 
@@ -133,7 +137,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_meta_data' => 'getIncludeVehicleMetaData',
         'include_vehicle_links' => 'getIncludeVehicleLinks',
         'include_vehicle_tags' => 'getIncludeVehicleTags',
-        'include_tag_type_name' => 'getIncludeTagTypeName'
+        'include_tag_type_name' => 'getIncludeTagTypeName',
+        'include_capacities' => 'getIncludeCapacities'
     ];
 
     public static function attributeMap()
@@ -175,6 +180,7 @@ class VehicleOptionsModel implements ArrayAccess
         $this->container['include_vehicle_links'] = isset($data['include_vehicle_links']) ? $data['include_vehicle_links'] : null;
         $this->container['include_vehicle_tags'] = isset($data['include_vehicle_tags']) ? $data['include_vehicle_tags'] : null;
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
+        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
     }
 
     /**
@@ -366,6 +372,27 @@ class VehicleOptionsModel implements ArrayAccess
     public function setIncludeTagTypeName($include_tag_type_name)
     {
         $this->container['include_tag_type_name'] = $include_tag_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_capacities
+     * @return bool
+     */
+    public function getIncludeCapacities()
+    {
+        return $this->container['include_capacities'];
+    }
+
+    /**
+     * Sets include_capacities
+     * @param bool $include_capacities
+     * @return $this
+     */
+    public function setIncludeCapacities($include_capacities)
+    {
+        $this->container['include_capacities'] = $include_capacities;
 
         return $this;
     }

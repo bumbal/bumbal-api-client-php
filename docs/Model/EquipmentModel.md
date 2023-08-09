@@ -11,8 +11,6 @@ Name | Type | Description | Notes
 **registration_nr** | **string** |  | [optional] 
 **max_speed** | **int** |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**applied_capacities** | **object** |  | [optional] 
-**capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 

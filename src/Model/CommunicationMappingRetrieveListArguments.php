@@ -60,7 +60,6 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
         'sorting_direction' => 'string',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string',
         'as_list' => 'bool'
     ];
 
@@ -75,7 +74,6 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
         'sorting_direction' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_text' => null,
         'as_list' => null
     ];
 
@@ -100,7 +98,6 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
         'sorting_direction' => 'sorting_direction',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text',
         'as_list' => 'as_list'
     ];
 
@@ -116,7 +113,6 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
         'sorting_direction' => 'setSortingDirection',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText',
         'as_list' => 'setAsList'
     ];
 
@@ -132,7 +128,6 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
         'sorting_direction' => 'getSortingDirection',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText',
         'as_list' => 'getAsList'
     ];
 
@@ -152,7 +147,10 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
     }
 
     const SORTING_COLUMN_ID = 'id';
-    const SORTING_COLUMN_NAME = 'name';
+    const SORTING_COLUMN_DELIVERY_METHOD_ID = 'delivery_method_id';
+    const SORTING_COLUMN_MESSAGE_TYPE_ID = 'message_type_id';
+    const SORTING_COLUMN_CREATED_AT = 'created_at';
+    const SORTING_COLUMN_UPDATED_AT = 'updated_at';
     const SORTING_DIRECTION_ASC = 'ASC';
     const SORTING_DIRECTION_DESC = 'DESC';
     
@@ -166,7 +164,10 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
     {
         return [
             self::SORTING_COLUMN_ID,
-            self::SORTING_COLUMN_NAME,
+            self::SORTING_COLUMN_DELIVERY_METHOD_ID,
+            self::SORTING_COLUMN_MESSAGE_TYPE_ID,
+            self::SORTING_COLUMN_CREATED_AT,
+            self::SORTING_COLUMN_UPDATED_AT,
         ];
     }
     
@@ -201,8 +202,7 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
-        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : true;
     }
 
     /**
@@ -394,27 +394,6 @@ class CommunicationMappingRetrieveListArguments implements ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * Gets search_text
-     * @return string
-     */
-    public function getSearchText()
-    {
-        return $this->container['search_text'];
-    }
-
-    /**
-     * Sets search_text
-     * @param string $search_text
-     * @return $this
-     */
-    public function setSearchText($search_text)
-    {
-        $this->container['search_text'] = $search_text;
 
         return $this;
     }

@@ -85,9 +85,37 @@ class CommunicationMessageHistoryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "message_id"
+     */
+    public function testPropertyMessageId()
+    {
+    }
+
+    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "provider_id"
+     */
+    public function testPropertyProviderId()
+    {
+    }
+
+    /**
+     * Test attribute "provider_name"
+     */
+    public function testPropertyProviderName()
+    {
+    }
+
+    /**
+     * Test attribute "provider_timestamp"
+     */
+    public function testPropertyProviderTimestamp()
     {
     }
 

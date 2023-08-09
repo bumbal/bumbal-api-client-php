@@ -54,7 +54,10 @@ class CommunicationMessageFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'activity_id' => 'int'
+        'id' => 'int[]',
+        'activity_id' => 'int[]',
+        'message_type' => 'int',
+        'status_id' => 'int[]'
     ];
 
     /**
@@ -62,7 +65,10 @@ class CommunicationMessageFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'activity_id' => null
+        'id' => null,
+        'activity_id' => null,
+        'message_type' => null,
+        'status_id' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +86,10 @@ class CommunicationMessageFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'activity_id' => 'activity_id'
+        'id' => 'id',
+        'activity_id' => 'activity_id',
+        'message_type' => 'message_type',
+        'status_id' => 'status_id'
     ];
 
 
@@ -89,7 +98,10 @@ class CommunicationMessageFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'activity_id' => 'setActivityId'
+        'id' => 'setId',
+        'activity_id' => 'setActivityId',
+        'message_type' => 'setMessageType',
+        'status_id' => 'setStatusId'
     ];
 
 
@@ -98,7 +110,10 @@ class CommunicationMessageFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'activity_id' => 'getActivityId'
+        'id' => 'getId',
+        'activity_id' => 'getActivityId',
+        'message_type' => 'getMessageType',
+        'status_id' => 'getStatusId'
     ];
 
     public static function attributeMap()
@@ -132,7 +147,10 @@ class CommunicationMessageFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
+        $this->container['message_type'] = isset($data['message_type']) ? $data['message_type'] : null;
+        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
     }
 
     /**
@@ -161,8 +179,29 @@ class CommunicationMessageFiltersModel implements ArrayAccess
 
 
     /**
+     * Gets id
+     * @return int[]
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int[] $id Communication message type ID's
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
      * Gets activity_id
-     * @return int
+     * @return int[]
      */
     public function getActivityId()
     {
@@ -171,12 +210,54 @@ class CommunicationMessageFiltersModel implements ArrayAccess
 
     /**
      * Sets activity_id
-     * @param int $activity_id Bumbal Activity ID
+     * @param int[] $activity_id Activity ID's
      * @return $this
      */
     public function setActivityId($activity_id)
     {
         $this->container['activity_id'] = $activity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets message_type
+     * @return int
+     */
+    public function getMessageType()
+    {
+        return $this->container['message_type'];
+    }
+
+    /**
+     * Sets message_type
+     * @param int $message_type Message type ID
+     * @return $this
+     */
+    public function setMessageType($message_type)
+    {
+        $this->container['message_type'] = $message_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_id
+     * @return int[]
+     */
+    public function getStatusId()
+    {
+        return $this->container['status_id'];
+    }
+
+    /**
+     * Sets status_id
+     * @param int[] $status_id Status ID's
+     * @return $this
+     */
+    public function setStatusId($status_id)
+    {
+        $this->container['status_id'] = $status_id;
 
         return $this;
     }

@@ -132,4 +132,46 @@ class CommunicationTemplateModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMappings()
     {
     }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
+
+    /**
+     * Test attribute "created_by"
+     */
+    public function testPropertyCreatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "updated_by"
+     */
+    public function testPropertyUpdatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+    }
 }
