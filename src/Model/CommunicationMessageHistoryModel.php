@@ -55,7 +55,11 @@ class CommunicationMessageHistoryModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'message_id' => 'int',
         'description' => 'string',
+        'provider_id' => 'string',
+        'provider_name' => 'string',
+        'provider_timestamp' => 'string',
         'created_at' => 'string'
     ];
 
@@ -65,7 +69,11 @@ class CommunicationMessageHistoryModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'message_id' => null,
         'description' => null,
+        'provider_id' => null,
+        'provider_name' => null,
+        'provider_timestamp' => null,
         'created_at' => null
     ];
 
@@ -85,7 +93,11 @@ class CommunicationMessageHistoryModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'message_id' => 'message_id',
         'description' => 'description',
+        'provider_id' => 'provider_id',
+        'provider_name' => 'provider_name',
+        'provider_timestamp' => 'provider_timestamp',
         'created_at' => 'created_at'
     ];
 
@@ -96,7 +108,11 @@ class CommunicationMessageHistoryModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'message_id' => 'setMessageId',
         'description' => 'setDescription',
+        'provider_id' => 'setProviderId',
+        'provider_name' => 'setProviderName',
+        'provider_timestamp' => 'setProviderTimestamp',
         'created_at' => 'setCreatedAt'
     ];
 
@@ -107,7 +123,11 @@ class CommunicationMessageHistoryModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'message_id' => 'getMessageId',
         'description' => 'getDescription',
+        'provider_id' => 'getProviderId',
+        'provider_name' => 'getProviderName',
+        'provider_timestamp' => 'getProviderTimestamp',
         'created_at' => 'getCreatedAt'
     ];
 
@@ -143,7 +163,11 @@ class CommunicationMessageHistoryModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['message_id'] = isset($data['message_id']) ? $data['message_id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['provider_id'] = isset($data['provider_id']) ? $data['provider_id'] : null;
+        $this->container['provider_name'] = isset($data['provider_name']) ? $data['provider_name'] : null;
+        $this->container['provider_timestamp'] = isset($data['provider_timestamp']) ? $data['provider_timestamp'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
     }
 
@@ -194,6 +218,27 @@ class CommunicationMessageHistoryModel implements ArrayAccess
     }
 
     /**
+     * Gets message_id
+     * @return int
+     */
+    public function getMessageId()
+    {
+        return $this->container['message_id'];
+    }
+
+    /**
+     * Sets message_id
+     * @param int $message_id The message ID for this history
+     * @return $this
+     */
+    public function setMessageId($message_id)
+    {
+        $this->container['message_id'] = $message_id;
+
+        return $this;
+    }
+
+    /**
      * Gets description
      * @return string
      */
@@ -210,6 +255,69 @@ class CommunicationMessageHistoryModel implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider_id
+     * @return string
+     */
+    public function getProviderId()
+    {
+        return $this->container['provider_id'];
+    }
+
+    /**
+     * Sets provider_id
+     * @param string $provider_id The unique ID for this history event from the provider
+     * @return $this
+     */
+    public function setProviderId($provider_id)
+    {
+        $this->container['provider_id'] = $provider_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider_name
+     * @return string
+     */
+    public function getProviderName()
+    {
+        return $this->container['provider_name'];
+    }
+
+    /**
+     * Sets provider_name
+     * @param string $provider_name The name of the provider for this history event
+     * @return $this
+     */
+    public function setProviderName($provider_name)
+    {
+        $this->container['provider_name'] = $provider_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider_timestamp
+     * @return string
+     */
+    public function getProviderTimestamp()
+    {
+        return $this->container['provider_timestamp'];
+    }
+
+    /**
+     * Sets provider_timestamp
+     * @param string $provider_timestamp The timestamp for this history event from the provider
+     * @return $this
+     */
+    public function setProviderTimestamp($provider_timestamp)
+    {
+        $this->container['provider_timestamp'] = $provider_timestamp;
 
         return $this;
     }

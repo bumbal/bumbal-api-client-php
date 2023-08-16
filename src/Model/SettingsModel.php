@@ -169,6 +169,8 @@ class SettingsModel implements ArrayAccess
     const SETTINGS_GROUP_NAME_NOTE = 'note';
     const SETTINGS_GROUP_NAME_OPTIMISATION = 'optimisation';
     const SETTINGS_GROUP_NAME_FILTERS = 'filters';
+    const SETTINGS_GROUP_NAME_MOBILE = 'mobile';
+    const SETTINGS_GROUP_NAME_COMMUNICATION = 'communication';
     
 
     
@@ -187,6 +189,8 @@ class SettingsModel implements ArrayAccess
             self::SETTINGS_GROUP_NAME_NOTE,
             self::SETTINGS_GROUP_NAME_OPTIMISATION,
             self::SETTINGS_GROUP_NAME_FILTERS,
+            self::SETTINGS_GROUP_NAME_MOBILE,
+            self::SETTINGS_GROUP_NAME_COMMUNICATION,
         ];
     }
     
@@ -284,7 +288,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets settings_group_id
-     * @param int $settings_group_id SettingsGroup id of this setting. Possible values: 1: general, 2: address, 3: package, 4: activity, 5: equipment, 6: note, 7: optimisation, 8: filters
+     * @param int $settings_group_id SettingsGroup id of this setting. Possible values: 1: general, 2: address, 3: package, 4: activity, 5: equipment, 6: note, 7: optimisation, 8: filters, 9: mobile, 10: communication
      * @return $this
      */
     public function setSettingsGroupId($settings_group_id)
