@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\CommunicationmessagehistoryApi();
-$body = new \BumbalClient\Model\CommunicationMappingModel(); // \BumbalClient\Model\CommunicationMappingModel | Mapping object
+$body = array(new \BumbalClient\Model\CommunicationMessageHistoryModel()); // \BumbalClient\Model\CommunicationMessageHistoryModel[] | 
 
 try {
     $result = $api_instance->createCommunicationMessageHistory($body);
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\CommunicationMappingModel**](../Model/CommunicationMappingModel.md)| Mapping object | [optional]
+ **body** | [**\BumbalClient\Model\CommunicationMessageHistoryModel[]**](../Model/CommunicationMessageHistoryModel.md)|  |
 
 ### Return type
 

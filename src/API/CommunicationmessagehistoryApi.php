@@ -92,11 +92,11 @@ class CommunicationmessagehistoryApi
      *
      * Create communication message history
      *
-     * @param \BumbalClient\Model\CommunicationMappingModel $body Mapping object (optional)
+     * @param \BumbalClient\Model\CommunicationMessageHistoryModel[] $body  (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function createCommunicationMessageHistory($body = null)
+    public function createCommunicationMessageHistory($body)
     {
         list($response) = $this->createCommunicationMessageHistoryWithHttpInfo($body);
         return $response;
@@ -107,12 +107,16 @@ class CommunicationmessagehistoryApi
      *
      * Create communication message history
      *
-     * @param \BumbalClient\Model\CommunicationMappingModel $body Mapping object (optional)
+     * @param \BumbalClient\Model\CommunicationMessageHistoryModel[] $body  (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCommunicationMessageHistoryWithHttpInfo($body = null)
+    public function createCommunicationMessageHistoryWithHttpInfo($body)
     {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling createCommunicationMessageHistory');
+        }
         // parse inputs
         $resourcePath = "/communication-message-history/set";
         $httpBody = '';
