@@ -85,9 +85,9 @@ class CommunicationMessageOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_message_content"
+     * Test attribute "include_communication_message_content"
      */
-    public function testPropertyIncludeMessageContent()
+    public function testPropertyIncludeCommunicationMessageContent()
     {
     }
 
@@ -95,6 +95,13 @@ class CommunicationMessageOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_communication_message_history"
      */
     public function testPropertyIncludeCommunicationMessageHistory()
+    {
+    }
+
+    /**
+     * Test attribute "include_communication_message_type_name"
+     */
+    public function testPropertyIncludeCommunicationMessageTypeName()
     {
     }
 }

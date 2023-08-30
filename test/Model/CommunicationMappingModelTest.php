@@ -85,51 +85,44 @@ class CommunicationMappingModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "communication_template_id"
+     * Test attribute "template_id"
      */
-    public function testPropertyCommunicationTemplateId()
+    public function testPropertyTemplateId()
     {
     }
 
     /**
-     * Test attribute "communication_template_name"
+     * Test attribute "template"
      */
-    public function testPropertyCommunicationTemplateName()
+    public function testPropertyTemplate()
     {
     }
 
     /**
-     * Test attribute "communication_template"
+     * Test attribute "delivery_method_id"
      */
-    public function testPropertyCommunicationTemplate()
+    public function testPropertyDeliveryMethodId()
     {
     }
 
     /**
-     * Test attribute "communication_delivery_method_id"
+     * Test attribute "delivery_method_name"
      */
-    public function testPropertyCommunicationDeliveryMethodId()
+    public function testPropertyDeliveryMethodName()
     {
     }
 
     /**
-     * Test attribute "communication_delivery_method_name"
+     * Test attribute "message_type_id"
      */
-    public function testPropertyCommunicationDeliveryMethodName()
+    public function testPropertyMessageTypeId()
     {
     }
 
     /**
-     * Test attribute "communication_message_type_id"
+     * Test attribute "message_type_name"
      */
-    public function testPropertyCommunicationMessageTypeId()
-    {
-    }
-
-    /**
-     * Test attribute "communication_message_type_name"
-     */
-    public function testPropertyCommunicationMessageTypeName()
+    public function testPropertyMessageTypeName()
     {
     }
 
@@ -148,30 +141,44 @@ class CommunicationMappingModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "created_at"
      */
-    public function testPropertyTags()
+    public function testPropertyCreatedAt()
     {
     }
 
     /**
-     * Test attribute "no_zones"
+     * Test attribute "updated_at"
      */
-    public function testPropertyNoZones()
+    public function testPropertyUpdatedAt()
     {
     }
 
     /**
-     * Test attribute "zones"
+     * Test attribute "created_by"
      */
-    public function testPropertyZones()
+    public function testPropertyCreatedBy()
     {
     }
 
     /**
-     * Test attribute "zone_names"
+     * Test attribute "updated_by"
      */
-    public function testPropertyZoneNames()
+    public function testPropertyUpdatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
     {
     }
 }

@@ -54,10 +54,11 @@ class CommunicationMappingFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int[]',
         'updated_at_since' => '\DateTime',
         'tag_names' => 'string[]',
-        'communication_message_type_id' => 'int[]',
-        'communication_message_type_names' => 'int[]'
+        'message_type_id' => 'int[]',
+        'message_type_names' => 'int[]'
     ];
 
     /**
@@ -65,10 +66,11 @@ class CommunicationMappingFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => null,
         'updated_at_since' => 'date-time',
         'tag_names' => null,
-        'communication_message_type_id' => null,
-        'communication_message_type_names' => null
+        'message_type_id' => null,
+        'message_type_names' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +88,11 @@ class CommunicationMappingFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'updated_at_since' => 'updated_at_since',
         'tag_names' => 'tag_names',
-        'communication_message_type_id' => 'communication_message_type_id',
-        'communication_message_type_names' => 'communication_message_type_names'
+        'message_type_id' => 'message_type_id',
+        'message_type_names' => 'message_type_names'
     ];
 
 
@@ -98,10 +101,11 @@ class CommunicationMappingFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'updated_at_since' => 'setUpdatedAtSince',
         'tag_names' => 'setTagNames',
-        'communication_message_type_id' => 'setCommunicationMessageTypeId',
-        'communication_message_type_names' => 'setCommunicationMessageTypeNames'
+        'message_type_id' => 'setMessageTypeId',
+        'message_type_names' => 'setMessageTypeNames'
     ];
 
 
@@ -110,10 +114,11 @@ class CommunicationMappingFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'updated_at_since' => 'getUpdatedAtSince',
         'tag_names' => 'getTagNames',
-        'communication_message_type_id' => 'getCommunicationMessageTypeId',
-        'communication_message_type_names' => 'getCommunicationMessageTypeNames'
+        'message_type_id' => 'getMessageTypeId',
+        'message_type_names' => 'getMessageTypeNames'
     ];
 
     public static function attributeMap()
@@ -147,10 +152,11 @@ class CommunicationMappingFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
-        $this->container['communication_message_type_id'] = isset($data['communication_message_type_id']) ? $data['communication_message_type_id'] : null;
-        $this->container['communication_message_type_names'] = isset($data['communication_message_type_names']) ? $data['communication_message_type_names'] : null;
+        $this->container['message_type_id'] = isset($data['message_type_id']) ? $data['message_type_id'] : null;
+        $this->container['message_type_names'] = isset($data['message_type_names']) ? $data['message_type_names'] : null;
     }
 
     /**
@@ -177,6 +183,27 @@ class CommunicationMappingFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int[]
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int[] $id Communication mapping ID's
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets updated_at_since
@@ -221,43 +248,43 @@ class CommunicationMappingFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets communication_message_type_id
+     * Gets message_type_id
      * @return int[]
      */
-    public function getCommunicationMessageTypeId()
+    public function getMessageTypeId()
     {
-        return $this->container['communication_message_type_id'];
+        return $this->container['message_type_id'];
     }
 
     /**
-     * Sets communication_message_type_id
-     * @param int[] $communication_message_type_id Communication message type ID's
+     * Sets message_type_id
+     * @param int[] $message_type_id Communication message type ID's
      * @return $this
      */
-    public function setCommunicationMessageTypeId($communication_message_type_id)
+    public function setMessageTypeId($message_type_id)
     {
-        $this->container['communication_message_type_id'] = $communication_message_type_id;
+        $this->container['message_type_id'] = $message_type_id;
 
         return $this;
     }
 
     /**
-     * Gets communication_message_type_names
+     * Gets message_type_names
      * @return int[]
      */
-    public function getCommunicationMessageTypeNames()
+    public function getMessageTypeNames()
     {
-        return $this->container['communication_message_type_names'];
+        return $this->container['message_type_names'];
     }
 
     /**
-     * Sets communication_message_type_names
-     * @param int[] $communication_message_type_names Communication message type names
+     * Sets message_type_names
+     * @param int[] $message_type_names Communication message type names
      * @return $this
      */
-    public function setCommunicationMessageTypeNames($communication_message_type_names)
+    public function setMessageTypeNames($message_type_names)
     {
-        $this->container['communication_message_type_names'] = $communication_message_type_names;
+        $this->container['message_type_names'] = $message_type_names;
 
         return $this;
     }

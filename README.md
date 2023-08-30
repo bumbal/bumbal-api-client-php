@@ -131,27 +131,22 @@ Class | Method | HTTP request | Description
 *CapacitytypeApi* | [**setCapacityType**](docs/Api/CapacitytypeApi.md#setcapacitytype) | **POST** /capacity-type/set | Set (create or update) an CapacityType
 *CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
-*CommunicationdeliveryApi* | [**retrieveCommunicationDeliveryMethod**](docs/Api/CommunicationdeliveryApi.md#retrievecommunicationdeliverymethod) | **GET** /communication-delivery-method/{communicationDeliveryMethodId} | Retrieve a communication delivery method
-*CommunicationdeliverymethodApi* | [**createCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#createcommunicationdeliverymethod) | **POST** /communication-delivery-method/set | Create a communication delivery method
-*CommunicationdeliverymethodApi* | [**deleteCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#deletecommunicationdeliverymethod) | **DELETE** /communication-delivery-method/{communicationDeliveryMethodId} | Delete a communication delivery method
+*CommunicationdeliverymethodApi* | [**retrieveCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#retrievecommunicationdeliverymethod) | **GET** /communication-delivery-method/{communicationDeliveryMethodID} | Retrieve a communication delivery method
 *CommunicationdeliverymethodApi* | [**retrieveListCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#retrievelistcommunicationdeliverymethod) | **PUT** /communication-delivery-method | Retrieve List of communication delivery methods
 *CommunicationmappingApi* | [**createCommunicationMapping**](docs/Api/CommunicationmappingApi.md#createcommunicationmapping) | **POST** /communication-mapping/set | Create or update a communication mapping
 *CommunicationmappingApi* | [**deleteCommunicationMapping**](docs/Api/CommunicationmappingApi.md#deletecommunicationmapping) | **DELETE** /communication-mapping/{communicationMappingId} | Delete a communication mapping
 *CommunicationmappingApi* | [**retrieveCommunicationMapping**](docs/Api/CommunicationmappingApi.md#retrievecommunicationmapping) | **GET** /communication-mapping/{communicationMappingId} | Retrieve a communication mapping
 *CommunicationmappingApi* | [**retrieveListCommunicationMapping**](docs/Api/CommunicationmappingApi.md#retrievelistcommunicationmapping) | **PUT** /communication-mapping | Retrieve list of communication mappings
-*CommunicationmessageApi* | [**createCommunicationMessage**](docs/Api/CommunicationmessageApi.md#createcommunicationmessage) | **POST** /communication-message/set | Create a communicationmessage
-*CommunicationmessageApi* | [**deleteCommunicationMessage**](docs/Api/CommunicationmessageApi.md#deletecommunicationmessage) | **DELETE** /communication-message/{communicationMessageId} | Delete a communication message
-*CommunicationmessageApi* | [**retrieveCommunicationMessage**](docs/Api/CommunicationmessageApi.md#retrievecommunicationmessage) | **GET** /communication-message/{communicationMessageId} | Retrieve a communicationmessage
+*CommunicationmessageApi* | [**retrieveCommunicationMessage**](docs/Api/CommunicationmessageApi.md#retrievecommunicationmessage) | **GET** /communication-message/{communicationMessageID} | Retrieve a communication message
 *CommunicationmessageApi* | [**retrieveListCommunicationMessages**](docs/Api/CommunicationmessageApi.md#retrievelistcommunicationmessages) | **PUT** /communication-message | Retrieve List of communication messages
 *CommunicationmessagehistoryApi* | [**createCommunicationMessageHistory**](docs/Api/CommunicationmessagehistoryApi.md#createcommunicationmessagehistory) | **POST** /communication-message-history/set | Create communication message history
 *CommunicationmessagehistoryApi* | [**retrieveListCommunicationMessageHistories**](docs/Api/CommunicationmessagehistoryApi.md#retrievelistcommunicationmessagehistories) | **PUT** /communication-message-history | Retrieve list of communication message histories
-*CommunicationmessagetypeApi* | [**createCommunicationMessageType**](docs/Api/CommunicationmessagetypeApi.md#createcommunicationmessagetype) | **POST** /communication-message-type/set | Create a communicationmessagetype
-*CommunicationmessagetypeApi* | [**deleteCommunicationMessageType**](docs/Api/CommunicationmessagetypeApi.md#deletecommunicationmessagetype) | **DELETE** /communication-message-type/{communicationMessageTypeId} | Delete a communication message type
-*CommunicationmessagetypesApi* | [**listCommunicationMessageTypes**](docs/Api/CommunicationmessagetypesApi.md#listcommunicationmessagetypes) | **PUT** /communication-message-type/get-list | List all CommunicationMessageTypes
-*CommunicationtemplateApi* | [**createCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#createcommunicationtemplate) | **POST** /communication-template/set | Create a Communication Template
-*CommunicationtemplateApi* | [**deleteCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#deletecommunicationtemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communicationtemplate
+*CommunicationmessagetypeApi* | [**listCommunicationMessageTypes**](docs/Api/CommunicationmessagetypeApi.md#listcommunicationmessagetypes) | **PUT** /communication-message-type | List all CommunicationMessageTypes
+*CommunicationmessagetypeApi* | [**retrieveCommunicationMessageType**](docs/Api/CommunicationmessagetypeApi.md#retrievecommunicationmessagetype) | **GET** /communication-message-type/{communicationMessageTypeID} | Retrieve a communication message type
+*CommunicationtemplateApi* | [**createCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#createcommunicationtemplate) | **POST** /communication-template/set | Create a communication Template
+*CommunicationtemplateApi* | [**deleteCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#deletecommunicationtemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communication template
 *CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communication template
-*CommunicationtemplateApi* | [**retrieveListTemplate**](docs/Api/CommunicationtemplateApi.md#retrievelisttemplate) | **PUT** /communication-template | Retrieve List of Templates
+*CommunicationtemplateApi* | [**retrieveListTemplate**](docs/Api/CommunicationtemplateApi.md#retrievelisttemplate) | **PUT** /communication-template | Retrieve list of templates
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
 *DriverApi* | [**retrieveDriver**](docs/Api/DriverApi.md#retrievedriver) | **GET** /driver/{driverId} | Find driver by ID
@@ -573,13 +568,13 @@ Class | Method | HTTP request | Description
  - [CommunicationDeliveryMethodFiltersModel](docs/Model/CommunicationDeliveryMethodFiltersModel.md)
  - [CommunicationDeliveryMethodListResponse](docs/Model/CommunicationDeliveryMethodListResponse.md)
  - [CommunicationDeliveryMethodModel](docs/Model/CommunicationDeliveryMethodModel.md)
- - [CommunicationDeliveryMethodOptionsModel](docs/Model/CommunicationDeliveryMethodOptionsModel.md)
  - [CommunicationDeliveryMethodRetrieveListArguments](docs/Model/CommunicationDeliveryMethodRetrieveListArguments.md)
  - [CommunicationMappingFiltersModel](docs/Model/CommunicationMappingFiltersModel.md)
  - [CommunicationMappingListResponse](docs/Model/CommunicationMappingListResponse.md)
  - [CommunicationMappingModel](docs/Model/CommunicationMappingModel.md)
  - [CommunicationMappingOptionsModel](docs/Model/CommunicationMappingOptionsModel.md)
  - [CommunicationMappingRetrieveListArguments](docs/Model/CommunicationMappingRetrieveListArguments.md)
+ - [CommunicationMessageContentModel](docs/Model/CommunicationMessageContentModel.md)
  - [CommunicationMessageFiltersModel](docs/Model/CommunicationMessageFiltersModel.md)
  - [CommunicationMessageHistoryFiltersModel](docs/Model/CommunicationMessageHistoryFiltersModel.md)
  - [CommunicationMessageHistoryListResponse](docs/Model/CommunicationMessageHistoryListResponse.md)
@@ -589,8 +584,10 @@ Class | Method | HTTP request | Description
  - [CommunicationMessageModel](docs/Model/CommunicationMessageModel.md)
  - [CommunicationMessageOptionsModel](docs/Model/CommunicationMessageOptionsModel.md)
  - [CommunicationMessageRetrieveListArguments](docs/Model/CommunicationMessageRetrieveListArguments.md)
+ - [CommunicationMessageTypeFiltersModel](docs/Model/CommunicationMessageTypeFiltersModel.md)
  - [CommunicationMessageTypeListResponse](docs/Model/CommunicationMessageTypeListResponse.md)
  - [CommunicationMessageTypeModel](docs/Model/CommunicationMessageTypeModel.md)
+ - [CommunicationMessageTypeRetrieveListArguments](docs/Model/CommunicationMessageTypeRetrieveListArguments.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
  - [CommunicationTemplateFiltersModel](docs/Model/CommunicationTemplateFiltersModel.md)
  - [CommunicationTemplateListResponse](docs/Model/CommunicationTemplateListResponse.md)
@@ -824,6 +821,7 @@ Class | Method | HTTP request | Description
  - [ServiceWindowsSchemeModel](docs/Model/ServiceWindowsSchemeModel.md)
  - [ServiceWindowsSchemeOptionsModel](docs/Model/ServiceWindowsSchemeOptionsModel.md)
  - [ServiceWindowsSchemeRetrieveListArguments](docs/Model/ServiceWindowsSchemeRetrieveListArguments.md)
+ - [ServiceWindowsSchemeSetModel](docs/Model/ServiceWindowsSchemeSetModel.md)
  - [SettingsFiltersModel](docs/Model/SettingsFiltersModel.md)
  - [SettingsGetConstantsResponse](docs/Model/SettingsGetConstantsResponse.md)
  - [SettingsGetConstantsReversedResponse](docs/Model/SettingsGetConstantsReversedResponse.md)

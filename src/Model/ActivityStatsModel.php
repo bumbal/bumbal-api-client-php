@@ -59,7 +59,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_transactions' => 'int',
         'nr_of_notes' => 'int',
         'nr_of_irregularities' => 'int',
-        'nr_of_files' => 'int'
+        'nr_of_files' => 'int',
+        'last_sent_message_type_id' => 'int'
     ];
 
     /**
@@ -72,7 +73,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_transactions' => 'int64',
         'nr_of_notes' => 'int64',
         'nr_of_irregularities' => 'int64',
-        'nr_of_files' => 'int64'
+        'nr_of_files' => 'int64',
+        'last_sent_message_type_id' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -95,7 +97,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_transactions' => 'nr_of_transactions',
         'nr_of_notes' => 'nr_of_notes',
         'nr_of_irregularities' => 'nr_of_irregularities',
-        'nr_of_files' => 'nr_of_files'
+        'nr_of_files' => 'nr_of_files',
+        'last_sent_message_type_id' => 'last_sent_message_type_id'
     ];
 
 
@@ -109,7 +112,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_transactions' => 'setNrOfTransactions',
         'nr_of_notes' => 'setNrOfNotes',
         'nr_of_irregularities' => 'setNrOfIrregularities',
-        'nr_of_files' => 'setNrOfFiles'
+        'nr_of_files' => 'setNrOfFiles',
+        'last_sent_message_type_id' => 'setLastSentMessageTypeId'
     ];
 
 
@@ -123,7 +127,8 @@ class ActivityStatsModel implements ArrayAccess
         'nr_of_transactions' => 'getNrOfTransactions',
         'nr_of_notes' => 'getNrOfNotes',
         'nr_of_irregularities' => 'getNrOfIrregularities',
-        'nr_of_files' => 'getNrOfFiles'
+        'nr_of_files' => 'getNrOfFiles',
+        'last_sent_message_type_id' => 'getLastSentMessageTypeId'
     ];
 
     public static function attributeMap()
@@ -163,6 +168,7 @@ class ActivityStatsModel implements ArrayAccess
         $this->container['nr_of_notes'] = isset($data['nr_of_notes']) ? $data['nr_of_notes'] : null;
         $this->container['nr_of_irregularities'] = isset($data['nr_of_irregularities']) ? $data['nr_of_irregularities'] : null;
         $this->container['nr_of_files'] = isset($data['nr_of_files']) ? $data['nr_of_files'] : null;
+        $this->container['last_sent_message_type_id'] = isset($data['last_sent_message_type_id']) ? $data['last_sent_message_type_id'] : null;
     }
 
     /**
@@ -201,7 +207,7 @@ class ActivityStatsModel implements ArrayAccess
 
     /**
      * Sets nr_of_package_lines
-     * @param int $nr_of_package_lines nr of package lines
+     * @param int $nr_of_package_lines The amount of package lines attached to the activity
      * @return $this
      */
     public function setNrOfPackageLines($nr_of_package_lines)
@@ -222,7 +228,7 @@ class ActivityStatsModel implements ArrayAccess
 
     /**
      * Sets nr_of_bundled_activities
-     * @param int $nr_of_bundled_activities nr of bundled activities
+     * @param int $nr_of_bundled_activities The amount of bundled activities attached to the activity
      * @return $this
      */
     public function setNrOfBundledActivities($nr_of_bundled_activities)
@@ -243,7 +249,7 @@ class ActivityStatsModel implements ArrayAccess
 
     /**
      * Sets nr_of_transactions
-     * @param int $nr_of_transactions nr of transactions
+     * @param int $nr_of_transactions The amount of transactions attached to the activity
      * @return $this
      */
     public function setNrOfTransactions($nr_of_transactions)
@@ -264,7 +270,7 @@ class ActivityStatsModel implements ArrayAccess
 
     /**
      * Sets nr_of_notes
-     * @param int $nr_of_notes nr of notes
+     * @param int $nr_of_notes How many notes are attached to the activity
      * @return $this
      */
     public function setNrOfNotes($nr_of_notes)
@@ -285,7 +291,7 @@ class ActivityStatsModel implements ArrayAccess
 
     /**
      * Sets nr_of_irregularities
-     * @param int $nr_of_irregularities nr of irregularities
+     * @param int $nr_of_irregularities How many irregularities are attached to the activity
      * @return $this
      */
     public function setNrOfIrregularities($nr_of_irregularities)
@@ -306,12 +312,33 @@ class ActivityStatsModel implements ArrayAccess
 
     /**
      * Sets nr_of_files
-     * @param int $nr_of_files nr of files
+     * @param int $nr_of_files How many files are attached to the activity
      * @return $this
      */
     public function setNrOfFiles($nr_of_files)
     {
         $this->container['nr_of_files'] = $nr_of_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_sent_message_type_id
+     * @return int
+     */
+    public function getLastSentMessageTypeId()
+    {
+        return $this->container['last_sent_message_type_id'];
+    }
+
+    /**
+     * Sets last_sent_message_type_id
+     * @param int $last_sent_message_type_id The last sent communication message type ID
+     * @return $this
+     */
+    public function setLastSentMessageTypeId($last_sent_message_type_id)
+    {
+        $this->container['last_sent_message_type_id'] = $last_sent_message_type_id;
 
         return $this;
     }

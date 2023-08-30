@@ -90,4 +90,11 @@ class CommunicationTemplateOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeMappings()
     {
     }
+
+    /**
+     * Test attribute "include_template_record_info"
+     */
+    public function testPropertyIncludeTemplateRecordInfo()
+    {
+    }
 }

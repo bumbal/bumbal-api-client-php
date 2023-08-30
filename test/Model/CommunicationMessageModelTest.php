@@ -92,6 +92,41 @@ class CommunicationMessageModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "message_type"
+     */
+    public function testPropertyMessageType()
+    {
+    }
+
+    /**
+     * Test attribute "message_type_name"
+     */
+    public function testPropertyMessageTypeName()
+    {
+    }
+
+    /**
+     * Test attribute "scheduled_at"
+     */
+    public function testPropertyScheduledAt()
+    {
+    }
+
+    /**
+     * Test attribute "executed_at"
+     */
+    public function testPropertyExecutedAt()
+    {
+    }
+
+    /**
+     * Test attribute "status_id"
+     */
+    public function testPropertyStatusId()
+    {
+    }
+
+    /**
      * Test attribute "communication_mapping_id"
      */
     public function testPropertyCommunicationMappingId()
@@ -106,37 +141,44 @@ class CommunicationMessageModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "recipient"
-     */
-    public function testPropertyRecipient()
-    {
-    }
-
-    /**
-     * Test attribute "subject"
-     */
-    public function testPropertySubject()
-    {
-    }
-
-    /**
-     * Test attribute "html_content"
-     */
-    public function testPropertyHtmlContent()
-    {
-    }
-
-    /**
-     * Test attribute "text_content"
-     */
-    public function testPropertyTextContent()
-    {
-    }
-
-    /**
      * Test attribute "communication_message_history"
      */
     public function testPropertyCommunicationMessageHistory()
+    {
+    }
+
+    /**
+     * Test attribute "communication_message_content"
+     */
+    public function testPropertyCommunicationMessageContent()
+    {
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "created_by"
+     */
+    public function testPropertyCreatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "updated_by"
+     */
+    public function testPropertyUpdatedBy()
     {
     }
 }

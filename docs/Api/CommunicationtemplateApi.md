@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCommunicationTemplate**](CommunicationtemplateApi.md#createCommunicationTemplate) | **POST** /communication-template/set | Create a Communication Template
-[**deleteCommunicationTemplate**](CommunicationtemplateApi.md#deleteCommunicationTemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communicationtemplate
+[**createCommunicationTemplate**](CommunicationtemplateApi.md#createCommunicationTemplate) | **POST** /communication-template/set | Create a communication Template
+[**deleteCommunicationTemplate**](CommunicationtemplateApi.md#deleteCommunicationTemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communication template
 [**retrieveCommunicationTemplate**](CommunicationtemplateApi.md#retrieveCommunicationTemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communication template
-[**retrieveListTemplate**](CommunicationtemplateApi.md#retrieveListTemplate) | **PUT** /communication-template | Retrieve List of Templates
+[**retrieveListTemplate**](CommunicationtemplateApi.md#retrieveListTemplate) | **PUT** /communication-template | Retrieve list of templates
 
 
 # **createCommunicationTemplate**
 > \BumbalClient\Model\ApiResponse createCommunicationTemplate($body)
 
-Create a Communication Template
+Create a communication Template
 
 Create a template for a message
 
@@ -67,9 +67,9 @@ Name | Type | Description  | Notes
 # **deleteCommunicationTemplate**
 > \BumbalClient\Model\ApiResponse deleteCommunicationTemplate($communication_template_id)
 
-Delete a communicationtemplate
+Delete a communication template
 
-Delete a communicationtemplate
+Delete a communication template
 
 ### Example
 ```php
@@ -175,9 +175,9 @@ Name | Type | Description  | Notes
 # **retrieveListTemplate**
 > \BumbalClient\Model\CommunicationTemplateListResponse retrieveListTemplate($arguments)
 
-Retrieve List of Templates
+Retrieve list of templates
 
-Retrieve List of Template
+Retrieve list of templates
 
 ### Example
 ```php

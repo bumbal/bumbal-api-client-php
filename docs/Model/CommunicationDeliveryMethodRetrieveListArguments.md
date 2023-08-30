@@ -3,9 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\CommunicationDeliveryMethodOptionsModel**](CommunicationDeliveryMethodOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\CommunicationDeliveryMethodOptionsModel**](CommunicationDeliveryMethodOptionsModel.md) |  | [optional] 
-**sorting_column** | **string** | Sorting Column | [optional] 
+**filters** | [**\BumbalClient\Model\CommunicationDeliveryMethodFiltersModel**](CommunicationDeliveryMethodFiltersModel.md) |  | [optional] 
+**sorting_column** | **string** | Sorting Column | [optional] [default to 'id']
 **sorting_direction** | **string** | Sorting Direction | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 

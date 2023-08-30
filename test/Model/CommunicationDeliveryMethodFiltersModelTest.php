@@ -76,4 +76,18 @@ class CommunicationDeliveryMethodFiltersModelTest extends \PHPUnit_Framework_Tes
     public function testCommunicationDeliveryMethodFiltersModel()
     {
     }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
 }

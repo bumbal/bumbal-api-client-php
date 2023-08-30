@@ -1,4 +1,4 @@
-# ServiceWindowsSchemeModel
+# ServiceWindowsSchemeSetModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **name** | **string** | Service windows scheme name | [optional] 
 **even_weeks** | **bool** | even weeks | [optional] 
 **odd_weeks** | **bool** | odd weeks | [optional] 
-**tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
-**brands** | [**\BumbalClient\Model\BrandModel[]**](BrandModel.md) |  | [optional] 
+**tag_ids** | **int[]** | Tag id&#39;s | [optional] 
+**zone_ids** | **int[]** | Zone id&#39;s | [optional] 
+**brand_ids** | **int[]** | Brand id&#39;s | [optional] 
 **no_tags** | **bool** | No tags boolean value | [optional] 
 **no_zones** | **bool** | No zones boolean value | [optional] 
 **activity_type_ids** | **int[]** | Activity type ids | [optional] 

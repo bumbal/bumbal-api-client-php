@@ -56,13 +56,19 @@ class CommunicationMessageModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'activity_id' => 'int',
+        'message_type' => 'string',
+        'message_type_name' => 'string',
+        'scheduled_at' => 'string',
+        'executed_at' => 'string',
+        'status_id' => 'int',
         'communication_mapping_id' => 'int',
         'communication_mapping' => '\BumbalClient\Model\CommunicationTemplateModel',
-        'recipient' => 'string',
-        'subject' => 'string',
-        'html_content' => 'string',
-        'text_content' => 'string',
-        'communication_message_history' => '\BumbalClient\Model\CommunicationMessageHistoryModel[]'
+        'communication_message_history' => '\BumbalClient\Model\CommunicationMessageHistoryModel[]',
+        'communication_message_content' => '\BumbalClient\Model\CommunicationMessageContentModel',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'created_by' => 'int',
+        'updated_by' => 'int'
     ];
 
     /**
@@ -72,13 +78,19 @@ class CommunicationMessageModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => null,
         'activity_id' => null,
+        'message_type' => null,
+        'message_type_name' => null,
+        'scheduled_at' => null,
+        'executed_at' => null,
+        'status_id' => null,
         'communication_mapping_id' => null,
         'communication_mapping' => null,
-        'recipient' => null,
-        'subject' => null,
-        'html_content' => null,
-        'text_content' => null,
-        'communication_message_history' => null
+        'communication_message_history' => null,
+        'communication_message_content' => null,
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
+        'created_by' => null,
+        'updated_by' => null
     ];
 
     public static function swaggerTypes()
@@ -98,13 +110,19 @@ class CommunicationMessageModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'activity_id' => 'activity_id',
+        'message_type' => 'message_type',
+        'message_type_name' => 'message_type_name',
+        'scheduled_at' => 'scheduled_at',
+        'executed_at' => 'executed_at',
+        'status_id' => 'status_id',
         'communication_mapping_id' => 'communication_mapping_id',
         'communication_mapping' => 'communication_mapping',
-        'recipient' => 'recipient',
-        'subject' => 'subject',
-        'html_content' => 'html_content',
-        'text_content' => 'text_content',
-        'communication_message_history' => 'communication_message_history'
+        'communication_message_history' => 'communication_message_history',
+        'communication_message_content' => 'communication_message_content',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'created_by' => 'created_by',
+        'updated_by' => 'updated_by'
     ];
 
 
@@ -115,13 +133,19 @@ class CommunicationMessageModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'activity_id' => 'setActivityId',
+        'message_type' => 'setMessageType',
+        'message_type_name' => 'setMessageTypeName',
+        'scheduled_at' => 'setScheduledAt',
+        'executed_at' => 'setExecutedAt',
+        'status_id' => 'setStatusId',
         'communication_mapping_id' => 'setCommunicationMappingId',
         'communication_mapping' => 'setCommunicationMapping',
-        'recipient' => 'setRecipient',
-        'subject' => 'setSubject',
-        'html_content' => 'setHtmlContent',
-        'text_content' => 'setTextContent',
-        'communication_message_history' => 'setCommunicationMessageHistory'
+        'communication_message_history' => 'setCommunicationMessageHistory',
+        'communication_message_content' => 'setCommunicationMessageContent',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'created_by' => 'setCreatedBy',
+        'updated_by' => 'setUpdatedBy'
     ];
 
 
@@ -132,13 +156,19 @@ class CommunicationMessageModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'activity_id' => 'getActivityId',
+        'message_type' => 'getMessageType',
+        'message_type_name' => 'getMessageTypeName',
+        'scheduled_at' => 'getScheduledAt',
+        'executed_at' => 'getExecutedAt',
+        'status_id' => 'getStatusId',
         'communication_mapping_id' => 'getCommunicationMappingId',
         'communication_mapping' => 'getCommunicationMapping',
-        'recipient' => 'getRecipient',
-        'subject' => 'getSubject',
-        'html_content' => 'getHtmlContent',
-        'text_content' => 'getTextContent',
-        'communication_message_history' => 'getCommunicationMessageHistory'
+        'communication_message_history' => 'getCommunicationMessageHistory',
+        'communication_message_content' => 'getCommunicationMessageContent',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'created_by' => 'getCreatedBy',
+        'updated_by' => 'getUpdatedBy'
     ];
 
     public static function attributeMap()
@@ -174,13 +204,19 @@ class CommunicationMessageModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
+        $this->container['message_type'] = isset($data['message_type']) ? $data['message_type'] : null;
+        $this->container['message_type_name'] = isset($data['message_type_name']) ? $data['message_type_name'] : null;
+        $this->container['scheduled_at'] = isset($data['scheduled_at']) ? $data['scheduled_at'] : null;
+        $this->container['executed_at'] = isset($data['executed_at']) ? $data['executed_at'] : null;
+        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['communication_mapping_id'] = isset($data['communication_mapping_id']) ? $data['communication_mapping_id'] : null;
         $this->container['communication_mapping'] = isset($data['communication_mapping']) ? $data['communication_mapping'] : null;
-        $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
-        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
-        $this->container['html_content'] = isset($data['html_content']) ? $data['html_content'] : null;
-        $this->container['text_content'] = isset($data['text_content']) ? $data['text_content'] : null;
         $this->container['communication_message_history'] = isset($data['communication_message_history']) ? $data['communication_message_history'] : null;
+        $this->container['communication_message_content'] = isset($data['communication_message_content']) ? $data['communication_message_content'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
+        $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
     }
 
     /**
@@ -251,6 +287,111 @@ class CommunicationMessageModel implements ArrayAccess
     }
 
     /**
+     * Gets message_type
+     * @return string
+     */
+    public function getMessageType()
+    {
+        return $this->container['message_type'];
+    }
+
+    /**
+     * Sets message_type
+     * @param string $message_type Type of message
+     * @return $this
+     */
+    public function setMessageType($message_type)
+    {
+        $this->container['message_type'] = $message_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets message_type_name
+     * @return string
+     */
+    public function getMessageTypeName()
+    {
+        return $this->container['message_type_name'];
+    }
+
+    /**
+     * Sets message_type_name
+     * @param string $message_type_name Message type name
+     * @return $this
+     */
+    public function setMessageTypeName($message_type_name)
+    {
+        $this->container['message_type_name'] = $message_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets scheduled_at
+     * @return string
+     */
+    public function getScheduledAt()
+    {
+        return $this->container['scheduled_at'];
+    }
+
+    /**
+     * Sets scheduled_at
+     * @param string $scheduled_at When the message is scheduled
+     * @return $this
+     */
+    public function setScheduledAt($scheduled_at)
+    {
+        $this->container['scheduled_at'] = $scheduled_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets executed_at
+     * @return string
+     */
+    public function getExecutedAt()
+    {
+        return $this->container['executed_at'];
+    }
+
+    /**
+     * Sets executed_at
+     * @param string $executed_at When the message is executed
+     * @return $this
+     */
+    public function setExecutedAt($executed_at)
+    {
+        $this->container['executed_at'] = $executed_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_id
+     * @return int
+     */
+    public function getStatusId()
+    {
+        return $this->container['status_id'];
+    }
+
+    /**
+     * Sets status_id
+     * @param int $status_id The status of the message (0 = new, 10 = scheduled, 20 = processing, 30 = executed)
+     * @return $this
+     */
+    public function setStatusId($status_id)
+    {
+        $this->container['status_id'] = $status_id;
+
+        return $this;
+    }
+
+    /**
      * Gets communication_mapping_id
      * @return int
      */
@@ -261,7 +402,7 @@ class CommunicationMessageModel implements ArrayAccess
 
     /**
      * Sets communication_mapping_id
-     * @param int $communication_mapping_id Activity ID
+     * @param int $communication_mapping_id The mapping used for this message
      * @return $this
      */
     public function setCommunicationMappingId($communication_mapping_id)
@@ -293,90 +434,6 @@ class CommunicationMessageModel implements ArrayAccess
     }
 
     /**
-     * Gets recipient
-     * @return string
-     */
-    public function getRecipient()
-    {
-        return $this->container['recipient'];
-    }
-
-    /**
-     * Sets recipient
-     * @param string $recipient recipient
-     * @return $this
-     */
-    public function setRecipient($recipient)
-    {
-        $this->container['recipient'] = $recipient;
-
-        return $this;
-    }
-
-    /**
-     * Gets subject
-     * @return string
-     */
-    public function getSubject()
-    {
-        return $this->container['subject'];
-    }
-
-    /**
-     * Sets subject
-     * @param string $subject subject
-     * @return $this
-     */
-    public function setSubject($subject)
-    {
-        $this->container['subject'] = $subject;
-
-        return $this;
-    }
-
-    /**
-     * Gets html_content
-     * @return string
-     */
-    public function getHtmlContent()
-    {
-        return $this->container['html_content'];
-    }
-
-    /**
-     * Sets html_content
-     * @param string $html_content HTML content
-     * @return $this
-     */
-    public function setHtmlContent($html_content)
-    {
-        $this->container['html_content'] = $html_content;
-
-        return $this;
-    }
-
-    /**
-     * Gets text_content
-     * @return string
-     */
-    public function getTextContent()
-    {
-        return $this->container['text_content'];
-    }
-
-    /**
-     * Sets text_content
-     * @param string $text_content text content
-     * @return $this
-     */
-    public function setTextContent($text_content)
-    {
-        $this->container['text_content'] = $text_content;
-
-        return $this;
-    }
-
-    /**
      * Gets communication_message_history
      * @return \BumbalClient\Model\CommunicationMessageHistoryModel[]
      */
@@ -387,12 +444,117 @@ class CommunicationMessageModel implements ArrayAccess
 
     /**
      * Sets communication_message_history
-     * @param \BumbalClient\Model\CommunicationMessageHistoryModel[] $communication_message_history
+     * @param \BumbalClient\Model\CommunicationMessageHistoryModel[] $communication_message_history All the history events for a message (sorted chronologically)
      * @return $this
      */
     public function setCommunicationMessageHistory($communication_message_history)
     {
         $this->container['communication_message_history'] = $communication_message_history;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_message_content
+     * @return \BumbalClient\Model\CommunicationMessageContentModel
+     */
+    public function getCommunicationMessageContent()
+    {
+        return $this->container['communication_message_content'];
+    }
+
+    /**
+     * Sets communication_message_content
+     * @param \BumbalClient\Model\CommunicationMessageContentModel $communication_message_content
+     * @return $this
+     */
+    public function setCommunicationMessageContent($communication_message_content)
+    {
+        $this->container['communication_message_content'] = $communication_message_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime|string|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime|string|null $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime|string|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime|string|null $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by
+     * @return int
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['created_by'];
+    }
+
+    /**
+     * Sets created_by
+     * @param int $created_by created_by user id
+     * @return $this
+     */
+    public function setCreatedBy($created_by)
+    {
+        $this->container['created_by'] = $created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by
+     * @return int
+     */
+    public function getUpdatedBy()
+    {
+        return $this->container['updated_by'];
+    }
+
+    /**
+     * Sets updated_by
+     * @param int $updated_by updated_by user id
+     * @return $this
+     */
+    public function setUpdatedBy($updated_by)
+    {
+        $this->container['updated_by'] = $updated_by;
 
         return $this;
     }

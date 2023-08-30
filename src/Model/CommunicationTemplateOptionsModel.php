@@ -55,7 +55,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'exclude_template_content' => 'bool',
-        'include_mappings' => 'bool'
+        'include_mappings' => 'bool',
+        'include_template_record_info' => 'bool'
     ];
 
     /**
@@ -64,7 +65,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'exclude_template_content' => null,
-        'include_mappings' => null
+        'include_mappings' => null,
+        'include_template_record_info' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'exclude_template_content' => 'exclude_template_content',
-        'include_mappings' => 'include_mappings'
+        'include_mappings' => 'include_mappings',
+        'include_template_record_info' => 'include_template_record_info'
     ];
 
 
@@ -93,7 +96,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'exclude_template_content' => 'setExcludeTemplateContent',
-        'include_mappings' => 'setIncludeMappings'
+        'include_mappings' => 'setIncludeMappings',
+        'include_template_record_info' => 'setIncludeTemplateRecordInfo'
     ];
 
 
@@ -103,7 +107,8 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'exclude_template_content' => 'getExcludeTemplateContent',
-        'include_mappings' => 'getIncludeMappings'
+        'include_mappings' => 'getIncludeMappings',
+        'include_template_record_info' => 'getIncludeTemplateRecordInfo'
     ];
 
     public static function attributeMap()
@@ -139,6 +144,7 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
     {
         $this->container['exclude_template_content'] = isset($data['exclude_template_content']) ? $data['exclude_template_content'] : null;
         $this->container['include_mappings'] = isset($data['include_mappings']) ? $data['include_mappings'] : null;
+        $this->container['include_template_record_info'] = isset($data['include_template_record_info']) ? $data['include_template_record_info'] : null;
     }
 
     /**
@@ -204,6 +210,27 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
     public function setIncludeMappings($include_mappings)
     {
         $this->container['include_mappings'] = $include_mappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_template_record_info
+     * @return bool
+     */
+    public function getIncludeTemplateRecordInfo()
+    {
+        return $this->container['include_template_record_info'];
+    }
+
+    /**
+     * Sets include_template_record_info
+     * @param bool $include_template_record_info
+     * @return $this
+     */
+    public function setIncludeTemplateRecordInfo($include_template_record_info)
+    {
+        $this->container['include_template_record_info'] = $include_template_record_info;
 
         return $this;
     }

@@ -88,37 +88,37 @@ class CommunicationmessagetypeApi
     }
 
     /**
-     * Operation createCommunicationMessageType
+     * Operation listCommunicationMessageTypes
      *
-     * Create a communicationmessagetype
+     * List all CommunicationMessageTypes
      *
-     * @param \BumbalClient\Model\CommunicationMessageTypeModel $body CommunicationMessageType object (required)
+     * @param \BumbalClient\Model\CommunicationMessageTypeRetrieveListArguments $arguments Communication Message Type RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\CommunicationMessageTypeListResponse
      */
-    public function createCommunicationMessageType($body)
+    public function listCommunicationMessageTypes($arguments)
     {
-        list($response) = $this->createCommunicationMessageTypeWithHttpInfo($body);
+        list($response) = $this->listCommunicationMessageTypesWithHttpInfo($arguments);
         return $response;
     }
 
     /**
-     * Operation createCommunicationMessageTypeWithHttpInfo
+     * Operation listCommunicationMessageTypesWithHttpInfo
      *
-     * Create a communicationmessagetype
+     * List all CommunicationMessageTypes
      *
-     * @param \BumbalClient\Model\CommunicationMessageTypeModel $body CommunicationMessageType object (required)
+     * @param \BumbalClient\Model\CommunicationMessageTypeRetrieveListArguments $arguments Communication Message Type RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\CommunicationMessageTypeListResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCommunicationMessageTypeWithHttpInfo($body)
+    public function listCommunicationMessageTypesWithHttpInfo($arguments)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling createCommunicationMessageType');
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling listCommunicationMessageTypes');
         }
         // parse inputs
-        $resourcePath = "/communication-message-type/set";
+        $resourcePath = "/communication-message-type";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -131,8 +131,8 @@ class CommunicationmessagetypeApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
         }
 
         // for model (json/xml)
@@ -155,19 +155,19 @@ class CommunicationmessagetypeApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
-                '/communication-message-type/set'
+                '\BumbalClient\Model\CommunicationMessageTypeListResponse',
+                '/communication-message-type'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CommunicationMessageTypeListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CommunicationMessageTypeListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -177,37 +177,37 @@ class CommunicationmessagetypeApi
     }
 
     /**
-     * Operation deleteCommunicationMessageType
+     * Operation retrieveCommunicationMessageType
      *
-     * Delete a communication message type
+     * Retrieve a communication message type
      *
-     * @param int $communication_message_type_id ID of the communication message type to delete (required)
+     * @param int $communication_message_type_id ID of communication message type to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\CommunicationMessageTypeModel
      */
-    public function deleteCommunicationMessageType($communication_message_type_id)
+    public function retrieveCommunicationMessageType($communication_message_type_id)
     {
-        list($response) = $this->deleteCommunicationMessageTypeWithHttpInfo($communication_message_type_id);
+        list($response) = $this->retrieveCommunicationMessageTypeWithHttpInfo($communication_message_type_id);
         return $response;
     }
 
     /**
-     * Operation deleteCommunicationMessageTypeWithHttpInfo
+     * Operation retrieveCommunicationMessageTypeWithHttpInfo
      *
-     * Delete a communication message type
+     * Retrieve a communication message type
      *
-     * @param int $communication_message_type_id ID of the communication message type to delete (required)
+     * @param int $communication_message_type_id ID of communication message type to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\CommunicationMessageTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCommunicationMessageTypeWithHttpInfo($communication_message_type_id)
+    public function retrieveCommunicationMessageTypeWithHttpInfo($communication_message_type_id)
     {
         // verify the required parameter 'communication_message_type_id' is set
         if ($communication_message_type_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $communication_message_type_id when calling deleteCommunicationMessageType');
+            throw new \InvalidArgumentException('Missing the required parameter $communication_message_type_id when calling retrieveCommunicationMessageType');
         }
         // parse inputs
-        $resourcePath = "/communication-message-type/{communicationMessageTypeId}";
+        $resourcePath = "/communication-message-type/{communicationMessageTypeID}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -221,7 +221,7 @@ class CommunicationmessagetypeApi
         // path params
         if ($communication_message_type_id !== null) {
             $resourcePath = str_replace(
-                "{" . "communicationMessageTypeId" . "}",
+                "{" . "communicationMessageTypeID" . "}",
                 $this->apiClient->getSerializer()->toPathValue($communication_message_type_id),
                 $resourcePath
             );
@@ -247,19 +247,19 @@ class CommunicationmessagetypeApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'DELETE',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
-                '/communication-message-type/{communicationMessageTypeId}'
+                '\BumbalClient\Model\CommunicationMessageTypeModel',
+                '/communication-message-type/{communicationMessageTypeID}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CommunicationMessageTypeModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CommunicationMessageTypeModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

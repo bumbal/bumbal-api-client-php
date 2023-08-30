@@ -1,6 +1,6 @@
 <?php
 /**
- * ServiceWindowsSchemeModel
+ * ServiceWindowsSchemeSetModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ServiceWindowsSchemeModel Class Doc Comment
+ * ServiceWindowsSchemeSetModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ServiceWindowsSchemeModel implements ArrayAccess
+class ServiceWindowsSchemeSetModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class ServiceWindowsSchemeModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ServiceWindowsSchemeModel';
+    protected static $swaggerModelName = 'ServiceWindowsSchemeSetModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,9 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'name' => 'string',
         'even_weeks' => 'bool',
         'odd_weeks' => 'bool',
-        'tags' => '\BumbalClient\Model\TagModel[]',
-        'zones' => '\BumbalClient\Model\ZoneModel[]',
-        'brands' => '\BumbalClient\Model\BrandModel[]',
+        'tag_ids' => 'int[]',
+        'zone_ids' => 'int[]',
+        'brand_ids' => 'int[]',
         'no_tags' => 'bool',
         'no_zones' => 'bool',
         'activity_type_ids' => 'int[]',
@@ -85,9 +85,9 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'name' => 'int64',
         'even_weeks' => 'int64',
         'odd_weeks' => 'int64',
-        'tags' => null,
-        'zones' => null,
-        'brands' => null,
+        'tag_ids' => null,
+        'zone_ids' => null,
+        'brand_ids' => null,
         'no_tags' => null,
         'no_zones' => null,
         'activity_type_ids' => null,
@@ -122,9 +122,9 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'name' => 'name',
         'even_weeks' => 'even_weeks',
         'odd_weeks' => 'odd_weeks',
-        'tags' => 'tags',
-        'zones' => 'zones',
-        'brands' => 'brands',
+        'tag_ids' => 'tag_ids',
+        'zone_ids' => 'zone_ids',
+        'brand_ids' => 'brand_ids',
         'no_tags' => 'no_tags',
         'no_zones' => 'no_zones',
         'activity_type_ids' => 'activity_type_ids',
@@ -150,9 +150,9 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'name' => 'setName',
         'even_weeks' => 'setEvenWeeks',
         'odd_weeks' => 'setOddWeeks',
-        'tags' => 'setTags',
-        'zones' => 'setZones',
-        'brands' => 'setBrands',
+        'tag_ids' => 'setTagIds',
+        'zone_ids' => 'setZoneIds',
+        'brand_ids' => 'setBrandIds',
         'no_tags' => 'setNoTags',
         'no_zones' => 'setNoZones',
         'activity_type_ids' => 'setActivityTypeIds',
@@ -178,9 +178,9 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'name' => 'getName',
         'even_weeks' => 'getEvenWeeks',
         'odd_weeks' => 'getOddWeeks',
-        'tags' => 'getTags',
-        'zones' => 'getZones',
-        'brands' => 'getBrands',
+        'tag_ids' => 'getTagIds',
+        'zone_ids' => 'getZoneIds',
+        'brand_ids' => 'getBrandIds',
         'no_tags' => 'getNoTags',
         'no_zones' => 'getNoZones',
         'activity_type_ids' => 'getActivityTypeIds',
@@ -231,9 +231,9 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['even_weeks'] = isset($data['even_weeks']) ? $data['even_weeks'] : null;
         $this->container['odd_weeks'] = isset($data['odd_weeks']) ? $data['odd_weeks'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
-        $this->container['brands'] = isset($data['brands']) ? $data['brands'] : null;
+        $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
+        $this->container['zone_ids'] = isset($data['zone_ids']) ? $data['zone_ids'] : null;
+        $this->container['brand_ids'] = isset($data['brand_ids']) ? $data['brand_ids'] : null;
         $this->container['no_tags'] = isset($data['no_tags']) ? $data['no_tags'] : null;
         $this->container['no_zones'] = isset($data['no_zones']) ? $data['no_zones'] : null;
         $this->container['activity_type_ids'] = isset($data['activity_type_ids']) ? $data['activity_type_ids'] : null;
@@ -359,64 +359,64 @@ class ServiceWindowsSchemeModel implements ArrayAccess
     }
 
     /**
-     * Gets tags
-     * @return \BumbalClient\Model\TagModel[]
+     * Gets tag_ids
+     * @return int[]
      */
-    public function getTags()
+    public function getTagIds()
     {
-        return $this->container['tags'];
+        return $this->container['tag_ids'];
     }
 
     /**
-     * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * Sets tag_ids
+     * @param int[] $tag_ids Tag id's
      * @return $this
      */
-    public function setTags($tags)
+    public function setTagIds($tag_ids)
     {
-        $this->container['tags'] = $tags;
+        $this->container['tag_ids'] = $tag_ids;
 
         return $this;
     }
 
     /**
-     * Gets zones
-     * @return \BumbalClient\Model\ZoneModel[]
+     * Gets zone_ids
+     * @return int[]
      */
-    public function getZones()
+    public function getZoneIds()
     {
-        return $this->container['zones'];
+        return $this->container['zone_ids'];
     }
 
     /**
-     * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones
+     * Sets zone_ids
+     * @param int[] $zone_ids Zone id's
      * @return $this
      */
-    public function setZones($zones)
+    public function setZoneIds($zone_ids)
     {
-        $this->container['zones'] = $zones;
+        $this->container['zone_ids'] = $zone_ids;
 
         return $this;
     }
 
     /**
-     * Gets brands
-     * @return \BumbalClient\Model\BrandModel[]
+     * Gets brand_ids
+     * @return int[]
      */
-    public function getBrands()
+    public function getBrandIds()
     {
-        return $this->container['brands'];
+        return $this->container['brand_ids'];
     }
 
     /**
-     * Sets brands
-     * @param \BumbalClient\Model\BrandModel[] $brands
+     * Sets brand_ids
+     * @param int[] $brand_ids Brand id's
      * @return $this
      */
-    public function setBrands($brands)
+    public function setBrandIds($brand_ids)
     {
-        $this->container['brands'] = $brands;
+        $this->container['brand_ids'] = $brand_ids;
 
         return $this;
     }

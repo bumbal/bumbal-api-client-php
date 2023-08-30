@@ -365,7 +365,7 @@ class ServicewindowsschemeApi
      *
      * Add or update a service windows scheme
      *
-     * @param \BumbalClient\Model\ServiceWindowsSchemeModel $body Service windows scheme object that needs to be created or updated (optional)
+     * @param \BumbalClient\Model\ServiceWindowsSchemeSetModel $body Service windows scheme object that needs to be created or updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
@@ -380,7 +380,7 @@ class ServicewindowsschemeApi
      *
      * Add or update a service windows scheme
      *
-     * @param \BumbalClient\Model\ServiceWindowsSchemeModel $body Service windows scheme object that needs to be created or updated (optional)
+     * @param \BumbalClient\Model\ServiceWindowsSchemeSetModel $body Service windows scheme object that needs to be created or updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */

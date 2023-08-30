@@ -194,7 +194,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ServicewindowsschemeApi();
-$body = new \BumbalClient\Model\ServiceWindowsSchemeModel(); // \BumbalClient\Model\ServiceWindowsSchemeModel | Service windows scheme object that needs to be created or updated
+$body = new \BumbalClient\Model\ServiceWindowsSchemeSetModel(); // \BumbalClient\Model\ServiceWindowsSchemeSetModel | Service windows scheme object that needs to be created or updated
 
 try {
     $result = $api_instance->setServiceWindowsScheme($body);
@@ -209,7 +209,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ServiceWindowsSchemeModel**](../Model/ServiceWindowsSchemeModel.md)| Service windows scheme object that needs to be created or updated | [optional]
+ **body** | [**\BumbalClient\Model\ServiceWindowsSchemeSetModel**](../Model/ServiceWindowsSchemeSetModel.md)| Service windows scheme object that needs to be created or updated | [optional]
 
 ### Return type
 

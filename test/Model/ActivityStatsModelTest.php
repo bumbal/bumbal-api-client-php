@@ -118,4 +118,11 @@ class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyNrOfFiles()
     {
     }
+
+    /**
+     * Test attribute "last_sent_message_type_id"
+     */
+    public function testPropertyLastSentMessageTypeId()
+    {
+    }
 }

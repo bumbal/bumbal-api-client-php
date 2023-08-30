@@ -90,7 +90,7 @@ class CommunicationtemplateApi
     /**
      * Operation createCommunicationTemplate
      *
-     * Create a Communication Template
+     * Create a communication Template
      *
      * @param \BumbalClient\Model\CommunicationTemplateModel $body CommunicationTemplate object (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class CommunicationtemplateApi
     /**
      * Operation createCommunicationTemplateWithHttpInfo
      *
-     * Create a Communication Template
+     * Create a communication Template
      *
      * @param \BumbalClient\Model\CommunicationTemplateModel $body CommunicationTemplate object (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -179,7 +179,7 @@ class CommunicationtemplateApi
     /**
      * Operation deleteCommunicationTemplate
      *
-     * Delete a communicationtemplate
+     * Delete a communication template
      *
      * @param int $communication_template_id ID of the communication template to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -194,7 +194,7 @@ class CommunicationtemplateApi
     /**
      * Operation deleteCommunicationTemplateWithHttpInfo
      *
-     * Delete a communicationtemplate
+     * Delete a communication template
      *
      * @param int $communication_template_id ID of the communication template to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -363,7 +363,7 @@ class CommunicationtemplateApi
     /**
      * Operation retrieveListTemplate
      *
-     * Retrieve List of Templates
+     * Retrieve list of templates
      *
      * @param \BumbalClient\Model\CommunicationTemplateRetrieveListArguments $arguments Template RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -378,7 +378,7 @@ class CommunicationtemplateApi
     /**
      * Operation retrieveListTemplateWithHttpInfo
      *
-     * Retrieve List of Templates
+     * Retrieve list of templates
      *
      * @param \BumbalClient\Model\CommunicationTemplateRetrieveListArguments $arguments Template RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response

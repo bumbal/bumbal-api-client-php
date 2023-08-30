@@ -78,9 +78,30 @@ class CommunicationMessageFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
      * Test attribute "activity_id"
      */
     public function testPropertyActivityId()
+    {
+    }
+
+    /**
+     * Test attribute "message_type"
+     */
+    public function testPropertyMessageType()
+    {
+    }
+
+    /**
+     * Test attribute "status_id"
+     */
+    public function testPropertyStatusId()
     {
     }
 }
