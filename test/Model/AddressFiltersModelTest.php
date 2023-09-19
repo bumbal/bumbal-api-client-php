@@ -118,4 +118,11 @@ class AddressFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUserId()
     {
     }
+
+    /**
+     * Test attribute "link"
+     */
+    public function testPropertyLink()
+    {
+    }
 }

@@ -104,4 +104,11 @@ class CommunicationMessageFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStatusId()
     {
     }
+
+    /**
+     * Test attribute "communication_mapping_id"
+     */
+    public function testPropertyCommunicationMappingId()
+    {
+    }
 }

@@ -57,7 +57,8 @@ class CommunicationMessageFiltersModel implements ArrayAccess
         'id' => 'int[]',
         'activity_id' => 'int[]',
         'message_type' => 'int',
-        'status_id' => 'int[]'
+        'status_id' => 'int[]',
+        'communication_mapping_id' => 'int[]'
     ];
 
     /**
@@ -68,7 +69,8 @@ class CommunicationMessageFiltersModel implements ArrayAccess
         'id' => null,
         'activity_id' => null,
         'message_type' => null,
-        'status_id' => null
+        'status_id' => null,
+        'communication_mapping_id' => null
     ];
 
     public static function swaggerTypes()
@@ -89,7 +91,8 @@ class CommunicationMessageFiltersModel implements ArrayAccess
         'id' => 'id',
         'activity_id' => 'activity_id',
         'message_type' => 'message_type',
-        'status_id' => 'status_id'
+        'status_id' => 'status_id',
+        'communication_mapping_id' => 'communication_mapping_id'
     ];
 
 
@@ -101,7 +104,8 @@ class CommunicationMessageFiltersModel implements ArrayAccess
         'id' => 'setId',
         'activity_id' => 'setActivityId',
         'message_type' => 'setMessageType',
-        'status_id' => 'setStatusId'
+        'status_id' => 'setStatusId',
+        'communication_mapping_id' => 'setCommunicationMappingId'
     ];
 
 
@@ -113,7 +117,8 @@ class CommunicationMessageFiltersModel implements ArrayAccess
         'id' => 'getId',
         'activity_id' => 'getActivityId',
         'message_type' => 'getMessageType',
-        'status_id' => 'getStatusId'
+        'status_id' => 'getStatusId',
+        'communication_mapping_id' => 'getCommunicationMappingId'
     ];
 
     public static function attributeMap()
@@ -151,6 +156,7 @@ class CommunicationMessageFiltersModel implements ArrayAccess
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
         $this->container['message_type'] = isset($data['message_type']) ? $data['message_type'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
+        $this->container['communication_mapping_id'] = isset($data['communication_mapping_id']) ? $data['communication_mapping_id'] : null;
     }
 
     /**
@@ -258,6 +264,27 @@ class CommunicationMessageFiltersModel implements ArrayAccess
     public function setStatusId($status_id)
     {
         $this->container['status_id'] = $status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_mapping_id
+     * @return int[]
+     */
+    public function getCommunicationMappingId()
+    {
+        return $this->container['communication_mapping_id'];
+    }
+
+    /**
+     * Sets communication_mapping_id
+     * @param int[] $communication_mapping_id Communication mapping ID
+     * @return $this
+     */
+    public function setCommunicationMappingId($communication_mapping_id)
+    {
+        $this->container['communication_mapping_id'] = $communication_mapping_id;
 
         return $this;
     }

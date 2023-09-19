@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **activity_id** | **int[]** | Activity ID&#39;s | [optional] 
 **message_type** | **int** | Message type ID | [optional] 
 **status_id** | **int[]** | Status ID&#39;s | [optional] 
+**communication_mapping_id** | **int[]** | Communication mapping ID | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
