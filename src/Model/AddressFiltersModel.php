@@ -60,7 +60,7 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'int',
         'code' => 'string',
         'user_id' => 'int',
-        'link' => 'object[]'
+        'links' => 'object[]'
     ];
 
     /**
@@ -74,7 +74,7 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => null,
         'code' => null,
         'user_id' => null,
-        'link' => null
+        'links' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +98,7 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'party_id',
         'code' => 'code',
         'user_id' => 'user_id',
-        'link' => 'link'
+        'links' => 'links'
     ];
 
 
@@ -113,7 +113,7 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'setPartyId',
         'code' => 'setCode',
         'user_id' => 'setUserId',
-        'link' => 'setLink'
+        'links' => 'setLinks'
     ];
 
 
@@ -128,7 +128,7 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'getPartyId',
         'code' => 'getCode',
         'user_id' => 'getUserId',
-        'link' => 'getLink'
+        'links' => 'getLinks'
     ];
 
     public static function attributeMap()
@@ -168,7 +168,7 @@ class AddressFiltersModel implements ArrayAccess
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['link'] = isset($data['link']) ? $data['link'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -323,22 +323,22 @@ class AddressFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets link
+     * Gets links
      * @return object[]
      */
-    public function getLink()
+    public function getLinks()
     {
-        return $this->container['link'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets link
-     * @param object[] $link Filter by Address Link ids
+     * Sets links
+     * @param object[] $links Filter by Address Link ids
      * @return $this
      */
-    public function setLink($link)
+    public function setLinks($links)
     {
-        $this->container['link'] = $link;
+        $this->container['links'] = $links;
 
         return $this;
     }

@@ -120,9 +120,9 @@ class AddressFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "link"
+     * Test attribute "links"
      */
-    public function testPropertyLink()
+    public function testPropertyLinks()
     {
     }
 }

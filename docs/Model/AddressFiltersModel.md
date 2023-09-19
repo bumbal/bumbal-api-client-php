@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **party_id** | **int** | Party ID | [optional] 
 **code** | **string** |  | [optional] 
 **user_id** | **int** |  | [optional] 
-**link** | **object[]** | Filter by Address Link ids | [optional] 
+**links** | **object[]** | Filter by Address Link ids | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
