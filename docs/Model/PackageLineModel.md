@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
+**irregularities** | [**\BumbalClient\Model\IrregularityModel[]**](IrregularityModel.md) |  | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 

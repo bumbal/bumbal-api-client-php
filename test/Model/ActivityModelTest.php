@@ -785,6 +785,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "irregularities"
+     */
+    public function testPropertyIrregularities()
+    {
+    }
+
+    /**
      * Test attribute "files"
      */
     public function testPropertyFiles()

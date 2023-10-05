@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **include_notes** | **bool** |  | [optional] 
+**include_irregularities** | **bool** |  | [optional] 
 **include_tags** | **bool** |  | [optional] 
 **include_package_type_name** | **bool** |  | [optional] 
 **include_record_info** | **bool** |  | [optional] 

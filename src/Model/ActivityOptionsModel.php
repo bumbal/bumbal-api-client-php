@@ -74,6 +74,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_emails' => 'bool',
         'include_meta_data' => 'bool',
         'include_notes' => 'bool',
+        'include_irregularities' => 'bool',
         'include_package_lines' => 'bool',
         'include_recoveries' => 'bool',
         'include_package_line_links' => 'bool',
@@ -155,6 +156,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_emails' => null,
         'include_meta_data' => null,
         'include_notes' => null,
+        'include_irregularities' => null,
         'include_package_lines' => null,
         'include_recoveries' => null,
         'include_package_line_links' => null,
@@ -246,6 +248,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_emails' => 'include_emails',
         'include_meta_data' => 'include_meta_data',
         'include_notes' => 'include_notes',
+        'include_irregularities' => 'include_irregularities',
         'include_package_lines' => 'include_package_lines',
         'include_recoveries' => 'include_recoveries',
         'include_package_line_links' => 'include_package_line_links',
@@ -328,6 +331,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_emails' => 'setIncludeEmails',
         'include_meta_data' => 'setIncludeMetaData',
         'include_notes' => 'setIncludeNotes',
+        'include_irregularities' => 'setIncludeIrregularities',
         'include_package_lines' => 'setIncludePackageLines',
         'include_recoveries' => 'setIncludeRecoveries',
         'include_package_line_links' => 'setIncludePackageLineLinks',
@@ -410,6 +414,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_emails' => 'getIncludeEmails',
         'include_meta_data' => 'getIncludeMetaData',
         'include_notes' => 'getIncludeNotes',
+        'include_irregularities' => 'getIncludeIrregularities',
         'include_package_lines' => 'getIncludePackageLines',
         'include_recoveries' => 'getIncludeRecoveries',
         'include_package_line_links' => 'getIncludePackageLineLinks',
@@ -517,6 +522,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_emails'] = isset($data['include_emails']) ? $data['include_emails'] : null;
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
+        $this->container['include_irregularities'] = isset($data['include_irregularities']) ? $data['include_irregularities'] : null;
         $this->container['include_package_lines'] = isset($data['include_package_lines']) ? $data['include_package_lines'] : null;
         $this->container['include_recoveries'] = isset($data['include_recoveries']) ? $data['include_recoveries'] : null;
         $this->container['include_package_line_links'] = isset($data['include_package_line_links']) ? $data['include_package_line_links'] : null;
@@ -1014,6 +1020,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeNotes($include_notes)
     {
         $this->container['include_notes'] = $include_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_irregularities
+     * @return bool
+     */
+    public function getIncludeIrregularities()
+    {
+        return $this->container['include_irregularities'];
+    }
+
+    /**
+     * Sets include_irregularities
+     * @param bool $include_irregularities
+     * @return $this
+     */
+    public function setIncludeIrregularities($include_irregularities)
+    {
+        $this->container['include_irregularities'] = $include_irregularities;
 
         return $this;
     }

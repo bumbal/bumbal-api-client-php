@@ -85,6 +85,13 @@ class PackageLineOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_irregularities"
+     */
+    public function testPropertyIncludeIrregularities()
+    {
+    }
+
+    /**
      * Test attribute "include_tags"
      */
     public function testPropertyIncludeTags()

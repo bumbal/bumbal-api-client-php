@@ -170,6 +170,18 @@ Class | Method | HTTP request | Description
 *FileApi* | [**retrieveFile**](docs/Api/FileApi.md#retrievefile) | **GET** /file/{fileId} | Retrieve a File
 *FileApi* | [**retrieveListFile**](docs/Api/FileApi.md#retrievelistfile) | **PUT** /file | Retrieve List of Files
 *FileApi* | [**setFile**](docs/Api/FileApi.md#setfile) | **POST** /file/set | Create or Update a File Object
+*IrregularityApi* | [**createIrregularity**](docs/Api/IrregularityApi.md#createirregularity) | **POST** /irregularity/set | Create a irregularity
+*IrregularityApi* | [**deleteIrregularity**](docs/Api/IrregularityApi.md#deleteirregularity) | **DELETE** /irregularity/{irregularityId} | Delete a irregularity
+*IrregularityApi* | [**retrieveIrregularity**](docs/Api/IrregularityApi.md#retrieveirregularity) | **GET** /irregularity/{irregularityId} | Retrieve a irregularity
+*IrregularityApi* | [**retrieveListIrregularity**](docs/Api/IrregularityApi.md#retrievelistirregularity) | **PUT** /irregularity | Retrieve list of irregularities
+*IrregularitycategoryApi* | [**createIrregularityCategory**](docs/Api/IrregularitycategoryApi.md#createirregularitycategory) | **POST** /irregularity-category/set | Create a irregularity category
+*IrregularitycategoryApi* | [**deleteIrregularityCategory**](docs/Api/IrregularitycategoryApi.md#deleteirregularitycategory) | **DELETE** /irregularity-category/{irregularityCategoryId} | Delete a irregularity category
+*IrregularitycategoryApi* | [**retrieveIrregularityCategory**](docs/Api/IrregularitycategoryApi.md#retrieveirregularitycategory) | **GET** /irregularity-category/{irregularityCategoryId} | Retrieve a irregularity category
+*IrregularitycategoryApi* | [**retrieveListIrregularityCategory**](docs/Api/IrregularitycategoryApi.md#retrievelistirregularitycategory) | **PUT** /irregularity-category | Retrieve list of irregularity categories
+*IrregularityreasonApi* | [**createIrregularityReason**](docs/Api/IrregularityreasonApi.md#createirregularityreason) | **POST** /irregularity-reason/set | Create a irregularity reason
+*IrregularityreasonApi* | [**deleteIrregularityReason**](docs/Api/IrregularityreasonApi.md#deleteirregularityreason) | **DELETE** /irregularity-reason/{irregularityReasonId} | Delete a irregularity reason
+*IrregularityreasonApi* | [**retrieveIrregularityReason**](docs/Api/IrregularityreasonApi.md#retrieveirregularityreason) | **GET** /irregularity-reason/{irregularityReasonId} | Retrieve a irregularity reason
+*IrregularityreasonApi* | [**retrieveListIrregularityReason**](docs/Api/IrregularityreasonApi.md#retrievelistirregularityreason) | **PUT** /irregularity-reason | Retrieve list of irregularity categories
 *LanguageApi* | [**retrieveListLanguage**](docs/Api/LanguageApi.md#retrievelistlanguage) | **PUT** /language | Retrieve List of Language
 *LinkApi* | [**deleteLink**](docs/Api/LinkApi.md#deletelink) | **DELETE** /link/{linkId} | Delete a link
 *LinkApi* | [**retrieveListLink**](docs/Api/LinkApi.md#retrievelistlink) | **PUT** /link | Retrieve List of Links
@@ -635,6 +647,21 @@ Class | Method | HTTP request | Description
  - [GetExecutableActivitiesFiltersModel](docs/Model/GetExecutableActivitiesFiltersModel.md)
  - [GetExecutableActivitiesOptionsModel](docs/Model/GetExecutableActivitiesOptionsModel.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
+ - [IrregularityCategoryFiltersModel](docs/Model/IrregularityCategoryFiltersModel.md)
+ - [IrregularityCategoryListResponse](docs/Model/IrregularityCategoryListResponse.md)
+ - [IrregularityCategoryModel](docs/Model/IrregularityCategoryModel.md)
+ - [IrregularityCategoryOptionsModel](docs/Model/IrregularityCategoryOptionsModel.md)
+ - [IrregularityCategoryRetrieveListArguments](docs/Model/IrregularityCategoryRetrieveListArguments.md)
+ - [IrregularityFiltersModel](docs/Model/IrregularityFiltersModel.md)
+ - [IrregularityListResponse](docs/Model/IrregularityListResponse.md)
+ - [IrregularityModel](docs/Model/IrregularityModel.md)
+ - [IrregularityOptionsModel](docs/Model/IrregularityOptionsModel.md)
+ - [IrregularityReasonFiltersModel](docs/Model/IrregularityReasonFiltersModel.md)
+ - [IrregularityReasonListResponse](docs/Model/IrregularityReasonListResponse.md)
+ - [IrregularityReasonModel](docs/Model/IrregularityReasonModel.md)
+ - [IrregularityReasonOptionsModel](docs/Model/IrregularityReasonOptionsModel.md)
+ - [IrregularityReasonRetrieveListArguments](docs/Model/IrregularityReasonRetrieveListArguments.md)
+ - [IrregularityRetrieveListArguments](docs/Model/IrregularityRetrieveListArguments.md)
  - [LanguageFiltersModel](docs/Model/LanguageFiltersModel.md)
  - [LanguageListResponse](docs/Model/LanguageListResponse.md)
  - [LanguageModel](docs/Model/LanguageModel.md)

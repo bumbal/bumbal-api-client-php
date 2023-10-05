@@ -218,6 +218,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_irregularities"
+     */
+    public function testPropertyIncludeIrregularities()
+    {
+    }
+
+    /**
      * Test attribute "include_package_lines"
      */
     public function testPropertyIncludePackageLines()

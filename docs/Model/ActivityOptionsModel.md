@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **include_emails** | **bool** |  | [optional] 
 **include_meta_data** | **bool** |  | [optional] 
 **include_notes** | **bool** |  | [optional] 
+**include_irregularities** | **bool** |  | [optional] 
 **include_package_lines** | **bool** |  | [optional] 
 **include_recoveries** | **bool** |  | [optional] 
 **include_package_line_links** | **bool** | Deprecated! Use include_links instead | [optional] 

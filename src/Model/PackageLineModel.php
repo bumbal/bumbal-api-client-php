@@ -86,6 +86,7 @@ class PackageLineModel implements ArrayAccess
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
+        'irregularities' => '\BumbalClient\Model\IrregularityModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
@@ -132,6 +133,7 @@ class PackageLineModel implements ArrayAccess
         'links' => null,
         'meta_data' => null,
         'notes' => null,
+        'irregularities' => null,
         'files' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
@@ -188,6 +190,7 @@ class PackageLineModel implements ArrayAccess
         'links' => 'links',
         'meta_data' => 'meta_data',
         'notes' => 'notes',
+        'irregularities' => 'irregularities',
         'files' => 'files',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
@@ -235,6 +238,7 @@ class PackageLineModel implements ArrayAccess
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
+        'irregularities' => 'setIrregularities',
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
@@ -282,6 +286,7 @@ class PackageLineModel implements ArrayAccess
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
+        'irregularities' => 'getIrregularities',
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
@@ -440,6 +445,7 @@ class PackageLineModel implements ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
+        $this->container['irregularities'] = isset($data['irregularities']) ? $data['irregularities'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -1247,6 +1253,27 @@ class PackageLineModel implements ArrayAccess
     public function setNotes($notes)
     {
         $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets irregularities
+     * @return \BumbalClient\Model\IrregularityModel[]
+     */
+    public function getIrregularities()
+    {
+        return $this->container['irregularities'];
+    }
+
+    /**
+     * Sets irregularities
+     * @param \BumbalClient\Model\IrregularityModel[] $irregularities
+     * @return $this
+     */
+    public function setIrregularities($irregularities)
+    {
+        $this->container['irregularities'] = $irregularities;
 
         return $this;
     }

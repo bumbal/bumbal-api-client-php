@@ -55,6 +55,7 @@ class PackageLineOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_notes' => 'bool',
+        'include_irregularities' => 'bool',
         'include_tags' => 'bool',
         'include_package_type_name' => 'bool',
         'include_record_info' => 'bool',
@@ -83,6 +84,7 @@ class PackageLineOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_notes' => null,
+        'include_irregularities' => null,
         'include_tags' => null,
         'include_package_type_name' => null,
         'include_record_info' => null,
@@ -121,6 +123,7 @@ class PackageLineOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'include_notes' => 'include_notes',
+        'include_irregularities' => 'include_irregularities',
         'include_tags' => 'include_tags',
         'include_package_type_name' => 'include_package_type_name',
         'include_record_info' => 'include_record_info',
@@ -150,6 +153,7 @@ class PackageLineOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'include_notes' => 'setIncludeNotes',
+        'include_irregularities' => 'setIncludeIrregularities',
         'include_tags' => 'setIncludeTags',
         'include_package_type_name' => 'setIncludePackageTypeName',
         'include_record_info' => 'setIncludeRecordInfo',
@@ -179,6 +183,7 @@ class PackageLineOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'include_notes' => 'getIncludeNotes',
+        'include_irregularities' => 'getIncludeIrregularities',
         'include_tags' => 'getIncludeTags',
         'include_package_type_name' => 'getIncludePackageTypeName',
         'include_record_info' => 'getIncludeRecordInfo',
@@ -233,6 +238,7 @@ class PackageLineOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
+        $this->container['include_irregularities'] = isset($data['include_irregularities']) ? $data['include_irregularities'] : null;
         $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
         $this->container['include_package_type_name'] = isset($data['include_package_type_name']) ? $data['include_package_type_name'] : null;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
@@ -297,6 +303,27 @@ class PackageLineOptionsModel implements ArrayAccess
     public function setIncludeNotes($include_notes)
     {
         $this->container['include_notes'] = $include_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_irregularities
+     * @return bool
+     */
+    public function getIncludeIrregularities()
+    {
+        return $this->container['include_irregularities'];
+    }
+
+    /**
+     * Sets include_irregularities
+     * @param bool $include_irregularities
+     * @return $this
+     */
+    public function setIncludeIrregularities($include_irregularities)
+    {
+        $this->container['include_irregularities'] = $include_irregularities;
 
         return $this;
     }

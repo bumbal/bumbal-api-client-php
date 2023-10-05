@@ -155,6 +155,7 @@ class ActivityModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'stats' => '\BumbalClient\Model\ActivityStatsModel',
         'notes' => '\BumbalClient\Model\NoteModel[]',
+        'irregularities' => '\BumbalClient\Model\IrregularityModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'activity_created_at' => '\DateTime',
         'activity_updated_at' => '\DateTime',
@@ -276,6 +277,7 @@ class ActivityModel implements ArrayAccess
         'meta_data' => null,
         'stats' => null,
         'notes' => null,
+        'irregularities' => null,
         'files' => null,
         'activity_created_at' => 'date-time',
         'activity_updated_at' => 'date-time',
@@ -407,6 +409,7 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'stats' => 'stats',
         'notes' => 'notes',
+        'irregularities' => 'irregularities',
         'files' => 'files',
         'activity_created_at' => 'activity_created_at',
         'activity_updated_at' => 'activity_updated_at',
@@ -529,6 +532,7 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'stats' => 'setStats',
         'notes' => 'setNotes',
+        'irregularities' => 'setIrregularities',
         'files' => 'setFiles',
         'activity_created_at' => 'setActivityCreatedAt',
         'activity_updated_at' => 'setActivityUpdatedAt',
@@ -651,6 +655,7 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'stats' => 'getStats',
         'notes' => 'getNotes',
+        'irregularities' => 'getIrregularities',
         'files' => 'getFiles',
         'activity_created_at' => 'getActivityCreatedAt',
         'activity_updated_at' => 'getActivityUpdatedAt',
@@ -966,6 +971,7 @@ class ActivityModel implements ArrayAccess
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['stats'] = isset($data['stats']) ? $data['stats'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
+        $this->container['irregularities'] = isset($data['irregularities']) ? $data['irregularities'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['activity_created_at'] = isset($data['activity_created_at']) ? $data['activity_created_at'] : null;
         $this->container['activity_updated_at'] = isset($data['activity_updated_at']) ? $data['activity_updated_at'] : null;
@@ -3186,6 +3192,27 @@ class ActivityModel implements ArrayAccess
     public function setNotes($notes)
     {
         $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets irregularities
+     * @return \BumbalClient\Model\IrregularityModel[]
+     */
+    public function getIrregularities()
+    {
+        return $this->container['irregularities'];
+    }
+
+    /**
+     * Sets irregularities
+     * @param \BumbalClient\Model\IrregularityModel[] $irregularities
+     * @return $this
+     */
+    public function setIrregularities($irregularities)
+    {
+        $this->container['irregularities'] = $irregularities;
 
         return $this;
     }
