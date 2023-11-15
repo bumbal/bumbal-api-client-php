@@ -555,12 +555,13 @@ class RouteApi
      * @param bool $include_gps_locations Include GPS locations (required)
      * @param bool $include_activity_ids Include Activity IDs (required)
      * @param bool $include_latest_position Include Latest Known GPS location (required)
+     * @param bool $apply_address_bundling Bundle activities in result (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\RouteModel
      */
-    public function retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position)
+    public function retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling = null)
     {
-        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position);
+        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling);
         return $response;
     }
 
@@ -578,10 +579,11 @@ class RouteApi
      * @param bool $include_gps_locations Include GPS locations (required)
      * @param bool $include_activity_ids Include Activity IDs (required)
      * @param bool $include_latest_position Include Latest Known GPS location (required)
+     * @param bool $apply_address_bundling Bundle activities in result (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\RouteModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position)
+    public function retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling = null)
     {
         // verify the required parameter 'route_id' is set
         if ($route_id === null) {
@@ -662,6 +664,10 @@ class RouteApi
         // query params
         if ($include_latest_position !== null) {
             $queryParams['include_latest_position'] = $this->apiClient->getSerializer()->toQueryValue($include_latest_position);
+        }
+        // query params
+        if ($apply_address_bundling !== null) {
+            $queryParams['apply_address_bundling'] = $this->apiClient->getSerializer()->toQueryValue($apply_address_bundling);
         }
         // path params
         if ($route_id !== null) {

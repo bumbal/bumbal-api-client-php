@@ -57,7 +57,7 @@ class IrregularityCategoryModel implements ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'object_types' => 'int[]',
-        'object_type_names' => 'int[]',
+        'object_type_names' => 'string[]',
         'active' => 'bool',
         'removed' => 'bool',
         'created_by' => 'int',
@@ -267,7 +267,7 @@ class IrregularityCategoryModel implements ArrayAccess
 
     /**
      * Sets object_types
-     * @param int[] $object_types Object Types associated with this category
+     * @param int[] $object_types Filter Irregularity Category by object types. Possible values: 11, 32, 24
      * @return $this
      */
     public function setObjectTypes($object_types)
@@ -279,7 +279,7 @@ class IrregularityCategoryModel implements ArrayAccess
 
     /**
      * Gets object_type_names
-     * @return int[]
+     * @return string[]
      */
     public function getObjectTypeNames()
     {
@@ -288,7 +288,7 @@ class IrregularityCategoryModel implements ArrayAccess
 
     /**
      * Sets object_type_names
-     * @param int[] $object_type_names Object Type names associated with this category
+     * @param string[] $object_type_names Filter Irregularity Category by object type names. Possible values: activity, package_line and route
      * @return $this
      */
     public function setObjectTypeNames($object_type_names)

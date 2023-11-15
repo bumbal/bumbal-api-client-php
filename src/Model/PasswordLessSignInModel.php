@@ -1,6 +1,6 @@
 <?php
 /**
- * AuthenticateModel
+ * PasswordLessSignInModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * AuthenticateModel Class Doc Comment
+ * PasswordLessSignInModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AuthenticateModel implements ArrayAccess
+class PasswordLessSignInModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,18 @@ class AuthenticateModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AuthenticateModel';
+    protected static $swaggerModelName = 'PasswordLessSignInModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token' => 'string',
-        'user' => '\BumbalClient\Model\UsersModel'
+        'bo_auth' => 'int',
+        'signature' => 'string',
+        'user_id' => 'int',
+        'expires' => 'int',
+        'instance' => 'int'
     ];
 
     /**
@@ -63,8 +66,11 @@ class AuthenticateModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'token' => null,
-        'user' => null
+        'bo_auth' => null,
+        'signature' => null,
+        'user_id' => null,
+        'expires' => null,
+        'instance' => null
     ];
 
     public static function swaggerTypes()
@@ -82,8 +88,11 @@ class AuthenticateModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token',
-        'user' => 'user'
+        'bo_auth' => 'boAuth',
+        'signature' => 'signature',
+        'user_id' => 'user_id',
+        'expires' => 'expires',
+        'instance' => 'instance'
     ];
 
 
@@ -92,8 +101,11 @@ class AuthenticateModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken',
-        'user' => 'setUser'
+        'bo_auth' => 'setBoAuth',
+        'signature' => 'setSignature',
+        'user_id' => 'setUserId',
+        'expires' => 'setExpires',
+        'instance' => 'setInstance'
     ];
 
 
@@ -102,8 +114,11 @@ class AuthenticateModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken',
-        'user' => 'getUser'
+        'bo_auth' => 'getBoAuth',
+        'signature' => 'getSignature',
+        'user_id' => 'getUserId',
+        'expires' => 'getExpires',
+        'instance' => 'getInstance'
     ];
 
     public static function attributeMap()
@@ -137,8 +152,11 @@ class AuthenticateModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['bo_auth'] = isset($data['bo_auth']) ? $data['bo_auth'] : null;
+        $this->container['signature'] = isset($data['signature']) ? $data['signature'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['expires'] = isset($data['expires']) ? $data['expires'] : null;
+        $this->container['instance'] = isset($data['instance']) ? $data['instance'] : null;
     }
 
     /**
@@ -167,43 +185,106 @@ class AuthenticateModel implements ArrayAccess
 
 
     /**
-     * Gets token
-     * @return string
+     * Gets bo_auth
+     * @return int
      */
-    public function getToken()
+    public function getBoAuth()
     {
-        return $this->container['token'];
+        return $this->container['bo_auth'];
     }
 
     /**
-     * Sets token
-     * @param string $token your access token. If a JWT was requested, then this token will be a JWT token. Use this token in a header Authorization:Bearer <jwt goes here>. This token currently has an expiration time of 8 hours, but will also be invalidated when signing out
+     * Sets bo_auth
+     * @param int $bo_auth When value is 1, indicates that signature token was issued by BackOffice.
      * @return $this
      */
-    public function setToken($token)
+    public function setBoAuth($bo_auth)
     {
-        $this->container['token'] = $token;
+        $this->container['bo_auth'] = $bo_auth;
 
         return $this;
     }
 
     /**
-     * Gets user
-     * @return \BumbalClient\Model\UsersModel
+     * Gets signature
+     * @return string
      */
-    public function getUser()
+    public function getSignature()
     {
-        return $this->container['user'];
+        return $this->container['signature'];
     }
 
     /**
-     * Sets user
-     * @param \BumbalClient\Model\UsersModel $user
+     * Sets signature
+     * @param string $signature Issuer signature token.
      * @return $this
      */
-    public function setUser($user)
+    public function setSignature($signature)
     {
-        $this->container['user'] = $user;
+        $this->container['signature'] = $signature;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_id
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->container['user_id'];
+    }
+
+    /**
+     * Sets user_id
+     * @param int $user_id Id of the user that needs to be logged in.
+     * @return $this
+     */
+    public function setUserId($user_id)
+    {
+        $this->container['user_id'] = $user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets expires
+     * @return int
+     */
+    public function getExpires()
+    {
+        return $this->container['expires'];
+    }
+
+    /**
+     * Sets expires
+     * @param int $expires expiration of signature token.
+     * @return $this
+     */
+    public function setExpires($expires)
+    {
+        $this->container['expires'] = $expires;
+
+        return $this;
+    }
+
+    /**
+     * Gets instance
+     * @return int
+     */
+    public function getInstance()
+    {
+        return $this->container['instance'];
+    }
+
+    /**
+     * Sets instance
+     * @param int $instance the instance the token is intended for
+     * @return $this
+     */
+    public function setInstance($instance)
+    {
+        $this->container['instance'] = $instance;
 
         return $this;
     }

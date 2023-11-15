@@ -719,6 +719,7 @@ Class | Method | HTTP request | Description
  - [PartyModel](docs/Model/PartyModel.md)
  - [PartyOptionsModel](docs/Model/PartyOptionsModel.md)
  - [PartyRetrieveListArguments](docs/Model/PartyRetrieveListArguments.md)
+ - [PasswordLessSignInModel](docs/Model/PasswordLessSignInModel.md)
  - [PauseFiltersModel](docs/Model/PauseFiltersModel.md)
  - [PauseListResponse](docs/Model/PauseListResponse.md)
  - [PauseModel](docs/Model/PauseModel.md)

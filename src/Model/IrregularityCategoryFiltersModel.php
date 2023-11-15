@@ -231,7 +231,7 @@ class IrregularityCategoryFiltersModel implements ArrayAccess
 
     /**
      * Sets object_types
-     * @param int[] $object_types Filter Irregularity Category by object types. Possible values: 1, 11, 32, 24
+     * @param int[] $object_types Filter Irregularity Category by object types. Possible values: 11, 32, 24
      * @return $this
      */
     public function setObjectTypes($object_types)
@@ -252,7 +252,7 @@ class IrregularityCategoryFiltersModel implements ArrayAccess
 
     /**
      * Sets object_type_names
-     * @param string[] $object_type_names Filter Irregularity Category by object type names. Possible values: address, activity, package_line and route
+     * @param string[] $object_type_names Filter Irregularity Category by object type names. Possible values: activity, package_line and route
      * @return $this
      */
     public function setObjectTypeNames($object_type_names)
