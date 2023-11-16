@@ -114,7 +114,7 @@ class RouteModel implements ArrayAccess
         'active' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
-        'planned_capacities' => 'map[string,\BumbalClient\Model\AppliedCapacityModel]',
+        'planned_capacities' => 'map[string,\BumbalClient\Model\CapacityModel]',
         'applied_capacities' => '\BumbalClient\Model\AppliedCapacitiesModel',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_ids' => 'int[]',
@@ -1938,7 +1938,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets planned_capacities
-     * @return map[string,\BumbalClient\Model\AppliedCapacityModel]
+     * @return map[string,\BumbalClient\Model\CapacityModel]
      */
     public function getPlannedCapacities()
     {
@@ -1947,7 +1947,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets planned_capacities
-     * @param map[string,\BumbalClient\Model\AppliedCapacityModel] $planned_capacities
+     * @param map[string,\BumbalClient\Model\CapacityModel] $planned_capacities
      * @return $this
      */
     public function setPlannedCapacities($planned_capacities)
@@ -2235,7 +2235,6 @@ class RouteModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2246,7 +2245,6 @@ class RouteModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -2259,7 +2257,6 @@ class RouteModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -2275,7 +2272,6 @@ class RouteModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

@@ -422,7 +422,6 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @return boolean
      */
     #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -433,7 +432,6 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -446,7 +444,6 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -462,7 +459,6 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

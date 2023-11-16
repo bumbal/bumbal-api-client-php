@@ -85,41 +85,6 @@ class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "nr_of_inbound_package_lines"
-     */
-    public function testPropertyNrOfInboundPackageLines()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_outbound_package_lines"
-     */
-    public function testPropertyNrOfOutboundPackageLines()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_assess_package_lines"
-     */
-    public function testPropertyNrOfAssessPackageLines()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_recoveries"
-     */
-    public function testPropertyNrOfRecoveries()
-    {
-    }
-
-    /**
-     * Test attribute "nr_of_questionnaires"
-     */
-    public function testPropertyNrOfQuestionnaires()
-    {
-    }
-
-    /**
      * Test attribute "nr_of_bundled_activities"
      */
     public function testPropertyNrOfBundledActivities()
