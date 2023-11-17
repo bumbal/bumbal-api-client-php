@@ -114,7 +114,7 @@ class RouteModel implements ArrayAccess
         'active' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
-        'planned_capacities' => 'map[string,\BumbalClient\Model\CapacityModel]',
+        'planned_capacities' => 'map[string,\BumbalClient\Model\AppliedCapacityModel]',
         'applied_capacities' => '\BumbalClient\Model\AppliedCapacitiesModel',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_ids' => 'int[]',
@@ -1938,7 +1938,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets planned_capacities
-     * @return map[string,\BumbalClient\Model\CapacityModel]
+     * @return map[string,\BumbalClient\Model\AppliedCapacityModel]
      */
     public function getPlannedCapacities()
     {
@@ -1947,7 +1947,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets planned_capacities
-     * @param map[string,\BumbalClient\Model\CapacityModel] $planned_capacities
+     * @param map[string,\BumbalClient\Model\AppliedCapacityModel] $planned_capacities
      * @return $this
      */
     public function setPlannedCapacities($planned_capacities)

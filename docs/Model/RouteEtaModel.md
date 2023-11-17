@@ -64,7 +64,7 @@ Name | Type | Description | Notes
 **active** | **bool** | if active&#x3D;0: route has been removed and is no longer visible in any bumbal interface | [optional] 
 **start_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **end_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
-**planned_capacities** | [**map[string,\BumbalClient\Model\CapacityModel]**](CapacityModel.md) |  | [optional] 
+**planned_capacities** | [**map[string,\BumbalClient\Model\AppliedCapacityModel]**](AppliedCapacityModel.md) |  | [optional] 
 **applied_capacities** | [**\BumbalClient\Model\AppliedCapacitiesModel**](AppliedCapacitiesModel.md) |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **activity_ids** | **int[]** | activity ids on route in order of execution | [optional] 
