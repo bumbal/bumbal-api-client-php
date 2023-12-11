@@ -59,7 +59,8 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_object_link_ids' => 'bool',
         'include_note_files' => 'bool',
         'include_updated_by' => 'bool',
-        'include_record_info' => 'bool'
+        'include_record_info' => 'bool',
+        'include_note_category_name' => 'bool'
     ];
 
     /**
@@ -72,7 +73,8 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_object_link_ids' => null,
         'include_note_files' => null,
         'include_updated_by' => null,
-        'include_record_info' => null
+        'include_record_info' => null,
+        'include_note_category_name' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +97,8 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_object_link_ids' => 'include_note_object_link_ids',
         'include_note_files' => 'include_note_files',
         'include_updated_by' => 'include_updated_by',
-        'include_record_info' => 'include_record_info'
+        'include_record_info' => 'include_record_info',
+        'include_note_category_name' => 'include_note_category_name'
     ];
 
 
@@ -109,7 +112,8 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_object_link_ids' => 'setIncludeNoteObjectLinkIds',
         'include_note_files' => 'setIncludeNoteFiles',
         'include_updated_by' => 'setIncludeUpdatedBy',
-        'include_record_info' => 'setIncludeRecordInfo'
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_note_category_name' => 'setIncludeNoteCategoryName'
     ];
 
 
@@ -123,7 +127,8 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_object_link_ids' => 'getIncludeNoteObjectLinkIds',
         'include_note_files' => 'getIncludeNoteFiles',
         'include_updated_by' => 'getIncludeUpdatedBy',
-        'include_record_info' => 'getIncludeRecordInfo'
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_note_category_name' => 'getIncludeNoteCategoryName'
     ];
 
     public static function attributeMap()
@@ -163,6 +168,7 @@ class NoteOptionsModel implements ArrayAccess
         $this->container['include_note_files'] = isset($data['include_note_files']) ? $data['include_note_files'] : null;
         $this->container['include_updated_by'] = isset($data['include_updated_by']) ? $data['include_updated_by'] : null;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_note_category_name'] = isset($data['include_note_category_name']) ? $data['include_note_category_name'] : null;
     }
 
     /**
@@ -312,6 +318,27 @@ class NoteOptionsModel implements ArrayAccess
     public function setIncludeRecordInfo($include_record_info)
     {
         $this->container['include_record_info'] = $include_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_note_category_name
+     * @return bool
+     */
+    public function getIncludeNoteCategoryName()
+    {
+        return $this->container['include_note_category_name'];
+    }
+
+    /**
+     * Sets include_note_category_name
+     * @param bool $include_note_category_name
+     * @return $this
+     */
+    public function setIncludeNoteCategoryName($include_note_category_name)
+    {
+        $this->container['include_note_category_name'] = $include_note_category_name;
 
         return $this;
     }

@@ -96,6 +96,7 @@ Name | Type | Description | Notes
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **recurrence_id** | **int** | Unique Recurrence Identifier | [optional] 
+**recurrence_nr** | **int** | the sequence number of this activity within a recurrence | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
 **tag_ids** | **int[]** | Tag type ids | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 

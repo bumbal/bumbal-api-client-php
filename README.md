@@ -321,6 +321,8 @@ Class | Method | HTTP request | Description
 *RecoveryApi* | [**retrieveRecovery**](docs/Api/RecoveryApi.md#retrieverecovery) | **GET** /recovery/{recoveryId} | Retrieve a Recovery
 *RecoveryApi* | [**setRecovery**](docs/Api/RecoveryApi.md#setrecovery) | **POST** /recovery/set | Set (create or update) a Recovery
 *RecoveryApi* | [**updateRecovery**](docs/Api/RecoveryApi.md#updaterecovery) | **PUT** /recovery/{recoveryId} | Update a Recovery
+*RecurrenceApi* | [**adjustRecurrenceByActivityId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyactivityid) | **PUT** /recurrence/adjust-recurrence-by-activity-id/{activityId} | Adjust all recurrence objects following up to the provided activity id
+*RecurrenceApi* | [**adjustRecurrenceByRouteId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyrouteid) | **PUT** /recurrence/adjust-recurrence-by-route-id/{routeId} | Adjust all recurrence objects following up to the provided route id
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence

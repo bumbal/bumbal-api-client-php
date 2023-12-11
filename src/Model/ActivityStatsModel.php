@@ -55,6 +55,11 @@ class ActivityStatsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'nr_of_package_lines' => 'int',
+        'nr_of_inbound_package_lines' => 'int',
+        'nr_of_outbound_package_lines' => 'int',
+        'nr_of_assess_package_lines' => 'int',
+        'nr_of_recoveries' => 'int',
+        'nr_of_questionnaires' => 'int',
         'nr_of_bundled_activities' => 'int',
         'nr_of_transactions' => 'int',
         'nr_of_notes' => 'int',
@@ -69,6 +74,11 @@ class ActivityStatsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'nr_of_package_lines' => 'int64',
+        'nr_of_inbound_package_lines' => 'int64',
+        'nr_of_outbound_package_lines' => 'int64',
+        'nr_of_assess_package_lines' => 'int64',
+        'nr_of_recoveries' => 'int64',
+        'nr_of_questionnaires' => 'int64',
         'nr_of_bundled_activities' => 'int64',
         'nr_of_transactions' => 'int64',
         'nr_of_notes' => 'int64',
@@ -93,6 +103,11 @@ class ActivityStatsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'nr_of_package_lines' => 'nr_of_package_lines',
+        'nr_of_inbound_package_lines' => 'nr_of_inbound_package_lines',
+        'nr_of_outbound_package_lines' => 'nr_of_outbound_package_lines',
+        'nr_of_assess_package_lines' => 'nr_of_assess_package_lines',
+        'nr_of_recoveries' => 'nr_of_recoveries',
+        'nr_of_questionnaires' => 'nr_of_questionnaires',
         'nr_of_bundled_activities' => 'nr_of_bundled_activities',
         'nr_of_transactions' => 'nr_of_transactions',
         'nr_of_notes' => 'nr_of_notes',
@@ -108,6 +123,11 @@ class ActivityStatsModel implements ArrayAccess
      */
     protected static $setters = [
         'nr_of_package_lines' => 'setNrOfPackageLines',
+        'nr_of_inbound_package_lines' => 'setNrOfInboundPackageLines',
+        'nr_of_outbound_package_lines' => 'setNrOfOutboundPackageLines',
+        'nr_of_assess_package_lines' => 'setNrOfAssessPackageLines',
+        'nr_of_recoveries' => 'setNrOfRecoveries',
+        'nr_of_questionnaires' => 'setNrOfQuestionnaires',
         'nr_of_bundled_activities' => 'setNrOfBundledActivities',
         'nr_of_transactions' => 'setNrOfTransactions',
         'nr_of_notes' => 'setNrOfNotes',
@@ -123,6 +143,11 @@ class ActivityStatsModel implements ArrayAccess
      */
     protected static $getters = [
         'nr_of_package_lines' => 'getNrOfPackageLines',
+        'nr_of_inbound_package_lines' => 'getNrOfInboundPackageLines',
+        'nr_of_outbound_package_lines' => 'getNrOfOutboundPackageLines',
+        'nr_of_assess_package_lines' => 'getNrOfAssessPackageLines',
+        'nr_of_recoveries' => 'getNrOfRecoveries',
+        'nr_of_questionnaires' => 'getNrOfQuestionnaires',
         'nr_of_bundled_activities' => 'getNrOfBundledActivities',
         'nr_of_transactions' => 'getNrOfTransactions',
         'nr_of_notes' => 'getNrOfNotes',
@@ -163,6 +188,11 @@ class ActivityStatsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['nr_of_package_lines'] = isset($data['nr_of_package_lines']) ? $data['nr_of_package_lines'] : null;
+        $this->container['nr_of_inbound_package_lines'] = isset($data['nr_of_inbound_package_lines']) ? $data['nr_of_inbound_package_lines'] : null;
+        $this->container['nr_of_outbound_package_lines'] = isset($data['nr_of_outbound_package_lines']) ? $data['nr_of_outbound_package_lines'] : null;
+        $this->container['nr_of_assess_package_lines'] = isset($data['nr_of_assess_package_lines']) ? $data['nr_of_assess_package_lines'] : null;
+        $this->container['nr_of_recoveries'] = isset($data['nr_of_recoveries']) ? $data['nr_of_recoveries'] : null;
+        $this->container['nr_of_questionnaires'] = isset($data['nr_of_questionnaires']) ? $data['nr_of_questionnaires'] : null;
         $this->container['nr_of_bundled_activities'] = isset($data['nr_of_bundled_activities']) ? $data['nr_of_bundled_activities'] : null;
         $this->container['nr_of_transactions'] = isset($data['nr_of_transactions']) ? $data['nr_of_transactions'] : null;
         $this->container['nr_of_notes'] = isset($data['nr_of_notes']) ? $data['nr_of_notes'] : null;
@@ -213,6 +243,111 @@ class ActivityStatsModel implements ArrayAccess
     public function setNrOfPackageLines($nr_of_package_lines)
     {
         $this->container['nr_of_package_lines'] = $nr_of_package_lines;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_inbound_package_lines
+     * @return int
+     */
+    public function getNrOfInboundPackageLines()
+    {
+        return $this->container['nr_of_inbound_package_lines'];
+    }
+
+    /**
+     * Sets nr_of_inbound_package_lines
+     * @param int $nr_of_inbound_package_lines The amount of package lines attached to the activity which are of action type inbound (=load)
+     * @return $this
+     */
+    public function setNrOfInboundPackageLines($nr_of_inbound_package_lines)
+    {
+        $this->container['nr_of_inbound_package_lines'] = $nr_of_inbound_package_lines;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_outbound_package_lines
+     * @return int
+     */
+    public function getNrOfOutboundPackageLines()
+    {
+        return $this->container['nr_of_outbound_package_lines'];
+    }
+
+    /**
+     * Sets nr_of_outbound_package_lines
+     * @param int $nr_of_outbound_package_lines The amount of package lines attached to the activity which are of action type outbound (=unload)
+     * @return $this
+     */
+    public function setNrOfOutboundPackageLines($nr_of_outbound_package_lines)
+    {
+        $this->container['nr_of_outbound_package_lines'] = $nr_of_outbound_package_lines;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_assess_package_lines
+     * @return int
+     */
+    public function getNrOfAssessPackageLines()
+    {
+        return $this->container['nr_of_assess_package_lines'];
+    }
+
+    /**
+     * Sets nr_of_assess_package_lines
+     * @param int $nr_of_assess_package_lines The amount of package lines attached to the activity which are of action type assess (=nor load or unload)
+     * @return $this
+     */
+    public function setNrOfAssessPackageLines($nr_of_assess_package_lines)
+    {
+        $this->container['nr_of_assess_package_lines'] = $nr_of_assess_package_lines;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_recoveries
+     * @return int
+     */
+    public function getNrOfRecoveries()
+    {
+        return $this->container['nr_of_recoveries'];
+    }
+
+    /**
+     * Sets nr_of_recoveries
+     * @param int $nr_of_recoveries The amount of recoveries attached to the activity (returns)
+     * @return $this
+     */
+    public function setNrOfRecoveries($nr_of_recoveries)
+    {
+        $this->container['nr_of_recoveries'] = $nr_of_recoveries;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_questionnaires
+     * @return int
+     */
+    public function getNrOfQuestionnaires()
+    {
+        return $this->container['nr_of_questionnaires'];
+    }
+
+    /**
+     * Sets nr_of_questionnaires
+     * @param int $nr_of_questionnaires The amount of answered questionnaires attached to the activity
+     * @return $this
+     */
+    public function setNrOfQuestionnaires($nr_of_questionnaires)
+    {
+        $this->container['nr_of_questionnaires'] = $nr_of_questionnaires;
 
         return $this;
     }

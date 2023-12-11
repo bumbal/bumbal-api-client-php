@@ -73,6 +73,26 @@ class RecurrenceApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for adjustRecurrenceByActivityId
+     *
+     * Adjust all recurrence objects following up to the provided activity id.
+     *
+     */
+    public function testAdjustRecurrenceByActivityId()
+    {
+    }
+
+    /**
+     * Test case for adjustRecurrenceByRouteId
+     *
+     * Adjust all recurrence objects following up to the provided route id.
+     *
+     */
+    public function testAdjustRecurrenceByRouteId()
+    {
+    }
+
+    /**
      * Test case for createActivityRecurrence
      *
      * create a activity recurrence.

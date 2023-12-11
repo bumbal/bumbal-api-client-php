@@ -66,6 +66,8 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => '\DateTime',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
+        'created_at_since' => '\DateTime',
+        'created_at_till' => '\DateTime',
         'active' => 'int[]',
         'status' => 'string[]',
         'status_id' => 'int[]',
@@ -96,6 +98,8 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'date-time',
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
+        'created_at_since' => 'date-time',
+        'created_at_till' => 'date-time',
         'active' => null,
         'status' => null,
         'status_id' => null,
@@ -136,6 +140,8 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'updated_at',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
+        'created_at_since' => 'created_at_since',
+        'created_at_till' => 'created_at_till',
         'active' => 'active',
         'status' => 'status',
         'status_id' => 'status_id',
@@ -167,6 +173,8 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
+        'created_at_since' => 'setCreatedAtSince',
+        'created_at_till' => 'setCreatedAtTill',
         'active' => 'setActive',
         'status' => 'setStatus',
         'status_id' => 'setStatusId',
@@ -198,6 +206,8 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
+        'created_at_since' => 'getCreatedAtSince',
+        'created_at_till' => 'getCreatedAtTill',
         'active' => 'getActive',
         'status' => 'getStatus',
         'status_id' => 'getStatusId',
@@ -254,6 +264,8 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
+        $this->container['created_at_since'] = isset($data['created_at_since']) ? $data['created_at_since'] : null;
+        $this->container['created_at_till'] = isset($data['created_at_till']) ? $data['created_at_till'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
@@ -540,6 +552,48 @@ class RouteFiltersModel implements ArrayAccess
     public function setUpdatedAtTill($updated_at_till)
     {
         $this->container['updated_at_till'] = $updated_at_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at_since
+     * @return \DateTime|string|null
+     */
+    public function getCreatedAtSince()
+    {
+        return $this->container['created_at_since'];
+    }
+
+    /**
+     * Sets created_at_since
+     * @param \DateTime|string|null $created_at_since filter routes with an created at date-time since this input
+     * @return $this
+     */
+    public function setCreatedAtSince($created_at_since)
+    {
+        $this->container['created_at_since'] = $created_at_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at_till
+     * @return \DateTime|string|null
+     */
+    public function getCreatedAtTill()
+    {
+        return $this->container['created_at_till'];
+    }
+
+    /**
+     * Sets created_at_till
+     * @param \DateTime|string|null $created_at_till filter routes with an created at date-time till this input
+     * @return $this
+     */
+    public function setCreatedAtTill($created_at_till)
+    {
+        $this->container['created_at_till'] = $created_at_till;
 
         return $this;
     }

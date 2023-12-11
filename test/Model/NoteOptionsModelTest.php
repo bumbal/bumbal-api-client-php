@@ -118,4 +118,11 @@ class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeRecordInfo()
     {
     }
+
+    /**
+     * Test attribute "include_note_category_name"
+     */
+    public function testPropertyIncludeNoteCategoryName()
+    {
+    }
 }

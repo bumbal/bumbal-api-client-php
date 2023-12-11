@@ -115,7 +115,7 @@ class RouteEtaModel implements ArrayAccess
         'active' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
-        'planned_capacities' => 'map[string,\BumbalClient\Model\AppliedCapacityModel]',
+        'planned_capacities' => 'map[string,\BumbalClient\Model\CapacityModel]',
         'applied_capacities' => '\BumbalClient\Model\AppliedCapacitiesModel',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_ids' => 'int[]',
@@ -189,7 +189,7 @@ class RouteEtaModel implements ArrayAccess
         'gps_locations' => null,
         'latest_known_position' => null,
         'recurrence_id' => null,
-        'recurrence_nr' => null,
+        'recurrence_nr' => 'int64',
         'recurrence' => null,
         'overdue' => null,
         'optimized' => null,
@@ -1806,7 +1806,7 @@ class RouteEtaModel implements ArrayAccess
 
     /**
      * Sets recurrence_nr
-     * @param int $recurrence_nr nr within recurrence where route belongs to
+     * @param int $recurrence_nr the sequence number of this route within a recurrence
      * @return $this
      */
     public function setRecurrenceNr($recurrence_nr)
@@ -1965,7 +1965,7 @@ class RouteEtaModel implements ArrayAccess
 
     /**
      * Gets planned_capacities
-     * @return map[string,\BumbalClient\Model\AppliedCapacityModel]
+     * @return map[string,\BumbalClient\Model\CapacityModel]
      */
     public function getPlannedCapacities()
     {
@@ -1974,7 +1974,7 @@ class RouteEtaModel implements ArrayAccess
 
     /**
      * Sets planned_capacities
-     * @param map[string,\BumbalClient\Model\AppliedCapacityModel] $planned_capacities
+     * @param map[string,\BumbalClient\Model\CapacityModel] $planned_capacities
      * @return $this
      */
     public function setPlannedCapacities($planned_capacities)

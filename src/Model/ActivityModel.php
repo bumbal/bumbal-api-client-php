@@ -147,6 +147,7 @@ class ActivityModel implements ArrayAccess
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'recurrence_id' => 'int',
+        'recurrence_nr' => 'int',
         'tag_names' => 'string[]',
         'tag_ids' => 'int[]',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
@@ -269,6 +270,7 @@ class ActivityModel implements ArrayAccess
         'tags' => null,
         'recurrence' => null,
         'recurrence_id' => 'int64',
+        'recurrence_nr' => 'int64',
         'tag_names' => null,
         'tag_ids' => null,
         'zones' => null,
@@ -401,6 +403,7 @@ class ActivityModel implements ArrayAccess
         'tags' => 'tags',
         'recurrence' => 'recurrence',
         'recurrence_id' => 'recurrence_id',
+        'recurrence_nr' => 'recurrence_nr',
         'tag_names' => 'tag_names',
         'tag_ids' => 'tag_ids',
         'zones' => 'zones',
@@ -524,6 +527,7 @@ class ActivityModel implements ArrayAccess
         'tags' => 'setTags',
         'recurrence' => 'setRecurrence',
         'recurrence_id' => 'setRecurrenceId',
+        'recurrence_nr' => 'setRecurrenceNr',
         'tag_names' => 'setTagNames',
         'tag_ids' => 'setTagIds',
         'zones' => 'setZones',
@@ -647,6 +651,7 @@ class ActivityModel implements ArrayAccess
         'tags' => 'getTags',
         'recurrence' => 'getRecurrence',
         'recurrence_id' => 'getRecurrenceId',
+        'recurrence_nr' => 'getRecurrenceNr',
         'tag_names' => 'getTagNames',
         'tag_ids' => 'getTagIds',
         'zones' => 'getZones',
@@ -963,6 +968,7 @@ class ActivityModel implements ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
+        $this->container['recurrence_nr'] = isset($data['recurrence_nr']) ? $data['recurrence_nr'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
@@ -3024,6 +3030,27 @@ class ActivityModel implements ArrayAccess
     public function setRecurrenceId($recurrence_id)
     {
         $this->container['recurrence_id'] = $recurrence_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_nr
+     * @return int
+     */
+    public function getRecurrenceNr()
+    {
+        return $this->container['recurrence_nr'];
+    }
+
+    /**
+     * Sets recurrence_nr
+     * @param int $recurrence_nr the sequence number of this activity within a recurrence
+     * @return $this
+     */
+    public function setRecurrenceNr($recurrence_nr)
+    {
+        $this->container['recurrence_nr'] = $recurrence_nr;
 
         return $this;
     }

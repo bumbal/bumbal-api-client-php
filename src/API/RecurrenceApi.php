@@ -88,6 +88,190 @@ class RecurrenceApi
     }
 
     /**
+     * Operation adjustRecurrenceByActivityId
+     *
+     * Adjust all recurrence objects following up to the provided activity id
+     *
+     * @param int $activity_id ID of Activity to use as a template for future recurring activities (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ActivityModel
+     */
+    public function adjustRecurrenceByActivityId($activity_id)
+    {
+        list($response) = $this->adjustRecurrenceByActivityIdWithHttpInfo($activity_id);
+        return $response;
+    }
+
+    /**
+     * Operation adjustRecurrenceByActivityIdWithHttpInfo
+     *
+     * Adjust all recurrence objects following up to the provided activity id
+     *
+     * @param int $activity_id ID of Activity to use as a template for future recurring activities (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adjustRecurrenceByActivityIdWithHttpInfo($activity_id)
+    {
+        // verify the required parameter 'activity_id' is set
+        if ($activity_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $activity_id when calling adjustRecurrenceByActivityId');
+        }
+        // parse inputs
+        $resourcePath = "/recurrence/adjust-recurrence-by-activity-id/{activityId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($activity_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "activityId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($activity_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ActivityModel',
+                '/recurrence/adjust-recurrence-by-activity-id/{activityId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityModel', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityModel', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adjustRecurrenceByRouteId
+     *
+     * Adjust all recurrence objects following up to the provided route id
+     *
+     * @param int $route_id ID of route to use as a template for future recurring routes (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\RouteModel
+     */
+    public function adjustRecurrenceByRouteId($route_id)
+    {
+        list($response) = $this->adjustRecurrenceByRouteIdWithHttpInfo($route_id);
+        return $response;
+    }
+
+    /**
+     * Operation adjustRecurrenceByRouteIdWithHttpInfo
+     *
+     * Adjust all recurrence objects following up to the provided route id
+     *
+     * @param int $route_id ID of route to use as a template for future recurring routes (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\RouteModel, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adjustRecurrenceByRouteIdWithHttpInfo($route_id)
+    {
+        // verify the required parameter 'route_id' is set
+        if ($route_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $route_id when calling adjustRecurrenceByRouteId');
+        }
+        // parse inputs
+        $resourcePath = "/recurrence/adjust-recurrence-by-route-id/{routeId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($route_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "routeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($route_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\RouteModel',
+                '/recurrence/adjust-recurrence-by-route-id/{routeId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RouteModel', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RouteModel', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation createActivityRecurrence
      *
      * create a activity recurrence
