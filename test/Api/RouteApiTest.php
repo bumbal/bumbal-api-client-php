@@ -103,6 +103,16 @@ class RouteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for detachFromRecurrence
+     *
+     * detach routes from specified recurrence.
+     *
+     */
+    public function testDetachFromRecurrence()
+    {
+    }
+
+    /**
      * Test case for getExecutableActivities
      *
      * Returns all activities in this route which hav enot been executed yet..

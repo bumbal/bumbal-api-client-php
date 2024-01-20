@@ -127,6 +127,13 @@ class RouteEtaModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "max_nr_of_stops"
+     */
+    public function testPropertyMaxNrOfStops()
+    {
+    }
+
+    /**
      * Test attribute "pause_id"
      */
     public function testPropertyPauseId()
@@ -389,6 +396,13 @@ class RouteEtaModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "executed_date_time_to"
      */
     public function testPropertyExecutedDateTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "executed_driving_distance"
+     */
+    public function testPropertyExecutedDrivingDistance()
     {
     }
 

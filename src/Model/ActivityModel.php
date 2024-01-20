@@ -78,6 +78,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_time' => 'int',
         'planned_driving_duration' => 'int',
         'planned_driving_distance' => 'int',
+        'executed_driving_distance' => 'int',
         'reference' => 'string',
         'description' => 'string',
         'earliest_delivery_date_time' => '\DateTime',
@@ -201,6 +202,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_time' => 'int64',
         'planned_driving_duration' => 'int64',
         'planned_driving_distance' => 'int64',
+        'executed_driving_distance' => 'int64',
         'reference' => null,
         'description' => null,
         'earliest_delivery_date_time' => 'date',
@@ -334,6 +336,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_time' => 'planned_driving_time',
         'planned_driving_duration' => 'planned_driving_duration',
         'planned_driving_distance' => 'planned_driving_distance',
+        'executed_driving_distance' => 'executed_driving_distance',
         'reference' => 'reference',
         'description' => 'description',
         'earliest_delivery_date_time' => 'earliest_delivery_date_time',
@@ -458,6 +461,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_time' => 'setPlannedDrivingTime',
         'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_driving_distance' => 'setPlannedDrivingDistance',
+        'executed_driving_distance' => 'setExecutedDrivingDistance',
         'reference' => 'setReference',
         'description' => 'setDescription',
         'earliest_delivery_date_time' => 'setEarliestDeliveryDateTime',
@@ -582,6 +586,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_time' => 'getPlannedDrivingTime',
         'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_driving_distance' => 'getPlannedDrivingDistance',
+        'executed_driving_distance' => 'getExecutedDrivingDistance',
         'reference' => 'getReference',
         'description' => 'getDescription',
         'earliest_delivery_date_time' => 'getEarliestDeliveryDateTime',
@@ -899,6 +904,7 @@ class ActivityModel implements ArrayAccess
         $this->container['planned_driving_time'] = isset($data['planned_driving_time']) ? $data['planned_driving_time'] : null;
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
+        $this->container['executed_driving_distance'] = isset($data['executed_driving_distance']) ? $data['executed_driving_distance'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['earliest_delivery_date_time'] = isset($data['earliest_delivery_date_time']) ? $data['earliest_delivery_date_time'] : null;
@@ -1575,12 +1581,33 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets planned_driving_distance
-     * @param int $planned_driving_distance Driving distance from the activity before this one
+     * @param int $planned_driving_distance Planned driving distance from the activity before this one
      * @return $this
      */
     public function setPlannedDrivingDistance($planned_driving_distance)
     {
         $this->container['planned_driving_distance'] = $planned_driving_distance;
+
+        return $this;
+    }
+
+    /**
+     * Gets executed_driving_distance
+     * @return int
+     */
+    public function getExecutedDrivingDistance()
+    {
+        return $this->container['executed_driving_distance'];
+    }
+
+    /**
+     * Sets executed_driving_distance
+     * @param int $executed_driving_distance Executed driving distance from the activity before this one
+     * @return $this
+     */
+    public function setExecutedDrivingDistance($executed_driving_distance)
+    {
+        $this->container['executed_driving_distance'] = $executed_driving_distance;
 
         return $this;
     }

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Identifier | [optional] 
 **category_id** | **int** | the id of the category where the irregularity is defined for | [optional] 
-**category_name** | **int** | the name of the category where the irregularity is defined for | [optional] 
+**category_name** | **string** | the name of the category where the irregularity is defined for | [optional] 
 **reason_id** | **int** | the id of the reason attributed to this irregularity | [optional] 
 **reason** | **string** | A description of the reason for the irregularity | [optional] 
 **object_type** | **int** | Object type ID | [optional] 

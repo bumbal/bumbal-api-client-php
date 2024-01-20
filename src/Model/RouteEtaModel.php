@@ -61,6 +61,7 @@ class RouteEtaModel implements ArrayAccess
         'status_name' => 'string',
         'status_id' => 'int',
         'nr_of_stops' => 'int',
+        'max_nr_of_stops' => 'int',
         'pause_id' => 'int',
         'pause' => '\BumbalClient\Model\PauseModel',
         'driver_id' => 'int',
@@ -99,6 +100,7 @@ class RouteEtaModel implements ArrayAccess
         'planned_date_time_to' => '\DateTime',
         'executed_date_time_from' => '\DateTime',
         'executed_date_time_to' => '\DateTime',
+        'executed_driving_distance' => 'int',
         'planned_driving_distance' => 'int',
         'planned_driving_duration' => 'int',
         'planned_waiting_duration' => 'int',
@@ -143,6 +145,7 @@ class RouteEtaModel implements ArrayAccess
         'status_name' => null,
         'status_id' => 'int64',
         'nr_of_stops' => null,
+        'max_nr_of_stops' => null,
         'pause_id' => null,
         'pause' => null,
         'driver_id' => null,
@@ -181,6 +184,7 @@ class RouteEtaModel implements ArrayAccess
         'planned_date_time_to' => 'date-time',
         'executed_date_time_from' => 'date-time',
         'executed_date_time_to' => 'date-time',
+        'executed_driving_distance' => null,
         'planned_driving_distance' => null,
         'planned_driving_duration' => null,
         'planned_waiting_duration' => null,
@@ -235,6 +239,7 @@ class RouteEtaModel implements ArrayAccess
         'status_name' => 'status_name',
         'status_id' => 'status_id',
         'nr_of_stops' => 'nr_of_stops',
+        'max_nr_of_stops' => 'max_nr_of_stops',
         'pause_id' => 'pause_id',
         'pause' => 'pause',
         'driver_id' => 'driver_id',
@@ -273,6 +278,7 @@ class RouteEtaModel implements ArrayAccess
         'planned_date_time_to' => 'planned_date_time_to',
         'executed_date_time_from' => 'executed_date_time_from',
         'executed_date_time_to' => 'executed_date_time_to',
+        'executed_driving_distance' => 'executed_driving_distance',
         'planned_driving_distance' => 'planned_driving_distance',
         'planned_driving_duration' => 'planned_driving_duration',
         'planned_waiting_duration' => 'planned_waiting_duration',
@@ -318,6 +324,7 @@ class RouteEtaModel implements ArrayAccess
         'status_name' => 'setStatusName',
         'status_id' => 'setStatusId',
         'nr_of_stops' => 'setNrOfStops',
+        'max_nr_of_stops' => 'setMaxNrOfStops',
         'pause_id' => 'setPauseId',
         'pause' => 'setPause',
         'driver_id' => 'setDriverId',
@@ -356,6 +363,7 @@ class RouteEtaModel implements ArrayAccess
         'planned_date_time_to' => 'setPlannedDateTimeTo',
         'executed_date_time_from' => 'setExecutedDateTimeFrom',
         'executed_date_time_to' => 'setExecutedDateTimeTo',
+        'executed_driving_distance' => 'setExecutedDrivingDistance',
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_waiting_duration' => 'setPlannedWaitingDuration',
@@ -401,6 +409,7 @@ class RouteEtaModel implements ArrayAccess
         'status_name' => 'getStatusName',
         'status_id' => 'getStatusId',
         'nr_of_stops' => 'getNrOfStops',
+        'max_nr_of_stops' => 'getMaxNrOfStops',
         'pause_id' => 'getPauseId',
         'pause' => 'getPause',
         'driver_id' => 'getDriverId',
@@ -439,6 +448,7 @@ class RouteEtaModel implements ArrayAccess
         'planned_date_time_to' => 'getPlannedDateTimeTo',
         'executed_date_time_from' => 'getExecutedDateTimeFrom',
         'executed_date_time_to' => 'getExecutedDateTimeTo',
+        'executed_driving_distance' => 'getExecutedDrivingDistance',
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_waiting_duration' => 'getPlannedWaitingDuration',
@@ -545,6 +555,7 @@ class RouteEtaModel implements ArrayAccess
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
+        $this->container['max_nr_of_stops'] = isset($data['max_nr_of_stops']) ? $data['max_nr_of_stops'] : null;
         $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
         $this->container['pause'] = isset($data['pause']) ? $data['pause'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
@@ -583,6 +594,7 @@ class RouteEtaModel implements ArrayAccess
         $this->container['planned_date_time_to'] = isset($data['planned_date_time_to']) ? $data['planned_date_time_to'] : null;
         $this->container['executed_date_time_from'] = isset($data['executed_date_time_from']) ? $data['executed_date_time_from'] : null;
         $this->container['executed_date_time_to'] = isset($data['executed_date_time_to']) ? $data['executed_date_time_to'] : null;
+        $this->container['executed_driving_distance'] = isset($data['executed_driving_distance']) ? $data['executed_driving_distance'] : null;
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_waiting_duration'] = isset($data['planned_waiting_duration']) ? $data['planned_waiting_duration'] : null;
@@ -825,6 +837,27 @@ class RouteEtaModel implements ArrayAccess
     public function setNrOfStops($nr_of_stops)
     {
         $this->container['nr_of_stops'] = $nr_of_stops;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_nr_of_stops
+     * @return int
+     */
+    public function getMaxNrOfStops()
+    {
+        return $this->container['max_nr_of_stops'];
+    }
+
+    /**
+     * Sets max_nr_of_stops
+     * @param int $max_nr_of_stops number of maximum stops on this route (excluding start_route and end_route activities)
+     * @return $this
+     */
+    public function setMaxNrOfStops($max_nr_of_stops)
+    {
+        $this->container['max_nr_of_stops'] = $max_nr_of_stops;
 
         return $this;
     }
@@ -1623,6 +1656,27 @@ class RouteEtaModel implements ArrayAccess
     public function setExecutedDateTimeTo($executed_date_time_to)
     {
         $this->container['executed_date_time_to'] = $executed_date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets executed_driving_distance
+     * @return int
+     */
+    public function getExecutedDrivingDistance()
+    {
+        return $this->container['executed_driving_distance'];
+    }
+
+    /**
+     * Sets executed_driving_distance
+     * @param int $executed_driving_distance Executed driving distance of this route in meters
+     * @return $this
+     */
+    public function setExecutedDrivingDistance($executed_driving_distance)
+    {
+        $this->container['executed_driving_distance'] = $executed_driving_distance;
 
         return $this;
     }

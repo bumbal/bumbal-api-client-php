@@ -56,7 +56,7 @@ class IrregularityModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'category_id' => 'int',
-        'category_name' => 'int',
+        'category_name' => 'string',
         'reason_id' => 'int',
         'reason' => 'string',
         'object_type' => 'int',
@@ -288,7 +288,7 @@ class IrregularityModel implements ArrayAccess
 
     /**
      * Gets category_name
-     * @return int
+     * @return string
      */
     public function getCategoryName()
     {
@@ -297,7 +297,7 @@ class IrregularityModel implements ArrayAccess
 
     /**
      * Sets category_name
-     * @param int $category_name the name of the category where the irregularity is defined for
+     * @param string $category_name the name of the category where the irregularity is defined for
      * @return $this
      */
     public function setCategoryName($category_name)

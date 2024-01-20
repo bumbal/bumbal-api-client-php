@@ -86,6 +86,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ActivityApi* | [**bulkUpdateActivity**](docs/Api/ActivityApi.md#bulkupdateactivity) | **POST** /activity/bulk-update | Update multiple activities
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
+*ActivityApi* | [**detachFromRecurrence**](docs/Api/ActivityApi.md#detachfromrecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
 *ActivityApi* | [**lockActivity**](docs/Api/ActivityApi.md#lockactivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 *ActivityApi* | [**lockActivityOnRoute**](docs/Api/ActivityApi.md#lockactivityonroute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
 *ActivityApi* | [**lockActivityOnRouteAndTime**](docs/Api/ActivityApi.md#lockactivityonrouteandtime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
@@ -335,6 +336,7 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**blockRoutes**](docs/Api/RouteApi.md#blockroutes) | **POST** /route/block-routes | Block routes which satisfy set filters
 *RouteApi* | [**createRoute**](docs/Api/RouteApi.md#createroute) | **POST** /route | Add a new Route
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
+*RouteApi* | [**detachFromRecurrence**](docs/Api/RouteApi.md#detachfromrecurrence) | **POST** /route/detach-from-recurrence | detach routes from specified recurrence
 *RouteApi* | [**getExecutableActivities**](docs/Api/RouteApi.md#getexecutableactivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
 *RouteApi* | [**retrieveListRoute**](docs/Api/RouteApi.md#retrievelistroute) | **PUT** /route | Retrieve List of Routes
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
@@ -432,6 +434,7 @@ Class | Method | HTTP request | Description
 
  - [ActivityBulkUpdateArguments](docs/Model/ActivityBulkUpdateArguments.md)
  - [ActivityBulkUpdateModel](docs/Model/ActivityBulkUpdateModel.md)
+ - [ActivityDetachFromRecurrenceArguments](docs/Model/ActivityDetachFromRecurrenceArguments.md)
  - [ActivityEtaModel](docs/Model/ActivityEtaModel.md)
  - [ActivityFiltersModel](docs/Model/ActivityFiltersModel.md)
  - [ActivityForToRouteModel](docs/Model/ActivityForToRouteModel.md)
@@ -823,6 +826,7 @@ Class | Method | HTTP request | Description
  - [RecurrenceProcessRunsResponse](docs/Model/RecurrenceProcessRunsResponse.md)
  - [RecurrenceRetrieveListArguments](docs/Model/RecurrenceRetrieveListArguments.md)
  - [RemoveActivitiesFromRouteArguments](docs/Model/RemoveActivitiesFromRouteArguments.md)
+ - [RouteDetachFromRecurrenceArguments](docs/Model/RouteDetachFromRecurrenceArguments.md)
  - [RouteEtaModel](docs/Model/RouteEtaModel.md)
  - [RouteFiltersModel](docs/Model/RouteFiltersModel.md)
  - [RouteListResponse](docs/Model/RouteListResponse.md)

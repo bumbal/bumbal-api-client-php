@@ -246,6 +246,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "executed_driving_distance"
+     */
+    public function testPropertyExecutedDrivingDistance()
+    {
+    }
+
+    /**
      * Test attribute "reference"
      */
     public function testPropertyReference()
