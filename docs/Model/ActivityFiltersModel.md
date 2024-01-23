@@ -49,6 +49,7 @@ Name | Type | Description | Notes
 **user_id** | **int** | ID of the user who will execute this activity | [optional] 
 **party_id** | **int** | Party ID | [optional] 
 **recurrence_id** | **int** | Recurrence ID | [optional] 
+**recurrence_uuid** | **string** | Recurrence UUID | [optional] 
 **depot_address_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 

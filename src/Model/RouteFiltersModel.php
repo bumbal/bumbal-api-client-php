@@ -73,6 +73,7 @@ class RouteFiltersModel implements ArrayAccess
         'status_id' => 'int[]',
         'driver_id' => 'int[]',
         'recurrence_id' => 'int',
+        'recurrence_uuid' => 'string',
         'tag_names' => 'string[]',
         'zone_names' => 'string[]',
         'optimized' => 'bool[]',
@@ -105,6 +106,7 @@ class RouteFiltersModel implements ArrayAccess
         'status_id' => null,
         'driver_id' => null,
         'recurrence_id' => null,
+        'recurrence_uuid' => null,
         'tag_names' => null,
         'zone_names' => null,
         'optimized' => null,
@@ -147,6 +149,7 @@ class RouteFiltersModel implements ArrayAccess
         'status_id' => 'status_id',
         'driver_id' => 'driver_id',
         'recurrence_id' => 'recurrence_id',
+        'recurrence_uuid' => 'recurrence_uuid',
         'tag_names' => 'tag_names',
         'zone_names' => 'zone_names',
         'optimized' => 'optimized',
@@ -180,6 +183,7 @@ class RouteFiltersModel implements ArrayAccess
         'status_id' => 'setStatusId',
         'driver_id' => 'setDriverId',
         'recurrence_id' => 'setRecurrenceId',
+        'recurrence_uuid' => 'setRecurrenceUuid',
         'tag_names' => 'setTagNames',
         'zone_names' => 'setZoneNames',
         'optimized' => 'setOptimized',
@@ -213,6 +217,7 @@ class RouteFiltersModel implements ArrayAccess
         'status_id' => 'getStatusId',
         'driver_id' => 'getDriverId',
         'recurrence_id' => 'getRecurrenceId',
+        'recurrence_uuid' => 'getRecurrenceUuid',
         'tag_names' => 'getTagNames',
         'zone_names' => 'getZoneNames',
         'optimized' => 'getOptimized',
@@ -271,6 +276,7 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
+        $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
@@ -699,6 +705,27 @@ class RouteFiltersModel implements ArrayAccess
     public function setRecurrenceId($recurrence_id)
     {
         $this->container['recurrence_id'] = $recurrence_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_uuid
+     * @return string
+     */
+    public function getRecurrenceUuid()
+    {
+        return $this->container['recurrence_uuid'];
+    }
+
+    /**
+     * Sets recurrence_uuid
+     * @param string $recurrence_uuid Recurrence UUID
+     * @return $this
+     */
+    public function setRecurrenceUuid($recurrence_uuid)
+    {
+        $this->container['recurrence_uuid'] = $recurrence_uuid;
 
         return $this;
     }

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID of Route | [optional] 
+**recurrence_uuid** | **string** | UUID of Route | [optional] 
 **nr** | **string** | Non-Unique number of Route | [optional] 
 **name** | **string** | Description | [optional] 
 **status_name** | **string** | Route Status | [optional] 

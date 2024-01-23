@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
+**recurrence_uuid** | **string** | UUID of Activity | [optional] 
 **uuid** | **string** | unique per activity | [optional] 
 **bundle_activity_id** | **int** | Unique Identifier for partner shipment activity | [optional] 
 **shipment_activity_id** | **int** | Unique Identifier for partner shipment activity | [optional] 

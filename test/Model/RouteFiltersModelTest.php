@@ -211,6 +211,13 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "recurrence_uuid"
+     */
+    public function testPropertyRecurrenceUuid()
+    {
+    }
+
+    /**
      * Test attribute "tag_names"
      */
     public function testPropertyTagNames()

@@ -100,6 +100,7 @@ class ActivityFiltersModel implements ArrayAccess
         'user_id' => 'int',
         'party_id' => 'int',
         'recurrence_id' => 'int',
+        'recurrence_uuid' => 'string',
         'depot_address_links' => '\BumbalClient\Model\LinkModel[]',
         'tag_names' => 'string[]',
         'zone_names' => 'string[]',
@@ -164,6 +165,7 @@ class ActivityFiltersModel implements ArrayAccess
         'user_id' => null,
         'party_id' => null,
         'recurrence_id' => null,
+        'recurrence_uuid' => null,
         'depot_address_links' => null,
         'tag_names' => null,
         'zone_names' => null,
@@ -238,6 +240,7 @@ class ActivityFiltersModel implements ArrayAccess
         'user_id' => 'user_id',
         'party_id' => 'party_id',
         'recurrence_id' => 'recurrence_id',
+        'recurrence_uuid' => 'recurrence_uuid',
         'depot_address_links' => 'depot_address_links',
         'tag_names' => 'tag_names',
         'zone_names' => 'zone_names',
@@ -303,6 +306,7 @@ class ActivityFiltersModel implements ArrayAccess
         'user_id' => 'setUserId',
         'party_id' => 'setPartyId',
         'recurrence_id' => 'setRecurrenceId',
+        'recurrence_uuid' => 'setRecurrenceUuid',
         'depot_address_links' => 'setDepotAddressLinks',
         'tag_names' => 'setTagNames',
         'zone_names' => 'setZoneNames',
@@ -368,6 +372,7 @@ class ActivityFiltersModel implements ArrayAccess
         'user_id' => 'getUserId',
         'party_id' => 'getPartyId',
         'recurrence_id' => 'getRecurrenceId',
+        'recurrence_uuid' => 'getRecurrenceUuid',
         'depot_address_links' => 'getDepotAddressLinks',
         'tag_names' => 'getTagNames',
         'zone_names' => 'getZoneNames',
@@ -458,6 +463,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
+        $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
         $this->container['depot_address_links'] = isset($data['depot_address_links']) ? $data['depot_address_links'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
@@ -1458,6 +1464,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setRecurrenceId($recurrence_id)
     {
         $this->container['recurrence_id'] = $recurrence_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_uuid
+     * @return string
+     */
+    public function getRecurrenceUuid()
+    {
+        return $this->container['recurrence_uuid'];
+    }
+
+    /**
+     * Sets recurrence_uuid
+     * @param string $recurrence_uuid Recurrence UUID
+     * @return $this
+     */
+    public function setRecurrenceUuid($recurrence_uuid)
+    {
+        $this->container['recurrence_uuid'] = $recurrence_uuid;
 
         return $this;
     }

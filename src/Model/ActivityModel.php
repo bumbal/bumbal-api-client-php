@@ -55,6 +55,7 @@ class ActivityModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'recurrence_uuid' => 'string',
         'uuid' => 'string',
         'bundle_activity_id' => 'int',
         'shipment_activity_id' => 'int',
@@ -179,6 +180,7 @@ class ActivityModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
+        'recurrence_uuid' => 'string',
         'uuid' => null,
         'bundle_activity_id' => 'int64',
         'shipment_activity_id' => 'int64',
@@ -313,6 +315,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'recurrence_uuid' => 'recurrence_uuid',
         'uuid' => 'uuid',
         'bundle_activity_id' => 'bundle_activity_id',
         'shipment_activity_id' => 'shipment_activity_id',
@@ -438,6 +441,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'recurrence_uuid' => 'setRecurrenceUuid',
         'uuid' => 'setUuid',
         'bundle_activity_id' => 'setBundleActivityId',
         'shipment_activity_id' => 'setShipmentActivityId',
@@ -563,6 +567,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'recurrence_uuid' => 'getRecurrenceUuid',
         'uuid' => 'getUuid',
         'bundle_activity_id' => 'getBundleActivityId',
         'shipment_activity_id' => 'getShipmentActivityId',
@@ -881,6 +886,7 @@ class ActivityModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['bundle_activity_id'] = isset($data['bundle_activity_id']) ? $data['bundle_activity_id'] : null;
         $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
@@ -1077,6 +1083,27 @@ class ActivityModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_uuid
+     * @return string
+     */
+    public function getRecurrenceUuid()
+    {
+        return $this->container['recurrence_uuid'];
+    }
+
+    /**
+     * Sets recurrence_uuid
+     * @param string $recurrence_uuid UUID of Activity
+     * @return $this
+     */
+    public function setRecurrenceUuid($recurrence_uuid)
+    {
+        $this->container['recurrence_uuid'] = $recurrence_uuid;
 
         return $this;
     }

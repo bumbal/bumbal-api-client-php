@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **status_id** | **int[]** |  | [optional] 
 **driver_id** | **int[]** |  | [optional] 
 **recurrence_id** | **int** | Recurrence ID | [optional] 
+**recurrence_uuid** | **string** | Recurrence UUID | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
 **optimized** | **bool[]** | Optimized status of Route. | [optional] 

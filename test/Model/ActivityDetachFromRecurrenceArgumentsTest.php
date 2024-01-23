@@ -78,9 +78,9 @@ class ActivityDetachFromRecurrenceArgumentsTest extends \PHPUnit_Framework_TestC
     }
 
     /**
-     * Test attribute "recurrence_id"
+     * Test attribute "recurrence_uuid"
      */
-    public function testPropertyRecurrenceId()
+    public function testPropertyRecurrenceUuid()
     {
     }
 }

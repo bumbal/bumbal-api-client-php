@@ -56,6 +56,7 @@ class RouteEtaModel implements ArrayAccess
     protected static $swaggerTypes = [
         'activities_eta' => '\BumbalClient\Model\ActivityEtaModel[]',
         'id' => 'int',
+        'recurrence_uuid' => 'string',
         'nr' => 'string',
         'name' => 'string',
         'status_name' => 'string',
@@ -140,6 +141,7 @@ class RouteEtaModel implements ArrayAccess
     protected static $swaggerFormats = [
         'activities_eta' => null,
         'id' => 'int64',
+        'recurrence_uuid' => 'string',
         'nr' => null,
         'name' => null,
         'status_name' => null,
@@ -234,6 +236,7 @@ class RouteEtaModel implements ArrayAccess
     protected static $attributeMap = [
         'activities_eta' => 'activities_eta',
         'id' => 'id',
+        'recurrence_uuid' => 'recurrence_uuid',
         'nr' => 'nr',
         'name' => 'name',
         'status_name' => 'status_name',
@@ -319,6 +322,7 @@ class RouteEtaModel implements ArrayAccess
     protected static $setters = [
         'activities_eta' => 'setActivitiesEta',
         'id' => 'setId',
+        'recurrence_uuid' => 'setRecurrenceUuid',
         'nr' => 'setNr',
         'name' => 'setName',
         'status_name' => 'setStatusName',
@@ -404,6 +408,7 @@ class RouteEtaModel implements ArrayAccess
     protected static $getters = [
         'activities_eta' => 'getActivitiesEta',
         'id' => 'getId',
+        'recurrence_uuid' => 'getRecurrenceUuid',
         'nr' => 'getNr',
         'name' => 'getName',
         'status_name' => 'getStatusName',
@@ -550,6 +555,7 @@ class RouteEtaModel implements ArrayAccess
     {
         $this->container['activities_eta'] = isset($data['activities_eta']) ? $data['activities_eta'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
@@ -714,6 +720,27 @@ class RouteEtaModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_uuid
+     * @return string
+     */
+    public function getRecurrenceUuid()
+    {
+        return $this->container['recurrence_uuid'];
+    }
+
+    /**
+     * Sets recurrence_uuid
+     * @param string $recurrence_uuid UUID of Route
+     * @return $this
+     */
+    public function setRecurrenceUuid($recurrence_uuid)
+    {
+        $this->container['recurrence_uuid'] = $recurrence_uuid;
 
         return $this;
     }

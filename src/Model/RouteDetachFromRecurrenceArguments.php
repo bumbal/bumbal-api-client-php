@@ -54,7 +54,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recurrence_id' => 'int'
+        'recurrence_uuid' => 'int'
     ];
 
     /**
@@ -62,7 +62,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'recurrence_id' => null
+        'recurrence_uuid' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +80,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'recurrence_id' => 'recurrence_id'
+        'recurrence_uuid' => 'recurrence_uuid'
     ];
 
 
@@ -89,7 +89,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'recurrence_id' => 'setRecurrenceId'
+        'recurrence_uuid' => 'setRecurrenceUuid'
     ];
 
 
@@ -98,7 +98,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'recurrence_id' => 'getRecurrenceId'
+        'recurrence_uuid' => 'getRecurrenceUuid'
     ];
 
     public static function attributeMap()
@@ -132,7 +132,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
+        $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
     }
 
     /**
@@ -144,8 +144,8 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['recurrence_id'] === null) {
-            $invalid_properties[] = "'recurrence_id' can't be null";
+        if ($this->container['recurrence_uuid'] === null) {
+            $invalid_properties[] = "'recurrence_uuid' can't be null";
         }
         return $invalid_properties;
     }
@@ -159,7 +159,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['recurrence_id'] === null) {
+        if ($this->container['recurrence_uuid'] === null) {
             return false;
         }
         return true;
@@ -167,22 +167,22 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
 
 
     /**
-     * Gets recurrence_id
+     * Gets recurrence_uuid
      * @return int
      */
-    public function getRecurrenceId()
+    public function getRecurrenceUuid()
     {
-        return $this->container['recurrence_id'];
+        return $this->container['recurrence_uuid'];
     }
 
     /**
-     * Sets recurrence_id
-     * @param int $recurrence_id Recurrence ID
+     * Sets recurrence_uuid
+     * @param int $recurrence_uuid Recurrence UUID
      * @return $this
      */
-    public function setRecurrenceId($recurrence_id)
+    public function setRecurrenceUuid($recurrence_uuid)
     {
-        $this->container['recurrence_id'] = $recurrence_id;
+        $this->container['recurrence_uuid'] = $recurrence_uuid;
 
         return $this;
     }

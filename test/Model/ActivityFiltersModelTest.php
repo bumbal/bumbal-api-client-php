@@ -400,6 +400,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "recurrence_uuid"
+     */
+    public function testPropertyRecurrenceUuid()
+    {
+    }
+
+    /**
      * Test attribute "depot_address_links"
      */
     public function testPropertyDepotAddressLinks()

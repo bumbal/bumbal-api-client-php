@@ -85,6 +85,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "recurrence_uuid"
+     */
+    public function testPropertyRecurrenceUuid()
+    {
+    }
+
+    /**
      * Test attribute "nr"
      */
     public function testPropertyNr()
