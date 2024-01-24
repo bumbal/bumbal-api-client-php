@@ -54,7 +54,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recurrence_uuid' => 'int'
+        'recurrence_uuid' => 'string'
     ];
 
     /**
@@ -168,7 +168,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
 
     /**
      * Gets recurrence_uuid
-     * @return int
+     * @return string
      */
     public function getRecurrenceUuid()
     {
@@ -177,7 +177,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
 
     /**
      * Sets recurrence_uuid
-     * @param int $recurrence_uuid Recurrence UUID
+     * @param string $recurrence_uuid Recurrence UUID
      * @return $this
      */
     public function setRecurrenceUuid($recurrence_uuid)
