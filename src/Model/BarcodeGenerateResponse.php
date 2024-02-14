@@ -1,6 +1,6 @@
 <?php
 /**
- * IrregularityCategoryOptionsModel
+ * BarcodeGenerateResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * IrregularityCategoryOptionsModel Class Doc Comment
+ * BarcodeGenerateResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class IrregularityCategoryOptionsModel implements ArrayAccess
+class BarcodeGenerateResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,14 @@ class IrregularityCategoryOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'IrregularityCategoryOptionsModel';
+    protected static $swaggerModelName = 'BarcodeGenerateResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_reasons' => 'bool'
+        'barcode' => 'string'
     ];
 
     /**
@@ -62,7 +62,7 @@ class IrregularityCategoryOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_reasons' => null
+        'barcode' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +80,7 @@ class IrregularityCategoryOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_reasons' => 'include_reasons'
+        'barcode' => 'barcode'
     ];
 
 
@@ -89,7 +89,7 @@ class IrregularityCategoryOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_reasons' => 'setIncludeReasons'
+        'barcode' => 'setBarcode'
     ];
 
 
@@ -98,7 +98,7 @@ class IrregularityCategoryOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_reasons' => 'getIncludeReasons'
+        'barcode' => 'getBarcode'
     ];
 
     public static function attributeMap()
@@ -132,7 +132,7 @@ class IrregularityCategoryOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_reasons'] = isset($data['include_reasons']) ? $data['include_reasons'] : null;
+        $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
     }
 
     /**
@@ -161,22 +161,22 @@ class IrregularityCategoryOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_reasons
-     * @return bool
+     * Gets barcode
+     * @return string
      */
-    public function getIncludeReasons()
+    public function getBarcode()
     {
-        return $this->container['include_reasons'];
+        return $this->container['barcode'];
     }
 
     /**
-     * Sets include_reasons
-     * @param bool $include_reasons
+     * Sets barcode
+     * @param string $barcode The code of the barcode
      * @return $this
      */
-    public function setIncludeReasons($include_reasons)
+    public function setBarcode($barcode)
     {
-        $this->container['include_reasons'] = $include_reasons;
+        $this->container['barcode'] = $barcode;
 
         return $this;
     }

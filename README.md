@@ -86,7 +86,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ActivityApi* | [**bulkUpdateActivity**](docs/Api/ActivityApi.md#bulkupdateactivity) | **POST** /activity/bulk-update | Update multiple activities
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
-*ActivityApi* | [**detachFromRecurrence**](docs/Api/ActivityApi.md#detachfromrecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
+*ActivityApi* | [**detachActivitiesFromRecurrence**](docs/Api/ActivityApi.md#detachactivitiesfromrecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
 *ActivityApi* | [**lockActivity**](docs/Api/ActivityApi.md#lockactivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 *ActivityApi* | [**lockActivityOnRoute**](docs/Api/ActivityApi.md#lockactivityonroute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
 *ActivityApi* | [**lockActivityOnRouteAndTime**](docs/Api/ActivityApi.md#lockactivityonrouteandtime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
@@ -117,6 +117,8 @@ Class | Method | HTTP request | Description
 *AuthenticateApi* | [**authenticateCheckToken**](docs/Api/AuthenticateApi.md#authenticatechecktoken) | **GET** /authenticate/check-token | Check a token for validity
 *AuthenticateApi* | [**authenticateSignIn**](docs/Api/AuthenticateApi.md#authenticatesignin) | **POST** /authenticate/sign-in | Sign In with your user credentials
 *AuthenticateApi* | [**authenticateSignOut**](docs/Api/AuthenticateApi.md#authenticatesignout) | **GET** /authenticate/sign-out | Sign out
+*BarcodeApi* | [**generateBarcode**](docs/Api/BarcodeApi.md#generatebarcode) | **POST** /barcode/generate | Create an unique barcode
+*BarcodeApi* | [**retrieveBarcodeLabel**](docs/Api/BarcodeApi.md#retrievebarcodelabel) | **GET** /barcode/label/{packageLineId} | Retrieve a package-line barcode label
 *BlockeddateApi* | [**deleteBlockedDate**](docs/Api/BlockeddateApi.md#deleteblockeddate) | **DELETE** /blocked-date/{blockedDateId} | Delete a blocked date
 *BlockeddateApi* | [**retrieveListBlockedDate**](docs/Api/BlockeddateApi.md#retrievelistblockeddate) | **PUT** /blocked-date | Retrieve List of blocked dates
 *BlockeddateApi* | [**setBlockedDate**](docs/Api/BlockeddateApi.md#setblockeddate) | **POST** /blocked-date/set | Set (create or update) a blocked date
@@ -336,7 +338,7 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**blockRoutes**](docs/Api/RouteApi.md#blockroutes) | **POST** /route/block-routes | Block routes which satisfy set filters
 *RouteApi* | [**createRoute**](docs/Api/RouteApi.md#createroute) | **POST** /route | Add a new Route
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
-*RouteApi* | [**detachFromRecurrence**](docs/Api/RouteApi.md#detachfromrecurrence) | **POST** /route/detach-from-recurrence | detach routes from specified recurrence
+*RouteApi* | [**detachRoutesFromRecurrence**](docs/Api/RouteApi.md#detachroutesfromrecurrence) | **POST** /route/detach-from-recurrence | detach routes from specified recurrence
 *RouteApi* | [**getExecutableActivities**](docs/Api/RouteApi.md#getexecutableactivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
 *RouteApi* | [**retrieveListRoute**](docs/Api/RouteApi.md#retrievelistroute) | **PUT** /route | Retrieve List of Routes
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
@@ -552,6 +554,8 @@ Class | Method | HTTP request | Description
  - [AvailabilityFollowUpTimeSlotModel](docs/Model/AvailabilityFollowUpTimeSlotModel.md)
  - [AvailabilityTimeSlotImpactModel](docs/Model/AvailabilityTimeSlotImpactModel.md)
  - [AvailabilityTimeSlotModel](docs/Model/AvailabilityTimeSlotModel.md)
+ - [BarcodeGenerateResponse](docs/Model/BarcodeGenerateResponse.md)
+ - [BarcodeLabelResponse](docs/Model/BarcodeLabelResponse.md)
  - [BlockedDateFiltersModel](docs/Model/BlockedDateFiltersModel.md)
  - [BlockedDateListResponse](docs/Model/BlockedDateListResponse.md)
  - [BlockedDateModel](docs/Model/BlockedDateModel.md)

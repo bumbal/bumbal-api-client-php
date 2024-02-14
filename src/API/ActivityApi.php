@@ -265,7 +265,7 @@ class ActivityApi
     }
 
     /**
-     * Operation detachFromRecurrence
+     * Operation detachActivitiesFromRecurrence
      *
      * detach activities from specified recurrence
      *
@@ -273,14 +273,14 @@ class ActivityApi
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function detachFromRecurrence($body = null)
+    public function detachActivitiesFromRecurrence($body = null)
     {
-        list($response) = $this->detachFromRecurrenceWithHttpInfo($body);
+        list($response) = $this->detachActivitiesFromRecurrenceWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation detachFromRecurrenceWithHttpInfo
+     * Operation detachActivitiesFromRecurrenceWithHttpInfo
      *
      * detach activities from specified recurrence
      *
@@ -288,7 +288,7 @@ class ActivityApi
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function detachFromRecurrenceWithHttpInfo($body = null)
+    public function detachActivitiesFromRecurrenceWithHttpInfo($body = null)
     {
         // parse inputs
         $resourcePath = "/activity/detach-from-recurrence";

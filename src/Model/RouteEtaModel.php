@@ -118,7 +118,9 @@ class RouteEtaModel implements ArrayAccess
         'active' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
-        'planned_capacities' => 'map[string,\BumbalClient\Model\CapacityModel]',
+        'planned_capacities' => 'map[string,\BumbalClient\Model\AppliedCapacityModel]',
+        'planned_capacities_load' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'planned_capacities_unload' => '\BumbalClient\Model\AppliedCapacityModel[]',
         'applied_capacities' => '\BumbalClient\Model\AppliedCapacitiesModel',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_ids' => 'int[]',
@@ -204,6 +206,8 @@ class RouteEtaModel implements ArrayAccess
         'start_address' => null,
         'end_address' => null,
         'planned_capacities' => null,
+        'planned_capacities_load' => null,
+        'planned_capacities_unload' => null,
         'applied_capacities' => null,
         'capacities' => null,
         'activity_ids' => null,
@@ -299,6 +303,8 @@ class RouteEtaModel implements ArrayAccess
         'start_address' => 'start_address',
         'end_address' => 'end_address',
         'planned_capacities' => 'planned_capacities',
+        'planned_capacities_load' => 'planned_capacities_load',
+        'planned_capacities_unload' => 'planned_capacities_unload',
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'activity_ids' => 'activity_ids',
@@ -385,6 +391,8 @@ class RouteEtaModel implements ArrayAccess
         'start_address' => 'setStartAddress',
         'end_address' => 'setEndAddress',
         'planned_capacities' => 'setPlannedCapacities',
+        'planned_capacities_load' => 'setPlannedCapacitiesLoad',
+        'planned_capacities_unload' => 'setPlannedCapacitiesUnload',
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'activity_ids' => 'setActivityIds',
@@ -471,6 +479,8 @@ class RouteEtaModel implements ArrayAccess
         'start_address' => 'getStartAddress',
         'end_address' => 'getEndAddress',
         'planned_capacities' => 'getPlannedCapacities',
+        'planned_capacities_load' => 'getPlannedCapacitiesLoad',
+        'planned_capacities_unload' => 'getPlannedCapacitiesUnload',
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'activity_ids' => 'getActivityIds',
@@ -618,6 +628,8 @@ class RouteEtaModel implements ArrayAccess
         $this->container['start_address'] = isset($data['start_address']) ? $data['start_address'] : null;
         $this->container['end_address'] = isset($data['end_address']) ? $data['end_address'] : null;
         $this->container['planned_capacities'] = isset($data['planned_capacities']) ? $data['planned_capacities'] : null;
+        $this->container['planned_capacities_load'] = isset($data['planned_capacities_load']) ? $data['planned_capacities_load'] : null;
+        $this->container['planned_capacities_unload'] = isset($data['planned_capacities_unload']) ? $data['planned_capacities_unload'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
@@ -2046,7 +2058,7 @@ class RouteEtaModel implements ArrayAccess
 
     /**
      * Gets planned_capacities
-     * @return map[string,\BumbalClient\Model\CapacityModel]
+     * @return map[string,\BumbalClient\Model\AppliedCapacityModel]
      */
     public function getPlannedCapacities()
     {
@@ -2055,12 +2067,54 @@ class RouteEtaModel implements ArrayAccess
 
     /**
      * Sets planned_capacities
-     * @param map[string,\BumbalClient\Model\CapacityModel] $planned_capacities
+     * @param map[string,\BumbalClient\Model\AppliedCapacityModel] $planned_capacities
      * @return $this
      */
     public function setPlannedCapacities($planned_capacities)
     {
         $this->container['planned_capacities'] = $planned_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_capacities_load
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
+     */
+    public function getPlannedCapacitiesLoad()
+    {
+        return $this->container['planned_capacities_load'];
+    }
+
+    /**
+     * Sets planned_capacities_load
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $planned_capacities_load
+     * @return $this
+     */
+    public function setPlannedCapacitiesLoad($planned_capacities_load)
+    {
+        $this->container['planned_capacities_load'] = $planned_capacities_load;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_capacities_unload
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
+     */
+    public function getPlannedCapacitiesUnload()
+    {
+        return $this->container['planned_capacities_unload'];
+    }
+
+    /**
+     * Sets planned_capacities_unload
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $planned_capacities_unload
+     * @return $this
+     */
+    public function setPlannedCapacitiesUnload($planned_capacities_unload)
+    {
+        $this->container['planned_capacities_unload'] = $planned_capacities_unload;
 
         return $this;
     }

@@ -118,4 +118,18 @@ class AppliedCapacitiesModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTotals()
     {
     }
+
+    /**
+     * Test attribute "totals_load"
+     */
+    public function testPropertyTotalsLoad()
+    {
+    }
+
+    /**
+     * Test attribute "totals_unload"
+     */
+    public function testPropertyTotalsUnload()
+    {
+    }
 }

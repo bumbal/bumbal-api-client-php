@@ -93,12 +93,12 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for detachFromRecurrence
+     * Test case for detachActivitiesFromRecurrence
      *
      * detach activities from specified recurrence.
      *
      */
-    public function testDetachFromRecurrence()
+    public function testDetachActivitiesFromRecurrence()
     {
     }
 

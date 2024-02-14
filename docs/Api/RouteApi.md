@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**blockRoutes**](RouteApi.md#blockRoutes) | **POST** /route/block-routes | Block routes which satisfy set filters
 [**createRoute**](RouteApi.md#createRoute) | **POST** /route | Add a new Route
 [**deleteRoute**](RouteApi.md#deleteRoute) | **DELETE** /route/{routeId} | Delete an Route
-[**detachFromRecurrence**](RouteApi.md#detachFromRecurrence) | **POST** /route/detach-from-recurrence | detach routes from specified recurrence
+[**detachRoutesFromRecurrence**](RouteApi.md#detachRoutesFromRecurrence) | **POST** /route/detach-from-recurrence | detach routes from specified recurrence
 [**getExecutableActivities**](RouteApi.md#getExecutableActivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
 [**retrieveListRoute**](RouteApi.md#retrieveListRoute) | **PUT** /route | Retrieve List of Routes
 [**retrieveRoute**](RouteApi.md#retrieveRoute) | **GET** /route/{routeId} | Retrieve a Route
@@ -181,8 +181,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **detachFromRecurrence**
-> \BumbalClient\Model\ApiResponse detachFromRecurrence($body)
+# **detachRoutesFromRecurrence**
+> \BumbalClient\Model\ApiResponse detachRoutesFromRecurrence($body)
 
 detach routes from specified recurrence
 
@@ -206,10 +206,10 @@ $api_instance = new BumbalClient\Api\RouteApi();
 $body = new \BumbalClient\Model\RouteDetachFromRecurrenceArguments(); // \BumbalClient\Model\RouteDetachFromRecurrenceArguments | Detach from Recurrence Arguments
 
 try {
-    $result = $api_instance->detachFromRecurrence($body);
+    $result = $api_instance->detachRoutesFromRecurrence($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RouteApi->detachFromRecurrence: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling RouteApi->detachRoutesFromRecurrence: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

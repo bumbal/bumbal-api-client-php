@@ -103,12 +103,12 @@ class RouteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for detachFromRecurrence
+     * Test case for detachRoutesFromRecurrence
      *
      * detach routes from specified recurrence.
      *
      */
-    public function testDetachFromRecurrence()
+    public function testDetachRoutesFromRecurrence()
     {
     }
 

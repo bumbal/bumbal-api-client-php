@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** | Name of this IrregularityCategory | [optional] 
 **object_types** | **int[]** | Filter Irregularity Category by object types. Possible values: 11, 32, 24 | [optional] 
 **object_type_names** | **string[]** | Filter Irregularity Category by object type names. Possible values: activity, package_line and route | [optional] 
+**reasons** | [**\BumbalClient\Model\IrregularityReasonModel[]**](IrregularityReasonModel.md) |  | [optional] 
 **active** | **bool** | if active&#x3D;0: Irregularity category has been removed and is no longer visible in any bumbal interface | [optional] 
 **removed** | **bool** | Whether user is removed or not | [optional] 
 **created_by** | **int** | created_by user id | [optional] 

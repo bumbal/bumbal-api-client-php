@@ -364,7 +364,7 @@ class RouteApi
     }
 
     /**
-     * Operation detachFromRecurrence
+     * Operation detachRoutesFromRecurrence
      *
      * detach routes from specified recurrence
      *
@@ -372,14 +372,14 @@ class RouteApi
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function detachFromRecurrence($body = null)
+    public function detachRoutesFromRecurrence($body = null)
     {
-        list($response) = $this->detachFromRecurrenceWithHttpInfo($body);
+        list($response) = $this->detachRoutesFromRecurrenceWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation detachFromRecurrenceWithHttpInfo
+     * Operation detachRoutesFromRecurrenceWithHttpInfo
      *
      * detach routes from specified recurrence
      *
@@ -387,7 +387,7 @@ class RouteApi
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function detachFromRecurrenceWithHttpInfo($body = null)
+    public function detachRoutesFromRecurrenceWithHttpInfo($body = null)
     {
         // parse inputs
         $resourcePath = "/route/detach-from-recurrence";

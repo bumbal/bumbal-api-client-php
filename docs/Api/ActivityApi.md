@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**bulkUpdateActivity**](ActivityApi.md#bulkUpdateActivity) | **POST** /activity/bulk-update | Update multiple activities
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
-[**detachFromRecurrence**](ActivityApi.md#detachFromRecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
+[**detachActivitiesFromRecurrence**](ActivityApi.md#detachActivitiesFromRecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
 [**lockActivity**](ActivityApi.md#lockActivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 [**lockActivityOnRoute**](ActivityApi.md#lockActivityOnRoute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
 [**lockActivityOnRouteAndTime**](ActivityApi.md#lockActivityOnRouteAndTime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
@@ -126,8 +126,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **detachFromRecurrence**
-> \BumbalClient\Model\ApiResponse detachFromRecurrence($body)
+# **detachActivitiesFromRecurrence**
+> \BumbalClient\Model\ApiResponse detachActivitiesFromRecurrence($body)
 
 detach activities from specified recurrence
 
@@ -151,10 +151,10 @@ $api_instance = new BumbalClient\Api\ActivityApi();
 $body = new \BumbalClient\Model\ActivityDetachFromRecurrenceArguments(); // \BumbalClient\Model\ActivityDetachFromRecurrenceArguments | Detach from Recurrence Arguments
 
 try {
-    $result = $api_instance->detachFromRecurrence($body);
+    $result = $api_instance->detachActivitiesFromRecurrence($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ActivityApi->detachFromRecurrence: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ActivityApi->detachActivitiesFromRecurrence: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

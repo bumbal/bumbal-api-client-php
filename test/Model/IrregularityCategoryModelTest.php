@@ -106,6 +106,13 @@ class IrregularityCategoryModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "reasons"
+     */
+    public function testPropertyReasons()
+    {
+    }
+
+    /**
      * Test attribute "active"
      */
     public function testPropertyActive()

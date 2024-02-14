@@ -59,7 +59,9 @@ class AppliedCapacitiesModel implements ArrayAccess
         'vehicle' => '\BumbalClient\Model\AppliedCapacityModel[]',
         'equipment' => '\BumbalClient\Model\AppliedCapacityModel[]',
         'activity' => '\BumbalClient\Model\AppliedCapacityModel[]',
-        'totals' => '\BumbalClient\Model\AppliedCapacityModel[]'
+        'totals' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'totals_load' => '\BumbalClient\Model\AppliedCapacityModel[]',
+        'totals_unload' => '\BumbalClient\Model\AppliedCapacityModel[]'
     ];
 
     /**
@@ -72,7 +74,9 @@ class AppliedCapacitiesModel implements ArrayAccess
         'vehicle' => null,
         'equipment' => null,
         'activity' => null,
-        'totals' => null
+        'totals' => null,
+        'totals_load' => null,
+        'totals_unload' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +99,9 @@ class AppliedCapacitiesModel implements ArrayAccess
         'vehicle' => 'vehicle',
         'equipment' => 'equipment',
         'activity' => 'activity',
-        'totals' => 'totals'
+        'totals' => 'totals',
+        'totals_load' => 'totals_load',
+        'totals_unload' => 'totals_unload'
     ];
 
 
@@ -109,7 +115,9 @@ class AppliedCapacitiesModel implements ArrayAccess
         'vehicle' => 'setVehicle',
         'equipment' => 'setEquipment',
         'activity' => 'setActivity',
-        'totals' => 'setTotals'
+        'totals' => 'setTotals',
+        'totals_load' => 'setTotalsLoad',
+        'totals_unload' => 'setTotalsUnload'
     ];
 
 
@@ -123,7 +131,9 @@ class AppliedCapacitiesModel implements ArrayAccess
         'vehicle' => 'getVehicle',
         'equipment' => 'getEquipment',
         'activity' => 'getActivity',
-        'totals' => 'getTotals'
+        'totals' => 'getTotals',
+        'totals_load' => 'getTotalsLoad',
+        'totals_unload' => 'getTotalsUnload'
     ];
 
     public static function attributeMap()
@@ -163,6 +173,8 @@ class AppliedCapacitiesModel implements ArrayAccess
         $this->container['equipment'] = isset($data['equipment']) ? $data['equipment'] : null;
         $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
         $this->container['totals'] = isset($data['totals']) ? $data['totals'] : null;
+        $this->container['totals_load'] = isset($data['totals_load']) ? $data['totals_load'] : null;
+        $this->container['totals_unload'] = isset($data['totals_unload']) ? $data['totals_unload'] : null;
     }
 
     /**
@@ -312,6 +324,48 @@ class AppliedCapacitiesModel implements ArrayAccess
     public function setTotals($totals)
     {
         $this->container['totals'] = $totals;
+
+        return $this;
+    }
+
+    /**
+     * Gets totals_load
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
+     */
+    public function getTotalsLoad()
+    {
+        return $this->container['totals_load'];
+    }
+
+    /**
+     * Sets totals_load
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $totals_load
+     * @return $this
+     */
+    public function setTotalsLoad($totals_load)
+    {
+        $this->container['totals_load'] = $totals_load;
+
+        return $this;
+    }
+
+    /**
+     * Gets totals_unload
+     * @return \BumbalClient\Model\AppliedCapacityModel[]
+     */
+    public function getTotalsUnload()
+    {
+        return $this->container['totals_unload'];
+    }
+
+    /**
+     * Sets totals_unload
+     * @param \BumbalClient\Model\AppliedCapacityModel[] $totals_unload
+     * @return $this
+     */
+    public function setTotalsUnload($totals_unload)
+    {
+        $this->container['totals_unload'] = $totals_unload;
 
         return $this;
     }

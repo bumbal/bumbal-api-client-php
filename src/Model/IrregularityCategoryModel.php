@@ -58,6 +58,7 @@ class IrregularityCategoryModel implements ArrayAccess
         'name' => 'string',
         'object_types' => 'int[]',
         'object_type_names' => 'string[]',
+        'reasons' => '\BumbalClient\Model\IrregularityReasonModel[]',
         'active' => 'bool',
         'removed' => 'bool',
         'created_by' => 'int',
@@ -75,6 +76,7 @@ class IrregularityCategoryModel implements ArrayAccess
         'name' => null,
         'object_types' => null,
         'object_type_names' => null,
+        'reasons' => null,
         'active' => null,
         'removed' => null,
         'created_by' => null,
@@ -102,6 +104,7 @@ class IrregularityCategoryModel implements ArrayAccess
         'name' => 'name',
         'object_types' => 'object_types',
         'object_type_names' => 'object_type_names',
+        'reasons' => 'reasons',
         'active' => 'active',
         'removed' => 'removed',
         'created_by' => 'created_by',
@@ -120,6 +123,7 @@ class IrregularityCategoryModel implements ArrayAccess
         'name' => 'setName',
         'object_types' => 'setObjectTypes',
         'object_type_names' => 'setObjectTypeNames',
+        'reasons' => 'setReasons',
         'active' => 'setActive',
         'removed' => 'setRemoved',
         'created_by' => 'setCreatedBy',
@@ -138,6 +142,7 @@ class IrregularityCategoryModel implements ArrayAccess
         'name' => 'getName',
         'object_types' => 'getObjectTypes',
         'object_type_names' => 'getObjectTypeNames',
+        'reasons' => 'getReasons',
         'active' => 'getActive',
         'removed' => 'getRemoved',
         'created_by' => 'getCreatedBy',
@@ -181,6 +186,7 @@ class IrregularityCategoryModel implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['object_types'] = isset($data['object_types']) ? $data['object_types'] : null;
         $this->container['object_type_names'] = isset($data['object_type_names']) ? $data['object_type_names'] : null;
+        $this->container['reasons'] = isset($data['reasons']) ? $data['reasons'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
@@ -294,6 +300,27 @@ class IrregularityCategoryModel implements ArrayAccess
     public function setObjectTypeNames($object_type_names)
     {
         $this->container['object_type_names'] = $object_type_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets reasons
+     * @return \BumbalClient\Model\IrregularityReasonModel[]
+     */
+    public function getReasons()
+    {
+        return $this->container['reasons'];
+    }
+
+    /**
+     * Sets reasons
+     * @param \BumbalClient\Model\IrregularityReasonModel[] $reasons
+     * @return $this
+     */
+    public function setReasons($reasons)
+    {
+        $this->container['reasons'] = $reasons;
 
         return $this;
     }

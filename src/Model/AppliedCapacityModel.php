@@ -58,7 +58,7 @@ class AppliedCapacityModel implements ArrayAccess
         'capacity_type_name' => 'string',
         'uom_id' => 'int',
         'uom_name' => 'string',
-        'capacity_value' => 'int'
+        'capacity_value' => 'double'
     ];
 
     /**
@@ -70,7 +70,7 @@ class AppliedCapacityModel implements ArrayAccess
         'capacity_type_name' => null,
         'uom_id' => 'int64',
         'uom_name' => null,
-        'capacity_value' => 'int64'
+        'capacity_value' => 'double'
     ];
 
     public static function swaggerTypes()
@@ -270,7 +270,7 @@ class AppliedCapacityModel implements ArrayAccess
 
     /**
      * Gets capacity_value
-     * @return int
+     * @return double
      */
     public function getCapacityValue()
     {
@@ -279,7 +279,7 @@ class AppliedCapacityModel implements ArrayAccess
 
     /**
      * Sets capacity_value
-     * @param int $capacity_value Capacity value
+     * @param double $capacity_value Capacity value
      * @return $this
      */
     public function setCapacityValue($capacity_value)

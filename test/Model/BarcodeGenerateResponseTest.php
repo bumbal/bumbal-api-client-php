@@ -1,6 +1,6 @@
 <?php
 /**
- * IrregularityCategoryOptionsModelTest
+ * BarcodeGenerateResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * IrregularityCategoryOptionsModelTest Class Doc Comment
+ * BarcodeGenerateResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description IrregularityCategoryOptionsModel
+// * @description BarcodeGenerateResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class IrregularityCategoryOptionsModelTest extends \PHPUnit_Framework_TestCase
+class BarcodeGenerateResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,16 +71,16 @@ class IrregularityCategoryOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "IrregularityCategoryOptionsModel"
+     * Test "BarcodeGenerateResponse"
      */
-    public function testIrregularityCategoryOptionsModel()
+    public function testBarcodeGenerateResponse()
     {
     }
 
     /**
-     * Test attribute "include_reasons"
+     * Test attribute "barcode"
      */
-    public function testPropertyIncludeReasons()
+    public function testPropertyBarcode()
     {
     }
 }
