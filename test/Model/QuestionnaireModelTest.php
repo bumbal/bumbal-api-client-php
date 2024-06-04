@@ -153,4 +153,25 @@ class QuestionnaireModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyObjectId()
     {
     }
+
+    /**
+     * Test attribute "required"
+     */
+    public function testPropertyRequired()
+    {
+    }
+
+    /**
+     * Test attribute "dynamic"
+     */
+    public function testPropertyDynamic()
+    {
+    }
+
+    /**
+     * Test attribute "finished"
+     */
+    public function testPropertyFinished()
+    {
+    }
 }

@@ -171,14 +171,14 @@ class BarcodeApi
      * Retrieve a package-line barcode label
      *
      * @param int $package_line_id ID of the package-line to retrieve the barcode label for (required)
-     * @param int $width The width of the label in mm (optional, default to 100)
-     * @param int $width2 The height of the label in mm (optional, default to 50)
+     * @param int $width The width of the label in mm (optional)
+     * @param int $height The height of the label in mm (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\BarcodeLabelResponse
      */
-    public function retrieveBarcodeLabel($package_line_id, $width = '100', $width2 = '50')
+    public function retrieveBarcodeLabel($package_line_id, $width = null, $height = null)
     {
-        list($response) = $this->retrieveBarcodeLabelWithHttpInfo($package_line_id, $width, $width2);
+        list($response) = $this->retrieveBarcodeLabelWithHttpInfo($package_line_id, $width, $height);
         return $response;
     }
 
@@ -188,12 +188,12 @@ class BarcodeApi
      * Retrieve a package-line barcode label
      *
      * @param int $package_line_id ID of the package-line to retrieve the barcode label for (required)
-     * @param int $width The width of the label in mm (optional, default to 100)
-     * @param int $width2 The height of the label in mm (optional, default to 50)
+     * @param int $width The width of the label in mm (optional)
+     * @param int $height The height of the label in mm (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\BarcodeLabelResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveBarcodeLabelWithHttpInfo($package_line_id, $width = '100', $width2 = '50')
+    public function retrieveBarcodeLabelWithHttpInfo($package_line_id, $width = null, $height = null)
     {
         // verify the required parameter 'package_line_id' is set
         if ($package_line_id === null) {
@@ -216,8 +216,8 @@ class BarcodeApi
             $queryParams['width'] = $this->apiClient->getSerializer()->toQueryValue($width);
         }
         // query params
-        if ($width2 !== null) {
-            $queryParams['width'] = $this->apiClient->getSerializer()->toQueryValue($width2);
+        if ($height !== null) {
+            $queryParams['height'] = $this->apiClient->getSerializer()->toQueryValue($height);
         }
         // path params
         if ($package_line_id !== null) {

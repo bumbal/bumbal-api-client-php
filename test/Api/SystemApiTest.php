@@ -83,16 +83,6 @@ class SystemApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for systemGetSayWhenConfig
-     *
-     * Retrieve SayWhen System Configuration.
-     *
-     */
-    public function testSystemGetSayWhenConfig()
-    {
-    }
-
-    /**
      * Test case for systemGetVariables
      *
      * Retrieve System Variables.

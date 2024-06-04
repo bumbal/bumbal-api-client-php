@@ -58,7 +58,8 @@ class QuestionnaireTemplateQuestionFiltersModel implements ArrayAccess
         'search_text' => 'string',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
-        'question_type' => 'string'
+        'question_type' => 'string',
+        'required' => 'bool[]'
     ];
 
     /**
@@ -70,7 +71,8 @@ class QuestionnaireTemplateQuestionFiltersModel implements ArrayAccess
         'search_text' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
-        'question_type' => 'string'
+        'question_type' => 'string',
+        'required' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +94,8 @@ class QuestionnaireTemplateQuestionFiltersModel implements ArrayAccess
         'search_text' => 'search_text',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
-        'question_type' => 'question_type'
+        'question_type' => 'question_type',
+        'required' => 'required'
     ];
 
 
@@ -105,7 +108,8 @@ class QuestionnaireTemplateQuestionFiltersModel implements ArrayAccess
         'search_text' => 'setSearchText',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
-        'question_type' => 'setQuestionType'
+        'question_type' => 'setQuestionType',
+        'required' => 'setRequired'
     ];
 
 
@@ -118,7 +122,8 @@ class QuestionnaireTemplateQuestionFiltersModel implements ArrayAccess
         'search_text' => 'getSearchText',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
-        'question_type' => 'getQuestionType'
+        'question_type' => 'getQuestionType',
+        'required' => 'getRequired'
     ];
 
     public static function attributeMap()
@@ -157,6 +162,7 @@ class QuestionnaireTemplateQuestionFiltersModel implements ArrayAccess
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['question_type'] = isset($data['question_type']) ? $data['question_type'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
     }
 
     /**
@@ -285,6 +291,27 @@ class QuestionnaireTemplateQuestionFiltersModel implements ArrayAccess
     public function setQuestionType($question_type)
     {
         $this->container['question_type'] = $question_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets required
+     * @return bool[]
+     */
+    public function getRequired()
+    {
+        return $this->container['required'];
+    }
+
+    /**
+     * Sets required
+     * @param bool[] $required whetrher the questionnaoire is required to be filled in
+     * @return $this
+     */
+    public function setRequired($required)
+    {
+        $this->container['required'] = $required;
 
         return $this;
     }

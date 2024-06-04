@@ -1,6 +1,6 @@
 <?php
 /**
- * RecurrenceFiltersModel
+ * Body
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * RecurrenceFiltersModel Class Doc Comment
+ * Body Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecurrenceFiltersModel implements ArrayAccess
+class Body implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,17 @@ class RecurrenceFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'RecurrenceFiltersModel';
+    protected static $swaggerModelName = 'body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
         'name' => 'string',
-        'uuid' => 'string'
+        'rule' => 'string',
+        'create_ahead' => 'int',
+        'entity_id' => 'int'
     ];
 
     /**
@@ -64,9 +65,10 @@ class RecurrenceFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
         'name' => null,
-        'uuid' => null
+        'rule' => null,
+        'create_ahead' => null,
+        'entity_id' => null
     ];
 
     public static function swaggerTypes()
@@ -84,9 +86,10 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'name' => 'name',
-        'uuid' => 'uuid'
+        'rule' => 'rule',
+        'create_ahead' => 'create_ahead',
+        'entity_id' => 'entity_id'
     ];
 
 
@@ -95,9 +98,10 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'name' => 'setName',
-        'uuid' => 'setUuid'
+        'rule' => 'setRule',
+        'create_ahead' => 'setCreateAhead',
+        'entity_id' => 'setEntityId'
     ];
 
 
@@ -106,9 +110,10 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'name' => 'getName',
-        'uuid' => 'getUuid'
+        'rule' => 'getRule',
+        'create_ahead' => 'getCreateAhead',
+        'entity_id' => 'getEntityId'
     ];
 
     public static function attributeMap()
@@ -142,9 +147,10 @@ class RecurrenceFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['rule'] = isset($data['rule']) ? $data['rule'] : null;
+        $this->container['create_ahead'] = isset($data['create_ahead']) ? $data['create_ahead'] : null;
+        $this->container['entity_id'] = isset($data['entity_id']) ? $data['entity_id'] : null;
     }
 
     /**
@@ -173,27 +179,6 @@ class RecurrenceFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int[]
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int[] $id Recurrence id's
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      * @return string
      */
@@ -204,7 +189,7 @@ class RecurrenceFiltersModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name Recurrence name
+     * @param string $name Name of the recurrence
      * @return $this
      */
     public function setName($name)
@@ -215,22 +200,64 @@ class RecurrenceFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets uuid
+     * Gets rule
      * @return string
      */
-    public function getUuid()
+    public function getRule()
     {
-        return $this->container['uuid'];
+        return $this->container['rule'];
     }
 
     /**
-     * Sets uuid
-     * @param string $uuid Recurrence uuid
+     * Sets rule
+     * @param string $rule iCal RFC5545 rule
      * @return $this
      */
-    public function setUuid($uuid)
+    public function setRule($rule)
     {
-        $this->container['uuid'] = $uuid;
+        $this->container['rule'] = $rule;
+
+        return $this;
+    }
+
+    /**
+     * Gets create_ahead
+     * @return int
+     */
+    public function getCreateAhead()
+    {
+        return $this->container['create_ahead'];
+    }
+
+    /**
+     * Sets create_ahead
+     * @param int $create_ahead Number of occurrences to create ahead
+     * @return $this
+     */
+    public function setCreateAhead($create_ahead)
+    {
+        $this->container['create_ahead'] = $create_ahead;
+
+        return $this;
+    }
+
+    /**
+     * Gets entity_id
+     * @return int
+     */
+    public function getEntityId()
+    {
+        return $this->container['entity_id'];
+    }
+
+    /**
+     * Sets entity_id
+     * @param int $entity_id ID of the activity to create the recurrence for
+     * @return $this
+     */
+    public function setEntityId($entity_id)
+    {
+        $this->container['entity_id'] = $entity_id;
 
         return $this;
     }

@@ -132,4 +132,11 @@ class QuestionnaireTemplateQuestionModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTexts()
     {
     }
+
+    /**
+     * Test attribute "required"
+     */
+    public function testPropertyRequired()
+    {
+    }
 }

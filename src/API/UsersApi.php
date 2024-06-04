@@ -473,12 +473,20 @@ class UsersApi
      * Retrieve a Users
      *
      * @param int $user_id ID of users to retrieve (required)
+     * @param bool $include_addresses Include address data (optional, default to false)
+     * @param bool $include_user_meta_data Include Meta Data (optional, default to false)
+     * @param bool $include_user_tags Include tags (optional, default to false)
+     * @param bool $include_party_name Include Party Name (optional, default to false)
+     * @param bool $include_pause Include Pause (optional, default to false)
+     * @param bool $include_zones Include Zones (optional, default to false)
+     * @param bool $include_driver_unavailabilities Include Driver Unavailabilities (optional, default to false)
+     * @param bool $include_links Include Links (optional, default to false)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\UsersModel
      */
-    public function retrieveUsers($user_id)
+    public function retrieveUsers($user_id, $include_addresses = 'false', $include_user_meta_data = 'false', $include_user_tags = 'false', $include_party_name = 'false', $include_pause = 'false', $include_zones = 'false', $include_driver_unavailabilities = 'false', $include_links = 'false')
     {
-        list($response) = $this->retrieveUsersWithHttpInfo($user_id);
+        list($response) = $this->retrieveUsersWithHttpInfo($user_id, $include_addresses, $include_user_meta_data, $include_user_tags, $include_party_name, $include_pause, $include_zones, $include_driver_unavailabilities, $include_links);
         return $response;
     }
 
@@ -488,10 +496,18 @@ class UsersApi
      * Retrieve a Users
      *
      * @param int $user_id ID of users to retrieve (required)
+     * @param bool $include_addresses Include address data (optional, default to false)
+     * @param bool $include_user_meta_data Include Meta Data (optional, default to false)
+     * @param bool $include_user_tags Include tags (optional, default to false)
+     * @param bool $include_party_name Include Party Name (optional, default to false)
+     * @param bool $include_pause Include Pause (optional, default to false)
+     * @param bool $include_zones Include Zones (optional, default to false)
+     * @param bool $include_driver_unavailabilities Include Driver Unavailabilities (optional, default to false)
+     * @param bool $include_links Include Links (optional, default to false)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveUsersWithHttpInfo($user_id)
+    public function retrieveUsersWithHttpInfo($user_id, $include_addresses = 'false', $include_user_meta_data = 'false', $include_user_tags = 'false', $include_party_name = 'false', $include_pause = 'false', $include_zones = 'false', $include_driver_unavailabilities = 'false', $include_links = 'false')
     {
         // verify the required parameter 'user_id' is set
         if ($user_id === null) {
@@ -509,6 +525,38 @@ class UsersApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // query params
+        if ($include_addresses !== null) {
+            $queryParams['include_addresses'] = $this->apiClient->getSerializer()->toQueryValue($include_addresses);
+        }
+        // query params
+        if ($include_user_meta_data !== null) {
+            $queryParams['include_user_meta_data'] = $this->apiClient->getSerializer()->toQueryValue($include_user_meta_data);
+        }
+        // query params
+        if ($include_user_tags !== null) {
+            $queryParams['include_user_tags'] = $this->apiClient->getSerializer()->toQueryValue($include_user_tags);
+        }
+        // query params
+        if ($include_party_name !== null) {
+            $queryParams['include_party_name'] = $this->apiClient->getSerializer()->toQueryValue($include_party_name);
+        }
+        // query params
+        if ($include_pause !== null) {
+            $queryParams['include_pause'] = $this->apiClient->getSerializer()->toQueryValue($include_pause);
+        }
+        // query params
+        if ($include_zones !== null) {
+            $queryParams['include_zones'] = $this->apiClient->getSerializer()->toQueryValue($include_zones);
+        }
+        // query params
+        if ($include_driver_unavailabilities !== null) {
+            $queryParams['include_driver_unavailabilities'] = $this->apiClient->getSerializer()->toQueryValue($include_driver_unavailabilities);
+        }
+        // query params
+        if ($include_links !== null) {
+            $queryParams['include_links'] = $this->apiClient->getSerializer()->toQueryValue($include_links);
+        }
         // path params
         if ($user_id !== null) {
             $resourcePath = str_replace(

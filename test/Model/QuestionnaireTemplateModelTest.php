@@ -195,4 +195,32 @@ class QuestionnaireTemplateModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyQuestions()
     {
     }
+
+    /**
+     * Test attribute "required"
+     */
+    public function testPropertyRequired()
+    {
+    }
+
+    /**
+     * Test attribute "dynamic"
+     */
+    public function testPropertyDynamic()
+    {
+    }
+
+    /**
+     * Test attribute "object_type"
+     */
+    public function testPropertyObjectType()
+    {
+    }
+
+    /**
+     * Test attribute "object_type_name"
+     */
+    public function testPropertyObjectTypeName()
+    {
+    }
 }

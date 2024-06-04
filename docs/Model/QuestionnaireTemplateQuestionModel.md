@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **order** | **int** | Order | [optional] 
 **options** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel[]**](QuestionnaireTemplateQuestionOptionModel.md) |  | [optional] 
 **texts** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionTextModel[]**](QuestionnaireTemplateQuestionTextModel.md) |  | [optional] 
+**required** | **bool** | whetrher the questionnaoire is required to be filled in | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * RecurrenceFiltersModelTest
+ * BodyTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * RecurrenceFiltersModelTest Class Doc Comment
+ * BodyTest Class Doc Comment
  *
  * @category    Class */
-// * @description RecurrenceFiltersModel
+// * @description Body
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecurrenceFiltersModelTest extends \PHPUnit_Framework_TestCase
+class BodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,16 +71,9 @@ class RecurrenceFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RecurrenceFiltersModel"
+     * Test "Body"
      */
-    public function testRecurrenceFiltersModel()
-    {
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
+    public function testBody()
     {
     }
 
@@ -92,9 +85,23 @@ class RecurrenceFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "uuid"
+     * Test attribute "rule"
      */
-    public function testPropertyUuid()
+    public function testPropertyRule()
+    {
+    }
+
+    /**
+     * Test attribute "create_ahead"
+     */
+    public function testPropertyCreateAhead()
+    {
+    }
+
+    /**
+     * Test attribute "entity_id"
+     */
+    public function testPropertyEntityId()
     {
     }
 }

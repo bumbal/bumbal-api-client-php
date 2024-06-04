@@ -58,7 +58,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
         'object_id' => 'int',
         'object_type_name' => 'string',
         'lang_code' => 'string',
-        'questionnaire_type_name' => 'object'
+        'questionnaire_type_name' => 'object',
+        'required' => 'bool[]',
+        'dynamic' => 'bool[]',
+        'active' => 'int[]'
     ];
 
     /**
@@ -70,7 +73,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
         'object_id' => null,
         'object_type_name' => null,
         'lang_code' => 'string',
-        'questionnaire_type_name' => null
+        'questionnaire_type_name' => null,
+        'required' => null,
+        'dynamic' => null,
+        'active' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +98,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
         'object_id' => 'object_id',
         'object_type_name' => 'object_type_name',
         'lang_code' => 'lang_code',
-        'questionnaire_type_name' => 'questionnaire_type_name'
+        'questionnaire_type_name' => 'questionnaire_type_name',
+        'required' => 'required',
+        'dynamic' => 'dynamic',
+        'active' => 'active'
     ];
 
 
@@ -105,7 +114,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
         'object_id' => 'setObjectId',
         'object_type_name' => 'setObjectTypeName',
         'lang_code' => 'setLangCode',
-        'questionnaire_type_name' => 'setQuestionnaireTypeName'
+        'questionnaire_type_name' => 'setQuestionnaireTypeName',
+        'required' => 'setRequired',
+        'dynamic' => 'setDynamic',
+        'active' => 'setActive'
     ];
 
 
@@ -118,7 +130,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
         'object_id' => 'getObjectId',
         'object_type_name' => 'getObjectTypeName',
         'lang_code' => 'getLangCode',
-        'questionnaire_type_name' => 'getQuestionnaireTypeName'
+        'questionnaire_type_name' => 'getQuestionnaireTypeName',
+        'required' => 'getRequired',
+        'dynamic' => 'getDynamic',
+        'active' => 'getActive'
     ];
 
     public static function attributeMap()
@@ -157,6 +172,9 @@ class QuestionnaireFiltersModel implements ArrayAccess
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
         $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
         $this->container['questionnaire_type_name'] = isset($data['questionnaire_type_name']) ? $data['questionnaire_type_name'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -285,6 +303,69 @@ class QuestionnaireFiltersModel implements ArrayAccess
     public function setQuestionnaireTypeName($questionnaire_type_name)
     {
         $this->container['questionnaire_type_name'] = $questionnaire_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets required
+     * @return bool[]
+     */
+    public function getRequired()
+    {
+        return $this->container['required'];
+    }
+
+    /**
+     * Sets required
+     * @param bool[] $required whetrher the questionnaoire is required to be filled in
+     * @return $this
+     */
+    public function setRequired($required)
+    {
+        $this->container['required'] = $required;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynamic
+     * @return bool[]
+     */
+    public function getDynamic()
+    {
+        return $this->container['dynamic'];
+    }
+
+    /**
+     * Sets dynamic
+     * @param bool[] $dynamic whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question.
+     * @return $this
+     */
+    public function setDynamic($dynamic)
+    {
+        $this->container['dynamic'] = $dynamic;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return int[]
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int[] $active Active status of Activity, 0 values represent deleted activities
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

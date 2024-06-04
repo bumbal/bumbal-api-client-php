@@ -153,4 +153,18 @@ class QuestionnaireTemplateFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyQuestionnaireTypeName()
     {
     }
+
+    /**
+     * Test attribute "required"
+     */
+    public function testPropertyRequired()
+    {
+    }
+
+    /**
+     * Test attribute "dynamic"
+     */
+    public function testPropertyDynamic()
+    {
+    }
 }

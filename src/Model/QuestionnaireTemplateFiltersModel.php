@@ -64,7 +64,9 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'brand_id' => 'int',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
-        'questionnaire_type_name' => 'object'
+        'questionnaire_type_name' => 'object',
+        'required' => 'bool[]',
+        'dynamic' => 'bool[]'
     ];
 
     /**
@@ -82,7 +84,9 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'brand_id' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
-        'questionnaire_type_name' => null
+        'questionnaire_type_name' => null,
+        'required' => null,
+        'dynamic' => null
     ];
 
     public static function swaggerTypes()
@@ -110,7 +114,9 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'brand_id' => 'brand_id',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
-        'questionnaire_type_name' => 'questionnaire_type_name'
+        'questionnaire_type_name' => 'questionnaire_type_name',
+        'required' => 'required',
+        'dynamic' => 'dynamic'
     ];
 
 
@@ -129,7 +135,9 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'brand_id' => 'setBrandId',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
-        'questionnaire_type_name' => 'setQuestionnaireTypeName'
+        'questionnaire_type_name' => 'setQuestionnaireTypeName',
+        'required' => 'setRequired',
+        'dynamic' => 'setDynamic'
     ];
 
 
@@ -148,7 +156,9 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'brand_id' => 'getBrandId',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
-        'questionnaire_type_name' => 'getQuestionnaireTypeName'
+        'questionnaire_type_name' => 'getQuestionnaireTypeName',
+        'required' => 'getRequired',
+        'dynamic' => 'getDynamic'
     ];
 
     public static function attributeMap()
@@ -193,6 +203,8 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['questionnaire_type_name'] = isset($data['questionnaire_type_name']) ? $data['questionnaire_type_name'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
     }
 
     /**
@@ -447,6 +459,48 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
     public function setQuestionnaireTypeName($questionnaire_type_name)
     {
         $this->container['questionnaire_type_name'] = $questionnaire_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets required
+     * @return bool[]
+     */
+    public function getRequired()
+    {
+        return $this->container['required'];
+    }
+
+    /**
+     * Sets required
+     * @param bool[] $required whetrher the questionnaoire is required to be filled in
+     * @return $this
+     */
+    public function setRequired($required)
+    {
+        $this->container['required'] = $required;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynamic
+     * @return bool[]
+     */
+    public function getDynamic()
+    {
+        return $this->container['dynamic'];
+    }
+
+    /**
+     * Sets dynamic
+     * @param bool[] $dynamic whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question.
+     * @return $this
+     */
+    public function setDynamic($dynamic)
+    {
+        $this->container['dynamic'] = $dynamic;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * RecurrenceFiltersModelTest
+ * Body2Test
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * RecurrenceFiltersModelTest Class Doc Comment
+ * Body2Test Class Doc Comment
  *
  * @category    Class */
-// * @description RecurrenceFiltersModel
+// * @description Body2
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecurrenceFiltersModelTest extends \PHPUnit_Framework_TestCase
+class Body2Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,30 +71,23 @@ class RecurrenceFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RecurrenceFiltersModel"
+     * Test "Body2"
      */
-    public function testRecurrenceFiltersModel()
+    public function testBody2()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "route_ids"
      */
-    public function testPropertyId()
+    public function testPropertyRouteIds()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "activity_ids"
      */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "uuid"
-     */
-    public function testPropertyUuid()
+    public function testPropertyActivityIds()
     {
     }
 }

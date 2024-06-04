@@ -20,6 +20,10 @@ Name | Type | Description | Notes
 **no_tags** | **bool** | if no_tags&#x3D;1: no tags are used for matching | [optional] 
 **no_zones** | **bool** | if no_zones&#x3D;1: no zones are used for matching | [optional] 
 **questions** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionModel[]**](QuestionnaireTemplateQuestionModel.md) |  | [optional] 
+**required** | **bool** | whetrher the questionnaoire is required to be filled in | [optional] 
+**dynamic** | **bool** | whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question. | [optional] 
+**object_type** | **object** | Object type IDs available for this questionnaire | [optional] 
+**object_type_name** | **string** | Object type name for the bound object to this questionnaire | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

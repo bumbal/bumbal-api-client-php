@@ -1,6 +1,6 @@
 <?php
 /**
- * RecurrenceFiltersModel
+ * Body2
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * RecurrenceFiltersModel Class Doc Comment
+ * Body2 Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RecurrenceFiltersModel implements ArrayAccess
+class Body2 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,15 @@ class RecurrenceFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'RecurrenceFiltersModel';
+    protected static $swaggerModelName = 'body_2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
-        'name' => 'string',
-        'uuid' => 'string'
+        'route_ids' => 'int[]',
+        'activity_ids' => 'int[]'
     ];
 
     /**
@@ -64,9 +63,8 @@ class RecurrenceFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'name' => null,
-        'uuid' => null
+        'route_ids' => null,
+        'activity_ids' => null
     ];
 
     public static function swaggerTypes()
@@ -84,9 +82,8 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'uuid' => 'uuid'
+        'route_ids' => 'route_ids',
+        'activity_ids' => 'activity_ids'
     ];
 
 
@@ -95,9 +92,8 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'uuid' => 'setUuid'
+        'route_ids' => 'setRouteIds',
+        'activity_ids' => 'setActivityIds'
     ];
 
 
@@ -106,9 +102,8 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'uuid' => 'getUuid'
+        'route_ids' => 'getRouteIds',
+        'activity_ids' => 'getActivityIds'
     ];
 
     public static function attributeMap()
@@ -142,9 +137,8 @@ class RecurrenceFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['route_ids'] = isset($data['route_ids']) ? $data['route_ids'] : null;
+        $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
     }
 
     /**
@@ -173,64 +167,43 @@ class RecurrenceFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets route_ids
      * @return int[]
      */
-    public function getId()
+    public function getRouteIds()
     {
-        return $this->container['id'];
+        return $this->container['route_ids'];
     }
 
     /**
-     * Sets id
-     * @param int[] $id Recurrence id's
+     * Sets route_ids
+     * @param int[] $route_ids
      * @return $this
      */
-    public function setId($id)
+    public function setRouteIds($route_ids)
     {
-        $this->container['id'] = $id;
+        $this->container['route_ids'] = $route_ids;
 
         return $this;
     }
 
     /**
-     * Gets name
-     * @return string
+     * Gets activity_ids
+     * @return int[]
      */
-    public function getName()
+    public function getActivityIds()
     {
-        return $this->container['name'];
+        return $this->container['activity_ids'];
     }
 
     /**
-     * Sets name
-     * @param string $name Recurrence name
+     * Sets activity_ids
+     * @param int[] $activity_ids
      * @return $this
      */
-    public function setName($name)
+    public function setActivityIds($activity_ids)
     {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets uuid
-     * @return string
-     */
-    public function getUuid()
-    {
-        return $this->container['uuid'];
-    }
-
-    /**
-     * Sets uuid
-     * @param string $uuid Recurrence uuid
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        $this->container['uuid'] = $uuid;
+        $this->container['activity_ids'] = $activity_ids;
 
         return $this;
     }

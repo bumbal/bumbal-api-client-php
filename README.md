@@ -326,7 +326,10 @@ Class | Method | HTTP request | Description
 *RecoveryApi* | [**updateRecovery**](docs/Api/RecoveryApi.md#updaterecovery) | **PUT** /recovery/{recoveryId} | Update a Recovery
 *RecurrenceApi* | [**adjustRecurrenceByActivityId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyactivityid) | **PUT** /recurrence/adjust-recurrence-by-activity-id/{activityId} | Adjust all recurrence objects following up to the provided activity id
 *RecurrenceApi* | [**adjustRecurrenceByRouteId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyrouteid) | **PUT** /recurrence/adjust-recurrence-by-route-id/{routeId} | Adjust all recurrence objects following up to the provided route id
+*RecurrenceApi* | [**attachRecurringActivities**](docs/Api/RecurrenceApi.md#attachrecurringactivities) | **POST** /recurrence/attach-recurring-activities | Attach recurring activities to a route recurrence
+*RecurrenceApi* | [**createActivity**](docs/Api/RecurrenceApi.md#createactivity) | **POST** /recurrence/activity | Create an activity recurrence on the service
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
+*RecurrenceApi* | [**createRoute**](docs/Api/RecurrenceApi.md#createroute) | **POST** /recurrence/route | Create an route recurrence on the service
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 *RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
@@ -364,7 +367,6 @@ Class | Method | HTTP request | Description
 *StatushistoryApi* | [**retrieveStatusHistoryActivity**](docs/Api/StatushistoryApi.md#retrievestatushistoryactivity) | **POST** /status-history/activity | Retrieve the status history of an activity
 *StatushistoryApi* | [**retrieveStatusHistoryRoute**](docs/Api/StatushistoryApi.md#retrievestatushistoryroute) | **POST** /status-history/route | Retrieve the status history of a route
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
-*SystemApi* | [**systemGetSayWhenConfig**](docs/Api/SystemApi.md#systemgetsaywhenconfig) | **GET** /system/get-say-when-config | Retrieve SayWhen System Configuration
 *SystemApi* | [**systemGetVariables**](docs/Api/SystemApi.md#systemgetvariables) | **GET** /system/get-variables | Retrieve System Variables
 *SystemproviderApi* | [**retrieveListSystemProvider**](docs/Api/SystemproviderApi.md#retrievelistsystemprovider) | **PUT** /system-provider | Retrieve List of System Providers
 *SystemproviderApi* | [**retrieveSystemProvider**](docs/Api/SystemproviderApi.md#retrievesystemprovider) | **GET** /system-provider/{providerId} | Retrieve a System Provider
@@ -561,6 +563,9 @@ Class | Method | HTTP request | Description
  - [BlockedDateModel](docs/Model/BlockedDateModel.md)
  - [BlockedDateOptionsModel](docs/Model/BlockedDateOptionsModel.md)
  - [BlockedDateRetrieveListArguments](docs/Model/BlockedDateRetrieveListArguments.md)
+ - [Body](docs/Model/Body.md)
+ - [Body1](docs/Model/Body1.md)
+ - [Body2](docs/Model/Body2.md)
  - [BrandColourFiltersModel](docs/Model/BrandColourFiltersModel.md)
  - [BrandColourModel](docs/Model/BrandColourModel.md)
  - [BrandColourOptionsModel](docs/Model/BrandColourOptionsModel.md)

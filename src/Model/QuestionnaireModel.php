@@ -64,7 +64,10 @@ class QuestionnaireModel implements ArrayAccess
         'answers' => '\BumbalClient\Model\QuestionnaireAnswerModel[]',
         'object_type' => 'object',
         'object_type_name' => 'string',
-        'object_id' => 'int'
+        'object_id' => 'int',
+        'required' => 'bool',
+        'dynamic' => 'bool',
+        'finished' => 'bool'
     ];
 
     /**
@@ -82,7 +85,10 @@ class QuestionnaireModel implements ArrayAccess
         'answers' => null,
         'object_type' => null,
         'object_type_name' => 'string',
-        'object_id' => null
+        'object_id' => null,
+        'required' => null,
+        'dynamic' => null,
+        'finished' => null
     ];
 
     public static function swaggerTypes()
@@ -110,7 +116,10 @@ class QuestionnaireModel implements ArrayAccess
         'answers' => 'answers',
         'object_type' => 'object_type',
         'object_type_name' => 'object_type_name',
-        'object_id' => 'object_id'
+        'object_id' => 'object_id',
+        'required' => 'required',
+        'dynamic' => 'dynamic',
+        'finished' => 'finished'
     ];
 
 
@@ -129,7 +138,10 @@ class QuestionnaireModel implements ArrayAccess
         'answers' => 'setAnswers',
         'object_type' => 'setObjectType',
         'object_type_name' => 'setObjectTypeName',
-        'object_id' => 'setObjectId'
+        'object_id' => 'setObjectId',
+        'required' => 'setRequired',
+        'dynamic' => 'setDynamic',
+        'finished' => 'setFinished'
     ];
 
 
@@ -148,7 +160,10 @@ class QuestionnaireModel implements ArrayAccess
         'answers' => 'getAnswers',
         'object_type' => 'getObjectType',
         'object_type_name' => 'getObjectTypeName',
-        'object_id' => 'getObjectId'
+        'object_id' => 'getObjectId',
+        'required' => 'getRequired',
+        'dynamic' => 'getDynamic',
+        'finished' => 'getFinished'
     ];
 
     public static function attributeMap()
@@ -193,6 +208,9 @@ class QuestionnaireModel implements ArrayAccess
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
+        $this->container['finished'] = isset($data['finished']) ? $data['finished'] : null;
     }
 
     /**
@@ -447,6 +465,69 @@ class QuestionnaireModel implements ArrayAccess
     public function setObjectId($object_id)
     {
         $this->container['object_id'] = $object_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets required
+     * @return bool
+     */
+    public function getRequired()
+    {
+        return $this->container['required'];
+    }
+
+    /**
+     * Sets required
+     * @param bool $required whetrher the questionnaoire is required to be filled in
+     * @return $this
+     */
+    public function setRequired($required)
+    {
+        $this->container['required'] = $required;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynamic
+     * @return bool
+     */
+    public function getDynamic()
+    {
+        return $this->container['dynamic'];
+    }
+
+    /**
+     * Sets dynamic
+     * @param bool $dynamic whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question.
+     * @return $this
+     */
+    public function setDynamic($dynamic)
+    {
+        $this->container['dynamic'] = $dynamic;
+
+        return $this;
+    }
+
+    /**
+     * Gets finished
+     * @return bool
+     */
+    public function getFinished()
+    {
+        return $this->container['finished'];
+    }
+
+    /**
+     * Sets finished
+     * @param bool $finished whetrher the questionnaoire is already filled in completely
+     * @return $this
+     */
+    public function setFinished($finished)
+    {
+        $this->container['finished'] = $finished;
 
         return $this;
     }

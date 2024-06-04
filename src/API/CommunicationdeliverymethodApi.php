@@ -132,7 +132,7 @@ class CommunicationdeliverymethodApi
         // path params
         if ($communication_delivery_method_id !== null) {
             $resourcePath = str_replace(
-                "{" . "communication delivery method ID" . "}",
+                "{" . "communicationDeliveryMethodID" . "}",
                 $this->apiClient->getSerializer()->toPathValue($communication_delivery_method_id),
                 $resourcePath
             );

@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveUsers**
-> \BumbalClient\Model\UsersModel retrieveUsers($user_id)
+> \BumbalClient\Model\UsersModel retrieveUsers($user_id, $include_addresses, $include_user_meta_data, $include_user_tags, $include_party_name, $include_pause, $include_zones, $include_driver_unavailabilities, $include_links)
 
 Retrieve a Users
 
@@ -255,9 +255,17 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 
 $api_instance = new BumbalClient\Api\UsersApi();
 $user_id = 789; // int | ID of users to retrieve
+$include_addresses = false; // bool | Include address data
+$include_user_meta_data = false; // bool | Include Meta Data
+$include_user_tags = false; // bool | Include tags
+$include_party_name = false; // bool | Include Party Name
+$include_pause = false; // bool | Include Pause
+$include_zones = false; // bool | Include Zones
+$include_driver_unavailabilities = false; // bool | Include Driver Unavailabilities
+$include_links = false; // bool | Include Links
 
 try {
-    $result = $api_instance->retrieveUsers($user_id);
+    $result = $api_instance->retrieveUsers($user_id, $include_addresses, $include_user_meta_data, $include_user_tags, $include_party_name, $include_pause, $include_zones, $include_driver_unavailabilities, $include_links);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->retrieveUsers: ', $e->getMessage(), PHP_EOL;
@@ -270,6 +278,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| ID of users to retrieve |
+ **include_addresses** | **bool**| Include address data | [optional] [default to false]
+ **include_user_meta_data** | **bool**| Include Meta Data | [optional] [default to false]
+ **include_user_tags** | **bool**| Include tags | [optional] [default to false]
+ **include_party_name** | **bool**| Include Party Name | [optional] [default to false]
+ **include_pause** | **bool**| Include Pause | [optional] [default to false]
+ **include_zones** | **bool**| Include Zones | [optional] [default to false]
+ **include_driver_unavailabilities** | **bool**| Include Driver Unavailabilities | [optional] [default to false]
+ **include_links** | **bool**| Include Links | [optional] [default to false]
 
 ### Return type
 

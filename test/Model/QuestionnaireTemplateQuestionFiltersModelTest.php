@@ -111,4 +111,11 @@ class QuestionnaireTemplateQuestionFiltersModelTest extends \PHPUnit_Framework_T
     public function testPropertyQuestionType()
     {
     }
+
+    /**
+     * Test attribute "required"
+     */
+    public function testPropertyRequired()
+    {
+    }
 }

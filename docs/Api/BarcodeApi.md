@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveBarcodeLabel**
-> \BumbalClient\Model\BarcodeLabelResponse retrieveBarcodeLabel($package_line_id, $width, $width2)
+> \BumbalClient\Model\BarcodeLabelResponse retrieveBarcodeLabel($package_line_id, $width, $height)
 
 Retrieve a package-line barcode label
 
@@ -79,11 +79,11 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 
 $api_instance = new BumbalClient\Api\BarcodeApi();
 $package_line_id = 789; // int | ID of the package-line to retrieve the barcode label for
-$width = 100; // int | The width of the label in mm
-$width2 = 50; // int | The height of the label in mm
+$width = 789; // int | The width of the label in mm
+$height = 789; // int | The height of the label in mm
 
 try {
-    $result = $api_instance->retrieveBarcodeLabel($package_line_id, $width, $width2);
+    $result = $api_instance->retrieveBarcodeLabel($package_line_id, $width, $height);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BarcodeApi->retrieveBarcodeLabel: ', $e->getMessage(), PHP_EOL;
@@ -96,8 +96,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **package_line_id** | **int**| ID of the package-line to retrieve the barcode label for |
- **width** | **int**| The width of the label in mm | [optional] [default to 100]
- **width2** | **int**| The height of the label in mm | [optional] [default to 50]
+ **width** | **int**| The width of the label in mm | [optional]
+ **height** | **int**| The height of the label in mm | [optional]
 
 ### Return type
 

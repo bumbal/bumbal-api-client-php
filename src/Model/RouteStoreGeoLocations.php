@@ -55,6 +55,8 @@ class RouteStoreGeoLocations implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'route_id' => 'int',
+        'activity_id' => 'int',
+        'device' => 'string',
         'geo_data' => 'object[]'
     ];
 
@@ -64,6 +66,8 @@ class RouteStoreGeoLocations implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'route_id' => 'int64',
+        'activity_id' => 'int64',
+        'device' => 'string',
         'geo_data' => null
     ];
 
@@ -83,6 +87,8 @@ class RouteStoreGeoLocations implements ArrayAccess
      */
     protected static $attributeMap = [
         'route_id' => 'route_id',
+        'activity_id' => 'activity_id',
+        'device' => 'device',
         'geo_data' => 'geo_data'
     ];
 
@@ -93,6 +99,8 @@ class RouteStoreGeoLocations implements ArrayAccess
      */
     protected static $setters = [
         'route_id' => 'setRouteId',
+        'activity_id' => 'setActivityId',
+        'device' => 'setDevice',
         'geo_data' => 'setGeoData'
     ];
 
@@ -103,6 +111,8 @@ class RouteStoreGeoLocations implements ArrayAccess
      */
     protected static $getters = [
         'route_id' => 'getRouteId',
+        'activity_id' => 'getActivityId',
+        'device' => 'getDevice',
         'geo_data' => 'getGeoData'
     ];
 
@@ -138,6 +148,8 @@ class RouteStoreGeoLocations implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
+        $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
+        $this->container['device'] = isset($data['device']) ? $data['device'] : null;
         $this->container['geo_data'] = isset($data['geo_data']) ? $data['geo_data'] : null;
     }
 
@@ -183,6 +195,48 @@ class RouteStoreGeoLocations implements ArrayAccess
     public function setRouteId($route_id)
     {
         $this->container['route_id'] = $route_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_id
+     * @return int
+     */
+    public function getActivityId()
+    {
+        return $this->container['activity_id'];
+    }
+
+    /**
+     * Sets activity_id
+     * @param int $activity_id Unique ID of Activity
+     * @return $this
+     */
+    public function setActivityId($activity_id)
+    {
+        $this->container['activity_id'] = $activity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets device
+     * @return string
+     */
+    public function getDevice()
+    {
+        return $this->container['device'];
+    }
+
+    /**
+     * Sets device
+     * @param string $device The device from which the coordinates are sent
+     * @return $this
+     */
+    public function setDevice($device)
+    {
+        $this->container['device'] = $device;
 
         return $this;
     }

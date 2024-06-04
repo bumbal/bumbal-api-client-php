@@ -61,7 +61,8 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
         'question_type_name' => 'string',
         'order' => 'int',
         'options' => '\BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel[]',
-        'texts' => '\BumbalClient\Model\QuestionnaireTemplateQuestionTextModel[]'
+        'texts' => '\BumbalClient\Model\QuestionnaireTemplateQuestionTextModel[]',
+        'required' => 'bool'
     ];
 
     /**
@@ -76,7 +77,8 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
         'question_type_name' => 'string',
         'order' => 'int64',
         'options' => null,
-        'texts' => null
+        'texts' => null,
+        'required' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
         'question_type_name' => 'question_type_name',
         'order' => 'order',
         'options' => 'options',
-        'texts' => 'texts'
+        'texts' => 'texts',
+        'required' => 'required'
     ];
 
 
@@ -117,7 +120,8 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
         'question_type_name' => 'setQuestionTypeName',
         'order' => 'setOrder',
         'options' => 'setOptions',
-        'texts' => 'setTexts'
+        'texts' => 'setTexts',
+        'required' => 'setRequired'
     ];
 
 
@@ -133,7 +137,8 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
         'question_type_name' => 'getQuestionTypeName',
         'order' => 'getOrder',
         'options' => 'getOptions',
-        'texts' => 'getTexts'
+        'texts' => 'getTexts',
+        'required' => 'getRequired'
     ];
 
     public static function attributeMap()
@@ -175,6 +180,7 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['texts'] = isset($data['texts']) ? $data['texts'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
     }
 
     /**
@@ -366,6 +372,27 @@ class QuestionnaireTemplateQuestionModel implements ArrayAccess
     public function setTexts($texts)
     {
         $this->container['texts'] = $texts;
+
+        return $this;
+    }
+
+    /**
+     * Gets required
+     * @return bool
+     */
+    public function getRequired()
+    {
+        return $this->container['required'];
+    }
+
+    /**
+     * Sets required
+     * @param bool $required whetrher the questionnaoire is required to be filled in
+     * @return $this
+     */
+    public function setRequired($required)
+    {
+        $this->container['required'] = $required;
 
         return $this;
     }

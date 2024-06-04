@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
 **questionnaire_type_name** | **object** | Questionnaire type name | [optional] 
+**required** | **bool[]** | whetrher the questionnaoire is required to be filled in | [optional] 
+**dynamic** | **bool[]** | whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

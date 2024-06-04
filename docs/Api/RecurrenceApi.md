@@ -6,7 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adjustRecurrenceByActivityId**](RecurrenceApi.md#adjustRecurrenceByActivityId) | **PUT** /recurrence/adjust-recurrence-by-activity-id/{activityId} | Adjust all recurrence objects following up to the provided activity id
 [**adjustRecurrenceByRouteId**](RecurrenceApi.md#adjustRecurrenceByRouteId) | **PUT** /recurrence/adjust-recurrence-by-route-id/{routeId} | Adjust all recurrence objects following up to the provided route id
+[**attachRecurringActivities**](RecurrenceApi.md#attachRecurringActivities) | **POST** /recurrence/attach-recurring-activities | Attach recurring activities to a route recurrence
+[**createActivity**](RecurrenceApi.md#createActivity) | **POST** /recurrence/activity | Create an activity recurrence on the service
 [**createActivityRecurrence**](RecurrenceApi.md#createActivityRecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
+[**createRoute**](RecurrenceApi.md#createRoute) | **POST** /recurrence/route | Create an route recurrence on the service
 [**createRouteRecurrence**](RecurrenceApi.md#createRouteRecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 [**deleteRecurrenceObject**](RecurrenceApi.md#deleteRecurrenceObject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 [**finish**](RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
@@ -125,6 +128,113 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **attachRecurringActivities**
+> attachRecurringActivities($body)
+
+Attach recurring activities to a route recurrence
+
+Attach recurring activities to a route recurrence
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\RecurrenceApi();
+$body = new \BumbalClient\Model\Body2(); // \BumbalClient\Model\Body2 | 
+
+try {
+    $api_instance->attachRecurringActivities($body);
+} catch (Exception $e) {
+    echo 'Exception when calling RecurrenceApi->attachRecurringActivities: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\Body2**](../Model/Body2.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createActivity**
+> \BumbalClient\Model\ApiResponse createActivity($body)
+
+Create an activity recurrence on the service
+
+Create an activity recurrence on the service
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\RecurrenceApi();
+$body = new \BumbalClient\Model\Body(); // \BumbalClient\Model\Body | Recurrence object that needs to be created
+
+try {
+    $result = $api_instance->createActivity($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RecurrenceApi->createActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\Body**](../Model/Body.md)| Recurrence object that needs to be created |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **createActivityRecurrence**
 > \BumbalClient\Model\ApiResponse createActivityRecurrence($body)
 
@@ -163,6 +273,60 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\BumbalClient\Model\RecurrenceModel**](../Model/RecurrenceModel.md)| Recurrence object that needs to be created |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createRoute**
+> \BumbalClient\Model\ApiResponse createRoute($body)
+
+Create an route recurrence on the service
+
+Create an route recurrence on the service
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\RecurrenceApi();
+$body = new \BumbalClient\Model\Body1(); // \BumbalClient\Model\Body1 | Recurrence object that needs to be created
+
+try {
+    $result = $api_instance->createRoute($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RecurrenceApi->createRoute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\Body1**](../Model/Body1.md)| Recurrence object that needs to be created |
 
 ### Return type
 

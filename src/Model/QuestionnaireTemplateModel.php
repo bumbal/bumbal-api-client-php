@@ -70,7 +70,11 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questionnaire_type_name' => 'string',
         'no_tags' => 'bool',
         'no_zones' => 'bool',
-        'questions' => '\BumbalClient\Model\QuestionnaireTemplateQuestionModel[]'
+        'questions' => '\BumbalClient\Model\QuestionnaireTemplateQuestionModel[]',
+        'required' => 'bool',
+        'dynamic' => 'bool',
+        'object_type' => 'object',
+        'object_type_name' => 'string'
     ];
 
     /**
@@ -94,7 +98,11 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questionnaire_type_name' => 'string',
         'no_tags' => null,
         'no_zones' => null,
-        'questions' => null
+        'questions' => null,
+        'required' => null,
+        'dynamic' => null,
+        'object_type' => null,
+        'object_type_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -128,7 +136,11 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questionnaire_type_name' => 'questionnaire_type_name',
         'no_tags' => 'no_tags',
         'no_zones' => 'no_zones',
-        'questions' => 'questions'
+        'questions' => 'questions',
+        'required' => 'required',
+        'dynamic' => 'dynamic',
+        'object_type' => 'object_type',
+        'object_type_name' => 'object_type_name'
     ];
 
 
@@ -153,7 +165,11 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questionnaire_type_name' => 'setQuestionnaireTypeName',
         'no_tags' => 'setNoTags',
         'no_zones' => 'setNoZones',
-        'questions' => 'setQuestions'
+        'questions' => 'setQuestions',
+        'required' => 'setRequired',
+        'dynamic' => 'setDynamic',
+        'object_type' => 'setObjectType',
+        'object_type_name' => 'setObjectTypeName'
     ];
 
 
@@ -178,7 +194,11 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questionnaire_type_name' => 'getQuestionnaireTypeName',
         'no_tags' => 'getNoTags',
         'no_zones' => 'getNoZones',
-        'questions' => 'getQuestions'
+        'questions' => 'getQuestions',
+        'required' => 'getRequired',
+        'dynamic' => 'getDynamic',
+        'object_type' => 'getObjectType',
+        'object_type_name' => 'getObjectTypeName'
     ];
 
     public static function attributeMap()
@@ -229,6 +249,10 @@ class QuestionnaireTemplateModel implements ArrayAccess
         $this->container['no_tags'] = isset($data['no_tags']) ? $data['no_tags'] : null;
         $this->container['no_zones'] = isset($data['no_zones']) ? $data['no_zones'] : null;
         $this->container['questions'] = isset($data['questions']) ? $data['questions'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
+        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
+        $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
     }
 
     /**
@@ -609,6 +633,90 @@ class QuestionnaireTemplateModel implements ArrayAccess
     public function setQuestions($questions)
     {
         $this->container['questions'] = $questions;
+
+        return $this;
+    }
+
+    /**
+     * Gets required
+     * @return bool
+     */
+    public function getRequired()
+    {
+        return $this->container['required'];
+    }
+
+    /**
+     * Sets required
+     * @param bool $required whetrher the questionnaoire is required to be filled in
+     * @return $this
+     */
+    public function setRequired($required)
+    {
+        $this->container['required'] = $required;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynamic
+     * @return bool
+     */
+    public function getDynamic()
+    {
+        return $this->container['dynamic'];
+    }
+
+    /**
+     * Sets dynamic
+     * @param bool $dynamic whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question.
+     * @return $this
+     */
+    public function setDynamic($dynamic)
+    {
+        $this->container['dynamic'] = $dynamic;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type
+     * @return object
+     */
+    public function getObjectType()
+    {
+        return $this->container['object_type'];
+    }
+
+    /**
+     * Sets object_type
+     * @param object $object_type Object type IDs available for this questionnaire
+     * @return $this
+     */
+    public function setObjectType($object_type)
+    {
+        $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type_name
+     * @return string
+     */
+    public function getObjectTypeName()
+    {
+        return $this->container['object_type_name'];
+    }
+
+    /**
+     * Sets object_type_name
+     * @param string $object_type_name Object type name for the bound object to this questionnaire
+     * @return $this
+     */
+    public function setObjectTypeName($object_type_name)
+    {
+        $this->container['object_type_name'] = $object_type_name;
 
         return $this;
     }
