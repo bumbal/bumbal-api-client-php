@@ -601,4 +601,11 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeMatchingRouteIds()
     {
     }
+
+    /**
+     * Test attribute "include_route_capacities"
+     */
+    public function testPropertyIncludeRouteCapacities()
+    {
+    }
 }

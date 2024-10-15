@@ -127,6 +127,20 @@ class ActivityRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "search_exact"
+     */
+    public function testPropertySearchExact()
+    {
+    }
+
+    /**
+     * Test attribute "search_relevance"
+     */
+    public function testPropertySearchRelevance()
+    {
+    }
+
+    /**
      * Test attribute "as_list"
      */
     public function testPropertyAsList()

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **required** | **bool** | whetrher the questionnaoire is required to be filled in | [optional] 
 **dynamic** | **bool** | whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question. | [optional] 
 **finished** | **bool** | whetrher the questionnaoire is already filled in completely | [optional] 
+**files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

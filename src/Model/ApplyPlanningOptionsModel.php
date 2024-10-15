@@ -54,7 +54,7 @@ class ApplyPlanningOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'lock_activities' => 'int'
     ];
 
     /**
@@ -62,7 +62,7 @@ class ApplyPlanningOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        
+        'lock_activities' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +80,7 @@ class ApplyPlanningOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'lock_activities' => 'lock_activities'
     ];
 
 
@@ -89,7 +89,7 @@ class ApplyPlanningOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'lock_activities' => 'setLockActivities'
     ];
 
 
@@ -98,7 +98,7 @@ class ApplyPlanningOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'lock_activities' => 'getLockActivities'
     ];
 
     public static function attributeMap()
@@ -132,6 +132,7 @@ class ApplyPlanningOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['lock_activities'] = isset($data['lock_activities']) ? $data['lock_activities'] : null;
     }
 
     /**
@@ -158,6 +159,27 @@ class ApplyPlanningOptionsModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets lock_activities
+     * @return int
+     */
+    public function getLockActivities()
+    {
+        return $this->container['lock_activities'];
+    }
+
+    /**
+     * Sets lock_activities
+     * @param int $lock_activities Activity locked status. 0 = not locked. 1 = locked on route and time. 2 = locked on route. Default 0
+     * @return $this
+     */
+    public function setLockActivities($lock_activities)
+    {
+        $this->container['lock_activities'] = $lock_activities;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

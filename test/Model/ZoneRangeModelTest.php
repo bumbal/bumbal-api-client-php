@@ -99,6 +99,20 @@ class ZoneRangeModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "postcode_from"
+     */
+    public function testPropertyPostcodeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "postcode_to"
+     */
+    public function testPropertyPostcodeTo()
+    {
+    }
+
+    /**
      * Test attribute "iso_country"
      */
     public function testPropertyIsoCountry()

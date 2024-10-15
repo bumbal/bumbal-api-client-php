@@ -63,7 +63,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'answer' => 'string',
         'chosen_options' => 'int[]',
         'answer_options' => '\BumbalClient\Model\QuestionnaireQuestionOptionModel[]',
-        'questionnaire_question_type_name' => 'string'
+        'questionnaire_question_type_name' => 'string',
+        'files' => '\BumbalClient\Model\FileModel[]'
     ];
 
     /**
@@ -80,7 +81,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'answer' => 'string',
         'chosen_options' => null,
         'answer_options' => null,
-        'questionnaire_question_type_name' => 'string'
+        'questionnaire_question_type_name' => 'string',
+        'files' => null
     ];
 
     public static function swaggerTypes()
@@ -107,7 +109,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'answer' => 'answer',
         'chosen_options' => 'chosen_options',
         'answer_options' => 'answer_options',
-        'questionnaire_question_type_name' => 'questionnaire_question_type_name'
+        'questionnaire_question_type_name' => 'questionnaire_question_type_name',
+        'files' => 'files'
     ];
 
 
@@ -125,7 +128,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'answer' => 'setAnswer',
         'chosen_options' => 'setChosenOptions',
         'answer_options' => 'setAnswerOptions',
-        'questionnaire_question_type_name' => 'setQuestionnaireQuestionTypeName'
+        'questionnaire_question_type_name' => 'setQuestionnaireQuestionTypeName',
+        'files' => 'setFiles'
     ];
 
 
@@ -143,7 +147,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'answer' => 'getAnswer',
         'chosen_options' => 'getChosenOptions',
         'answer_options' => 'getAnswerOptions',
-        'questionnaire_question_type_name' => 'getQuestionnaireQuestionTypeName'
+        'questionnaire_question_type_name' => 'getQuestionnaireQuestionTypeName',
+        'files' => 'getFiles'
     ];
 
     public static function attributeMap()
@@ -187,6 +192,7 @@ class QuestionnaireAnswerModel implements ArrayAccess
         $this->container['chosen_options'] = isset($data['chosen_options']) ? $data['chosen_options'] : null;
         $this->container['answer_options'] = isset($data['answer_options']) ? $data['answer_options'] : null;
         $this->container['questionnaire_question_type_name'] = isset($data['questionnaire_question_type_name']) ? $data['questionnaire_question_type_name'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
     }
 
     /**
@@ -420,6 +426,27 @@ class QuestionnaireAnswerModel implements ArrayAccess
     public function setQuestionnaireQuestionTypeName($questionnaire_question_type_name)
     {
         $this->container['questionnaire_question_type_name'] = $questionnaire_question_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
 
         return $this;
     }

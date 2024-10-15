@@ -174,4 +174,11 @@ class QuestionnaireModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFinished()
     {
     }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+    }
 }

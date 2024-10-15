@@ -57,6 +57,8 @@ class ZoneRangeModel implements ArrayAccess
         'id' => 'int',
         'zipcode_from' => 'int',
         'zipcode_to' => 'int',
+        'postcode_from' => 'string',
+        'postcode_to' => 'string',
         'iso_country' => 'string'
     ];
 
@@ -68,6 +70,8 @@ class ZoneRangeModel implements ArrayAccess
         'id' => 'int64',
         'zipcode_from' => 'int64',
         'zipcode_to' => 'int64',
+        'postcode_from' => null,
+        'postcode_to' => null,
         'iso_country' => null
     ];
 
@@ -89,6 +93,8 @@ class ZoneRangeModel implements ArrayAccess
         'id' => 'id',
         'zipcode_from' => 'zipcode_from',
         'zipcode_to' => 'zipcode_to',
+        'postcode_from' => 'postcode_from',
+        'postcode_to' => 'postcode_to',
         'iso_country' => 'iso_country'
     ];
 
@@ -101,6 +107,8 @@ class ZoneRangeModel implements ArrayAccess
         'id' => 'setId',
         'zipcode_from' => 'setZipcodeFrom',
         'zipcode_to' => 'setZipcodeTo',
+        'postcode_from' => 'setPostcodeFrom',
+        'postcode_to' => 'setPostcodeTo',
         'iso_country' => 'setIsoCountry'
     ];
 
@@ -113,6 +121,8 @@ class ZoneRangeModel implements ArrayAccess
         'id' => 'getId',
         'zipcode_from' => 'getZipcodeFrom',
         'zipcode_to' => 'getZipcodeTo',
+        'postcode_from' => 'getPostcodeFrom',
+        'postcode_to' => 'getPostcodeTo',
         'iso_country' => 'getIsoCountry'
     ];
 
@@ -150,6 +160,8 @@ class ZoneRangeModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['zipcode_from'] = isset($data['zipcode_from']) ? $data['zipcode_from'] : null;
         $this->container['zipcode_to'] = isset($data['zipcode_to']) ? $data['zipcode_to'] : null;
+        $this->container['postcode_from'] = isset($data['postcode_from']) ? $data['postcode_from'] : null;
+        $this->container['postcode_to'] = isset($data['postcode_to']) ? $data['postcode_to'] : null;
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
     }
 
@@ -237,6 +249,48 @@ class ZoneRangeModel implements ArrayAccess
     public function setZipcodeTo($zipcode_to)
     {
         $this->container['zipcode_to'] = $zipcode_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets postcode_from
+     * @return string
+     */
+    public function getPostcodeFrom()
+    {
+        return $this->container['postcode_from'];
+    }
+
+    /**
+     * Sets postcode_from
+     * @param string $postcode_from Full zipcode range start, with possibility to have letters
+     * @return $this
+     */
+    public function setPostcodeFrom($postcode_from)
+    {
+        $this->container['postcode_from'] = $postcode_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets postcode_to
+     * @return string
+     */
+    public function getPostcodeTo()
+    {
+        return $this->container['postcode_to'];
+    }
+
+    /**
+     * Sets postcode_to
+     * @param string $postcode_to Full zipcode range end, with possibility to have letters
+     * @return $this
+     */
+    public function setPostcodeTo($postcode_to)
+    {
+        $this->container['postcode_to'] = $postcode_to;
 
         return $this;
     }

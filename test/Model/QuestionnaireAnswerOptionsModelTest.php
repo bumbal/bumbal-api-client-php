@@ -83,4 +83,11 @@ class QuestionnaireAnswerOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeRecordInfo()
     {
     }
+
+    /**
+     * Test attribute "include_files"
+     */
+    public function testPropertyIncludeFiles()
+    {
+    }
 }

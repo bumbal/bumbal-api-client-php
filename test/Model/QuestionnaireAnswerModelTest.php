@@ -146,4 +146,11 @@ class QuestionnaireAnswerModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyQuestionnaireQuestionTypeName()
     {
     }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+    }
 }

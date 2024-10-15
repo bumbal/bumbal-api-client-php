@@ -60,7 +60,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'consider_historic_traffic_info' => 'bool',
         'in_sequence' => 'bool',
         'in_reverse_sequence' => 'bool',
-        'do_not_apply_planning' => 'bool'
+        'do_not_apply_planning' => 'bool',
+        'lock_activities' => 'int'
     ];
 
     /**
@@ -74,7 +75,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'consider_historic_traffic_info' => null,
         'in_sequence' => null,
         'in_reverse_sequence' => null,
-        'do_not_apply_planning' => null
+        'do_not_apply_planning' => null,
+        'lock_activities' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +100,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'consider_historic_traffic_info' => 'consider_historic_traffic_info',
         'in_sequence' => 'in_sequence',
         'in_reverse_sequence' => 'in_reverse_sequence',
-        'do_not_apply_planning' => 'do_not_apply_planning'
+        'do_not_apply_planning' => 'do_not_apply_planning',
+        'lock_activities' => 'lock_activities'
     ];
 
 
@@ -113,7 +116,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'consider_historic_traffic_info' => 'setConsiderHistoricTrafficInfo',
         'in_sequence' => 'setInSequence',
         'in_reverse_sequence' => 'setInReverseSequence',
-        'do_not_apply_planning' => 'setDoNotApplyPlanning'
+        'do_not_apply_planning' => 'setDoNotApplyPlanning',
+        'lock_activities' => 'setLockActivities'
     ];
 
 
@@ -128,7 +132,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'consider_historic_traffic_info' => 'getConsiderHistoricTrafficInfo',
         'in_sequence' => 'getInSequence',
         'in_reverse_sequence' => 'getInReverseSequence',
-        'do_not_apply_planning' => 'getDoNotApplyPlanning'
+        'do_not_apply_planning' => 'getDoNotApplyPlanning',
+        'lock_activities' => 'getLockActivities'
     ];
 
     public static function attributeMap()
@@ -169,6 +174,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         $this->container['in_sequence'] = isset($data['in_sequence']) ? $data['in_sequence'] : null;
         $this->container['in_reverse_sequence'] = isset($data['in_reverse_sequence']) ? $data['in_reverse_sequence'] : null;
         $this->container['do_not_apply_planning'] = isset($data['do_not_apply_planning']) ? $data['do_not_apply_planning'] : null;
+        $this->container['lock_activities'] = isset($data['lock_activities']) ? $data['lock_activities'] : null;
     }
 
     /**
@@ -339,6 +345,27 @@ class AutoPlanOptionsModel implements ArrayAccess
     public function setDoNotApplyPlanning($do_not_apply_planning)
     {
         $this->container['do_not_apply_planning'] = $do_not_apply_planning;
+
+        return $this;
+    }
+
+    /**
+     * Gets lock_activities
+     * @return int
+     */
+    public function getLockActivities()
+    {
+        return $this->container['lock_activities'];
+    }
+
+    /**
+     * Sets lock_activities
+     * @param int $lock_activities Activity locked status. 0 = not locked. 1 = locked on route and time. 2 = locked on route. Default 0
+     * @return $this
+     */
+    public function setLockActivities($lock_activities)
+    {
+        $this->container['lock_activities'] = $lock_activities;
 
         return $this;
     }

@@ -128,7 +128,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'bool',
         'include_activity_tags' => 'bool',
         'include_recurrence' => 'bool',
-        'include_matching_route_ids' => 'bool'
+        'include_matching_route_ids' => 'bool',
+        'include_route_capacities' => 'bool'
     ];
 
     /**
@@ -210,7 +211,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => null,
         'include_activity_tags' => null,
         'include_recurrence' => null,
-        'include_matching_route_ids' => null
+        'include_matching_route_ids' => null,
+        'include_route_capacities' => null
     ];
 
     public static function swaggerTypes()
@@ -302,7 +304,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'include_activity_notes',
         'include_activity_tags' => 'include_activity_tags',
         'include_recurrence' => 'include_recurrence',
-        'include_matching_route_ids' => 'include_matching_route_ids'
+        'include_matching_route_ids' => 'include_matching_route_ids',
+        'include_route_capacities' => 'include_route_capacities'
     ];
 
 
@@ -385,7 +388,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'setIncludeActivityNotes',
         'include_activity_tags' => 'setIncludeActivityTags',
         'include_recurrence' => 'setIncludeRecurrence',
-        'include_matching_route_ids' => 'setIncludeMatchingRouteIds'
+        'include_matching_route_ids' => 'setIncludeMatchingRouteIds',
+        'include_route_capacities' => 'setIncludeRouteCapacities'
     ];
 
 
@@ -468,7 +472,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'getIncludeActivityNotes',
         'include_activity_tags' => 'getIncludeActivityTags',
         'include_recurrence' => 'getIncludeRecurrence',
-        'include_matching_route_ids' => 'getIncludeMatchingRouteIds'
+        'include_matching_route_ids' => 'getIncludeMatchingRouteIds',
+        'include_route_capacities' => 'getIncludeRouteCapacities'
     ];
 
     public static function attributeMap()
@@ -577,6 +582,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_tags'] = isset($data['include_activity_tags']) ? $data['include_activity_tags'] : null;
         $this->container['include_recurrence'] = isset($data['include_recurrence']) ? $data['include_recurrence'] : null;
         $this->container['include_matching_route_ids'] = isset($data['include_matching_route_ids']) ? $data['include_matching_route_ids'] : null;
+        $this->container['include_route_capacities'] = isset($data['include_route_capacities']) ? $data['include_route_capacities'] : null;
     }
 
     /**
@@ -2175,6 +2181,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeMatchingRouteIds($include_matching_route_ids)
     {
         $this->container['include_matching_route_ids'] = $include_matching_route_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_route_capacities
+     * @return bool
+     */
+    public function getIncludeRouteCapacities()
+    {
+        return $this->container['include_route_capacities'];
+    }
+
+    /**
+     * Sets include_route_capacities
+     * @param bool $include_route_capacities Include route capacity values before and after actvity
+     * @return $this
+     */
+    public function setIncludeRouteCapacities($include_route_capacities)
+    {
+        $this->container['include_route_capacities'] = $include_route_capacities;
 
         return $this;
     }

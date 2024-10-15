@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **answer** | **string** | Answer | [optional] 
 **chosen_options** | **int[]** | Chosen option as answer | [optional] 
 **questionnaire_question_type_name** | **string** | Question type name | [optional] 
+**files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

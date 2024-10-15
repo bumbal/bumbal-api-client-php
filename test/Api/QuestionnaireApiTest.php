@@ -83,6 +83,16 @@ class QuestionnaireApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createQuestionnaire
+     *
+     * Add a new Questionnaire.
+     *
+     */
+    public function testCreateQuestionnaire()
+    {
+    }
+
+    /**
      * Test case for deleteQuestionnaire
      *
      * Delete an Questionnaire entry.

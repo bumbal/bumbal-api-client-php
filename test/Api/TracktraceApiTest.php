@@ -73,6 +73,16 @@ class TracktraceApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for trackTraceAttachActivityToIdentifier
+     *
+     * Attach an activity to an identifier.
+     *
+     */
+    public function testTrackTraceAttachActivityToIdentifier()
+    {
+    }
+
+    /**
      * Test case for trackTraceCalculateETA
      *
      * Calculate ETA for Activity.

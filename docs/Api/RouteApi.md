@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRoute**
-> \BumbalClient\Model\RouteModel retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling)
+> \BumbalClient\Model\RouteModel retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_corrected_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling)
 
 Retrieve a Route
 
@@ -372,12 +372,13 @@ $include_route_tags = true; // bool | Include Tags
 $include_driver_info = true; // bool | Include Driver info
 $include_equipment_info_car = true; // bool | Include Equipment info car
 $include_gps_locations = false; // bool | Include GPS locations
+$include_corrected_gps_locations = false; // bool | Include corrected GPS locations
 $include_activity_ids = false; // bool | Include Activity IDs
 $include_latest_position = false; // bool | Include Latest Known GPS location
 $apply_address_bundling = true; // bool | Bundle activities in result
 
 try {
-    $result = $api_instance->retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling);
+    $result = $api_instance->retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_corrected_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RouteApi->retrieveRoute: ', $e->getMessage(), PHP_EOL;
@@ -396,6 +397,7 @@ Name | Type | Description  | Notes
  **include_driver_info** | **bool**| Include Driver info | [default to true]
  **include_equipment_info_car** | **bool**| Include Equipment info car | [default to true]
  **include_gps_locations** | **bool**| Include GPS locations | [default to false]
+ **include_corrected_gps_locations** | **bool**| Include corrected GPS locations | [default to false]
  **include_activity_ids** | **bool**| Include Activity IDs | [default to false]
  **include_latest_position** | **bool**| Include Latest Known GPS location | [default to false]
  **apply_address_bundling** | **bool**| Bundle activities in result | [optional]

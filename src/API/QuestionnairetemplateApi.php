@@ -293,6 +293,95 @@ class QuestionnairetemplateApi
     }
 
     /**
+     * Operation getMatchingQuestionnaireTemplates
+     *
+     * Retrieves all questionnaire templates matching specified filters
+     *
+     * @param \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments $args Arguments for fetching questionnaire templates (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\InlineResponse200
+     */
+    public function getMatchingQuestionnaireTemplates($args)
+    {
+        list($response) = $this->getMatchingQuestionnaireTemplatesWithHttpInfo($args);
+        return $response;
+    }
+
+    /**
+     * Operation getMatchingQuestionnaireTemplatesWithHttpInfo
+     *
+     * Retrieves all questionnaire templates matching specified filters
+     *
+     * @param \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments $args Arguments for fetching questionnaire templates (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getMatchingQuestionnaireTemplatesWithHttpInfo($args)
+    {
+        // verify the required parameter 'args' is set
+        if ($args === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $args when calling getMatchingQuestionnaireTemplates');
+        }
+        // parse inputs
+        $resourcePath = "/questionnaire-template/get-matching-questionnaire-templates";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($args)) {
+            $_tempBody = $args;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\InlineResponse200',
+                '/questionnaire-template/get-matching-questionnaire-templates'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveListQuestionnaireTemplate
      *
      * Retrieve List of QuestionnaireTemplate

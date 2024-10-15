@@ -78,6 +78,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment' => 'bool',
         'include_equipment_ids' => 'bool',
         'include_gps_locations' => 'bool',
+        'include_corrected_gps_locations' => 'bool',
         'include_pause' => 'bool',
         'include_activity_ids' => 'bool',
         'include_latest_position' => 'bool',
@@ -122,6 +123,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment' => null,
         'include_equipment_ids' => null,
         'include_gps_locations' => null,
+        'include_corrected_gps_locations' => null,
         'include_pause' => null,
         'include_activity_ids' => null,
         'include_latest_position' => null,
@@ -176,6 +178,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment' => 'include_equipment',
         'include_equipment_ids' => 'include_equipment_ids',
         'include_gps_locations' => 'include_gps_locations',
+        'include_corrected_gps_locations' => 'include_corrected_gps_locations',
         'include_pause' => 'include_pause',
         'include_activity_ids' => 'include_activity_ids',
         'include_latest_position' => 'include_latest_position',
@@ -221,6 +224,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment' => 'setIncludeEquipment',
         'include_equipment_ids' => 'setIncludeEquipmentIds',
         'include_gps_locations' => 'setIncludeGpsLocations',
+        'include_corrected_gps_locations' => 'setIncludeCorrectedGpsLocations',
         'include_pause' => 'setIncludePause',
         'include_activity_ids' => 'setIncludeActivityIds',
         'include_latest_position' => 'setIncludeLatestPosition',
@@ -266,6 +270,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment' => 'getIncludeEquipment',
         'include_equipment_ids' => 'getIncludeEquipmentIds',
         'include_gps_locations' => 'getIncludeGpsLocations',
+        'include_corrected_gps_locations' => 'getIncludeCorrectedGpsLocations',
         'include_pause' => 'getIncludePause',
         'include_activity_ids' => 'getIncludeActivityIds',
         'include_latest_position' => 'getIncludeLatestPosition',
@@ -336,6 +341,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_equipment'] = isset($data['include_equipment']) ? $data['include_equipment'] : null;
         $this->container['include_equipment_ids'] = isset($data['include_equipment_ids']) ? $data['include_equipment_ids'] : null;
         $this->container['include_gps_locations'] = isset($data['include_gps_locations']) ? $data['include_gps_locations'] : null;
+        $this->container['include_corrected_gps_locations'] = isset($data['include_corrected_gps_locations']) ? $data['include_corrected_gps_locations'] : null;
         $this->container['include_pause'] = isset($data['include_pause']) ? $data['include_pause'] : null;
         $this->container['include_activity_ids'] = isset($data['include_activity_ids']) ? $data['include_activity_ids'] : null;
         $this->container['include_latest_position'] = isset($data['include_latest_position']) ? $data['include_latest_position'] : null;
@@ -876,6 +882,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeGpsLocations($include_gps_locations)
     {
         $this->container['include_gps_locations'] = $include_gps_locations;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_corrected_gps_locations
+     * @return bool
+     */
+    public function getIncludeCorrectedGpsLocations()
+    {
+        return $this->container['include_corrected_gps_locations'];
+    }
+
+    /**
+     * Sets include_corrected_gps_locations
+     * @param bool $include_corrected_gps_locations
+     * @return $this
+     */
+    public function setIncludeCorrectedGpsLocations($include_corrected_gps_locations)
+    {
+        $this->container['include_corrected_gps_locations'] = $include_corrected_gps_locations;
 
         return $this;
     }

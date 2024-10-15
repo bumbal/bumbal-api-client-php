@@ -61,6 +61,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
         'search_text' => 'string',
+        'search_exact' => 'bool',
+        'search_relevance' => 'bool',
         'as_list' => 'bool',
         'count_only' => 'bool'
     ];
@@ -77,6 +79,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => null,
         'sorting_direction' => null,
         'search_text' => null,
+        'search_exact' => null,
+        'search_relevance' => null,
         'as_list' => null,
         'count_only' => null
     ];
@@ -103,6 +107,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
         'search_text' => 'search_text',
+        'search_exact' => 'search_exact',
+        'search_relevance' => 'search_relevance',
         'as_list' => 'as_list',
         'count_only' => 'count_only'
     ];
@@ -120,6 +126,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
         'search_text' => 'setSearchText',
+        'search_exact' => 'setSearchExact',
+        'search_relevance' => 'setSearchRelevance',
         'as_list' => 'setAsList',
         'count_only' => 'setCountOnly'
     ];
@@ -137,6 +145,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
         'search_text' => 'getSearchText',
+        'search_exact' => 'getSearchExact',
+        'search_relevance' => 'getSearchRelevance',
         'as_list' => 'getAsList',
         'count_only' => 'getCountOnly'
     ];
@@ -215,6 +225,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['search_exact'] = isset($data['search_exact']) ? $data['search_exact'] : null;
+        $this->container['search_relevance'] = isset($data['search_relevance']) ? $data['search_relevance'] : null;
         $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
         $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
@@ -429,6 +441,48 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_exact
+     * @return bool
+     */
+    public function getSearchExact()
+    {
+        return $this->container['search_exact'];
+    }
+
+    /**
+     * Sets search_exact
+     * @param bool $search_exact Only return exact matches to search_text (only used when advanced searching is enabled on environment)
+     * @return $this
+     */
+    public function setSearchExact($search_exact)
+    {
+        $this->container['search_exact'] = $search_exact;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_relevance
+     * @return bool
+     */
+    public function getSearchRelevance()
+    {
+        return $this->container['search_relevance'];
+    }
+
+    /**
+     * Sets search_relevance
+     * @param bool $search_relevance Override sorting by search_text matching score first, original sorting second. Note that if no sorting field is explicitly specified, text_search matching score will still be sorted on, even if search_relevance = false. (only used when advanced searching is enabled on environment)
+     * @return $this
+     */
+    public function setSearchRelevance($search_relevance)
+    {
+        $this->container['search_relevance'] = $search_relevance;
 
         return $this;
     }

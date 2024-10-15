@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createQuestionnaireTemplate**](QuestionnairetemplateApi.md#createQuestionnaireTemplate) | **POST** /questionnaire-template | Add a new QuestionnaireTemplate
 [**deleteQuestionnaireTemplate**](QuestionnairetemplateApi.md#deleteQuestionnaireTemplate) | **DELETE** /questionnaire-template/{questionnaire-templateId} | Delete an QuestionnaireTemplate entry
+[**getMatchingQuestionnaireTemplates**](QuestionnairetemplateApi.md#getMatchingQuestionnaireTemplates) | **PUT** /questionnaire-template/get-matching-questionnaire-templates | Retrieves all questionnaire templates matching specified filters
 [**retrieveListQuestionnaireTemplate**](QuestionnairetemplateApi.md#retrieveListQuestionnaireTemplate) | **PUT** /questionnaire-template | Retrieve List of QuestionnaireTemplate
 [**retrieveQuestionnaireTemplate**](QuestionnairetemplateApi.md#retrieveQuestionnaireTemplate) | **GET** /questionnaire-template/{questionnaire-templateId} | Retrieve a QuestionnaireTemplate
 [**setQuestionnaireTemplate**](QuestionnairetemplateApi.md#setQuestionnaireTemplate) | **POST** /questionnaire-template/set | Set (create or update) a QuestionnaireTemplate
@@ -108,6 +109,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\ApiResponse31**](../Model/ApiResponse31.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMatchingQuestionnaireTemplates**
+> \BumbalClient\Model\InlineResponse200 getMatchingQuestionnaireTemplates($args)
+
+Retrieves all questionnaire templates matching specified filters
+
+This endpoint retrieves all questionnaire templates that match the specified object type, object ID, and questionnaire type filters. An option to use best fit analysis is also provided.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\QuestionnairetemplateApi();
+$args = new \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments(); // \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments | Arguments for fetching questionnaire templates
+
+try {
+    $result = $api_instance->getMatchingQuestionnaireTemplates($args);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnairetemplateApi->getMatchingQuestionnaireTemplates: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **args** | [**\BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments**](../Model/GetMatchingQuestionnaireTemplatesArguments.md)| Arguments for fetching questionnaire templates |
+
+### Return type
+
+[**\BumbalClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

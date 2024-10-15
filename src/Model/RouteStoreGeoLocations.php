@@ -55,8 +55,8 @@ class RouteStoreGeoLocations implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'route_id' => 'int',
-        'activity_id' => 'int',
-        'device' => 'string',
+        'identifier' => 'int',
+        'device' => '\BumbalClient\Model\RouteStoreGeoLocationsDevice',
         'geo_data' => 'object[]'
     ];
 
@@ -66,8 +66,8 @@ class RouteStoreGeoLocations implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'route_id' => 'int64',
-        'activity_id' => 'int64',
-        'device' => 'string',
+        'identifier' => 'string',
+        'device' => null,
         'geo_data' => null
     ];
 
@@ -87,7 +87,7 @@ class RouteStoreGeoLocations implements ArrayAccess
      */
     protected static $attributeMap = [
         'route_id' => 'route_id',
-        'activity_id' => 'activity_id',
+        'identifier' => 'identifier',
         'device' => 'device',
         'geo_data' => 'geo_data'
     ];
@@ -99,7 +99,7 @@ class RouteStoreGeoLocations implements ArrayAccess
      */
     protected static $setters = [
         'route_id' => 'setRouteId',
-        'activity_id' => 'setActivityId',
+        'identifier' => 'setIdentifier',
         'device' => 'setDevice',
         'geo_data' => 'setGeoData'
     ];
@@ -111,7 +111,7 @@ class RouteStoreGeoLocations implements ArrayAccess
      */
     protected static $getters = [
         'route_id' => 'getRouteId',
-        'activity_id' => 'getActivityId',
+        'identifier' => 'getIdentifier',
         'device' => 'getDevice',
         'geo_data' => 'getGeoData'
     ];
@@ -148,7 +148,7 @@ class RouteStoreGeoLocations implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
-        $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
         $this->container['device'] = isset($data['device']) ? $data['device'] : null;
         $this->container['geo_data'] = isset($data['geo_data']) ? $data['geo_data'] : null;
     }
@@ -200,29 +200,29 @@ class RouteStoreGeoLocations implements ArrayAccess
     }
 
     /**
-     * Gets activity_id
+     * Gets identifier
      * @return int
      */
-    public function getActivityId()
+    public function getIdentifier()
     {
-        return $this->container['activity_id'];
+        return $this->container['identifier'];
     }
 
     /**
-     * Sets activity_id
-     * @param int $activity_id Unique ID of Activity
+     * Sets identifier
+     * @param int $identifier Unique identifier of an activity before it becomes in progress
      * @return $this
      */
-    public function setActivityId($activity_id)
+    public function setIdentifier($identifier)
     {
-        $this->container['activity_id'] = $activity_id;
+        $this->container['identifier'] = $identifier;
 
         return $this;
     }
 
     /**
      * Gets device
-     * @return string
+     * @return \BumbalClient\Model\RouteStoreGeoLocationsDevice
      */
     public function getDevice()
     {
@@ -231,7 +231,7 @@ class RouteStoreGeoLocations implements ArrayAccess
 
     /**
      * Sets device
-     * @param string $device The device from which the coordinates are sent
+     * @param \BumbalClient\Model\RouteStoreGeoLocationsDevice $device
      * @return $this
      */
     public function setDevice($device)

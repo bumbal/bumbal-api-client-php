@@ -85,9 +85,9 @@ class RouteStoreGeoLocationsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "activity_id"
+     * Test attribute "identifier"
      */
-    public function testPropertyActivityId()
+    public function testPropertyIdentifier()
     {
     }
 

@@ -93,6 +93,16 @@ class QuestionnairetemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getMatchingQuestionnaireTemplates
+     *
+     * Retrieves all questionnaire templates matching specified filters.
+     *
+     */
+    public function testGetMatchingQuestionnaireTemplates()
+    {
+    }
+
+    /**
      * Test case for retrieveListQuestionnaireTemplate
      *
      * Retrieve List of QuestionnaireTemplate.

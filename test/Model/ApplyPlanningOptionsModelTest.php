@@ -76,4 +76,11 @@ class ApplyPlanningOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testApplyPlanningOptionsModel()
     {
     }
+
+    /**
+     * Test attribute "lock_activities"
+     */
+    public function testPropertyLockActivities()
+    {
+    }
 }

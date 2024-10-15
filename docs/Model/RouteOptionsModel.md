@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **include_equipment** | **bool** |  | [optional] 
 **include_equipment_ids** | **bool** |  | [optional] 
 **include_gps_locations** | **bool** |  | [optional] 
+**include_corrected_gps_locations** | **bool** |  | [optional] 
 **include_pause** | **bool** |  | [optional] 
 **include_activity_ids** | **bool** |  | [optional] 
 **include_latest_position** | **bool** |  | [optional] 

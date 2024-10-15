@@ -260,6 +260,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "eta_updated_at"
+     */
+    public function testPropertyEtaUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "eta_time"
+     */
+    public function testPropertyEtaTime()
+    {
+    }
+
+    /**
      * Test attribute "reference"
      */
     public function testPropertyReference()
@@ -578,6 +592,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "applied_capacities"
      */
     public function testPropertyAppliedCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "route_capacities_before"
+     */
+    public function testPropertyRouteCapacitiesBefore()
+    {
+    }
+
+    /**
+     * Test attribute "route_capacities_after"
+     */
+    public function testPropertyRouteCapacitiesAfter()
     {
     }
 

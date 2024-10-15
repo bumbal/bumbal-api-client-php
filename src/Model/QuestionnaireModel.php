@@ -67,7 +67,8 @@ class QuestionnaireModel implements ArrayAccess
         'object_id' => 'int',
         'required' => 'bool',
         'dynamic' => 'bool',
-        'finished' => 'bool'
+        'finished' => 'bool',
+        'files' => '\BumbalClient\Model\FileModel[]'
     ];
 
     /**
@@ -88,7 +89,8 @@ class QuestionnaireModel implements ArrayAccess
         'object_id' => null,
         'required' => null,
         'dynamic' => null,
-        'finished' => null
+        'finished' => null,
+        'files' => null
     ];
 
     public static function swaggerTypes()
@@ -119,7 +121,8 @@ class QuestionnaireModel implements ArrayAccess
         'object_id' => 'object_id',
         'required' => 'required',
         'dynamic' => 'dynamic',
-        'finished' => 'finished'
+        'finished' => 'finished',
+        'files' => 'files'
     ];
 
 
@@ -141,7 +144,8 @@ class QuestionnaireModel implements ArrayAccess
         'object_id' => 'setObjectId',
         'required' => 'setRequired',
         'dynamic' => 'setDynamic',
-        'finished' => 'setFinished'
+        'finished' => 'setFinished',
+        'files' => 'setFiles'
     ];
 
 
@@ -163,7 +167,8 @@ class QuestionnaireModel implements ArrayAccess
         'object_id' => 'getObjectId',
         'required' => 'getRequired',
         'dynamic' => 'getDynamic',
-        'finished' => 'getFinished'
+        'finished' => 'getFinished',
+        'files' => 'getFiles'
     ];
 
     public static function attributeMap()
@@ -211,6 +216,7 @@ class QuestionnaireModel implements ArrayAccess
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
         $this->container['finished'] = isset($data['finished']) ? $data['finished'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
     }
 
     /**
@@ -528,6 +534,27 @@ class QuestionnaireModel implements ArrayAccess
     public function setFinished($finished)
     {
         $this->container['finished'] = $finished;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
 
         return $this;
     }

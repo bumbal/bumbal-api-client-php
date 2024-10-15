@@ -80,6 +80,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'int',
         'planned_driving_distance' => 'int',
         'executed_driving_distance' => 'int',
+        'eta_updated_at' => '\DateTime',
+        'eta_time' => 'int',
         'reference' => 'string',
         'description' => 'string',
         'earliest_delivery_date_time' => '\DateTime',
@@ -126,6 +128,8 @@ class ActivityModel implements ArrayAccess
         'allowed_drivers' => '\BumbalClient\Model\AllowedDriverModel[]',
         'allowed_drivers_links' => '\BumbalClient\Model\LinkModel[]',
         'applied_capacities' => '\BumbalClient\Model\AppliedCapacitiesModel',
+        'route_capacities_before' => '\BumbalClient\Model\RouteCapacitiesModel[]',
+        'route_capacities_after' => '\BumbalClient\Model\RouteCapacitiesModel[]',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
         'recoveries' => '\BumbalClient\Model\RecoveryModel[]',
@@ -205,6 +209,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'int64',
         'planned_driving_distance' => 'int64',
         'executed_driving_distance' => 'int64',
+        'eta_updated_at' => 'date',
+        'eta_time' => null,
         'reference' => null,
         'description' => null,
         'earliest_delivery_date_time' => 'date',
@@ -251,6 +257,8 @@ class ActivityModel implements ArrayAccess
         'allowed_drivers' => null,
         'allowed_drivers_links' => null,
         'applied_capacities' => null,
+        'route_capacities_before' => null,
+        'route_capacities_after' => null,
         'capacities' => null,
         'package_lines' => null,
         'recoveries' => null,
@@ -340,6 +348,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'planned_driving_duration',
         'planned_driving_distance' => 'planned_driving_distance',
         'executed_driving_distance' => 'executed_driving_distance',
+        'eta_updated_at' => 'eta_updated_at',
+        'eta_time' => 'eta_time',
         'reference' => 'reference',
         'description' => 'description',
         'earliest_delivery_date_time' => 'earliest_delivery_date_time',
@@ -386,6 +396,8 @@ class ActivityModel implements ArrayAccess
         'allowed_drivers' => 'allowed_drivers',
         'allowed_drivers_links' => 'allowed_drivers_links',
         'applied_capacities' => 'applied_capacities',
+        'route_capacities_before' => 'route_capacities_before',
+        'route_capacities_after' => 'route_capacities_after',
         'capacities' => 'capacities',
         'package_lines' => 'package_lines',
         'recoveries' => 'recoveries',
@@ -466,6 +478,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'executed_driving_distance' => 'setExecutedDrivingDistance',
+        'eta_updated_at' => 'setEtaUpdatedAt',
+        'eta_time' => 'setEtaTime',
         'reference' => 'setReference',
         'description' => 'setDescription',
         'earliest_delivery_date_time' => 'setEarliestDeliveryDateTime',
@@ -512,6 +526,8 @@ class ActivityModel implements ArrayAccess
         'allowed_drivers' => 'setAllowedDrivers',
         'allowed_drivers_links' => 'setAllowedDriversLinks',
         'applied_capacities' => 'setAppliedCapacities',
+        'route_capacities_before' => 'setRouteCapacitiesBefore',
+        'route_capacities_after' => 'setRouteCapacitiesAfter',
         'capacities' => 'setCapacities',
         'package_lines' => 'setPackageLines',
         'recoveries' => 'setRecoveries',
@@ -592,6 +608,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'executed_driving_distance' => 'getExecutedDrivingDistance',
+        'eta_updated_at' => 'getEtaUpdatedAt',
+        'eta_time' => 'getEtaTime',
         'reference' => 'getReference',
         'description' => 'getDescription',
         'earliest_delivery_date_time' => 'getEarliestDeliveryDateTime',
@@ -638,6 +656,8 @@ class ActivityModel implements ArrayAccess
         'allowed_drivers' => 'getAllowedDrivers',
         'allowed_drivers_links' => 'getAllowedDriversLinks',
         'applied_capacities' => 'getAppliedCapacities',
+        'route_capacities_before' => 'getRouteCapacitiesBefore',
+        'route_capacities_after' => 'getRouteCapacitiesAfter',
         'capacities' => 'getCapacities',
         'package_lines' => 'getPackageLines',
         'recoveries' => 'getRecoveries',
@@ -911,6 +931,8 @@ class ActivityModel implements ArrayAccess
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['executed_driving_distance'] = isset($data['executed_driving_distance']) ? $data['executed_driving_distance'] : null;
+        $this->container['eta_updated_at'] = isset($data['eta_updated_at']) ? $data['eta_updated_at'] : null;
+        $this->container['eta_time'] = isset($data['eta_time']) ? $data['eta_time'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['earliest_delivery_date_time'] = isset($data['earliest_delivery_date_time']) ? $data['earliest_delivery_date_time'] : null;
@@ -957,6 +979,8 @@ class ActivityModel implements ArrayAccess
         $this->container['allowed_drivers'] = isset($data['allowed_drivers']) ? $data['allowed_drivers'] : null;
         $this->container['allowed_drivers_links'] = isset($data['allowed_drivers_links']) ? $data['allowed_drivers_links'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
+        $this->container['route_capacities_before'] = isset($data['route_capacities_before']) ? $data['route_capacities_before'] : null;
+        $this->container['route_capacities_after'] = isset($data['route_capacities_after']) ? $data['route_capacities_after'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
         $this->container['recoveries'] = isset($data['recoveries']) ? $data['recoveries'] : null;
@@ -1629,12 +1653,54 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets executed_driving_distance
-     * @param int $executed_driving_distance Executed driving distance from the activity before this one
+     * @param int $executed_driving_distance Executed driving distance of the activity
      * @return $this
      */
     public function setExecutedDrivingDistance($executed_driving_distance)
     {
         $this->container['executed_driving_distance'] = $executed_driving_distance;
+
+        return $this;
+    }
+
+    /**
+     * Gets eta_updated_at
+     * @return \DateTime|string|null
+     */
+    public function getEtaUpdatedAt()
+    {
+        return $this->container['eta_updated_at'];
+    }
+
+    /**
+     * Sets eta_updated_at
+     * @param \DateTime|string|null $eta_updated_at
+     * @return $this
+     */
+    public function setEtaUpdatedAt($eta_updated_at)
+    {
+        $this->container['eta_updated_at'] = $eta_updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets eta_time
+     * @return int
+     */
+    public function getEtaTime()
+    {
+        return $this->container['eta_time'];
+    }
+
+    /**
+     * Sets eta_time
+     * @param int $eta_time ETA time of this activity
+     * @return $this
+     */
+    public function setEtaTime($eta_time)
+    {
+        $this->container['eta_time'] = $eta_time;
 
         return $this;
     }
@@ -2601,6 +2667,48 @@ class ActivityModel implements ArrayAccess
     public function setAppliedCapacities($applied_capacities)
     {
         $this->container['applied_capacities'] = $applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets route_capacities_before
+     * @return \BumbalClient\Model\RouteCapacitiesModel[]
+     */
+    public function getRouteCapacitiesBefore()
+    {
+        return $this->container['route_capacities_before'];
+    }
+
+    /**
+     * Sets route_capacities_before
+     * @param \BumbalClient\Model\RouteCapacitiesModel[] $route_capacities_before
+     * @return $this
+     */
+    public function setRouteCapacitiesBefore($route_capacities_before)
+    {
+        $this->container['route_capacities_before'] = $route_capacities_before;
+
+        return $this;
+    }
+
+    /**
+     * Gets route_capacities_after
+     * @return \BumbalClient\Model\RouteCapacitiesModel[]
+     */
+    public function getRouteCapacitiesAfter()
+    {
+        return $this->container['route_capacities_after'];
+    }
+
+    /**
+     * Sets route_capacities_after
+     * @param \BumbalClient\Model\RouteCapacitiesModel[] $route_capacities_after
+     * @return $this
+     */
+    public function setRouteCapacitiesAfter($route_capacities_after)
+    {
+        $this->container['route_capacities_after'] = $route_capacities_after;
 
         return $this;
     }

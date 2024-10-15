@@ -90,4 +90,18 @@ class ZoneOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeBrands()
     {
     }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_meta_data"
+     */
+    public function testPropertyIncludeMetaData()
+    {
+    }
 }

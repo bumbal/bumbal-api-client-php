@@ -246,6 +246,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_corrected_gps_locations"
+     */
+    public function testPropertyIncludeCorrectedGpsLocations()
+    {
+    }
+
+    /**
      * Test attribute "include_pause"
      */
     public function testPropertyIncludePause()

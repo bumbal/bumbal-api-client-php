@@ -125,4 +125,11 @@ class AutoPlanOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDoNotApplyPlanning()
     {
     }
+
+    /**
+     * Test attribute "lock_activities"
+     */
+    public function testPropertyLockActivities()
+    {
+    }
 }

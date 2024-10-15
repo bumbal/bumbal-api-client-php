@@ -55,7 +55,9 @@ class ZoneOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_zone_ranges' => 'bool',
-        'include_brands' => 'bool'
+        'include_brands' => 'bool',
+        'include_links' => 'bool',
+        'include_meta_data' => 'bool'
     ];
 
     /**
@@ -64,7 +66,9 @@ class ZoneOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_zone_ranges' => null,
-        'include_brands' => null
+        'include_brands' => null,
+        'include_links' => null,
+        'include_meta_data' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +87,9 @@ class ZoneOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'include_zone_ranges' => 'include_zone_ranges',
-        'include_brands' => 'include_brands'
+        'include_brands' => 'include_brands',
+        'include_links' => 'include_links',
+        'include_meta_data' => 'include_meta_data'
     ];
 
 
@@ -93,7 +99,9 @@ class ZoneOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'include_zone_ranges' => 'setIncludeZoneRanges',
-        'include_brands' => 'setIncludeBrands'
+        'include_brands' => 'setIncludeBrands',
+        'include_links' => 'setIncludeLinks',
+        'include_meta_data' => 'setIncludeMetaData'
     ];
 
 
@@ -103,7 +111,9 @@ class ZoneOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'include_zone_ranges' => 'getIncludeZoneRanges',
-        'include_brands' => 'getIncludeBrands'
+        'include_brands' => 'getIncludeBrands',
+        'include_links' => 'getIncludeLinks',
+        'include_meta_data' => 'getIncludeMetaData'
     ];
 
     public static function attributeMap()
@@ -139,6 +149,8 @@ class ZoneOptionsModel implements ArrayAccess
     {
         $this->container['include_zone_ranges'] = isset($data['include_zone_ranges']) ? $data['include_zone_ranges'] : null;
         $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
     }
 
     /**
@@ -204,6 +216,48 @@ class ZoneOptionsModel implements ArrayAccess
     public function setIncludeBrands($include_brands)
     {
         $this->container['include_brands'] = $include_brands;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
 
         return $this;
     }

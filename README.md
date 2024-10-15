@@ -270,6 +270,7 @@ Class | Method | HTTP request | Description
 *ProviderApi* | [**retrieveProvider**](docs/Api/ProviderApi.md#retrieveprovider) | **GET** /provider/{providerId} | Retrieve a Provider
 *ProviderApi* | [**updateProvider**](docs/Api/ProviderApi.md#updateprovider) | **PUT** /provider/{providerId} | Update a specific provider object
 *QuestionnaireApi* | [**changeLanguage**](docs/Api/QuestionnaireApi.md#changelanguage) | **POST** /questionnaire/change-language | change language of a Questionnaire
+*QuestionnaireApi* | [**createQuestionnaire**](docs/Api/QuestionnaireApi.md#createquestionnaire) | **POST** /questionnaire | Add a new Questionnaire
 *QuestionnaireApi* | [**deleteQuestionnaire**](docs/Api/QuestionnaireApi.md#deletequestionnaire) | **DELETE** /questionnaire/{questionnaireId} | Delete an Questionnaire entry
 *QuestionnaireApi* | [**getNextQuestion**](docs/Api/QuestionnaireApi.md#getnextquestion) | **POST** /questionnaire/get-next-question | getNextQuestion of an Questionnaire
 *QuestionnaireApi* | [**getPreviousQuestion**](docs/Api/QuestionnaireApi.md#getpreviousquestion) | **POST** /questionnaire/get-previous-question | getPreviousQuestion of an Questionnaire
@@ -285,6 +286,7 @@ Class | Method | HTTP request | Description
 *QuestionnairequestiontypeApi* | [**retrieveQuestionnaireQuestionType**](docs/Api/QuestionnairequestiontypeApi.md#retrievequestionnairequestiontype) | **GET** /questionnaire-question-type/{questionnaire-question-typeId} | Retrieve a QuestionnaireQuestionType
 *QuestionnairetemplateApi* | [**createQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#createquestionnairetemplate) | **POST** /questionnaire-template | Add a new QuestionnaireTemplate
 *QuestionnairetemplateApi* | [**deleteQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#deletequestionnairetemplate) | **DELETE** /questionnaire-template/{questionnaire-templateId} | Delete an QuestionnaireTemplate entry
+*QuestionnairetemplateApi* | [**getMatchingQuestionnaireTemplates**](docs/Api/QuestionnairetemplateApi.md#getmatchingquestionnairetemplates) | **PUT** /questionnaire-template/get-matching-questionnaire-templates | Retrieves all questionnaire templates matching specified filters
 *QuestionnairetemplateApi* | [**retrieveListQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#retrievelistquestionnairetemplate) | **PUT** /questionnaire-template | Retrieve List of QuestionnaireTemplate
 *QuestionnairetemplateApi* | [**retrieveQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#retrievequestionnairetemplate) | **GET** /questionnaire-template/{questionnaire-templateId} | Retrieve a QuestionnaireTemplate
 *QuestionnairetemplateApi* | [**setQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#setquestionnairetemplate) | **POST** /questionnaire-template/set | Set (create or update) a QuestionnaireTemplate
@@ -327,13 +329,13 @@ Class | Method | HTTP request | Description
 *RecurrenceApi* | [**adjustRecurrenceByActivityId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyactivityid) | **PUT** /recurrence/adjust-recurrence-by-activity-id/{activityId} | Adjust all recurrence objects following up to the provided activity id
 *RecurrenceApi* | [**adjustRecurrenceByRouteId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyrouteid) | **PUT** /recurrence/adjust-recurrence-by-route-id/{routeId} | Adjust all recurrence objects following up to the provided route id
 *RecurrenceApi* | [**attachRecurringActivities**](docs/Api/RecurrenceApi.md#attachrecurringactivities) | **POST** /recurrence/attach-recurring-activities | Attach recurring activities to a route recurrence
-*RecurrenceApi* | [**createActivity**](docs/Api/RecurrenceApi.md#createactivity) | **POST** /recurrence/activity | Create an activity recurrence on the service
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
-*RecurrenceApi* | [**createRoute**](docs/Api/RecurrenceApi.md#createroute) | **POST** /recurrence/route | Create an route recurrence on the service
+*RecurrenceApi* | [**createRecurrenceRoute**](docs/Api/RecurrenceApi.md#createrecurrenceroute) | **POST** /recurrence/route | Create an route recurrence on the service
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 *RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 *RecurrenceApi* | [**getRuns**](docs/Api/RecurrenceApi.md#getruns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
+*RecurrenceApi* | [**newActivityRecurrence**](docs/Api/RecurrenceApi.md#newactivityrecurrence) | **POST** /recurrence/activity | Create an activity recurrence on the service
 *RecurrenceApi* | [**processRuns**](docs/Api/RecurrenceApi.md#processruns) | **POST** /recurrence/process-runs | Executes the the processes for the ids retrieved with get-runs
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
@@ -382,6 +384,7 @@ Class | Method | HTTP request | Description
 *TagtypeApi* | [**retrieveTagType**](docs/Api/TagtypeApi.md#retrievetagtype) | **GET** /tag-type/{tagTypeId} | Retrieve a Tag type
 *TagtypeApi* | [**setTagType**](docs/Api/TagtypeApi.md#settagtype) | **POST** /tag-type/set | Set (create or update) Tag type
 *TagtypeApi* | [**updateTagType**](docs/Api/TagtypeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
+*TracktraceApi* | [**trackTraceAttachActivityToIdentifier**](docs/Api/TracktraceApi.md#tracktraceattachactivitytoidentifier) | **POST** /track-and-trace/attach-activity-to-identifier | Attach an activity to an identifier
 *TracktraceApi* | [**trackTraceCalculateETA**](docs/Api/TracktraceApi.md#tracktracecalculateeta) | **GET** /track-and-trace/calculate-eta/{activityId} | Calculate ETA for Activity
 *TracktraceApi* | [**trackTraceCalculateRoutesETA**](docs/Api/TracktraceApi.md#tracktracecalculaterouteseta) | **PUT** /track-and-trace/calculate-routes-eta | Calculate ETA for Activities on Routes
 *TrailerApi* | [**createTrailer**](docs/Api/TrailerApi.md#createtrailer) | **POST** /trailer | Add a trailer
@@ -442,6 +445,7 @@ Class | Method | HTTP request | Description
  - [ActivityEtaModel](docs/Model/ActivityEtaModel.md)
  - [ActivityFiltersModel](docs/Model/ActivityFiltersModel.md)
  - [ActivityForToRouteModel](docs/Model/ActivityForToRouteModel.md)
+ - [ActivityIdentifierModel](docs/Model/ActivityIdentifierModel.md)
  - [ActivityListResponse](docs/Model/ActivityListResponse.md)
  - [ActivityModel](docs/Model/ActivityModel.md)
  - [ActivityOptionsModel](docs/Model/ActivityOptionsModel.md)
@@ -660,6 +664,8 @@ Class | Method | HTTP request | Description
  - [GetExecutableActivitiesDataModel](docs/Model/GetExecutableActivitiesDataModel.md)
  - [GetExecutableActivitiesFiltersModel](docs/Model/GetExecutableActivitiesFiltersModel.md)
  - [GetExecutableActivitiesOptionsModel](docs/Model/GetExecutableActivitiesOptionsModel.md)
+ - [GetMatchingQuestionnaireTemplatesArguments](docs/Model/GetMatchingQuestionnaireTemplatesArguments.md)
+ - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
  - [IrregularityCategoryFiltersModel](docs/Model/IrregularityCategoryFiltersModel.md)
  - [IrregularityCategoryListResponse](docs/Model/IrregularityCategoryListResponse.md)
@@ -692,6 +698,8 @@ Class | Method | HTTP request | Description
  - [LogOptionsModel](docs/Model/LogOptionsModel.md)
  - [LogRetrieveListArguments](docs/Model/LogRetrieveListArguments.md)
  - [ManualWebHookModel](docs/Model/ManualWebHookModel.md)
+ - [MatchingQuestionnaireTemplatesFiltersModel](docs/Model/MatchingQuestionnaireTemplatesFiltersModel.md)
+ - [MatchingQuestionnaireTemplatesOptionsModel](docs/Model/MatchingQuestionnaireTemplatesOptionsModel.md)
  - [MetaDataFiltersModel](docs/Model/MetaDataFiltersModel.md)
  - [MetaDataListResponse](docs/Model/MetaDataListResponse.md)
  - [MetaDataModel](docs/Model/MetaDataModel.md)
@@ -835,6 +843,7 @@ Class | Method | HTTP request | Description
  - [RecurrenceProcessRunsResponse](docs/Model/RecurrenceProcessRunsResponse.md)
  - [RecurrenceRetrieveListArguments](docs/Model/RecurrenceRetrieveListArguments.md)
  - [RemoveActivitiesFromRouteArguments](docs/Model/RemoveActivitiesFromRouteArguments.md)
+ - [RouteCapacitiesModel](docs/Model/RouteCapacitiesModel.md)
  - [RouteDetachFromRecurrenceArguments](docs/Model/RouteDetachFromRecurrenceArguments.md)
  - [RouteEtaModel](docs/Model/RouteEtaModel.md)
  - [RouteFiltersModel](docs/Model/RouteFiltersModel.md)
@@ -846,6 +855,7 @@ Class | Method | HTTP request | Description
  - [RoutePointsRetrieveListArguments](docs/Model/RoutePointsRetrieveListArguments.md)
  - [RouteRetrieveListArguments](docs/Model/RouteRetrieveListArguments.md)
  - [RouteStoreGeoLocations](docs/Model/RouteStoreGeoLocations.md)
+ - [RouteStoreGeoLocationsDevice](docs/Model/RouteStoreGeoLocationsDevice.md)
  - [RoutesEtaArguments](docs/Model/RoutesEtaArguments.md)
  - [RoutesEtaFiltersModel](docs/Model/RoutesEtaFiltersModel.md)
  - [RoutesEtaOptionsModel](docs/Model/RoutesEtaOptionsModel.md)

@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**changeLanguage**](QuestionnaireApi.md#changeLanguage) | **POST** /questionnaire/change-language | change language of a Questionnaire
+[**createQuestionnaire**](QuestionnaireApi.md#createQuestionnaire) | **POST** /questionnaire | Add a new Questionnaire
 [**deleteQuestionnaire**](QuestionnaireApi.md#deleteQuestionnaire) | **DELETE** /questionnaire/{questionnaireId} | Delete an Questionnaire entry
 [**getNextQuestion**](QuestionnaireApi.md#getNextQuestion) | **POST** /questionnaire/get-next-question | getNextQuestion of an Questionnaire
 [**getPreviousQuestion**](QuestionnaireApi.md#getPreviousQuestion) | **POST** /questionnaire/get-previous-question | getPreviousQuestion of an Questionnaire
@@ -54,6 +55,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\QuestionnaireChangeLanguageResponse**](../Model/QuestionnaireChangeLanguageResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createQuestionnaire**
+> \BumbalClient\Model\ApiResponse createQuestionnaire($body)
+
+Add a new Questionnaire
+
+Create a new questionnaire entry with specified details.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\QuestionnaireApi();
+$body = new \BumbalClient\Model\QuestionnaireModel(); // \BumbalClient\Model\QuestionnaireModel | Questionnaire object that needs to be added
+
+try {
+    $result = $api_instance->createQuestionnaire($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireApi->createQuestionnaire: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\QuestionnaireModel**](../Model/QuestionnaireModel.md)| Questionnaire object that needs to be added |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

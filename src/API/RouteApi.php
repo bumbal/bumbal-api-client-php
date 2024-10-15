@@ -638,15 +638,16 @@ class RouteApi
      * @param bool $include_driver_info Include Driver info (required)
      * @param bool $include_equipment_info_car Include Equipment info car (required)
      * @param bool $include_gps_locations Include GPS locations (required)
+     * @param bool $include_corrected_gps_locations Include corrected GPS locations (required)
      * @param bool $include_activity_ids Include Activity IDs (required)
      * @param bool $include_latest_position Include Latest Known GPS location (required)
      * @param bool $apply_address_bundling Bundle activities in result (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\RouteModel
      */
-    public function retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling = null)
+    public function retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_corrected_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling = null)
     {
-        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling);
+        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_corrected_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling);
         return $response;
     }
 
@@ -662,13 +663,14 @@ class RouteApi
      * @param bool $include_driver_info Include Driver info (required)
      * @param bool $include_equipment_info_car Include Equipment info car (required)
      * @param bool $include_gps_locations Include GPS locations (required)
+     * @param bool $include_corrected_gps_locations Include corrected GPS locations (required)
      * @param bool $include_activity_ids Include Activity IDs (required)
      * @param bool $include_latest_position Include Latest Known GPS location (required)
      * @param bool $apply_address_bundling Bundle activities in result (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\RouteModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling = null)
+    public function retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_corrected_gps_locations, $include_activity_ids, $include_latest_position, $apply_address_bundling = null)
     {
         // verify the required parameter 'route_id' is set
         if ($route_id === null) {
@@ -697,6 +699,10 @@ class RouteApi
         // verify the required parameter 'include_gps_locations' is set
         if ($include_gps_locations === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_gps_locations when calling retrieveRoute');
+        }
+        // verify the required parameter 'include_corrected_gps_locations' is set
+        if ($include_corrected_gps_locations === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_corrected_gps_locations when calling retrieveRoute');
         }
         // verify the required parameter 'include_activity_ids' is set
         if ($include_activity_ids === null) {
@@ -741,6 +747,10 @@ class RouteApi
         // query params
         if ($include_gps_locations !== null) {
             $queryParams['include_gps_locations'] = $this->apiClient->getSerializer()->toQueryValue($include_gps_locations);
+        }
+        // query params
+        if ($include_corrected_gps_locations !== null) {
+            $queryParams['include_corrected_gps_locations'] = $this->apiClient->getSerializer()->toQueryValue($include_corrected_gps_locations);
         }
         // query params
         if ($include_activity_ids !== null) {

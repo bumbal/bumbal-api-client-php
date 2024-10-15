@@ -54,7 +54,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_record_info' => 'bool'
+        'include_record_info' => 'bool',
+        'include_answers' => 'bool',
+        'include_files' => 'bool'
     ];
 
     /**
@@ -62,7 +64,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_record_info' => null
+        'include_record_info' => null,
+        'include_answers' => null,
+        'include_files' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +84,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_record_info' => 'include_record_info'
+        'include_record_info' => 'include_record_info',
+        'include_answers' => 'include_answers',
+        'include_files' => 'include_files'
     ];
 
 
@@ -89,7 +95,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_record_info' => 'setIncludeRecordInfo'
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_answers' => 'setIncludeAnswers',
+        'include_files' => 'setIncludeFiles'
     ];
 
 
@@ -98,7 +106,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_record_info' => 'getIncludeRecordInfo'
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_answers' => 'getIncludeAnswers',
+        'include_files' => 'getIncludeFiles'
     ];
 
     public static function attributeMap()
@@ -133,6 +143,8 @@ class QuestionnaireOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_answers'] = isset($data['include_answers']) ? $data['include_answers'] : null;
+        $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
     }
 
     /**
@@ -177,6 +189,48 @@ class QuestionnaireOptionsModel implements ArrayAccess
     public function setIncludeRecordInfo($include_record_info)
     {
         $this->container['include_record_info'] = $include_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_answers
+     * @return bool
+     */
+    public function getIncludeAnswers()
+    {
+        return $this->container['include_answers'];
+    }
+
+    /**
+     * Sets include_answers
+     * @param bool $include_answers
+     * @return $this
+     */
+    public function setIncludeAnswers($include_answers)
+    {
+        $this->container['include_answers'] = $include_answers;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_files
+     * @return bool
+     */
+    public function getIncludeFiles()
+    {
+        return $this->container['include_files'];
+    }
+
+    /**
+     * Sets include_files
+     * @param bool $include_files
+     * @return $this
+     */
+    public function setIncludeFiles($include_files)
+    {
+        $this->container['include_files'] = $include_files;
 
         return $this;
     }

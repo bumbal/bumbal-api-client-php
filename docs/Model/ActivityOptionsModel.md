@@ -78,6 +78,7 @@ Name | Type | Description | Notes
 **include_activity_tags** | **bool** | Deprecated! Use include_tags instead | [optional] 
 **include_recurrence** | **bool** | Include recurrence object | [optional] 
 **include_matching_route_ids** | **bool** | Include matching route ids | [optional] 
+**include_route_capacities** | **bool** | Include route capacity values before and after actvity | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
