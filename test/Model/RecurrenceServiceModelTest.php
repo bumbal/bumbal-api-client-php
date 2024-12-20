@@ -1,6 +1,6 @@
 <?php
 /**
- * CompartmentModelTest
+ * RecurrenceServiceModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * CompartmentModelTest Class Doc Comment
+ * RecurrenceServiceModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description CompartmentModel
+// * @description RecurrenceServiceModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CompartmentModelTest extends \PHPUnit_Framework_TestCase
+class RecurrenceServiceModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class CompartmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CompartmentModel"
+     * Test "RecurrenceServiceModel"
      */
-    public function testCompartmentModel()
+    public function testRecurrenceServiceModel()
     {
     }
 
@@ -85,86 +85,72 @@ class CompartmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "nr"
+     * Test attribute "name"
      */
-    public function testPropertyNr()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "trailer_id"
+     * Test attribute "uuid"
      */
-    public function testPropertyTrailerId()
+    public function testPropertyUuid()
     {
     }
 
     /**
-     * Test attribute "applied_capacities"
+     * Test attribute "type"
      */
-    public function testPropertyAppliedCapacities()
+    public function testPropertyType()
     {
     }
 
     /**
-     * Test attribute "capacities"
+     * Test attribute "rule"
      */
-    public function testPropertyCapacities()
+    public function testPropertyRule()
     {
     }
 
     /**
-     * Test attribute "filled_capacities"
+     * Test attribute "rule_readable"
      */
-    public function testPropertyFilledCapacities()
+    public function testPropertyRuleReadable()
     {
     }
 
     /**
-     * Test attribute "trailer_link"
+     * Test attribute "create_ahead"
      */
-    public function testPropertyTrailerLink()
+    public function testPropertyCreateAhead()
     {
     }
 
     /**
-     * Test attribute "links"
+     * Test attribute "has_finished"
      */
-    public function testPropertyLinks()
+    public function testPropertyHasFinished()
     {
     }
 
     /**
-     * Test attribute "meta_data"
+     * Test attribute "snapshot"
      */
-    public function testPropertyMetaData()
+    public function testPropertySnapshot()
     {
     }
 
     /**
-     * Test attribute "compartment_created_by"
+     * Test attribute "created_at"
      */
-    public function testPropertyCompartmentCreatedBy()
+    public function testPropertyCreatedAt()
     {
     }
 
     /**
-     * Test attribute "compartment_updated_by"
+     * Test attribute "updated_at"
      */
-    public function testPropertyCompartmentUpdatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "compartment_created_at"
-     */
-    public function testPropertyCompartmentCreatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "compartment_updated_at"
-     */
-    public function testPropertyCompartmentUpdatedAt()
+    public function testPropertyUpdatedAt()
     {
     }
 }

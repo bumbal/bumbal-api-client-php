@@ -80,8 +80,6 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'int',
         'planned_driving_distance' => 'int',
         'executed_driving_distance' => 'int',
-        'eta_updated_at' => '\DateTime',
-        'eta_time' => 'int',
         'reference' => 'string',
         'description' => 'string',
         'earliest_delivery_date_time' => '\DateTime',
@@ -151,7 +149,7 @@ class ActivityModel implements ArrayAccess
         'activity_id_after' => 'string',
         'bundled_activity_ids' => 'int[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
-        'recurrence' => '\BumbalClient\Model\RecurrenceModel',
+        'recurrence' => '\BumbalClient\Model\RecurrenceServiceModel',
         'recurrence_id' => 'int',
         'recurrence_nr' => 'int',
         'tag_names' => 'string[]',
@@ -209,8 +207,6 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'int64',
         'planned_driving_distance' => 'int64',
         'executed_driving_distance' => 'int64',
-        'eta_updated_at' => 'date',
-        'eta_time' => null,
         'reference' => null,
         'description' => null,
         'earliest_delivery_date_time' => 'date',
@@ -348,8 +344,6 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'planned_driving_duration',
         'planned_driving_distance' => 'planned_driving_distance',
         'executed_driving_distance' => 'executed_driving_distance',
-        'eta_updated_at' => 'eta_updated_at',
-        'eta_time' => 'eta_time',
         'reference' => 'reference',
         'description' => 'description',
         'earliest_delivery_date_time' => 'earliest_delivery_date_time',
@@ -478,8 +472,6 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'executed_driving_distance' => 'setExecutedDrivingDistance',
-        'eta_updated_at' => 'setEtaUpdatedAt',
-        'eta_time' => 'setEtaTime',
         'reference' => 'setReference',
         'description' => 'setDescription',
         'earliest_delivery_date_time' => 'setEarliestDeliveryDateTime',
@@ -608,8 +600,6 @@ class ActivityModel implements ArrayAccess
         'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'executed_driving_distance' => 'getExecutedDrivingDistance',
-        'eta_updated_at' => 'getEtaUpdatedAt',
-        'eta_time' => 'getEtaTime',
         'reference' => 'getReference',
         'description' => 'getDescription',
         'earliest_delivery_date_time' => 'getEarliestDeliveryDateTime',
@@ -931,8 +921,6 @@ class ActivityModel implements ArrayAccess
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['executed_driving_distance'] = isset($data['executed_driving_distance']) ? $data['executed_driving_distance'] : null;
-        $this->container['eta_updated_at'] = isset($data['eta_updated_at']) ? $data['eta_updated_at'] : null;
-        $this->container['eta_time'] = isset($data['eta_time']) ? $data['eta_time'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['earliest_delivery_date_time'] = isset($data['earliest_delivery_date_time']) ? $data['earliest_delivery_date_time'] : null;
@@ -1659,48 +1647,6 @@ class ActivityModel implements ArrayAccess
     public function setExecutedDrivingDistance($executed_driving_distance)
     {
         $this->container['executed_driving_distance'] = $executed_driving_distance;
-
-        return $this;
-    }
-
-    /**
-     * Gets eta_updated_at
-     * @return \DateTime|string|null
-     */
-    public function getEtaUpdatedAt()
-    {
-        return $this->container['eta_updated_at'];
-    }
-
-    /**
-     * Sets eta_updated_at
-     * @param \DateTime|string|null $eta_updated_at
-     * @return $this
-     */
-    public function setEtaUpdatedAt($eta_updated_at)
-    {
-        $this->container['eta_updated_at'] = $eta_updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets eta_time
-     * @return int
-     */
-    public function getEtaTime()
-    {
-        return $this->container['eta_time'];
-    }
-
-    /**
-     * Sets eta_time
-     * @param int $eta_time ETA time of this activity
-     * @return $this
-     */
-    public function setEtaTime($eta_time)
-    {
-        $this->container['eta_time'] = $eta_time;
 
         return $this;
     }
@@ -3156,7 +3102,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets recurrence
-     * @return \BumbalClient\Model\RecurrenceModel
+     * @return \BumbalClient\Model\RecurrenceServiceModel
      */
     public function getRecurrence()
     {
@@ -3165,7 +3111,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceServiceModel $recurrence
      * @return $this
      */
     public function setRecurrence($recurrence)

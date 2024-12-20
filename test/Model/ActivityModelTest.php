@@ -260,20 +260,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "eta_updated_at"
-     */
-    public function testPropertyEtaUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "eta_time"
-     */
-    public function testPropertyEtaTime()
-    {
-    }
-
-    /**
      * Test attribute "reference"
      */
     public function testPropertyReference()

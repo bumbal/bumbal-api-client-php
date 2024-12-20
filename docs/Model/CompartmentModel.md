@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **id** | **int** | Unique Identifier | [optional] 
 **nr** | **string** | Nr of compartment | [optional] 
 **trailer_id** | **int** |  | [optional] 
+**applied_capacities** | **object** |  | [optional] 
+**capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **filled_capacities** | [**\BumbalClient\Model\FilledCapacityModel[]**](FilledCapacityModel.md) |  | [optional] 
 **trailer_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
