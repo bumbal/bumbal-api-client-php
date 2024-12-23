@@ -149,7 +149,7 @@ class ActivityModel implements ArrayAccess
         'activity_id_after' => 'string',
         'bundled_activity_ids' => 'int[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
-        'recurrence' => '\BumbalClient\Model\RecurrenceServiceModel',
+        'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'recurrence_id' => 'int',
         'recurrence_nr' => 'int',
         'tag_names' => 'string[]',
@@ -3102,7 +3102,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets recurrence
-     * @return \BumbalClient\Model\RecurrenceServiceModel
+     * @return \BumbalClient\Model\RecurrenceModel
      */
     public function getRecurrence()
     {
@@ -3111,7 +3111,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceServiceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence
      * @return $this
      */
     public function setRecurrence($recurrence)
@@ -3629,6 +3629,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -3639,6 +3640,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -3650,6 +3652,7 @@ class ActivityModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -3664,6 +3667,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
