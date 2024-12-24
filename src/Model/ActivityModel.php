@@ -149,7 +149,7 @@ class ActivityModel implements ArrayAccess
         'activity_id_after' => 'string',
         'bundled_activity_ids' => 'int[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
-        'recurrence' => '\BumbalClient\Model\RecurrenceServiceModel',
+        'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'recurrence_id' => 'int',
         'recurrence_nr' => 'int',
         'tag_names' => 'string[]',
@@ -3102,7 +3102,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets recurrence
-     * @return \BumbalClient\Model\RecurrenceServiceModel
+     * @return \BumbalClient\Model\RecurrenceModel
      */
     public function getRecurrence()
     {
@@ -3111,7 +3111,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceServiceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence
      * @return $this
      */
     public function setRecurrence($recurrence)
