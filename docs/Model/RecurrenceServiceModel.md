@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **create_ahead** | **int** | How many days ahead to create recurrences | [optional] 
 **has_finished** | **bool** | If the recurrence has finished | [optional] 
 **snapshot** | [**\BumbalClient\Model\RecurrenceServiceSnapshot**](RecurrenceServiceSnapshot.md) | The entity that the recurrence is based on | [optional] 
+**base** | **string** | Recurrence base | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | Date and time of creation | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | Date and time of last update | [optional] 
 

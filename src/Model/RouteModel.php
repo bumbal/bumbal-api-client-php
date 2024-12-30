@@ -115,7 +115,7 @@ class RouteModel implements ArrayAccess
         'latest_known_position' => '\BumbalClient\Model\GPSLocationModel',
         'recurrence_id' => 'int',
         'recurrence_nr' => 'int',
-        'recurrence' => '\BumbalClient\Model\RecurrenceModel',
+        'recurrence' => '\BumbalClient\Model\RecurrenceServiceModel',
         'overdue' => 'bool',
         'optimized' => 'bool',
         'blocked' => 'bool',
@@ -2019,7 +2019,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets recurrence
-     * @return \BumbalClient\Model\RecurrenceModel
+     * @return \BumbalClient\Model\RecurrenceServiceModel
      */
     public function getRecurrence()
     {
@@ -2028,7 +2028,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceServiceModel $recurrence
      * @return $this
      */
     public function setRecurrence($recurrence)

@@ -141,6 +141,13 @@ class RecurrenceServiceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "base"
+     */
+    public function testPropertyBase()
+    {
+    }
+
+    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()

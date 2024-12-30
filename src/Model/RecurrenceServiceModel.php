@@ -63,6 +63,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'create_ahead' => 'int',
         'has_finished' => 'bool',
         'snapshot' => '\BumbalClient\Model\RecurrenceServiceSnapshot',
+        'base' => 'string',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -81,6 +82,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'create_ahead' => 'int64',
         'has_finished' => null,
         'snapshot' => null,
+        'base' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time'
     ];
@@ -109,6 +111,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'create_ahead' => 'create_ahead',
         'has_finished' => 'has_finished',
         'snapshot' => 'snapshot',
+        'base' => 'base',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at'
     ];
@@ -128,6 +131,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'create_ahead' => 'setCreateAhead',
         'has_finished' => 'setHasFinished',
         'snapshot' => 'setSnapshot',
+        'base' => 'setBase',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt'
     ];
@@ -147,6 +151,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'create_ahead' => 'getCreateAhead',
         'has_finished' => 'getHasFinished',
         'snapshot' => 'getSnapshot',
+        'base' => 'getBase',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt'
     ];
@@ -205,6 +210,7 @@ class RecurrenceServiceModel implements ArrayAccess
         $this->container['create_ahead'] = isset($data['create_ahead']) ? $data['create_ahead'] : null;
         $this->container['has_finished'] = isset($data['has_finished']) ? $data['has_finished'] : null;
         $this->container['snapshot'] = isset($data['snapshot']) ? $data['snapshot'] : null;
+        $this->container['base'] = isset($data['base']) ? $data['base'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
@@ -440,6 +446,27 @@ class RecurrenceServiceModel implements ArrayAccess
     public function setSnapshot($snapshot)
     {
         $this->container['snapshot'] = $snapshot;
+
+        return $this;
+    }
+
+    /**
+     * Gets base
+     * @return string
+     */
+    public function getBase()
+    {
+        return $this->container['base'];
+    }
+
+    /**
+     * Sets base
+     * @param string $base Recurrence base
+     * @return $this
+     */
+    public function setBase($base)
+    {
+        $this->container['base'] = $base;
 
         return $this;
     }
