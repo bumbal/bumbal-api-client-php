@@ -98,7 +98,7 @@ Name | Type | Description | Notes
 **activity_id_after** | **string** | Activity ID of the activity which must be performed after this activity | [optional] 
 **bundled_activity_ids** | **int[]** | Ids of activities within bundle activity | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**recurrence** | [**\BumbalClient\Model\RecurrenceServiceModel**](RecurrenceServiceModel.md) |  | [optional] 
+**recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **recurrence_id** | **int** | Unique Recurrence Identifier | [optional] 
 **recurrence_nr** | **int** | the sequence number of this activity within a recurrence | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 

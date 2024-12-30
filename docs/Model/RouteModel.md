@@ -64,7 +64,7 @@ Name | Type | Description | Notes
 **latest_known_position** | [**\BumbalClient\Model\GPSLocationModel**](GPSLocationModel.md) |  | [optional] 
 **recurrence_id** | **int** | id of recurrence where route belongs to | [optional] 
 **recurrence_nr** | **int** | the sequence number of this route within a recurrence | [optional] 
-**recurrence** | [**\BumbalClient\Model\RecurrenceServiceModel**](RecurrenceServiceModel.md) |  | [optional] 
+**recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **overdue** | **bool** | whether any activity on route is overdue | [optional] 
 **optimized** | **bool** | Activity optimized status within route. | [optional] 
 **blocked** | **bool** | a blocked route can not be auto-filled by customer calendars | [optional] 
