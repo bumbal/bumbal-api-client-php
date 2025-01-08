@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **planned_driving_time** | **int** | Deprecated! Driving time from the activity before this one | [optional] 
 **planned_driving_duration** | **int** | Driving time from the activity before this one | [optional] 
 **planned_driving_distance** | **int** | Planned driving distance from the activity before this one | [optional] 
-**executed_driving_distance** | **int** | Executed driving distance of the activity | [optional] 
+**executed_driving_distance** | **int** | Executed driving distance from the activity before this one | [optional] 
 **reference** | **string** | Reference of this activity | [optional] 
 **description** | **string** | description of this activity | [optional] 
 **earliest_delivery_date_time** | [**\DateTime**](Date.md) |  | [optional] 

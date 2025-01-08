@@ -113,6 +113,16 @@ class RecurrenceApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createActivityRecurrence_0
+     *
+     * Create an activity recurrence on the service.
+     *
+     */
+    public function testCreateActivityRecurrence0()
+    {
+    }
+
+    /**
      * Test case for createRecurrenceRoute
      *
      * Create an route recurrence on the service.
@@ -159,16 +169,6 @@ class RecurrenceApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetRuns()
-    {
-    }
-
-    /**
-     * Test case for newActivityRecurrence
-     *
-     * Create an activity recurrence on the service.
-     *
-     */
-    public function testNewActivityRecurrence()
     {
     }
 

@@ -102,11 +102,6 @@ class RouteEtaModel implements ArrayAccess
         'executed_date_time_from' => '\DateTime',
         'executed_date_time_to' => '\DateTime',
         'executed_driving_distance' => 'int',
-        'executed_activity_duration' => 'int',
-        'executed_start_duration' => 'string',
-        'executed_driving_duration' => 'int',
-        'executed_waiting_duration' => 'int',
-        'executed_end_duration' => 'string',
         'planned_driving_distance' => 'int',
         'planned_driving_duration' => 'int',
         'planned_waiting_duration' => 'int',
@@ -193,12 +188,7 @@ class RouteEtaModel implements ArrayAccess
         'planned_date_time_to' => 'date-time',
         'executed_date_time_from' => 'date-time',
         'executed_date_time_to' => 'date-time',
-        'executed_driving_distance' => 'int64',
-        'executed_activity_duration' => 'int64',
-        'executed_start_duration' => 'int64',
-        'executed_driving_duration' => 'int64',
-        'executed_waiting_duration' => 'int64',
-        'executed_end_duration' => 'int64',
+        'executed_driving_distance' => null,
         'planned_driving_distance' => null,
         'planned_driving_duration' => null,
         'planned_waiting_duration' => null,
@@ -296,11 +286,6 @@ class RouteEtaModel implements ArrayAccess
         'executed_date_time_from' => 'executed_date_time_from',
         'executed_date_time_to' => 'executed_date_time_to',
         'executed_driving_distance' => 'executed_driving_distance',
-        'executed_activity_duration' => 'executed_activity_duration',
-        'executed_start_duration' => 'executed_start_duration',
-        'executed_driving_duration' => 'executed_driving_duration',
-        'executed_waiting_duration' => 'executed_waiting_duration',
-        'executed_end_duration' => 'executed_end_duration',
         'planned_driving_distance' => 'planned_driving_distance',
         'planned_driving_duration' => 'planned_driving_duration',
         'planned_waiting_duration' => 'planned_waiting_duration',
@@ -389,11 +374,6 @@ class RouteEtaModel implements ArrayAccess
         'executed_date_time_from' => 'setExecutedDateTimeFrom',
         'executed_date_time_to' => 'setExecutedDateTimeTo',
         'executed_driving_distance' => 'setExecutedDrivingDistance',
-        'executed_activity_duration' => 'setExecutedActivityDuration',
-        'executed_start_duration' => 'setExecutedStartDuration',
-        'executed_driving_duration' => 'setExecutedDrivingDuration',
-        'executed_waiting_duration' => 'setExecutedWaitingDuration',
-        'executed_end_duration' => 'setExecutedEndDuration',
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_waiting_duration' => 'setPlannedWaitingDuration',
@@ -482,11 +462,6 @@ class RouteEtaModel implements ArrayAccess
         'executed_date_time_from' => 'getExecutedDateTimeFrom',
         'executed_date_time_to' => 'getExecutedDateTimeTo',
         'executed_driving_distance' => 'getExecutedDrivingDistance',
-        'executed_activity_duration' => 'getExecutedActivityDuration',
-        'executed_start_duration' => 'getExecutedStartDuration',
-        'executed_driving_duration' => 'getExecutedDrivingDuration',
-        'executed_waiting_duration' => 'getExecutedWaitingDuration',
-        'executed_end_duration' => 'getExecutedEndDuration',
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_waiting_duration' => 'getPlannedWaitingDuration',
@@ -636,11 +611,6 @@ class RouteEtaModel implements ArrayAccess
         $this->container['executed_date_time_from'] = isset($data['executed_date_time_from']) ? $data['executed_date_time_from'] : null;
         $this->container['executed_date_time_to'] = isset($data['executed_date_time_to']) ? $data['executed_date_time_to'] : null;
         $this->container['executed_driving_distance'] = isset($data['executed_driving_distance']) ? $data['executed_driving_distance'] : null;
-        $this->container['executed_activity_duration'] = isset($data['executed_activity_duration']) ? $data['executed_activity_duration'] : null;
-        $this->container['executed_start_duration'] = isset($data['executed_start_duration']) ? $data['executed_start_duration'] : null;
-        $this->container['executed_driving_duration'] = isset($data['executed_driving_duration']) ? $data['executed_driving_duration'] : null;
-        $this->container['executed_waiting_duration'] = isset($data['executed_waiting_duration']) ? $data['executed_waiting_duration'] : null;
-        $this->container['executed_end_duration'] = isset($data['executed_end_duration']) ? $data['executed_end_duration'] : null;
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_waiting_duration'] = isset($data['planned_waiting_duration']) ? $data['planned_waiting_duration'] : null;
@@ -1746,111 +1716,6 @@ class RouteEtaModel implements ArrayAccess
     public function setExecutedDrivingDistance($executed_driving_distance)
     {
         $this->container['executed_driving_distance'] = $executed_driving_distance;
-
-        return $this;
-    }
-
-    /**
-     * Gets executed_activity_duration
-     * @return int
-     */
-    public function getExecutedActivityDuration()
-    {
-        return $this->container['executed_activity_duration'];
-    }
-
-    /**
-     * Sets executed_activity_duration
-     * @param int $executed_activity_duration Executed duration for all activities in this route in minutes
-     * @return $this
-     */
-    public function setExecutedActivityDuration($executed_activity_duration)
-    {
-        $this->container['executed_activity_duration'] = $executed_activity_duration;
-
-        return $this;
-    }
-
-    /**
-     * Gets executed_start_duration
-     * @return string
-     */
-    public function getExecutedStartDuration()
-    {
-        return $this->container['executed_start_duration'];
-    }
-
-    /**
-     * Sets executed_start_duration
-     * @param string $executed_start_duration Duration for start activity
-     * @return $this
-     */
-    public function setExecutedStartDuration($executed_start_duration)
-    {
-        $this->container['executed_start_duration'] = $executed_start_duration;
-
-        return $this;
-    }
-
-    /**
-     * Gets executed_driving_duration
-     * @return int
-     */
-    public function getExecutedDrivingDuration()
-    {
-        return $this->container['executed_driving_duration'];
-    }
-
-    /**
-     * Sets executed_driving_duration
-     * @param int $executed_driving_duration Executed driving time of this route in minutes
-     * @return $this
-     */
-    public function setExecutedDrivingDuration($executed_driving_duration)
-    {
-        $this->container['executed_driving_duration'] = $executed_driving_duration;
-
-        return $this;
-    }
-
-    /**
-     * Gets executed_waiting_duration
-     * @return int
-     */
-    public function getExecutedWaitingDuration()
-    {
-        return $this->container['executed_waiting_duration'];
-    }
-
-    /**
-     * Sets executed_waiting_duration
-     * @param int $executed_waiting_duration Executed waiting time of this route in minutes
-     * @return $this
-     */
-    public function setExecutedWaitingDuration($executed_waiting_duration)
-    {
-        $this->container['executed_waiting_duration'] = $executed_waiting_duration;
-
-        return $this;
-    }
-
-    /**
-     * Gets executed_end_duration
-     * @return string
-     */
-    public function getExecutedEndDuration()
-    {
-        return $this->container['executed_end_duration'];
-    }
-
-    /**
-     * Sets executed_end_duration
-     * @param string $executed_end_duration Executed duration for end activity
-     * @return $this
-     */
-    public function setExecutedEndDuration($executed_end_duration)
-    {
-        $this->container['executed_end_duration'] = $executed_end_duration;
 
         return $this;
     }

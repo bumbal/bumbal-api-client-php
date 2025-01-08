@@ -58,8 +58,6 @@ class AddressRetrieveListArguments implements ArrayAccess
         'filters' => '\BumbalClient\Model\AddressFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_exact' => 'bool',
-        'search_relevance' => 'bool',
         'search_text' => 'string',
         'as_list' => 'bool'
     ];
@@ -73,8 +71,6 @@ class AddressRetrieveListArguments implements ArrayAccess
         'filters' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_exact' => null,
-        'search_relevance' => null,
         'search_text' => null,
         'as_list' => null
     ];
@@ -98,8 +94,6 @@ class AddressRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_exact' => 'search_exact',
-        'search_relevance' => 'search_relevance',
         'search_text' => 'search_text',
         'as_list' => 'as_list'
     ];
@@ -114,8 +108,6 @@ class AddressRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_exact' => 'setSearchExact',
-        'search_relevance' => 'setSearchRelevance',
         'search_text' => 'setSearchText',
         'as_list' => 'setAsList'
     ];
@@ -130,8 +122,6 @@ class AddressRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_exact' => 'getSearchExact',
-        'search_relevance' => 'getSearchRelevance',
         'search_text' => 'getSearchText',
         'as_list' => 'getAsList'
     ];
@@ -171,8 +161,6 @@ class AddressRetrieveListArguments implements ArrayAccess
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_exact'] = isset($data['search_exact']) ? $data['search_exact'] : null;
-        $this->container['search_relevance'] = isset($data['search_relevance']) ? $data['search_relevance'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
         $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
     }
@@ -287,48 +275,6 @@ class AddressRetrieveListArguments implements ArrayAccess
     }
 
     /**
-     * Gets search_exact
-     * @return bool
-     */
-    public function getSearchExact()
-    {
-        return $this->container['search_exact'];
-    }
-
-    /**
-     * Sets search_exact
-     * @param bool $search_exact Only return exact matches to search_text (only used when advanced searching is enabled on environment)
-     * @return $this
-     */
-    public function setSearchExact($search_exact)
-    {
-        $this->container['search_exact'] = $search_exact;
-
-        return $this;
-    }
-
-    /**
-     * Gets search_relevance
-     * @return bool
-     */
-    public function getSearchRelevance()
-    {
-        return $this->container['search_relevance'];
-    }
-
-    /**
-     * Sets search_relevance
-     * @param bool $search_relevance Override default sorting by search_text matching score (only used when advanced searching is enabled on environment)
-     * @return $this
-     */
-    public function setSearchRelevance($search_relevance)
-    {
-        $this->container['search_relevance'] = $search_relevance;
-
-        return $this;
-    }
-
-    /**
      * Gets search_text
      * @return string
      */
@@ -374,6 +320,7 @@ class AddressRetrieveListArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -384,6 +331,7 @@ class AddressRetrieveListArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -395,6 +343,7 @@ class AddressRetrieveListArguments implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -409,6 +358,7 @@ class AddressRetrieveListArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -8,12 +8,12 @@ Method | HTTP request | Description
 [**adjustRecurrenceByRouteId**](RecurrenceApi.md#adjustRecurrenceByRouteId) | **PUT** /recurrence/adjust-recurrence-by-route-id/{routeId} | Adjust all recurrence objects following up to the provided route id
 [**attachRecurringActivities**](RecurrenceApi.md#attachRecurringActivities) | **POST** /recurrence/attach-recurring-activities | Attach recurring activities to a route recurrence
 [**createActivityRecurrence**](RecurrenceApi.md#createActivityRecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
+[**createActivityRecurrence_0**](RecurrenceApi.md#createActivityRecurrence_0) | **POST** /recurrence/activity | Create an activity recurrence on the service
 [**createRecurrenceRoute**](RecurrenceApi.md#createRecurrenceRoute) | **POST** /recurrence/route | Create an route recurrence on the service
 [**createRouteRecurrence**](RecurrenceApi.md#createRouteRecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 [**deleteRecurrenceObject**](RecurrenceApi.md#deleteRecurrenceObject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 [**finish**](RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 [**getRuns**](RecurrenceApi.md#getRuns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
-[**newActivityRecurrence**](RecurrenceApi.md#newActivityRecurrence) | **POST** /recurrence/activity | Create an activity recurrence on the service
 [**processRuns**](RecurrenceApi.md#processRuns) | **POST** /recurrence/process-runs | Executes the the processes for the ids retrieved with get-runs
 [**retrieveListRecurrence**](RecurrenceApi.md#retrieveListRecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 [**retrieveRecurrence**](RecurrenceApi.md#retrieveRecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
@@ -219,6 +219,60 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\BumbalClient\Model\RecurrenceModel**](../Model/RecurrenceModel.md)| Recurrence object that needs to be created |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createActivityRecurrence_0**
+> \BumbalClient\Model\ApiResponse createActivityRecurrence_0($body)
+
+Create an activity recurrence on the service
+
+Create an activity recurrence on the service
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\RecurrenceApi();
+$body = new \BumbalClient\Model\Body(); // \BumbalClient\Model\Body | Recurrence object that needs to be created
+
+try {
+    $result = $api_instance->createActivityRecurrence_0($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RecurrenceApi->createActivityRecurrence_0: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\Body**](../Model/Body.md)| Recurrence object that needs to be created |
 
 ### Return type
 
@@ -489,60 +543,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\RecurrenceGetRunsResponse**](../Model/RecurrenceGetRunsResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **newActivityRecurrence**
-> \BumbalClient\Model\ApiResponse newActivityRecurrence($body)
-
-Create an activity recurrence on the service
-
-Create an activity recurrence on the service
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
-// Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-$api_instance = new BumbalClient\Api\RecurrenceApi();
-$body = new \BumbalClient\Model\Body(); // \BumbalClient\Model\Body | Recurrence object that needs to be created
-
-try {
-    $result = $api_instance->newActivityRecurrence($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling RecurrenceApi->newActivityRecurrence: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\Body**](../Model/Body.md)| Recurrence object that needs to be created |
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

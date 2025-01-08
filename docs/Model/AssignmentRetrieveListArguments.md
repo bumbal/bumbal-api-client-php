@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 
-**search_exact** | **bool** | Only return exact matches to search_text (only used when advanced searching is enabled on environment) | [optional] 
-**search_relevance** | **bool** | Override default sorting by search_text matching score (only used when advanced searching is enabled on environment) | [optional] 
 **sorting_column** | **string** | Sorting Column. Option include_party_name has to be set for party_name as the sorting column. Option include_booking_account has to be set for account_name as the sorting column. | [optional] 
 **sorting_direction** | **string** | Sorting Direction | [optional] 
 **as_list** | **bool** |  | [optional] 

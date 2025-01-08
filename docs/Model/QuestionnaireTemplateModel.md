@@ -22,13 +22,8 @@ Name | Type | Description | Notes
 **questions** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionModel[]**](QuestionnaireTemplateQuestionModel.md) |  | [optional] 
 **required** | **bool** | whetrher the questionnaoire is required to be filled in | [optional] 
 **dynamic** | **bool** | whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question. | [optional] 
-**object_type** | **int** | Object type ID for the bound object to this questionnaire | [optional] 
+**object_type** | **object** | Object type IDs available for this questionnaire | [optional] 
 **object_type_name** | **string** | Object type name for the bound object to this questionnaire | [optional] 
-**created_by** | **string** | ID of the user who created the questionnaire template | [optional] 
-**updated_by** | **string** | ID of the user who last updated the questionnaire template | [optional] 
-**created_at** | [**\DateTime**](\DateTime.md) | Date and time when the questionnaire template was created | [optional] 
-**updated_at** | [**\DateTime**](\DateTime.md) | Date and time when the questionnaire template was last updated | [optional] 
-**removed** | **bool** | Questionnaire template (&#x3D;true) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

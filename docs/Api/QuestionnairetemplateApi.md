@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createQuestionnaireTemplate**](QuestionnairetemplateApi.md#createQuestionnaireTemplate) | **POST** /questionnaire-template | Add a new QuestionnaireTemplate
 [**deleteQuestionnaireTemplate**](QuestionnairetemplateApi.md#deleteQuestionnaireTemplate) | **DELETE** /questionnaire-template/{questionnaire-templateId} | Delete an QuestionnaireTemplate entry
-[**getMatchingQuestionnaireTemplates**](QuestionnairetemplateApi.md#getMatchingQuestionnaireTemplates) | **PUT** /questionnaire-template/get-matching-questionnaire-templates | Retrieves all questionnaire templates matching specified filters
+[**getMatchingQuestionnaireTemplates**](QuestionnairetemplateApi.md#getMatchingQuestionnaireTemplates) | **GET** /questionnaire-template/get-matching-templates | Retrieves all questionnaire templates matching specified filters
 [**retrieveListQuestionnaireTemplate**](QuestionnairetemplateApi.md#retrieveListQuestionnaireTemplate) | **PUT** /questionnaire-template | Retrieve List of QuestionnaireTemplate
 [**retrieveQuestionnaireTemplate**](QuestionnairetemplateApi.md#retrieveQuestionnaireTemplate) | **GET** /questionnaire-template/{questionnaire-templateId} | Retrieve a QuestionnaireTemplate
 [**setQuestionnaireTemplate**](QuestionnairetemplateApi.md#setQuestionnaireTemplate) | **POST** /questionnaire-template/set | Set (create or update) a QuestionnaireTemplate

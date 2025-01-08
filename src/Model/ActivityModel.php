@@ -1641,7 +1641,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets executed_driving_distance
-     * @param int $executed_driving_distance Executed driving distance of the activity
+     * @param int $executed_driving_distance Executed driving distance from the activity before this one
      * @return $this
      */
     public function setExecutedDrivingDistance($executed_driving_distance)

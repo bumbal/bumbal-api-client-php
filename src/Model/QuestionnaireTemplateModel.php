@@ -73,13 +73,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questions' => '\BumbalClient\Model\QuestionnaireTemplateQuestionModel[]',
         'required' => 'bool',
         'dynamic' => 'bool',
-        'object_type' => 'int',
-        'object_type_name' => 'string',
-        'created_by' => 'string',
-        'updated_by' => 'string',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime',
-        'removed' => 'bool'
+        'object_type' => 'object',
+        'object_type_name' => 'string'
     ];
 
     /**
@@ -106,13 +101,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questions' => null,
         'required' => null,
         'dynamic' => null,
-        'object_type' => 'int64',
-        'object_type_name' => 'string',
-        'created_by' => 'int64',
-        'updated_by' => 'int64',
-        'created_at' => 'date-time',
-        'updated_at' => 'date-time',
-        'removed' => null
+        'object_type' => null,
+        'object_type_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -150,12 +140,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'required' => 'required',
         'dynamic' => 'dynamic',
         'object_type' => 'object_type',
-        'object_type_name' => 'object_type_name',
-        'created_by' => 'created_by',
-        'updated_by' => 'updated_by',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at',
-        'removed' => 'removed'
+        'object_type_name' => 'object_type_name'
     ];
 
 
@@ -184,12 +169,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'required' => 'setRequired',
         'dynamic' => 'setDynamic',
         'object_type' => 'setObjectType',
-        'object_type_name' => 'setObjectTypeName',
-        'created_by' => 'setCreatedBy',
-        'updated_by' => 'setUpdatedBy',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt',
-        'removed' => 'setRemoved'
+        'object_type_name' => 'setObjectTypeName'
     ];
 
 
@@ -218,12 +198,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'required' => 'getRequired',
         'dynamic' => 'getDynamic',
         'object_type' => 'getObjectType',
-        'object_type_name' => 'getObjectTypeName',
-        'created_by' => 'getCreatedBy',
-        'updated_by' => 'getUpdatedBy',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt',
-        'removed' => 'getRemoved'
+        'object_type_name' => 'getObjectTypeName'
     ];
 
     public static function attributeMap()
@@ -278,11 +253,6 @@ class QuestionnaireTemplateModel implements ArrayAccess
         $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
-        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
-        $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -711,7 +681,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
 
     /**
      * Gets object_type
-     * @return int
+     * @return object
      */
     public function getObjectType()
     {
@@ -720,7 +690,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
 
     /**
      * Sets object_type
-     * @param int $object_type Object type ID for the bound object to this questionnaire
+     * @param object $object_type Object type IDs available for this questionnaire
      * @return $this
      */
     public function setObjectType($object_type)
@@ -747,111 +717,6 @@ class QuestionnaireTemplateModel implements ArrayAccess
     public function setObjectTypeName($object_type_name)
     {
         $this->container['object_type_name'] = $object_type_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_by
-     * @return string
-     */
-    public function getCreatedBy()
-    {
-        return $this->container['created_by'];
-    }
-
-    /**
-     * Sets created_by
-     * @param string $created_by ID of the user who created the questionnaire template
-     * @return $this
-     */
-    public function setCreatedBy($created_by)
-    {
-        $this->container['created_by'] = $created_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_by
-     * @return string
-     */
-    public function getUpdatedBy()
-    {
-        return $this->container['updated_by'];
-    }
-
-    /**
-     * Sets updated_by
-     * @param string $updated_by ID of the user who last updated the questionnaire template
-     * @return $this
-     */
-    public function setUpdatedBy($updated_by)
-    {
-        $this->container['updated_by'] = $updated_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return \DateTime|string|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param \DateTime|string|null $created_at Date and time when the questionnaire template was created
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return \DateTime|string|null
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param \DateTime|string|null $updated_at Date and time when the questionnaire template was last updated
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets removed
-     * @return bool
-     */
-    public function getRemoved()
-    {
-        return $this->container['removed'];
-    }
-
-    /**
-     * Sets removed
-     * @param bool $removed Questionnaire template (=true)
-     * @return $this
-     */
-    public function setRemoved($removed)
-    {
-        $this->container['removed'] = $removed;
 
         return $this;
     }

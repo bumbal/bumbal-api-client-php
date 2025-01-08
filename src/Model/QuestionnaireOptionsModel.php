@@ -55,7 +55,6 @@ class QuestionnaireOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_record_info' => 'bool',
-        'include_answers' => 'bool',
         'include_files' => 'bool'
     ];
 
@@ -65,7 +64,6 @@ class QuestionnaireOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_record_info' => null,
-        'include_answers' => null,
         'include_files' => null
     ];
 
@@ -85,7 +83,6 @@ class QuestionnaireOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'include_record_info' => 'include_record_info',
-        'include_answers' => 'include_answers',
         'include_files' => 'include_files'
     ];
 
@@ -96,7 +93,6 @@ class QuestionnaireOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'include_record_info' => 'setIncludeRecordInfo',
-        'include_answers' => 'setIncludeAnswers',
         'include_files' => 'setIncludeFiles'
     ];
 
@@ -107,7 +103,6 @@ class QuestionnaireOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'include_record_info' => 'getIncludeRecordInfo',
-        'include_answers' => 'getIncludeAnswers',
         'include_files' => 'getIncludeFiles'
     ];
 
@@ -143,7 +138,6 @@ class QuestionnaireOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
-        $this->container['include_answers'] = isset($data['include_answers']) ? $data['include_answers'] : null;
         $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
     }
 
@@ -194,27 +188,6 @@ class QuestionnaireOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_answers
-     * @return bool
-     */
-    public function getIncludeAnswers()
-    {
-        return $this->container['include_answers'];
-    }
-
-    /**
-     * Sets include_answers
-     * @param bool $include_answers
-     * @return $this
-     */
-    public function setIncludeAnswers($include_answers)
-    {
-        $this->container['include_answers'] = $include_answers;
-
-        return $this;
-    }
-
-    /**
      * Gets include_files
      * @return bool
      */
@@ -239,6 +212,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -249,6 +223,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -260,6 +235,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -274,6 +250,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

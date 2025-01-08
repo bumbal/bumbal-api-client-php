@@ -139,12 +139,12 @@ class QuestionnairetemplateApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -243,12 +243,12 @@ class QuestionnairetemplateApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -323,7 +323,7 @@ class QuestionnairetemplateApi
             throw new \InvalidArgumentException('Missing the required parameter $args when calling getMatchingQuestionnaireTemplates');
         }
         // parse inputs
-        $resourcePath = "/questionnaire-template/get-matching-questionnaire-templates";
+        $resourcePath = "/questionnaire-template/get-matching-templates";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -348,24 +348,24 @@ class QuestionnairetemplateApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'PUT',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\InlineResponse200',
-                '/questionnaire-template/get-matching-questionnaire-templates'
+                '/questionnaire-template/get-matching-templates'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
@@ -437,12 +437,12 @@ class QuestionnairetemplateApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -541,12 +541,12 @@ class QuestionnairetemplateApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -638,12 +638,12 @@ class QuestionnairetemplateApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -737,12 +737,12 @@ class QuestionnairetemplateApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
