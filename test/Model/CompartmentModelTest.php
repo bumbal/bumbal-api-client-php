@@ -99,6 +99,20 @@ class CompartmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "applied_capacities"
+     */
+    public function testPropertyAppliedCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "capacities"
+     */
+    public function testPropertyCapacities()
+    {
+    }
+
+    /**
      * Test attribute "filled_capacities"
      */
     public function testPropertyFilledCapacities()

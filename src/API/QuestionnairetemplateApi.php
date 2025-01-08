@@ -323,7 +323,7 @@ class QuestionnairetemplateApi
             throw new \InvalidArgumentException('Missing the required parameter $args when calling getMatchingQuestionnaireTemplates');
         }
         // parse inputs
-        $resourcePath = "/questionnaire-template/get-matching-templates";
+        $resourcePath = "/questionnaire-template/get-matching-questionnaire-templates";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -360,12 +360,12 @@ class QuestionnairetemplateApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'GET',
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\InlineResponse200',
-                '/questionnaire-template/get-matching-templates'
+                '/questionnaire-template/get-matching-questionnaire-templates'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];

@@ -55,6 +55,7 @@ class ActivityIdentifierModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'activity_id' => 'int',
+        'route_id' => 'int',
         'identifier' => 'string'
     ];
 
@@ -64,6 +65,7 @@ class ActivityIdentifierModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'activity_id' => 'int64',
+        'route_id' => 'int64',
         'identifier' => 'string'
     ];
 
@@ -83,6 +85,7 @@ class ActivityIdentifierModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'activity_id' => 'activity_id',
+        'route_id' => 'route_id',
         'identifier' => 'identifier'
     ];
 
@@ -93,6 +96,7 @@ class ActivityIdentifierModel implements ArrayAccess
      */
     protected static $setters = [
         'activity_id' => 'setActivityId',
+        'route_id' => 'setRouteId',
         'identifier' => 'setIdentifier'
     ];
 
@@ -103,6 +107,7 @@ class ActivityIdentifierModel implements ArrayAccess
      */
     protected static $getters = [
         'activity_id' => 'getActivityId',
+        'route_id' => 'getRouteId',
         'identifier' => 'getIdentifier'
     ];
 
@@ -138,6 +143,7 @@ class ActivityIdentifierModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
+        $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
     }
 
@@ -183,6 +189,27 @@ class ActivityIdentifierModel implements ArrayAccess
     public function setActivityId($activity_id)
     {
         $this->container['activity_id'] = $activity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets route_id
+     * @return int
+     */
+    public function getRouteId()
+    {
+        return $this->container['route_id'];
+    }
+
+    /**
+     * Sets route_id
+     * @param int $route_id Unique ID of the route
+     * @return $this
+     */
+    public function setRouteId($route_id)
+    {
+        $this->container['route_id'] = $route_id;
 
         return $this;
     }

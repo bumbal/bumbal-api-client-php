@@ -407,6 +407,41 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "executed_activity_duration"
+     */
+    public function testPropertyExecutedActivityDuration()
+    {
+    }
+
+    /**
+     * Test attribute "executed_start_duration"
+     */
+    public function testPropertyExecutedStartDuration()
+    {
+    }
+
+    /**
+     * Test attribute "executed_driving_duration"
+     */
+    public function testPropertyExecutedDrivingDuration()
+    {
+    }
+
+    /**
+     * Test attribute "executed_waiting_duration"
+     */
+    public function testPropertyExecutedWaitingDuration()
+    {
+    }
+
+    /**
+     * Test attribute "executed_end_duration"
+     */
+    public function testPropertyExecutedEndDuration()
+    {
+    }
+
+    /**
      * Test attribute "planned_driving_distance"
      */
     public function testPropertyPlannedDrivingDistance()

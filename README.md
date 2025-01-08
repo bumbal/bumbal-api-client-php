@@ -286,7 +286,7 @@ Class | Method | HTTP request | Description
 *QuestionnairequestiontypeApi* | [**retrieveQuestionnaireQuestionType**](docs/Api/QuestionnairequestiontypeApi.md#retrievequestionnairequestiontype) | **GET** /questionnaire-question-type/{questionnaire-question-typeId} | Retrieve a QuestionnaireQuestionType
 *QuestionnairetemplateApi* | [**createQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#createquestionnairetemplate) | **POST** /questionnaire-template | Add a new QuestionnaireTemplate
 *QuestionnairetemplateApi* | [**deleteQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#deletequestionnairetemplate) | **DELETE** /questionnaire-template/{questionnaire-templateId} | Delete an QuestionnaireTemplate entry
-*QuestionnairetemplateApi* | [**getMatchingQuestionnaireTemplates**](docs/Api/QuestionnairetemplateApi.md#getmatchingquestionnairetemplates) | **GET** /questionnaire-template/get-matching-templates | Retrieves all questionnaire templates matching specified filters
+*QuestionnairetemplateApi* | [**getMatchingQuestionnaireTemplates**](docs/Api/QuestionnairetemplateApi.md#getmatchingquestionnairetemplates) | **PUT** /questionnaire-template/get-matching-questionnaire-templates | Retrieves all questionnaire templates matching specified filters
 *QuestionnairetemplateApi* | [**retrieveListQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#retrievelistquestionnairetemplate) | **PUT** /questionnaire-template | Retrieve List of QuestionnaireTemplate
 *QuestionnairetemplateApi* | [**retrieveQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#retrievequestionnairetemplate) | **GET** /questionnaire-template/{questionnaire-templateId} | Retrieve a QuestionnaireTemplate
 *QuestionnairetemplateApi* | [**setQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#setquestionnairetemplate) | **POST** /questionnaire-template/set | Set (create or update) a QuestionnaireTemplate
@@ -330,12 +330,12 @@ Class | Method | HTTP request | Description
 *RecurrenceApi* | [**adjustRecurrenceByRouteId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyrouteid) | **PUT** /recurrence/adjust-recurrence-by-route-id/{routeId} | Adjust all recurrence objects following up to the provided route id
 *RecurrenceApi* | [**attachRecurringActivities**](docs/Api/RecurrenceApi.md#attachrecurringactivities) | **POST** /recurrence/attach-recurring-activities | Attach recurring activities to a route recurrence
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
-*RecurrenceApi* | [**createActivityRecurrence_0**](docs/Api/RecurrenceApi.md#createactivityrecurrence_0) | **POST** /recurrence/activity | Create an activity recurrence on the service
 *RecurrenceApi* | [**createRecurrenceRoute**](docs/Api/RecurrenceApi.md#createrecurrenceroute) | **POST** /recurrence/route | Create an route recurrence on the service
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 *RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 *RecurrenceApi* | [**getRuns**](docs/Api/RecurrenceApi.md#getruns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
+*RecurrenceApi* | [**newActivityRecurrence**](docs/Api/RecurrenceApi.md#newactivityrecurrence) | **POST** /recurrence/activity | Create an activity recurrence on the service
 *RecurrenceApi* | [**processRuns**](docs/Api/RecurrenceApi.md#processruns) | **POST** /recurrence/process-runs | Executes the the processes for the ids retrieved with get-runs
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence

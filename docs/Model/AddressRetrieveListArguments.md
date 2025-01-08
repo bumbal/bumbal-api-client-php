@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **filters** | [**\BumbalClient\Model\AddressFiltersModel**](AddressFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
+**search_exact** | **bool** | Only return exact matches to search_text (only used when advanced searching is enabled on environment) | [optional] 
+**search_relevance** | **bool** | Override default sorting by search_text matching score (only used when advanced searching is enabled on environment) | [optional] 
 **search_text** | **string** |  | [optional] 
 **as_list** | **bool** |  | [optional] 
 

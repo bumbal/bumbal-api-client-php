@@ -57,6 +57,8 @@ class CompartmentModel implements ArrayAccess
         'id' => 'int',
         'nr' => 'string',
         'trailer_id' => 'int',
+        'applied_capacities' => 'object',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'filled_capacities' => '\BumbalClient\Model\FilledCapacityModel[]',
         'trailer_link' => '\BumbalClient\Model\LinkModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
@@ -75,6 +77,8 @@ class CompartmentModel implements ArrayAccess
         'id' => 'int64',
         'nr' => null,
         'trailer_id' => null,
+        'applied_capacities' => null,
+        'capacities' => null,
         'filled_capacities' => null,
         'trailer_link' => null,
         'links' => null,
@@ -103,6 +107,8 @@ class CompartmentModel implements ArrayAccess
         'id' => 'id',
         'nr' => 'nr',
         'trailer_id' => 'trailer_id',
+        'applied_capacities' => 'applied_capacities',
+        'capacities' => 'capacities',
         'filled_capacities' => 'filled_capacities',
         'trailer_link' => 'trailer_link',
         'links' => 'links',
@@ -122,6 +128,8 @@ class CompartmentModel implements ArrayAccess
         'id' => 'setId',
         'nr' => 'setNr',
         'trailer_id' => 'setTrailerId',
+        'applied_capacities' => 'setAppliedCapacities',
+        'capacities' => 'setCapacities',
         'filled_capacities' => 'setFilledCapacities',
         'trailer_link' => 'setTrailerLink',
         'links' => 'setLinks',
@@ -141,6 +149,8 @@ class CompartmentModel implements ArrayAccess
         'id' => 'getId',
         'nr' => 'getNr',
         'trailer_id' => 'getTrailerId',
+        'applied_capacities' => 'getAppliedCapacities',
+        'capacities' => 'getCapacities',
         'filled_capacities' => 'getFilledCapacities',
         'trailer_link' => 'getTrailerLink',
         'links' => 'getLinks',
@@ -185,6 +195,8 @@ class CompartmentModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['trailer_id'] = isset($data['trailer_id']) ? $data['trailer_id'] : null;
+        $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
+        $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['filled_capacities'] = isset($data['filled_capacities']) ? $data['filled_capacities'] : null;
         $this->container['trailer_link'] = isset($data['trailer_link']) ? $data['trailer_link'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
@@ -279,6 +291,48 @@ class CompartmentModel implements ArrayAccess
     public function setTrailerId($trailer_id)
     {
         $this->container['trailer_id'] = $trailer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets applied_capacities
+     * @return object
+     */
+    public function getAppliedCapacities()
+    {
+        return $this->container['applied_capacities'];
+    }
+
+    /**
+     * Sets applied_capacities
+     * @param object $applied_capacities
+     * @return $this
+     */
+    public function setAppliedCapacities($applied_capacities)
+    {
+        $this->container['applied_capacities'] = $applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets capacities
+     * @return \BumbalClient\Model\CapacityModel[]
+     */
+    public function getCapacities()
+    {
+        return $this->container['capacities'];
+    }
+
+    /**
+     * Sets capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @return $this
+     */
+    public function setCapacities($capacities)
+    {
+        $this->container['capacities'] = $capacities;
 
         return $this;
     }
