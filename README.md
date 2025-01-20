@@ -330,12 +330,12 @@ Class | Method | HTTP request | Description
 *RecurrenceApi* | [**adjustRecurrenceByRouteId**](docs/Api/RecurrenceApi.md#adjustrecurrencebyrouteid) | **PUT** /recurrence/adjust-recurrence-by-route-id/{routeId} | Adjust all recurrence objects following up to the provided route id
 *RecurrenceApi* | [**attachRecurringActivities**](docs/Api/RecurrenceApi.md#attachrecurringactivities) | **POST** /recurrence/attach-recurring-activities | Attach recurring activities to a route recurrence
 *RecurrenceApi* | [**createActivityRecurrence**](docs/Api/RecurrenceApi.md#createactivityrecurrence) | **POST** /recurrence/create-activity-recurrence | create a activity recurrence
-*RecurrenceApi* | [**createRecurrenceRoute**](docs/Api/RecurrenceApi.md#createrecurrenceroute) | **POST** /recurrence/route | Create an route recurrence on the service
 *RecurrenceApi* | [**createRouteRecurrence**](docs/Api/RecurrenceApi.md#createrouterecurrence) | **POST** /recurrence/create-route-recurrence | create a route recurrence
 *RecurrenceApi* | [**deleteRecurrenceObject**](docs/Api/RecurrenceApi.md#deleterecurrenceobject) | **DELETE** /recurrence/delete-recurrence | Delete a Recurrence
 *RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
 *RecurrenceApi* | [**getRuns**](docs/Api/RecurrenceApi.md#getruns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
 *RecurrenceApi* | [**newActivityRecurrence**](docs/Api/RecurrenceApi.md#newactivityrecurrence) | **POST** /recurrence/activity | Create an activity recurrence on the service
+*RecurrenceApi* | [**newRouteRecurrence**](docs/Api/RecurrenceApi.md#newrouterecurrence) | **POST** /recurrence/route | Create an route recurrence on the service
 *RecurrenceApi* | [**processRuns**](docs/Api/RecurrenceApi.md#processruns) | **POST** /recurrence/process-runs | Executes the the processes for the ids retrieved with get-runs
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
@@ -842,6 +842,9 @@ Class | Method | HTTP request | Description
  - [RecurrenceProcessRunsArguments](docs/Model/RecurrenceProcessRunsArguments.md)
  - [RecurrenceProcessRunsResponse](docs/Model/RecurrenceProcessRunsResponse.md)
  - [RecurrenceRetrieveListArguments](docs/Model/RecurrenceRetrieveListArguments.md)
+ - [RecurrenceServiceListResponse](docs/Model/RecurrenceServiceListResponse.md)
+ - [RecurrenceServiceModel](docs/Model/RecurrenceServiceModel.md)
+ - [RecurrenceServiceSnapshot](docs/Model/RecurrenceServiceSnapshot.md)
  - [RemoveActivitiesFromRouteArguments](docs/Model/RemoveActivitiesFromRouteArguments.md)
  - [RouteCapacitiesModel](docs/Model/RouteCapacitiesModel.md)
  - [RouteDetachFromRecurrenceArguments](docs/Model/RouteDetachFromRecurrenceArguments.md)

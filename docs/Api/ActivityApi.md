@@ -383,7 +383,7 @@ $include_activity_files_meta_data = true; // bool | Include files meta data
 $include_assignment_nr = true; // bool | Include Assignment Nr
 $include_assignment = true; // bool | Include Assignment
 $include_activity_tags = true; // bool | Include Activity Tags
-$include_tag_type_name = true; // bool | Include Activity TagType Names
+$include_tag_type_name = true; // bool | Include Activity Tag type names
 $include_activity_record_info = true; // bool | Include Activity Info
 $include_activity_notes = true; // bool | Include Activity Notes
 $include_activity_note_tags = true; // bool | Include Activity Note Tags
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
  **include_assignment_nr** | **bool**| Include Assignment Nr | [default to true]
  **include_assignment** | **bool**| Include Assignment | [default to true]
  **include_activity_tags** | **bool**| Include Activity Tags | [default to true]
- **include_tag_type_name** | **bool**| Include Activity TagType Names | [default to true]
+ **include_tag_type_name** | **bool**| Include Activity Tag type names | [default to true]
  **include_activity_record_info** | **bool**| Include Activity Info | [default to true]
  **include_activity_notes** | **bool**| Include Activity Notes | [default to true]
  **include_activity_note_tags** | **bool**| Include Activity Note Tags | [default to true]
