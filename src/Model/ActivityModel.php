@@ -92,7 +92,10 @@ class ActivityModel implements ArrayAccess
         'planned_date_time_to' => '\DateTime',
         'executed_date_time_from' => '\DateTime',
         'executed_date_time_to' => '\DateTime',
+        'executed_duration' => 'int',
+        'executed_driving_duration' => 'int',
         'duration' => 'int',
+        'preparation_duration' => 'int',
         'depot_duration' => 'int',
         'active' => 'bool',
         'route_id' => 'string',
@@ -219,7 +222,10 @@ class ActivityModel implements ArrayAccess
         'planned_date_time_to' => 'date-time',
         'executed_date_time_from' => 'date-time',
         'executed_date_time_to' => 'date-time',
+        'executed_duration' => null,
+        'executed_driving_duration' => null,
         'duration' => null,
+        'preparation_duration' => null,
         'depot_duration' => null,
         'active' => null,
         'route_id' => null,
@@ -356,7 +362,10 @@ class ActivityModel implements ArrayAccess
         'planned_date_time_to' => 'planned_date_time_to',
         'executed_date_time_from' => 'executed_date_time_from',
         'executed_date_time_to' => 'executed_date_time_to',
+        'executed_duration' => 'executed_duration',
+        'executed_driving_duration' => 'executed_driving_duration',
         'duration' => 'duration',
+        'preparation_duration' => 'preparation_duration',
         'depot_duration' => 'depot_duration',
         'active' => 'active',
         'route_id' => 'route_id',
@@ -484,7 +493,10 @@ class ActivityModel implements ArrayAccess
         'planned_date_time_to' => 'setPlannedDateTimeTo',
         'executed_date_time_from' => 'setExecutedDateTimeFrom',
         'executed_date_time_to' => 'setExecutedDateTimeTo',
+        'executed_duration' => 'setExecutedDuration',
+        'executed_driving_duration' => 'setExecutedDrivingDuration',
         'duration' => 'setDuration',
+        'preparation_duration' => 'setPreparationDuration',
         'depot_duration' => 'setDepotDuration',
         'active' => 'setActive',
         'route_id' => 'setRouteId',
@@ -612,7 +624,10 @@ class ActivityModel implements ArrayAccess
         'planned_date_time_to' => 'getPlannedDateTimeTo',
         'executed_date_time_from' => 'getExecutedDateTimeFrom',
         'executed_date_time_to' => 'getExecutedDateTimeTo',
+        'executed_duration' => 'getExecutedDuration',
+        'executed_driving_duration' => 'getExecutedDrivingDuration',
         'duration' => 'getDuration',
+        'preparation_duration' => 'getPreparationDuration',
         'depot_duration' => 'getDepotDuration',
         'active' => 'getActive',
         'route_id' => 'getRouteId',
@@ -893,7 +908,7 @@ class ActivityModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
@@ -933,7 +948,10 @@ class ActivityModel implements ArrayAccess
         $this->container['planned_date_time_to'] = isset($data['planned_date_time_to']) ? $data['planned_date_time_to'] : null;
         $this->container['executed_date_time_from'] = isset($data['executed_date_time_from']) ? $data['executed_date_time_from'] : null;
         $this->container['executed_date_time_to'] = isset($data['executed_date_time_to']) ? $data['executed_date_time_to'] : null;
+        $this->container['executed_duration'] = isset($data['executed_duration']) ? $data['executed_duration'] : null;
+        $this->container['executed_driving_duration'] = isset($data['executed_driving_duration']) ? $data['executed_driving_duration'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['preparation_duration'] = isset($data['preparation_duration']) ? $data['preparation_duration'] : null;
         $this->container['depot_duration'] = isset($data['depot_duration']) ? $data['depot_duration'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
@@ -1904,6 +1922,48 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets executed_duration
+     * @return int
+     */
+    public function getExecutedDuration()
+    {
+        return $this->container['executed_duration'];
+    }
+
+    /**
+     * Sets executed_duration
+     * @param int $executed_duration Executed duration of this activity in minutes
+     * @return $this
+     */
+    public function setExecutedDuration($executed_duration)
+    {
+        $this->container['executed_duration'] = $executed_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets executed_driving_duration
+     * @return int
+     */
+    public function getExecutedDrivingDuration()
+    {
+        return $this->container['executed_driving_duration'];
+    }
+
+    /**
+     * Sets executed_driving_duration
+     * @param int $executed_driving_duration Executed driving duration of this activity in minutes
+     * @return $this
+     */
+    public function setExecutedDrivingDuration($executed_driving_duration)
+    {
+        $this->container['executed_driving_duration'] = $executed_driving_duration;
+
+        return $this;
+    }
+
+    /**
      * Gets duration
      * @return int
      */
@@ -1920,6 +1980,27 @@ class ActivityModel implements ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets preparation_duration
+     * @return int
+     */
+    public function getPreparationDuration()
+    {
+        return $this->container['preparation_duration'];
+    }
+
+    /**
+     * Sets preparation_duration
+     * @param int $preparation_duration Preparation duration of the activity in minutes
+     * @return $this
+     */
+    public function setPreparationDuration($preparation_duration)
+    {
+        $this->container['preparation_duration'] = $preparation_duration;
 
         return $this;
     }

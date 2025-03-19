@@ -135,7 +135,7 @@ class Body2 implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['route_ids'] = isset($data['route_ids']) ? $data['route_ids'] : null;
         $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;

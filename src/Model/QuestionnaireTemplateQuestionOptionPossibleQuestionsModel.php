@@ -130,7 +130,7 @@ class QuestionnaireTemplateQuestionOptionPossibleQuestionsModel implements Array
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['questionnaire_template_question_id'] = isset($data['questionnaire_template_question_id']) ? $data['questionnaire_template_question_id'] : null;
     }

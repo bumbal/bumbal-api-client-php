@@ -145,7 +145,7 @@ class ApiResponse6 implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;

@@ -130,7 +130,7 @@ class ApplyPlanningOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['lock_activities'] = isset($data['lock_activities']) ? $data['lock_activities'] : null;
     }

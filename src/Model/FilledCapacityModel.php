@@ -194,7 +194,7 @@ class FilledCapacityModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['capacity_type_id'] = isset($data['capacity_type_id']) ? $data['capacity_type_id'] : null;
         $this->container['capacity_type_name'] = isset($data['capacity_type_name']) ? $data['capacity_type_name'] : null;

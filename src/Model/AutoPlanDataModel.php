@@ -140,7 +140,7 @@ class AutoPlanDataModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
         $this->container['availability_key'] = isset($data['availability_key']) ? $data['availability_key'] : null;

@@ -145,7 +145,7 @@ class ZoneOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_zone_ranges'] = isset($data['include_zone_ranges']) ? $data['include_zone_ranges'] : null;
         $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;

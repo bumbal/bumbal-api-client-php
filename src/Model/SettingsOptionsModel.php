@@ -145,7 +145,7 @@ class SettingsOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_settings_group_name'] = isset($data['include_settings_group_name']) ? $data['include_settings_group_name'] : false;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : false;

@@ -344,9 +344,30 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "executed_duration"
+     */
+    public function testPropertyExecutedDuration()
+    {
+    }
+
+    /**
+     * Test attribute "executed_driving_duration"
+     */
+    public function testPropertyExecutedDrivingDuration()
+    {
+    }
+
+    /**
      * Test attribute "duration"
      */
     public function testPropertyDuration()
+    {
+    }
+
+    /**
+     * Test attribute "preparation_duration"
+     */
+    public function testPropertyPreparationDuration()
     {
     }
 

@@ -150,7 +150,7 @@ class PasswordLessSignInModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['bo_auth'] = isset($data['bo_auth']) ? $data['bo_auth'] : null;
         $this->container['signature'] = isset($data['signature']) ? $data['signature'] : null;

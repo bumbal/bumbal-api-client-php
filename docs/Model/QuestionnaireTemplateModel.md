@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **questions** | [**\BumbalClient\Model\QuestionnaireTemplateQuestionModel[]**](QuestionnaireTemplateQuestionModel.md) |  | [optional] 
 **required** | **bool** | whetrher the questionnaoire is required to be filled in | [optional] 
 **dynamic** | **bool** | whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question. | [optional] 
+**activity_type_ids** | **int[]** | Activity type ids | [optional] 
 **object_type** | **int** | Object type ID for the bound object to this questionnaire | [optional] 
 **object_type_name** | **string** | Object type name for the bound object to this questionnaire | [optional] 
 **created_by** | **string** | ID of the user who created the questionnaire template | [optional] 

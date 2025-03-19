@@ -113,6 +113,13 @@ class CommunicationTemplateModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "content_json"
+     */
+    public function testPropertyContentJson()
+    {
+    }
+
+    /**
      * Test attribute "content_text"
      */
     public function testPropertyContentText()

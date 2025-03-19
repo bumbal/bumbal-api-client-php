@@ -145,7 +145,7 @@ class LinkFiltersModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['link_id'] = isset($data['link_id']) ? $data['link_id'] : null;
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;

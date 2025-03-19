@@ -135,7 +135,7 @@ class LinkOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_object_type_name'] = isset($data['include_object_type_name']) ? $data['include_object_type_name'] : null;
         $this->container['include_provider_name'] = isset($data['include_provider_name']) ? $data['include_provider_name'] : null;

@@ -145,7 +145,7 @@ class CommunicationMappingOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_message_type_name'] = isset($data['include_message_type_name']) ? $data['include_message_type_name'] : false;
         $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : false;

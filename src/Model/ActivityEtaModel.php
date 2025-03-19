@@ -140,7 +140,7 @@ class ActivityEtaModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['eta_date_time'] = isset($data['eta_date_time']) ? $data['eta_date_time'] : null;

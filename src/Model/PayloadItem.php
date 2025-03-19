@@ -135,7 +135,7 @@ class PayloadItem implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['payload_key'] = isset($data['payload_key']) ? $data['payload_key'] : null;
         $this->container['payload_value'] = isset($data['payload_value']) ? $data['payload_value'] : null;

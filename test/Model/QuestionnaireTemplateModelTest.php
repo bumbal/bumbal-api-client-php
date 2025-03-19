@@ -211,6 +211,13 @@ class QuestionnaireTemplateModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "activity_type_ids"
+     */
+    public function testPropertyActivityTypeIds()
+    {
+    }
+
+    /**
      * Test attribute "object_type"
      */
     public function testPropertyObjectType()

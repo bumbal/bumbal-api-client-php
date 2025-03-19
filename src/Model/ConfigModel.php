@@ -135,7 +135,7 @@ class ConfigModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['key_ring'] = isset($data['key_ring']) ? $data['key_ring'] : null;

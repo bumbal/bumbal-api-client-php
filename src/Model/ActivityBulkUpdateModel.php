@@ -135,7 +135,7 @@ class ActivityBulkUpdateModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;

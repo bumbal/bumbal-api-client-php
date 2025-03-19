@@ -140,7 +140,7 @@ class UnsuccessfulModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
         $this->container['reason_id'] = isset($data['reason_id']) ? $data['reason_id'] : null;

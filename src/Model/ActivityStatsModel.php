@@ -185,7 +185,7 @@ class ActivityStatsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['nr_of_package_lines'] = isset($data['nr_of_package_lines']) ? $data['nr_of_package_lines'] : null;
         $this->container['nr_of_inbound_package_lines'] = isset($data['nr_of_inbound_package_lines']) ? $data['nr_of_inbound_package_lines'] : null;

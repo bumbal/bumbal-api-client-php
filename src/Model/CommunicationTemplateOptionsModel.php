@@ -140,7 +140,7 @@ class CommunicationTemplateOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['exclude_template_content'] = isset($data['exclude_template_content']) ? $data['exclude_template_content'] : null;
         $this->container['include_mappings'] = isset($data['include_mappings']) ? $data['include_mappings'] : null;

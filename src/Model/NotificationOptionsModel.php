@@ -155,7 +155,7 @@ class NotificationOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_notification_files'] = isset($data['include_notification_files']) ? $data['include_notification_files'] : null;
         $this->container['include_updated_by'] = isset($data['include_updated_by']) ? $data['include_updated_by'] : null;

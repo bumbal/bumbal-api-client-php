@@ -140,7 +140,7 @@ class RoutePointsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['points'] = isset($data['points']) ? $data['points'] : null;

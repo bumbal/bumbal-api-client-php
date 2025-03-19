@@ -140,7 +140,7 @@ class ManualWebHookModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
         $this->container['web_hook_name'] = isset($data['web_hook_name']) ? $data['web_hook_name'] : null;

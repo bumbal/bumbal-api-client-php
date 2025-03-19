@@ -140,7 +140,7 @@ class ServiceWindowDayModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['before_cut_off'] = isset($data['before_cut_off']) ? $data['before_cut_off'] : null;
         $this->container['cut_off_time'] = isset($data['cut_off_time']) ? $data['cut_off_time'] : null;

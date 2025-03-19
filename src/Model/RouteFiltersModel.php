@@ -255,7 +255,7 @@ class RouteFiltersModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['co_driver_ids'] = isset($data['co_driver_ids']) ? $data['co_driver_ids'] : null;

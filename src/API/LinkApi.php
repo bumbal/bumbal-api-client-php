@@ -55,7 +55,7 @@ class LinkApi
      *
      * @param \BumbalClient\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\BumbalClient\ApiClient $apiClient = null)
+    public function __construct(?\BumbalClient\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();

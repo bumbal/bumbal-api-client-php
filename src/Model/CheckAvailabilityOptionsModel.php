@@ -165,7 +165,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_impact'] = isset($data['include_impact']) ? $data['include_impact'] : null;
         $this->container['synchronous'] = isset($data['synchronous']) ? $data['synchronous'] : null;

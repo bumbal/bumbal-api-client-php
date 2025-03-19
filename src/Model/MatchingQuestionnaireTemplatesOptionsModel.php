@@ -130,7 +130,7 @@ class MatchingQuestionnaireTemplatesOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['use_best_fit_analysis'] = isset($data['use_best_fit_analysis']) ? $data['use_best_fit_analysis'] : null;
     }

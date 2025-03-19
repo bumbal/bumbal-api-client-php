@@ -164,7 +164,7 @@ class AddressGeoCodeArguments implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['exclude_providers'] = isset($data['exclude_providers']) ? $data['exclude_providers'] : null;

@@ -170,7 +170,7 @@ class EquipmentOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_equipment_type_name'] = isset($data['include_equipment_type_name']) ? $data['include_equipment_type_name'] : null;
         $this->container['include_equipment_tags'] = isset($data['include_equipment_tags']) ? $data['include_equipment_tags'] : null;

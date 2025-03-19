@@ -145,7 +145,7 @@ class AddressReverseGeoCodeArguments implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['min_accuracy'] = isset($data['min_accuracy']) ? $data['min_accuracy'] : null;
         $this->container['distance'] = isset($data['distance']) ? $data['distance'] : null;

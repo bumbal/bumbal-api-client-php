@@ -235,7 +235,7 @@ class PackageLineOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
         $this->container['include_irregularities'] = isset($data['include_irregularities']) ? $data['include_irregularities'] : null;

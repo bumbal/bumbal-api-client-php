@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **description** | **string** | Description of this template | [optional] 
 **subject** | **string** | Subject used in email | [optional] 
 **content_html** | **string** | Mustache based HTML content template | [optional] 
+**content_json** | **string** | Unlayer based JSON content template | [optional] 
 **content_text** | **string** | Mustache based Text content template | [optional] 
 **include_attachments** | **bool** | Include the files associated with this activity as attachment, mail only | [optional] [default to false]
 **mappings** | [**\BumbalClient\Model\CommunicationMappingModel[]**](CommunicationMappingModel.md) |  | [optional] 

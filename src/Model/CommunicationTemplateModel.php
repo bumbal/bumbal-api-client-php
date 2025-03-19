@@ -59,6 +59,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'description' => 'string',
         'subject' => 'string',
         'content_html' => 'string',
+        'content_json' => 'string',
         'content_text' => 'string',
         'include_attachments' => 'bool',
         'mappings' => '\BumbalClient\Model\CommunicationMappingModel[]',
@@ -80,6 +81,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'description' => null,
         'subject' => null,
         'content_html' => null,
+        'content_json' => null,
         'content_text' => null,
         'include_attachments' => null,
         'mappings' => null,
@@ -111,6 +113,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'description' => 'description',
         'subject' => 'subject',
         'content_html' => 'content_html',
+        'content_json' => 'content_json',
         'content_text' => 'content_text',
         'include_attachments' => 'include_attachments',
         'mappings' => 'mappings',
@@ -133,6 +136,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'description' => 'setDescription',
         'subject' => 'setSubject',
         'content_html' => 'setContentHtml',
+        'content_json' => 'setContentJson',
         'content_text' => 'setContentText',
         'include_attachments' => 'setIncludeAttachments',
         'mappings' => 'setMappings',
@@ -155,6 +159,7 @@ class CommunicationTemplateModel implements ArrayAccess
         'description' => 'getDescription',
         'subject' => 'getSubject',
         'content_html' => 'getContentHtml',
+        'content_json' => 'getContentJson',
         'content_text' => 'getContentText',
         'include_attachments' => 'getIncludeAttachments',
         'mappings' => 'getMappings',
@@ -195,13 +200,14 @@ class CommunicationTemplateModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
         $this->container['content_html'] = isset($data['content_html']) ? $data['content_html'] : null;
+        $this->container['content_json'] = isset($data['content_json']) ? $data['content_json'] : null;
         $this->container['content_text'] = isset($data['content_text']) ? $data['content_text'] : null;
         $this->container['include_attachments'] = isset($data['include_attachments']) ? $data['include_attachments'] : false;
         $this->container['mappings'] = isset($data['mappings']) ? $data['mappings'] : null;
@@ -339,6 +345,27 @@ class CommunicationTemplateModel implements ArrayAccess
     public function setContentHtml($content_html)
     {
         $this->container['content_html'] = $content_html;
+
+        return $this;
+    }
+
+    /**
+     * Gets content_json
+     * @return string
+     */
+    public function getContentJson()
+    {
+        return $this->container['content_json'];
+    }
+
+    /**
+     * Sets content_json
+     * @param string $content_json Unlayer based JSON content template
+     * @return $this
+     */
+    public function setContentJson($content_json)
+    {
+        $this->container['content_json'] = $content_json;
 
         return $this;
     }

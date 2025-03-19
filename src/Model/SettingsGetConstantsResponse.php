@@ -365,7 +365,7 @@ class SettingsGetConstantsResponse implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['irregularity_category'] = isset($data['irregularity_category']) ? $data['irregularity_category'] : null;
         $this->container['irregularity_cause'] = isset($data['irregularity_cause']) ? $data['irregularity_cause'] : null;

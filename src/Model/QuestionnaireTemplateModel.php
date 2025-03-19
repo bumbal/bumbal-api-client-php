@@ -73,6 +73,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questions' => '\BumbalClient\Model\QuestionnaireTemplateQuestionModel[]',
         'required' => 'bool',
         'dynamic' => 'bool',
+        'activity_type_ids' => 'int[]',
         'object_type' => 'int',
         'object_type_name' => 'string',
         'created_by' => 'string',
@@ -106,6 +107,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questions' => null,
         'required' => null,
         'dynamic' => null,
+        'activity_type_ids' => null,
         'object_type' => 'int64',
         'object_type_name' => 'string',
         'created_by' => 'int64',
@@ -149,6 +151,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questions' => 'questions',
         'required' => 'required',
         'dynamic' => 'dynamic',
+        'activity_type_ids' => 'activity_type_ids',
         'object_type' => 'object_type',
         'object_type_name' => 'object_type_name',
         'created_by' => 'created_by',
@@ -183,6 +186,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questions' => 'setQuestions',
         'required' => 'setRequired',
         'dynamic' => 'setDynamic',
+        'activity_type_ids' => 'setActivityTypeIds',
         'object_type' => 'setObjectType',
         'object_type_name' => 'setObjectTypeName',
         'created_by' => 'setCreatedBy',
@@ -217,6 +221,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         'questions' => 'getQuestions',
         'required' => 'getRequired',
         'dynamic' => 'getDynamic',
+        'activity_type_ids' => 'getActivityTypeIds',
         'object_type' => 'getObjectType',
         'object_type_name' => 'getObjectTypeName',
         'created_by' => 'getCreatedBy',
@@ -255,7 +260,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
@@ -276,6 +281,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
         $this->container['questions'] = isset($data['questions']) ? $data['questions'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
+        $this->container['activity_type_ids'] = isset($data['activity_type_ids']) ? $data['activity_type_ids'] : null;
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
         $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
@@ -705,6 +711,27 @@ class QuestionnaireTemplateModel implements ArrayAccess
     public function setDynamic($dynamic)
     {
         $this->container['dynamic'] = $dynamic;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_type_ids
+     * @return int[]
+     */
+    public function getActivityTypeIds()
+    {
+        return $this->container['activity_type_ids'];
+    }
+
+    /**
+     * Sets activity_type_ids
+     * @param int[] $activity_type_ids Activity type ids
+     * @return $this
+     */
+    public function setActivityTypeIds($activity_type_ids)
+    {
+        $this->container['activity_type_ids'] = $activity_type_ids;
 
         return $this;
     }

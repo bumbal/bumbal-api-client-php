@@ -231,7 +231,7 @@ class LogModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['original_message'] = isset($data['original_message']) ? $data['original_message'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;

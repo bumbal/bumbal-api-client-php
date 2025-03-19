@@ -180,7 +180,7 @@ class AddressOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
         $this->container['include_emails'] = isset($data['include_emails']) ? $data['include_emails'] : null;

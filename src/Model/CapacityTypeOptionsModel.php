@@ -140,7 +140,7 @@ class CapacityTypeOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_uom'] = isset($data['include_uom']) ? $data['include_uom'] : null;
         $this->container['include_uom_group'] = isset($data['include_uom_group']) ? $data['include_uom_group'] : null;

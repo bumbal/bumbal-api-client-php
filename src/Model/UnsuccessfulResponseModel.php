@@ -130,7 +130,7 @@ class UnsuccessfulResponseModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['new_activity_id'] = isset($data['new_activity_id']) ? $data['new_activity_id'] : null;
     }
