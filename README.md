@@ -198,6 +198,7 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**retrieveMetaData**](docs/Api/MetadataApi.md#retrievemetadata) | **GET** /metadata/{metadataId} | Retrieve a MetaData
 *MetadataApi* | [**setMetaData**](docs/Api/MetadataApi.md#setmetadata) | **POST** /metadata/set | Set (create or update) a MetaData record
 *MetadataApi* | [**updateMetaData**](docs/Api/MetadataApi.md#updatemetadata) | **PUT** /metadata/{metadataId} | Update a specific MetaData object
+*MigrationApi* | [**initiateWebSocketConnection**](docs/Api/MigrationApi.md#initiatewebsocketconnection) | **POST** /migration/initiate | Initiate a webSocket connection for a service
 *NoteApi* | [**deleteNote**](docs/Api/NoteApi.md#deletenote) | **DELETE** /note/{noteId} | Delete an note
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
@@ -370,6 +371,7 @@ Class | Method | HTTP request | Description
 *StatushistoryApi* | [**retrieveStatusHistoryRoute**](docs/Api/StatushistoryApi.md#retrievestatushistoryroute) | **POST** /status-history/route | Retrieve the status history of a route
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
 *SystemApi* | [**systemGetVariables**](docs/Api/SystemApi.md#systemgetvariables) | **GET** /system/get-variables | Retrieve System Variables
+*SystemApi* | [**systemSetConfig**](docs/Api/SystemApi.md#systemsetconfig) | **POST** /system/set-config | Set System Configuration
 *SystemproviderApi* | [**retrieveListSystemProvider**](docs/Api/SystemproviderApi.md#retrievelistsystemprovider) | **PUT** /system-provider | Retrieve List of System Providers
 *SystemproviderApi* | [**retrieveSystemProvider**](docs/Api/SystemproviderApi.md#retrievesystemprovider) | **GET** /system-provider/{providerId} | Retrieve a System Provider
 *TagsApi* | [**addTagToObject**](docs/Api/TagsApi.md#addtagtoobject) | **POST** /tags/add-tag-to-object | adds a tag to an object
@@ -631,6 +633,7 @@ Class | Method | HTTP request | Description
  - [CompartmentOptionsModel](docs/Model/CompartmentOptionsModel.md)
  - [CompartmentRetrieveListArguments](docs/Model/CompartmentRetrieveListArguments.md)
  - [ConfigModel](docs/Model/ConfigModel.md)
+ - [ConfigSetModel](docs/Model/ConfigSetModel.md)
  - [CredentialsModel](docs/Model/CredentialsModel.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)
  - [DriverListResponse](docs/Model/DriverListResponse.md)
@@ -968,6 +971,7 @@ Class | Method | HTTP request | Description
  - [VehicleTypeRetrieveListArguments](docs/Model/VehicleTypeRetrieveListArguments.md)
  - [VehicleTypeSetResponse](docs/Model/VehicleTypeSetResponse.md)
  - [VehicleTypeUpdateResponse](docs/Model/VehicleTypeUpdateResponse.md)
+ - [WebSocketContainerModel](docs/Model/WebSocketContainerModel.md)
  - [WebhookModel](docs/Model/WebhookModel.md)
  - [ZoneFiltersModel](docs/Model/ZoneFiltersModel.md)
  - [ZoneListResponse](docs/Model/ZoneListResponse.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * QuestionnaireOptionsModel
+ * ConfigSetModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * QuestionnaireOptionsModel Class Doc Comment
+ * ConfigSetModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class QuestionnaireOptionsModel implements ArrayAccess
+class ConfigSetModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,16 @@ class QuestionnaireOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'QuestionnaireOptionsModel';
+    protected static $swaggerModelName = 'ConfigSetModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_record_info' => 'bool',
-        'include_record_object' => 'bool',
-        'include_answers' => 'bool',
-        'include_files' => 'bool'
+        'category' => 'string',
+        'key' => 'string',
+        'value' => 'bool'
     ];
 
     /**
@@ -65,10 +64,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_record_info' => null,
-        'include_record_object' => null,
-        'include_answers' => null,
-        'include_files' => null
+        'category' => null,
+        'key' => null,
+        'value' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +84,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_record_info' => 'include_record_info',
-        'include_record_object' => 'include_record_object',
-        'include_answers' => 'include_answers',
-        'include_files' => 'include_files'
+        'category' => 'category',
+        'key' => 'key',
+        'value' => 'value'
     ];
 
 
@@ -98,10 +95,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_record_info' => 'setIncludeRecordInfo',
-        'include_record_object' => 'setIncludeRecordObject',
-        'include_answers' => 'setIncludeAnswers',
-        'include_files' => 'setIncludeFiles'
+        'category' => 'setCategory',
+        'key' => 'setKey',
+        'value' => 'setValue'
     ];
 
 
@@ -110,10 +106,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_record_info' => 'getIncludeRecordInfo',
-        'include_record_object' => 'getIncludeRecordObject',
-        'include_answers' => 'getIncludeAnswers',
-        'include_files' => 'getIncludeFiles'
+        'category' => 'getCategory',
+        'key' => 'getKey',
+        'value' => 'getValue'
     ];
 
     public static function attributeMap()
@@ -131,8 +126,22 @@ class QuestionnaireOptionsModel implements ArrayAccess
         return self::$getters;
     }
 
+    const CATEGORY_OPTIONS = 'options';
+    const CATEGORY_MOBILE = 'mobile';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getCategoryAllowableValues()
+    {
+        return [
+            self::CATEGORY_OPTIONS,
+            self::CATEGORY_MOBILE,
+        ];
+    }
     
 
     /**
@@ -147,10 +156,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
-        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
-        $this->container['include_answers'] = isset($data['include_answers']) ? $data['include_answers'] : null;
-        $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -162,6 +170,23 @@ class QuestionnaireOptionsModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['category'] === null) {
+            $invalid_properties[] = "'category' can't be null";
+        }
+        $allowed_values = $this->getCategoryAllowableValues();
+        if (!in_array($this->container['category'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'category', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        if ($this->container['key'] === null) {
+            $invalid_properties[] = "'key' can't be null";
+        }
+        if ($this->container['value'] === null) {
+            $invalid_properties[] = "'value' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -174,90 +199,91 @@ class QuestionnaireOptionsModel implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['category'] === null) {
+            return false;
+        }
+        $allowed_values = $this->getCategoryAllowableValues();
+        if (!in_array($this->container['category'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['key'] === null) {
+            return false;
+        }
+        if ($this->container['value'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets include_record_info
-     * @return bool
+     * Gets category
+     * @return string
      */
-    public function getIncludeRecordInfo()
+    public function getCategory()
     {
-        return $this->container['include_record_info'];
+        return $this->container['category'];
     }
 
     /**
-     * Sets include_record_info
-     * @param bool $include_record_info
+     * Sets category
+     * @param string $category Category of the config
      * @return $this
      */
-    public function setIncludeRecordInfo($include_record_info)
+    public function setCategory($category)
     {
-        $this->container['include_record_info'] = $include_record_info;
+        $allowed_values = $this->getCategoryAllowableValues();
+        if (!in_array($category, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'category', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['category'] = $category;
 
         return $this;
     }
 
     /**
-     * Gets include_record_object
-     * @return bool
+     * Gets key
+     * @return string
      */
-    public function getIncludeRecordObject()
+    public function getKey()
     {
-        return $this->container['include_record_object'];
+        return $this->container['key'];
     }
 
     /**
-     * Sets include_record_object
-     * @param bool $include_record_object
+     * Sets key
+     * @param string $key Key of the config
      * @return $this
      */
-    public function setIncludeRecordObject($include_record_object)
+    public function setKey($key)
     {
-        $this->container['include_record_object'] = $include_record_object;
+        $this->container['key'] = $key;
 
         return $this;
     }
 
     /**
-     * Gets include_answers
+     * Gets value
      * @return bool
      */
-    public function getIncludeAnswers()
+    public function getValue()
     {
-        return $this->container['include_answers'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets include_answers
-     * @param bool $include_answers
+     * Sets value
+     * @param bool $value Value of the config
      * @return $this
      */
-    public function setIncludeAnswers($include_answers)
+    public function setValue($value)
     {
-        $this->container['include_answers'] = $include_answers;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_files
-     * @return bool
-     */
-    public function getIncludeFiles()
-    {
-        return $this->container['include_files'];
-    }
-
-    /**
-     * Sets include_files
-     * @param bool $include_files
-     * @return $this
-     */
-    public function setIncludeFiles($include_files)
-    {
-        $this->container['include_files'] = $include_files;
+        $this->container['value'] = $value;
 
         return $this;
     }

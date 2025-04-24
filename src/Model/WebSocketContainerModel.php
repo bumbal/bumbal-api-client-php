@@ -1,6 +1,6 @@
 <?php
 /**
- * QuestionnaireOptionsModel
+ * WebSocketContainerModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * QuestionnaireOptionsModel Class Doc Comment
+ * WebSocketContainerModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class QuestionnaireOptionsModel implements ArrayAccess
+class WebSocketContainerModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,14 @@ class QuestionnaireOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'QuestionnaireOptionsModel';
+    protected static $swaggerModelName = 'WebSocketContainerModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_record_info' => 'bool',
-        'include_record_object' => 'bool',
-        'include_answers' => 'bool',
-        'include_files' => 'bool'
+        'service' => 'string'
     ];
 
     /**
@@ -65,10 +62,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_record_info' => null,
-        'include_record_object' => null,
-        'include_answers' => null,
-        'include_files' => null
+        'service' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +80,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_record_info' => 'include_record_info',
-        'include_record_object' => 'include_record_object',
-        'include_answers' => 'include_answers',
-        'include_files' => 'include_files'
+        'service' => 'service'
     ];
 
 
@@ -98,10 +89,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_record_info' => 'setIncludeRecordInfo',
-        'include_record_object' => 'setIncludeRecordObject',
-        'include_answers' => 'setIncludeAnswers',
-        'include_files' => 'setIncludeFiles'
+        'service' => 'setService'
     ];
 
 
@@ -110,10 +98,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_record_info' => 'getIncludeRecordInfo',
-        'include_record_object' => 'getIncludeRecordObject',
-        'include_answers' => 'getIncludeAnswers',
-        'include_files' => 'getIncludeFiles'
+        'service' => 'getService'
     ];
 
     public static function attributeMap()
@@ -147,10 +132,7 @@ class QuestionnaireOptionsModel implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
-        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
-        $this->container['include_answers'] = isset($data['include_answers']) ? $data['include_answers'] : null;
-        $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
+        $this->container['service'] = isset($data['service']) ? $data['service'] : null;
     }
 
     /**
@@ -162,6 +144,9 @@ class QuestionnaireOptionsModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['service'] === null) {
+            $invalid_properties[] = "'service' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -174,90 +159,30 @@ class QuestionnaireOptionsModel implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['service'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets include_record_info
-     * @return bool
+     * Gets service
+     * @return string
      */
-    public function getIncludeRecordInfo()
+    public function getService()
     {
-        return $this->container['include_record_info'];
+        return $this->container['service'];
     }
 
     /**
-     * Sets include_record_info
-     * @param bool $include_record_info
+     * Sets service
+     * @param string $service Service to open the websocket connection for, as defined in FL Config (case insensitive)
      * @return $this
      */
-    public function setIncludeRecordInfo($include_record_info)
+    public function setService($service)
     {
-        $this->container['include_record_info'] = $include_record_info;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_record_object
-     * @return bool
-     */
-    public function getIncludeRecordObject()
-    {
-        return $this->container['include_record_object'];
-    }
-
-    /**
-     * Sets include_record_object
-     * @param bool $include_record_object
-     * @return $this
-     */
-    public function setIncludeRecordObject($include_record_object)
-    {
-        $this->container['include_record_object'] = $include_record_object;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_answers
-     * @return bool
-     */
-    public function getIncludeAnswers()
-    {
-        return $this->container['include_answers'];
-    }
-
-    /**
-     * Sets include_answers
-     * @param bool $include_answers
-     * @return $this
-     */
-    public function setIncludeAnswers($include_answers)
-    {
-        $this->container['include_answers'] = $include_answers;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_files
-     * @return bool
-     */
-    public function getIncludeFiles()
-    {
-        return $this->container['include_files'];
-    }
-
-    /**
-     * Sets include_files
-     * @param bool $include_files
-     * @return $this
-     */
-    public function setIncludeFiles($include_files)
-    {
-        $this->container['include_files'] = $include_files;
+        $this->container['service'] = $service;
 
         return $this;
     }

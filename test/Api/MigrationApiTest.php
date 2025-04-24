@@ -1,6 +1,6 @@
 <?php
 /**
- * SystemApiTest
+ * MigrationApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \BumbalClient\ApiException;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * SystemApiTest Class Doc Comment
+ * MigrationApiTest Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SystemApiTest extends \PHPUnit_Framework_TestCase
+class MigrationApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,32 +73,12 @@ class SystemApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for systemGetConfig
+     * Test case for initiateWebSocketConnection
      *
-     * Retrieve System Configuration.
-     *
-     */
-    public function testSystemGetConfig()
-    {
-    }
-
-    /**
-     * Test case for systemGetVariables
-     *
-     * Retrieve System Variables.
+     * Initiate a webSocket connection for a service.
      *
      */
-    public function testSystemGetVariables()
-    {
-    }
-
-    /**
-     * Test case for systemSetConfig
-     *
-     * Set System Configuration.
-     *
-     */
-    public function testSystemSetConfig()
+    public function testInitiateWebSocketConnection()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * QuestionnaireOptionsModelTest
+ * WebSocketContainerModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * QuestionnaireOptionsModelTest Class Doc Comment
+ * WebSocketContainerModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description QuestionnaireOptionsModel
+// * @description WebSocketContainerModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class QuestionnaireOptionsModelTest extends \PHPUnit_Framework_TestCase
+class WebSocketContainerModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,16 @@ class QuestionnaireOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "QuestionnaireOptionsModel"
+     * Test "WebSocketContainerModel"
      */
-    public function testQuestionnaireOptionsModel()
+    public function testWebSocketContainerModel()
     {
     }
 
     /**
-     * Test attribute "include_record_info"
+     * Test attribute "service"
      */
-    public function testPropertyIncludeRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_record_object"
-     */
-    public function testPropertyIncludeRecordObject()
-    {
-    }
-
-    /**
-     * Test attribute "include_answers"
-     */
-    public function testPropertyIncludeAnswers()
-    {
-    }
-
-    /**
-     * Test attribute "include_files"
-     */
-    public function testPropertyIncludeFiles()
+    public function testPropertyService()
     {
     }
 }

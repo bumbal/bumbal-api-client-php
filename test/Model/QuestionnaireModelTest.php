@@ -181,4 +181,53 @@ class QuestionnaireModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFiles()
     {
     }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "created_by"
+     */
+    public function testPropertyCreatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "updated_by"
+     */
+    public function testPropertyUpdatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "created_by_user"
+     */
+    public function testPropertyCreatedByUser()
+    {
+    }
+
+    /**
+     * Test attribute "updated_by_user"
+     */
+    public function testPropertyUpdatedByUser()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
 }

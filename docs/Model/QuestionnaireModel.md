@@ -18,6 +18,13 @@ Name | Type | Description | Notes
 **dynamic** | **bool** | whetrher the questionnaoire is dynamic (non-liniar flow for the questions, where the answer to one question could impact the choice of the follow-up question. | [optional] 
 **finished** | **bool** | whetrher the questionnaoire is already filled in completely | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
+**created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
+**updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
+**created_by** | **int** | created_by user id | [optional] 
+**updated_by** | **int** | updated_by user id | [optional] 
+**created_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
+**updated_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
+**removed** | **bool** | Questionnaire is removed (&#x3D;true). Removed questionnaires are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed questionnaires are usually irreparable. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

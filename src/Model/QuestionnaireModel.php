@@ -68,7 +68,14 @@ class QuestionnaireModel implements ArrayAccess
         'required' => 'bool',
         'dynamic' => 'bool',
         'finished' => 'bool',
-        'files' => '\BumbalClient\Model\FileModel[]'
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'created_by' => 'int',
+        'updated_by' => 'int',
+        'created_by_user' => '\BumbalClient\Model\UsersModel',
+        'updated_by_user' => '\BumbalClient\Model\UsersModel',
+        'removed' => 'bool'
     ];
 
     /**
@@ -90,7 +97,14 @@ class QuestionnaireModel implements ArrayAccess
         'required' => null,
         'dynamic' => null,
         'finished' => null,
-        'files' => null
+        'files' => null,
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
+        'created_by' => null,
+        'updated_by' => null,
+        'created_by_user' => null,
+        'updated_by_user' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -122,7 +136,14 @@ class QuestionnaireModel implements ArrayAccess
         'required' => 'required',
         'dynamic' => 'dynamic',
         'finished' => 'finished',
-        'files' => 'files'
+        'files' => 'files',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'created_by' => 'created_by',
+        'updated_by' => 'updated_by',
+        'created_by_user' => 'created_by_user',
+        'updated_by_user' => 'updated_by_user',
+        'removed' => 'removed'
     ];
 
 
@@ -145,7 +166,14 @@ class QuestionnaireModel implements ArrayAccess
         'required' => 'setRequired',
         'dynamic' => 'setDynamic',
         'finished' => 'setFinished',
-        'files' => 'setFiles'
+        'files' => 'setFiles',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'created_by' => 'setCreatedBy',
+        'updated_by' => 'setUpdatedBy',
+        'created_by_user' => 'setCreatedByUser',
+        'updated_by_user' => 'setUpdatedByUser',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -168,7 +196,14 @@ class QuestionnaireModel implements ArrayAccess
         'required' => 'getRequired',
         'dynamic' => 'getDynamic',
         'finished' => 'getFinished',
-        'files' => 'getFiles'
+        'files' => 'getFiles',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'created_by' => 'getCreatedBy',
+        'updated_by' => 'getUpdatedBy',
+        'created_by_user' => 'getCreatedByUser',
+        'updated_by_user' => 'getUpdatedByUser',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -217,6 +252,13 @@ class QuestionnaireModel implements ArrayAccess
         $this->container['dynamic'] = isset($data['dynamic']) ? $data['dynamic'] : null;
         $this->container['finished'] = isset($data['finished']) ? $data['finished'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
+        $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
+        $this->container['created_by_user'] = isset($data['created_by_user']) ? $data['created_by_user'] : null;
+        $this->container['updated_by_user'] = isset($data['updated_by_user']) ? $data['updated_by_user'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -555,6 +597,153 @@ class QuestionnaireModel implements ArrayAccess
     public function setFiles($files)
     {
         $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime|string|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime|string|null $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime|string|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime|string|null $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by
+     * @return int
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['created_by'];
+    }
+
+    /**
+     * Sets created_by
+     * @param int $created_by created_by user id
+     * @return $this
+     */
+    public function setCreatedBy($created_by)
+    {
+        $this->container['created_by'] = $created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by
+     * @return int
+     */
+    public function getUpdatedBy()
+    {
+        return $this->container['updated_by'];
+    }
+
+    /**
+     * Sets updated_by
+     * @param int $updated_by updated_by user id
+     * @return $this
+     */
+    public function setUpdatedBy($updated_by)
+    {
+        $this->container['updated_by'] = $updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by_user
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getCreatedByUser()
+    {
+        return $this->container['created_by_user'];
+    }
+
+    /**
+     * Sets created_by_user
+     * @param \BumbalClient\Model\UsersModel $created_by_user
+     * @return $this
+     */
+    public function setCreatedByUser($created_by_user)
+    {
+        $this->container['created_by_user'] = $created_by_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by_user
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getUpdatedByUser()
+    {
+        return $this->container['updated_by_user'];
+    }
+
+    /**
+     * Sets updated_by_user
+     * @param \BumbalClient\Model\UsersModel $updated_by_user
+     * @return $this
+     */
+    public function setUpdatedByUser($updated_by_user)
+    {
+        $this->container['updated_by_user'] = $updated_by_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return bool
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param bool $removed Questionnaire is removed (=true). Removed questionnaires are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed questionnaires are usually irreparable.
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
 
         return $this;
     }
