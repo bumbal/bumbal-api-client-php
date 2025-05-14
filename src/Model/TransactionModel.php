@@ -291,7 +291,7 @@ class TransactionModel implements ArrayAccess
 
     /**
      * Sets transaction_type
-     * @param int $transaction_type Type of Transaction: 1 = cash, 2 = pin, 3 = online
+     * @param int $transaction_type Type of Transaction. Defaults: 1 = cash, 2 = pin, 3 = online
      * @return $this
      */
     public function setTransactionType($transaction_type)

@@ -54,6 +54,7 @@ class ActivityOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'flat_structure' => 'bool',
         'include_activity_status' => 'bool',
         'include_activity_type_name' => 'bool',
         'include_address' => 'bool',
@@ -137,6 +138,7 @@ class ActivityOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'flat_structure' => null,
         'include_activity_status' => null,
         'include_activity_type_name' => null,
         'include_address' => null,
@@ -230,6 +232,7 @@ class ActivityOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'flat_structure' => 'flat_structure',
         'include_activity_status' => 'include_activity_status',
         'include_activity_type_name' => 'include_activity_type_name',
         'include_address' => 'include_address',
@@ -314,6 +317,7 @@ class ActivityOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'flat_structure' => 'setFlatStructure',
         'include_activity_status' => 'setIncludeActivityStatus',
         'include_activity_type_name' => 'setIncludeActivityTypeName',
         'include_address' => 'setIncludeAddress',
@@ -398,6 +402,7 @@ class ActivityOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'flat_structure' => 'getFlatStructure',
         'include_activity_status' => 'getIncludeActivityStatus',
         'include_activity_type_name' => 'getIncludeActivityTypeName',
         'include_address' => 'getIncludeAddress',
@@ -507,6 +512,7 @@ class ActivityOptionsModel implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
+        $this->container['flat_structure'] = isset($data['flat_structure']) ? $data['flat_structure'] : null;
         $this->container['include_activity_status'] = isset($data['include_activity_status']) ? $data['include_activity_status'] : null;
         $this->container['include_activity_type_name'] = isset($data['include_activity_type_name']) ? $data['include_activity_type_name'] : null;
         $this->container['include_address'] = isset($data['include_address']) ? $data['include_address'] : null;
@@ -609,6 +615,27 @@ class ActivityOptionsModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets flat_structure
+     * @return bool
+     */
+    public function getFlatStructure()
+    {
+        return $this->container['flat_structure'];
+    }
+
+    /**
+     * Sets flat_structure
+     * @param bool $flat_structure default False. When set to true: some of the value lists will merge from      *     hierarchically lower or higher levels into the requested level
+     * @return $this
+     */
+    public function setFlatStructure($flat_structure)
+    {
+        $this->container['flat_structure'] = $flat_structure;
+
+        return $this;
+    }
 
     /**
      * Gets include_activity_status

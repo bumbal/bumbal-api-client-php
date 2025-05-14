@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**flat_structure** | **bool** | default False. When set to true: some of the value lists will merge from      *     hierarchically lower or higher levels into the requested level | [optional] 
 **include_activity_status** | **bool** | Deprecated! Use include_status_name instead | [optional] 
 **include_activity_type_name** | **bool** |  | [optional] 
 **include_address** | **bool** | Include the address from the address book | [optional] 

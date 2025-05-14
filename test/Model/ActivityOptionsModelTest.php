@@ -78,6 +78,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "flat_structure"
+     */
+    public function testPropertyFlatStructure()
+    {
+    }
+
+    /**
      * Test attribute "include_activity_status"
      */
     public function testPropertyIncludeActivityStatus()
