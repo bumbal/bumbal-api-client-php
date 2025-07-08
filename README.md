@@ -254,6 +254,8 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**autoPlanResult**](docs/Api/PlannerApi.md#autoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**checkAvailability**](docs/Api/PlannerApi.md#checkavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 *PlannerApi* | [**checkAvailabilityCaching**](docs/Api/PlannerApi.md#checkavailabilitycaching) | **POST** /planner/check-availability-caching | Retrieve the cached check-availability
+*PlannerApi* | [**checkAvailabilityFast**](docs/Api/PlannerApi.md#checkavailabilityfast) | **POST** /planner/check-availability-fast | Retrieve a quicker check-availability
+*PlannerApi* | [**checkAvailabilityFastResult**](docs/Api/PlannerApi.md#checkavailabilityfastresult) | **POST** /planner/check-availability-fast-result | Fetch current result for a checkAvailability Fast Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
@@ -597,6 +599,9 @@ Class | Method | HTTP request | Description
  - [CheckAvailabilityFiltersModel](docs/Model/CheckAvailabilityFiltersModel.md)
  - [CheckAvailabilityOptionsModel](docs/Model/CheckAvailabilityOptionsModel.md)
  - [CheckAvailabilityResponse](docs/Model/CheckAvailabilityResponse.md)
+ - [CheckAvailabilityTimeWindowResult](docs/Model/CheckAvailabilityTimeWindowResult.md)
+ - [CheckAvailabilityTimeWindowResultImpact](docs/Model/CheckAvailabilityTimeWindowResultImpact.md)
+ - [CheckAvailabilityTimeWindowResultProposedDriver](docs/Model/CheckAvailabilityTimeWindowResultProposedDriver.md)
  - [CommunicationDeliveryMethodFiltersModel](docs/Model/CommunicationDeliveryMethodFiltersModel.md)
  - [CommunicationDeliveryMethodListResponse](docs/Model/CommunicationDeliveryMethodListResponse.md)
  - [CommunicationDeliveryMethodModel](docs/Model/CommunicationDeliveryMethodModel.md)
@@ -1002,6 +1007,6 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-info@bumbal.eu
+support@bumbal.eu
 
 
