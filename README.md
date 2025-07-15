@@ -1007,6 +1007,6 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-info@bumbal.eu
+support@bumbal.eu
 
 
