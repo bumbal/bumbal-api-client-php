@@ -609,7 +609,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets earliest_delivery_date_time_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEarliestDeliveryDateTimeSince()
     {
@@ -618,7 +618,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_time_since
-     * @param \DateTime|string|null $earliest_delivery_date_time_since Show activities with a earliest_delivery_date_time younger than filter value
+     * @param \DateTime|string|null|string|null $earliest_delivery_date_time_since Show activities with a earliest_delivery_date_time younger than filter value
      * @return $this
      */
     public function setEarliestDeliveryDateTimeSince($earliest_delivery_date_time_since)
@@ -630,7 +630,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets earliest_delivery_date_time_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEarliestDeliveryDateTimeTill()
     {
@@ -639,7 +639,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_time_till
-     * @param \DateTime|string|null $earliest_delivery_date_time_till Show activities with a earliest_delivery_date_time older than filter value
+     * @param \DateTime|string|null|string|null $earliest_delivery_date_time_till Show activities with a earliest_delivery_date_time older than filter value
      * @return $this
      */
     public function setEarliestDeliveryDateTimeTill($earliest_delivery_date_time_till)
@@ -651,7 +651,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets latest_delivery_date_time_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getLatestDeliveryDateTimeSince()
     {
@@ -660,7 +660,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_time_since
-     * @param \DateTime|string|null $latest_delivery_date_time_since Show activities with a latest_delivery_date_time younger than filter value
+     * @param \DateTime|string|null|string|null $latest_delivery_date_time_since Show activities with a latest_delivery_date_time younger than filter value
      * @return $this
      */
     public function setLatestDeliveryDateTimeSince($latest_delivery_date_time_since)
@@ -672,7 +672,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets latest_delivery_date_time_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getLatestDeliveryDateTimeTill()
     {
@@ -681,7 +681,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_time_till
-     * @param \DateTime|string|null $latest_delivery_date_time_till Show activities with a latest_delivery_date_time older than filter value
+     * @param \DateTime|string|null|string|null $latest_delivery_date_time_till Show activities with a latest_delivery_date_time older than filter value
      * @return $this
      */
     public function setLatestDeliveryDateTimeTill($latest_delivery_date_time_till)
@@ -693,7 +693,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets earliest_delivery_date_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEarliestDeliveryDateSince()
     {
@@ -702,7 +702,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_since
-     * @param \DateTime|string|null $earliest_delivery_date_since Show activities with a earliest_delivery_date younger than filter value
+     * @param \DateTime|string|null|string|null $earliest_delivery_date_since Show activities with a earliest_delivery_date younger than filter value
      * @return $this
      */
     public function setEarliestDeliveryDateSince($earliest_delivery_date_since)
@@ -714,7 +714,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets earliest_delivery_date_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEarliestDeliveryDateTill()
     {
@@ -723,7 +723,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_till
-     * @param \DateTime|string|null $earliest_delivery_date_till Show activities with a earliest_delivery_date older than filter value
+     * @param \DateTime|string|null|string|null $earliest_delivery_date_till Show activities with a earliest_delivery_date older than filter value
      * @return $this
      */
     public function setEarliestDeliveryDateTill($earliest_delivery_date_till)
@@ -735,7 +735,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets latest_delivery_date_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getLatestDeliveryDateSince()
     {
@@ -744,7 +744,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_since
-     * @param \DateTime|string|null $latest_delivery_date_since Show activities with a latest_delivery_date younger than filter value
+     * @param \DateTime|string|null|string|null $latest_delivery_date_since Show activities with a latest_delivery_date younger than filter value
      * @return $this
      */
     public function setLatestDeliveryDateSince($latest_delivery_date_since)
@@ -756,7 +756,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets latest_delivery_date_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getLatestDeliveryDateTill()
     {
@@ -765,7 +765,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_till
-     * @param \DateTime|string|null $latest_delivery_date_till Show activities with a latest_delivery_date older than filter value
+     * @param \DateTime|string|null|string|null $latest_delivery_date_till Show activities with a latest_delivery_date older than filter value
      * @return $this
      */
     public function setLatestDeliveryDateTill($latest_delivery_date_till)
@@ -777,7 +777,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -786,7 +786,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null $date_time_from DateTime From
+     * @param \DateTime|string|null|string|null $date_time_from DateTime From
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -798,7 +798,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -807,7 +807,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null $date_time_to DateTime To
+     * @param \DateTime|string|null|string|null $date_time_to DateTime To
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -819,7 +819,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeFromSince()
     {
@@ -828,7 +828,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from_since
-     * @param \DateTime|string|null $date_time_from_since filter activities with a DateTime From since this input
+     * @param \DateTime|string|null|string|null $date_time_from_since filter activities with a DateTime From since this input
      * @return $this
      */
     public function setDateTimeFromSince($date_time_from_since)
@@ -840,7 +840,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeFromTill()
     {
@@ -849,7 +849,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from_till
-     * @param \DateTime|string|null $date_time_from_till filter activities with a DateTime From till this input
+     * @param \DateTime|string|null|string|null $date_time_from_till filter activities with a DateTime From till this input
      * @return $this
      */
     public function setDateTimeFromTill($date_time_from_till)
@@ -861,7 +861,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeToSince()
     {
@@ -870,7 +870,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to_since
-     * @param \DateTime|string|null $date_time_to_since filter activities with a DateTime To since this input
+     * @param \DateTime|string|null|string|null $date_time_to_since filter activities with a DateTime To since this input
      * @return $this
      */
     public function setDateTimeToSince($date_time_to_since)
@@ -882,7 +882,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeToTill()
     {
@@ -891,7 +891,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to_till
-     * @param \DateTime|string|null $date_time_to_till filter activities with a DateTime To till this input
+     * @param \DateTime|string|null|string|null $date_time_to_till filter activities with a DateTime To till this input
      * @return $this
      */
     public function setDateTimeToTill($date_time_to_till)
@@ -903,7 +903,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_from
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getPlannedDateTimeFrom()
     {
@@ -912,7 +912,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_from
-     * @param \DateTime|string|null $planned_date_time_from Planned DateTime From
+     * @param \DateTime|string|null|string|null $planned_date_time_from Planned DateTime From
      * @return $this
      */
     public function setPlannedDateTimeFrom($planned_date_time_from)
@@ -924,7 +924,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_to
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getPlannedDateTimeTo()
     {
@@ -933,7 +933,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_to
-     * @param \DateTime|string|null $planned_date_time_to Planned DateTime To
+     * @param \DateTime|string|null|string|null $planned_date_time_to Planned DateTime To
      * @return $this
      */
     public function setPlannedDateTimeTo($planned_date_time_to)
@@ -945,7 +945,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_from_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getPlannedDateTimeFromSince()
     {
@@ -954,7 +954,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_from_since
-     * @param \DateTime|string|null $planned_date_time_from_since filter activities with a planned DateTime From since this input
+     * @param \DateTime|string|null|string|null $planned_date_time_from_since filter activities with a planned DateTime From since this input
      * @return $this
      */
     public function setPlannedDateTimeFromSince($planned_date_time_from_since)
@@ -966,7 +966,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_from_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getPlannedDateTimeFromTill()
     {
@@ -975,7 +975,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_from_till
-     * @param \DateTime|string|null $planned_date_time_from_till filter activities with a planned DateTime From till this input
+     * @param \DateTime|string|null|string|null $planned_date_time_from_till filter activities with a planned DateTime From till this input
      * @return $this
      */
     public function setPlannedDateTimeFromTill($planned_date_time_from_till)
@@ -987,7 +987,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_to_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getPlannedDateTimeToSince()
     {
@@ -996,7 +996,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_to_since
-     * @param \DateTime|string|null $planned_date_time_to_since filter activities with a planned DateTime To since this input
+     * @param \DateTime|string|null|string|null $planned_date_time_to_since filter activities with a planned DateTime To since this input
      * @return $this
      */
     public function setPlannedDateTimeToSince($planned_date_time_to_since)
@@ -1008,7 +1008,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_to_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getPlannedDateTimeToTill()
     {
@@ -1017,7 +1017,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_to_till
-     * @param \DateTime|string|null $planned_date_time_to_till filter activities with a planned DateTime To till this input
+     * @param \DateTime|string|null|string|null $planned_date_time_to_till filter activities with a planned DateTime To till this input
      * @return $this
      */
     public function setPlannedDateTimeToTill($planned_date_time_to_till)
@@ -1029,7 +1029,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -1038,7 +1038,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime|string|null $updated_at_since Show updated since
+     * @param \DateTime|string|null|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -1050,7 +1050,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -1059,7 +1059,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime|string|null $updated_at_till Show updated till
+     * @param \DateTime|string|null|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -1596,7 +1596,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets created_at_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getCreatedAtSince()
     {
@@ -1605,7 +1605,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets created_at_since
-     * @param \DateTime|string|null $created_at_since Filter by activity created at since
+     * @param \DateTime|string|null|string|null $created_at_since Filter by activity created at since
      * @return $this
      */
     public function setCreatedAtSince($created_at_since)
@@ -1617,7 +1617,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets created_at_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getCreatedAtTill()
     {
@@ -1626,7 +1626,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets created_at_till
-     * @param \DateTime|string|null $created_at_till Filter by activity created at till
+     * @param \DateTime|string|null|string|null $created_at_till Filter by activity created at till
      * @return $this
      */
     public function setCreatedAtTill($created_at_till)
@@ -1638,7 +1638,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets time_slots_created_at_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getTimeSlotsCreatedAtSince()
     {
@@ -1647,7 +1647,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets time_slots_created_at_since
-     * @param \DateTime|string|null $time_slots_created_at_since Filter by time_slots created at since
+     * @param \DateTime|string|null|string|null $time_slots_created_at_since Filter by time_slots created at since
      * @return $this
      */
     public function setTimeSlotsCreatedAtSince($time_slots_created_at_since)
@@ -1659,7 +1659,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets time_slots_created_at_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getTimeSlotsCreatedAtTill()
     {
@@ -1668,7 +1668,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets time_slots_created_at_till
-     * @param \DateTime|string|null $time_slots_created_at_till Filter by time_slots created at till
+     * @param \DateTime|string|null|string|null $time_slots_created_at_till Filter by time_slots created at till
      * @return $this
      */
     public function setTimeSlotsCreatedAtTill($time_slots_created_at_till)
@@ -1724,6 +1724,7 @@ class ActivityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1734,6 +1735,7 @@ class ActivityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1745,6 +1747,7 @@ class ActivityFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1759,6 +1762,7 @@ class ActivityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

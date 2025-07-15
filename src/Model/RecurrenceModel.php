@@ -549,7 +549,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets start_date
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getStartDate()
     {
@@ -558,7 +558,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets start_date
-     * @param \DateTime|string|null $start_date Start date
+     * @param \DateTime|string|null|string|null $start_date Start date
      * @return $this
      */
     public function setStartDate($start_date)
@@ -570,7 +570,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets end_date
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEndDate()
     {
@@ -579,7 +579,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets end_date
-     * @param \DateTime|string|null $end_date End date
+     * @param \DateTime|string|null|string|null $end_date End date
      * @return $this
      */
     public function setEndDate($end_date)
@@ -777,7 +777,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets next_run
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getNextRun()
     {
@@ -786,7 +786,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets next_run
-     * @param \DateTime|string|null $next_run Next date on which a new recurrence will be added
+     * @param \DateTime|string|null|string|null $next_run Next date on which a new recurrence will be added
      * @return $this
      */
     public function setNextRun($next_run)
@@ -798,7 +798,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets last_run
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getLastRun()
     {
@@ -807,7 +807,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets last_run
-     * @param \DateTime|string|null $last_run Last date on which a new recurrence was added
+     * @param \DateTime|string|null|string|null $last_run Last date on which a new recurrence was added
      * @return $this
      */
     public function setLastRun($last_run)
@@ -1145,6 +1145,7 @@ class RecurrenceModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1155,6 +1156,7 @@ class RecurrenceModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1166,6 +1168,7 @@ class RecurrenceModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1180,6 +1183,7 @@ class RecurrenceModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

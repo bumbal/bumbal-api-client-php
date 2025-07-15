@@ -380,7 +380,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_from
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateFrom()
     {
@@ -389,7 +389,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_from
-     * @param \DateTime|string|null $date_from
+     * @param \DateTime|string|null|string|null $date_from
      * @return $this
      */
     public function setDateFrom($date_from)
@@ -422,7 +422,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -431,7 +431,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null $date_time_from
+     * @param \DateTime|string|null|string|null $date_time_from
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -443,7 +443,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_to
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTo()
     {
@@ -452,7 +452,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_to
-     * @param \DateTime|string|null $date_to
+     * @param \DateTime|string|null|string|null $date_to
      * @return $this
      */
     public function setDateTo($date_to)
@@ -485,7 +485,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -494,7 +494,7 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null $date_time_to
+     * @param \DateTime|string|null|string|null $date_time_to
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -529,6 +529,7 @@ class TimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -539,6 +540,7 @@ class TimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -550,6 +552,7 @@ class TimeSlotModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -564,6 +567,7 @@ class TimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

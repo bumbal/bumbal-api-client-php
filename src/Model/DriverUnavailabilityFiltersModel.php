@@ -261,7 +261,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -270,7 +270,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime|string|null $updated_at_since Show updated since
+     * @param \DateTime|string|null|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -282,7 +282,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -291,7 +291,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime|string|null $updated_at_till Show updated till
+     * @param \DateTime|string|null|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -303,7 +303,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Gets created_at_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getCreatedAtSince()
     {
@@ -312,7 +312,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets created_at_since
-     * @param \DateTime|string|null $created_at_since Show create since
+     * @param \DateTime|string|null|string|null $created_at_since Show create since
      * @return $this
      */
     public function setCreatedAtSince($created_at_since)
@@ -324,7 +324,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Gets created_at_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getCreatedAtTill()
     {
@@ -333,7 +333,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets created_at_till
-     * @param \DateTime|string|null $created_at_till Show created till
+     * @param \DateTime|string|null|string|null $created_at_till Show created till
      * @return $this
      */
     public function setCreatedAtTill($created_at_till)
@@ -347,6 +347,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -357,6 +358,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -368,6 +370,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -382,6 +385,7 @@ class DriverUnavailabilityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

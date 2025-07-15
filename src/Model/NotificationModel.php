@@ -462,7 +462,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Gets notification_created_at
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getNotificationCreatedAt()
     {
@@ -471,7 +471,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets notification_created_at
-     * @param \DateTime|string|null $notification_created_at created_at date time
+     * @param \DateTime|string|null|string|null $notification_created_at created_at date time
      * @return $this
      */
     public function setNotificationCreatedAt($notification_created_at)
@@ -483,7 +483,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Gets notification_updated_at
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getNotificationUpdatedAt()
     {
@@ -492,7 +492,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets notification_updated_at
-     * @param \DateTime|string|null $notification_updated_at updated_at date time
+     * @param \DateTime|string|null|string|null $notification_updated_at updated_at date time
      * @return $this
      */
     public function setNotificationUpdatedAt($notification_updated_at)
@@ -590,6 +590,7 @@ class NotificationModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -600,6 +601,7 @@ class NotificationModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -611,6 +613,7 @@ class NotificationModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -625,6 +628,7 @@ class NotificationModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

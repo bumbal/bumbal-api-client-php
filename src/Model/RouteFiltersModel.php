@@ -375,7 +375,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -384,7 +384,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null $date_time_from
+     * @param \DateTime|string|null|string|null $date_time_from
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -396,7 +396,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -405,7 +405,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null $date_time_to
+     * @param \DateTime|string|null|string|null $date_time_to
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -417,7 +417,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets earliest_date_time_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEarliestDateTimeSince()
     {
@@ -426,7 +426,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets earliest_date_time_since
-     * @param \DateTime|string|null $earliest_date_time_since filter routes with an Earliest DateTime To since this input
+     * @param \DateTime|string|null|string|null $earliest_date_time_since filter routes with an Earliest DateTime To since this input
      * @return $this
      */
     public function setEarliestDateTimeSince($earliest_date_time_since)
@@ -438,7 +438,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets earliest_date_time_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEarliestDateTimeTill()
     {
@@ -447,7 +447,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets earliest_date_time_till
-     * @param \DateTime|string|null $earliest_date_time_till filter routes with an Earliest DateTime To till this input
+     * @param \DateTime|string|null|string|null $earliest_date_time_till filter routes with an Earliest DateTime To till this input
      * @return $this
      */
     public function setEarliestDateTimeTill($earliest_date_time_till)
@@ -459,7 +459,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets latest_date_time_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getLatestDateTimeSince()
     {
@@ -468,7 +468,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets latest_date_time_since
-     * @param \DateTime|string|null $latest_date_time_since filter routes with an Latest DateTime To since this input
+     * @param \DateTime|string|null|string|null $latest_date_time_since filter routes with an Latest DateTime To since this input
      * @return $this
      */
     public function setLatestDateTimeSince($latest_date_time_since)
@@ -480,7 +480,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets latest_date_time_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getLatestDateTimeTill()
     {
@@ -489,7 +489,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets latest_date_time_till
-     * @param \DateTime|string|null $latest_date_time_till filter routes with an Latest DateTime To till this input
+     * @param \DateTime|string|null|string|null $latest_date_time_till filter routes with an Latest DateTime To till this input
      * @return $this
      */
     public function setLatestDateTimeTill($latest_date_time_till)
@@ -501,7 +501,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getUpdatedAt()
     {
@@ -510,7 +510,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null $updated_at
+     * @param \DateTime|string|null|string|null $updated_at
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -522,7 +522,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -531,7 +531,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime|string|null $updated_at_since filter routes with an updated at date-time since this input
+     * @param \DateTime|string|null|string|null $updated_at_since filter routes with an updated at date-time since this input
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -543,7 +543,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -552,7 +552,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime|string|null $updated_at_till filter routes with an updated at date-time till this input
+     * @param \DateTime|string|null|string|null $updated_at_till filter routes with an updated at date-time till this input
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -564,7 +564,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets created_at_since
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getCreatedAtSince()
     {
@@ -573,7 +573,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets created_at_since
-     * @param \DateTime|string|null $created_at_since filter routes with an created at date-time since this input
+     * @param \DateTime|string|null|string|null $created_at_since filter routes with an created at date-time since this input
      * @return $this
      */
     public function setCreatedAtSince($created_at_since)
@@ -585,7 +585,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets created_at_till
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getCreatedAtTill()
     {
@@ -594,7 +594,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets created_at_till
-     * @param \DateTime|string|null $created_at_till filter routes with an created at date-time till this input
+     * @param \DateTime|string|null|string|null $created_at_till filter routes with an created at date-time till this input
      * @return $this
      */
     public function setCreatedAtTill($created_at_till)
@@ -860,6 +860,7 @@ class RouteFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -870,6 +871,7 @@ class RouteFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -881,6 +883,7 @@ class RouteFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -895,6 +898,7 @@ class RouteFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

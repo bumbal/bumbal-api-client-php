@@ -195,7 +195,7 @@ class ActivityEtaModel implements ArrayAccess
 
     /**
      * Gets eta_date_time
-     * @return \DateTime|string|null
+     * @return \DateTime|string|null|string|null
      */
     public function getEtaDateTime()
     {
@@ -204,7 +204,7 @@ class ActivityEtaModel implements ArrayAccess
 
     /**
      * Sets eta_date_time
-     * @param \DateTime|string|null $eta_date_time
+     * @param \DateTime|string|null|string|null $eta_date_time
      * @return $this
      */
     public function setEtaDateTime($eta_date_time)
@@ -239,6 +239,7 @@ class ActivityEtaModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -249,6 +250,7 @@ class ActivityEtaModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -260,6 +262,7 @@ class ActivityEtaModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -274,6 +277,7 @@ class ActivityEtaModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
