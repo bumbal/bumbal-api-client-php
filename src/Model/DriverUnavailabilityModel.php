@@ -279,7 +279,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -288,7 +288,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null|string|null $date_time_to date_time_to date time
+     * @param \DateTime|string|null|string|null|string|null|string|null $date_time_to date_time_to date time
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -300,7 +300,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -309,7 +309,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null|string|null $date_time_from date_time_from date time
+     * @param \DateTime|string|null|string|null|string|null|string|null $date_time_from date_time_from date time
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -342,7 +342,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getCreatedAt()
     {
@@ -351,7 +351,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime|string|null|string|null|string|null $created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -363,7 +363,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getUpdatedAt()
     {
@@ -372,7 +372,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null|string|null|string|null $updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -430,6 +430,7 @@ class DriverUnavailabilityModel implements ArrayAccess
      */
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -440,6 +441,7 @@ class DriverUnavailabilityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
@@ -453,6 +455,7 @@ class DriverUnavailabilityModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
@@ -469,6 +472,7 @@ class DriverUnavailabilityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)

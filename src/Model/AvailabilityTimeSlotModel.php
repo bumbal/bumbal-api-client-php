@@ -252,7 +252,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -261,7 +261,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null|string|null $date_time_from
+     * @param \DateTime|string|null|string|null|string|null|string|null $date_time_from
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -273,7 +273,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -282,7 +282,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null|string|null $date_time_to
+     * @param \DateTime|string|null|string|null|string|null|string|null $date_time_to
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -294,7 +294,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_from
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getProposedPlanDateTimeFrom()
     {
@@ -303,7 +303,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_from
-     * @param \DateTime|string|null|string|null|string|null $proposed_plan_date_time_from
+     * @param \DateTime|string|null|string|null|string|null|string|null $proposed_plan_date_time_from
      * @return $this
      */
     public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
@@ -315,7 +315,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_to
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getProposedPlanDateTimeTo()
     {
@@ -324,7 +324,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_to
-     * @param \DateTime|string|null|string|null|string|null $proposed_plan_date_time_to
+     * @param \DateTime|string|null|string|null|string|null|string|null $proposed_plan_date_time_to
      * @return $this
      */
     public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
@@ -403,6 +403,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
      */
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -413,6 +414,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
@@ -426,6 +428,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
@@ -442,6 +445,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)

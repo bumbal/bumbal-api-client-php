@@ -143,12 +143,12 @@ class SystemproviderApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen(($apiKey ?? '') ?? '') !== 0) {
+        if (strlen((($apiKey ?? '') ?? '') ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen(($apiKey ?? '') ?? '') !== 0) {
+        if (strlen((($apiKey ?? '') ?? '') ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -247,12 +247,12 @@ class SystemproviderApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen(($apiKey ?? '') ?? '') !== 0) {
+        if (strlen((($apiKey ?? '') ?? '') ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen(($apiKey ?? '') ?? '') !== 0) {
+        if (strlen((($apiKey ?? '') ?? '') ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call

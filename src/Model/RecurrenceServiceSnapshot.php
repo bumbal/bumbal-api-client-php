@@ -195,7 +195,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getCreatedAt()
     {
@@ -204,7 +204,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime|string|null|string|null|string|null $created_at Date and time of creation
+     * @param \DateTime|string|null|string|null|string|null|string|null $created_at Date and time of creation
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -216,7 +216,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getUpdatedAt()
     {
@@ -225,7 +225,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null|string|null|string|null $updated_at Date and time of last update
+     * @param \DateTime|string|null|string|null|string|null|string|null $updated_at Date and time of last update
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -241,6 +241,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
      */
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -251,6 +252,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
@@ -264,6 +266,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
@@ -280,6 +283,7 @@ class RecurrenceServiceSnapshot implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)

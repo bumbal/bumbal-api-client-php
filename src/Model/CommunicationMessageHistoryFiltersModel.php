@@ -243,7 +243,7 @@ class CommunicationMessageHistoryFiltersModel implements ArrayAccess
 
     /**
      * Gets created_at_since
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getCreatedAtSince()
     {
@@ -252,7 +252,7 @@ class CommunicationMessageHistoryFiltersModel implements ArrayAccess
 
     /**
      * Sets created_at_since
-     * @param \DateTime|string|null|string|null|string|null $created_at_since Filter by communication message history created at since
+     * @param \DateTime|string|null|string|null|string|null|string|null $created_at_since Filter by communication message history created at since
      * @return $this
      */
     public function setCreatedAtSince($created_at_since)
@@ -268,6 +268,7 @@ class CommunicationMessageHistoryFiltersModel implements ArrayAccess
      */
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -278,6 +279,7 @@ class CommunicationMessageHistoryFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
@@ -291,6 +293,7 @@ class CommunicationMessageHistoryFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
@@ -307,6 +310,7 @@ class CommunicationMessageHistoryFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)

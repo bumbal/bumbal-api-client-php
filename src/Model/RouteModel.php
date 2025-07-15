@@ -1536,7 +1536,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets earliest_date
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getEarliestDate()
     {
@@ -1545,7 +1545,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets earliest_date
-     * @param \DateTime|string|null|string|null|string|null $earliest_date Write only!
+     * @param \DateTime|string|null|string|null|string|null|string|null $earliest_date Write only!
      * @return $this
      */
     public function setEarliestDate($earliest_date)
@@ -1557,7 +1557,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets latest_date
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getLatestDate()
     {
@@ -1566,7 +1566,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_date
-     * @param \DateTime|string|null|string|null|string|null $latest_date Write only!
+     * @param \DateTime|string|null|string|null|string|null|string|null $latest_date Write only!
      * @return $this
      */
     public function setLatestDate($latest_date)
@@ -1578,7 +1578,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets earliest_date_time
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getEarliestDateTime()
     {
@@ -1587,7 +1587,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets earliest_date_time
-     * @param \DateTime|string|null|string|null|string|null $earliest_date_time
+     * @param \DateTime|string|null|string|null|string|null|string|null $earliest_date_time
      * @return $this
      */
     public function setEarliestDateTime($earliest_date_time)
@@ -1599,7 +1599,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets latest_date_time
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getLatestDateTime()
     {
@@ -1608,7 +1608,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_date_time
-     * @param \DateTime|string|null|string|null|string|null $latest_date_time
+     * @param \DateTime|string|null|string|null|string|null|string|null $latest_date_time
      * @return $this
      */
     public function setLatestDateTime($latest_date_time)
@@ -1620,7 +1620,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_from
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getPlannedDateTimeFrom()
     {
@@ -1629,7 +1629,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_from
-     * @param \DateTime|string|null|string|null|string|null $planned_date_time_from planned date-time from
+     * @param \DateTime|string|null|string|null|string|null|string|null $planned_date_time_from planned date-time from
      * @return $this
      */
     public function setPlannedDateTimeFrom($planned_date_time_from)
@@ -1641,7 +1641,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_to
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getPlannedDateTimeTo()
     {
@@ -1650,7 +1650,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_to
-     * @param \DateTime|string|null|string|null|string|null $planned_date_time_to planned date-time to
+     * @param \DateTime|string|null|string|null|string|null|string|null $planned_date_time_to planned date-time to
      * @return $this
      */
     public function setPlannedDateTimeTo($planned_date_time_to)
@@ -1662,7 +1662,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets executed_date_time_from
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getExecutedDateTimeFrom()
     {
@@ -1671,7 +1671,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets executed_date_time_from
-     * @param \DateTime|string|null|string|null|string|null $executed_date_time_from executed date-time from
+     * @param \DateTime|string|null|string|null|string|null|string|null $executed_date_time_from executed date-time from
      * @return $this
      */
     public function setExecutedDateTimeFrom($executed_date_time_from)
@@ -1683,7 +1683,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets executed_date_time_to
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getExecutedDateTimeTo()
     {
@@ -1692,7 +1692,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets executed_date_time_to
-     * @param \DateTime|string|null|string|null|string|null $executed_date_time_to executed date-time to
+     * @param \DateTime|string|null|string|null|string|null|string|null $executed_date_time_to executed date-time to
      * @return $this
      */
     public function setExecutedDateTimeTo($executed_date_time_to)
@@ -2376,7 +2376,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getCreatedAt()
     {
@@ -2385,7 +2385,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime|string|null|string|null|string|null $created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -2397,7 +2397,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getUpdatedAt()
     {
@@ -2406,7 +2406,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null|string|null|string|null $updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -2506,6 +2506,7 @@ class RouteModel implements ArrayAccess
      */
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2516,6 +2517,7 @@ class RouteModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
@@ -2529,6 +2531,7 @@ class RouteModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
@@ -2545,6 +2548,7 @@ class RouteModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)

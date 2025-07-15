@@ -307,7 +307,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Gets latest_analyzed_date
-     * @return \DateTime|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null
      */
     public function getLatestAnalyzedDate()
     {
@@ -316,7 +316,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets latest_analyzed_date
-     * @param \DateTime|string|null|string|null|string|null $latest_analyzed_date
+     * @param \DateTime|string|null|string|null|string|null|string|null $latest_analyzed_date
      * @return $this
      */
     public function setLatestAnalyzedDate($latest_analyzed_date)
@@ -332,6 +332,7 @@ class CheckAvailabilityResponse implements ArrayAccess
      */
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -342,6 +343,7 @@ class CheckAvailabilityResponse implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
@@ -355,6 +357,7 @@ class CheckAvailabilityResponse implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
@@ -371,6 +374,7 @@ class CheckAvailabilityResponse implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
