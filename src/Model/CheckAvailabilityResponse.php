@@ -166,7 +166,7 @@ class CheckAvailabilityResponse implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -307,7 +307,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Gets latest_analyzed_date
-     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null
      */
     public function getLatestAnalyzedDate()
     {
@@ -316,7 +316,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets latest_analyzed_date
-     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $latest_analyzed_date
+     * @param \DateTime|string|null $latest_analyzed_date
      * @return $this
      */
     public function setLatestAnalyzedDate($latest_analyzed_date)
@@ -330,10 +330,6 @@ class CheckAvailabilityResponse implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -344,10 +340,6 @@ class CheckAvailabilityResponse implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -359,10 +351,6 @@ class CheckAvailabilityResponse implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -377,10 +365,6 @@ class CheckAvailabilityResponse implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

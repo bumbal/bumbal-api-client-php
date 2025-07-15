@@ -55,7 +55,7 @@ class AssignmentApi
      *
      * @param \BumbalClient\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(?\BumbalClient\ApiClient $apiClient = null)
+    public function __construct(\BumbalClient\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -146,12 +146,12 @@ class AssignmentApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -292,12 +292,12 @@ class AssignmentApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -381,12 +381,12 @@ class AssignmentApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -466,12 +466,12 @@ class AssignmentApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -565,12 +565,12 @@ class AssignmentApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen((((($apiKey ?? '') ?? '') ?? '') ?? '') ?? '') !== 0) {
+        if (strlen($apiKey) !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call

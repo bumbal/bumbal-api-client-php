@@ -145,7 +145,7 @@ class NotificationCategoryModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -222,7 +222,7 @@ class NotificationCategoryModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null
      */
     public function getCreatedAt()
     {
@@ -231,7 +231,7 @@ class NotificationCategoryModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $created_at created_at date time
+     * @param \DateTime|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -243,7 +243,7 @@ class NotificationCategoryModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null
      */
     public function getUpdatedAt()
     {
@@ -252,7 +252,7 @@ class NotificationCategoryModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $updated_at updated_at date time
+     * @param \DateTime|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -266,10 +266,6 @@ class NotificationCategoryModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -280,10 +276,6 @@ class NotificationCategoryModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -295,10 +287,6 @@ class NotificationCategoryModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -313,10 +301,6 @@ class NotificationCategoryModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

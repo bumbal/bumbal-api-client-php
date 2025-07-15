@@ -260,7 +260,7 @@ class DriverModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
@@ -780,7 +780,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets driver_created_at
-     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null
      */
     public function getDriverCreatedAt()
     {
@@ -789,7 +789,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets driver_created_at
-     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $driver_created_at created_at date time
+     * @param \DateTime|string|null $driver_created_at created_at date time
      * @return $this
      */
     public function setDriverCreatedAt($driver_created_at)
@@ -801,7 +801,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets driver_updated_at
-     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null
      */
     public function getDriverUpdatedAt()
     {
@@ -810,7 +810,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets driver_updated_at
-     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $driver_updated_at updated_at date time
+     * @param \DateTime|string|null $driver_updated_at updated_at date time
      * @return $this
      */
     public function setDriverUpdatedAt($driver_updated_at)
@@ -887,10 +887,6 @@ class DriverModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -901,10 +897,6 @@ class DriverModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -916,10 +908,6 @@ class DriverModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -934,10 +922,6 @@ class DriverModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -160,7 +160,7 @@ class NoteOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
         $this->container['include_note_tags'] = isset($data['include_note_tags']) ? $data['include_note_tags'] : null;
         $this->container['include_note_tag_type_link_ids'] = isset($data['include_note_tag_type_link_ids']) ? $data['include_note_tag_type_link_ids'] : null;
@@ -347,10 +347,6 @@ class NoteOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -361,10 +357,6 @@ class NoteOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -376,10 +368,6 @@ class NoteOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -394,10 +382,6 @@ class NoteOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

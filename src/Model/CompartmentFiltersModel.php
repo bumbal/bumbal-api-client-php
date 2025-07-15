@@ -140,7 +140,7 @@ class CompartmentFiltersModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(?array $data = null)
+    public function __construct(array $data = null)
     {
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
@@ -174,7 +174,7 @@ class CompartmentFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -183,7 +183,7 @@ class CompartmentFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $updated_at_since Show updated since
+     * @param \DateTime|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -195,7 +195,7 @@ class CompartmentFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -204,7 +204,7 @@ class CompartmentFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $updated_at_till Show updated till
+     * @param \DateTime|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -239,10 +239,6 @@ class CompartmentFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -253,10 +249,6 @@ class CompartmentFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -268,10 +260,6 @@ class CompartmentFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -286,10 +274,6 @@ class CompartmentFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
