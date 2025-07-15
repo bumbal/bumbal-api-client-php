@@ -180,7 +180,7 @@ class AssignmentFiltersModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
@@ -264,7 +264,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -273,7 +273,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null $date_time_from DateTime From
+     * @param \DateTime|string|null|string|null|string|null $date_time_from DateTime From
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -285,7 +285,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -294,7 +294,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null $date_time_to DateTime To
+     * @param \DateTime|string|null|string|null|string|null $date_time_to DateTime To
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -306,7 +306,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from_since
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeFromSince()
     {
@@ -315,7 +315,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from_since
-     * @param \DateTime|string|null|string|null $date_time_from_since filter assignments with a DateTime From since this input
+     * @param \DateTime|string|null|string|null|string|null $date_time_from_since filter assignments with a DateTime From since this input
      * @return $this
      */
     public function setDateTimeFromSince($date_time_from_since)
@@ -327,7 +327,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from_till
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeFromTill()
     {
@@ -336,7 +336,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from_till
-     * @param \DateTime|string|null|string|null $date_time_from_till filter assignments with a DateTime From till this input
+     * @param \DateTime|string|null|string|null|string|null $date_time_from_till filter assignments with a DateTime From till this input
      * @return $this
      */
     public function setDateTimeFromTill($date_time_from_till)
@@ -348,7 +348,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to_since
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeToSince()
     {
@@ -357,7 +357,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to_since
-     * @param \DateTime|string|null|string|null $date_time_to_since filter assignments with a DateTime To since this input
+     * @param \DateTime|string|null|string|null|string|null $date_time_to_since filter assignments with a DateTime To since this input
      * @return $this
      */
     public function setDateTimeToSince($date_time_to_since)
@@ -369,7 +369,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to_till
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeToTill()
     {
@@ -378,7 +378,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to_till
-     * @param \DateTime|string|null|string|null $date_time_to_till filter assignments with a DateTime To till this input
+     * @param \DateTime|string|null|string|null|string|null $date_time_to_till filter assignments with a DateTime To till this input
      * @return $this
      */
     public function setDateTimeToTill($date_time_to_till)
@@ -411,7 +411,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -420,7 +420,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime|string|null|string|null $updated_at_since Show updated since
+     * @param \DateTime|string|null|string|null|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -432,7 +432,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -441,7 +441,7 @@ class AssignmentFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime|string|null|string|null $updated_at_till Show updated till
+     * @param \DateTime|string|null|string|null|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -456,6 +456,7 @@ class AssignmentFiltersModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -466,6 +467,7 @@ class AssignmentFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -478,6 +480,7 @@ class AssignmentFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -493,6 +496,7 @@ class AssignmentFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

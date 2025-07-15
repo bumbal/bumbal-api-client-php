@@ -135,7 +135,7 @@ class QuestionnaireGetNextQuestionArguments implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['questionnaire_id'] = isset($data['questionnaire_id']) ? $data['questionnaire_id'] : null;
         $this->container['questionnaire_question_id'] = isset($data['questionnaire_question_id']) ? $data['questionnaire_question_id'] : null;
@@ -213,6 +213,7 @@ class QuestionnaireGetNextQuestionArguments implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -223,6 +224,7 @@ class QuestionnaireGetNextQuestionArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -235,6 +237,7 @@ class QuestionnaireGetNextQuestionArguments implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -250,6 +253,7 @@ class QuestionnaireGetNextQuestionArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

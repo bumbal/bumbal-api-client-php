@@ -185,7 +185,7 @@ class BrandModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -438,7 +438,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Gets brand_created_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getBrandCreatedAt()
     {
@@ -447,7 +447,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets brand_created_at
-     * @param \DateTime|string|null|string|null $brand_created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null $brand_created_at created_at date time
      * @return $this
      */
     public function setBrandCreatedAt($brand_created_at)
@@ -459,7 +459,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Gets brand_updated_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getBrandUpdatedAt()
     {
@@ -468,7 +468,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets brand_updated_at
-     * @param \DateTime|string|null|string|null $brand_updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null $brand_updated_at updated_at date time
      * @return $this
      */
     public function setBrandUpdatedAt($brand_updated_at)
@@ -483,6 +483,7 @@ class BrandModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -493,6 +494,7 @@ class BrandModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -505,6 +507,7 @@ class BrandModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -520,6 +523,7 @@ class BrandModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

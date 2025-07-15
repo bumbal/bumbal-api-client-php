@@ -145,7 +145,7 @@ class ZoneOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_zone_ranges'] = isset($data['include_zone_ranges']) ? $data['include_zone_ranges'] : null;
         $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;
@@ -267,6 +267,7 @@ class ZoneOptionsModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -277,6 +278,7 @@ class ZoneOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -289,6 +291,7 @@ class ZoneOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -304,6 +307,7 @@ class ZoneOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

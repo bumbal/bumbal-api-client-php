@@ -908,7 +908,7 @@ class ActivityModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
@@ -1713,7 +1713,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets earliest_delivery_date_time
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getEarliestDeliveryDateTime()
     {
@@ -1722,7 +1722,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_time
-     * @param \DateTime|string|null|string|null $earliest_delivery_date_time
+     * @param \DateTime|string|null|string|null|string|null $earliest_delivery_date_time
      * @return $this
      */
     public function setEarliestDeliveryDateTime($earliest_delivery_date_time)
@@ -1734,7 +1734,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets latest_delivery_date_time
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getLatestDeliveryDateTime()
     {
@@ -1743,7 +1743,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_time
-     * @param \DateTime|string|null|string|null $latest_delivery_date_time
+     * @param \DateTime|string|null|string|null|string|null $latest_delivery_date_time
      * @return $this
      */
     public function setLatestDeliveryDateTime($latest_delivery_date_time)
@@ -1755,7 +1755,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets earliest_delivery_date
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getEarliestDeliveryDate()
     {
@@ -1764,7 +1764,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date
-     * @param \DateTime|string|null|string|null $earliest_delivery_date
+     * @param \DateTime|string|null|string|null|string|null $earliest_delivery_date
      * @return $this
      */
     public function setEarliestDeliveryDate($earliest_delivery_date)
@@ -1776,7 +1776,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets latest_delivery_date
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getLatestDeliveryDate()
     {
@@ -1785,7 +1785,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date
-     * @param \DateTime|string|null|string|null $latest_delivery_date
+     * @param \DateTime|string|null|string|null|string|null $latest_delivery_date
      * @return $this
      */
     public function setLatestDeliveryDate($latest_delivery_date)
@@ -1797,7 +1797,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -1806,7 +1806,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null $date_time_from Earliest date-time
+     * @param \DateTime|string|null|string|null|string|null $date_time_from Earliest date-time
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -1818,7 +1818,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -1827,7 +1827,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null $date_time_to latest date-time
+     * @param \DateTime|string|null|string|null|string|null $date_time_to latest date-time
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -1839,7 +1839,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getPlannedDateTimeFrom()
     {
@@ -1848,7 +1848,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_from
-     * @param \DateTime|string|null|string|null $planned_date_time_from planned date-time from (only filled for planned activities)
+     * @param \DateTime|string|null|string|null|string|null $planned_date_time_from planned date-time from (only filled for planned activities)
      * @return $this
      */
     public function setPlannedDateTimeFrom($planned_date_time_from)
@@ -1860,7 +1860,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets planned_date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getPlannedDateTimeTo()
     {
@@ -1869,7 +1869,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets planned_date_time_to
-     * @param \DateTime|string|null|string|null $planned_date_time_to planned date-time to (only filled for planned activities)
+     * @param \DateTime|string|null|string|null|string|null $planned_date_time_to planned date-time to (only filled for planned activities)
      * @return $this
      */
     public function setPlannedDateTimeTo($planned_date_time_to)
@@ -1881,7 +1881,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets executed_date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getExecutedDateTimeFrom()
     {
@@ -1890,7 +1890,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets executed_date_time_from
-     * @param \DateTime|string|null|string|null $executed_date_time_from executed date-time from (only filled for executed activities)
+     * @param \DateTime|string|null|string|null|string|null $executed_date_time_from executed date-time from (only filled for executed activities)
      * @return $this
      */
     public function setExecutedDateTimeFrom($executed_date_time_from)
@@ -1902,7 +1902,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets executed_date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getExecutedDateTimeTo()
     {
@@ -1911,7 +1911,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets executed_date_time_to
-     * @param \DateTime|string|null|string|null $executed_date_time_to executed date-time to (only filled for executed activities)
+     * @param \DateTime|string|null|string|null|string|null $executed_date_time_to executed date-time to (only filled for executed activities)
      * @return $this
      */
     public function setExecutedDateTimeTo($executed_date_time_to)
@@ -2112,7 +2112,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets route_date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getRouteDateTimeFrom()
     {
@@ -2121,7 +2121,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_date_time_from
-     * @param \DateTime|string|null|string|null $route_date_time_from Start date-time of route
+     * @param \DateTime|string|null|string|null|string|null $route_date_time_from Start date-time of route
      * @return $this
      */
     public function setRouteDateTimeFrom($route_date_time_from)
@@ -2133,7 +2133,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets route_date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getRouteDateTimeTo()
     {
@@ -2142,7 +2142,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_date_time_to
-     * @param \DateTime|string|null|string|null $route_date_time_to End date-time of route
+     * @param \DateTime|string|null|string|null|string|null $route_date_time_to End date-time of route
      * @return $this
      */
     public function setRouteDateTimeTo($route_date_time_to)
@@ -2154,7 +2154,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets route_earliest_date_time
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getRouteEarliestDateTime()
     {
@@ -2163,7 +2163,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_earliest_date_time
-     * @param \DateTime|string|null|string|null $route_earliest_date_time Earliest date-time of route
+     * @param \DateTime|string|null|string|null|string|null $route_earliest_date_time Earliest date-time of route
      * @return $this
      */
     public function setRouteEarliestDateTime($route_earliest_date_time)
@@ -2175,7 +2175,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets route_latest_date_time
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getRouteLatestDateTime()
     {
@@ -2184,7 +2184,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_latest_date_time
-     * @param \DateTime|string|null|string|null $route_latest_date_time Latest date-time of route
+     * @param \DateTime|string|null|string|null|string|null $route_latest_date_time Latest date-time of route
      * @return $this
      */
     public function setRouteLatestDateTime($route_latest_date_time)
@@ -3456,7 +3456,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets activity_created_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getActivityCreatedAt()
     {
@@ -3465,7 +3465,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_created_at
-     * @param \DateTime|string|null|string|null $activity_created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null $activity_created_at created_at date time
      * @return $this
      */
     public function setActivityCreatedAt($activity_created_at)
@@ -3477,7 +3477,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets activity_updated_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getActivityUpdatedAt()
     {
@@ -3486,7 +3486,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_updated_at
-     * @param \DateTime|string|null|string|null $activity_updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null $activity_updated_at updated_at date time
      * @return $this
      */
     public function setActivityUpdatedAt($activity_updated_at)
@@ -3711,6 +3711,7 @@ class ActivityModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -3721,6 +3722,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -3733,6 +3735,7 @@ class ActivityModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -3748,6 +3751,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

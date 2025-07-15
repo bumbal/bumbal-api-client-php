@@ -150,7 +150,7 @@ class CompartmentOptionsModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['include_filled_capacities'] = isset($data['include_filled_capacities']) ? $data['include_filled_capacities'] : null;
         $this->container['include_package_line_ids'] = isset($data['include_package_line_ids']) ? $data['include_package_line_ids'] : null;
@@ -294,6 +294,7 @@ class CompartmentOptionsModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -304,6 +305,7 @@ class CompartmentOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -316,6 +318,7 @@ class CompartmentOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -331,6 +334,7 @@ class CompartmentOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

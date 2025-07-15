@@ -190,7 +190,7 @@ class ZoneModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -423,7 +423,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets zone_created_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getZoneCreatedAt()
     {
@@ -432,7 +432,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets zone_created_at
-     * @param \DateTime|string|null|string|null $zone_created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null $zone_created_at created_at date time
      * @return $this
      */
     public function setZoneCreatedAt($zone_created_at)
@@ -444,7 +444,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets zone_updated_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getZoneUpdatedAt()
     {
@@ -453,7 +453,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets zone_updated_at
-     * @param \DateTime|string|null|string|null $zone_updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null $zone_updated_at updated_at date time
      * @return $this
      */
     public function setZoneUpdatedAt($zone_updated_at)
@@ -510,6 +510,7 @@ class ZoneModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -520,6 +521,7 @@ class ZoneModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -532,6 +534,7 @@ class ZoneModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -547,6 +550,7 @@ class ZoneModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

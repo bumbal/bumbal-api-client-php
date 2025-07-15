@@ -165,7 +165,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
@@ -246,7 +246,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -255,7 +255,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null $date_time_from Start date and time of the time window
+     * @param \DateTime|string|null|string|null|string|null $date_time_from Start date and time of the time window
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -267,7 +267,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -276,7 +276,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null $date_time_to End date and time of the time window
+     * @param \DateTime|string|null|string|null|string|null $date_time_to End date and time of the time window
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -288,7 +288,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getProposedPlanDateTimeFrom()
     {
@@ -297,7 +297,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_from
-     * @param \DateTime|string|null|string|null $proposed_plan_date_time_from Proposed start date and time for the plan
+     * @param \DateTime|string|null|string|null|string|null $proposed_plan_date_time_from Proposed start date and time for the plan
      * @return $this
      */
     public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
@@ -309,7 +309,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getProposedPlanDateTimeTo()
     {
@@ -318,7 +318,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_to
-     * @param \DateTime|string|null|string|null $proposed_plan_date_time_to Proposed end date and time for the plan
+     * @param \DateTime|string|null|string|null|string|null $proposed_plan_date_time_to Proposed end date and time for the plan
      * @return $this
      */
     public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
@@ -375,6 +375,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -385,6 +386,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -397,6 +399,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -412,6 +415,7 @@ class CheckAvailabilityTimeWindowResult implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

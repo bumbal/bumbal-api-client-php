@@ -140,7 +140,7 @@ class AddressSuggestionArguments implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
         $this->container['zipcode'] = isset($data['zipcode']) ? $data['zipcode'] : null;
@@ -240,6 +240,7 @@ class AddressSuggestionArguments implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -250,6 +251,7 @@ class AddressSuggestionArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -262,6 +264,7 @@ class AddressSuggestionArguments implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -277,6 +280,7 @@ class AddressSuggestionArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

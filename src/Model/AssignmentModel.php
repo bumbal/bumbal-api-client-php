@@ -295,7 +295,7 @@ class AssignmentModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
@@ -692,7 +692,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -701,7 +701,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null $date_time_from Earliest start time of all Activities is this Assignment
+     * @param \DateTime|string|null|string|null|string|null $date_time_from Earliest start time of all Activities is this Assignment
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -713,7 +713,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -722,7 +722,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null $date_time_to Latest end time of all Activities is this Assignment
+     * @param \DateTime|string|null|string|null|string|null $date_time_to Latest end time of all Activities is this Assignment
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -839,7 +839,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets assignment_created_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getAssignmentCreatedAt()
     {
@@ -848,7 +848,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets assignment_created_at
-     * @param \DateTime|string|null|string|null $assignment_created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null $assignment_created_at created_at date time
      * @return $this
      */
     public function setAssignmentCreatedAt($assignment_created_at)
@@ -860,7 +860,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets assignment_updated_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getAssignmentUpdatedAt()
     {
@@ -869,7 +869,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets assignment_updated_at
-     * @param \DateTime|string|null|string|null $assignment_updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null $assignment_updated_at updated_at date time
      * @return $this
      */
     public function setAssignmentUpdatedAt($assignment_updated_at)
@@ -1010,6 +1010,7 @@ class AssignmentModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1020,6 +1021,7 @@ class AssignmentModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -1032,6 +1034,7 @@ class AssignmentModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -1047,6 +1050,7 @@ class AssignmentModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

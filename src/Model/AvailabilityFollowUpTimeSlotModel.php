@@ -150,7 +150,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
@@ -186,7 +186,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -195,7 +195,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null $date_time_from
+     * @param \DateTime|string|null|string|null|string|null $date_time_from
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -207,7 +207,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -216,7 +216,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null $date_time_to
+     * @param \DateTime|string|null|string|null|string|null $date_time_to
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -228,7 +228,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_from
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getProposedPlanDateTimeFrom()
     {
@@ -237,7 +237,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_from
-     * @param \DateTime|string|null|string|null $proposed_plan_date_time_from
+     * @param \DateTime|string|null|string|null|string|null $proposed_plan_date_time_from
      * @return $this
      */
     public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
@@ -249,7 +249,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Gets proposed_plan_date_time_to
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getProposedPlanDateTimeTo()
     {
@@ -258,7 +258,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_to
-     * @param \DateTime|string|null|string|null $proposed_plan_date_time_to
+     * @param \DateTime|string|null|string|null|string|null $proposed_plan_date_time_to
      * @return $this
      */
     public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
@@ -294,6 +294,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -304,6 +305,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -316,6 +318,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -331,6 +334,7 @@ class AvailabilityFollowUpTimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

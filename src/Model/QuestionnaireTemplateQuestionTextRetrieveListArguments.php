@@ -192,7 +192,7 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
@@ -422,6 +422,7 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -432,6 +433,7 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -444,6 +446,7 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -459,6 +462,7 @@ class QuestionnaireTemplateQuestionTextRetrieveListArguments implements ArrayAcc
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

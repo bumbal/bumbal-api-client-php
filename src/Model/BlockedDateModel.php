@@ -140,7 +140,7 @@ class BlockedDateModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -216,7 +216,7 @@ class BlockedDateModel implements ArrayAccess
 
     /**
      * Gets date
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getDate()
     {
@@ -225,7 +225,7 @@ class BlockedDateModel implements ArrayAccess
 
     /**
      * Sets date
-     * @param \DateTime|string|null|string|null $date updated_at date time
+     * @param \DateTime|string|null|string|null|string|null $date updated_at date time
      * @return $this
      */
     public function setDate($date)
@@ -240,6 +240,7 @@ class BlockedDateModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -250,6 +251,7 @@ class BlockedDateModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -262,6 +264,7 @@ class BlockedDateModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -277,6 +280,7 @@ class BlockedDateModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

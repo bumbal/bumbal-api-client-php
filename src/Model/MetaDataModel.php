@@ -160,7 +160,7 @@ class MetaDataModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -303,7 +303,7 @@ class MetaDataModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getCreatedAt()
     {
@@ -312,7 +312,7 @@ class MetaDataModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime|string|null|string|null $created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -324,7 +324,7 @@ class MetaDataModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null
      */
     public function getUpdatedAt()
     {
@@ -333,7 +333,7 @@ class MetaDataModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null|string|null $updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -348,6 +348,7 @@ class MetaDataModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -358,6 +359,7 @@ class MetaDataModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -370,6 +372,7 @@ class MetaDataModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -385,6 +388,7 @@ class MetaDataModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

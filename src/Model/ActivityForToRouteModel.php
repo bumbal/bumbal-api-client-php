@@ -135,7 +135,7 @@ class ActivityForToRouteModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
         $this->container['sequence_nr'] = isset($data['sequence_nr']) ? $data['sequence_nr'] : null;
@@ -213,6 +213,7 @@ class ActivityForToRouteModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -223,6 +224,7 @@ class ActivityForToRouteModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -235,6 +237,7 @@ class ActivityForToRouteModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -250,6 +253,7 @@ class ActivityForToRouteModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

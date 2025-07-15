@@ -140,7 +140,7 @@ class FileCopyArguments implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['source_file_id'] = isset($data['source_file_id']) ? $data['source_file_id'] : null;
         $this->container['target_object_id'] = isset($data['target_object_id']) ? $data['target_object_id'] : null;
@@ -240,6 +240,7 @@ class FileCopyArguments implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -250,6 +251,7 @@ class FileCopyArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -262,6 +264,7 @@ class FileCopyArguments implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -277,6 +280,7 @@ class FileCopyArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {

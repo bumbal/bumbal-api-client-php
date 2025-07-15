@@ -194,7 +194,7 @@ class FilledCapacityModel implements ArrayAccess
      * Constructor
      * @param mixed[] $data Associated array of property values initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['capacity_type_id'] = isset($data['capacity_type_id']) ? $data['capacity_type_id'] : null;
         $this->container['capacity_type_name'] = isset($data['capacity_type_name']) ? $data['capacity_type_name'] : null;
@@ -359,6 +359,7 @@ class FilledCapacityModel implements ArrayAccess
      * @return boolean
      */
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -369,6 +370,7 @@ class FilledCapacityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
@@ -381,6 +383,7 @@ class FilledCapacityModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
@@ -396,6 +399,7 @@ class FilledCapacityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
