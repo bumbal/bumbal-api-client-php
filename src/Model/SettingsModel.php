@@ -414,7 +414,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Gets setting_updated_at
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getSettingUpdatedAt()
     {
@@ -423,7 +423,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets setting_updated_at
-     * @param \DateTime|string|null|string|null|string|null|string|null $setting_updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $setting_updated_at updated_at date time
      * @return $this
      */
     public function setSettingUpdatedAt($setting_updated_at)
@@ -482,6 +482,7 @@ class SettingsModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -492,6 +493,7 @@ class SettingsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
@@ -509,6 +511,7 @@ class SettingsModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -523,6 +526,7 @@ class SettingsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]

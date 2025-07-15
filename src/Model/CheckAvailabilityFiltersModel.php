@@ -201,7 +201,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_from
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getDateFrom()
     {
@@ -210,7 +210,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_from
-     * @param \DateTime|string|null|string|null|string|null|string|null $date_from
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $date_from
      * @return $this
      */
     public function setDateFrom($date_from)
@@ -222,7 +222,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Gets date_to
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getDateTo()
     {
@@ -231,7 +231,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_to
-     * @param \DateTime|string|null|string|null|string|null|string|null $date_to
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $date_to
      * @return $this
      */
     public function setDateTo($date_to)
@@ -269,6 +269,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -279,6 +280,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
@@ -296,6 +298,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -310,6 +313,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]

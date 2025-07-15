@@ -294,7 +294,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_since
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getUpdatedAtSince()
     {
@@ -303,7 +303,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_since
-     * @param \DateTime|string|null|string|null|string|null|string|null $updated_at_since Show updated since
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $updated_at_since Show updated since
      * @return $this
      */
     public function setUpdatedAtSince($updated_at_since)
@@ -315,7 +315,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets updated_at_till
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getUpdatedAtTill()
     {
@@ -324,7 +324,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at_till
-     * @param \DateTime|string|null|string|null|string|null|string|null $updated_at_till Show updated till
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $updated_at_till Show updated till
      * @return $this
      */
     public function setUpdatedAtTill($updated_at_till)
@@ -782,6 +782,7 @@ class PackageTypeFiltersModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -792,6 +793,7 @@ class PackageTypeFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
@@ -809,6 +811,7 @@ class PackageTypeFiltersModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -823,6 +826,7 @@ class PackageTypeFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]

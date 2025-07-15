@@ -822,7 +822,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getCreatedAt()
     {
@@ -831,7 +831,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime|string|null|string|null|string|null|string|null $created_at Date and time when the questionnaire template was created
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $created_at Date and time when the questionnaire template was created
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -843,7 +843,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getUpdatedAt()
     {
@@ -852,7 +852,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null|string|null|string|null|string|null $updated_at Date and time when the questionnaire template was last updated
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $updated_at Date and time when the questionnaire template was last updated
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -890,6 +890,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -900,6 +901,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
@@ -917,6 +919,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -931,6 +934,7 @@ class QuestionnaireTemplateModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]

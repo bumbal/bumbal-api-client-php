@@ -435,7 +435,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getCreatedAt()
     {
@@ -444,7 +444,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \DateTime|string|null|string|null|string|null|string|null $created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $created_at created_at date time
      * @return $this
      */
     public function setCreatedAt($created_at)
@@ -456,7 +456,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Gets updated_at
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getUpdatedAt()
     {
@@ -465,7 +465,7 @@ class CommunicationMappingModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime|string|null|string|null|string|null|string|null $updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $updated_at updated_at date time
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -566,6 +566,7 @@ class CommunicationMappingModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -576,6 +577,7 @@ class CommunicationMappingModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
@@ -593,6 +595,7 @@ class CommunicationMappingModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -607,6 +610,7 @@ class CommunicationMappingModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]

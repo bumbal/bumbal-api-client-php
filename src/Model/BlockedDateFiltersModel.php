@@ -195,7 +195,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_from
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getDateTimeFrom()
     {
@@ -204,7 +204,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime|string|null|string|null|string|null|string|null $date_time_from DateTime From
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $date_time_from DateTime From
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -216,7 +216,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Gets date_time_to
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getDateTimeTo()
     {
@@ -225,7 +225,7 @@ class BlockedDateFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime|string|null|string|null|string|null|string|null $date_time_to DateTime To
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $date_time_to DateTime To
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -242,6 +242,7 @@ class BlockedDateFiltersModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -252,6 +253,7 @@ class BlockedDateFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
@@ -269,6 +271,7 @@ class BlockedDateFiltersModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -283,6 +286,7 @@ class BlockedDateFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]

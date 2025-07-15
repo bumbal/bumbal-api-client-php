@@ -465,7 +465,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Gets compartment_created_at
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getCompartmentCreatedAt()
     {
@@ -474,7 +474,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_created_at
-     * @param \DateTime|string|null|string|null|string|null|string|null $compartment_created_at created_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $compartment_created_at created_at date time
      * @return $this
      */
     public function setCompartmentCreatedAt($compartment_created_at)
@@ -486,7 +486,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Gets compartment_updated_at
-     * @return \DateTime|string|null|string|null|string|null|string|null
+     * @return \DateTime|string|null|string|null|string|null|string|null|string|null
      */
     public function getCompartmentUpdatedAt()
     {
@@ -495,7 +495,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_updated_at
-     * @param \DateTime|string|null|string|null|string|null|string|null $compartment_updated_at updated_at date time
+     * @param \DateTime|string|null|string|null|string|null|string|null|string|null $compartment_updated_at updated_at date time
      * @return $this
      */
     public function setCompartmentUpdatedAt($compartment_updated_at)
@@ -512,6 +512,7 @@ class CompartmentModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -522,6 +523,7 @@ class CompartmentModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
@@ -539,6 +541,7 @@ class CompartmentModel implements ArrayAccess
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -553,6 +556,7 @@ class CompartmentModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
     #[\ReturnTypeWillChange]
