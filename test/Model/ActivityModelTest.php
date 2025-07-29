@@ -113,6 +113,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "shipment_inbound_activity_ids"
+     */
+    public function testPropertyShipmentInboundActivityIds()
+    {
+    }
+
+    /**
+     * Test attribute "shipment_outbound_activity_ids"
+     */
+    public function testPropertyShipmentOutboundActivityIds()
+    {
+    }
+
+    /**
      * Test attribute "shipment_activity_nr"
      */
     public function testPropertyShipmentActivityNr()
@@ -568,9 +582,37 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "shipment_inbound_shipment_address_ids"
+     */
+    public function testPropertyShipmentInboundShipmentAddressIds()
+    {
+    }
+
+    /**
+     * Test attribute "shipment_outbound_shipment_address_ids"
+     */
+    public function testPropertyShipmentOutboundShipmentAddressIds()
+    {
+    }
+
+    /**
      * Test attribute "depot_activity"
      */
     public function testPropertyDepotActivity()
+    {
+    }
+
+    /**
+     * Test attribute "depot_activities"
+     */
+    public function testPropertyDepotActivities()
+    {
+    }
+
+    /**
+     * Test attribute "action_type_id"
+     */
+    public function testPropertyActionTypeId()
     {
     }
 

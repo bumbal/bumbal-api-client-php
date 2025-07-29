@@ -58,7 +58,8 @@ class ServiceWindowModel implements ArrayAccess
         'service_windows_scheme_id' => 'int',
         'week_day' => 'int',
         'time_from' => 'string',
-        'time_to' => 'string'
+        'time_to' => 'string',
+        'price' => 'double'
     ];
 
     /**
@@ -70,7 +71,8 @@ class ServiceWindowModel implements ArrayAccess
         'service_windows_scheme_id' => 'int64',
         'week_day' => 'int64',
         'time_from' => null,
-        'time_to' => null
+        'time_to' => null,
+        'price' => 'double'
     ];
 
     public static function swaggerTypes()
@@ -92,7 +94,8 @@ class ServiceWindowModel implements ArrayAccess
         'service_windows_scheme_id' => 'service_windows_scheme_id',
         'week_day' => 'week_day',
         'time_from' => 'time_from',
-        'time_to' => 'time_to'
+        'time_to' => 'time_to',
+        'price' => 'price'
     ];
 
 
@@ -105,7 +108,8 @@ class ServiceWindowModel implements ArrayAccess
         'service_windows_scheme_id' => 'setServiceWindowsSchemeId',
         'week_day' => 'setWeekDay',
         'time_from' => 'setTimeFrom',
-        'time_to' => 'setTimeTo'
+        'time_to' => 'setTimeTo',
+        'price' => 'setPrice'
     ];
 
 
@@ -118,7 +122,8 @@ class ServiceWindowModel implements ArrayAccess
         'service_windows_scheme_id' => 'getServiceWindowsSchemeId',
         'week_day' => 'getWeekDay',
         'time_from' => 'getTimeFrom',
-        'time_to' => 'getTimeTo'
+        'time_to' => 'getTimeTo',
+        'price' => 'getPrice'
     ];
 
     public static function attributeMap()
@@ -157,6 +162,7 @@ class ServiceWindowModel implements ArrayAccess
         $this->container['week_day'] = isset($data['week_day']) ? $data['week_day'] : null;
         $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
         $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
     }
 
     /**
@@ -285,6 +291,27 @@ class ServiceWindowModel implements ArrayAccess
     public function setTimeTo($time_to)
     {
         $this->container['time_to'] = $time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets price
+     * @return double
+     */
+    public function getPrice()
+    {
+        return $this->container['price'];
+    }
+
+    /**
+     * Sets price
+     * @param double $price Price for this service window
+     * @return $this
+     */
+    public function setPrice($price)
+    {
+        $this->container['price'] = $price;
 
         return $this;
     }

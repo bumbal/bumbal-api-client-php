@@ -64,7 +64,8 @@ class TimeSlotModel implements ArrayAccess
         'date_to' => '\DateTime',
         'time_to' => 'string',
         'date_time_to' => '\DateTime',
-        'planned' => 'bool'
+        'planned' => 'bool',
+        'price' => 'double'
     ];
 
     /**
@@ -82,7 +83,8 @@ class TimeSlotModel implements ArrayAccess
         'date_to' => 'date',
         'time_to' => null,
         'date_time_to' => 'date-time',
-        'planned' => null
+        'planned' => null,
+        'price' => 'double'
     ];
 
     public static function swaggerTypes()
@@ -110,7 +112,8 @@ class TimeSlotModel implements ArrayAccess
         'date_to' => 'date_to',
         'time_to' => 'time_to',
         'date_time_to' => 'date_time_to',
-        'planned' => 'planned'
+        'planned' => 'planned',
+        'price' => 'price'
     ];
 
 
@@ -129,7 +132,8 @@ class TimeSlotModel implements ArrayAccess
         'date_to' => 'setDateTo',
         'time_to' => 'setTimeTo',
         'date_time_to' => 'setDateTimeTo',
-        'planned' => 'setPlanned'
+        'planned' => 'setPlanned',
+        'price' => 'setPrice'
     ];
 
 
@@ -148,7 +152,8 @@ class TimeSlotModel implements ArrayAccess
         'date_to' => 'getDateTo',
         'time_to' => 'getTimeTo',
         'date_time_to' => 'getDateTimeTo',
-        'planned' => 'getPlanned'
+        'planned' => 'getPlanned',
+        'price' => 'getPrice'
     ];
 
     public static function attributeMap()
@@ -225,6 +230,7 @@ class TimeSlotModel implements ArrayAccess
         $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['planned'] = isset($data['planned']) ? $data['planned'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
     }
 
     /**
@@ -521,6 +527,27 @@ class TimeSlotModel implements ArrayAccess
     public function setPlanned($planned)
     {
         $this->container['planned'] = $planned;
+
+        return $this;
+    }
+
+    /**
+     * Gets price
+     * @return double
+     */
+    public function getPrice()
+    {
+        return $this->container['price'];
+    }
+
+    /**
+     * Sets price
+     * @param double $price Price for this timeslot
+     * @return $this
+     */
+    public function setPrice($price)
+    {
+        $this->container['price'] = $price;
 
         return $this;
     }
