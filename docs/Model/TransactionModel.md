@@ -10,8 +10,6 @@ Name | Type | Description | Notes
 **transaction_type** | **int** | Type of Transaction. Defaults: 1 &#x3D; cash, 2 &#x3D; pin, 3 &#x3D; online | [optional] 
 **paid** | **bool** | If paid &#x3D; 0: the transaction has not been fulfilled yet | [optional] 
 **failed** | **bool** | if failed &#x3D; 1: the transaction has failed | [optional] 
-**time_slot_id** | **int** | Time slot id the transaction is linked to | [optional] 
-**confirmed** | **bool** | If confirmed &#x3D; 1: the transaction has been confirmed | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

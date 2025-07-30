@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **time_to** | **string** |  | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **planned** | **bool** | true if this time_slot was used to plan the activity within | [optional] 
-**price** | **double** | Price for this timeslot | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

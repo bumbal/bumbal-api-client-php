@@ -5,9 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
 **activity_id** | **int** | Unique Identifier for activity where this packageline is related to | [optional] 
-**shipment_id** | **int** | Unique Identifier for shipment activity where this packageline is related to | [optional] 
-**depot_address_id** | **int** | Unique Identifier for shipment address where this packageline is related to | [optional] 
-**depot_address_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) | link to the depot address connected to this package_line (only for create/updats actions) | [optional] 
 **activity_ids** | **int[]** | Unique Identifier for activities where this packageline is related to | [optional] 
 **nr** | **string** | Number of this PackageLine | [optional] 
 **status_id** | **int** | StatusId of this PackageLine, 31: package_line_cancelled, 23: package_line_incomplete, 24: package_line_new, 42: package_line_awaiting, 25: package_line_accepted, 10: package_line_planned, 11: package_line_in_progress, 12: package_line_executed | [optional] 
