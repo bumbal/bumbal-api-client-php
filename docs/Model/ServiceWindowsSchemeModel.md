@@ -23,9 +23,6 @@ Name | Type | Description | Notes
 **min_days_ahead** | **int** | Number of min. days ahead | [optional] 
 **max_days_ahead** | **int** | Number of max. days ahead | [optional] 
 **service_windows** | [**\BumbalClient\Model\ServiceWindowModel[]**](ServiceWindowModel.md) |  | [optional] 
-**deferred_service_windows_scheme_days** | **int** | Deferred service windows scheme days (when null, will take the value from settings) | [optional] 
-**max_distance_impact_in_target_region** | **float** | Maximum distance impact (meters) in target region (when null, will take the value from settings) | [optional] 
-**travel_time_multiplication_factor** | **float** | Travel time multiplication factor (when null, will take the value from settings) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
