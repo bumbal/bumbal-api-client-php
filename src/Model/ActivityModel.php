@@ -182,6 +182,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'int',
         'transaction_total' => 'int',
         'due_total' => 'int',
+        'odd_service_windows_scheme_id' => 'int',
+        'even_service_windows_scheme_id' => 'int',
         'transactions' => '\BumbalClient\Model\TransactionModel[]'
     ];
 
@@ -318,6 +320,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => null,
         'transaction_total' => null,
         'due_total' => null,
+        'odd_service_windows_scheme_id' => null,
+        'even_service_windows_scheme_id' => null,
         'transactions' => null
     ];
 
@@ -464,6 +468,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'payment_total',
         'transaction_total' => 'transaction_total',
         'due_total' => 'due_total',
+        'odd_service_windows_scheme_id' => 'odd_service_windows_scheme_id',
+        'even_service_windows_scheme_id' => 'even_service_windows_scheme_id',
         'transactions' => 'transactions'
     ];
 
@@ -601,6 +607,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'setPaymentTotal',
         'transaction_total' => 'setTransactionTotal',
         'due_total' => 'setDueTotal',
+        'odd_service_windows_scheme_id' => 'setOddServiceWindowsSchemeId',
+        'even_service_windows_scheme_id' => 'setEvenServiceWindowsSchemeId',
         'transactions' => 'setTransactions'
     ];
 
@@ -738,6 +746,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'getPaymentTotal',
         'transaction_total' => 'getTransactionTotal',
         'due_total' => 'getDueTotal',
+        'odd_service_windows_scheme_id' => 'getOddServiceWindowsSchemeId',
+        'even_service_windows_scheme_id' => 'getEvenServiceWindowsSchemeId',
         'transactions' => 'getTransactions'
     ];
 
@@ -1084,6 +1094,8 @@ class ActivityModel implements ArrayAccess
         $this->container['payment_total'] = isset($data['payment_total']) ? $data['payment_total'] : null;
         $this->container['transaction_total'] = isset($data['transaction_total']) ? $data['transaction_total'] : null;
         $this->container['due_total'] = isset($data['due_total']) ? $data['due_total'] : null;
+        $this->container['odd_service_windows_scheme_id'] = isset($data['odd_service_windows_scheme_id']) ? $data['odd_service_windows_scheme_id'] : null;
+        $this->container['even_service_windows_scheme_id'] = isset($data['even_service_windows_scheme_id']) ? $data['even_service_windows_scheme_id'] : null;
         $this->container['transactions'] = isset($data['transactions']) ? $data['transactions'] : null;
     }
 
@@ -3880,6 +3892,48 @@ class ActivityModel implements ArrayAccess
     public function setDueTotal($due_total)
     {
         $this->container['due_total'] = $due_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets odd_service_windows_scheme_id
+     * @return int
+     */
+    public function getOddServiceWindowsSchemeId()
+    {
+        return $this->container['odd_service_windows_scheme_id'];
+    }
+
+    /**
+     * Sets odd_service_windows_scheme_id
+     * @param int $odd_service_windows_scheme_id Service windows scheme ID for odd weeks. readonly
+     * @return $this
+     */
+    public function setOddServiceWindowsSchemeId($odd_service_windows_scheme_id)
+    {
+        $this->container['odd_service_windows_scheme_id'] = $odd_service_windows_scheme_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets even_service_windows_scheme_id
+     * @return int
+     */
+    public function getEvenServiceWindowsSchemeId()
+    {
+        return $this->container['even_service_windows_scheme_id'];
+    }
+
+    /**
+     * Sets even_service_windows_scheme_id
+     * @param int $even_service_windows_scheme_id Service windows scheme ID for even weeks. readonly
+     * @return $this
+     */
+    public function setEvenServiceWindowsSchemeId($even_service_windows_scheme_id)
+    {
+        $this->container['even_service_windows_scheme_id'] = $even_service_windows_scheme_id;
 
         return $this;
     }

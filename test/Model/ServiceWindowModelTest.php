@@ -111,11 +111,4 @@ class ServiceWindowModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTimeTo()
     {
     }
-
-    /**
-     * Test attribute "price"
-     */
-    public function testPropertyPrice()
-    {
-    }
 }

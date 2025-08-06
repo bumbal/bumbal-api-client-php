@@ -139,11 +139,4 @@ class AvailabilityTimeSlotModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFollowUpTimeSlots()
     {
     }
-
-    /**
-     * Test attribute "price"
-     */
-    public function testPropertyPrice()
-    {
-    }
 }

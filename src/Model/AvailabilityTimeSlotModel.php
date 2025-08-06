@@ -62,8 +62,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_to' => '\DateTime',
         'proposed_driver' => '\BumbalClient\Model\DriverModel',
         'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]',
-        'follow_up_time_slots' => '\BumbalClient\Model\AvailabilityFollowUpTimeSlotModel[]',
-        'price' => 'double'
+        'follow_up_time_slots' => '\BumbalClient\Model\AvailabilityFollowUpTimeSlotModel[]'
     ];
 
     /**
@@ -79,8 +78,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_to' => 'date-time',
         'proposed_driver' => null,
         'impact' => null,
-        'follow_up_time_slots' => null,
-        'price' => 'double'
+        'follow_up_time_slots' => null
     ];
 
     public static function swaggerTypes()
@@ -106,8 +104,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_to' => 'proposed_plan_date_time_to',
         'proposed_driver' => 'proposed_driver',
         'impact' => 'impact',
-        'follow_up_time_slots' => 'follow_up_time_slots',
-        'price' => 'price'
+        'follow_up_time_slots' => 'follow_up_time_slots'
     ];
 
 
@@ -124,8 +121,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_to' => 'setProposedPlanDateTimeTo',
         'proposed_driver' => 'setProposedDriver',
         'impact' => 'setImpact',
-        'follow_up_time_slots' => 'setFollowUpTimeSlots',
-        'price' => 'setPrice'
+        'follow_up_time_slots' => 'setFollowUpTimeSlots'
     ];
 
 
@@ -142,8 +138,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_to' => 'getProposedPlanDateTimeTo',
         'proposed_driver' => 'getProposedDriver',
         'impact' => 'getImpact',
-        'follow_up_time_slots' => 'getFollowUpTimeSlots',
-        'price' => 'getPrice'
+        'follow_up_time_slots' => 'getFollowUpTimeSlots'
     ];
 
     public static function attributeMap()
@@ -186,7 +181,6 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         $this->container['proposed_driver'] = isset($data['proposed_driver']) ? $data['proposed_driver'] : null;
         $this->container['impact'] = isset($data['impact']) ? $data['impact'] : null;
         $this->container['follow_up_time_slots'] = isset($data['follow_up_time_slots']) ? $data['follow_up_time_slots'] : null;
-        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
     }
 
     /**
@@ -399,27 +393,6 @@ class AvailabilityTimeSlotModel implements ArrayAccess
     public function setFollowUpTimeSlots($follow_up_time_slots)
     {
         $this->container['follow_up_time_slots'] = $follow_up_time_slots;
-
-        return $this;
-    }
-
-    /**
-     * Gets price
-     * @return double
-     */
-    public function getPrice()
-    {
-        return $this->container['price'];
-    }
-
-    /**
-     * Sets price
-     * @param double $price Price for this timeslot
-     * @return $this
-     */
-    public function setPrice($price)
-    {
-        $this->container['price'] = $price;
 
         return $this;
     }
