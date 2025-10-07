@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **proposed_driver** | [**\BumbalClient\Model\DriverModel**](DriverModel.md) |  | [optional] 
 **impact** | [**\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]**](AvailabilityTimeSlotImpactModel.md) |  | [optional] 
 **follow_up_time_slots** | [**\BumbalClient\Model\AvailabilityFollowUpTimeSlotModel[]**](AvailabilityFollowUpTimeSlotModel.md) |  | [optional] 
+**price** | **double** | Price for this timeslot | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

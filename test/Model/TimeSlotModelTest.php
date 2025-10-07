@@ -153,4 +153,11 @@ class TimeSlotModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPlanned()
     {
     }
+
+    /**
+     * Test attribute "price"
+     */
+    public function testPropertyPrice()
+    {
+    }
 }

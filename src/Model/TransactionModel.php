@@ -60,7 +60,9 @@ class TransactionModel implements ArrayAccess
         'amount' => 'int',
         'transaction_type' => 'int',
         'paid' => 'bool',
-        'failed' => 'bool'
+        'failed' => 'bool',
+        'time_slot_id' => 'int',
+        'confirmed' => 'bool'
     ];
 
     /**
@@ -74,7 +76,9 @@ class TransactionModel implements ArrayAccess
         'amount' => null,
         'transaction_type' => null,
         'paid' => null,
-        'failed' => null
+        'failed' => null,
+        'time_slot_id' => null,
+        'confirmed' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +102,9 @@ class TransactionModel implements ArrayAccess
         'amount' => 'amount',
         'transaction_type' => 'transaction_type',
         'paid' => 'paid',
-        'failed' => 'failed'
+        'failed' => 'failed',
+        'time_slot_id' => 'time_slot_id',
+        'confirmed' => 'confirmed'
     ];
 
 
@@ -113,7 +119,9 @@ class TransactionModel implements ArrayAccess
         'amount' => 'setAmount',
         'transaction_type' => 'setTransactionType',
         'paid' => 'setPaid',
-        'failed' => 'setFailed'
+        'failed' => 'setFailed',
+        'time_slot_id' => 'setTimeSlotId',
+        'confirmed' => 'setConfirmed'
     ];
 
 
@@ -128,7 +136,9 @@ class TransactionModel implements ArrayAccess
         'amount' => 'getAmount',
         'transaction_type' => 'getTransactionType',
         'paid' => 'getPaid',
-        'failed' => 'getFailed'
+        'failed' => 'getFailed',
+        'time_slot_id' => 'getTimeSlotId',
+        'confirmed' => 'getConfirmed'
     ];
 
     public static function attributeMap()
@@ -169,6 +179,8 @@ class TransactionModel implements ArrayAccess
         $this->container['transaction_type'] = isset($data['transaction_type']) ? $data['transaction_type'] : null;
         $this->container['paid'] = isset($data['paid']) ? $data['paid'] : null;
         $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
+        $this->container['time_slot_id'] = isset($data['time_slot_id']) ? $data['time_slot_id'] : null;
+        $this->container['confirmed'] = isset($data['confirmed']) ? $data['confirmed'] : null;
     }
 
     /**
@@ -339,6 +351,48 @@ class TransactionModel implements ArrayAccess
     public function setFailed($failed)
     {
         $this->container['failed'] = $failed;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_slot_id
+     * @return int
+     */
+    public function getTimeSlotId()
+    {
+        return $this->container['time_slot_id'];
+    }
+
+    /**
+     * Sets time_slot_id
+     * @param int $time_slot_id Time slot id the transaction is linked to
+     * @return $this
+     */
+    public function setTimeSlotId($time_slot_id)
+    {
+        $this->container['time_slot_id'] = $time_slot_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets confirmed
+     * @return bool
+     */
+    public function getConfirmed()
+    {
+        return $this->container['confirmed'];
+    }
+
+    /**
+     * Sets confirmed
+     * @param bool $confirmed If confirmed = 1: the transaction has been confirmed
+     * @return $this
+     */
+    public function setConfirmed($confirmed)
+    {
+        $this->container['confirmed'] = $confirmed;
 
         return $this;
     }

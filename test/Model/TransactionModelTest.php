@@ -125,4 +125,18 @@ class TransactionModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFailed()
     {
     }
+
+    /**
+     * Test attribute "time_slot_id"
+     */
+    public function testPropertyTimeSlotId()
+    {
+    }
+
+    /**
+     * Test attribute "confirmed"
+     */
+    public function testPropertyConfirmed()
+    {
+    }
 }
