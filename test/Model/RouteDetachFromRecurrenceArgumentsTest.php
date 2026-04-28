@@ -83,4 +83,11 @@ class RouteDetachFromRecurrenceArgumentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyRecurrenceUuid()
     {
     }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
 }

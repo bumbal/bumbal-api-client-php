@@ -83,12 +83,12 @@ class BarcodeApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for retrieveBarcodeLabel
+     * Test case for generateBarcodeLabels
      *
-     * Retrieve a package-line barcode label.
+     * Generate barcode labels for package lines.
      *
      */
-    public function testRetrieveBarcodeLabel()
+    public function testGenerateBarcodeLabels()
     {
     }
 }

@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMatchingQuestionnaireTemplates**
-> \BumbalClient\Model\InlineResponse200 getMatchingQuestionnaireTemplates($args)
+> \BumbalClient\Model\InlineResponse2001 getMatchingQuestionnaireTemplates($args)
 
 Retrieves all questionnaire templates matching specified filters
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\BumbalClient\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 

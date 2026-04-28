@@ -54,7 +54,8 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recurrence_uuid' => 'string'
+        'recurrence_uuid' => 'string',
+        'id' => 'int'
     ];
 
     /**
@@ -62,7 +63,8 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'recurrence_uuid' => null
+        'recurrence_uuid' => null,
+        'id' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'recurrence_uuid' => 'recurrence_uuid'
+        'recurrence_uuid' => 'recurrence_uuid',
+        'id' => 'id'
     ];
 
 
@@ -89,7 +92,8 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'recurrence_uuid' => 'setRecurrenceUuid'
+        'recurrence_uuid' => 'setRecurrenceUuid',
+        'id' => 'setId'
     ];
 
 
@@ -98,7 +102,8 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'recurrence_uuid' => 'getRecurrenceUuid'
+        'recurrence_uuid' => 'getRecurrenceUuid',
+        'id' => 'getId'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
     public function __construct(?array $data = null)
     {
         $this->container['recurrence_uuid'] = isset($data['recurrence_uuid']) ? $data['recurrence_uuid'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -183,6 +189,27 @@ class RouteDetachFromRecurrenceArguments implements ArrayAccess
     public function setRecurrenceUuid($recurrence_uuid)
     {
         $this->container['recurrence_uuid'] = $recurrence_uuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id ID of the route to detach from recurrence
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

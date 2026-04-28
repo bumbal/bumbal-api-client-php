@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **name_2** | **string** |  | [optional] 
 **street_1** | **string** |  | [optional] 
 **street_2** | **string** |  | [optional] 
+**full_addressline** | **string** |  | [optional] 
 **house_nr** | **string** |  | [optional] 
 **house_nr_addendum** | **string** |  | [optional] 
 **zipcode** | **string** |  | [optional] 

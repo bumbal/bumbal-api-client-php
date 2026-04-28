@@ -148,6 +148,13 @@ class AddressAppliedModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "full_addressline"
+     */
+    public function testPropertyFullAddressline()
+    {
+    }
+
+    /**
      * Test attribute "house_nr"
      */
     public function testPropertyHouseNr()

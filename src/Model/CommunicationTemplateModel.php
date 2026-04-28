@@ -58,8 +58,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'name' => 'string',
         'description' => 'string',
         'subject' => 'string',
-        'content_html' => 'string',
         'content_json' => 'string',
+        'content_html' => 'string',
         'content_text' => 'string',
         'include_attachments' => 'bool',
         'mappings' => '\BumbalClient\Model\CommunicationMappingModel[]',
@@ -80,8 +80,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'name' => null,
         'description' => null,
         'subject' => null,
-        'content_html' => null,
         'content_json' => null,
+        'content_html' => null,
         'content_text' => null,
         'include_attachments' => null,
         'mappings' => null,
@@ -112,8 +112,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'name' => 'name',
         'description' => 'description',
         'subject' => 'subject',
-        'content_html' => 'content_html',
         'content_json' => 'content_json',
+        'content_html' => 'content_html',
         'content_text' => 'content_text',
         'include_attachments' => 'include_attachments',
         'mappings' => 'mappings',
@@ -135,8 +135,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'name' => 'setName',
         'description' => 'setDescription',
         'subject' => 'setSubject',
-        'content_html' => 'setContentHtml',
         'content_json' => 'setContentJson',
+        'content_html' => 'setContentHtml',
         'content_text' => 'setContentText',
         'include_attachments' => 'setIncludeAttachments',
         'mappings' => 'setMappings',
@@ -158,8 +158,8 @@ class CommunicationTemplateModel implements ArrayAccess
         'name' => 'getName',
         'description' => 'getDescription',
         'subject' => 'getSubject',
-        'content_html' => 'getContentHtml',
         'content_json' => 'getContentJson',
+        'content_html' => 'getContentHtml',
         'content_text' => 'getContentText',
         'include_attachments' => 'getIncludeAttachments',
         'mappings' => 'getMappings',
@@ -206,8 +206,8 @@ class CommunicationTemplateModel implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
-        $this->container['content_html'] = isset($data['content_html']) ? $data['content_html'] : null;
         $this->container['content_json'] = isset($data['content_json']) ? $data['content_json'] : null;
+        $this->container['content_html'] = isset($data['content_html']) ? $data['content_html'] : null;
         $this->container['content_text'] = isset($data['content_text']) ? $data['content_text'] : null;
         $this->container['include_attachments'] = isset($data['include_attachments']) ? $data['include_attachments'] : false;
         $this->container['mappings'] = isset($data['mappings']) ? $data['mappings'] : null;
@@ -329,27 +329,6 @@ class CommunicationTemplateModel implements ArrayAccess
     }
 
     /**
-     * Gets content_html
-     * @return string
-     */
-    public function getContentHtml()
-    {
-        return $this->container['content_html'];
-    }
-
-    /**
-     * Sets content_html
-     * @param string $content_html Mustache based HTML content template
-     * @return $this
-     */
-    public function setContentHtml($content_html)
-    {
-        $this->container['content_html'] = $content_html;
-
-        return $this;
-    }
-
-    /**
      * Gets content_json
      * @return string
      */
@@ -371,6 +350,27 @@ class CommunicationTemplateModel implements ArrayAccess
     }
 
     /**
+     * Gets content_html
+     * @return string
+     */
+    public function getContentHtml()
+    {
+        return $this->container['content_html'];
+    }
+
+    /**
+     * Sets content_html
+     * @param string $content_html Mustache based HTML content template
+     * @return $this
+     */
+    public function setContentHtml($content_html)
+    {
+        $this->container['content_html'] = $content_html;
+
+        return $this;
+    }
+
+    /**
      * Gets content_text
      * @return string
      */
@@ -381,7 +381,7 @@ class CommunicationTemplateModel implements ArrayAccess
 
     /**
      * Sets content_text
-     * @param string $content_text Mustache based Text content template
+     * @param string $content_text Plain text content used for SMSes
      * @return $this
      */
     public function setContentText($content_text)

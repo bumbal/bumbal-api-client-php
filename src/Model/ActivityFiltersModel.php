@@ -87,6 +87,8 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'int[]',
         'activity_type_id' => 'int[]',
         'locked' => 'int[]',
+        'brand_id' => 'int[]',
+        'brand_name' => 'string[]',
         'activity_type_name' => 'string[]',
         'bundle_activity_id' => 'int[]',
         'description' => 'string[]',
@@ -152,6 +154,8 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => null,
         'activity_type_id' => null,
         'locked' => null,
+        'brand_id' => null,
+        'brand_name' => null,
         'activity_type_name' => null,
         'bundle_activity_id' => null,
         'description' => null,
@@ -227,6 +231,8 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'status_id',
         'activity_type_id' => 'activity_type_id',
         'locked' => 'locked',
+        'brand_id' => 'brand_id',
+        'brand_name' => 'brand_name',
         'activity_type_name' => 'activity_type_name',
         'bundle_activity_id' => 'bundle_activity_id',
         'description' => 'description',
@@ -293,6 +299,8 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'setStatusId',
         'activity_type_id' => 'setActivityTypeId',
         'locked' => 'setLocked',
+        'brand_id' => 'setBrandId',
+        'brand_name' => 'setBrandName',
         'activity_type_name' => 'setActivityTypeName',
         'bundle_activity_id' => 'setBundleActivityId',
         'description' => 'setDescription',
@@ -359,6 +367,8 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'getStatusId',
         'activity_type_id' => 'getActivityTypeId',
         'locked' => 'getLocked',
+        'brand_id' => 'getBrandId',
+        'brand_name' => 'getBrandName',
         'activity_type_name' => 'getActivityTypeName',
         'bundle_activity_id' => 'getBundleActivityId',
         'description' => 'getDescription',
@@ -450,6 +460,8 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
+        $this->container['brand_name'] = isset($data['brand_name']) ? $data['brand_name'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['bundle_activity_id'] = isset($data['bundle_activity_id']) ? $data['bundle_activity_id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -1191,6 +1203,48 @@ class ActivityFiltersModel implements ArrayAccess
     public function setLocked($locked)
     {
         $this->container['locked'] = $locked;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_id
+     * @return int[]
+     */
+    public function getBrandId()
+    {
+        return $this->container['brand_id'];
+    }
+
+    /**
+     * Sets brand_id
+     * @param int[] $brand_id Activity brand ID(s)
+     * @return $this
+     */
+    public function setBrandId($brand_id)
+    {
+        $this->container['brand_id'] = $brand_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_name
+     * @return string[]
+     */
+    public function getBrandName()
+    {
+        return $this->container['brand_name'];
+    }
+
+    /**
+     * Sets brand_name
+     * @param string[] $brand_name Activity brand name(s)
+     * @return $this
+     */
+    public function setBrandName($brand_name)
+    {
+        $this->container['brand_name'] = $brand_name;
 
         return $this;
     }

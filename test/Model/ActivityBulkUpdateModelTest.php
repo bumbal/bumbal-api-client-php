@@ -90,4 +90,32 @@ class ActivityBulkUpdateModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPriority()
     {
     }
+
+    /**
+     * Test attribute "preparation_duration"
+     */
+    public function testPropertyPreparationDuration()
+    {
+    }
+
+    /**
+     * Test attribute "duration"
+     */
+    public function testPropertyDuration()
+    {
+    }
+
+    /**
+     * Test attribute "time_slots"
+     */
+    public function testPropertyTimeSlots()
+    {
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+    }
 }

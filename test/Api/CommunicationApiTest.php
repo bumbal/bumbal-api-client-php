@@ -73,16 +73,6 @@ class CommunicationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for retrieveActivityCommunication
-     *
-     * Retrieve Activity.
-     *
-     */
-    public function testRetrieveActivityCommunication()
-    {
-    }
-
-    /**
      * Test case for triggerMessageCommunication
      *
      * Trigger Message to Communication.

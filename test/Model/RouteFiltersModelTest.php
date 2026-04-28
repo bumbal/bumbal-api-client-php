@@ -253,6 +253,20 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "nr_of_stops_min"
+     */
+    public function testPropertyNrOfStopsMin()
+    {
+    }
+
+    /**
+     * Test attribute "nr_of_stops_max"
+     */
+    public function testPropertyNrOfStopsMax()
+    {
+    }
+
+    /**
      * Test attribute "search_text"
      */
     public function testPropertySearchText()

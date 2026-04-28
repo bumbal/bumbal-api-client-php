@@ -73,7 +73,10 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'sunday' => '\BumbalClient\Model\ServiceWindowDayModel',
         'min_days_ahead' => 'int',
         'max_days_ahead' => 'int',
-        'service_windows' => '\BumbalClient\Model\ServiceWindowModel[]'
+        'service_windows' => '\BumbalClient\Model\ServiceWindowModel[]',
+        'deferred_service_windows_scheme_days' => 'int',
+        'max_distance_impact_in_target_region' => 'float',
+        'travel_time_multiplication_factor' => 'float'
     ];
 
     /**
@@ -100,7 +103,10 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'sunday' => null,
         'min_days_ahead' => null,
         'max_days_ahead' => null,
-        'service_windows' => null
+        'service_windows' => null,
+        'deferred_service_windows_scheme_days' => null,
+        'max_distance_impact_in_target_region' => 'integer',
+        'travel_time_multiplication_factor' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -137,7 +143,10 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'sunday' => 'sunday',
         'min_days_ahead' => 'min_days_ahead',
         'max_days_ahead' => 'max_days_ahead',
-        'service_windows' => 'service_windows'
+        'service_windows' => 'service_windows',
+        'deferred_service_windows_scheme_days' => 'deferred_service_windows_scheme_days',
+        'max_distance_impact_in_target_region' => 'max_distance_impact_in_target_region',
+        'travel_time_multiplication_factor' => 'travel_time_multiplication_factor'
     ];
 
 
@@ -165,7 +174,10 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'sunday' => 'setSunday',
         'min_days_ahead' => 'setMinDaysAhead',
         'max_days_ahead' => 'setMaxDaysAhead',
-        'service_windows' => 'setServiceWindows'
+        'service_windows' => 'setServiceWindows',
+        'deferred_service_windows_scheme_days' => 'setDeferredServiceWindowsSchemeDays',
+        'max_distance_impact_in_target_region' => 'setMaxDistanceImpactInTargetRegion',
+        'travel_time_multiplication_factor' => 'setTravelTimeMultiplicationFactor'
     ];
 
 
@@ -193,7 +205,10 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         'sunday' => 'getSunday',
         'min_days_ahead' => 'getMinDaysAhead',
         'max_days_ahead' => 'getMaxDaysAhead',
-        'service_windows' => 'getServiceWindows'
+        'service_windows' => 'getServiceWindows',
+        'deferred_service_windows_scheme_days' => 'getDeferredServiceWindowsSchemeDays',
+        'max_distance_impact_in_target_region' => 'getMaxDistanceImpactInTargetRegion',
+        'travel_time_multiplication_factor' => 'getTravelTimeMultiplicationFactor'
     ];
 
     public static function attributeMap()
@@ -247,6 +262,9 @@ class ServiceWindowsSchemeModel implements ArrayAccess
         $this->container['min_days_ahead'] = isset($data['min_days_ahead']) ? $data['min_days_ahead'] : null;
         $this->container['max_days_ahead'] = isset($data['max_days_ahead']) ? $data['max_days_ahead'] : null;
         $this->container['service_windows'] = isset($data['service_windows']) ? $data['service_windows'] : null;
+        $this->container['deferred_service_windows_scheme_days'] = isset($data['deferred_service_windows_scheme_days']) ? $data['deferred_service_windows_scheme_days'] : null;
+        $this->container['max_distance_impact_in_target_region'] = isset($data['max_distance_impact_in_target_region']) ? $data['max_distance_impact_in_target_region'] : null;
+        $this->container['travel_time_multiplication_factor'] = isset($data['travel_time_multiplication_factor']) ? $data['travel_time_multiplication_factor'] : null;
     }
 
     /**
@@ -690,6 +708,69 @@ class ServiceWindowsSchemeModel implements ArrayAccess
     public function setServiceWindows($service_windows)
     {
         $this->container['service_windows'] = $service_windows;
+
+        return $this;
+    }
+
+    /**
+     * Gets deferred_service_windows_scheme_days
+     * @return int
+     */
+    public function getDeferredServiceWindowsSchemeDays()
+    {
+        return $this->container['deferred_service_windows_scheme_days'];
+    }
+
+    /**
+     * Sets deferred_service_windows_scheme_days
+     * @param int $deferred_service_windows_scheme_days Deferred service windows scheme days (when null, will take the value from settings)
+     * @return $this
+     */
+    public function setDeferredServiceWindowsSchemeDays($deferred_service_windows_scheme_days)
+    {
+        $this->container['deferred_service_windows_scheme_days'] = $deferred_service_windows_scheme_days;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_distance_impact_in_target_region
+     * @return float
+     */
+    public function getMaxDistanceImpactInTargetRegion()
+    {
+        return $this->container['max_distance_impact_in_target_region'];
+    }
+
+    /**
+     * Sets max_distance_impact_in_target_region
+     * @param float $max_distance_impact_in_target_region Maximum distance impact (meters) in target region (when null, will take the value from settings)
+     * @return $this
+     */
+    public function setMaxDistanceImpactInTargetRegion($max_distance_impact_in_target_region)
+    {
+        $this->container['max_distance_impact_in_target_region'] = $max_distance_impact_in_target_region;
+
+        return $this;
+    }
+
+    /**
+     * Gets travel_time_multiplication_factor
+     * @return float
+     */
+    public function getTravelTimeMultiplicationFactor()
+    {
+        return $this->container['travel_time_multiplication_factor'];
+    }
+
+    /**
+     * Sets travel_time_multiplication_factor
+     * @param float $travel_time_multiplication_factor Travel time multiplication factor (when null, will take the value from settings)
+     * @return $this
+     */
+    public function setTravelTimeMultiplicationFactor($travel_time_multiplication_factor)
+    {
+        $this->container['travel_time_multiplication_factor'] = $travel_time_multiplication_factor;
 
         return $this;
     }

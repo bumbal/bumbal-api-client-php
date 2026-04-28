@@ -79,6 +79,8 @@ class RouteFiltersModel implements ArrayAccess
         'optimized' => 'bool[]',
         'blocked' => 'bool[]',
         'nr_of_stops' => 'int[]',
+        'nr_of_stops_min' => 'int[]',
+        'nr_of_stops_max' => 'int[]',
         'search_text' => 'string'
     ];
 
@@ -112,6 +114,8 @@ class RouteFiltersModel implements ArrayAccess
         'optimized' => null,
         'blocked' => null,
         'nr_of_stops' => null,
+        'nr_of_stops_min' => null,
+        'nr_of_stops_max' => null,
         'search_text' => null
     ];
 
@@ -155,6 +159,8 @@ class RouteFiltersModel implements ArrayAccess
         'optimized' => 'optimized',
         'blocked' => 'blocked',
         'nr_of_stops' => 'nr_of_stops',
+        'nr_of_stops_min' => 'nr_of_stops_min',
+        'nr_of_stops_max' => 'nr_of_stops_max',
         'search_text' => 'search_text'
     ];
 
@@ -189,6 +195,8 @@ class RouteFiltersModel implements ArrayAccess
         'optimized' => 'setOptimized',
         'blocked' => 'setBlocked',
         'nr_of_stops' => 'setNrOfStops',
+        'nr_of_stops_min' => 'setNrOfStopsMin',
+        'nr_of_stops_max' => 'setNrOfStopsMax',
         'search_text' => 'setSearchText'
     ];
 
@@ -223,6 +231,8 @@ class RouteFiltersModel implements ArrayAccess
         'optimized' => 'getOptimized',
         'blocked' => 'getBlocked',
         'nr_of_stops' => 'getNrOfStops',
+        'nr_of_stops_min' => 'getNrOfStopsMin',
+        'nr_of_stops_max' => 'getNrOfStopsMax',
         'search_text' => 'getSearchText'
     ];
 
@@ -282,6 +292,8 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
+        $this->container['nr_of_stops_min'] = isset($data['nr_of_stops_min']) ? $data['nr_of_stops_min'] : null;
+        $this->container['nr_of_stops_max'] = isset($data['nr_of_stops_max']) ? $data['nr_of_stops_max'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
     }
 
@@ -831,6 +843,48 @@ class RouteFiltersModel implements ArrayAccess
     public function setNrOfStops($nr_of_stops)
     {
         $this->container['nr_of_stops'] = $nr_of_stops;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_stops_min
+     * @return int[]
+     */
+    public function getNrOfStopsMin()
+    {
+        return $this->container['nr_of_stops_min'];
+    }
+
+    /**
+     * Sets nr_of_stops_min
+     * @param int[] $nr_of_stops_min Minimum number of stops
+     * @return $this
+     */
+    public function setNrOfStopsMin($nr_of_stops_min)
+    {
+        $this->container['nr_of_stops_min'] = $nr_of_stops_min;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_stops_max
+     * @return int[]
+     */
+    public function getNrOfStopsMax()
+    {
+        return $this->container['nr_of_stops_max'];
+    }
+
+    /**
+     * Sets nr_of_stops_max
+     * @param int[] $nr_of_stops_max Maximum number of stops
+     * @return $this
+     */
+    public function setNrOfStopsMax($nr_of_stops_max)
+    {
+        $this->container['nr_of_stops_max'] = $nr_of_stops_max;
 
         return $this;
     }

@@ -77,6 +77,7 @@ class AddressModel implements ArrayAccess
         'time_to' => 'string',
         'opening_hours' => '\BumbalClient\Model\OpeningHoursRuleModel[]',
         'duration' => 'int',
+        'preparation_duration' => 'int',
         'address_type_names' => 'string[]',
         'emails' => '\BumbalClient\Model\EmailModel[]',
         'phone_nrs' => '\BumbalClient\Model\PhoneNrModel[]',
@@ -120,6 +121,7 @@ class AddressModel implements ArrayAccess
         'time_to' => null,
         'opening_hours' => null,
         'duration' => null,
+        'preparation_duration' => null,
         'address_type_names' => null,
         'emails' => null,
         'phone_nrs' => null,
@@ -173,6 +175,7 @@ class AddressModel implements ArrayAccess
         'time_to' => 'time_to',
         'opening_hours' => 'opening_hours',
         'duration' => 'duration',
+        'preparation_duration' => 'preparation_duration',
         'address_type_names' => 'address_type_names',
         'emails' => 'emails',
         'phone_nrs' => 'phone_nrs',
@@ -217,6 +220,7 @@ class AddressModel implements ArrayAccess
         'time_to' => 'setTimeTo',
         'opening_hours' => 'setOpeningHours',
         'duration' => 'setDuration',
+        'preparation_duration' => 'setPreparationDuration',
         'address_type_names' => 'setAddressTypeNames',
         'emails' => 'setEmails',
         'phone_nrs' => 'setPhoneNrs',
@@ -261,6 +265,7 @@ class AddressModel implements ArrayAccess
         'time_to' => 'getTimeTo',
         'opening_hours' => 'getOpeningHours',
         'duration' => 'getDuration',
+        'preparation_duration' => 'getPreparationDuration',
         'address_type_names' => 'getAddressTypeNames',
         'emails' => 'getEmails',
         'phone_nrs' => 'getPhoneNrs',
@@ -330,6 +335,7 @@ class AddressModel implements ArrayAccess
         $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
         $this->container['opening_hours'] = isset($data['opening_hours']) ? $data['opening_hours'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['preparation_duration'] = isset($data['preparation_duration']) ? $data['preparation_duration'] : null;
         $this->container['address_type_names'] = isset($data['address_type_names']) ? $data['address_type_names'] : null;
         $this->container['emails'] = isset($data['emails']) ? $data['emails'] : null;
         $this->container['phone_nrs'] = isset($data['phone_nrs']) ? $data['phone_nrs'] : null;
@@ -849,6 +855,27 @@ class AddressModel implements ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets preparation_duration
+     * @return int
+     */
+    public function getPreparationDuration()
+    {
+        return $this->container['preparation_duration'];
+    }
+
+    /**
+     * Sets preparation_duration
+     * @param int $preparation_duration Default preparation duration for activities on this address in minutes
+     * @return $this
+     */
+    public function setPreparationDuration($preparation_duration)
+    {
+        $this->container['preparation_duration'] = $preparation_duration;
 
         return $this;
     }

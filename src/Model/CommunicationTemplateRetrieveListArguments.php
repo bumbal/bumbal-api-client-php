@@ -155,8 +155,8 @@ class CommunicationTemplateRetrieveListArguments implements ArrayAccess
     const SORTING_COLUMN_NAME = 'name';
     const SORTING_COLUMN_DESCRIPTION = 'description';
     const SORTING_COLUMN_SUBJECT = 'subject';
-    const SORTING_DIRECTION_ASC = 'ASC';
-    const SORTING_DIRECTION_DESC = 'DESC';
+    const SORTING_DIRECTION_ASC = 'asc';
+    const SORTING_DIRECTION_DESC = 'desc';
     
 
     

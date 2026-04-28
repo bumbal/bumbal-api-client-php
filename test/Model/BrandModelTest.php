@@ -92,6 +92,20 @@ class BrandModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+    }
+
+    /**
+     * Test attribute "communication_settings"
+     */
+    public function testPropertyCommunicationSettings()
+    {
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()

@@ -173,6 +173,184 @@ class ActivityApi
     }
 
     /**
+     * Operation bulkUpdateActivityTag
+     *
+     * Bulk update tags on activities
+     *
+     * @param \BumbalClient\Model\ActivityBulkUpdateTagArgumentsModel $body Filters and tag update parameters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\InlineResponse200
+     */
+    public function bulkUpdateActivityTag($body)
+    {
+        list($response) = $this->bulkUpdateActivityTagWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation bulkUpdateActivityTagWithHttpInfo
+     *
+     * Bulk update tags on activities
+     *
+     * @param \BumbalClient\Model\ActivityBulkUpdateTagArgumentsModel $body Filters and tag update parameters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bulkUpdateActivityTagWithHttpInfo($body)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling bulkUpdateActivityTag');
+        }
+        // parse inputs
+        $resourcePath = "/activity/bulk-update/tag";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\InlineResponse200',
+                '/activity/bulk-update/tag'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation bulkUpdateActivityTimeSlot
+     *
+     * Bulk update time slots on activities
+     *
+     * @param \BumbalClient\Model\ActivityBulkUpdateTimeSlotArgumentsModel $body Filters and time slot update parameters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\InlineResponse200
+     */
+    public function bulkUpdateActivityTimeSlot($body)
+    {
+        list($response) = $this->bulkUpdateActivityTimeSlotWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation bulkUpdateActivityTimeSlotWithHttpInfo
+     *
+     * Bulk update time slots on activities
+     *
+     * @param \BumbalClient\Model\ActivityBulkUpdateTimeSlotArgumentsModel $body Filters and time slot update parameters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bulkUpdateActivityTimeSlotWithHttpInfo($body)
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling bulkUpdateActivityTimeSlot');
+        }
+        // parse inputs
+        $resourcePath = "/activity/bulk-update/time-slot";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\InlineResponse200',
+                '/activity/bulk-update/time-slot'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteActivity
      *
      * Delete an activity
@@ -269,13 +447,13 @@ class ActivityApi
      *
      * detach activities from specified recurrence
      *
-     * @param \BumbalClient\Model\ActivityDetachFromRecurrenceArguments $body Detach from Recurrence Arguments (optional)
+     * @param int $id ID of the activity to detach from recurrence (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function detachActivitiesFromRecurrence($body = null)
+    public function detachActivitiesFromRecurrence($id)
     {
-        list($response) = $this->detachActivitiesFromRecurrenceWithHttpInfo($body);
+        list($response) = $this->detachActivitiesFromRecurrenceWithHttpInfo($id);
         return $response;
     }
 
@@ -284,14 +462,18 @@ class ActivityApi
      *
      * detach activities from specified recurrence
      *
-     * @param \BumbalClient\Model\ActivityDetachFromRecurrenceArguments $body Detach from Recurrence Arguments (optional)
+     * @param int $id ID of the activity to detach from recurrence (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function detachActivitiesFromRecurrenceWithHttpInfo($body = null)
+    public function detachActivitiesFromRecurrenceWithHttpInfo($id)
     {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling detachActivitiesFromRecurrence');
+        }
         // parse inputs
-        $resourcePath = "/activity/detach-from-recurrence";
+        $resourcePath = "/activity/detach-from-recurrence/{id}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -302,10 +484,13 @@ class ActivityApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
         }
 
         // for model (json/xml)
@@ -333,7 +518,7 @@ class ActivityApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/activity/detach-from-recurrence'
+                '/activity/detach-from-recurrence/{id}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -341,6 +526,98 @@ class ActivityApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getBulkUpdateStatus
+     *
+     * Get status of an asynchronous bulk update job
+     *
+     * @param string $token The token returned when the async bulk update job was initiated (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ActivityBulkUpdateResultResponse
+     */
+    public function getBulkUpdateStatus($token)
+    {
+        list($response) = $this->getBulkUpdateStatusWithHttpInfo($token);
+        return $response;
+    }
+
+    /**
+     * Operation getBulkUpdateStatusWithHttpInfo
+     *
+     * Get status of an asynchronous bulk update job
+     *
+     * @param string $token The token returned when the async bulk update job was initiated (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ActivityBulkUpdateResultResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getBulkUpdateStatusWithHttpInfo($token)
+    {
+        // verify the required parameter 'token' is set
+        if ($token === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $token when calling getBulkUpdateStatus');
+        }
+        // parse inputs
+        $resourcePath = "/activity/bulk-update/status/{token}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($token !== null) {
+            $resourcePath = str_replace(
+                "{" . "token" . "}",
+                $this->apiClient->getSerializer()->toPathValue($token),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ActivityBulkUpdateResultResponse',
+                '/activity/bulk-update/status/{token}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityBulkUpdateResultResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityBulkUpdateResultResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -601,6 +878,98 @@ class ActivityApi
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
                 '/activity/lock-on-route-and-time'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation processActivityScheduledCommunicationUpdate
+     *
+     * Update an activity's scheduled communication mapping
+     *
+     * @param int $activity_id ID of activity to update the scheduled communication for (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function processActivityScheduledCommunicationUpdate($activity_id)
+    {
+        list($response) = $this->processActivityScheduledCommunicationUpdateWithHttpInfo($activity_id);
+        return $response;
+    }
+
+    /**
+     * Operation processActivityScheduledCommunicationUpdateWithHttpInfo
+     *
+     * Update an activity's scheduled communication mapping
+     *
+     * @param int $activity_id ID of activity to update the scheduled communication for (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function processActivityScheduledCommunicationUpdateWithHttpInfo($activity_id)
+    {
+        // verify the required parameter 'activity_id' is set
+        if ($activity_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $activity_id when calling processActivityScheduledCommunicationUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/activity/communication/schedule/{activityId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($activity_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "activityId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($activity_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/activity/communication/schedule/{activityId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

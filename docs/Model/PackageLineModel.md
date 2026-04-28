@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **activity_id** | **int** | Unique Identifier for activity where this packageline is related to | [optional] 
 **shipment_id** | **int** | Unique Identifier for shipment activity where this packageline is related to | [optional] 
 **depot_address_id** | **int** | Unique Identifier for shipment address where this packageline is related to | [optional] 
+**depot_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **depot_address_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) | link to the depot address connected to this package_line (only for create/updats actions) | [optional] 
 **activity_ids** | **int[]** | Unique Identifier for activities where this packageline is related to | [optional] 
 **nr** | **string** | Number of this PackageLine | [optional] 

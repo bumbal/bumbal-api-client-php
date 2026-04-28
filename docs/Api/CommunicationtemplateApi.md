@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCommunicationTemplate**](CommunicationtemplateApi.md#createCommunicationTemplate) | **POST** /communication-template/set | Create a communication Template
 [**deleteCommunicationTemplate**](CommunicationtemplateApi.md#deleteCommunicationTemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communication template
+[**previewTemplate**](CommunicationtemplateApi.md#previewTemplate) | **POST** /communication-template/preview | Preview a template
 [**retrieveCommunicationTemplate**](CommunicationtemplateApi.md#retrieveCommunicationTemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communication template
 [**retrieveListTemplate**](CommunicationtemplateApi.md#retrieveListTemplate) | **PUT** /communication-template | Retrieve list of templates
+[**sendTestTemplate**](CommunicationtemplateApi.md#sendTestTemplate) | **POST** /communication-template/send-test | Send a test template
 
 
 # **createCommunicationTemplate**
@@ -118,6 +120,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **previewTemplate**
+> \BumbalClient\Model\CommunicationTemplatePreviewResponse previewTemplate($arguments)
+
+Preview a template
+
+Preview a template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\CommunicationtemplateApi();
+$arguments = new \BumbalClient\Model\CommunicationTemplatePreviewArguments(); // \BumbalClient\Model\CommunicationTemplatePreviewArguments | Template Preview Arguments
+
+try {
+    $result = $api_instance->previewTemplate($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CommunicationtemplateApi->previewTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\CommunicationTemplatePreviewArguments**](../Model/CommunicationTemplatePreviewArguments.md)| Template Preview Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\CommunicationTemplatePreviewResponse**](../Model/CommunicationTemplatePreviewResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **retrieveCommunicationTemplate**
 > \BumbalClient\Model\CommunicationTemplateModel retrieveCommunicationTemplate($communication_template_id)
 
@@ -214,6 +270,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\CommunicationTemplateListResponse**](../Model/CommunicationTemplateListResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **sendTestTemplate**
+> \BumbalClient\Model\CommunicationTemplateSendTestResponse sendTestTemplate($arguments)
+
+Send a test template
+
+Send a test template
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\CommunicationtemplateApi();
+$arguments = new \BumbalClient\Model\CommunicationTemplateSendTestArguments(); // \BumbalClient\Model\CommunicationTemplateSendTestArguments | Template Send Test Arguments
+
+try {
+    $result = $api_instance->sendTestTemplate($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CommunicationtemplateApi->sendTestTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\CommunicationTemplateSendTestArguments**](../Model/CommunicationTemplateSendTestArguments.md)| Template Send Test Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\CommunicationTemplateSendTestResponse**](../Model/CommunicationTemplateSendTestResponse.md)
 
 ### Authorization
 

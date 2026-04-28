@@ -36,6 +36,8 @@ Name | Type | Description | Notes
 **status_id** | **int[]** | Activity Status id | [optional] 
 **activity_type_id** | **int[]** | Activity type id | [optional] 
 **locked** | **int[]** | Activity locked status. 0: not locked, 1: locked on route and time, 2: only locked on route | [optional] 
+**brand_id** | **int[]** | Activity brand ID(s) | [optional] 
+**brand_name** | **string[]** | Activity brand name(s) | [optional] 
 **activity_type_name** | **string[]** | Activity type name | [optional] 
 **bundle_activity_id** | **int[]** | bundle activity id(s) | [optional] 
 **description** | **string[]** | Activity description (not visible in Bumbal interface) | [optional] 

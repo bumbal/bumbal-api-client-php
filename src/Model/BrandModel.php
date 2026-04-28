@@ -56,6 +56,8 @@ class BrandModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name' => 'string',
+        'email' => 'string',
+        'communication_settings' => '\BumbalClient\Model\BrandCommunicationSettingsModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -75,6 +77,8 @@ class BrandModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'name' => null,
+        'email' => null,
+        'communication_settings' => null,
         'tags' => null,
         'links' => null,
         'meta_data' => null,
@@ -104,6 +108,8 @@ class BrandModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
+        'email' => 'email',
+        'communication_settings' => 'communication_settings',
         'tags' => 'tags',
         'links' => 'links',
         'meta_data' => 'meta_data',
@@ -124,6 +130,8 @@ class BrandModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
+        'email' => 'setEmail',
+        'communication_settings' => 'setCommunicationSettings',
         'tags' => 'setTags',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
@@ -144,6 +152,8 @@ class BrandModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
+        'email' => 'getEmail',
+        'communication_settings' => 'getCommunicationSettings',
         'tags' => 'getTags',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
@@ -189,6 +199,8 @@ class BrandModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['communication_settings'] = isset($data['communication_settings']) ? $data['communication_settings'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
@@ -264,6 +276,48 @@ class BrandModel implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email Email of brand
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_settings
+     * @return \BumbalClient\Model\BrandCommunicationSettingsModel
+     */
+    public function getCommunicationSettings()
+    {
+        return $this->container['communication_settings'];
+    }
+
+    /**
+     * Sets communication_settings
+     * @param \BumbalClient\Model\BrandCommunicationSettingsModel $communication_settings
+     * @return $this
+     */
+    public function setCommunicationSettings($communication_settings)
+    {
+        $this->container['communication_settings'] = $communication_settings;
 
         return $this;
     }

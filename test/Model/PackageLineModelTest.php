@@ -106,6 +106,13 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "depot_address"
+     */
+    public function testPropertyDepotAddress()
+    {
+    }
+
+    /**
      * Test attribute "depot_address_link"
      */
     public function testPropertyDepotAddressLink()

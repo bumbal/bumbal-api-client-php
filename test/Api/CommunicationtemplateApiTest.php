@@ -93,6 +93,16 @@ class CommunicationtemplateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for previewTemplate
+     *
+     * Preview a template.
+     *
+     */
+    public function testPreviewTemplate()
+    {
+    }
+
+    /**
      * Test case for retrieveCommunicationTemplate
      *
      * Retrieve a communication template.
@@ -109,6 +119,16 @@ class CommunicationtemplateApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testRetrieveListTemplate()
+    {
+    }
+
+    /**
+     * Test case for sendTestTemplate
+     *
+     * Send a test template.
+     *
+     */
+    public function testSendTestTemplate()
     {
     }
 }

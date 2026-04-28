@@ -83,6 +83,26 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for bulkUpdateActivityTag
+     *
+     * Bulk update tags on activities.
+     *
+     */
+    public function testBulkUpdateActivityTag()
+    {
+    }
+
+    /**
+     * Test case for bulkUpdateActivityTimeSlot
+     *
+     * Bulk update time slots on activities.
+     *
+     */
+    public function testBulkUpdateActivityTimeSlot()
+    {
+    }
+
+    /**
      * Test case for deleteActivity
      *
      * Delete an activity.
@@ -99,6 +119,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testDetachActivitiesFromRecurrence()
+    {
+    }
+
+    /**
+     * Test case for getBulkUpdateStatus
+     *
+     * Get status of an asynchronous bulk update job.
+     *
+     */
+    public function testGetBulkUpdateStatus()
     {
     }
 
@@ -129,6 +159,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLockActivityOnRouteAndTime()
+    {
+    }
+
+    /**
+     * Test case for processActivityScheduledCommunicationUpdate
+     *
+     * Update an activity's scheduled communication mapping.
+     *
+     */
+    public function testProcessActivityScheduledCommunicationUpdate()
     {
     }
 

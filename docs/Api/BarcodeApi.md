@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**generateBarcode**](BarcodeApi.md#generateBarcode) | **POST** /barcode/generate | Create an unique barcode
-[**retrieveBarcodeLabel**](BarcodeApi.md#retrieveBarcodeLabel) | **GET** /barcode/label/{packageLineId} | Retrieve a package-line barcode label
+[**generateBarcodeLabels**](BarcodeApi.md#generateBarcodeLabels) | **POST** /barcode/label | Generate barcode labels for package lines
 
 
 # **generateBarcode**
@@ -56,12 +56,12 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **retrieveBarcodeLabel**
-> \BumbalClient\Model\BarcodeLabelResponse retrieveBarcodeLabel($package_line_id, $width, $height)
+# **generateBarcodeLabels**
+> \SplFileObject generateBarcodeLabels($body)
 
-Retrieve a package-line barcode label
+Generate barcode labels for package lines
 
-Retrieve a package-line barcode label
+Generate PDF barcode labels for selected package lines
 
 ### Example
 ```php
@@ -78,15 +78,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\BarcodeApi();
-$package_line_id = 789; // int | ID of the package-line to retrieve the barcode label for
-$width = 789; // int | The width of the label in mm
-$height = 789; // int | The height of the label in mm
+$body = new \BumbalClient\Model\BarcodeLabelRequest(); // \BumbalClient\Model\BarcodeLabelRequest | Package line IDs to generate labels for
 
 try {
-    $result = $api_instance->retrieveBarcodeLabel($package_line_id, $width, $height);
+    $result = $api_instance->generateBarcodeLabels($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling BarcodeApi->retrieveBarcodeLabel: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling BarcodeApi->generateBarcodeLabels: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -95,13 +93,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **package_line_id** | **int**| ID of the package-line to retrieve the barcode label for |
- **width** | **int**| The width of the label in mm | [optional]
- **height** | **int**| The height of the label in mm | [optional]
+ **body** | [**\BumbalClient\Model\BarcodeLabelRequest**](../Model/BarcodeLabelRequest.md)| Package line IDs to generate labels for |
 
 ### Return type
 
-[**\BumbalClient\Model\BarcodeLabelResponse**](../Model/BarcodeLabelResponse.md)
+[**\SplFileObject**](../Model/\SplFileObject.md)
 
 ### Authorization
 
@@ -110,7 +106,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
+ - **Accept**: application/pdf
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

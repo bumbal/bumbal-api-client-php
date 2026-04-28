@@ -125,4 +125,18 @@ class PhoneNrModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPrimary()
     {
     }
+
+    /**
+     * Test attribute "communication_label_ids"
+     */
+    public function testPropertyCommunicationLabelIds()
+    {
+    }
+
+    /**
+     * Test attribute "communication_labels"
+     */
+    public function testPropertyCommunicationLabels()
+    {
+    }
 }

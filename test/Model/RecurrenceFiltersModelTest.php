@@ -92,9 +92,9 @@ class RecurrenceFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "uuid"
+     * Test attribute "has_uncreated_objects"
      */
-    public function testPropertyUuid()
+    public function testPropertyHasUncreatedObjects()
     {
     }
 }

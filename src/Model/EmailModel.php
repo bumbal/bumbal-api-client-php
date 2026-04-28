@@ -58,7 +58,9 @@ class EmailModel implements ArrayAccess
         'address_id' => 'int',
         'email' => 'string',
         'description' => 'string',
-        'primary' => 'bool'
+        'primary' => 'bool',
+        'communication_label_ids' => 'int[]',
+        'communication_labels' => '\BumbalClient\Model\CommunicationLabelModel[]'
     ];
 
     /**
@@ -70,7 +72,9 @@ class EmailModel implements ArrayAccess
         'address_id' => 'int64',
         'email' => null,
         'description' => null,
-        'primary' => null
+        'primary' => null,
+        'communication_label_ids' => null,
+        'communication_labels' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +96,9 @@ class EmailModel implements ArrayAccess
         'address_id' => 'address_id',
         'email' => 'email',
         'description' => 'description',
-        'primary' => 'primary'
+        'primary' => 'primary',
+        'communication_label_ids' => 'communication_label_ids',
+        'communication_labels' => 'communication_labels'
     ];
 
 
@@ -105,7 +111,9 @@ class EmailModel implements ArrayAccess
         'address_id' => 'setAddressId',
         'email' => 'setEmail',
         'description' => 'setDescription',
-        'primary' => 'setPrimary'
+        'primary' => 'setPrimary',
+        'communication_label_ids' => 'setCommunicationLabelIds',
+        'communication_labels' => 'setCommunicationLabels'
     ];
 
 
@@ -118,7 +126,9 @@ class EmailModel implements ArrayAccess
         'address_id' => 'getAddressId',
         'email' => 'getEmail',
         'description' => 'getDescription',
-        'primary' => 'getPrimary'
+        'primary' => 'getPrimary',
+        'communication_label_ids' => 'getCommunicationLabelIds',
+        'communication_labels' => 'getCommunicationLabels'
     ];
 
     public static function attributeMap()
@@ -157,6 +167,8 @@ class EmailModel implements ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
+        $this->container['communication_label_ids'] = isset($data['communication_label_ids']) ? $data['communication_label_ids'] : null;
+        $this->container['communication_labels'] = isset($data['communication_labels']) ? $data['communication_labels'] : null;
     }
 
     /**
@@ -285,6 +297,48 @@ class EmailModel implements ArrayAccess
     public function setPrimary($primary)
     {
         $this->container['primary'] = $primary;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_label_ids
+     * @return int[]
+     */
+    public function getCommunicationLabelIds()
+    {
+        return $this->container['communication_label_ids'];
+    }
+
+    /**
+     * Sets communication_label_ids
+     * @param int[] $communication_label_ids Communication label IDs
+     * @return $this
+     */
+    public function setCommunicationLabelIds($communication_label_ids)
+    {
+        $this->container['communication_label_ids'] = $communication_label_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_labels
+     * @return \BumbalClient\Model\CommunicationLabelModel[]
+     */
+    public function getCommunicationLabels()
+    {
+        return $this->container['communication_labels'];
+    }
+
+    /**
+     * Sets communication_labels
+     * @param \BumbalClient\Model\CommunicationLabelModel[] $communication_labels Communication labels
+     * @return $this
+     */
+    public function setCommunicationLabels($communication_labels)
+    {
+        $this->container['communication_labels'] = $communication_labels;
 
         return $this;
     }

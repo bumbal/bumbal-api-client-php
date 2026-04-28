@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **int[]** | Vehicle id&#39;s | [optional] 
 **vehicle_type_id** | **int[]** | Vehicle type id&#39;s | [optional] 
 **links** | **object[]** | Vehicle Link ids | [optional] 
+**tag_names** | **string[]** | Tag names | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
 

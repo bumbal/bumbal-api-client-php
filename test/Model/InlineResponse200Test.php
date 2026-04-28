@@ -78,9 +78,16 @@ class InlineResponse200Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "success"
      */
-    public function testPropertyMessage()
+    public function testPropertySuccess()
+    {
+    }
+
+    /**
+     * Test attribute "error_messages"
+     */
+    public function testPropertyErrorMessages()
     {
     }
 

@@ -266,6 +266,7 @@ class UsersModel implements ArrayAccess
     const ROLE_NAME_PLANNER = 'Planner';
     const ROLE_NAME_MANAGER = 'Manager';
     const ROLE_NAME_ADMIN = 'Admin';
+    const ROLE_NAME_API = 'API';
     
 
     
@@ -281,6 +282,7 @@ class UsersModel implements ArrayAccess
             self::ROLE_NAME_PLANNER,
             self::ROLE_NAME_MANAGER,
             self::ROLE_NAME_ADMIN,
+            self::ROLE_NAME_API,
         ];
     }
     
@@ -419,7 +421,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets role_id
-     * @param int $role_id id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin
+     * @param int $role_id id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin, 6: API
      * @return $this
      */
     public function setRoleId($role_id)

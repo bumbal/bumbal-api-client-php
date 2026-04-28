@@ -85,11 +85,15 @@ All URIs are relative to *http://localhost/api/v2*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ActivityApi* | [**bulkUpdateActivity**](docs/Api/ActivityApi.md#bulkupdateactivity) | **POST** /activity/bulk-update | Update multiple activities
+*ActivityApi* | [**bulkUpdateActivityTag**](docs/Api/ActivityApi.md#bulkupdateactivitytag) | **POST** /activity/bulk-update/tag | Bulk update tags on activities
+*ActivityApi* | [**bulkUpdateActivityTimeSlot**](docs/Api/ActivityApi.md#bulkupdateactivitytimeslot) | **POST** /activity/bulk-update/time-slot | Bulk update time slots on activities
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
-*ActivityApi* | [**detachActivitiesFromRecurrence**](docs/Api/ActivityApi.md#detachactivitiesfromrecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
+*ActivityApi* | [**detachActivitiesFromRecurrence**](docs/Api/ActivityApi.md#detachactivitiesfromrecurrence) | **POST** /activity/detach-from-recurrence/{id} | detach activities from specified recurrence
+*ActivityApi* | [**getBulkUpdateStatus**](docs/Api/ActivityApi.md#getbulkupdatestatus) | **GET** /activity/bulk-update/status/{token} | Get status of an asynchronous bulk update job
 *ActivityApi* | [**lockActivity**](docs/Api/ActivityApi.md#lockactivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 *ActivityApi* | [**lockActivityOnRoute**](docs/Api/ActivityApi.md#lockactivityonroute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
 *ActivityApi* | [**lockActivityOnRouteAndTime**](docs/Api/ActivityApi.md#lockactivityonrouteandtime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
+*ActivityApi* | [**processActivityScheduledCommunicationUpdate**](docs/Api/ActivityApi.md#processactivityscheduledcommunicationupdate) | **POST** /activity/communication/schedule/{activityId} | Update an activity&#39;s scheduled communication mapping
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
 *ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
@@ -98,6 +102,10 @@ Class | Method | HTTP request | Description
 *ActivityApi* | [**updateActivity**](docs/Api/ActivityApi.md#updateactivity) | **PUT** /activity/{activityId} | Update a activity
 *ActivitytypeApi* | [**retrieveActivityType**](docs/Api/ActivitytypeApi.md#retrieveactivitytype) | **GET** /activity-type/{activityTypeId} | Find ActivityType by ID
 *ActivitytypeApi* | [**retrieveListActivityType**](docs/Api/ActivitytypeApi.md#retrievelistactivitytype) | **PUT** /activity-type | Retrieve List of ActivityTypes
+*AdHocEventApi* | [**deleteAdHocEvent**](docs/Api/AdHocEventApi.md#deleteadhocevent) | **DELETE** /adhoc-events/{adHocEventId} | Delete an ad-hoc event
+*AdHocEventApi* | [**retrieveAdHocEvent**](docs/Api/AdHocEventApi.md#retrieveadhocevent) | **GET** /adhoc-events/{adHocEventId} | Find ad-hoc events by ID
+*AdHocEventApi* | [**retrieveListAdHocEvent**](docs/Api/AdHocEventApi.md#retrievelistadhocevent) | **PUT** /adhoc-events | Retrieve List of Ad-Hoc events
+*AdHocEventApi* | [**setAdHocEvent**](docs/Api/AdHocEventApi.md#setadhocevent) | **POST** /adhoc-events/set | Set (create or update) an adhoc event
 *AddressApi* | [**deleteAddress**](docs/Api/AddressApi.md#deleteaddress) | **DELETE** /address/{addressId} | Delete an address
 *AddressApi* | [**geoCodeAddress**](docs/Api/AddressApi.md#geocodeaddress) | **POST** /address/geo-code | GeoCode an address
 *AddressApi* | [**retrieveAddress**](docs/Api/AddressApi.md#retrieveaddress) | **GET** /address/{addressId} | Retrieve a Address
@@ -118,7 +126,7 @@ Class | Method | HTTP request | Description
 *AuthenticateApi* | [**authenticateSignIn**](docs/Api/AuthenticateApi.md#authenticatesignin) | **POST** /authenticate/sign-in | Sign In with your user credentials
 *AuthenticateApi* | [**authenticateSignOut**](docs/Api/AuthenticateApi.md#authenticatesignout) | **GET** /authenticate/sign-out | Sign out
 *BarcodeApi* | [**generateBarcode**](docs/Api/BarcodeApi.md#generatebarcode) | **POST** /barcode/generate | Create an unique barcode
-*BarcodeApi* | [**retrieveBarcodeLabel**](docs/Api/BarcodeApi.md#retrievebarcodelabel) | **GET** /barcode/label/{packageLineId} | Retrieve a package-line barcode label
+*BarcodeApi* | [**generateBarcodeLabels**](docs/Api/BarcodeApi.md#generatebarcodelabels) | **POST** /barcode/label | Generate barcode labels for package lines
 *BlockeddateApi* | [**deleteBlockedDate**](docs/Api/BlockeddateApi.md#deleteblockeddate) | **DELETE** /blocked-date/{blockedDateId} | Delete a blocked date
 *BlockeddateApi* | [**retrieveListBlockedDate**](docs/Api/BlockeddateApi.md#retrievelistblockeddate) | **PUT** /blocked-date | Retrieve List of blocked dates
 *BlockeddateApi* | [**setBlockedDate**](docs/Api/BlockeddateApi.md#setblockeddate) | **POST** /blocked-date/set | Set (create or update) a blocked date
@@ -132,10 +140,13 @@ Class | Method | HTTP request | Description
 *CapacitytypeApi* | [**retrieveCapacityType**](docs/Api/CapacitytypeApi.md#retrievecapacitytype) | **GET** /capacity-type/{capacityTypeId} | Find capacity-type by ID
 *CapacitytypeApi* | [**retrieveListCapacityType**](docs/Api/CapacitytypeApi.md#retrievelistcapacitytype) | **PUT** /capacity-type | Retrieve List of CapacityTypes
 *CapacitytypeApi* | [**setCapacityType**](docs/Api/CapacitytypeApi.md#setcapacitytype) | **POST** /capacity-type/set | Set (create or update) an CapacityType
-*CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
 *CommunicationdeliverymethodApi* | [**retrieveCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#retrievecommunicationdeliverymethod) | **GET** /communication-delivery-method/{communicationDeliveryMethodID} | Retrieve a communication delivery method
 *CommunicationdeliverymethodApi* | [**retrieveListCommunicationDeliveryMethod**](docs/Api/CommunicationdeliverymethodApi.md#retrievelistcommunicationdeliverymethod) | **PUT** /communication-delivery-method | Retrieve List of communication delivery methods
+*CommunicationlabelApi* | [**deleteCommunicationLabel**](docs/Api/CommunicationlabelApi.md#deletecommunicationlabel) | **DELETE** /communication-label/{communicationLabelId} | Delete an communication label
+*CommunicationlabelApi* | [**retrieveCommunicationLabel**](docs/Api/CommunicationlabelApi.md#retrievecommunicationlabel) | **GET** /communication-label/{communicationLabelId} | Find communication label by ID
+*CommunicationlabelApi* | [**retrieveListCommunicationLabel**](docs/Api/CommunicationlabelApi.md#retrievelistcommunicationlabel) | **PUT** /communication-label | Retrieve List of communication labels
+*CommunicationlabelApi* | [**setCommunicationLabel**](docs/Api/CommunicationlabelApi.md#setcommunicationlabel) | **POST** /communication-label/set | Set (create or update) an communication label
 *CommunicationmappingApi* | [**createCommunicationMapping**](docs/Api/CommunicationmappingApi.md#createcommunicationmapping) | **POST** /communication-mapping/set | Create or update a communication mapping
 *CommunicationmappingApi* | [**deleteCommunicationMapping**](docs/Api/CommunicationmappingApi.md#deletecommunicationmapping) | **DELETE** /communication-mapping/{communicationMappingId} | Delete a communication mapping
 *CommunicationmappingApi* | [**retrieveCommunicationMapping**](docs/Api/CommunicationmappingApi.md#retrievecommunicationmapping) | **GET** /communication-mapping/{communicationMappingId} | Retrieve a communication mapping
@@ -148,14 +159,20 @@ Class | Method | HTTP request | Description
 *CommunicationmessagetypeApi* | [**retrieveCommunicationMessageType**](docs/Api/CommunicationmessagetypeApi.md#retrievecommunicationmessagetype) | **GET** /communication-message-type/{communicationMessageTypeID} | Retrieve a communication message type
 *CommunicationtemplateApi* | [**createCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#createcommunicationtemplate) | **POST** /communication-template/set | Create a communication Template
 *CommunicationtemplateApi* | [**deleteCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#deletecommunicationtemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a communication template
+*CommunicationtemplateApi* | [**previewTemplate**](docs/Api/CommunicationtemplateApi.md#previewtemplate) | **POST** /communication-template/preview | Preview a template
 *CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communication template
 *CommunicationtemplateApi* | [**retrieveListTemplate**](docs/Api/CommunicationtemplateApi.md#retrievelisttemplate) | **PUT** /communication-template | Retrieve list of templates
+*CommunicationtemplateApi* | [**sendTestTemplate**](docs/Api/CommunicationtemplateApi.md#sendtesttemplate) | **POST** /communication-template/send-test | Send a test template
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
 *DriverApi* | [**retrieveDriver**](docs/Api/DriverApi.md#retrievedriver) | **GET** /driver/{driverId} | Find driver by ID
 *DriverApi* | [**retrieveListDriver**](docs/Api/DriverApi.md#retrievelistdriver) | **PUT** /driver | Retrieve List of Drivers
 *DriverApi* | [**setDriver**](docs/Api/DriverApi.md#setdriver) | **POST** /driver/set | Set (create or update) a driver
 *DriverApi* | [**updateDriver**](docs/Api/DriverApi.md#updatedriver) | **PUT** /driver/{driverId} | Update a driver
+*DriverSchedulesApi* | [**deleteDriverSchedule**](docs/Api/DriverSchedulesApi.md#deletedriverschedule) | **DELETE** /driver-schedules/{driverScheduleId} | Delete an driver schedule
+*DriverSchedulesApi* | [**retrieveDriversSchedule**](docs/Api/DriverSchedulesApi.md#retrievedriversschedule) | **GET** /driver-schedules/{driverScheduleId} | Find driver schedule by ID
+*DriverSchedulesApi* | [**retrieveListDriverSchedules**](docs/Api/DriverSchedulesApi.md#retrievelistdriverschedules) | **PUT** /driver-schedules | Retrieve List of Driver Schedules
+*DriverSchedulesApi* | [**setDriverSchedule**](docs/Api/DriverSchedulesApi.md#setdriverschedule) | **POST** /driver-schedules/set | Set (create or update) a driver schedule
 *DriverunavailabilityApi* | [**createDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#createdriverunavailability) | **POST** /driver-unavailability | Add a new DriverUnavailability
 *DriverunavailabilityApi* | [**deleteDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#deletedriverunavailability) | **DELETE** /driver-unavailability/{driverunavailabilityId} | Delete a DriverUnavailability entry
 *DriverunavailabilityApi* | [**retrieveDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#retrievedriverunavailability) | **GET** /driver-unavailability/{driverunavailabilityId} | Retrieve a DriverUnavailability
@@ -249,6 +266,8 @@ Class | Method | HTTP request | Description
 *PaymentApi* | [**retrievePayment**](docs/Api/PaymentApi.md#retrievepayment) | **GET** /payment/{paymentId} | Retrieve a Payment
 *PaymentApi* | [**setPayment**](docs/Api/PaymentApi.md#setpayment) | **POST** /payment/set | Set (create or update) a Payment
 *PaymentApi* | [**updatePayment**](docs/Api/PaymentApi.md#updatepayment) | **PUT** /payment/{paymentId} | Update a specific Payment object
+*PermissionApi* | [**retrieveListPermission**](docs/Api/PermissionApi.md#retrievelistpermission) | **PUT** /permission | Find the permissions associated with a role
+*PermissionApi* | [**retrievePermissionId**](docs/Api/PermissionApi.md#retrievepermissionid) | **GET** /permission/{permissionId} | Retrieve a Permission
 *PlannerApi* | [**applyPlanning**](docs/Api/PlannerApi.md#applyplanning) | **POST** /planner/apply-planning | Apply a planning schema
 *PlannerApi* | [**autoPlan**](docs/Api/PlannerApi.md#autoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 *PlannerApi* | [**autoPlanResult**](docs/Api/PlannerApi.md#autoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
@@ -343,6 +362,42 @@ Class | Method | HTTP request | Description
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
 *RecurrenceApi* | [**updateRecurrence**](docs/Api/RecurrenceApi.md#updaterecurrence) | **PUT** /recurrence/{recurrenceId} | Update a recurrence
+*ReportApi* | [**createDeliveryReport**](docs/Api/ReportApi.md#createdeliveryreport) | **POST** /report-delivery/set | Set up the auto delivery of a report by a report ID
+*ReportApi* | [**createDeliveryReportSchedule**](docs/Api/ReportApi.md#createdeliveryreportschedule) | **POST** /report-delivery-schedule/set | Set up the auto delivery of a report by a report ID
+*ReportApi* | [**deleteDeliveryReport**](docs/Api/ReportApi.md#deletedeliveryreport) | **DELETE** /report-delivery/{reportDeliveryId} | Delete a report auto delivery
+*ReportApi* | [**deleteDeliveryReportSchedule**](docs/Api/ReportApi.md#deletedeliveryreportschedule) | **DELETE** /report-delivery-schedule/{reportDeliveryScheduleId} | Delete a report auto delivery schedule
+*ReportApi* | [**exportFileReport**](docs/Api/ReportApi.md#exportfilereport) | **POST** /report/export-file | Export report by id
+*ReportApi* | [**exportReport**](docs/Api/ReportApi.md#exportreport) | **POST** /report/export | Export report by id
+*ReportApi* | [**mapReport**](docs/Api/ReportApi.md#mapreport) | **GET** /report/map/{reportId} | Map report by ID
+*ReportApi* | [**queryReport**](docs/Api/ReportApi.md#queryreport) | **POST** /report/query | Query the report data
+*ReportApi* | [**reportExport**](docs/Api/ReportApi.md#reportexport) | **GET** /report/export/{reportId} | Get the data for exporting a report as the provided file type
+*ReportApi* | [**retrieveDeliveryReport**](docs/Api/ReportApi.md#retrievedeliveryreport) | **GET** /report-delivery/{reportDeliveryId} | Retrieve a report auto delivery
+*ReportApi* | [**retrieveDeliveryReportSchedule**](docs/Api/ReportApi.md#retrievedeliveryreportschedule) | **GET** /report-delivery-schedule/{reportDeliveryScheduleId} | Retrieve a report auto delivery schedule
+*ReportApi* | [**retrieveListDeliveryReport**](docs/Api/ReportApi.md#retrievelistdeliveryreport) | **PUT** /report-delivery | Retrieve a list of report auto deliveries
+*ReportApi* | [**retrieveListDeliveryReportSchedule**](docs/Api/ReportApi.md#retrievelistdeliveryreportschedule) | **PUT** /report-delivery-schedule | Retrieve a list of report auto deliveries
+*ReportApi* | [**retrieveListReport**](docs/Api/ReportApi.md#retrievelistreport) | **PUT** /report | Retrieve List of reports
+*ReportApi* | [**retrieveListReportParam**](docs/Api/ReportApi.md#retrievelistreportparam) | **GET** /report/{reportId}/param/{paramId} | Retrieve List of values belonging to the parameter
+*ReportApi* | [**retrieveReport**](docs/Api/ReportApi.md#retrievereport) | **GET** /report/{reportId} | Find report by ID
+*ReportApi* | [**retrieveReportHistory**](docs/Api/ReportApi.md#retrievereporthistory) | **PUT** /report/history | Find all the stored reports for a given report
+*ReportApi* | [**retrieveReportHistoryFile**](docs/Api/ReportApi.md#retrievereporthistoryfile) | **GET** /report/history-file/{reportId} | Retrieve a report file
+*ResourceroleaccessoverrideApi* | [**createResourceRoleAccessOverride**](docs/Api/ResourceroleaccessoverrideApi.md#createresourceroleaccessoverride) | **POST** /resource-role-access-override | Add a new role access override
+*ResourceroleaccessoverrideApi* | [**deleteResourceRoleAccessOverride**](docs/Api/ResourceroleaccessoverrideApi.md#deleteresourceroleaccessoverride) | **DELETE** /resource-role-access-override/{resourceRoleAccessOverrideId} | Delete a role access override
+*ResourceroleaccessoverrideApi* | [**retrieveListResourceRoleAccessOverride**](docs/Api/ResourceroleaccessoverrideApi.md#retrievelistresourceroleaccessoverride) | **PUT** /resource-role-access-override | Find the permissions associated with a user
+*ResourceroleaccessoverrideApi* | [**retrieveResourceRoleAccessOverrideId**](docs/Api/ResourceroleaccessoverrideApi.md#retrieveresourceroleaccessoverrideid) | **GET** /resource-role-access-override/{resourceRoleAccessOverrideId} | Retrieve a role access override
+*ResourceroleaccessoverrideApi* | [**setResourceRoleAccessOverride**](docs/Api/ResourceroleaccessoverrideApi.md#setresourceroleaccessoverride) | **POST** /resource-role-access-override/set | Set (create or update) role access override
+*ResourceroleaccessoverrideApi* | [**updateResourceRoleAccessOverride**](docs/Api/ResourceroleaccessoverrideApi.md#updateresourceroleaccessoverride) | **PUT** /resource-role-access-override/{resourceRoleAccessOverrideId} | Update a role access override
+*ResourceuseraccessoverrideApi* | [**createResourceUserAccessOverride**](docs/Api/ResourceuseraccessoverrideApi.md#createresourceuseraccessoverride) | **POST** /resource-user-access-override | Add a new user access override
+*ResourceuseraccessoverrideApi* | [**deleteResourceUserAccessOverride**](docs/Api/ResourceuseraccessoverrideApi.md#deleteresourceuseraccessoverride) | **DELETE** /resource-user-access-override/{resourceRoleAccessOverrideId} | Delete a user access override
+*ResourceuseraccessoverrideApi* | [**retrieveListResourceUserAccessOverride**](docs/Api/ResourceuseraccessoverrideApi.md#retrievelistresourceuseraccessoverride) | **PUT** /resource-user-access-override | Find the permissions associated with a user
+*ResourceuseraccessoverrideApi* | [**retrieveResourceUserAccessOverrideId**](docs/Api/ResourceuseraccessoverrideApi.md#retrieveresourceuseraccessoverrideid) | **GET** /resource-user-access-override/{resourceRoleAccessOverrideId} | Retrieve a user access override
+*ResourceuseraccessoverrideApi* | [**setResourceUserAccessOverride**](docs/Api/ResourceuseraccessoverrideApi.md#setresourceuseraccessoverride) | **POST** /resource-user-access-override/set | Set (create or update) user access override
+*ResourceuseraccessoverrideApi* | [**updateResourceUserAccessOverride**](docs/Api/ResourceuseraccessoverrideApi.md#updateresourceuseraccessoverride) | **PUT** /resource-user-access-override/{resourceRoleAccessOverrideId} | Update a user access override
+*RolepermissionApi* | [**createRolePermission**](docs/Api/RolepermissionApi.md#createrolepermission) | **POST** /role-permission | Add a new Role permission
+*RolepermissionApi* | [**deleteRolePermission**](docs/Api/RolepermissionApi.md#deleterolepermission) | **DELETE** /role-permission/{rolePermissionId} | Delete a Role permission
+*RolepermissionApi* | [**retrieveListRolePermission**](docs/Api/RolepermissionApi.md#retrievelistrolepermission) | **PUT** /role-permission | Find the permissions associated with a role
+*RolepermissionApi* | [**retrieveRolePermissionId**](docs/Api/RolepermissionApi.md#retrieverolepermissionid) | **GET** /role-permission/{rolePermissionId} | Retrieve a Role permission
+*RolepermissionApi* | [**setRolePermission**](docs/Api/RolepermissionApi.md#setrolepermission) | **POST** /role-permission/set | Set (create or update) Role Permission
+*RolepermissionApi* | [**updateRolePermission**](docs/Api/RolepermissionApi.md#updaterolepermission) | **PUT** /role-permission/{rolePermissionId} | Update a Role permission
 *RouteApi* | [**blockRoutes**](docs/Api/RouteApi.md#blockroutes) | **POST** /route/block-routes | Block routes which satisfy set filters
 *RouteApi* | [**createRoute**](docs/Api/RouteApi.md#createroute) | **POST** /route | Add a new Route
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
@@ -413,6 +468,12 @@ Class | Method | HTTP request | Description
 *UnsuccessfulreasonApi* | [**retrieveUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrieveunsuccessfulreason) | **GET** /unsuccessful-reason/{unsuccessful-reasonId} | Retrieve a UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**updateUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#updateunsuccessfulreason) | **PUT** /unsuccessful-reason/{unsuccessful-reasonId} | Update a specific UnsuccessfulReason object
 *UomApi* | [**retrieveListUom**](docs/Api/UomApi.md#retrievelistuom) | **PUT** /uom | Retrieve List of Uom&#39;s
+*UseraccessoverrideApi* | [**createUserAccessOverride**](docs/Api/UseraccessoverrideApi.md#createuseraccessoverride) | **POST** /user-access-override | Add a new user access override
+*UseraccessoverrideApi* | [**deleteUserAccessOverride**](docs/Api/UseraccessoverrideApi.md#deleteuseraccessoverride) | **DELETE** /user-access-override/{userAccessOverrideId} | Delete a user access override
+*UseraccessoverrideApi* | [**retrieveListUserAccessOverride**](docs/Api/UseraccessoverrideApi.md#retrievelistuseraccessoverride) | **PUT** /user-access-override | Find the permissions associated with a user
+*UseraccessoverrideApi* | [**retrieveUserAccessOverrideId**](docs/Api/UseraccessoverrideApi.md#retrieveuseraccessoverrideid) | **GET** /user-access-override/{userAccessOverrideId} | Retrieve a user access override
+*UseraccessoverrideApi* | [**setUserAccessOverride**](docs/Api/UseraccessoverrideApi.md#setuseraccessoverride) | **POST** /user-access-override/set | Set (create or update) Role Permission
+*UseraccessoverrideApi* | [**updateUserAccessOverride**](docs/Api/UseraccessoverrideApi.md#updateuseraccessoverride) | **PUT** /user-access-override/{userAccessOverrideId} | Update a user access override
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
 *UsersApi* | [**deleteUser**](docs/Api/UsersApi.md#deleteuser) | **DELETE** /users/{userId} | Delete a user
 *UsersApi* | [**retrieveListUserNotification**](docs/Api/UsersApi.md#retrievelistusernotification) | **PUT** /users/notification | Retrieve List of UserNotification
@@ -435,6 +496,7 @@ Class | Method | HTTP request | Description
 *WebhookApi* | [**triggerWebHook**](docs/Api/WebhookApi.md#triggerwebhook) | **POST** /web-hook/trigger | Trigger a webhook
 *ZoneApi* | [**createZone**](docs/Api/ZoneApi.md#createzone) | **POST** /zone | Add a new Zone
 *ZoneApi* | [**deleteZone**](docs/Api/ZoneApi.md#deletezone) | **DELETE** /zone/{zoneId} | Delete a Zone
+*ZoneApi* | [**getPostcodeValidationRules**](docs/Api/ZoneApi.md#getpostcodevalidationrules) | **GET** /zone/postcode-validation-rules | Retrieve postcode validation rules
 *ZoneApi* | [**retrieveListZone**](docs/Api/ZoneApi.md#retrievelistzone) | **PUT** /zone | Retrieve List of Zone
 *ZoneApi* | [**retrieveZone**](docs/Api/ZoneApi.md#retrievezone) | **GET** /zone/{zoneId} | Retrieve a Zone
 *ZoneApi* | [**setZone**](docs/Api/ZoneApi.md#setzone) | **POST** /zone/set | Set (create or update) a Zone
@@ -444,7 +506,14 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [ActivityBulkUpdateArguments](docs/Model/ActivityBulkUpdateArguments.md)
+ - [ActivityBulkUpdateFiltersModel](docs/Model/ActivityBulkUpdateFiltersModel.md)
  - [ActivityBulkUpdateModel](docs/Model/ActivityBulkUpdateModel.md)
+ - [ActivityBulkUpdateOptionsModel](docs/Model/ActivityBulkUpdateOptionsModel.md)
+ - [ActivityBulkUpdateResultResponse](docs/Model/ActivityBulkUpdateResultResponse.md)
+ - [ActivityBulkUpdateTagArgumentsModel](docs/Model/ActivityBulkUpdateTagArgumentsModel.md)
+ - [ActivityBulkUpdateTagDataModel](docs/Model/ActivityBulkUpdateTagDataModel.md)
+ - [ActivityBulkUpdateTimeSlotArgumentsModel](docs/Model/ActivityBulkUpdateTimeSlotArgumentsModel.md)
+ - [ActivityBulkUpdateTimeSlotDataModel](docs/Model/ActivityBulkUpdateTimeSlotDataModel.md)
  - [ActivityDetachFromRecurrenceArguments](docs/Model/ActivityDetachFromRecurrenceArguments.md)
  - [ActivityEtaModel](docs/Model/ActivityEtaModel.md)
  - [ActivityFiltersModel](docs/Model/ActivityFiltersModel.md)
@@ -460,6 +529,10 @@ Class | Method | HTTP request | Description
  - [ActivityTypeModel](docs/Model/ActivityTypeModel.md)
  - [ActivityTypeOptionsModel](docs/Model/ActivityTypeOptionsModel.md)
  - [ActivityTypeRetrieveListArguments](docs/Model/ActivityTypeRetrieveListArguments.md)
+ - [AdHocEventFiltersModel](docs/Model/AdHocEventFiltersModel.md)
+ - [AdHocEventListResponse](docs/Model/AdHocEventListResponse.md)
+ - [AdHocEventModel](docs/Model/AdHocEventModel.md)
+ - [AdHocEventRetrieveListArguments](docs/Model/AdHocEventRetrieveListArguments.md)
  - [AddActivitiesToRouteArguments](docs/Model/AddActivitiesToRouteArguments.md)
  - [AddActivitiesToRouteFiltersModel](docs/Model/AddActivitiesToRouteFiltersModel.md)
  - [AddActivitiesToRouteResponse](docs/Model/AddActivitiesToRouteResponse.md)
@@ -565,7 +638,7 @@ Class | Method | HTTP request | Description
  - [AvailabilityTimeSlotImpactModel](docs/Model/AvailabilityTimeSlotImpactModel.md)
  - [AvailabilityTimeSlotModel](docs/Model/AvailabilityTimeSlotModel.md)
  - [BarcodeGenerateResponse](docs/Model/BarcodeGenerateResponse.md)
- - [BarcodeLabelResponse](docs/Model/BarcodeLabelResponse.md)
+ - [BarcodeLabelRequest](docs/Model/BarcodeLabelRequest.md)
  - [BlockedDateFiltersModel](docs/Model/BlockedDateFiltersModel.md)
  - [BlockedDateListResponse](docs/Model/BlockedDateListResponse.md)
  - [BlockedDateModel](docs/Model/BlockedDateModel.md)
@@ -578,6 +651,7 @@ Class | Method | HTTP request | Description
  - [BrandColourModel](docs/Model/BrandColourModel.md)
  - [BrandColourOptionsModel](docs/Model/BrandColourOptionsModel.md)
  - [BrandColourRetrieveListArguments](docs/Model/BrandColourRetrieveListArguments.md)
+ - [BrandCommunicationSettingsModel](docs/Model/BrandCommunicationSettingsModel.md)
  - [BrandFiltersModel](docs/Model/BrandFiltersModel.md)
  - [BrandListResponse](docs/Model/BrandListResponse.md)
  - [BrandModel](docs/Model/BrandModel.md)
@@ -606,6 +680,11 @@ Class | Method | HTTP request | Description
  - [CommunicationDeliveryMethodListResponse](docs/Model/CommunicationDeliveryMethodListResponse.md)
  - [CommunicationDeliveryMethodModel](docs/Model/CommunicationDeliveryMethodModel.md)
  - [CommunicationDeliveryMethodRetrieveListArguments](docs/Model/CommunicationDeliveryMethodRetrieveListArguments.md)
+ - [CommunicationLabelFiltersModel](docs/Model/CommunicationLabelFiltersModel.md)
+ - [CommunicationLabelListResponse](docs/Model/CommunicationLabelListResponse.md)
+ - [CommunicationLabelModel](docs/Model/CommunicationLabelModel.md)
+ - [CommunicationLabelOptionsModel](docs/Model/CommunicationLabelOptionsModel.md)
+ - [CommunicationLabelRetrieveListArguments](docs/Model/CommunicationLabelRetrieveListArguments.md)
  - [CommunicationMappingFiltersModel](docs/Model/CommunicationMappingFiltersModel.md)
  - [CommunicationMappingListResponse](docs/Model/CommunicationMappingListResponse.md)
  - [CommunicationMappingModel](docs/Model/CommunicationMappingModel.md)
@@ -630,6 +709,8 @@ Class | Method | HTTP request | Description
  - [CommunicationTemplateListResponse](docs/Model/CommunicationTemplateListResponse.md)
  - [CommunicationTemplateModel](docs/Model/CommunicationTemplateModel.md)
  - [CommunicationTemplateOptionsModel](docs/Model/CommunicationTemplateOptionsModel.md)
+ - [CommunicationTemplatePreviewArguments](docs/Model/CommunicationTemplatePreviewArguments.md)
+ - [CommunicationTemplatePreviewResponse](docs/Model/CommunicationTemplatePreviewResponse.md)
  - [CommunicationTemplateRetrieveListArguments](docs/Model/CommunicationTemplateRetrieveListArguments.md)
  - [CommunicationTriggerMessageModel](docs/Model/CommunicationTriggerMessageModel.md)
  - [CompartmentFiltersModel](docs/Model/CompartmentFiltersModel.md)
@@ -645,6 +726,12 @@ Class | Method | HTTP request | Description
  - [DriverModel](docs/Model/DriverModel.md)
  - [DriverOptionsModel](docs/Model/DriverOptionsModel.md)
  - [DriverRetrieveListArguments](docs/Model/DriverRetrieveListArguments.md)
+ - [DriverSchedulesFiltersModel](docs/Model/DriverSchedulesFiltersModel.md)
+ - [DriverSchedulesListResponse](docs/Model/DriverSchedulesListResponse.md)
+ - [DriverSchedulesModel](docs/Model/DriverSchedulesModel.md)
+ - [DriverSchedulesOptionsModel](docs/Model/DriverSchedulesOptionsModel.md)
+ - [DriverSchedulesResponse](docs/Model/DriverSchedulesResponse.md)
+ - [DriverSchedulesRetrieveListArguments](docs/Model/DriverSchedulesRetrieveListArguments.md)
  - [DriverUnavailabilityFiltersModel](docs/Model/DriverUnavailabilityFiltersModel.md)
  - [DriverUnavailabilityListResponse](docs/Model/DriverUnavailabilityListResponse.md)
  - [DriverUnavailabilityModel](docs/Model/DriverUnavailabilityModel.md)
@@ -661,6 +748,7 @@ Class | Method | HTTP request | Description
  - [EquipmentRetrieveListArguments](docs/Model/EquipmentRetrieveListArguments.md)
  - [EquipmentSetResponse](docs/Model/EquipmentSetResponse.md)
  - [EquipmentUpdateResponse](docs/Model/EquipmentUpdateResponse.md)
+ - [EventModel](docs/Model/EventModel.md)
  - [FileCopyArguments](docs/Model/FileCopyArguments.md)
  - [FileFiltersModel](docs/Model/FileFiltersModel.md)
  - [FileModel](docs/Model/FileModel.md)
@@ -674,6 +762,9 @@ Class | Method | HTTP request | Description
  - [GetExecutableActivitiesOptionsModel](docs/Model/GetExecutableActivitiesOptionsModel.md)
  - [GetMatchingQuestionnaireTemplatesArguments](docs/Model/GetMatchingQuestionnaireTemplatesArguments.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
+ - [InlineResponse2001](docs/Model/InlineResponse2001.md)
+ - [InlineResponse2002](docs/Model/InlineResponse2002.md)
+ - [InlineResponse200Data](docs/Model/InlineResponse200Data.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
  - [IrregularityCategoryFiltersModel](docs/Model/IrregularityCategoryFiltersModel.md)
  - [IrregularityCategoryListResponse](docs/Model/IrregularityCategoryListResponse.md)
@@ -766,6 +857,10 @@ Class | Method | HTTP request | Description
  - [PaymentRetrieveListArguments](docs/Model/PaymentRetrieveListArguments.md)
  - [PaymentSetResponse](docs/Model/PaymentSetResponse.md)
  - [PaymentUpdateResponse](docs/Model/PaymentUpdateResponse.md)
+ - [PermissionFiltersModel](docs/Model/PermissionFiltersModel.md)
+ - [PermissionListResponse](docs/Model/PermissionListResponse.md)
+ - [PermissionModel](docs/Model/PermissionModel.md)
+ - [PermissionRetrieveListArguments](docs/Model/PermissionRetrieveListArguments.md)
  - [PhoneNrModel](docs/Model/PhoneNrModel.md)
  - [PortalFiltersModel](docs/Model/PortalFiltersModel.md)
  - [PortalListResponse](docs/Model/PortalListResponse.md)
@@ -777,6 +872,7 @@ Class | Method | HTTP request | Description
  - [PortalSettingModel](docs/Model/PortalSettingModel.md)
  - [PortalSettingOptionsModel](docs/Model/PortalSettingOptionsModel.md)
  - [PortalSettingRetrieveListArguments](docs/Model/PortalSettingRetrieveListArguments.md)
+ - [PostcodeValidationRulesResponse](docs/Model/PostcodeValidationRulesResponse.md)
  - [ProviderFiltersModel](docs/Model/ProviderFiltersModel.md)
  - [ProviderListResponse](docs/Model/ProviderListResponse.md)
  - [ProviderModel](docs/Model/ProviderModel.md)
@@ -854,6 +950,47 @@ Class | Method | HTTP request | Description
  - [RecurrenceServiceModel](docs/Model/RecurrenceServiceModel.md)
  - [RecurrenceServiceSnapshot](docs/Model/RecurrenceServiceSnapshot.md)
  - [RemoveActivitiesFromRouteArguments](docs/Model/RemoveActivitiesFromRouteArguments.md)
+ - [ReportColumnModel](docs/Model/ReportColumnModel.md)
+ - [ReportDeliveryFiltersModel](docs/Model/ReportDeliveryFiltersModel.md)
+ - [ReportDeliveryListResponse](docs/Model/ReportDeliveryListResponse.md)
+ - [ReportDeliveryModel](docs/Model/ReportDeliveryModel.md)
+ - [ReportDeliveryOptionsModel](docs/Model/ReportDeliveryOptionsModel.md)
+ - [ReportDeliveryRetrieveListArguments](docs/Model/ReportDeliveryRetrieveListArguments.md)
+ - [ReportDeliveryScheduleFiltersModel](docs/Model/ReportDeliveryScheduleFiltersModel.md)
+ - [ReportDeliveryScheduleListResponse](docs/Model/ReportDeliveryScheduleListResponse.md)
+ - [ReportDeliveryScheduleModel](docs/Model/ReportDeliveryScheduleModel.md)
+ - [ReportDeliveryScheduleRetrieveListArguments](docs/Model/ReportDeliveryScheduleRetrieveListArguments.md)
+ - [ReportExportArguments](docs/Model/ReportExportArguments.md)
+ - [ReportExportResponse](docs/Model/ReportExportResponse.md)
+ - [ReportExportResponseItems](docs/Model/ReportExportResponseItems.md)
+ - [ReportFiltersModel](docs/Model/ReportFiltersModel.md)
+ - [ReportHistoryFileRetrieveListArguments](docs/Model/ReportHistoryFileRetrieveListArguments.md)
+ - [ReportHistoryFiltersModel](docs/Model/ReportHistoryFiltersModel.md)
+ - [ReportHistoryListResponse](docs/Model/ReportHistoryListResponse.md)
+ - [ReportHistoryModel](docs/Model/ReportHistoryModel.md)
+ - [ReportHistoryRetrieveListArguments](docs/Model/ReportHistoryRetrieveListArguments.md)
+ - [ReportListResponse](docs/Model/ReportListResponse.md)
+ - [ReportMapResponse](docs/Model/ReportMapResponse.md)
+ - [ReportModel](docs/Model/ReportModel.md)
+ - [ReportOptionsModel](docs/Model/ReportOptionsModel.md)
+ - [ReportParamListResponse](docs/Model/ReportParamListResponse.md)
+ - [ReportParamModel](docs/Model/ReportParamModel.md)
+ - [ReportParamRetrieveListArguments](docs/Model/ReportParamRetrieveListArguments.md)
+ - [ReportQueryArguments](docs/Model/ReportQueryArguments.md)
+ - [ReportQueryResponse](docs/Model/ReportQueryResponse.md)
+ - [ReportRetrieveListArguments](docs/Model/ReportRetrieveListArguments.md)
+ - [ResourceRoleAccessOverrideFiltersModel](docs/Model/ResourceRoleAccessOverrideFiltersModel.md)
+ - [ResourceRoleAccessOverrideListResponse](docs/Model/ResourceRoleAccessOverrideListResponse.md)
+ - [ResourceRoleAccessOverrideModel](docs/Model/ResourceRoleAccessOverrideModel.md)
+ - [ResourceRoleAccessOverrideRetrieveListArguments](docs/Model/ResourceRoleAccessOverrideRetrieveListArguments.md)
+ - [ResourceUserAccessOverrideFiltersModel](docs/Model/ResourceUserAccessOverrideFiltersModel.md)
+ - [ResourceUserAccessOverrideListResponse](docs/Model/ResourceUserAccessOverrideListResponse.md)
+ - [ResourceUserAccessOverrideModel](docs/Model/ResourceUserAccessOverrideModel.md)
+ - [ResourceUserAccessOverrideRetrieveListArguments](docs/Model/ResourceUserAccessOverrideRetrieveListArguments.md)
+ - [RolePermissionFiltersModel](docs/Model/RolePermissionFiltersModel.md)
+ - [RolePermissionListResponse](docs/Model/RolePermissionListResponse.md)
+ - [RolePermissionModel](docs/Model/RolePermissionModel.md)
+ - [RolePermissionRetrieveListArguments](docs/Model/RolePermissionRetrieveListArguments.md)
  - [RouteCapacitiesModel](docs/Model/RouteCapacitiesModel.md)
  - [RouteDetachFromRecurrenceArguments](docs/Model/RouteDetachFromRecurrenceArguments.md)
  - [RouteEtaModel](docs/Model/RouteEtaModel.md)
@@ -949,6 +1086,10 @@ Class | Method | HTTP request | Description
  - [UomOptionsModel](docs/Model/UomOptionsModel.md)
  - [UomRetrieveListArguments](docs/Model/UomRetrieveListArguments.md)
  - [UpdateRecurrenceRelations](docs/Model/UpdateRecurrenceRelations.md)
+ - [UserAccessOverrideFiltersModel](docs/Model/UserAccessOverrideFiltersModel.md)
+ - [UserAccessOverrideListResponse](docs/Model/UserAccessOverrideListResponse.md)
+ - [UserAccessOverrideModel](docs/Model/UserAccessOverrideModel.md)
+ - [UserAccessOverrideRetrieveListArguments](docs/Model/UserAccessOverrideRetrieveListArguments.md)
  - [UserNotificationFiltersModel](docs/Model/UserNotificationFiltersModel.md)
  - [UserNotificationListResponse](docs/Model/UserNotificationListResponse.md)
  - [UserNotificationModel](docs/Model/UserNotificationModel.md)

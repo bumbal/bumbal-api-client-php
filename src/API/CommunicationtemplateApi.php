@@ -269,6 +269,95 @@ class CommunicationtemplateApi
     }
 
     /**
+     * Operation previewTemplate
+     *
+     * Preview a template
+     *
+     * @param \BumbalClient\Model\CommunicationTemplatePreviewArguments $arguments Template Preview Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\CommunicationTemplatePreviewResponse
+     */
+    public function previewTemplate($arguments)
+    {
+        list($response) = $this->previewTemplateWithHttpInfo($arguments);
+        return $response;
+    }
+
+    /**
+     * Operation previewTemplateWithHttpInfo
+     *
+     * Preview a template
+     *
+     * @param \BumbalClient\Model\CommunicationTemplatePreviewArguments $arguments Template Preview Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\CommunicationTemplatePreviewResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function previewTemplateWithHttpInfo($arguments)
+    {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling previewTemplate');
+        }
+        // parse inputs
+        $resourcePath = "/communication-template/preview";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\CommunicationTemplatePreviewResponse',
+                '/communication-template/preview'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CommunicationTemplatePreviewResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CommunicationTemplatePreviewResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveCommunicationTemplate
      *
      * Retrieve a communication template
@@ -441,6 +530,95 @@ class CommunicationtemplateApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CommunicationTemplateListResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sendTestTemplate
+     *
+     * Send a test template
+     *
+     * @param \BumbalClient\Model\CommunicationTemplateSendTestArguments $arguments Template Send Test Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\CommunicationTemplateSendTestResponse
+     */
+    public function sendTestTemplate($arguments)
+    {
+        list($response) = $this->sendTestTemplateWithHttpInfo($arguments);
+        return $response;
+    }
+
+    /**
+     * Operation sendTestTemplateWithHttpInfo
+     *
+     * Send a test template
+     *
+     * @param \BumbalClient\Model\CommunicationTemplateSendTestArguments $arguments Template Send Test Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\CommunicationTemplateSendTestResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sendTestTemplateWithHttpInfo($arguments)
+    {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling sendTestTemplate');
+        }
+        // parse inputs
+        $resourcePath = "/communication-template/send-test";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
+        if (strlen($apiKey ?? '') !== 0) {
+            $headerParams['Authorization'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\CommunicationTemplateSendTestResponse',
+                '/communication-template/send-test'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CommunicationTemplateSendTestResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CommunicationTemplateSendTestResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

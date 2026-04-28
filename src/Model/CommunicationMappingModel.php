@@ -62,7 +62,18 @@ class CommunicationMappingModel implements ArrayAccess
         'message_type_id' => 'int',
         'message_type_name' => 'string',
         'no_tags' => 'bool',
+        'no_zones' => 'bool',
         'tag_names' => 'string[]',
+        'tag_ids' => 'int[]',
+        'tags' => 'null[]',
+        'zones' => 'null[]',
+        'zone_names' => 'string[]',
+        'zone_ids' => 'int[]',
+        'communication_label_ids' => 'int[]',
+        'communication_label_names' => 'string[]',
+        'communication_labels' => 'null[]',
+        'usage_count' => 'int',
+        'last_used_at' => '\DateTime',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'created_by' => 'int',
@@ -84,7 +95,18 @@ class CommunicationMappingModel implements ArrayAccess
         'message_type_id' => null,
         'message_type_name' => null,
         'no_tags' => null,
+        'no_zones' => null,
         'tag_names' => null,
+        'tag_ids' => null,
+        'tags' => null,
+        'zones' => null,
+        'zone_names' => null,
+        'zone_ids' => null,
+        'communication_label_ids' => null,
+        'communication_label_names' => null,
+        'communication_labels' => null,
+        'usage_count' => null,
+        'last_used_at' => 'date-time',
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
         'created_by' => null,
@@ -116,7 +138,18 @@ class CommunicationMappingModel implements ArrayAccess
         'message_type_id' => 'message_type_id',
         'message_type_name' => 'message_type_name',
         'no_tags' => 'no_tags',
+        'no_zones' => 'no_zones',
         'tag_names' => 'tag_names',
+        'tag_ids' => 'tag_ids',
+        'tags' => 'tags',
+        'zones' => 'zones',
+        'zone_names' => 'zone_names',
+        'zone_ids' => 'zone_ids',
+        'communication_label_ids' => 'communication_label_ids',
+        'communication_label_names' => 'communication_label_names',
+        'communication_labels' => 'communication_labels',
+        'usage_count' => 'usage_count',
+        'last_used_at' => 'last_used_at',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'created_by' => 'created_by',
@@ -139,7 +172,18 @@ class CommunicationMappingModel implements ArrayAccess
         'message_type_id' => 'setMessageTypeId',
         'message_type_name' => 'setMessageTypeName',
         'no_tags' => 'setNoTags',
+        'no_zones' => 'setNoZones',
         'tag_names' => 'setTagNames',
+        'tag_ids' => 'setTagIds',
+        'tags' => 'setTags',
+        'zones' => 'setZones',
+        'zone_names' => 'setZoneNames',
+        'zone_ids' => 'setZoneIds',
+        'communication_label_ids' => 'setCommunicationLabelIds',
+        'communication_label_names' => 'setCommunicationLabelNames',
+        'communication_labels' => 'setCommunicationLabels',
+        'usage_count' => 'setUsageCount',
+        'last_used_at' => 'setLastUsedAt',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'created_by' => 'setCreatedBy',
@@ -162,7 +206,18 @@ class CommunicationMappingModel implements ArrayAccess
         'message_type_id' => 'getMessageTypeId',
         'message_type_name' => 'getMessageTypeName',
         'no_tags' => 'getNoTags',
+        'no_zones' => 'getNoZones',
         'tag_names' => 'getTagNames',
+        'tag_ids' => 'getTagIds',
+        'tags' => 'getTags',
+        'zones' => 'getZones',
+        'zone_names' => 'getZoneNames',
+        'zone_ids' => 'getZoneIds',
+        'communication_label_ids' => 'getCommunicationLabelIds',
+        'communication_label_names' => 'getCommunicationLabelNames',
+        'communication_labels' => 'getCommunicationLabels',
+        'usage_count' => 'getUsageCount',
+        'last_used_at' => 'getLastUsedAt',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'created_by' => 'getCreatedBy',
@@ -210,7 +265,18 @@ class CommunicationMappingModel implements ArrayAccess
         $this->container['message_type_id'] = isset($data['message_type_id']) ? $data['message_type_id'] : null;
         $this->container['message_type_name'] = isset($data['message_type_name']) ? $data['message_type_name'] : null;
         $this->container['no_tags'] = isset($data['no_tags']) ? $data['no_tags'] : null;
+        $this->container['no_zones'] = isset($data['no_zones']) ? $data['no_zones'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['zone_ids'] = isset($data['zone_ids']) ? $data['zone_ids'] : null;
+        $this->container['communication_label_ids'] = isset($data['communication_label_ids']) ? $data['communication_label_ids'] : null;
+        $this->container['communication_label_names'] = isset($data['communication_label_names']) ? $data['communication_label_names'] : null;
+        $this->container['communication_labels'] = isset($data['communication_labels']) ? $data['communication_labels'] : null;
+        $this->container['usage_count'] = isset($data['usage_count']) ? $data['usage_count'] : null;
+        $this->container['last_used_at'] = isset($data['last_used_at']) ? $data['last_used_at'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
@@ -413,6 +479,27 @@ class CommunicationMappingModel implements ArrayAccess
     }
 
     /**
+     * Gets no_zones
+     * @return bool
+     */
+    public function getNoZones()
+    {
+        return $this->container['no_zones'];
+    }
+
+    /**
+     * Sets no_zones
+     * @param bool $no_zones No zone flag
+     * @return $this
+     */
+    public function setNoZones($no_zones)
+    {
+        $this->container['no_zones'] = $no_zones;
+
+        return $this;
+    }
+
+    /**
      * Gets tag_names
      * @return string[]
      */
@@ -429,6 +516,216 @@ class CommunicationMappingModel implements ArrayAccess
     public function setTagNames($tag_names)
     {
         $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_ids
+     * @return int[]
+     */
+    public function getTagIds()
+    {
+        return $this->container['tag_ids'];
+    }
+
+    /**
+     * Sets tag_ids
+     * @param int[] $tag_ids Tag IDs
+     * @return $this
+     */
+    public function setTagIds($tag_ids)
+    {
+        $this->container['tag_ids'] = $tag_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return null[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param null[] $tags Tag names
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets zones
+     * @return null[]
+     */
+    public function getZones()
+    {
+        return $this->container['zones'];
+    }
+
+    /**
+     * Sets zones
+     * @param null[] $zones Zones
+     * @return $this
+     */
+    public function setZones($zones)
+    {
+        $this->container['zones'] = $zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return string[]
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param string[] $zone_names Zone names
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_ids
+     * @return int[]
+     */
+    public function getZoneIds()
+    {
+        return $this->container['zone_ids'];
+    }
+
+    /**
+     * Sets zone_ids
+     * @param int[] $zone_ids Zone IDs
+     * @return $this
+     */
+    public function setZoneIds($zone_ids)
+    {
+        $this->container['zone_ids'] = $zone_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_label_ids
+     * @return int[]
+     */
+    public function getCommunicationLabelIds()
+    {
+        return $this->container['communication_label_ids'];
+    }
+
+    /**
+     * Sets communication_label_ids
+     * @param int[] $communication_label_ids Communication label IDs
+     * @return $this
+     */
+    public function setCommunicationLabelIds($communication_label_ids)
+    {
+        $this->container['communication_label_ids'] = $communication_label_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_label_names
+     * @return string[]
+     */
+    public function getCommunicationLabelNames()
+    {
+        return $this->container['communication_label_names'];
+    }
+
+    /**
+     * Sets communication_label_names
+     * @param string[] $communication_label_names Communication label names
+     * @return $this
+     */
+    public function setCommunicationLabelNames($communication_label_names)
+    {
+        $this->container['communication_label_names'] = $communication_label_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_labels
+     * @return null[]
+     */
+    public function getCommunicationLabels()
+    {
+        return $this->container['communication_labels'];
+    }
+
+    /**
+     * Sets communication_labels
+     * @param null[] $communication_labels CommunicationLabels
+     * @return $this
+     */
+    public function setCommunicationLabels($communication_labels)
+    {
+        $this->container['communication_labels'] = $communication_labels;
+
+        return $this;
+    }
+
+    /**
+     * Gets usage_count
+     * @return int
+     */
+    public function getUsageCount()
+    {
+        return $this->container['usage_count'];
+    }
+
+    /**
+     * Sets usage_count
+     * @param int $usage_count Number of times this mapping triggered template usage
+     * @return $this
+     */
+    public function setUsageCount($usage_count)
+    {
+        $this->container['usage_count'] = $usage_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_used_at
+     * @return \DateTime|string|null
+     */
+    public function getLastUsedAt()
+    {
+        return $this->container['last_used_at'];
+    }
+
+    /**
+     * Sets last_used_at
+     * @param \DateTime|string|null $last_used_at Last time this mapping triggered template usage
+     * @return $this
+     */
+    public function setLastUsedAt($last_used_at)
+    {
+        $this->container['last_used_at'] = $last_used_at;
 
         return $this;
     }

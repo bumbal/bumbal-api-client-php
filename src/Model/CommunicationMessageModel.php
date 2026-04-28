@@ -62,7 +62,7 @@ class CommunicationMessageModel implements ArrayAccess
         'executed_at' => 'string',
         'status_id' => 'int',
         'communication_mapping_id' => 'int',
-        'communication_mapping' => '\BumbalClient\Model\CommunicationTemplateModel',
+        'communication_mapping' => '\BumbalClient\Model\CommunicationMappingModel',
         'communication_message_history' => '\BumbalClient\Model\CommunicationMessageHistoryModel[]',
         'communication_message_content' => '\BumbalClient\Model\CommunicationMessageContentModel',
         'created_at' => '\DateTime',
@@ -414,7 +414,7 @@ class CommunicationMessageModel implements ArrayAccess
 
     /**
      * Gets communication_mapping
-     * @return \BumbalClient\Model\CommunicationTemplateModel
+     * @return \BumbalClient\Model\CommunicationMappingModel
      */
     public function getCommunicationMapping()
     {
@@ -423,7 +423,7 @@ class CommunicationMessageModel implements ArrayAccess
 
     /**
      * Sets communication_mapping
-     * @param \BumbalClient\Model\CommunicationTemplateModel $communication_mapping
+     * @param \BumbalClient\Model\CommunicationMappingModel $communication_mapping
      * @return $this
      */
     public function setCommunicationMapping($communication_mapping)

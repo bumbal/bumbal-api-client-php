@@ -58,6 +58,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'int',
         'shipment_id' => 'int',
         'depot_address_id' => 'int',
+        'depot_address' => '\BumbalClient\Model\AddressModel',
         'depot_address_link' => '\BumbalClient\Model\LinkModel',
         'activity_ids' => 'int[]',
         'nr' => 'string',
@@ -108,6 +109,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'int64',
         'shipment_id' => 'int64',
         'depot_address_id' => 'int64',
+        'depot_address' => null,
         'depot_address_link' => null,
         'activity_ids' => null,
         'nr' => null,
@@ -168,6 +170,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'activity_id',
         'shipment_id' => 'shipment_id',
         'depot_address_id' => 'depot_address_id',
+        'depot_address' => 'depot_address',
         'depot_address_link' => 'depot_address_link',
         'activity_ids' => 'activity_ids',
         'nr' => 'nr',
@@ -219,6 +222,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'setActivityId',
         'shipment_id' => 'setShipmentId',
         'depot_address_id' => 'setDepotAddressId',
+        'depot_address' => 'setDepotAddress',
         'depot_address_link' => 'setDepotAddressLink',
         'activity_ids' => 'setActivityIds',
         'nr' => 'setNr',
@@ -270,6 +274,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'getActivityId',
         'shipment_id' => 'getShipmentId',
         'depot_address_id' => 'getDepotAddressId',
+        'depot_address' => 'getDepotAddress',
         'depot_address_link' => 'getDepotAddressLink',
         'activity_ids' => 'getActivityIds',
         'nr' => 'getNr',
@@ -432,6 +437,7 @@ class PackageLineModel implements ArrayAccess
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
         $this->container['shipment_id'] = isset($data['shipment_id']) ? $data['shipment_id'] : null;
         $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
+        $this->container['depot_address'] = isset($data['depot_address']) ? $data['depot_address'] : null;
         $this->container['depot_address_link'] = isset($data['depot_address_link']) ? $data['depot_address_link'] : null;
         $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
@@ -638,6 +644,27 @@ class PackageLineModel implements ArrayAccess
     public function setDepotAddressId($depot_address_id)
     {
         $this->container['depot_address_id'] = $depot_address_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets depot_address
+     * @return \BumbalClient\Model\AddressModel
+     */
+    public function getDepotAddress()
+    {
+        return $this->container['depot_address'];
+    }
+
+    /**
+     * Sets depot_address
+     * @param \BumbalClient\Model\AddressModel $depot_address
+     * @return $this
+     */
+    public function setDepotAddress($depot_address)
+    {
+        $this->container['depot_address'] = $depot_address;
 
         return $this;
     }

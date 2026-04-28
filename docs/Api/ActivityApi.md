@@ -5,11 +5,15 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**bulkUpdateActivity**](ActivityApi.md#bulkUpdateActivity) | **POST** /activity/bulk-update | Update multiple activities
+[**bulkUpdateActivityTag**](ActivityApi.md#bulkUpdateActivityTag) | **POST** /activity/bulk-update/tag | Bulk update tags on activities
+[**bulkUpdateActivityTimeSlot**](ActivityApi.md#bulkUpdateActivityTimeSlot) | **POST** /activity/bulk-update/time-slot | Bulk update time slots on activities
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
-[**detachActivitiesFromRecurrence**](ActivityApi.md#detachActivitiesFromRecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
+[**detachActivitiesFromRecurrence**](ActivityApi.md#detachActivitiesFromRecurrence) | **POST** /activity/detach-from-recurrence/{id} | detach activities from specified recurrence
+[**getBulkUpdateStatus**](ActivityApi.md#getBulkUpdateStatus) | **GET** /activity/bulk-update/status/{token} | Get status of an asynchronous bulk update job
 [**lockActivity**](ActivityApi.md#lockActivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 [**lockActivityOnRoute**](ActivityApi.md#lockActivityOnRoute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
 [**lockActivityOnRouteAndTime**](ActivityApi.md#lockActivityOnRouteAndTime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
+[**processActivityScheduledCommunicationUpdate**](ActivityApi.md#processActivityScheduledCommunicationUpdate) | **POST** /activity/communication/schedule/{activityId} | Update an activity&#39;s scheduled communication mapping
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
 [**setActivity**](ActivityApi.md#setActivity) | **POST** /activity/set | Set (create or update) an Activity
@@ -60,6 +64,114 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **bulkUpdateActivityTag**
+> \BumbalClient\Model\InlineResponse200 bulkUpdateActivityTag($body)
+
+Bulk update tags on activities
+
+Sync, add, or remove tags on all activities matching the given filters
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$body = new \BumbalClient\Model\ActivityBulkUpdateTagArgumentsModel(); // \BumbalClient\Model\ActivityBulkUpdateTagArgumentsModel | Filters and tag update parameters
+
+try {
+    $result = $api_instance->bulkUpdateActivityTag($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->bulkUpdateActivityTag: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\ActivityBulkUpdateTagArgumentsModel**](../Model/ActivityBulkUpdateTagArgumentsModel.md)| Filters and tag update parameters |
+
+### Return type
+
+[**\BumbalClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **bulkUpdateActivityTimeSlot**
+> \BumbalClient\Model\InlineResponse200 bulkUpdateActivityTimeSlot($body)
+
+Bulk update time slots on activities
+
+Sync, add, or remove time slots on all activities matching the given filters
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$body = new \BumbalClient\Model\ActivityBulkUpdateTimeSlotArgumentsModel(); // \BumbalClient\Model\ActivityBulkUpdateTimeSlotArgumentsModel | Filters and time slot update parameters
+
+try {
+    $result = $api_instance->bulkUpdateActivityTimeSlot($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->bulkUpdateActivityTimeSlot: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\ActivityBulkUpdateTimeSlotArgumentsModel**](../Model/ActivityBulkUpdateTimeSlotArgumentsModel.md)| Filters and time slot update parameters |
+
+### Return type
+
+[**\BumbalClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -127,7 +239,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **detachActivitiesFromRecurrence**
-> \BumbalClient\Model\ApiResponse detachActivitiesFromRecurrence($body)
+> \BumbalClient\Model\ApiResponse detachActivitiesFromRecurrence($id)
 
 detach activities from specified recurrence
 
@@ -148,10 +260,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$body = new \BumbalClient\Model\ActivityDetachFromRecurrenceArguments(); // \BumbalClient\Model\ActivityDetachFromRecurrenceArguments | Detach from Recurrence Arguments
+$id = 56; // int | ID of the activity to detach from recurrence
 
 try {
-    $result = $api_instance->detachActivitiesFromRecurrence($body);
+    $result = $api_instance->detachActivitiesFromRecurrence($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->detachActivitiesFromRecurrence: ', $e->getMessage(), PHP_EOL;
@@ -163,7 +275,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ActivityDetachFromRecurrenceArguments**](../Model/ActivityDetachFromRecurrenceArguments.md)| Detach from Recurrence Arguments | [optional]
+ **id** | **int**| ID of the activity to detach from recurrence |
 
 ### Return type
 
@@ -177,6 +289,60 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getBulkUpdateStatus**
+> \BumbalClient\Model\ActivityBulkUpdateResultResponse getBulkUpdateStatus($token)
+
+Get status of an asynchronous bulk update job
+
+Check the status of a bulk update job initiated with the async option. Returns 'processing' or 'finished'. If finished, also returns the result of the bulk update operation.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$token = "token_example"; // string | The token returned when the async bulk update job was initiated
+
+try {
+    $result = $api_instance->getBulkUpdateStatus($token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->getBulkUpdateStatus: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string**| The token returned when the async bulk update job was initiated |
+
+### Return type
+
+[**\BumbalClient\Model\ActivityBulkUpdateResultResponse**](../Model/ActivityBulkUpdateResultResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -326,6 +492,60 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filters** | [**\BumbalClient\Model\ActivityFiltersModel**](../Model/ActivityFiltersModel.md)| Request Filters |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **processActivityScheduledCommunicationUpdate**
+> \BumbalClient\Model\ApiResponse processActivityScheduledCommunicationUpdate($activity_id)
+
+Update an activity's scheduled communication mapping
+
+processes an incoming activity's scheduled communication update request
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$activity_id = 789; // int | ID of activity to update the scheduled communication for
+
+try {
+    $result = $api_instance->processActivityScheduledCommunicationUpdate($activity_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->processActivityScheduledCommunicationUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activity_id** | **int**| ID of activity to update the scheduled communication for |
 
 ### Return type
 

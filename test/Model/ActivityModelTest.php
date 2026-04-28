@@ -974,6 +974,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "odd_service_windows_scheme_id"
+     */
+    public function testPropertyOddServiceWindowsSchemeId()
+    {
+    }
+
+    /**
+     * Test attribute "even_service_windows_scheme_id"
+     */
+    public function testPropertyEvenServiceWindowsSchemeId()
+    {
+    }
+
+    /**
      * Test attribute "transactions"
      */
     public function testPropertyTransactions()

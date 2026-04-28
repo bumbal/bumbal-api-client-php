@@ -309,6 +309,20 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "brand_id"
+     */
+    public function testPropertyBrandId()
+    {
+    }
+
+    /**
+     * Test attribute "brand_name"
+     */
+    public function testPropertyBrandName()
+    {
+    }
+
+    /**
      * Test attribute "activity_type_name"
      */
     public function testPropertyActivityTypeName()

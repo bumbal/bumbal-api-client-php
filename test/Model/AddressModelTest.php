@@ -239,6 +239,13 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "preparation_duration"
+     */
+    public function testPropertyPreparationDuration()
+    {
+    }
+
+    /**
      * Test attribute "address_type_names"
      */
     public function testPropertyAddressTypeNames()

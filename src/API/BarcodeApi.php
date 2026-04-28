@@ -166,66 +166,51 @@ class BarcodeApi
     }
 
     /**
-     * Operation retrieveBarcodeLabel
+     * Operation generateBarcodeLabels
      *
-     * Retrieve a package-line barcode label
+     * Generate barcode labels for package lines
      *
-     * @param int $package_line_id ID of the package-line to retrieve the barcode label for (required)
-     * @param int $width The width of the label in mm (optional)
-     * @param int $height The height of the label in mm (optional)
+     * @param \BumbalClient\Model\BarcodeLabelRequest $body Package line IDs to generate labels for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\BarcodeLabelResponse
+     * @return \SplFileObject
      */
-    public function retrieveBarcodeLabel($package_line_id, $width = null, $height = null)
+    public function generateBarcodeLabels($body)
     {
-        list($response) = $this->retrieveBarcodeLabelWithHttpInfo($package_line_id, $width, $height);
+        list($response) = $this->generateBarcodeLabelsWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation retrieveBarcodeLabelWithHttpInfo
+     * Operation generateBarcodeLabelsWithHttpInfo
      *
-     * Retrieve a package-line barcode label
+     * Generate barcode labels for package lines
      *
-     * @param int $package_line_id ID of the package-line to retrieve the barcode label for (required)
-     * @param int $width The width of the label in mm (optional)
-     * @param int $height The height of the label in mm (optional)
+     * @param \BumbalClient\Model\BarcodeLabelRequest $body Package line IDs to generate labels for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\BarcodeLabelResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveBarcodeLabelWithHttpInfo($package_line_id, $width = null, $height = null)
+    public function generateBarcodeLabelsWithHttpInfo($body)
     {
-        // verify the required parameter 'package_line_id' is set
-        if ($package_line_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $package_line_id when calling retrieveBarcodeLabel');
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling generateBarcodeLabels');
         }
         // parse inputs
-        $resourcePath = "/barcode/label/{packageLineId}";
+        $resourcePath = "/barcode/label";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
         $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/pdf']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // query params
-        if ($width !== null) {
-            $queryParams['width'] = $this->apiClient->getSerializer()->toQueryValue($width);
-        }
-        // query params
-        if ($height !== null) {
-            $queryParams['height'] = $this->apiClient->getSerializer()->toQueryValue($height);
-        }
-        // path params
-        if ($package_line_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "packageLineId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($package_line_id),
-                $resourcePath
-            );
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
         }
 
         // for model (json/xml)
@@ -248,19 +233,19 @@ class BarcodeApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'GET',
+                'POST',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\BarcodeLabelResponse',
-                '/barcode/label/{packageLineId}'
+                '\SplFileObject',
+                '/barcode/label'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\BarcodeLabelResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\SplFileObject', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\BarcodeLabelResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

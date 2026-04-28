@@ -60,7 +60,9 @@ class PhoneNrModel implements ArrayAccess
         'phone_nr_type_name' => 'string',
         'nr' => 'string',
         'description' => 'string',
-        'primary' => 'bool'
+        'primary' => 'bool',
+        'communication_label_ids' => 'int[]',
+        'communication_labels' => '\BumbalClient\Model\CommunicationLabelModel[]'
     ];
 
     /**
@@ -74,7 +76,9 @@ class PhoneNrModel implements ArrayAccess
         'phone_nr_type_name' => null,
         'nr' => null,
         'description' => null,
-        'primary' => null
+        'primary' => null,
+        'communication_label_ids' => null,
+        'communication_labels' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +102,9 @@ class PhoneNrModel implements ArrayAccess
         'phone_nr_type_name' => 'phone_nr_type_name',
         'nr' => 'nr',
         'description' => 'description',
-        'primary' => 'primary'
+        'primary' => 'primary',
+        'communication_label_ids' => 'communication_label_ids',
+        'communication_labels' => 'communication_labels'
     ];
 
 
@@ -113,7 +119,9 @@ class PhoneNrModel implements ArrayAccess
         'phone_nr_type_name' => 'setPhoneNrTypeName',
         'nr' => 'setNr',
         'description' => 'setDescription',
-        'primary' => 'setPrimary'
+        'primary' => 'setPrimary',
+        'communication_label_ids' => 'setCommunicationLabelIds',
+        'communication_labels' => 'setCommunicationLabels'
     ];
 
 
@@ -128,7 +136,9 @@ class PhoneNrModel implements ArrayAccess
         'phone_nr_type_name' => 'getPhoneNrTypeName',
         'nr' => 'getNr',
         'description' => 'getDescription',
-        'primary' => 'getPrimary'
+        'primary' => 'getPrimary',
+        'communication_label_ids' => 'getCommunicationLabelIds',
+        'communication_labels' => 'getCommunicationLabels'
     ];
 
     public static function attributeMap()
@@ -185,6 +195,8 @@ class PhoneNrModel implements ArrayAccess
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
+        $this->container['communication_label_ids'] = isset($data['communication_label_ids']) ? $data['communication_label_ids'] : null;
+        $this->container['communication_labels'] = isset($data['communication_labels']) ? $data['communication_labels'] : null;
     }
 
     /**
@@ -376,6 +388,48 @@ class PhoneNrModel implements ArrayAccess
     public function setPrimary($primary)
     {
         $this->container['primary'] = $primary;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_label_ids
+     * @return int[]
+     */
+    public function getCommunicationLabelIds()
+    {
+        return $this->container['communication_label_ids'];
+    }
+
+    /**
+     * Sets communication_label_ids
+     * @param int[] $communication_label_ids Communication label IDs
+     * @return $this
+     */
+    public function setCommunicationLabelIds($communication_label_ids)
+    {
+        $this->container['communication_label_ids'] = $communication_label_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_labels
+     * @return \BumbalClient\Model\CommunicationLabelModel[]
+     */
+    public function getCommunicationLabels()
+    {
+        return $this->container['communication_labels'];
+    }
+
+    /**
+     * Sets communication_labels
+     * @param \BumbalClient\Model\CommunicationLabelModel[] $communication_labels Phone number labels
+     * @return $this
+     */
+    public function setCommunicationLabels($communication_labels)
+    {
+        $this->container['communication_labels'] = $communication_labels;
 
         return $this;
     }

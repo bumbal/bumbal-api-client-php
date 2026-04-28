@@ -299,7 +299,7 @@ class QuestionnairetemplateApi
      *
      * @param \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments $args Arguments for fetching questionnaire templates (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\InlineResponse200
+     * @return \BumbalClient\Model\InlineResponse2001
      */
     public function getMatchingQuestionnaireTemplates($args)
     {
@@ -314,7 +314,7 @@ class QuestionnairetemplateApi
      *
      * @param \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments $args Arguments for fetching questionnaire templates (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMatchingQuestionnaireTemplatesWithHttpInfo($args)
     {
@@ -364,15 +364,15 @@ class QuestionnairetemplateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\InlineResponse200',
+                '\BumbalClient\Model\InlineResponse2001',
                 '/questionnaire-template/get-matching-questionnaire-templates'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\InlineResponse2001', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

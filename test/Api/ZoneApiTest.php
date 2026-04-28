@@ -93,6 +93,16 @@ class ZoneApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getPostcodeValidationRules
+     *
+     * Retrieve postcode validation rules.
+     *
+     */
+    public function testGetPostcodeValidationRules()
+    {
+    }
+
+    /**
      * Test case for retrieveListZone
      *
      * Retrieve List of Zone.

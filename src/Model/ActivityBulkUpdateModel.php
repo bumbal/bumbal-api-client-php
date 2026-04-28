@@ -55,7 +55,11 @@ class ActivityBulkUpdateModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'depot_address_id' => 'int',
-        'priority' => 'int'
+        'priority' => 'int',
+        'preparation_duration' => 'int',
+        'duration' => 'int',
+        'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
     /**
@@ -64,7 +68,11 @@ class ActivityBulkUpdateModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'depot_address_id' => null,
-        'priority' => null
+        'priority' => null,
+        'preparation_duration' => null,
+        'duration' => null,
+        'time_slots' => null,
+        'tags' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +91,11 @@ class ActivityBulkUpdateModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'depot_address_id' => 'depot_address_id',
-        'priority' => 'priority'
+        'priority' => 'priority',
+        'preparation_duration' => 'preparation_duration',
+        'duration' => 'duration',
+        'time_slots' => 'time_slots',
+        'tags' => 'tags'
     ];
 
 
@@ -93,7 +105,11 @@ class ActivityBulkUpdateModel implements ArrayAccess
      */
     protected static $setters = [
         'depot_address_id' => 'setDepotAddressId',
-        'priority' => 'setPriority'
+        'priority' => 'setPriority',
+        'preparation_duration' => 'setPreparationDuration',
+        'duration' => 'setDuration',
+        'time_slots' => 'setTimeSlots',
+        'tags' => 'setTags'
     ];
 
 
@@ -103,7 +119,11 @@ class ActivityBulkUpdateModel implements ArrayAccess
      */
     protected static $getters = [
         'depot_address_id' => 'getDepotAddressId',
-        'priority' => 'getPriority'
+        'priority' => 'getPriority',
+        'preparation_duration' => 'getPreparationDuration',
+        'duration' => 'getDuration',
+        'time_slots' => 'getTimeSlots',
+        'tags' => 'getTags'
     ];
 
     public static function attributeMap()
@@ -139,6 +159,10 @@ class ActivityBulkUpdateModel implements ArrayAccess
     {
         $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['preparation_duration'] = isset($data['preparation_duration']) ? $data['preparation_duration'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -204,6 +228,90 @@ class ActivityBulkUpdateModel implements ArrayAccess
     public function setPriority($priority)
     {
         $this->container['priority'] = $priority;
+
+        return $this;
+    }
+
+    /**
+     * Gets preparation_duration
+     * @return int
+     */
+    public function getPreparationDuration()
+    {
+        return $this->container['preparation_duration'];
+    }
+
+    /**
+     * Sets preparation_duration
+     * @param int $preparation_duration Preparation duration of the activity in minutes
+     * @return $this
+     */
+    public function setPreparationDuration($preparation_duration)
+    {
+        $this->container['preparation_duration'] = $preparation_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets duration
+     * @return int
+     */
+    public function getDuration()
+    {
+        return $this->container['duration'];
+    }
+
+    /**
+     * Sets duration
+     * @param int $duration Duration of this activity in minutes
+     * @return $this
+     */
+    public function setDuration($duration)
+    {
+        $this->container['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_slots
+     * @return \BumbalClient\Model\TimeSlotModel[]
+     */
+    public function getTimeSlots()
+    {
+        return $this->container['time_slots'];
+    }
+
+    /**
+     * Sets time_slots
+     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots
+     * @return $this
+     */
+    public function setTimeSlots($time_slots)
+    {
+        $this->container['time_slots'] = $time_slots;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }

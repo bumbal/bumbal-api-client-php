@@ -134,9 +134,86 @@ class CommunicationMappingModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "no_zones"
+     */
+    public function testPropertyNoZones()
+    {
+    }
+
+    /**
      * Test attribute "tag_names"
      */
     public function testPropertyTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "tag_ids"
+     */
+    public function testPropertyTagIds()
+    {
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+    }
+
+    /**
+     * Test attribute "zones"
+     */
+    public function testPropertyZones()
+    {
+    }
+
+    /**
+     * Test attribute "zone_names"
+     */
+    public function testPropertyZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "zone_ids"
+     */
+    public function testPropertyZoneIds()
+    {
+    }
+
+    /**
+     * Test attribute "communication_label_ids"
+     */
+    public function testPropertyCommunicationLabelIds()
+    {
+    }
+
+    /**
+     * Test attribute "communication_label_names"
+     */
+    public function testPropertyCommunicationLabelNames()
+    {
+    }
+
+    /**
+     * Test attribute "communication_labels"
+     */
+    public function testPropertyCommunicationLabels()
+    {
+    }
+
+    /**
+     * Test attribute "usage_count"
+     */
+    public function testPropertyUsageCount()
+    {
+    }
+
+    /**
+     * Test attribute "last_used_at"
+     */
+    public function testPropertyLastUsedAt()
     {
     }
 

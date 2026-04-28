@@ -92,6 +92,41 @@ class CommunicationMappingOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_tag_ids"
+     */
+    public function testPropertyIncludeTagIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_tags"
+     */
+    public function testPropertyIncludeTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_zones"
+     */
+    public function testPropertyIncludeZones()
+    {
+    }
+
+    /**
+     * Test attribute "include_zone_names"
+     */
+    public function testPropertyIncludeZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_zone_ids"
+     */
+    public function testPropertyIncludeZoneIds()
+    {
+    }
+
+    /**
      * Test attribute "include_template"
      */
     public function testPropertyIncludeTemplate()
@@ -102,6 +137,34 @@ class CommunicationMappingOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_mapping_record_info"
      */
     public function testPropertyIncludeMappingRecordInfo()
+    {
+    }
+
+    /**
+     * Test attribute "include_communication_labels"
+     */
+    public function testPropertyIncludeCommunicationLabels()
+    {
+    }
+
+    /**
+     * Test attribute "include_communication_label_ids"
+     */
+    public function testPropertyIncludeCommunicationLabelIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_communication_label_names"
+     */
+    public function testPropertyIncludeCommunicationLabelNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_usage"
+     */
+    public function testPropertyIncludeUsage()
     {
     }
 }

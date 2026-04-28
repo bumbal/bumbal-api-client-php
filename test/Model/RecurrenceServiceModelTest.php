@@ -106,6 +106,13 @@ class RecurrenceServiceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "object_count"
+     */
+    public function testPropertyObjectCount()
+    {
+    }
+
+    /**
      * Test attribute "rule"
      */
     public function testPropertyRule()

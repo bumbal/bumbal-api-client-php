@@ -54,8 +54,9 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'message' => 'string',
-        'data' => '\BumbalClient\Model\QuestionnaireTemplateModel[]'
+        'success' => 'bool',
+        'error_messages' => 'string[]',
+        'data' => '\BumbalClient\Model\InlineResponse200Data'
     ];
 
     /**
@@ -63,7 +64,8 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'message' => null,
+        'success' => null,
+        'error_messages' => null,
         'data' => null
     ];
 
@@ -82,7 +84,8 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message',
+        'success' => 'success',
+        'error_messages' => 'error_messages',
         'data' => 'data'
     ];
 
@@ -92,7 +95,8 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage',
+        'success' => 'setSuccess',
+        'error_messages' => 'setErrorMessages',
         'data' => 'setData'
     ];
 
@@ -102,7 +106,8 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage',
+        'success' => 'getSuccess',
+        'error_messages' => 'getErrorMessages',
         'data' => 'getData'
     ];
 
@@ -137,7 +142,8 @@ class InlineResponse200 implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
+        $this->container['error_messages'] = isset($data['error_messages']) ? $data['error_messages'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -167,29 +173,50 @@ class InlineResponse200 implements ArrayAccess
 
 
     /**
-     * Gets message
-     * @return string
+     * Gets success
+     * @return bool
      */
-    public function getMessage()
+    public function getSuccess()
     {
-        return $this->container['message'];
+        return $this->container['success'];
     }
 
     /**
-     * Sets message
-     * @param string $message Message describing the success of the operation
+     * Sets success
+     * @param bool $success
      * @return $this
      */
-    public function setMessage($message)
+    public function setSuccess($success)
     {
-        $this->container['message'] = $message;
+        $this->container['success'] = $success;
+
+        return $this;
+    }
+
+    /**
+     * Gets error_messages
+     * @return string[]
+     */
+    public function getErrorMessages()
+    {
+        return $this->container['error_messages'];
+    }
+
+    /**
+     * Sets error_messages
+     * @param string[] $error_messages
+     * @return $this
+     */
+    public function setErrorMessages($error_messages)
+    {
+        $this->container['error_messages'] = $error_messages;
 
         return $this;
     }
 
     /**
      * Gets data
-     * @return \BumbalClient\Model\QuestionnaireTemplateModel[]
+     * @return \BumbalClient\Model\InlineResponse200Data
      */
     public function getData()
     {
@@ -198,7 +225,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\QuestionnaireTemplateModel[] $data Array of questionnaire templates
+     * @param \BumbalClient\Model\InlineResponse200Data $data
      * @return $this
      */
     public function setData($data)

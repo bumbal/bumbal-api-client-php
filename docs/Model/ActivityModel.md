@@ -131,6 +131,8 @@ Name | Type | Description | Notes
 **payment_total** | **int** | Total to be paid in cents. readonly | [optional] 
 **transaction_total** | **int** | Total has been paid in cents. readonly | [optional] 
 **due_total** | **int** | Amount which hasn&#39;t been paid yet in cents. readonly | [optional] 
+**odd_service_windows_scheme_id** | **int** | Service windows scheme ID for odd weeks. readonly | [optional] 
+**even_service_windows_scheme_id** | **int** | Service windows scheme ID for even weeks. readonly | [optional] 
 **transactions** | [**\BumbalClient\Model\TransactionModel[]**](TransactionModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

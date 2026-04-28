@@ -56,7 +56,7 @@ class RecurrenceFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int[]',
         'name' => 'string',
-        'uuid' => 'string'
+        'has_uncreated_objects' => 'bool'
     ];
 
     /**
@@ -66,7 +66,7 @@ class RecurrenceFiltersModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => null,
         'name' => null,
-        'uuid' => null
+        'has_uncreated_objects' => null
     ];
 
     public static function swaggerTypes()
@@ -86,7 +86,7 @@ class RecurrenceFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'uuid' => 'uuid'
+        'has_uncreated_objects' => 'has_uncreated_objects'
     ];
 
 
@@ -97,7 +97,7 @@ class RecurrenceFiltersModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'uuid' => 'setUuid'
+        'has_uncreated_objects' => 'setHasUncreatedObjects'
     ];
 
 
@@ -108,7 +108,7 @@ class RecurrenceFiltersModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'uuid' => 'getUuid'
+        'has_uncreated_objects' => 'getHasUncreatedObjects'
     ];
 
     public static function attributeMap()
@@ -144,7 +144,7 @@ class RecurrenceFiltersModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['has_uncreated_objects'] = isset($data['has_uncreated_objects']) ? $data['has_uncreated_objects'] : null;
     }
 
     /**
@@ -215,22 +215,22 @@ class RecurrenceFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets uuid
-     * @return string
+     * Gets has_uncreated_objects
+     * @return bool
      */
-    public function getUuid()
+    public function getHasUncreatedObjects()
     {
-        return $this->container['uuid'];
+        return $this->container['has_uncreated_objects'];
     }
 
     /**
-     * Sets uuid
-     * @param string $uuid Recurrence uuid
+     * Sets has_uncreated_objects
+     * @param bool $has_uncreated_objects Flag to filter recurrences that have uncreated objects
      * @return $this
      */
-    public function setUuid($uuid)
+    public function setHasUncreatedObjects($has_uncreated_objects)
     {
-        $this->container['uuid'] = $uuid;
+        $this->container['has_uncreated_objects'] = $has_uncreated_objects;
 
         return $this;
     }

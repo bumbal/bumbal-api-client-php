@@ -58,6 +58,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'name' => 'string',
         'uuid' => 'string',
         'type' => 'string',
+        'object_count' => 'int',
         'rule' => 'string',
         'rule_readable' => 'string',
         'create_ahead' => 'int',
@@ -77,6 +78,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'name' => null,
         'uuid' => null,
         'type' => null,
+        'object_count' => null,
         'rule' => null,
         'rule_readable' => null,
         'create_ahead' => 'int64',
@@ -106,6 +108,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'name' => 'name',
         'uuid' => 'uuid',
         'type' => 'type',
+        'object_count' => 'object_count',
         'rule' => 'rule',
         'rule_readable' => 'rule_readable',
         'create_ahead' => 'create_ahead',
@@ -126,6 +129,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'name' => 'setName',
         'uuid' => 'setUuid',
         'type' => 'setType',
+        'object_count' => 'setObjectCount',
         'rule' => 'setRule',
         'rule_readable' => 'setRuleReadable',
         'create_ahead' => 'setCreateAhead',
@@ -146,6 +150,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'name' => 'getName',
         'uuid' => 'getUuid',
         'type' => 'getType',
+        'object_count' => 'getObjectCount',
         'rule' => 'getRule',
         'rule_readable' => 'getRuleReadable',
         'create_ahead' => 'getCreateAhead',
@@ -205,6 +210,7 @@ class RecurrenceServiceModel implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['object_count'] = isset($data['object_count']) ? $data['object_count'] : null;
         $this->container['rule'] = isset($data['rule']) ? $data['rule'] : null;
         $this->container['rule_readable'] = isset($data['rule_readable']) ? $data['rule_readable'] : null;
         $this->container['create_ahead'] = isset($data['create_ahead']) ? $data['create_ahead'] : null;
@@ -341,6 +347,27 @@ class RecurrenceServiceModel implements ArrayAccess
             );
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_count
+     * @return int
+     */
+    public function getObjectCount()
+    {
+        return $this->container['object_count'];
+    }
+
+    /**
+     * Sets object_count
+     * @param int $object_count number of objects created by this recurrence
+     * @return $this
+     */
+    public function setObjectCount($object_count)
+    {
+        $this->container['object_count'] = $object_count;
 
         return $this;
     }
