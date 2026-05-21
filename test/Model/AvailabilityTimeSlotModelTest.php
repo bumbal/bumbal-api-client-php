@@ -146,4 +146,11 @@ class AvailabilityTimeSlotModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPrice()
     {
     }
+
+    /**
+     * Test attribute "service_window_id"
+     */
+    public function testPropertyServiceWindowId()
+    {
+    }
 }

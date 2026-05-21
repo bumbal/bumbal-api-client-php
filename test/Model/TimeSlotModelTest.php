@@ -160,4 +160,18 @@ class TimeSlotModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPrice()
     {
     }
+
+    /**
+     * Test attribute "linked_time_slot_id"
+     */
+    public function testPropertyLinkedTimeSlotId()
+    {
+    }
+
+    /**
+     * Test attribute "service_window_id"
+     */
+    public function testPropertyServiceWindowId()
+    {
+    }
 }

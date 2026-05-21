@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **date_time_to** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **planned** | **bool** | true if this time_slot was used to plan the activity within | [optional] 
 **price** | **double** | Price for this timeslot | [optional] 
+**linked_time_slot_id** | **int** | Linked timeslot id | [optional] 
+**service_window_id** | **int** | Service window ID to which this TimeSlot belongs | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

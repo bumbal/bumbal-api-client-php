@@ -59,7 +59,8 @@ class ServiceWindowModel implements ArrayAccess
         'week_day' => 'int',
         'time_from' => 'string',
         'time_to' => 'string',
-        'price' => 'double'
+        'price' => 'double',
+        'label' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class ServiceWindowModel implements ArrayAccess
         'week_day' => 'int64',
         'time_from' => null,
         'time_to' => null,
-        'price' => 'double'
+        'price' => 'double',
+        'label' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -95,7 +97,8 @@ class ServiceWindowModel implements ArrayAccess
         'week_day' => 'week_day',
         'time_from' => 'time_from',
         'time_to' => 'time_to',
-        'price' => 'price'
+        'price' => 'price',
+        'label' => 'label'
     ];
 
 
@@ -109,7 +112,8 @@ class ServiceWindowModel implements ArrayAccess
         'week_day' => 'setWeekDay',
         'time_from' => 'setTimeFrom',
         'time_to' => 'setTimeTo',
-        'price' => 'setPrice'
+        'price' => 'setPrice',
+        'label' => 'setLabel'
     ];
 
 
@@ -123,7 +127,8 @@ class ServiceWindowModel implements ArrayAccess
         'week_day' => 'getWeekDay',
         'time_from' => 'getTimeFrom',
         'time_to' => 'getTimeTo',
-        'price' => 'getPrice'
+        'price' => 'getPrice',
+        'label' => 'getLabel'
     ];
 
     public static function attributeMap()
@@ -163,6 +168,7 @@ class ServiceWindowModel implements ArrayAccess
         $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
         $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
     }
 
     /**
@@ -315,11 +321,33 @@ class ServiceWindowModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets label
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     * @param string $label Label of service window
+     * @return $this
+     */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -330,6 +358,7 @@ class ServiceWindowModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -341,6 +370,7 @@ class ServiceWindowModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -355,6 +385,7 @@ class ServiceWindowModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

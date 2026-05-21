@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **paid** | **bool** | If paid &#x3D; 0: the transaction has not been fulfilled yet | [optional] 
 **failed** | **bool** | if failed &#x3D; 1: the transaction has failed | [optional] 
 **time_slot_id** | **int** | Time slot id the transaction is linked to | [optional] 
+**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **confirmed** | **bool** | If confirmed &#x3D; 1: the transaction has been confirmed | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -118,4 +118,11 @@ class ServiceWindowModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPrice()
     {
     }
+
+    /**
+     * Test attribute "label"
+     */
+    public function testPropertyLabel()
+    {
+    }
 }

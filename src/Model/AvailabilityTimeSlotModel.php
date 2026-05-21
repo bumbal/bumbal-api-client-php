@@ -63,7 +63,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_driver' => '\BumbalClient\Model\DriverModel',
         'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]',
         'follow_up_time_slots' => '\BumbalClient\Model\AvailabilityFollowUpTimeSlotModel[]',
-        'price' => 'double'
+        'price' => 'double',
+        'service_window_id' => 'double'
     ];
 
     /**
@@ -80,7 +81,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_driver' => null,
         'impact' => null,
         'follow_up_time_slots' => null,
-        'price' => 'double'
+        'price' => 'double',
+        'service_window_id' => 'double'
     ];
 
     public static function swaggerTypes()
@@ -107,7 +109,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_driver' => 'proposed_driver',
         'impact' => 'impact',
         'follow_up_time_slots' => 'follow_up_time_slots',
-        'price' => 'price'
+        'price' => 'price',
+        'service_window_id' => 'service_window_id'
     ];
 
 
@@ -125,7 +128,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_driver' => 'setProposedDriver',
         'impact' => 'setImpact',
         'follow_up_time_slots' => 'setFollowUpTimeSlots',
-        'price' => 'setPrice'
+        'price' => 'setPrice',
+        'service_window_id' => 'setServiceWindowId'
     ];
 
 
@@ -143,7 +147,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_driver' => 'getProposedDriver',
         'impact' => 'getImpact',
         'follow_up_time_slots' => 'getFollowUpTimeSlots',
-        'price' => 'getPrice'
+        'price' => 'getPrice',
+        'service_window_id' => 'getServiceWindowId'
     ];
 
     public static function attributeMap()
@@ -187,6 +192,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         $this->container['impact'] = isset($data['impact']) ? $data['impact'] : null;
         $this->container['follow_up_time_slots'] = isset($data['follow_up_time_slots']) ? $data['follow_up_time_slots'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['service_window_id'] = isset($data['service_window_id']) ? $data['service_window_id'] : null;
     }
 
     /**
@@ -420,6 +426,27 @@ class AvailabilityTimeSlotModel implements ArrayAccess
     public function setPrice($price)
     {
         $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_window_id
+     * @return double
+     */
+    public function getServiceWindowId()
+    {
+        return $this->container['service_window_id'];
+    }
+
+    /**
+     * Sets service_window_id
+     * @param double $service_window_id Service window ID used for this timeslot
+     * @return $this
+     */
+    public function setServiceWindowId($service_window_id)
+    {
+        $this->container['service_window_id'] = $service_window_id;
 
         return $this;
     }

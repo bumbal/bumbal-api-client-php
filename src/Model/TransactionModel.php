@@ -62,6 +62,7 @@ class TransactionModel implements ArrayAccess
         'paid' => 'bool',
         'failed' => 'bool',
         'time_slot_id' => 'int',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'confirmed' => 'bool'
     ];
 
@@ -78,6 +79,7 @@ class TransactionModel implements ArrayAccess
         'paid' => null,
         'failed' => null,
         'time_slot_id' => null,
+        'meta_data' => null,
         'confirmed' => null
     ];
 
@@ -104,6 +106,7 @@ class TransactionModel implements ArrayAccess
         'paid' => 'paid',
         'failed' => 'failed',
         'time_slot_id' => 'time_slot_id',
+        'meta_data' => 'meta_data',
         'confirmed' => 'confirmed'
     ];
 
@@ -121,6 +124,7 @@ class TransactionModel implements ArrayAccess
         'paid' => 'setPaid',
         'failed' => 'setFailed',
         'time_slot_id' => 'setTimeSlotId',
+        'meta_data' => 'setMetaData',
         'confirmed' => 'setConfirmed'
     ];
 
@@ -138,6 +142,7 @@ class TransactionModel implements ArrayAccess
         'paid' => 'getPaid',
         'failed' => 'getFailed',
         'time_slot_id' => 'getTimeSlotId',
+        'meta_data' => 'getMetaData',
         'confirmed' => 'getConfirmed'
     ];
 
@@ -180,6 +185,7 @@ class TransactionModel implements ArrayAccess
         $this->container['paid'] = isset($data['paid']) ? $data['paid'] : null;
         $this->container['failed'] = isset($data['failed']) ? $data['failed'] : null;
         $this->container['time_slot_id'] = isset($data['time_slot_id']) ? $data['time_slot_id'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['confirmed'] = isset($data['confirmed']) ? $data['confirmed'] : null;
     }
 
@@ -372,6 +378,27 @@ class TransactionModel implements ArrayAccess
     public function setTimeSlotId($time_slot_id)
     {
         $this->container['time_slot_id'] = $time_slot_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }

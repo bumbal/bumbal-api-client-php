@@ -54,7 +54,8 @@ class TransactionOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_record_info' => 'bool'
+        'include_record_info' => 'bool',
+        'include_meta_data' => 'bool'
     ];
 
     /**
@@ -62,7 +63,8 @@ class TransactionOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_record_info' => null
+        'include_record_info' => null,
+        'include_meta_data' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class TransactionOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_record_info' => 'include_record_info'
+        'include_record_info' => 'include_record_info',
+        'include_meta_data' => 'include_meta_data'
     ];
 
 
@@ -89,7 +92,8 @@ class TransactionOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_record_info' => 'setIncludeRecordInfo'
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_meta_data' => 'setIncludeMetaData'
     ];
 
 
@@ -98,7 +102,8 @@ class TransactionOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_record_info' => 'getIncludeRecordInfo'
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_meta_data' => 'getIncludeMetaData'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class TransactionOptionsModel implements ArrayAccess
     public function __construct(?array $data = null)
     {
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
     }
 
     /**
@@ -177,6 +183,27 @@ class TransactionOptionsModel implements ArrayAccess
     public function setIncludeRecordInfo($include_record_info)
     {
         $this->container['include_record_info'] = $include_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
 
         return $this;
     }

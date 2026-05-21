@@ -65,7 +65,9 @@ class TimeSlotModel implements ArrayAccess
         'time_to' => 'string',
         'date_time_to' => '\DateTime',
         'planned' => 'bool',
-        'price' => 'double'
+        'price' => 'double',
+        'linked_time_slot_id' => 'int',
+        'service_window_id' => 'int'
     ];
 
     /**
@@ -84,7 +86,9 @@ class TimeSlotModel implements ArrayAccess
         'time_to' => null,
         'date_time_to' => 'date-time',
         'planned' => null,
-        'price' => 'double'
+        'price' => 'double',
+        'linked_time_slot_id' => 'int64',
+        'service_window_id' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -113,7 +117,9 @@ class TimeSlotModel implements ArrayAccess
         'time_to' => 'time_to',
         'date_time_to' => 'date_time_to',
         'planned' => 'planned',
-        'price' => 'price'
+        'price' => 'price',
+        'linked_time_slot_id' => 'linked_time_slot_id',
+        'service_window_id' => 'service_window_id'
     ];
 
 
@@ -133,7 +139,9 @@ class TimeSlotModel implements ArrayAccess
         'time_to' => 'setTimeTo',
         'date_time_to' => 'setDateTimeTo',
         'planned' => 'setPlanned',
-        'price' => 'setPrice'
+        'price' => 'setPrice',
+        'linked_time_slot_id' => 'setLinkedTimeSlotId',
+        'service_window_id' => 'setServiceWindowId'
     ];
 
 
@@ -153,7 +161,9 @@ class TimeSlotModel implements ArrayAccess
         'time_to' => 'getTimeTo',
         'date_time_to' => 'getDateTimeTo',
         'planned' => 'getPlanned',
-        'price' => 'getPrice'
+        'price' => 'getPrice',
+        'linked_time_slot_id' => 'getLinkedTimeSlotId',
+        'service_window_id' => 'getServiceWindowId'
     ];
 
     public static function attributeMap()
@@ -231,6 +241,8 @@ class TimeSlotModel implements ArrayAccess
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['planned'] = isset($data['planned']) ? $data['planned'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['linked_time_slot_id'] = isset($data['linked_time_slot_id']) ? $data['linked_time_slot_id'] : null;
+        $this->container['service_window_id'] = isset($data['service_window_id']) ? $data['service_window_id'] : null;
     }
 
     /**
@@ -551,11 +563,54 @@ class TimeSlotModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets linked_time_slot_id
+     * @return int
+     */
+    public function getLinkedTimeSlotId()
+    {
+        return $this->container['linked_time_slot_id'];
+    }
+
+    /**
+     * Sets linked_time_slot_id
+     * @param int $linked_time_slot_id Linked timeslot id
+     * @return $this
+     */
+    public function setLinkedTimeSlotId($linked_time_slot_id)
+    {
+        $this->container['linked_time_slot_id'] = $linked_time_slot_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_window_id
+     * @return int
+     */
+    public function getServiceWindowId()
+    {
+        return $this->container['service_window_id'];
+    }
+
+    /**
+     * Sets service_window_id
+     * @param int $service_window_id Service window ID to which this TimeSlot belongs
+     * @return $this
+     */
+    public function setServiceWindowId($service_window_id)
+    {
+        $this->container['service_window_id'] = $service_window_id;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -566,6 +621,7 @@ class TimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -577,6 +633,7 @@ class TimeSlotModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -591,6 +648,7 @@ class TimeSlotModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
