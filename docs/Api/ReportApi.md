@@ -37,19 +37,24 @@ Set up the auto delivery of a report by a report ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $body = new \BumbalClient\Model\ReportDeliveryModel(); // \BumbalClient\Model\ReportDeliveryModel | Report delivery object that needs to be created
 
 try {
-    $result = $api_instance->createDeliveryReport($body);
+    $result = $apiInstance->createDeliveryReport($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->createDeliveryReport: ', $e->getMessage(), PHP_EOL;
@@ -91,19 +96,24 @@ Set up the auto delivery of a report by a report ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $body = new \BumbalClient\Model\ReportDeliveryModel(); // \BumbalClient\Model\ReportDeliveryModel | Report delivery object that needs to be created
 
 try {
-    $result = $api_instance->createDeliveryReportSchedule($body);
+    $result = $apiInstance->createDeliveryReportSchedule($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->createDeliveryReportSchedule: ', $e->getMessage(), PHP_EOL;
@@ -145,19 +155,24 @@ Delete a report auto delivery
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_delivery_id = 789; // int | ID of report delivery to delete
 
 try {
-    $result = $api_instance->deleteDeliveryReport($report_delivery_id);
+    $result = $apiInstance->deleteDeliveryReport($report_delivery_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->deleteDeliveryReport: ', $e->getMessage(), PHP_EOL;
@@ -199,19 +214,24 @@ SDelete a report auto delivery schedule
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_delivery_schedule_id = 789; // int | ID of report delivery schedule to delete
 
 try {
-    $result = $api_instance->deleteDeliveryReportSchedule($report_delivery_schedule_id);
+    $result = $apiInstance->deleteDeliveryReportSchedule($report_delivery_schedule_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->deleteDeliveryReportSchedule: ', $e->getMessage(), PHP_EOL;
@@ -253,19 +273,24 @@ Returns the data of the report for exporting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $arguments = new \BumbalClient\Model\ReportExportArguments(); // \BumbalClient\Model\ReportExportArguments | Export Report Arguments
 
 try {
-    $result = $api_instance->exportFileReport($arguments);
+    $result = $apiInstance->exportFileReport($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->exportFileReport: ', $e->getMessage(), PHP_EOL;
@@ -307,19 +332,24 @@ Returns the data of the report for exporting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $arguments = new \BumbalClient\Model\ReportExportArguments(); // \BumbalClient\Model\ReportExportArguments | Export Report Arguments
 
 try {
-    $result = $api_instance->exportReport($arguments);
+    $result = $apiInstance->exportReport($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->exportReport: ', $e->getMessage(), PHP_EOL;
@@ -361,15 +391,20 @@ Map values of a report to a filter of another report
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_id = 789; // int | ID of report to get values from
 $map_column = "map_column_example"; // string | Column of the report to get values from
 $map_filter = "map_filter_example"; // string | Name of filter of the report to pass values to
@@ -377,7 +412,7 @@ $mapped_report_id = 789; // int | Id of report that is receiving the mapped valu
 $filters = "filters_example"; // string | Filters to be used on when retrieving the values
 
 try {
-    $result = $api_instance->mapReport($report_id, $map_column, $map_filter, $mapped_report_id, $filters);
+    $result = $apiInstance->mapReport($report_id, $map_column, $map_filter, $mapped_report_id, $filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->mapReport: ', $e->getMessage(), PHP_EOL;
@@ -423,19 +458,24 @@ Retrieve the report data
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $arguments = new \BumbalClient\Model\ReportQueryArguments(); // \BumbalClient\Model\ReportQueryArguments | Query Report Arguments
 
 try {
-    $result = $api_instance->queryReport($arguments);
+    $result = $apiInstance->queryReport($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->queryReport: ', $e->getMessage(), PHP_EOL;
@@ -477,15 +517,20 @@ Returns a report file
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_id = 789; // int | ID of report to export
 $export_type = "export_type_example"; // string | Type of the export
 $return_history = "return_history_example"; // string | Whether to return the history of the report or the file
@@ -494,7 +539,7 @@ $parent_report_id = 789; // int | ID of the parent report
 $parent_filters = "parent_filters_example"; // string | Filters to be used on the parent report before exporting
 
 try {
-    $result = $api_instance->reportExport($report_id, $export_type, $return_history, $filters, $parent_report_id, $parent_filters);
+    $result = $apiInstance->reportExport($report_id, $export_type, $return_history, $filters, $parent_report_id, $parent_filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->reportExport: ', $e->getMessage(), PHP_EOL;
@@ -541,19 +586,24 @@ Retrieve a report auto delivery
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_delivery_id = 789; // int | ID of report delivery to return
 
 try {
-    $result = $api_instance->retrieveDeliveryReport($report_delivery_id);
+    $result = $apiInstance->retrieveDeliveryReport($report_delivery_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveDeliveryReport: ', $e->getMessage(), PHP_EOL;
@@ -595,19 +645,24 @@ Retrieve a report auto delivery schedule
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_delivery_schedule_id = 789; // int | ID of report delivery schedule to return
 
 try {
-    $result = $api_instance->retrieveDeliveryReportSchedule($report_delivery_schedule_id);
+    $result = $apiInstance->retrieveDeliveryReportSchedule($report_delivery_schedule_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveDeliveryReportSchedule: ', $e->getMessage(), PHP_EOL;
@@ -649,19 +704,24 @@ Retrieve a list of report auto deliveries
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $arguments = new \BumbalClient\Model\ReportDeliveryRetrieveListArguments(); // \BumbalClient\Model\ReportDeliveryRetrieveListArguments | Report delivery RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListDeliveryReport($arguments);
+    $result = $apiInstance->retrieveListDeliveryReport($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveListDeliveryReport: ', $e->getMessage(), PHP_EOL;
@@ -703,19 +763,24 @@ Retrieve a list of report auto deliveries
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $arguments = new \BumbalClient\Model\ReportDeliveryRetrieveListArguments(); // \BumbalClient\Model\ReportDeliveryRetrieveListArguments | Report delivery RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListDeliveryReportSchedule($arguments);
+    $result = $apiInstance->retrieveListDeliveryReportSchedule($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveListDeliveryReportSchedule: ', $e->getMessage(), PHP_EOL;
@@ -757,19 +822,24 @@ Retrieve List of reports
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $arguments = new \BumbalClient\Model\ReportRetrieveListArguments(); // \BumbalClient\Model\ReportRetrieveListArguments | Report RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListReport($arguments);
+    $result = $apiInstance->retrieveListReport($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveListReport: ', $e->getMessage(), PHP_EOL;
@@ -811,15 +881,20 @@ Retrieve List of values belonging to the report parameter
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_id = 789; // int | ID of the report
 $param_id = "param_id_example"; // string | ID of the parameter
 $search_text = "search_text_example"; // string | Text to search in the parameter values
@@ -829,7 +904,7 @@ $offset = 56; // int | Offset for pagination
 $limit = 56; // int | Limit for pagination
 
 try {
-    $result = $api_instance->retrieveListReportParam($report_id, $param_id, $search_text, $sorting_column, $sorting_direction, $offset, $limit);
+    $result = $apiInstance->retrieveListReportParam($report_id, $param_id, $search_text, $sorting_column, $sorting_direction, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveListReportParam: ', $e->getMessage(), PHP_EOL;
@@ -877,19 +952,24 @@ Returns a single report
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_id = 789; // int | ID of report to return
 
 try {
-    $result = $api_instance->retrieveReport($report_id);
+    $result = $apiInstance->retrieveReport($report_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveReport: ', $e->getMessage(), PHP_EOL;
@@ -931,19 +1011,24 @@ Returns a a list of all the reports which have been stored
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $arguments = new \BumbalClient\Model\ReportHistoryRetrieveListArguments(); // \BumbalClient\Model\ReportHistoryRetrieveListArguments | Report History RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveReportHistory($arguments);
+    $result = $apiInstance->retrieveReportHistory($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveReportHistory: ', $e->getMessage(), PHP_EOL;
@@ -985,20 +1070,25 @@ Returns a report file
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new BumbalClient\Api\ReportApi();
+$apiInstance = new BumbalClient\Api\ReportApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $report_id = 789; // int | ID of report to return the history of
 $export_type = "export_type_example"; // string | Type of the export
 
 try {
-    $result = $api_instance->retrieveReportHistoryFile($report_id, $export_type);
+    $result = $apiInstance->retrieveReportHistoryFile($report_id, $export_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReportApi->retrieveReportHistoryFile: ', $e->getMessage(), PHP_EOL;

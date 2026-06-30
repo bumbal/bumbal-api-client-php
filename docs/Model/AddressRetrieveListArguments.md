@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **search_relevance** | **bool** | Override default sorting by search_text matching score (only used when advanced searching is enabled on environment) | [optional] 
 **search_text** | **string** |  | [optional] 
 **as_list** | **bool** |  | [optional] 
+**count_only** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

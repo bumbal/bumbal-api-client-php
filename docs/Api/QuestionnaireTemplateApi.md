@@ -1,0 +1,430 @@
+# BumbalClient\QuestionnaireTemplateApi
+
+All URIs are relative to *http://localhost/api/v2*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createQuestionnaireTemplate**](QuestionnaireTemplateApi.md#createQuestionnaireTemplate) | **POST** /questionnaire-template | Add a new QuestionnaireTemplate
+[**deleteQuestionnaireTemplate**](QuestionnaireTemplateApi.md#deleteQuestionnaireTemplate) | **DELETE** /questionnaire-template/{questionnaire-templateId} | Delete an QuestionnaireTemplate entry
+[**getMatchingQuestionnaireTemplates**](QuestionnaireTemplateApi.md#getMatchingQuestionnaireTemplates) | **PUT** /questionnaire-template/get-matching-questionnaire-templates | Retrieves all questionnaire templates matching specified filters
+[**retrieveListQuestionnaireTemplate**](QuestionnaireTemplateApi.md#retrieveListQuestionnaireTemplate) | **PUT** /questionnaire-template | Retrieve List of QuestionnaireTemplate
+[**retrieveQuestionnaireTemplate**](QuestionnaireTemplateApi.md#retrieveQuestionnaireTemplate) | **GET** /questionnaire-template/{questionnaire-templateId} | Retrieve a QuestionnaireTemplate
+[**setQuestionnaireTemplate**](QuestionnaireTemplateApi.md#setQuestionnaireTemplate) | **POST** /questionnaire-template/set | Set (create or update) a QuestionnaireTemplate
+[**updateQuestionnaireTemplate**](QuestionnaireTemplateApi.md#updateQuestionnaireTemplate) | **PUT** /questionnaire-template/{questionnaire-templateId} | Update a specific QuestionnaireTemplate object
+
+
+# **createQuestionnaireTemplate**
+> \BumbalClient\Model\ApiResponse33 createQuestionnaireTemplate($body)
+
+Add a new QuestionnaireTemplate
+
+Add a new QuestionnaireTemplate
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new BumbalClient\Api\QuestionnaireTemplateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\Model\QuestionnaireTemplateModel(); // \BumbalClient\Model\QuestionnaireTemplateModel | QuestionnaireTemplate object that needs to be created
+
+try {
+    $result = $apiInstance->createQuestionnaireTemplate($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireTemplateApi->createQuestionnaireTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\QuestionnaireTemplateModel**](../Model/QuestionnaireTemplateModel.md)| QuestionnaireTemplate object that needs to be created | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse33**](../Model/ApiResponse33.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteQuestionnaireTemplate**
+> \BumbalClient\Model\ApiResponse31 deleteQuestionnaireTemplate($questionnaire_template_id)
+
+Delete an QuestionnaireTemplate entry
+
+Delete an QuestionnaireTemplate entry
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new BumbalClient\Api\QuestionnaireTemplateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$questionnaire_template_id = 789; // int | ID of QuestionnaireTemplate to delete
+
+try {
+    $result = $apiInstance->deleteQuestionnaireTemplate($questionnaire_template_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireTemplateApi->deleteQuestionnaireTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **questionnaire_template_id** | **int**| ID of QuestionnaireTemplate to delete |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse31**](../Model/ApiResponse31.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMatchingQuestionnaireTemplates**
+> \BumbalClient\Model\InlineResponse2001 getMatchingQuestionnaireTemplates($args)
+
+Retrieves all questionnaire templates matching specified filters
+
+This endpoint retrieves all questionnaire templates that match the specified object type, object ID, and questionnaire type filters. An option to use best fit analysis is also provided.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new BumbalClient\Api\QuestionnaireTemplateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$args = new \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments(); // \BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments | Arguments for fetching questionnaire templates
+
+try {
+    $result = $apiInstance->getMatchingQuestionnaireTemplates($args);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireTemplateApi->getMatchingQuestionnaireTemplates: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **args** | [**\BumbalClient\Model\GetMatchingQuestionnaireTemplatesArguments**](../Model/GetMatchingQuestionnaireTemplatesArguments.md)| Arguments for fetching questionnaire templates |
+
+### Return type
+
+[**\BumbalClient\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **retrieveListQuestionnaireTemplate**
+> \BumbalClient\Model\QuestionnaireTemplateListResponse retrieveListQuestionnaireTemplate($arguments)
+
+Retrieve List of QuestionnaireTemplate
+
+Retrieve List of QuestionnaireTemplate
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new BumbalClient\Api\QuestionnaireTemplateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\Model\QuestionnaireTemplateRetrieveListArguments(); // \BumbalClient\Model\QuestionnaireTemplateRetrieveListArguments | QuestionnaireTemplate RetrieveList Arguments
+
+try {
+    $result = $apiInstance->retrieveListQuestionnaireTemplate($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireTemplateApi->retrieveListQuestionnaireTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\QuestionnaireTemplateRetrieveListArguments**](../Model/QuestionnaireTemplateRetrieveListArguments.md)| QuestionnaireTemplate RetrieveList Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\QuestionnaireTemplateListResponse**](../Model/QuestionnaireTemplateListResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **retrieveQuestionnaireTemplate**
+> \BumbalClient\Model\QuestionnaireTemplateModel retrieveQuestionnaireTemplate($questionnaire_template_id)
+
+Retrieve a QuestionnaireTemplate
+
+Retrieve an QuestionnaireTemplate
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new BumbalClient\Api\QuestionnaireTemplateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$questionnaire_template_id = 789; // int | ID of QuestionnaireTemplate to retrieve
+
+try {
+    $result = $apiInstance->retrieveQuestionnaireTemplate($questionnaire_template_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireTemplateApi->retrieveQuestionnaireTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **questionnaire_template_id** | **int**| ID of QuestionnaireTemplate to retrieve |
+
+### Return type
+
+[**\BumbalClient\Model\QuestionnaireTemplateModel**](../Model/QuestionnaireTemplateModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setQuestionnaireTemplate**
+> \BumbalClient\Model\ApiResponse setQuestionnaireTemplate($body)
+
+Set (create or update) a QuestionnaireTemplate
+
+Set (create or update) a d=QuestionnaireTemplate. If id or links are set in the data, and a corresponding QuestionnaireTemplate is found in Bumbal, an update will be performed.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new BumbalClient\Api\QuestionnaireTemplateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\Model\QuestionnaireTemplateModel(); // \BumbalClient\Model\QuestionnaireTemplateModel | QuestionnaireTemplate object
+
+try {
+    $result = $apiInstance->setQuestionnaireTemplate($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireTemplateApi->setQuestionnaireTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\QuestionnaireTemplateModel**](../Model/QuestionnaireTemplateModel.md)| QuestionnaireTemplate object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateQuestionnaireTemplate**
+> \BumbalClient\Model\ApiResponse30 updateQuestionnaireTemplate($questionnaire_template_id, $body)
+
+Update a specific QuestionnaireTemplate object
+
+Update a specific QuestionnaireTemplate object
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new BumbalClient\Api\QuestionnaireTemplateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$questionnaire_template_id = 789; // int | ID of the QuestionnaireTemplate object to update
+$body = new \BumbalClient\Model\QuestionnaireTemplateModel(); // \BumbalClient\Model\QuestionnaireTemplateModel | QuestionnaireTemplate object that needs to be updated
+
+try {
+    $result = $apiInstance->updateQuestionnaireTemplate($questionnaire_template_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling QuestionnaireTemplateApi->updateQuestionnaireTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **questionnaire_template_id** | **int**| ID of the QuestionnaireTemplate object to update |
+ **body** | [**\BumbalClient\Model\QuestionnaireTemplateModel**](../Model/QuestionnaireTemplateModel.md)| QuestionnaireTemplate object that needs to be updated | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse30**](../Model/ApiResponse30.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **zone_names** | **string[]** | Zone names | [optional] 
 **system** | **bool[]** | System users | [optional] 
 **activated** | **bool[]** | Activated users | [optional] 
+**email** | **string[]** | Filter by email address | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

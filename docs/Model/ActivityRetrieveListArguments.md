@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **search_relevance** | **bool** | Override sorting by search_text matching score first, original sorting second. Note that if no sorting field is explicitly specified, text_search matching score will still be sorted on, even if search_relevance &#x3D; false. (only used when advanced searching is enabled on environment) | [optional] 
 **as_list** | **bool** |  | [optional] 
 **count_only** | **bool** |  | [optional] 
+**advanced_text_search** | [**\BumbalClient\Model\ActivityRetrieveListArgumentsAdvancedTextSearch**](ActivityRetrieveListArgumentsAdvancedTextSearch.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
