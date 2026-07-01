@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **success** | **bool** | success | [optional] 
-**data** | [**map[string,null]**](.md) | data | [optional] 
+**data** | **object** | data | [optional] 
 **code** | **int** |  | [optional] 
 **type** | **string** |  | [optional] 
 **message** | **string** |  | [optional] 

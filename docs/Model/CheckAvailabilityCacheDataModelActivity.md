@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\BumbalClient\Model\CheckAvailabilityCacheDataModelActivityAddress**](CheckAvailabilityCacheDataModelActivityAddress.md) |  | 
+**address** | [**\BumbalClient\Model\CheckAvailabilityCacheDataModelActivityAddress**](CheckAvailabilityCacheDataModelActivityAddress.md) |  | [optional] 
 **brand_name** | **string** |  | [optional] 
 **duration** | **int** |  | [optional] 
 **activity_type_name** | **string** |  | [optional] 

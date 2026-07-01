@@ -22,23 +22,18 @@ Check a token for validity
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\AuthenticateApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\AuthenticateApi();
 
 try {
-    $result = $apiInstance->authenticateCheckToken();
+    $result = $api_instance->authenticateCheckToken();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticateApi->authenticateCheckToken: ', $e->getMessage(), PHP_EOL;
@@ -76,15 +71,11 @@ Sign In with your user credentials, you will get a access token if successful
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new BumbalClient\Api\AuthenticateApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
+$api_instance = new BumbalClient\Api\AuthenticateApi();
 $body = new \BumbalClient\Model\CredentialsModel(); // \BumbalClient\Model\CredentialsModel | Credentials object
 
 try {
-    $result = $apiInstance->authenticateSignIn($body);
+    $result = $api_instance->authenticateSignIn($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticateApi->authenticateSignIn: ', $e->getMessage(), PHP_EOL;
@@ -126,24 +117,19 @@ Sign out using your access token
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 // Configure API key authorization: jwt
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\AuthenticateApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\AuthenticateApi();
 $token = "token_example"; // string | Token
 
 try {
-    $result = $apiInstance->authenticateSignOut($token);
+    $result = $api_instance->authenticateSignOut($token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticateApi->authenticateSignOut: ', $e->getMessage(), PHP_EOL;
