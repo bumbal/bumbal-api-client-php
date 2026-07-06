@@ -88,7 +88,7 @@ Class | Method | HTTP request | Description
 *ActivityApi* | [**bulkUpdateActivityTag**](docs/Api/ActivityApi.md#bulkupdateactivitytag) | **POST** /activity/bulk-update/tag | Bulk update tags on activities
 *ActivityApi* | [**bulkUpdateActivityTimeSlot**](docs/Api/ActivityApi.md#bulkupdateactivitytimeslot) | **POST** /activity/bulk-update/time-slot | Bulk update time slots on activities
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
-*ActivityApi* | [**detachActivitiesFromRecurrence**](docs/Api/ActivityApi.md#detachactivitiesfromrecurrence) | **POST** /activity/detach-from-recurrence/{id} | detach activities from specified recurrence
+*ActivityApi* | [**detachActivitiesFromRecurrence**](docs/Api/ActivityApi.md#detachactivitiesfromrecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
 *ActivityApi* | [**duplicateActivities**](docs/Api/ActivityApi.md#duplicateactivities) | **POST** /activity/duplicate | Bulk duplicate activities
 *ActivityApi* | [**getActivityDuplicateStatus**](docs/Api/ActivityApi.md#getactivityduplicatestatus) | **GET** /activity/duplicate/status/{token} | Check activity duplication job status
 *ActivityApi* | [**getBulkUpdateStatus**](docs/Api/ActivityApi.md#getbulkupdatestatus) | **GET** /activity/bulk-update/status/{token} | Get status of an asynchronous bulk update job

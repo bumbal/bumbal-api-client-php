@@ -33,7 +33,7 @@ namespace BumbalClient;
  * ActivityDetachFromRecurrenceArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description ActivityDetachFromRecurrenceArguments
+// * @description Provide either recurrence_uuid or id (not both)
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team

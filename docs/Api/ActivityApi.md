@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**bulkUpdateActivityTag**](ActivityApi.md#bulkUpdateActivityTag) | **POST** /activity/bulk-update/tag | Bulk update tags on activities
 [**bulkUpdateActivityTimeSlot**](ActivityApi.md#bulkUpdateActivityTimeSlot) | **POST** /activity/bulk-update/time-slot | Bulk update time slots on activities
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
-[**detachActivitiesFromRecurrence**](ActivityApi.md#detachActivitiesFromRecurrence) | **POST** /activity/detach-from-recurrence/{id} | detach activities from specified recurrence
+[**detachActivitiesFromRecurrence**](ActivityApi.md#detachActivitiesFromRecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
 [**duplicateActivities**](ActivityApi.md#duplicateActivities) | **POST** /activity/duplicate | Bulk duplicate activities
 [**getActivityDuplicateStatus**](ActivityApi.md#getActivityDuplicateStatus) | **GET** /activity/duplicate/status/{token} | Check activity duplication job status
 [**getBulkUpdateStatus**](ActivityApi.md#getBulkUpdateStatus) | **GET** /activity/bulk-update/status/{token} | Get status of an asynchronous bulk update job
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **detachActivitiesFromRecurrence**
-> \BumbalClient\Model\ApiResponse detachActivitiesFromRecurrence($id)
+> \BumbalClient\Model\ApiResponse detachActivitiesFromRecurrence($body)
 
 detach activities from specified recurrence
 
@@ -262,10 +262,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization'
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$id = 56; // int | ID of the activity to detach from recurrence
+$body = new \BumbalClient\Model\ActivityDetachFromRecurrenceArguments(); // \BumbalClient\Model\ActivityDetachFromRecurrenceArguments | Provide either recurrence_uuid or id (not both)
 
 try {
-    $result = $api_instance->detachActivitiesFromRecurrence($id);
+    $result = $api_instance->detachActivitiesFromRecurrence($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->detachActivitiesFromRecurrence: ', $e->getMessage(), PHP_EOL;
@@ -277,7 +277,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| ID of the activity to detach from recurrence |
+ **body** | [**\BumbalClient\Model\ActivityDetachFromRecurrenceArguments**](../Model/ActivityDetachFromRecurrenceArguments.md)| Provide either recurrence_uuid or id (not both) |
 
 ### Return type
 

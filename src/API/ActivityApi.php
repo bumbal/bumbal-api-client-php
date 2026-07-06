@@ -447,13 +447,13 @@ class ActivityApi
      *
      * detach activities from specified recurrence
      *
-     * @param int $id ID of the activity to detach from recurrence (required)
+     * @param \BumbalClient\Model\ActivityDetachFromRecurrenceArguments $body Provide either recurrence_uuid or id (not both) (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function detachActivitiesFromRecurrence($id)
+    public function detachActivitiesFromRecurrence($body)
     {
-        list($response) = $this->detachActivitiesFromRecurrenceWithHttpInfo($id);
+        list($response) = $this->detachActivitiesFromRecurrenceWithHttpInfo($body);
         return $response;
     }
 
@@ -462,18 +462,18 @@ class ActivityApi
      *
      * detach activities from specified recurrence
      *
-     * @param int $id ID of the activity to detach from recurrence (required)
+     * @param \BumbalClient\Model\ActivityDetachFromRecurrenceArguments $body Provide either recurrence_uuid or id (not both) (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function detachActivitiesFromRecurrenceWithHttpInfo($id)
+    public function detachActivitiesFromRecurrenceWithHttpInfo($body)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling detachActivitiesFromRecurrence');
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling detachActivitiesFromRecurrence');
         }
         // parse inputs
-        $resourcePath = "/activity/detach-from-recurrence/{id}";
+        $resourcePath = "/activity/detach-from-recurrence";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -484,13 +484,10 @@ class ActivityApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
         }
 
         // for model (json/xml)
@@ -518,7 +515,7 @@ class ActivityApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/activity/detach-from-recurrence/{id}'
+                '/activity/detach-from-recurrence'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

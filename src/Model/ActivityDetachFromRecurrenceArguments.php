@@ -35,6 +35,7 @@ use \ArrayAccess;
  * ActivityDetachFromRecurrenceArguments Class Doc Comment
  *
  * @category    Class
+ * @description Provide either recurrence_uuid or id (not both)
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -150,9 +151,6 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['recurrence_uuid'] === null) {
-            $invalid_properties[] = "'recurrence_uuid' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -165,9 +163,6 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['recurrence_uuid'] === null) {
-            return false;
-        }
         return true;
     }
 
@@ -183,7 +178,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
 
     /**
      * Sets recurrence_uuid
-     * @param string $recurrence_uuid Recurrence UUID
+     * @param string $recurrence_uuid Recurrence UUID. Provide either this or id, not both.
      * @return $this
      */
     public function setRecurrenceUuid($recurrence_uuid)
@@ -204,7 +199,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id ID of the activity to detach from recurrence
+     * @param int $id ID of the activity to detach from recurrence. Provide either this or recurrence_uuid, not both.
      * @return $this
      */
     public function setId($id)
@@ -218,6 +213,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -228,6 +224,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -239,6 +236,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -253,6 +251,7 @@ class ActivityDetachFromRecurrenceArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
