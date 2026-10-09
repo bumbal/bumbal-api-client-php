@@ -281,13 +281,6 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "active"
-     */
-    public function testPropertyActive()
-    {
-    }
-
-    /**
      * Test attribute "applied_capacities"
      */
     public function testPropertyAppliedCapacities()
@@ -382,6 +375,20 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "package_line_updated_by"
      */
     public function testPropertyPackageLineUpdatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
     {
     }
 }

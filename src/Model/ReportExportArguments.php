@@ -59,7 +59,9 @@ class ReportExportArguments implements ArrayAccess
         'parent_parameters' => '\BumbalClient\Model\ReportParamModel[]',
         'export_type' => 'string',
         'sorting_column' => 'string',
-        'sorting_direction' => 'string'
+        'sorting_direction' => 'string',
+        'fresh_report' => 'bool',
+        'row_limit' => 'int'
     ];
 
     /**
@@ -72,7 +74,9 @@ class ReportExportArguments implements ArrayAccess
         'parent_parameters' => null,
         'export_type' => null,
         'sorting_column' => null,
-        'sorting_direction' => null
+        'sorting_direction' => null,
+        'fresh_report' => null,
+        'row_limit' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -95,7 +99,9 @@ class ReportExportArguments implements ArrayAccess
         'parent_parameters' => 'parent_parameters',
         'export_type' => 'export_type',
         'sorting_column' => 'sorting_column',
-        'sorting_direction' => 'sorting_direction'
+        'sorting_direction' => 'sorting_direction',
+        'fresh_report' => 'fresh_report',
+        'row_limit' => 'row_limit'
     ];
 
 
@@ -109,7 +115,9 @@ class ReportExportArguments implements ArrayAccess
         'parent_parameters' => 'setParentParameters',
         'export_type' => 'setExportType',
         'sorting_column' => 'setSortingColumn',
-        'sorting_direction' => 'setSortingDirection'
+        'sorting_direction' => 'setSortingDirection',
+        'fresh_report' => 'setFreshReport',
+        'row_limit' => 'setRowLimit'
     ];
 
 
@@ -123,7 +131,9 @@ class ReportExportArguments implements ArrayAccess
         'parent_parameters' => 'getParentParameters',
         'export_type' => 'getExportType',
         'sorting_column' => 'getSortingColumn',
-        'sorting_direction' => 'getSortingDirection'
+        'sorting_direction' => 'getSortingDirection',
+        'fresh_report' => 'getFreshReport',
+        'row_limit' => 'getRowLimit'
     ];
 
     public static function attributeMap()
@@ -177,6 +187,8 @@ class ReportExportArguments implements ArrayAccess
         $this->container['export_type'] = isset($data['export_type']) ? $data['export_type'] : null;
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
+        $this->container['fresh_report'] = isset($data['fresh_report']) ? $data['fresh_report'] : null;
+        $this->container['row_limit'] = isset($data['row_limit']) ? $data['row_limit'] : null;
     }
 
     /**
@@ -196,6 +208,10 @@ class ReportExportArguments implements ArrayAccess
             );
         }
 
+        if (!is_null($this->container['row_limit']) && ($this->container['row_limit'] < 1)) {
+            $invalid_properties[] = "invalid value for 'row_limit', must be bigger than or equal to 1.";
+        }
+
         return $invalid_properties;
     }
 
@@ -210,6 +226,9 @@ class ReportExportArguments implements ArrayAccess
 
         $allowed_values = $this->getSortingDirectionAllowableValues();
         if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['row_limit'] < 1) {
             return false;
         }
         return true;
@@ -350,11 +369,59 @@ class ReportExportArguments implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets fresh_report
+     * @return bool
+     */
+    public function getFreshReport()
+    {
+        return $this->container['fresh_report'];
+    }
+
+    /**
+     * Sets fresh_report
+     * @param bool $fresh_report Force fresh data, bypass cache
+     * @return $this
+     */
+    public function setFreshReport($fresh_report)
+    {
+        $this->container['fresh_report'] = $fresh_report;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_limit
+     * @return int
+     */
+    public function getRowLimit()
+    {
+        return $this->container['row_limit'];
+    }
+
+    /**
+     * Sets row_limit
+     * @param int $row_limit Maximum rows the generated file may contain. Defaults to 100; raise it for a report that has more.
+     * @return $this
+     */
+    public function setRowLimit($row_limit)
+    {
+
+        if (!is_null($row_limit) && ($row_limit < 1)) {
+            throw new \InvalidArgumentException('invalid value for $row_limit when calling ReportExportArguments., must be bigger than or equal to 1.');
+        }
+
+        $this->container['row_limit'] = $row_limit;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -365,6 +432,7 @@ class ReportExportArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -376,6 +444,7 @@ class ReportExportArguments implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -390,6 +459,7 @@ class ReportExportArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -69,6 +69,7 @@ Name | Type | Description | Notes
 **optimized** | **bool** | Activity optimized status within route. | [optional] 
 **blocked** | **bool** | a blocked route can not be auto-filled by customer calendars | [optional] 
 **active** | **bool** | if active&#x3D;0: route has been removed and is no longer visible in any bumbal interface | [optional] 
+**removed** | **bool** | Whether route is removed or not | [optional] 
 **start_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **end_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **planned_capacities** | [**map[string,\BumbalClient\Model\AppliedCapacityModel]**](AppliedCapacityModel.md) |  | [optional] 

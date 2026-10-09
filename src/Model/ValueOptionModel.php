@@ -54,7 +54,7 @@ class ValueOptionModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
+        'label' => 'string',
         'value' => 'string'
     ];
 
@@ -63,7 +63,7 @@ class ValueOptionModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null,
+        'label' => null,
         'value' => null
     ];
 
@@ -82,7 +82,7 @@ class ValueOptionModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
+        'label' => 'label',
         'value' => 'value'
     ];
 
@@ -92,7 +92,7 @@ class ValueOptionModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
+        'label' => 'setLabel',
         'value' => 'setValue'
     ];
 
@@ -102,7 +102,7 @@ class ValueOptionModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
+        'label' => 'getLabel',
         'value' => 'getValue'
     ];
 
@@ -137,7 +137,7 @@ class ValueOptionModel implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
@@ -167,22 +167,22 @@ class ValueOptionModel implements ArrayAccess
 
 
     /**
-     * Gets name
+     * Gets label
      * @return string
      */
-    public function getName()
+    public function getLabel()
     {
-        return $this->container['name'];
+        return $this->container['label'];
     }
 
     /**
-     * Sets name
-     * @param string $name The name of the value option (just as a description)
+     * Sets label
+     * @param string $label The label of the value option (just as a description)
      * @return $this
      */
-    public function setName($name)
+    public function setLabel($label)
     {
-        $this->container['name'] = $name;
+        $this->container['label'] = $label;
 
         return $this;
     }

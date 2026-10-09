@@ -10,12 +10,14 @@ Method | HTTP request | Description
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
 [**detachActivitiesFromRecurrence**](ActivityApi.md#detachActivitiesFromRecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
 [**duplicateActivities**](ActivityApi.md#duplicateActivities) | **POST** /activity/duplicate | Bulk duplicate activities
+[**forceDeleteActivity**](ActivityApi.md#forceDeleteActivity) | **POST** /activity/force-delete/{id} | Permanently delete a soft-deleted Activity
 [**getActivityDuplicateStatus**](ActivityApi.md#getActivityDuplicateStatus) | **GET** /activity/duplicate/status/{token} | Check activity duplication job status
 [**getBulkUpdateStatus**](ActivityApi.md#getBulkUpdateStatus) | **GET** /activity/bulk-update/status/{token} | Get status of an asynchronous bulk update job
 [**lockActivity**](ActivityApi.md#lockActivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 [**lockActivityOnRoute**](ActivityApi.md#lockActivityOnRoute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
 [**lockActivityOnRouteAndTime**](ActivityApi.md#lockActivityOnRouteAndTime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
 [**processActivityScheduledCommunicationUpdate**](ActivityApi.md#processActivityScheduledCommunicationUpdate) | **POST** /activity/communication/schedule/{activityId} | Update an activity&#39;s scheduled communication mapping
+[**restoreActivity**](ActivityApi.md#restoreActivity) | **POST** /activity/restore/{id} | Restore a soft-deleted Activity
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
 [**setActivity**](ActivityApi.md#setActivity) | **POST** /activity/set | Set (create or update) an Activity
@@ -348,6 +350,50 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **forceDeleteActivity**
+> forceDeleteActivity($id)
+
+Permanently delete a soft-deleted Activity
+
+Permanently deletes a soft-deleted Activity  by setting active=0, removed=1
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$id = 56; // int | ID of Activity to permanently delete
+
+try {
+    $api_instance->forceDeleteActivity($id);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->forceDeleteActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Activity to permanently delete |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getActivityDuplicateStatus**
 > \BumbalClient\Model\DuplicateStatusResponse getActivityDuplicateStatus($token)
 
@@ -669,6 +715,50 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **restoreActivity**
+> restoreActivity($id)
+
+Restore a soft-deleted Activity
+
+Restores a soft-deleted Activity  back to active state (active=1, removed=0)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$id = 56; // int | ID of Activity to restore
+
+try {
+    $api_instance->restoreActivity($id);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->restoreActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Activity to restore |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

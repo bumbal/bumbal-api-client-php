@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
 **name** | **string** | Name of the report | [optional] 
+**code** | **string** | Code of the report template | [optional] 
 **columns** | [**\BumbalClient\Model\ReportColumnModel[]**](ReportColumnModel.md) |  | [optional] 
 **parameters** | [**\BumbalClient\Model\ReportParamModel[]**](ReportParamModel.md) |  | [optional] 
 **has_parent_report** | **bool** |  | [optional] 

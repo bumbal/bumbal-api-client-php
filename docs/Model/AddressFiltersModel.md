@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **code** | **string** |  | [optional] 
 **user_id** | **int** |  | [optional] 
 **links** | **object[]** | Filter by Address Link ids | [optional] 
+**active** | **int[]** | Active status of Address, 0 values represent soft-deleted addresses | [optional] 
+**removed** | **int[]** | Removed status of Address | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

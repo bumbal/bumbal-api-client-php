@@ -547,6 +547,13 @@ class RouteEtaModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
+
+    /**
      * Test attribute "start_address"
      */
     public function testPropertyStartAddress()

@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **system** | **bool[]** | System users | [optional] 
 **activated** | **bool[]** | Activated users | [optional] 
 **email** | **string[]** | Filter by email address | [optional] 
+**active** | **int[]** | Active status of User, 0 values represent soft-deleted users | [optional] 
+**removed** | **int[]** | Removed status of User | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

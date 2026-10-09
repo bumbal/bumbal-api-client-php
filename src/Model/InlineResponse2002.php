@@ -54,8 +54,10 @@ class InlineResponse2002 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'country_rules' => 'object',
-        'default_rule' => 'string'
+        'items' => 'null[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -63,8 +65,10 @@ class InlineResponse2002 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'country_rules' => null,
-        'default_rule' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -82,8 +86,10 @@ class InlineResponse2002 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'country_rules' => 'country_rules',
-        'default_rule' => 'default_rule'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -92,8 +98,10 @@ class InlineResponse2002 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'country_rules' => 'setCountryRules',
-        'default_rule' => 'setDefaultRule'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -102,8 +110,10 @@ class InlineResponse2002 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'country_rules' => 'getCountryRules',
-        'default_rule' => 'getDefaultRule'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -137,8 +147,10 @@ class InlineResponse2002 implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['country_rules'] = isset($data['country_rules']) ? $data['country_rules'] : null;
-        $this->container['default_rule'] = isset($data['default_rule']) ? $data['default_rule'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -167,43 +179,85 @@ class InlineResponse2002 implements ArrayAccess
 
 
     /**
-     * Gets country_rules
-     * @return object
+     * Gets items
+     * @return null[]
      */
-    public function getCountryRules()
+    public function getItems()
     {
-        return $this->container['country_rules'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets country_rules
-     * @param object $country_rules Map of 2-letter country codes to postal code regex patterns.
+     * Sets items
+     * @param null[] $items
      * @return $this
      */
-    public function setCountryRules($country_rules)
+    public function setItems($items)
     {
-        $this->container['country_rules'] = $country_rules;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets default_rule
-     * @return string
+     * Gets count_filtered
+     * @return int
      */
-    public function getDefaultRule()
+    public function getCountFiltered()
     {
-        return $this->container['default_rule'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets default_rule
-     * @param string $default_rule
+     * Sets count_filtered
+     * @param int $count_filtered Options matching search_text
      * @return $this
      */
-    public function setDefaultRule($default_rule)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['default_rule'] = $default_rule;
+        $this->container['count_filtered'] = $count_filtered;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_unfiltered
+     * @return int
+     */
+    public function getCountUnfiltered()
+    {
+        return $this->container['count_unfiltered'];
+    }
+
+    /**
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Total options before filtering
+     * @return $this
+     */
+    public function setCountUnfiltered($count_unfiltered)
+    {
+        $this->container['count_unfiltered'] = $count_unfiltered;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_limited
+     * @return int
+     */
+    public function getCountLimited()
+    {
+        return $this->container['count_limited'];
+    }
+
+    /**
+     * Sets count_limited
+     * @param int $count_limited Options in the current page
+     * @return $this
+     */
+    public function setCountLimited($count_limited)
+    {
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }
@@ -212,6 +266,7 @@ class InlineResponse2002 implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -222,6 +277,7 @@ class InlineResponse2002 implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -233,6 +289,7 @@ class InlineResponse2002 implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -247,6 +304,7 @@ class InlineResponse2002 implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

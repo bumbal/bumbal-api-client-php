@@ -83,7 +83,8 @@ class UsersModel implements ArrayAccess
         'zone_names' => 'string[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
-        'driver_unavailabilities' => '\BumbalClient\Model\DriverUnavailabilityModel[]'
+        'driver_unavailabilities' => '\BumbalClient\Model\DriverUnavailabilityModel[]',
+        'settings' => 'object'
     ];
 
     /**
@@ -120,7 +121,8 @@ class UsersModel implements ArrayAccess
         'zone_names' => null,
         'links' => null,
         'meta_data' => null,
-        'driver_unavailabilities' => null
+        'driver_unavailabilities' => null,
+        'settings' => null
     ];
 
     public static function swaggerTypes()
@@ -167,7 +169,8 @@ class UsersModel implements ArrayAccess
         'zone_names' => 'zone_names',
         'links' => 'links',
         'meta_data' => 'meta_data',
-        'driver_unavailabilities' => 'driver_unavailabilities'
+        'driver_unavailabilities' => 'driver_unavailabilities',
+        'settings' => 'settings'
     ];
 
 
@@ -205,7 +208,8 @@ class UsersModel implements ArrayAccess
         'zone_names' => 'setZoneNames',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
-        'driver_unavailabilities' => 'setDriverUnavailabilities'
+        'driver_unavailabilities' => 'setDriverUnavailabilities',
+        'settings' => 'setSettings'
     ];
 
 
@@ -243,7 +247,8 @@ class UsersModel implements ArrayAccess
         'zone_names' => 'getZoneNames',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
-        'driver_unavailabilities' => 'getDriverUnavailabilities'
+        'driver_unavailabilities' => 'getDriverUnavailabilities',
+        'settings' => 'getSettings'
     ];
 
     public static function attributeMap()
@@ -329,6 +334,7 @@ class UsersModel implements ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['driver_unavailabilities'] = isset($data['driver_unavailabilities']) ? $data['driver_unavailabilities'] : null;
+        $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
     }
 
     /**
@@ -1003,6 +1009,27 @@ class UsersModel implements ArrayAccess
     public function setDriverUnavailabilities($driver_unavailabilities)
     {
         $this->container['driver_unavailabilities'] = $driver_unavailabilities;
+
+        return $this;
+    }
+
+    /**
+     * Gets settings
+     * @return object
+     */
+    public function getSettings()
+    {
+        return $this->container['settings'];
+    }
+
+    /**
+     * Sets settings
+     * @param object $settings User-specific settings. Allowed keys: main_view. Pass null or {} to clear (returns {} if empty).
+     * @return $this
+     */
+    public function setSettings($settings)
+    {
+        $this->container['settings'] = $settings;
 
         return $this;
     }

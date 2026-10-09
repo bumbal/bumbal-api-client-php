@@ -133,6 +133,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for forceDeleteActivity
+     *
+     * Permanently delete a soft-deleted Activity.
+     *
+     */
+    public function testForceDeleteActivity()
+    {
+    }
+
+    /**
      * Test case for getActivityDuplicateStatus
      *
      * Check activity duplication job status.
@@ -189,6 +199,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testProcessActivityScheduledCommunicationUpdate()
+    {
+    }
+
+    /**
+     * Test case for restoreActivity
+     *
+     * Restore a soft-deleted Activity.
+     *
+     */
+    public function testRestoreActivity()
     {
     }
 

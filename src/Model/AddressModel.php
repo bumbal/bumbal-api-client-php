@@ -90,7 +90,9 @@ class AddressModel implements ArrayAccess
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'tag_names' => 'string[]',
-        'tags' => '\BumbalClient\Model\TagModel[]'
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'active' => 'int',
+        'removed' => 'int'
     ];
 
     /**
@@ -134,7 +136,9 @@ class AddressModel implements ArrayAccess
         'notes' => null,
         'files' => null,
         'tag_names' => null,
-        'tags' => null
+        'tags' => null,
+        'active' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -188,7 +192,9 @@ class AddressModel implements ArrayAccess
         'notes' => 'notes',
         'files' => 'files',
         'tag_names' => 'tag_names',
-        'tags' => 'tags'
+        'tags' => 'tags',
+        'active' => 'active',
+        'removed' => 'removed'
     ];
 
 
@@ -233,7 +239,9 @@ class AddressModel implements ArrayAccess
         'notes' => 'setNotes',
         'files' => 'setFiles',
         'tag_names' => 'setTagNames',
-        'tags' => 'setTags'
+        'tags' => 'setTags',
+        'active' => 'setActive',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -278,7 +286,9 @@ class AddressModel implements ArrayAccess
         'notes' => 'getNotes',
         'files' => 'getFiles',
         'tag_names' => 'getTagNames',
-        'tags' => 'getTags'
+        'tags' => 'getTags',
+        'active' => 'getActive',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -349,6 +359,8 @@ class AddressModel implements ArrayAccess
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -1152,11 +1164,54 @@ class AddressModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets active
+     * @return int
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int $active if active=0: address has been soft-deleted and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return int
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param int $removed if removed=1: address has been permanently removed
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1167,6 +1222,7 @@ class AddressModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1178,6 +1234,7 @@ class AddressModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1192,6 +1249,7 @@ class AddressModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

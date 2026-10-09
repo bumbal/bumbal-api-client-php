@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createVehicle**](VehicleApi.md#createVehicle) | **POST** /vehicle | Add a new vehicle
 [**deleteVehicle**](VehicleApi.md#deleteVehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle entry
+[**forceDeleteVehicle**](VehicleApi.md#forceDeleteVehicle) | **POST** /vehicle/force-delete/{id} | Permanently delete a soft-deleted Vehicle
+[**restoreVehicle**](VehicleApi.md#restoreVehicle) | **POST** /vehicle/restore/{id} | Restore a soft-deleted Vehicle
 [**retrieveListVehicle**](VehicleApi.md#retrieveListVehicle) | **PUT** /vehicle | Retrieve List of Vehicles
 [**retrieveVehicle**](VehicleApi.md#retrieveVehicle) | **GET** /vehicle/{vehicleId} | Find vehicle by ID
 [**setVehicle**](VehicleApi.md#setVehicle) | **POST** /vehicle/set | Set (create or update) a vehicle
@@ -117,6 +119,94 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **forceDeleteVehicle**
+> forceDeleteVehicle($id)
+
+Permanently delete a soft-deleted Vehicle
+
+Permanently deletes a soft-deleted Vehicle  by setting active=0, removed=1
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\VehicleApi();
+$id = 56; // int | ID of Vehicle to permanently delete
+
+try {
+    $api_instance->forceDeleteVehicle($id);
+} catch (Exception $e) {
+    echo 'Exception when calling VehicleApi->forceDeleteVehicle: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Vehicle to permanently delete |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **restoreVehicle**
+> restoreVehicle($id)
+
+Restore a soft-deleted Vehicle
+
+Restores a soft-deleted Vehicle  back to active state (active=1, removed=0)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\VehicleApi();
+$id = 56; // int | ID of Vehicle to restore
+
+try {
+    $api_instance->restoreVehicle($id);
+} catch (Exception $e) {
+    echo 'Exception when calling VehicleApi->restoreVehicle: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Vehicle to restore |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

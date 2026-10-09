@@ -139,12 +139,12 @@ class ZoneApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -231,12 +231,12 @@ class ZoneApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -270,7 +270,7 @@ class ZoneApi
      * Retrieve postcode validation rules
      *
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\InlineResponse2002
+     * @return \BumbalClient\Model\InlineResponse2003
      */
     public function getPostcodeValidationRules()
     {
@@ -284,7 +284,7 @@ class ZoneApi
      * Retrieve postcode validation rules
      *
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPostcodeValidationRulesWithHttpInfo()
     {
@@ -309,12 +309,12 @@ class ZoneApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -325,15 +325,15 @@ class ZoneApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\InlineResponse2002',
+                '\BumbalClient\Model\InlineResponse2003',
                 '/zone/postcode-validation-rules'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\InlineResponse2003', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\InlineResponse2002', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\InlineResponse2003', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -402,12 +402,12 @@ class ZoneApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -494,12 +494,12 @@ class ZoneApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -579,12 +579,12 @@ class ZoneApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -671,12 +671,12 @@ class ZoneApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call

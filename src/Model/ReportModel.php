@@ -56,6 +56,7 @@ class ReportModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name' => 'string',
+        'code' => 'string',
         'columns' => '\BumbalClient\Model\ReportColumnModel[]',
         'parameters' => '\BumbalClient\Model\ReportParamModel[]',
         'has_parent_report' => 'bool',
@@ -69,6 +70,7 @@ class ReportModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'name' => 'string',
+        'code' => 'string',
         'columns' => null,
         'parameters' => null,
         'has_parent_report' => 'boolean',
@@ -92,6 +94,7 @@ class ReportModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
+        'code' => 'code',
         'columns' => 'columns',
         'parameters' => 'parameters',
         'has_parent_report' => 'has_parent_report',
@@ -106,6 +109,7 @@ class ReportModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
+        'code' => 'setCode',
         'columns' => 'setColumns',
         'parameters' => 'setParameters',
         'has_parent_report' => 'setHasParentReport',
@@ -120,6 +124,7 @@ class ReportModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
+        'code' => 'getCode',
         'columns' => 'getColumns',
         'parameters' => 'getParameters',
         'has_parent_report' => 'getHasParentReport',
@@ -159,6 +164,7 @@ class ReportModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['columns'] = isset($data['columns']) ? $data['columns'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
         $this->container['has_parent_report'] = isset($data['has_parent_report']) ? $data['has_parent_report'] : null;
@@ -228,6 +234,27 @@ class ReportModel implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param string $code Code of the report template
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
 
         return $this;
     }
@@ -320,6 +347,7 @@ class ReportModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -330,6 +358,7 @@ class ReportModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -341,6 +370,7 @@ class ReportModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -355,6 +385,7 @@ class ReportModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

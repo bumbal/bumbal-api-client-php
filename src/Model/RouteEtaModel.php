@@ -121,6 +121,7 @@ class RouteEtaModel implements ArrayAccess
         'optimized' => 'bool',
         'blocked' => 'bool',
         'active' => 'bool',
+        'removed' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
         'planned_capacities' => 'map[string,\BumbalClient\Model\AppliedCapacityModel]',
@@ -213,6 +214,7 @@ class RouteEtaModel implements ArrayAccess
         'optimized' => null,
         'blocked' => null,
         'active' => null,
+        'removed' => null,
         'start_address' => null,
         'end_address' => null,
         'planned_capacities' => null,
@@ -315,6 +317,7 @@ class RouteEtaModel implements ArrayAccess
         'optimized' => 'optimized',
         'blocked' => 'blocked',
         'active' => 'active',
+        'removed' => 'removed',
         'start_address' => 'start_address',
         'end_address' => 'end_address',
         'planned_capacities' => 'planned_capacities',
@@ -408,6 +411,7 @@ class RouteEtaModel implements ArrayAccess
         'optimized' => 'setOptimized',
         'blocked' => 'setBlocked',
         'active' => 'setActive',
+        'removed' => 'setRemoved',
         'start_address' => 'setStartAddress',
         'end_address' => 'setEndAddress',
         'planned_capacities' => 'setPlannedCapacities',
@@ -501,6 +505,7 @@ class RouteEtaModel implements ArrayAccess
         'optimized' => 'getOptimized',
         'blocked' => 'getBlocked',
         'active' => 'getActive',
+        'removed' => 'getRemoved',
         'start_address' => 'getStartAddress',
         'end_address' => 'getEndAddress',
         'planned_capacities' => 'getPlannedCapacities',
@@ -655,6 +660,7 @@ class RouteEtaModel implements ArrayAccess
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['start_address'] = isset($data['start_address']) ? $data['start_address'] : null;
         $this->container['end_address'] = isset($data['end_address']) ? $data['end_address'] : null;
         $this->container['planned_capacities'] = isset($data['planned_capacities']) ? $data['planned_capacities'] : null;
@@ -2150,6 +2156,27 @@ class RouteEtaModel implements ArrayAccess
     }
 
     /**
+     * Gets removed
+     * @return bool
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param bool $removed Whether route is removed or not
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
+
+        return $this;
+    }
+
+    /**
      * Gets start_address
      * @return \BumbalClient\Model\AddressModel
      */
@@ -2531,6 +2558,7 @@ class RouteEtaModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2541,6 +2569,7 @@ class RouteEtaModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -2552,6 +2581,7 @@ class RouteEtaModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -2566,6 +2596,7 @@ class RouteEtaModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

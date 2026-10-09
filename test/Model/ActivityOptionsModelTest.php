@@ -615,4 +615,11 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeRouteCapacities()
     {
     }
+
+    /**
+     * Test attribute "include_soft_deletes_only"
+     */
+    public function testPropertyIncludeSoftDeletesOnly()
+    {
+    }
 }

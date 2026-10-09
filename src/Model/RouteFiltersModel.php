@@ -81,7 +81,8 @@ class RouteFiltersModel implements ArrayAccess
         'nr_of_stops' => 'int[]',
         'nr_of_stops_min' => 'int[]',
         'nr_of_stops_max' => 'int[]',
-        'search_text' => 'string'
+        'search_text' => 'string',
+        'capacity_filters' => '\BumbalClient\Model\RouteCapacityFilterModel[]'
     ];
 
     /**
@@ -116,7 +117,8 @@ class RouteFiltersModel implements ArrayAccess
         'nr_of_stops' => null,
         'nr_of_stops_min' => null,
         'nr_of_stops_max' => null,
-        'search_text' => null
+        'search_text' => null,
+        'capacity_filters' => null
     ];
 
     public static function swaggerTypes()
@@ -161,7 +163,8 @@ class RouteFiltersModel implements ArrayAccess
         'nr_of_stops' => 'nr_of_stops',
         'nr_of_stops_min' => 'nr_of_stops_min',
         'nr_of_stops_max' => 'nr_of_stops_max',
-        'search_text' => 'search_text'
+        'search_text' => 'search_text',
+        'capacity_filters' => 'capacity_filters'
     ];
 
 
@@ -197,7 +200,8 @@ class RouteFiltersModel implements ArrayAccess
         'nr_of_stops' => 'setNrOfStops',
         'nr_of_stops_min' => 'setNrOfStopsMin',
         'nr_of_stops_max' => 'setNrOfStopsMax',
-        'search_text' => 'setSearchText'
+        'search_text' => 'setSearchText',
+        'capacity_filters' => 'setCapacityFilters'
     ];
 
 
@@ -233,7 +237,8 @@ class RouteFiltersModel implements ArrayAccess
         'nr_of_stops' => 'getNrOfStops',
         'nr_of_stops_min' => 'getNrOfStopsMin',
         'nr_of_stops_max' => 'getNrOfStopsMax',
-        'search_text' => 'getSearchText'
+        'search_text' => 'getSearchText',
+        'capacity_filters' => 'getCapacityFilters'
     ];
 
     public static function attributeMap()
@@ -295,6 +300,7 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['nr_of_stops_min'] = isset($data['nr_of_stops_min']) ? $data['nr_of_stops_min'] : null;
         $this->container['nr_of_stops_max'] = isset($data['nr_of_stops_max']) ? $data['nr_of_stops_max'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['capacity_filters'] = isset($data['capacity_filters']) ? $data['capacity_filters'] : null;
     }
 
     /**
@@ -909,11 +915,33 @@ class RouteFiltersModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets capacity_filters
+     * @return \BumbalClient\Model\RouteCapacityFilterModel[]
+     */
+    public function getCapacityFilters()
+    {
+        return $this->container['capacity_filters'];
+    }
+
+    /**
+     * Sets capacity_filters
+     * @param \BumbalClient\Model\RouteCapacityFilterModel[] $capacity_filters Capacity-based filters. Each entry targets one capacity type. Filters use indexed route_capacity_statistic table.
+     * @return $this
+     */
+    public function setCapacityFilters($capacity_filters)
+    {
+        $this->container['capacity_filters'] = $capacity_filters;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -924,6 +952,7 @@ class RouteFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -935,6 +964,7 @@ class RouteFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -949,6 +979,7 @@ class RouteFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

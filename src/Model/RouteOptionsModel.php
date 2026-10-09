@@ -91,7 +91,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_applied_capacities_v2' => 'bool',
         'include_capacities' => 'bool',
         'include_recurrence' => 'bool',
-        'include_route_record_info' => 'bool'
+        'include_route_record_info' => 'bool',
+        'include_soft_deletes_only' => 'bool'
     ];
 
     /**
@@ -136,7 +137,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_applied_capacities_v2' => null,
         'include_capacities' => null,
         'include_recurrence' => null,
-        'include_route_record_info' => null
+        'include_route_record_info' => null,
+        'include_soft_deletes_only' => null
     ];
 
     public static function swaggerTypes()
@@ -191,7 +193,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_applied_capacities_v2' => 'include_applied_capacities_v2',
         'include_capacities' => 'include_capacities',
         'include_recurrence' => 'include_recurrence',
-        'include_route_record_info' => 'include_route_record_info'
+        'include_route_record_info' => 'include_route_record_info',
+        'include_soft_deletes_only' => 'include_soft_deletes_only'
     ];
 
 
@@ -237,7 +240,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_applied_capacities_v2' => 'setIncludeAppliedCapacitiesV2',
         'include_capacities' => 'setIncludeCapacities',
         'include_recurrence' => 'setIncludeRecurrence',
-        'include_route_record_info' => 'setIncludeRouteRecordInfo'
+        'include_route_record_info' => 'setIncludeRouteRecordInfo',
+        'include_soft_deletes_only' => 'setIncludeSoftDeletesOnly'
     ];
 
 
@@ -283,7 +287,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_applied_capacities_v2' => 'getIncludeAppliedCapacitiesV2',
         'include_capacities' => 'getIncludeCapacities',
         'include_recurrence' => 'getIncludeRecurrence',
-        'include_route_record_info' => 'getIncludeRouteRecordInfo'
+        'include_route_record_info' => 'getIncludeRouteRecordInfo',
+        'include_soft_deletes_only' => 'getIncludeSoftDeletesOnly'
     ];
 
     public static function attributeMap()
@@ -355,6 +360,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
         $this->container['include_recurrence'] = isset($data['include_recurrence']) ? $data['include_recurrence'] : null;
         $this->container['include_route_record_info'] = isset($data['include_route_record_info']) ? $data['include_route_record_info'] : null;
+        $this->container['include_soft_deletes_only'] = isset($data['include_soft_deletes_only']) ? $data['include_soft_deletes_only'] : null;
     }
 
     /**
@@ -1179,11 +1185,33 @@ class RouteOptionsModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets include_soft_deletes_only
+     * @return bool
+     */
+    public function getIncludeSoftDeletesOnly()
+    {
+        return $this->container['include_soft_deletes_only'];
+    }
+
+    /**
+     * Sets include_soft_deletes_only
+     * @param bool $include_soft_deletes_only When true, only returns soft-deleted objects
+     * @return $this
+     */
+    public function setIncludeSoftDeletesOnly($include_soft_deletes_only)
+    {
+        $this->container['include_soft_deletes_only'] = $include_soft_deletes_only;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1194,6 +1222,7 @@ class RouteOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1205,6 +1234,7 @@ class RouteOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1219,6 +1249,7 @@ class RouteOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

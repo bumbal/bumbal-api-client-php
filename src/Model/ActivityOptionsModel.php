@@ -130,7 +130,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_tags' => 'bool',
         'include_recurrence' => 'bool',
         'include_matching_route_ids' => 'bool',
-        'include_route_capacities' => 'bool'
+        'include_route_capacities' => 'bool',
+        'include_soft_deletes_only' => 'bool'
     ];
 
     /**
@@ -214,7 +215,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_tags' => null,
         'include_recurrence' => null,
         'include_matching_route_ids' => null,
-        'include_route_capacities' => null
+        'include_route_capacities' => null,
+        'include_soft_deletes_only' => null
     ];
 
     public static function swaggerTypes()
@@ -308,7 +310,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_tags' => 'include_activity_tags',
         'include_recurrence' => 'include_recurrence',
         'include_matching_route_ids' => 'include_matching_route_ids',
-        'include_route_capacities' => 'include_route_capacities'
+        'include_route_capacities' => 'include_route_capacities',
+        'include_soft_deletes_only' => 'include_soft_deletes_only'
     ];
 
 
@@ -393,7 +396,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_tags' => 'setIncludeActivityTags',
         'include_recurrence' => 'setIncludeRecurrence',
         'include_matching_route_ids' => 'setIncludeMatchingRouteIds',
-        'include_route_capacities' => 'setIncludeRouteCapacities'
+        'include_route_capacities' => 'setIncludeRouteCapacities',
+        'include_soft_deletes_only' => 'setIncludeSoftDeletesOnly'
     ];
 
 
@@ -478,7 +482,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_tags' => 'getIncludeActivityTags',
         'include_recurrence' => 'getIncludeRecurrence',
         'include_matching_route_ids' => 'getIncludeMatchingRouteIds',
-        'include_route_capacities' => 'getIncludeRouteCapacities'
+        'include_route_capacities' => 'getIncludeRouteCapacities',
+        'include_soft_deletes_only' => 'getIncludeSoftDeletesOnly'
     ];
 
     public static function attributeMap()
@@ -589,6 +594,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_recurrence'] = isset($data['include_recurrence']) ? $data['include_recurrence'] : null;
         $this->container['include_matching_route_ids'] = isset($data['include_matching_route_ids']) ? $data['include_matching_route_ids'] : null;
         $this->container['include_route_capacities'] = isset($data['include_route_capacities']) ? $data['include_route_capacities'] : null;
+        $this->container['include_soft_deletes_only'] = isset($data['include_soft_deletes_only']) ? $data['include_soft_deletes_only'] : null;
     }
 
     /**
@@ -627,7 +633,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets flat_structure
-     * @param bool $flat_structure default False. When set to true: some of the value lists will merge from      *     hierarchically lower or higher levels into the requested level
+     * @param bool $flat_structure default False. When set to true: some of the value lists will merge from      *     hierarchically lower or higher levels into the requested level. In combination with      *     apply_address_bundling and include_package_lines, the package_lines of the bundled      *     child activities are also rolled up onto their bundle parent for both regular bundles      *     and depot-bundle activities.
      * @return $this
      */
     public function setFlatStructure($flat_structure)
@@ -2232,11 +2238,33 @@ class ActivityOptionsModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets include_soft_deletes_only
+     * @return bool
+     */
+    public function getIncludeSoftDeletesOnly()
+    {
+        return $this->container['include_soft_deletes_only'];
+    }
+
+    /**
+     * Sets include_soft_deletes_only
+     * @param bool $include_soft_deletes_only When true, only returns soft-deleted objects
+     * @return $this
+     */
+    public function setIncludeSoftDeletesOnly($include_soft_deletes_only)
+    {
+        $this->container['include_soft_deletes_only'] = $include_soft_deletes_only;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -2247,6 +2275,7 @@ class ActivityOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -2258,6 +2287,7 @@ class ActivityOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -2272,6 +2302,7 @@ class ActivityOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

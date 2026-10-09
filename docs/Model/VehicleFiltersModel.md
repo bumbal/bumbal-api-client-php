@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **tag_names** | **string[]** | Tag names | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
+**active** | **int[]** | Active status of Vehicle, 0 values represent soft-deleted vehicles | [optional] 
+**removed** | **int[]** | Removed status of Vehicle | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

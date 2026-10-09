@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**retrieveFile**](FileApi.md#retrieveFile) | **GET** /file/{fileId} | Retrieve a File
 [**retrieveListFile**](FileApi.md#retrieveListFile) | **PUT** /file | Retrieve List of Files
 [**setFile**](FileApi.md#setFile) | **POST** /file/set | Create or Update a File Object
+[**uploadDocument**](FileApi.md#uploadDocument) | **POST** /file/upload-document | Upload a document or image file via multipart/form-data
 [**uploadSpreadsheet**](FileApi.md#uploadSpreadsheet) | **POST** /file/upload-spreadsheet | Upload a spreadsheet file (Excel) via multipart/form-data
 
 
@@ -282,12 +283,66 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **uploadDocument**
+> \BumbalClient\Model\ApiResponse uploadDocument($body)
+
+Upload a document or image file via multipart/form-data
+
+Accepts PDF, common image formats (jpg, jpeg, png, gif, bmp, webp, tiff, svg)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// Configure API key authorization: jwt
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$api_instance = new BumbalClient\Api\FileApi();
+$body = new \BumbalClient\Model\DocumentUploadArguments(); // \BumbalClient\Model\DocumentUploadArguments | Document/image file and metadata fields
+
+try {
+    $result = $api_instance->uploadDocument($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FileApi->uploadDocument: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\DocumentUploadArguments**](../Model/DocumentUploadArguments.md)| Document/image file and metadata fields |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [jwt](../../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **uploadSpreadsheet**
 > \BumbalClient\Model\ApiResponse uploadSpreadsheet($body)
 
 Upload a spreadsheet file (Excel) via multipart/form-data
 
-Accepts an Excel file (.xlsx or .xls) as binary multipart/form-data instead of base64.      *     Metadata fields are defined in SpreadsheetUploadArguments.
+Accepts an Excel file (.xlsx or .xls or .numbers) as binary multipart/form-data instead of base64.      *     Metadata fields are defined in SpreadsheetUploadArguments.
 
 ### Example
 ```php

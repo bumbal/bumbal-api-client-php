@@ -93,6 +93,26 @@ class VehicleApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for forceDeleteVehicle
+     *
+     * Permanently delete a soft-deleted Vehicle.
+     *
+     */
+    public function testForceDeleteVehicle()
+    {
+    }
+
+    /**
+     * Test case for restoreVehicle
+     *
+     * Restore a soft-deleted Vehicle.
+     *
+     */
+    public function testRestoreVehicle()
+    {
+    }
+
+    /**
      * Test case for retrieveListVehicle
      *
      * Retrieve List of Vehicles.

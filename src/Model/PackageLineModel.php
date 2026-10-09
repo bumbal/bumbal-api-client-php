@@ -83,7 +83,6 @@ class PackageLineModel implements ArrayAccess
         'hs_code' => 'string',
         'description' => 'string',
         'compartments' => '\BumbalClient\Model\CompartmentModel[]',
-        'active' => 'bool',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_links' => '\BumbalClient\Model\LinkModel[]',
@@ -97,7 +96,9 @@ class PackageLineModel implements ArrayAccess
         'package_line_created_at' => '\DateTime',
         'package_line_updated_at' => '\DateTime',
         'package_line_created_by' => 'int',
-        'package_line_updated_by' => 'int'
+        'package_line_updated_by' => 'int',
+        'active' => 'bool',
+        'removed' => 'int'
     ];
 
     /**
@@ -134,7 +135,6 @@ class PackageLineModel implements ArrayAccess
         'hs_code' => null,
         'description' => null,
         'compartments' => null,
-        'active' => null,
         'applied_capacities' => null,
         'capacities' => null,
         'activity_links' => null,
@@ -148,7 +148,9 @@ class PackageLineModel implements ArrayAccess
         'package_line_created_at' => 'date-time',
         'package_line_updated_at' => 'date-time',
         'package_line_created_by' => null,
-        'package_line_updated_by' => null
+        'package_line_updated_by' => null,
+        'active' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -195,7 +197,6 @@ class PackageLineModel implements ArrayAccess
         'hs_code' => 'hs_code',
         'description' => 'description',
         'compartments' => 'compartments',
-        'active' => 'active',
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'activity_links' => 'activity_links',
@@ -209,7 +210,9 @@ class PackageLineModel implements ArrayAccess
         'package_line_created_at' => 'package_line_created_at',
         'package_line_updated_at' => 'package_line_updated_at',
         'package_line_created_by' => 'package_line_created_by',
-        'package_line_updated_by' => 'package_line_updated_by'
+        'package_line_updated_by' => 'package_line_updated_by',
+        'active' => 'active',
+        'removed' => 'removed'
     ];
 
 
@@ -247,7 +250,6 @@ class PackageLineModel implements ArrayAccess
         'hs_code' => 'setHsCode',
         'description' => 'setDescription',
         'compartments' => 'setCompartments',
-        'active' => 'setActive',
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'activity_links' => 'setActivityLinks',
@@ -261,7 +263,9 @@ class PackageLineModel implements ArrayAccess
         'package_line_created_at' => 'setPackageLineCreatedAt',
         'package_line_updated_at' => 'setPackageLineUpdatedAt',
         'package_line_created_by' => 'setPackageLineCreatedBy',
-        'package_line_updated_by' => 'setPackageLineUpdatedBy'
+        'package_line_updated_by' => 'setPackageLineUpdatedBy',
+        'active' => 'setActive',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -299,7 +303,6 @@ class PackageLineModel implements ArrayAccess
         'hs_code' => 'getHsCode',
         'description' => 'getDescription',
         'compartments' => 'getCompartments',
-        'active' => 'getActive',
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'activity_links' => 'getActivityLinks',
@@ -313,7 +316,9 @@ class PackageLineModel implements ArrayAccess
         'package_line_created_at' => 'getPackageLineCreatedAt',
         'package_line_updated_at' => 'getPackageLineUpdatedAt',
         'package_line_created_by' => 'getPackageLineCreatedBy',
-        'package_line_updated_by' => 'getPackageLineUpdatedBy'
+        'package_line_updated_by' => 'getPackageLineUpdatedBy',
+        'active' => 'getActive',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -462,7 +467,6 @@ class PackageLineModel implements ArrayAccess
         $this->container['hs_code'] = isset($data['hs_code']) ? $data['hs_code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['compartments'] = isset($data['compartments']) ? $data['compartments'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['activity_links'] = isset($data['activity_links']) ? $data['activity_links'] : null;
@@ -477,6 +481,8 @@ class PackageLineModel implements ArrayAccess
         $this->container['package_line_updated_at'] = isset($data['package_line_updated_at']) ? $data['package_line_updated_at'] : null;
         $this->container['package_line_created_by'] = isset($data['package_line_created_by']) ? $data['package_line_created_by'] : null;
         $this->container['package_line_updated_by'] = isset($data['package_line_updated_by']) ? $data['package_line_updated_by'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -1219,27 +1225,6 @@ class PackageLineModel implements ArrayAccess
     }
 
     /**
-     * Gets active
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->container['active'];
-    }
-
-    /**
-     * Sets active
-     * @param bool $active if active=0: package line has been removed and is no longer visible in any bumbal interface
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->container['active'] = $active;
-
-        return $this;
-    }
-
-    /**
      * Gets applied_capacities
      * @return object
      */
@@ -1532,11 +1517,54 @@ class PackageLineModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active if active=0: package line has been removed and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return int
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param int $removed if removed=1: package line has been permanently removed
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1547,6 +1575,7 @@ class PackageLineModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1558,6 +1587,7 @@ class PackageLineModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1572,6 +1602,7 @@ class PackageLineModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -118,4 +118,11 @@ class ReportQueryArgumentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertySortingDirection()
     {
     }
+
+    /**
+     * Test attribute "parent_only"
+     */
+    public function testPropertyParentOnly()
+    {
+    }
 }

@@ -93,6 +93,26 @@ class PackagelineApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for forceDeletePackageLine
+     *
+     * Permanently delete a soft-deleted PackageLine.
+     *
+     */
+    public function testForceDeletePackageLine()
+    {
+    }
+
+    /**
+     * Test case for restorePackageLine
+     *
+     * Restore a soft-deleted PackageLine.
+     *
+     */
+    public function testRestorePackageLine()
+    {
+    }
+
+    /**
      * Test case for retrieveListPackageLine
      *
      * Retrieve List of PackageLines.

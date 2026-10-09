@@ -64,7 +64,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_meta_data' => 'bool',
         'include_address_files' => 'bool',
         'include_address_notes' => 'bool',
-        'include_links' => 'bool'
+        'include_links' => 'bool',
+        'include_soft_deletes_only' => 'bool'
     ];
 
     /**
@@ -82,7 +83,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_meta_data' => null,
         'include_address_files' => null,
         'include_address_notes' => null,
-        'include_links' => null
+        'include_links' => null,
+        'include_soft_deletes_only' => null
     ];
 
     public static function swaggerTypes()
@@ -110,7 +112,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_meta_data' => 'include_address_meta_data',
         'include_address_files' => 'include_address_files',
         'include_address_notes' => 'include_address_notes',
-        'include_links' => 'include_links'
+        'include_links' => 'include_links',
+        'include_soft_deletes_only' => 'include_soft_deletes_only'
     ];
 
 
@@ -129,7 +132,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_meta_data' => 'setIncludeAddressMetaData',
         'include_address_files' => 'setIncludeAddressFiles',
         'include_address_notes' => 'setIncludeAddressNotes',
-        'include_links' => 'setIncludeLinks'
+        'include_links' => 'setIncludeLinks',
+        'include_soft_deletes_only' => 'setIncludeSoftDeletesOnly'
     ];
 
 
@@ -148,7 +152,8 @@ class AddressOptionsModel implements ArrayAccess
         'include_address_meta_data' => 'getIncludeAddressMetaData',
         'include_address_files' => 'getIncludeAddressFiles',
         'include_address_notes' => 'getIncludeAddressNotes',
-        'include_links' => 'getIncludeLinks'
+        'include_links' => 'getIncludeLinks',
+        'include_soft_deletes_only' => 'getIncludeSoftDeletesOnly'
     ];
 
     public static function attributeMap()
@@ -193,6 +198,7 @@ class AddressOptionsModel implements ArrayAccess
         $this->container['include_address_files'] = isset($data['include_address_files']) ? $data['include_address_files'] : null;
         $this->container['include_address_notes'] = isset($data['include_address_notes']) ? $data['include_address_notes'] : null;
         $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
+        $this->container['include_soft_deletes_only'] = isset($data['include_soft_deletes_only']) ? $data['include_soft_deletes_only'] : null;
     }
 
     /**
@@ -450,11 +456,33 @@ class AddressOptionsModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets include_soft_deletes_only
+     * @return bool
+     */
+    public function getIncludeSoftDeletesOnly()
+    {
+        return $this->container['include_soft_deletes_only'];
+    }
+
+    /**
+     * Sets include_soft_deletes_only
+     * @param bool $include_soft_deletes_only When true, only returns soft-deleted objects
+     * @return $this
+     */
+    public function setIncludeSoftDeletesOnly($include_soft_deletes_only)
+    {
+        $this->container['include_soft_deletes_only'] = $include_soft_deletes_only;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -465,6 +493,7 @@ class AddressOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -476,6 +505,7 @@ class AddressOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -490,6 +520,7 @@ class AddressOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **include_vehicle_tags** | **bool** | Deprecated! use include_tags | [optional] 
 **include_tag_type_name** | **bool** | Deprecated! use include_tags | [optional] 
 **include_capacities** | **bool** |  | [optional] 
+**include_soft_deletes_only** | **bool** | When true, only returns soft-deleted objects | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

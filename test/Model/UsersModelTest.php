@@ -286,4 +286,11 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDriverUnavailabilities()
     {
     }
+
+    /**
+     * Test attribute "settings"
+     */
+    public function testPropertySettings()
+    {
+    }
 }

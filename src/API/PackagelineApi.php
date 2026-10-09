@@ -139,12 +139,12 @@ class PackagelineApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -231,12 +231,12 @@ class PackagelineApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -258,6 +258,162 @@ class PackagelineApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation forceDeletePackageLine
+     *
+     * Permanently delete a soft-deleted PackageLine
+     *
+     * @param int $id ID of PackageLine to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function forceDeletePackageLine($id)
+    {
+        list($response) = $this->forceDeletePackageLineWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation forceDeletePackageLineWithHttpInfo
+     *
+     * Permanently delete a soft-deleted PackageLine
+     *
+     * @param int $id ID of PackageLine to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function forceDeletePackageLineWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling forceDeletePackageLine');
+        }
+        // parse inputs
+        $resourcePath = "/package-line/force-delete/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/package-line/force-delete/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation restorePackageLine
+     *
+     * Restore a soft-deleted PackageLine
+     *
+     * @param int $id ID of PackageLine to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function restorePackageLine($id)
+    {
+        list($response) = $this->restorePackageLineWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation restorePackageLineWithHttpInfo
+     *
+     * Restore a soft-deleted PackageLine
+     *
+     * @param int $id ID of PackageLine to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function restorePackageLineWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling restorePackageLine');
+        }
+        // parse inputs
+        $resourcePath = "/package-line/restore/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/package-line/restore/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
             }
 
             throw $e;
@@ -320,12 +476,12 @@ class PackagelineApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -542,12 +698,12 @@ class PackagelineApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -627,12 +783,12 @@ class PackagelineApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -712,12 +868,12 @@ class PackagelineApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call

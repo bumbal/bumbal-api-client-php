@@ -538,6 +538,84 @@ class RouteApi
     }
 
     /**
+     * Operation forceDeleteRoute
+     *
+     * Permanently delete a soft-deleted Route
+     *
+     * @param int $id ID of Route to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function forceDeleteRoute($id)
+    {
+        list($response) = $this->forceDeleteRouteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation forceDeleteRouteWithHttpInfo
+     *
+     * Permanently delete a soft-deleted Route
+     *
+     * @param int $id ID of Route to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function forceDeleteRouteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling forceDeleteRoute');
+        }
+        // parse inputs
+        $resourcePath = "/route/force-delete/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/route/force-delete/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getExecutableActivities
      *
      * Returns all activities in this route which hav enot been executed yet.
@@ -712,6 +790,84 @@ class RouteApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\DuplicateStatusResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation restoreRoute
+     *
+     * Restore a soft-deleted Route
+     *
+     * @param int $id ID of Route to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function restoreRoute($id)
+    {
+        list($response) = $this->restoreRouteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation restoreRouteWithHttpInfo
+     *
+     * Restore a soft-deleted Route
+     *
+     * @param int $id ID of Route to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function restoreRouteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling restoreRoute');
+        }
+        // parse inputs
+        $resourcePath = "/route/restore/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/route/restore/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
             }
 
             throw $e;

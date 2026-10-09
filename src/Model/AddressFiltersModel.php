@@ -60,7 +60,9 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'int',
         'code' => 'string',
         'user_id' => 'int',
-        'links' => 'object[]'
+        'links' => 'object[]',
+        'active' => 'int[]',
+        'removed' => 'int[]'
     ];
 
     /**
@@ -74,7 +76,9 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => null,
         'code' => null,
         'user_id' => null,
-        'links' => null
+        'links' => null,
+        'active' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +102,9 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'party_id',
         'code' => 'code',
         'user_id' => 'user_id',
-        'links' => 'links'
+        'links' => 'links',
+        'active' => 'active',
+        'removed' => 'removed'
     ];
 
 
@@ -113,7 +119,9 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'setPartyId',
         'code' => 'setCode',
         'user_id' => 'setUserId',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'active' => 'setActive',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -128,7 +136,9 @@ class AddressFiltersModel implements ArrayAccess
         'party_id' => 'getPartyId',
         'code' => 'getCode',
         'user_id' => 'getUserId',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'active' => 'getActive',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -169,6 +179,8 @@ class AddressFiltersModel implements ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -342,11 +354,54 @@ class AddressFiltersModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets active
+     * @return int[]
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int[] $active Active status of Address, 0 values represent soft-deleted addresses
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return int[]
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param int[] $removed Removed status of Address
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -357,6 +412,7 @@ class AddressFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -368,6 +424,7 @@ class AddressFiltersModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -382,6 +439,7 @@ class AddressFiltersModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

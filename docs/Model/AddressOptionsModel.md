@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **include_address_files** | **bool** |  | [optional] 
 **include_address_notes** | **bool** |  | [optional] 
 **include_links** | **bool** |  | [optional] 
+**include_soft_deletes_only** | **bool** | When true, only returns soft-deleted objects | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

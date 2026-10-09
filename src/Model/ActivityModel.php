@@ -100,6 +100,7 @@ class ActivityModel implements ArrayAccess
         'preparation_duration' => 'int',
         'depot_duration' => 'int',
         'active' => 'bool',
+        'removed' => 'bool',
         'route_id' => 'string',
         'route_nr' => 'string',
         'route_name' => 'string',
@@ -182,6 +183,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'int',
         'transaction_total' => 'int',
         'due_total' => 'int',
+        'odd_service_windows_scheme_id' => 'int',
+        'even_service_windows_scheme_id' => 'int',
         'transactions' => '\BumbalClient\Model\TransactionModel[]'
     ];
 
@@ -236,6 +239,7 @@ class ActivityModel implements ArrayAccess
         'preparation_duration' => null,
         'depot_duration' => null,
         'active' => null,
+        'removed' => null,
         'route_id' => null,
         'route_nr' => null,
         'route_name' => null,
@@ -318,6 +322,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => null,
         'transaction_total' => null,
         'due_total' => null,
+        'odd_service_windows_scheme_id' => null,
+        'even_service_windows_scheme_id' => null,
         'transactions' => null
     ];
 
@@ -382,6 +388,7 @@ class ActivityModel implements ArrayAccess
         'preparation_duration' => 'preparation_duration',
         'depot_duration' => 'depot_duration',
         'active' => 'active',
+        'removed' => 'removed',
         'route_id' => 'route_id',
         'route_nr' => 'route_nr',
         'route_name' => 'route_name',
@@ -464,6 +471,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'payment_total',
         'transaction_total' => 'transaction_total',
         'due_total' => 'due_total',
+        'odd_service_windows_scheme_id' => 'odd_service_windows_scheme_id',
+        'even_service_windows_scheme_id' => 'even_service_windows_scheme_id',
         'transactions' => 'transactions'
     ];
 
@@ -519,6 +528,7 @@ class ActivityModel implements ArrayAccess
         'preparation_duration' => 'setPreparationDuration',
         'depot_duration' => 'setDepotDuration',
         'active' => 'setActive',
+        'removed' => 'setRemoved',
         'route_id' => 'setRouteId',
         'route_nr' => 'setRouteNr',
         'route_name' => 'setRouteName',
@@ -601,6 +611,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'setPaymentTotal',
         'transaction_total' => 'setTransactionTotal',
         'due_total' => 'setDueTotal',
+        'odd_service_windows_scheme_id' => 'setOddServiceWindowsSchemeId',
+        'even_service_windows_scheme_id' => 'setEvenServiceWindowsSchemeId',
         'transactions' => 'setTransactions'
     ];
 
@@ -656,6 +668,7 @@ class ActivityModel implements ArrayAccess
         'preparation_duration' => 'getPreparationDuration',
         'depot_duration' => 'getDepotDuration',
         'active' => 'getActive',
+        'removed' => 'getRemoved',
         'route_id' => 'getRouteId',
         'route_nr' => 'getRouteNr',
         'route_name' => 'getRouteName',
@@ -738,6 +751,8 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'getPaymentTotal',
         'transaction_total' => 'getTransactionTotal',
         'due_total' => 'getDueTotal',
+        'odd_service_windows_scheme_id' => 'getOddServiceWindowsSchemeId',
+        'even_service_windows_scheme_id' => 'getEvenServiceWindowsSchemeId',
         'transactions' => 'getTransactions'
     ];
 
@@ -1002,6 +1017,7 @@ class ActivityModel implements ArrayAccess
         $this->container['preparation_duration'] = isset($data['preparation_duration']) ? $data['preparation_duration'] : null;
         $this->container['depot_duration'] = isset($data['depot_duration']) ? $data['depot_duration'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['route_nr'] = isset($data['route_nr']) ? $data['route_nr'] : null;
         $this->container['route_name'] = isset($data['route_name']) ? $data['route_name'] : null;
@@ -1084,6 +1100,8 @@ class ActivityModel implements ArrayAccess
         $this->container['payment_total'] = isset($data['payment_total']) ? $data['payment_total'] : null;
         $this->container['transaction_total'] = isset($data['transaction_total']) ? $data['transaction_total'] : null;
         $this->container['due_total'] = isset($data['due_total']) ? $data['due_total'] : null;
+        $this->container['odd_service_windows_scheme_id'] = isset($data['odd_service_windows_scheme_id']) ? $data['odd_service_windows_scheme_id'] : null;
+        $this->container['even_service_windows_scheme_id'] = isset($data['even_service_windows_scheme_id']) ? $data['even_service_windows_scheme_id'] : null;
         $this->container['transactions'] = isset($data['transactions']) ? $data['transactions'] : null;
     }
 
@@ -2149,6 +2167,27 @@ class ActivityModel implements ArrayAccess
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return bool
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param bool $removed Whether activity is removed or not
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
 
         return $this;
     }
@@ -3885,6 +3924,48 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets odd_service_windows_scheme_id
+     * @return int
+     */
+    public function getOddServiceWindowsSchemeId()
+    {
+        return $this->container['odd_service_windows_scheme_id'];
+    }
+
+    /**
+     * Sets odd_service_windows_scheme_id
+     * @param int $odd_service_windows_scheme_id Service windows scheme ID for odd weeks. readonly
+     * @return $this
+     */
+    public function setOddServiceWindowsSchemeId($odd_service_windows_scheme_id)
+    {
+        $this->container['odd_service_windows_scheme_id'] = $odd_service_windows_scheme_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets even_service_windows_scheme_id
+     * @return int
+     */
+    public function getEvenServiceWindowsSchemeId()
+    {
+        return $this->container['even_service_windows_scheme_id'];
+    }
+
+    /**
+     * Sets even_service_windows_scheme_id
+     * @param int $even_service_windows_scheme_id Service windows scheme ID for even weeks. readonly
+     * @return $this
+     */
+    public function setEvenServiceWindowsSchemeId($even_service_windows_scheme_id)
+    {
+        $this->container['even_service_windows_scheme_id'] = $even_service_windows_scheme_id;
+
+        return $this;
+    }
+
+    /**
      * Gets transactions
      * @return \BumbalClient\Model\TransactionModel[]
      */
@@ -3909,6 +3990,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -3919,6 +4001,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -3930,6 +4013,7 @@ class ActivityModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -3944,6 +4028,7 @@ class ActivityModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -342,4 +342,11 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeRouteRecordInfo()
     {
     }
+
+    /**
+     * Test attribute "include_soft_deletes_only"
+     */
+    public function testPropertyIncludeSoftDeletesOnly()
+    {
+    }
 }

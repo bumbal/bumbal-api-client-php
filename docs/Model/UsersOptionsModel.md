@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **include_zones** | **bool** |  | [optional] 
 **include_driver_unavailabilities** | **bool** |  | [optional] 
 **include_links** | **bool** |  | [optional] 
+**include_soft_deletes_only** | **bool** | When true, only returns soft-deleted objects | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

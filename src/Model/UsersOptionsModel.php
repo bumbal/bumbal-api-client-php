@@ -61,7 +61,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_pause' => 'bool',
         'include_zones' => 'bool',
         'include_driver_unavailabilities' => 'bool',
-        'include_links' => 'bool'
+        'include_links' => 'bool',
+        'include_soft_deletes_only' => 'bool'
     ];
 
     /**
@@ -76,7 +77,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_pause' => null,
         'include_zones' => null,
         'include_driver_unavailabilities' => null,
-        'include_links' => null
+        'include_links' => null,
+        'include_soft_deletes_only' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_pause' => 'include_pause',
         'include_zones' => 'include_zones',
         'include_driver_unavailabilities' => 'include_driver_unavailabilities',
-        'include_links' => 'include_links'
+        'include_links' => 'include_links',
+        'include_soft_deletes_only' => 'include_soft_deletes_only'
     ];
 
 
@@ -117,7 +120,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_pause' => 'setIncludePause',
         'include_zones' => 'setIncludeZones',
         'include_driver_unavailabilities' => 'setIncludeDriverUnavailabilities',
-        'include_links' => 'setIncludeLinks'
+        'include_links' => 'setIncludeLinks',
+        'include_soft_deletes_only' => 'setIncludeSoftDeletesOnly'
     ];
 
 
@@ -133,7 +137,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_pause' => 'getIncludePause',
         'include_zones' => 'getIncludeZones',
         'include_driver_unavailabilities' => 'getIncludeDriverUnavailabilities',
-        'include_links' => 'getIncludeLinks'
+        'include_links' => 'getIncludeLinks',
+        'include_soft_deletes_only' => 'getIncludeSoftDeletesOnly'
     ];
 
     public static function attributeMap()
@@ -175,6 +180,7 @@ class UsersOptionsModel implements ArrayAccess
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_driver_unavailabilities'] = isset($data['include_driver_unavailabilities']) ? $data['include_driver_unavailabilities'] : null;
         $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
+        $this->container['include_soft_deletes_only'] = isset($data['include_soft_deletes_only']) ? $data['include_soft_deletes_only'] : null;
     }
 
     /**
@@ -366,6 +372,27 @@ class UsersOptionsModel implements ArrayAccess
     public function setIncludeLinks($include_links)
     {
         $this->container['include_links'] = $include_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_soft_deletes_only
+     * @return bool
+     */
+    public function getIncludeSoftDeletesOnly()
+    {
+        return $this->container['include_soft_deletes_only'];
+    }
+
+    /**
+     * Sets include_soft_deletes_only
+     * @param bool $include_soft_deletes_only When true, only returns soft-deleted objects
+     * @return $this
+     */
+    public function setIncludeSoftDeletesOnly($include_soft_deletes_only)
+    {
+        $this->container['include_soft_deletes_only'] = $include_soft_deletes_only;
 
         return $this;
     }

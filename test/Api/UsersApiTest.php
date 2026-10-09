@@ -93,6 +93,26 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for forceDeleteUser
+     *
+     * Permanently delete a soft-deleted User.
+     *
+     */
+    public function testForceDeleteUser()
+    {
+    }
+
+    /**
+     * Test case for restoreUser
+     *
+     * Restore a soft-deleted User.
+     *
+     */
+    public function testRestoreUser()
+    {
+    }
+
+    /**
      * Test case for retrieveListUserNotification
      *
      * Retrieve List of UserNotification.

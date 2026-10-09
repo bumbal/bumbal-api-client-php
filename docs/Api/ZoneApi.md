@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPostcodeValidationRules**
-> \BumbalClient\Model\InlineResponse2002 getPostcodeValidationRules()
+> \BumbalClient\Model\InlineResponse2003 getPostcodeValidationRules()
 
 Retrieve postcode validation rules
 
@@ -158,7 +158,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\BumbalClient\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 

@@ -152,12 +152,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -244,12 +244,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -271,6 +271,162 @@ class UsersApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation forceDeleteUser
+     *
+     * Permanently delete a soft-deleted User
+     *
+     * @param int $id ID of User to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function forceDeleteUser($id)
+    {
+        list($response) = $this->forceDeleteUserWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation forceDeleteUserWithHttpInfo
+     *
+     * Permanently delete a soft-deleted User
+     *
+     * @param int $id ID of User to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function forceDeleteUserWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling forceDeleteUser');
+        }
+        // parse inputs
+        $resourcePath = "/users/force-delete/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/users/force-delete/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation restoreUser
+     *
+     * Restore a soft-deleted User
+     *
+     * @param int $id ID of User to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function restoreUser($id)
+    {
+        list($response) = $this->restoreUserWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation restoreUserWithHttpInfo
+     *
+     * Restore a soft-deleted User
+     *
+     * @param int $id ID of User to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function restoreUserWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling restoreUser');
+        }
+        // parse inputs
+        $resourcePath = "/users/restore/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/users/restore/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
             }
 
             throw $e;
@@ -333,12 +489,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -434,12 +590,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -574,12 +730,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -659,12 +815,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -744,12 +900,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -848,12 +1004,12 @@ class UsersApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call

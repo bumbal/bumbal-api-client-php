@@ -78,7 +78,9 @@ class VehicleModel implements ArrayAccess
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'updated_by_name' => 'string'
+        'updated_by_name' => 'string',
+        'active' => 'int',
+        'removed' => 'int'
     ];
 
     /**
@@ -110,7 +112,9 @@ class VehicleModel implements ArrayAccess
         'files' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
-        'updated_by_name' => null
+        'updated_by_name' => null,
+        'active' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -152,7 +156,9 @@ class VehicleModel implements ArrayAccess
         'files' => 'files',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
-        'updated_by_name' => 'updated_by_name'
+        'updated_by_name' => 'updated_by_name',
+        'active' => 'active',
+        'removed' => 'removed'
     ];
 
 
@@ -185,7 +191,9 @@ class VehicleModel implements ArrayAccess
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
-        'updated_by_name' => 'setUpdatedByName'
+        'updated_by_name' => 'setUpdatedByName',
+        'active' => 'setActive',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -218,7 +226,9 @@ class VehicleModel implements ArrayAccess
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
-        'updated_by_name' => 'getUpdatedByName'
+        'updated_by_name' => 'getUpdatedByName',
+        'active' => 'getActive',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -313,6 +323,8 @@ class VehicleModel implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -903,6 +915,48 @@ class VehicleModel implements ArrayAccess
     public function setUpdatedByName($updated_by_name)
     {
         $this->container['updated_by_name'] = $updated_by_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return int
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int $active if active=0: vehicle has been soft-deleted and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return int
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param int $removed if removed=1: vehicle has been permanently removed
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
 
         return $this;
     }

@@ -75,7 +75,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_files' => 'bool',
         'include_package_line_files_meta_data' => 'bool',
         'include_action_type_name' => 'bool',
-        'include_packagelines_for_whole_route_on_start_activity' => 'bool'
+        'include_packagelines_for_whole_route_on_start_activity' => 'bool',
+        'include_soft_deletes_only' => 'bool'
     ];
 
     /**
@@ -104,7 +105,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_files' => null,
         'include_package_line_files_meta_data' => null,
         'include_action_type_name' => null,
-        'include_packagelines_for_whole_route_on_start_activity' => null
+        'include_packagelines_for_whole_route_on_start_activity' => null,
+        'include_soft_deletes_only' => null
     ];
 
     public static function swaggerTypes()
@@ -143,7 +145,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_files' => 'include_package_line_files',
         'include_package_line_files_meta_data' => 'include_package_line_files_meta_data',
         'include_action_type_name' => 'include_action_type_name',
-        'include_packagelines_for_whole_route_on_start_activity' => 'include_packagelines_for_whole_route_on_start_activity'
+        'include_packagelines_for_whole_route_on_start_activity' => 'include_packagelines_for_whole_route_on_start_activity',
+        'include_soft_deletes_only' => 'include_soft_deletes_only'
     ];
 
 
@@ -173,7 +176,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_files' => 'setIncludePackageLineFiles',
         'include_package_line_files_meta_data' => 'setIncludePackageLineFilesMetaData',
         'include_action_type_name' => 'setIncludeActionTypeName',
-        'include_packagelines_for_whole_route_on_start_activity' => 'setIncludePackagelinesForWholeRouteOnStartActivity'
+        'include_packagelines_for_whole_route_on_start_activity' => 'setIncludePackagelinesForWholeRouteOnStartActivity',
+        'include_soft_deletes_only' => 'setIncludeSoftDeletesOnly'
     ];
 
 
@@ -203,7 +207,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_files' => 'getIncludePackageLineFiles',
         'include_package_line_files_meta_data' => 'getIncludePackageLineFilesMetaData',
         'include_action_type_name' => 'getIncludeActionTypeName',
-        'include_packagelines_for_whole_route_on_start_activity' => 'getIncludePackagelinesForWholeRouteOnStartActivity'
+        'include_packagelines_for_whole_route_on_start_activity' => 'getIncludePackagelinesForWholeRouteOnStartActivity',
+        'include_soft_deletes_only' => 'getIncludeSoftDeletesOnly'
     ];
 
     public static function attributeMap()
@@ -259,6 +264,7 @@ class PackageLineOptionsModel implements ArrayAccess
         $this->container['include_package_line_files_meta_data'] = isset($data['include_package_line_files_meta_data']) ? $data['include_package_line_files_meta_data'] : null;
         $this->container['include_action_type_name'] = isset($data['include_action_type_name']) ? $data['include_action_type_name'] : null;
         $this->container['include_packagelines_for_whole_route_on_start_activity'] = isset($data['include_packagelines_for_whole_route_on_start_activity']) ? $data['include_packagelines_for_whole_route_on_start_activity'] : null;
+        $this->container['include_soft_deletes_only'] = isset($data['include_soft_deletes_only']) ? $data['include_soft_deletes_only'] : null;
     }
 
     /**
@@ -747,11 +753,33 @@ class PackageLineOptionsModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets include_soft_deletes_only
+     * @return bool
+     */
+    public function getIncludeSoftDeletesOnly()
+    {
+        return $this->container['include_soft_deletes_only'];
+    }
+
+    /**
+     * Sets include_soft_deletes_only
+     * @param bool $include_soft_deletes_only When true, only returns soft-deleted objects
+     * @return $this
+     */
+    public function setIncludeSoftDeletesOnly($include_soft_deletes_only)
+    {
+        $this->container['include_soft_deletes_only'] = $include_soft_deletes_only;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -762,6 +790,7 @@ class PackageLineOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -773,6 +802,7 @@ class PackageLineOptionsModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -787,6 +817,7 @@ class PackageLineOptionsModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

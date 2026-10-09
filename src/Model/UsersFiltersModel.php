@@ -63,7 +63,9 @@ class UsersFiltersModel implements ArrayAccess
         'zone_names' => 'string[]',
         'system' => 'bool[]',
         'activated' => 'bool[]',
-        'email' => 'string[]'
+        'email' => 'string[]',
+        'active' => 'int[]',
+        'removed' => 'int[]'
     ];
 
     /**
@@ -80,7 +82,9 @@ class UsersFiltersModel implements ArrayAccess
         'zone_names' => null,
         'system' => null,
         'activated' => null,
-        'email' => null
+        'email' => null,
+        'active' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -107,7 +111,9 @@ class UsersFiltersModel implements ArrayAccess
         'zone_names' => 'zone_names',
         'system' => 'system',
         'activated' => 'activated',
-        'email' => 'email'
+        'email' => 'email',
+        'active' => 'active',
+        'removed' => 'removed'
     ];
 
 
@@ -125,7 +131,9 @@ class UsersFiltersModel implements ArrayAccess
         'zone_names' => 'setZoneNames',
         'system' => 'setSystem',
         'activated' => 'setActivated',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'active' => 'setActive',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -143,7 +151,9 @@ class UsersFiltersModel implements ArrayAccess
         'zone_names' => 'getZoneNames',
         'system' => 'getSystem',
         'activated' => 'getActivated',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'active' => 'getActive',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -187,6 +197,8 @@ class UsersFiltersModel implements ArrayAccess
         $this->container['system'] = isset($data['system']) ? $data['system'] : null;
         $this->container['activated'] = isset($data['activated']) ? $data['activated'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -420,6 +432,48 @@ class UsersFiltersModel implements ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return int[]
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int[] $active Active status of User, 0 values represent soft-deleted users
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return int[]
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param int[] $removed Removed status of User
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
 
         return $this;
     }

@@ -59,6 +59,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'uuid' => 'string',
         'type' => 'string',
         'object_count' => 'int',
+        'future_count' => 'int',
         'rule' => 'string',
         'rule_readable' => 'string',
         'create_ahead' => 'int',
@@ -79,6 +80,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'uuid' => null,
         'type' => null,
         'object_count' => null,
+        'future_count' => null,
         'rule' => null,
         'rule_readable' => null,
         'create_ahead' => 'int64',
@@ -109,6 +111,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'uuid' => 'uuid',
         'type' => 'type',
         'object_count' => 'object_count',
+        'future_count' => 'future_count',
         'rule' => 'rule',
         'rule_readable' => 'rule_readable',
         'create_ahead' => 'create_ahead',
@@ -130,6 +133,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'uuid' => 'setUuid',
         'type' => 'setType',
         'object_count' => 'setObjectCount',
+        'future_count' => 'setFutureCount',
         'rule' => 'setRule',
         'rule_readable' => 'setRuleReadable',
         'create_ahead' => 'setCreateAhead',
@@ -151,6 +155,7 @@ class RecurrenceServiceModel implements ArrayAccess
         'uuid' => 'getUuid',
         'type' => 'getType',
         'object_count' => 'getObjectCount',
+        'future_count' => 'getFutureCount',
         'rule' => 'getRule',
         'rule_readable' => 'getRuleReadable',
         'create_ahead' => 'getCreateAhead',
@@ -211,6 +216,7 @@ class RecurrenceServiceModel implements ArrayAccess
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['object_count'] = isset($data['object_count']) ? $data['object_count'] : null;
+        $this->container['future_count'] = isset($data['future_count']) ? $data['future_count'] : null;
         $this->container['rule'] = isset($data['rule']) ? $data['rule'] : null;
         $this->container['rule_readable'] = isset($data['rule_readable']) ? $data['rule_readable'] : null;
         $this->container['create_ahead'] = isset($data['create_ahead']) ? $data['create_ahead'] : null;
@@ -368,6 +374,27 @@ class RecurrenceServiceModel implements ArrayAccess
     public function setObjectCount($object_count)
     {
         $this->container['object_count'] = $object_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets future_count
+     * @return int
+     */
+    public function getFutureCount()
+    {
+        return $this->container['future_count'];
+    }
+
+    /**
+     * Sets future_count
+     * @param int $future_count number of future objects to be created by this recurrence
+     * @return $this
+     */
+    public function setFutureCount($future_count)
+    {
+        $this->container['future_count'] = $future_count;
 
         return $this;
     }
@@ -544,6 +571,7 @@ class RecurrenceServiceModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -554,6 +582,7 @@ class RecurrenceServiceModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -565,6 +594,7 @@ class RecurrenceServiceModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -579,6 +609,7 @@ class RecurrenceServiceModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

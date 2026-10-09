@@ -132,4 +132,11 @@ class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertySys()
     {
     }
+
+    /**
+     * Test attribute "display_order"
+     */
+    public function testPropertyDisplayOrder()
+    {
+    }
 }

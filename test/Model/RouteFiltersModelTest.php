@@ -272,4 +272,11 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertySearchText()
     {
     }
+
+    /**
+     * Test attribute "capacity_filters"
+     */
+    public function testPropertyCapacityFilters()
+    {
+    }
 }

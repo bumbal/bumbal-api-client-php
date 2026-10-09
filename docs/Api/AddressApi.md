@@ -5,7 +5,9 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteAddress**](AddressApi.md#deleteAddress) | **DELETE** /address/{addressId} | Delete an address
+[**forceDeleteAddress**](AddressApi.md#forceDeleteAddress) | **POST** /address/force-delete/{id} | Permanently delete a soft-deleted Address
 [**geoCodeAddress**](AddressApi.md#geoCodeAddress) | **POST** /address/geo-code | GeoCode an address
+[**restoreAddress**](AddressApi.md#restoreAddress) | **POST** /address/restore/{id} | Restore a soft-deleted Address
 [**retrieveAddress**](AddressApi.md#retrieveAddress) | **GET** /address/{addressId} | Retrieve a Address
 [**retrieveListAddress**](AddressApi.md#retrieveListAddress) | **PUT** /address | Retrieve List of Addresses
 [**reverseGeoCodeAddress**](AddressApi.md#reverseGeoCodeAddress) | **POST** /address/reverse-geo-code | Reverse Geo Code an address
@@ -69,6 +71,50 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **forceDeleteAddress**
+> forceDeleteAddress($id)
+
+Permanently delete a soft-deleted Address
+
+Permanently deletes a soft-deleted Address  by setting active=0, removed=1
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\AddressApi();
+$id = 56; // int | ID of Address to permanently delete
+
+try {
+    $api_instance->forceDeleteAddress($id);
+} catch (Exception $e) {
+    echo 'Exception when calling AddressApi->forceDeleteAddress: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Address to permanently delete |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **geoCodeAddress**
 > \BumbalClient\Model\AddressGeoCodeResponse geoCodeAddress($arguments)
 
@@ -120,6 +166,50 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **restoreAddress**
+> restoreAddress($id)
+
+Restore a soft-deleted Address
+
+Restores a soft-deleted Address  back to active state (active=1, removed=0)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\AddressApi();
+$id = 56; // int | ID of Address to restore
+
+try {
+    $api_instance->restoreAddress($id);
+} catch (Exception $e) {
+    echo 'Exception when calling AddressApi->restoreAddress: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Address to restore |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

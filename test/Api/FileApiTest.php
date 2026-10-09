@@ -123,6 +123,16 @@ class FileApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for uploadDocument
+     *
+     * Upload a document or image file via multipart/form-data.
+     *
+     */
+    public function testUploadDocument()
+    {
+    }
+
+    /**
      * Test case for uploadSpreadsheet
      *
      * Upload a spreadsheet file (Excel) via multipart/form-data.

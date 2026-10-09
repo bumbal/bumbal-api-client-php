@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **uuid** | **string** | UUID | [optional] 
 **type** | **string** | recurrence type, activity, route | [optional] 
 **object_count** | **int** | number of objects created by this recurrence | [optional] 
+**future_count** | **int** | number of future objects to be created by this recurrence | [optional] 
 **rule** | **string** | recurrence rule | [optional] 
 **rule_readable** | **string** | recurrence rule readable | [optional] 
 **create_ahead** | **int** | How many days ahead to create recurrences | [optional] 

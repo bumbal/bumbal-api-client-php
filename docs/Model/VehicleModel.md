@@ -28,6 +28,8 @@ Name | Type | Description | Notes
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **updated_by_name** | **string** | Vehicle updated by user full name | [optional] 
+**active** | **int** | if active&#x3D;0: vehicle has been soft-deleted and is no longer visible in any bumbal interface | [optional] 
+**removed** | **int** | if removed&#x3D;1: vehicle has been permanently removed | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

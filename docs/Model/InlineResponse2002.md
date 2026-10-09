@@ -3,8 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**country_rules** | **object** | Map of 2-letter country codes to postal code regex patterns. | [optional] 
-**default_rule** | **string** |  | [optional] 
+**items** | [**null[]**](.md) |  | [optional] 
+**count_filtered** | **int** | Options matching search_text | [optional] 
+**count_unfiltered** | **int** | Total options before filtering | [optional] 
+**count_limited** | **int** | Options in the current page | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

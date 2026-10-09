@@ -118,4 +118,18 @@ class VehicleFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUpdatedAtTill()
     {
     }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
 }

@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **include_package_line_files_meta_data** | **bool** |  | [optional] 
 **include_action_type_name** | **bool** |  | [optional] 
 **include_packagelines_for_whole_route_on_start_activity** | **bool** |  | [optional] 
+**include_soft_deletes_only** | **bool** | When true, only returns soft-deleted objects | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -113,6 +113,13 @@ class RecurrenceServiceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "future_count"
+     */
+    public function testPropertyFutureCount()
+    {
+    }
+
+    /**
      * Test attribute "rule"
      */
     public function testPropertyRule()

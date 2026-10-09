@@ -92,6 +92,13 @@ class ReportModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+    }
+
+    /**
      * Test attribute "columns"
      */
     public function testPropertyColumns()

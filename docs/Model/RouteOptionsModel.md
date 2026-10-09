@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **include_capacities** | **bool** |  | [optional] 
 **include_recurrence** | **bool** |  | [optional] 
 **include_route_record_info** | **bool** |  | [optional] 
+**include_soft_deletes_only** | **bool** | When true, only returns soft-deleted objects | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

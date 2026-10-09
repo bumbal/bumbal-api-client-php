@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **driver_unavailabilities** | [**\BumbalClient\Model\DriverUnavailabilityModel[]**](DriverUnavailabilityModel.md) |  | [optional] 
+**settings** | **object** | User-specific settings. Allowed keys: main_view. Pass null or {} to clear (returns {} if empty). | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

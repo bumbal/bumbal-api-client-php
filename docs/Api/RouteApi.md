@@ -9,8 +9,10 @@ Method | HTTP request | Description
 [**deleteRoute**](RouteApi.md#deleteRoute) | **DELETE** /route/{routeId} | Delete an Route
 [**detachRoutesFromRecurrence**](RouteApi.md#detachRoutesFromRecurrence) | **POST** /route/detach-from-recurrence | detach routes from specified recurrence
 [**duplicateRoutes**](RouteApi.md#duplicateRoutes) | **POST** /route/duplicate | Bulk duplicate routes
+[**forceDeleteRoute**](RouteApi.md#forceDeleteRoute) | **POST** /route/force-delete/{id} | Permanently delete a soft-deleted Route
 [**getExecutableActivities**](RouteApi.md#getExecutableActivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
 [**getRouteDuplicateStatus**](RouteApi.md#getRouteDuplicateStatus) | **GET** /route/duplicate/status/{token} | Check route duplication job status
+[**restoreRoute**](RouteApi.md#restoreRoute) | **POST** /route/restore/{id} | Restore a soft-deleted Route
 [**retrieveListRoute**](RouteApi.md#retrieveListRoute) | **PUT** /route | Retrieve List of Routes
 [**retrieveRoute**](RouteApi.md#retrieveRoute) | **GET** /route/{routeId} | Retrieve a Route
 [**routeStoreGeoLocations**](RouteApi.md#routeStoreGeoLocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
@@ -291,6 +293,50 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **forceDeleteRoute**
+> forceDeleteRoute($id)
+
+Permanently delete a soft-deleted Route
+
+Permanently deletes a soft-deleted Route  by setting active=0, removed=1
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\RouteApi();
+$id = 56; // int | ID of Route to permanently delete
+
+try {
+    $api_instance->forceDeleteRoute($id);
+} catch (Exception $e) {
+    echo 'Exception when calling RouteApi->forceDeleteRoute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Route to permanently delete |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getExecutableActivities**
 > \BumbalClient\Model\ApiResponse getExecutableActivities($arguments)
 
@@ -396,6 +442,50 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **restoreRoute**
+> restoreRoute($id)
+
+Restore a soft-deleted Route
+
+Restores a soft-deleted Route  back to active state (active=1, removed=0)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\RouteApi();
+$id = 56; // int | ID of Route to restore
+
+try {
+    $api_instance->restoreRoute($id);
+} catch (Exception $e) {
+    echo 'Exception when calling RouteApi->restoreRoute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of Route to restore |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

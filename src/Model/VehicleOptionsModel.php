@@ -62,7 +62,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_links' => 'bool',
         'include_vehicle_tags' => 'bool',
         'include_tag_type_name' => 'bool',
-        'include_capacities' => 'bool'
+        'include_capacities' => 'bool',
+        'include_soft_deletes_only' => 'bool'
     ];
 
     /**
@@ -78,7 +79,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_links' => null,
         'include_vehicle_tags' => null,
         'include_tag_type_name' => null,
-        'include_capacities' => null
+        'include_capacities' => null,
+        'include_soft_deletes_only' => null
     ];
 
     public static function swaggerTypes()
@@ -104,7 +106,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_links' => 'include_vehicle_links',
         'include_vehicle_tags' => 'include_vehicle_tags',
         'include_tag_type_name' => 'include_tag_type_name',
-        'include_capacities' => 'include_capacities'
+        'include_capacities' => 'include_capacities',
+        'include_soft_deletes_only' => 'include_soft_deletes_only'
     ];
 
 
@@ -121,7 +124,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_links' => 'setIncludeVehicleLinks',
         'include_vehicle_tags' => 'setIncludeVehicleTags',
         'include_tag_type_name' => 'setIncludeTagTypeName',
-        'include_capacities' => 'setIncludeCapacities'
+        'include_capacities' => 'setIncludeCapacities',
+        'include_soft_deletes_only' => 'setIncludeSoftDeletesOnly'
     ];
 
 
@@ -138,7 +142,8 @@ class VehicleOptionsModel implements ArrayAccess
         'include_vehicle_links' => 'getIncludeVehicleLinks',
         'include_vehicle_tags' => 'getIncludeVehicleTags',
         'include_tag_type_name' => 'getIncludeTagTypeName',
-        'include_capacities' => 'getIncludeCapacities'
+        'include_capacities' => 'getIncludeCapacities',
+        'include_soft_deletes_only' => 'getIncludeSoftDeletesOnly'
     ];
 
     public static function attributeMap()
@@ -181,6 +186,7 @@ class VehicleOptionsModel implements ArrayAccess
         $this->container['include_vehicle_tags'] = isset($data['include_vehicle_tags']) ? $data['include_vehicle_tags'] : null;
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
+        $this->container['include_soft_deletes_only'] = isset($data['include_soft_deletes_only']) ? $data['include_soft_deletes_only'] : null;
     }
 
     /**
@@ -393,6 +399,27 @@ class VehicleOptionsModel implements ArrayAccess
     public function setIncludeCapacities($include_capacities)
     {
         $this->container['include_capacities'] = $include_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_soft_deletes_only
+     * @return bool
+     */
+    public function getIncludeSoftDeletesOnly()
+    {
+        return $this->container['include_soft_deletes_only'];
+    }
+
+    /**
+     * Sets include_soft_deletes_only
+     * @param bool $include_soft_deletes_only When true, only returns soft-deleted objects
+     * @return $this
+     */
+    public function setIncludeSoftDeletesOnly($include_soft_deletes_only)
+    {
+        $this->container['include_soft_deletes_only'] = $include_soft_deletes_only;
 
         return $this;
     }

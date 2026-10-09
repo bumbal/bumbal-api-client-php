@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **uom** | [**\BumbalClient\Model\UomModel**](UomModel.md) |  | [optional] 
 **values_uom** | [**\BumbalClient\Model\UomModel**](UomModel.md) |  | [optional] 
 **sys** | **bool** | created by system boolean | [optional] 
+**display_order** | **int** | Display order for sorting capacity types in views and forms | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

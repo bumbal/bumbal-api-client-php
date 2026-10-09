@@ -146,12 +146,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -173,6 +173,84 @@ class AddressApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation forceDeleteAddress
+     *
+     * Permanently delete a soft-deleted Address
+     *
+     * @param int $id ID of Address to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function forceDeleteAddress($id)
+    {
+        list($response) = $this->forceDeleteAddressWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation forceDeleteAddressWithHttpInfo
+     *
+     * Permanently delete a soft-deleted Address
+     *
+     * @param int $id ID of Address to permanently delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function forceDeleteAddressWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling forceDeleteAddress');
+        }
+        // parse inputs
+        $resourcePath = "/address/force-delete/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/address/force-delete/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
             }
 
             throw $e;
@@ -235,12 +313,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -262,6 +340,84 @@ class AddressApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressGeoCodeResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation restoreAddress
+     *
+     * Restore a soft-deleted Address
+     *
+     * @param int $id ID of Address to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return void
+     */
+    public function restoreAddress($id)
+    {
+        list($response) = $this->restoreAddressWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation restoreAddressWithHttpInfo
+     *
+     * Restore a soft-deleted Address
+     *
+     * @param int $id ID of Address to restore (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function restoreAddressWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling restoreAddress');
+        }
+        // parse inputs
+        $resourcePath = "/address/restore/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/address/restore/{id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
             }
 
             throw $e;
@@ -327,12 +483,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -416,12 +572,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -505,12 +661,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -590,12 +746,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -679,12 +835,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -778,12 +934,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call
@@ -906,12 +1062,12 @@ class AddressApi
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['ApiKey'] = $apiKey;
         }
         // this endpoint requires API key authentication
         $apiKey = $this->apiClient->getApiKeyWithPrefix('Authorization');
-        if (strlen($apiKey) !== 0) {
+        if (strlen($apiKey ?? '') !== 0) {
             $headerParams['Authorization'] = $apiKey;
         }
         // make the API Call

@@ -400,6 +400,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
+
+    /**
      * Test attribute "route_id"
      */
     public function testPropertyRouteId()
@@ -970,6 +977,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "due_total"
      */
     public function testPropertyDueTotal()
+    {
+    }
+
+    /**
+     * Test attribute "odd_service_windows_scheme_id"
+     */
+    public function testPropertyOddServiceWindowsSchemeId()
+    {
+    }
+
+    /**
+     * Test attribute "even_service_windows_scheme_id"
+     */
+    public function testPropertyEvenServiceWindowsSchemeId()
     {
     }
 

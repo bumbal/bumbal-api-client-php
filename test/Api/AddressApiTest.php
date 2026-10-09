@@ -83,12 +83,32 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for forceDeleteAddress
+     *
+     * Permanently delete a soft-deleted Address.
+     *
+     */
+    public function testForceDeleteAddress()
+    {
+    }
+
+    /**
      * Test case for geoCodeAddress
      *
      * GeoCode an address.
      *
      */
     public function testGeoCodeAddress()
+    {
+    }
+
+    /**
+     * Test case for restoreAddress
+     *
+     * Restore a soft-deleted Address.
+     *
+     */
+    public function testRestoreAddress()
     {
     }
 

@@ -78,16 +78,30 @@ class InlineResponse2002Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "country_rules"
+     * Test attribute "items"
      */
-    public function testPropertyCountryRules()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "default_rule"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyDefaultRule()
+    public function testPropertyCountFiltered()
+    {
+    }
+
+    /**
+     * Test attribute "count_unfiltered"
+     */
+    public function testPropertyCountUnfiltered()
+    {
+    }
+
+    /**
+     * Test attribute "count_limited"
+     */
+    public function testPropertyCountLimited()
     {
     }
 }

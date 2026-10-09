@@ -216,4 +216,25 @@ class ServiceWindowsSchemeSetModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyServiceWindows()
     {
     }
+
+    /**
+     * Test attribute "deferred_service_windows_scheme_days"
+     */
+    public function testPropertyDeferredServiceWindowsSchemeDays()
+    {
+    }
+
+    /**
+     * Test attribute "max_distance_impact_in_target_region"
+     */
+    public function testPropertyMaxDistanceImpactInTargetRegion()
+    {
+    }
+
+    /**
+     * Test attribute "travel_time_multiplication_factor"
+     */
+    public function testPropertyTravelTimeMultiplicationFactor()
+    {
+    }
 }

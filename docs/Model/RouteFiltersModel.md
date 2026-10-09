@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **nr_of_stops_min** | **int[]** | Minimum number of stops | [optional] 
 **nr_of_stops_max** | **int[]** | Maximum number of stops | [optional] 
 **search_text** | **string** | free search through text and numeric type columns | [optional] 
+**capacity_filters** | [**\BumbalClient\Model\RouteCapacityFilterModel[]**](RouteCapacityFilterModel.md) | Capacity-based filters. Each entry targets one capacity type. Filters use indexed route_capacity_statistic table. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

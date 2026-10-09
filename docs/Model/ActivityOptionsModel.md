@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**flat_structure** | **bool** | default False. When set to true: some of the value lists will merge from      *     hierarchically lower or higher levels into the requested level | [optional] 
+**flat_structure** | **bool** | default False. When set to true: some of the value lists will merge from      *     hierarchically lower or higher levels into the requested level. In combination with      *     apply_address_bundling and include_package_lines, the package_lines of the bundled      *     child activities are also rolled up onto their bundle parent for both regular bundles      *     and depot-bundle activities. | [optional] 
 **include_activity_status** | **bool** | Deprecated! Use include_status_name instead | [optional] 
 **include_activity_type_name** | **bool** |  | [optional] 
 **include_address** | **bool** | Include the address from the address book | [optional] 
@@ -80,6 +80,7 @@ Name | Type | Description | Notes
 **include_recurrence** | **bool** | Include recurrence object | [optional] 
 **include_matching_route_ids** | **bool** | Include matching route ids | [optional] 
 **include_route_capacities** | **bool** | Include route capacity values before and after actvity | [optional] 
+**include_soft_deletes_only** | **bool** | When true, only returns soft-deleted objects | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -32,7 +32,6 @@ Name | Type | Description | Notes
 **hs_code** | **string** | Harmonized System code for packages in this package line | [optional] 
 **description** | **string** | description of this package_line | [optional] 
 **compartments** | [**\BumbalClient\Model\CompartmentModel[]**](CompartmentModel.md) |  | [optional] 
-**active** | **bool** | if active&#x3D;0: package line has been removed and is no longer visible in any bumbal interface | [optional] 
 **applied_capacities** | **object** |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **activity_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) | links to activities connected to this package_line | [optional] 
@@ -47,6 +46,8 @@ Name | Type | Description | Notes
 **package_line_updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **package_line_created_by** | **int** | created_by user id | [optional] 
 **package_line_updated_by** | **int** | updated_by user id | [optional] 
+**active** | **bool** | if active&#x3D;0: package line has been removed and is no longer visible in any bumbal interface | [optional] 
+**removed** | **int** | if removed&#x3D;1: package line has been permanently removed | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

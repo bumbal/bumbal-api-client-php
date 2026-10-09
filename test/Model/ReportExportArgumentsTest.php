@@ -118,4 +118,18 @@ class ReportExportArgumentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertySortingDirection()
     {
     }
+
+    /**
+     * Test attribute "fresh_report"
+     */
+    public function testPropertyFreshReport()
+    {
+    }
+
+    /**
+     * Test attribute "row_limit"
+     */
+    public function testPropertyRowLimit()
+    {
+    }
 }

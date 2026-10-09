@@ -59,7 +59,8 @@ class ReportQueryArguments implements ArrayAccess
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
-        'sorting_direction' => 'string'
+        'sorting_direction' => 'string',
+        'parent_only' => 'bool'
     ];
 
     /**
@@ -72,7 +73,8 @@ class ReportQueryArguments implements ArrayAccess
         'limit' => 'int64',
         'offset' => 'int64',
         'sorting_column' => null,
-        'sorting_direction' => null
+        'sorting_direction' => null,
+        'parent_only' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +97,8 @@ class ReportQueryArguments implements ArrayAccess
         'limit' => 'limit',
         'offset' => 'offset',
         'sorting_column' => 'sorting_column',
-        'sorting_direction' => 'sorting_direction'
+        'sorting_direction' => 'sorting_direction',
+        'parent_only' => 'parent_only'
     ];
 
 
@@ -109,7 +112,8 @@ class ReportQueryArguments implements ArrayAccess
         'limit' => 'setLimit',
         'offset' => 'setOffset',
         'sorting_column' => 'setSortingColumn',
-        'sorting_direction' => 'setSortingDirection'
+        'sorting_direction' => 'setSortingDirection',
+        'parent_only' => 'setParentOnly'
     ];
 
 
@@ -123,7 +127,8 @@ class ReportQueryArguments implements ArrayAccess
         'limit' => 'getLimit',
         'offset' => 'getOffset',
         'sorting_column' => 'getSortingColumn',
-        'sorting_direction' => 'getSortingDirection'
+        'sorting_direction' => 'getSortingDirection',
+        'parent_only' => 'getParentOnly'
     ];
 
     public static function attributeMap()
@@ -177,6 +182,7 @@ class ReportQueryArguments implements ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
+        $this->container['parent_only'] = isset($data['parent_only']) ? $data['parent_only'] : null;
     }
 
     /**
@@ -187,6 +193,14 @@ class ReportQueryArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        if (!is_null($this->container['limit']) && ($this->container['limit'] > 50)) {
+            $invalid_properties[] = "invalid value for 'limit', must be smaller than or equal to 50.";
+        }
+
+        if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+            $invalid_properties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+        }
 
         $allowed_values = $this->getSortingDirectionAllowableValues();
         if (!in_array($this->container['sorting_direction'], $allowed_values)) {
@@ -208,6 +222,12 @@ class ReportQueryArguments implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['limit'] > 50) {
+            return false;
+        }
+        if ($this->container['limit'] < 1) {
+            return false;
+        }
         $allowed_values = $this->getSortingDirectionAllowableValues();
         if (!in_array($this->container['sorting_direction'], $allowed_values)) {
             return false;
@@ -269,11 +289,19 @@ class ReportQueryArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit
+     * @param int $limit Max items per page. Reports service accepts 1-50.
      * @return $this
      */
     public function setLimit($limit)
     {
+
+        if (!is_null($limit) && ($limit > 50)) {
+            throw new \InvalidArgumentException('invalid value for $limit when calling ReportQueryArguments., must be smaller than or equal to 50.');
+        }
+        if (!is_null($limit) && ($limit < 1)) {
+            throw new \InvalidArgumentException('invalid value for $limit when calling ReportQueryArguments., must be bigger than or equal to 1.');
+        }
+
         $this->container['limit'] = $limit;
 
         return $this;
@@ -350,11 +378,33 @@ class ReportQueryArguments implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets parent_only
+     * @return bool
+     */
+    public function getParentOnly()
+    {
+        return $this->container['parent_only'];
+    }
+
+    /**
+     * Sets parent_only
+     * @param bool $parent_only Return parent rows only, without fetching child rows. Grouped reports only.
+     * @return $this
+     */
+    public function setParentOnly($parent_only)
+    {
+        $this->container['parent_only'] = $parent_only;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -365,6 +415,7 @@ class ReportQueryArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -376,6 +427,7 @@ class ReportQueryArguments implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -390,6 +442,7 @@ class ReportQueryArguments implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

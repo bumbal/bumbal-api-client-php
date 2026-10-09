@@ -78,9 +78,9 @@ class ValueOptionModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "label"
      */
-    public function testPropertyName()
+    public function testPropertyLabel()
     {
     }
 

@@ -40,6 +40,8 @@ Name | Type | Description | Notes
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
+**active** | **int** | if active&#x3D;0: address has been soft-deleted and is no longer visible in any bumbal interface | [optional] 
+**removed** | **int** | if removed&#x3D;1: address has been permanently removed | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

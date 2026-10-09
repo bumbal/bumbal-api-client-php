@@ -146,4 +146,18 @@ class UsersFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyEmail()
     {
     }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
 }

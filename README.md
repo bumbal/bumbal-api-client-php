@@ -90,18 +90,22 @@ Class | Method | HTTP request | Description
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
 *ActivityApi* | [**detachActivitiesFromRecurrence**](docs/Api/ActivityApi.md#detachactivitiesfromrecurrence) | **POST** /activity/detach-from-recurrence | detach activities from specified recurrence
 *ActivityApi* | [**duplicateActivities**](docs/Api/ActivityApi.md#duplicateactivities) | **POST** /activity/duplicate | Bulk duplicate activities
+*ActivityApi* | [**forceDeleteActivity**](docs/Api/ActivityApi.md#forcedeleteactivity) | **POST** /activity/force-delete/{id} | Permanently delete a soft-deleted Activity
 *ActivityApi* | [**getActivityDuplicateStatus**](docs/Api/ActivityApi.md#getactivityduplicatestatus) | **GET** /activity/duplicate/status/{token} | Check activity duplication job status
 *ActivityApi* | [**getBulkUpdateStatus**](docs/Api/ActivityApi.md#getbulkupdatestatus) | **GET** /activity/bulk-update/status/{token} | Get status of an asynchronous bulk update job
 *ActivityApi* | [**lockActivity**](docs/Api/ActivityApi.md#lockactivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 *ActivityApi* | [**lockActivityOnRoute**](docs/Api/ActivityApi.md#lockactivityonroute) | **POST** /activity/lock-on-route | Lock activities on route which satisfy set filters
 *ActivityApi* | [**lockActivityOnRouteAndTime**](docs/Api/ActivityApi.md#lockactivityonrouteandtime) | **POST** /activity/lock-on-route-and-time | Lock activities on route and time which satisfy set filters
 *ActivityApi* | [**processActivityScheduledCommunicationUpdate**](docs/Api/ActivityApi.md#processactivityscheduledcommunicationupdate) | **POST** /activity/communication/schedule/{activityId} | Update an activity&#39;s scheduled communication mapping
+*ActivityApi* | [**restoreActivity**](docs/Api/ActivityApi.md#restoreactivity) | **POST** /activity/restore/{id} | Restore a soft-deleted Activity
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
 *ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
 *ActivityApi* | [**unlockActivity**](docs/Api/ActivityApi.md#unlockactivity) | **POST** /activity/unlock | Unlock activities which satisfy set filters
 *ActivityApi* | [**unsuccessful**](docs/Api/ActivityApi.md#unsuccessful) | **POST** /activity/unsuccessful | Report an unsuccessful activity
 *ActivityApi* | [**updateActivity**](docs/Api/ActivityApi.md#updateactivity) | **PUT** /activity/{activityId} | Update a activity
+*ActivitycapacitystatisticApi* | [**retrieveActivityCapacityStatistic**](docs/Api/ActivitycapacitystatisticApi.md#retrieveactivitycapacitystatistic) | **GET** /activity-capacity-statistic/{activityCapacityStatisticId} | Find ActivityCapacityStatistic by ID
+*ActivitycapacitystatisticApi* | [**retrieveListActivityCapacityStatistic**](docs/Api/ActivitycapacitystatisticApi.md#retrievelistactivitycapacitystatistic) | **PUT** /activity-capacity-statistic | Retrieve List of ActivityCapacityStatistics
 *ActivitytypeApi* | [**retrieveActivityType**](docs/Api/ActivitytypeApi.md#retrieveactivitytype) | **GET** /activity-type/{activityTypeId} | Find ActivityType by ID
 *ActivitytypeApi* | [**retrieveListActivityType**](docs/Api/ActivitytypeApi.md#retrievelistactivitytype) | **PUT** /activity-type | Retrieve List of ActivityTypes
 *AdHocEventApi* | [**deleteAdHocEvent**](docs/Api/AdHocEventApi.md#deleteadhocevent) | **DELETE** /adhoc-events/{adHocEventId} | Delete an ad-hoc event
@@ -109,7 +113,9 @@ Class | Method | HTTP request | Description
 *AdHocEventApi* | [**retrieveListAdHocEvent**](docs/Api/AdHocEventApi.md#retrievelistadhocevent) | **PUT** /adhoc-events | Retrieve List of Ad-Hoc events
 *AdHocEventApi* | [**setAdHocEvent**](docs/Api/AdHocEventApi.md#setadhocevent) | **POST** /adhoc-events/set | Set (create or update) an adhoc event
 *AddressApi* | [**deleteAddress**](docs/Api/AddressApi.md#deleteaddress) | **DELETE** /address/{addressId} | Delete an address
+*AddressApi* | [**forceDeleteAddress**](docs/Api/AddressApi.md#forcedeleteaddress) | **POST** /address/force-delete/{id} | Permanently delete a soft-deleted Address
 *AddressApi* | [**geoCodeAddress**](docs/Api/AddressApi.md#geocodeaddress) | **POST** /address/geo-code | GeoCode an address
+*AddressApi* | [**restoreAddress**](docs/Api/AddressApi.md#restoreaddress) | **POST** /address/restore/{id} | Restore a soft-deleted Address
 *AddressApi* | [**retrieveAddress**](docs/Api/AddressApi.md#retrieveaddress) | **GET** /address/{addressId} | Retrieve a Address
 *AddressApi* | [**retrieveListAddress**](docs/Api/AddressApi.md#retrievelistaddress) | **PUT** /address | Retrieve List of Addresses
 *AddressApi* | [**reverseGeoCodeAddress**](docs/Api/AddressApi.md#reversegeocodeaddress) | **POST** /address/reverse-geo-code | Reverse Geo Code an address
@@ -138,6 +144,10 @@ Class | Method | HTTP request | Description
 *BrandApi* | [**retrieveListBrand**](docs/Api/BrandApi.md#retrievelistbrand) | **PUT** /brand | Retrieve List of Brands
 *BrandApi* | [**setBrand**](docs/Api/BrandApi.md#setbrand) | **POST** /brand/set | Set (create or update) a Brand
 *BrandApi* | [**updateBrand**](docs/Api/BrandApi.md#updatebrand) | **PUT** /brand/{brandId} | Update a Brand
+*CapacityplanningthresholdApi* | [**deleteCapacityPlanningThreshold**](docs/Api/CapacityplanningthresholdApi.md#deletecapacityplanningthreshold) | **DELETE** /capacity-planning-threshold/{capacityPlanningThresholdId} | Delete a CapacityPlanningThreshold
+*CapacityplanningthresholdApi* | [**retrieveCapacityPlanningThreshold**](docs/Api/CapacityplanningthresholdApi.md#retrievecapacityplanningthreshold) | **GET** /capacity-planning-threshold/{capacityPlanningThresholdId} | Find CapacityPlanningThreshold by ID
+*CapacityplanningthresholdApi* | [**retrieveListCapacityPlanningThreshold**](docs/Api/CapacityplanningthresholdApi.md#retrievelistcapacityplanningthreshold) | **PUT** /capacity-planning-threshold | Retrieve List of CapacityPlanningThresholds
+*CapacityplanningthresholdApi* | [**setCapacityPlanningThreshold**](docs/Api/CapacityplanningthresholdApi.md#setcapacityplanningthreshold) | **POST** /capacity-planning-threshold/set | Set (create or update) a CapacityPlanningThreshold
 *CapacitytypeApi* | [**deleteCapacityType**](docs/Api/CapacitytypeApi.md#deletecapacitytype) | **DELETE** /capacity-type/{capacityTypeId} | Delete a capacity-type
 *CapacitytypeApi* | [**retrieveCapacityType**](docs/Api/CapacitytypeApi.md#retrievecapacitytype) | **GET** /capacity-type/{capacityTypeId} | Find capacity-type by ID
 *CapacitytypeApi* | [**retrieveListCapacityType**](docs/Api/CapacitytypeApi.md#retrievelistcapacitytype) | **PUT** /capacity-type | Retrieve List of CapacityTypes
@@ -165,6 +175,10 @@ Class | Method | HTTP request | Description
 *CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a communication template
 *CommunicationtemplateApi* | [**retrieveListTemplate**](docs/Api/CommunicationtemplateApi.md#retrievelisttemplate) | **PUT** /communication-template | Retrieve list of templates
 *CommunicationtemplateApi* | [**sendTestTemplate**](docs/Api/CommunicationtemplateApi.md#sendtesttemplate) | **POST** /communication-template/send-test | Send a test template
+*DocumentApi* | [**documentIrregularities**](docs/Api/DocumentApi.md#documentirregularities) | **POST** /document/irregularities | Print activity irregularities document
+*DocumentApi* | [**documentLoadingList**](docs/Api/DocumentApi.md#documentloadinglist) | **POST** /document/loading-list | Print loading list document
+*DocumentApi* | [**documentPackagelines**](docs/Api/DocumentApi.md#documentpackagelines) | **POST** /document/packagelines | Print activity package lines document
+*DocumentApi* | [**documentRoute**](docs/Api/DocumentApi.md#documentroute) | **POST** /document/route | Print route document
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
 *DriverApi* | [**retrieveDriver**](docs/Api/DriverApi.md#retrievedriver) | **GET** /driver/{driverId} | Find driver by ID
@@ -192,6 +206,7 @@ Class | Method | HTTP request | Description
 *FileApi* | [**retrieveFile**](docs/Api/FileApi.md#retrievefile) | **GET** /file/{fileId} | Retrieve a File
 *FileApi* | [**retrieveListFile**](docs/Api/FileApi.md#retrievelistfile) | **PUT** /file | Retrieve List of Files
 *FileApi* | [**setFile**](docs/Api/FileApi.md#setfile) | **POST** /file/set | Create or Update a File Object
+*FileApi* | [**uploadDocument**](docs/Api/FileApi.md#uploaddocument) | **POST** /file/upload-document | Upload a document or image file via multipart/form-data
 *FileApi* | [**uploadSpreadsheet**](docs/Api/FileApi.md#uploadspreadsheet) | **POST** /file/upload-spreadsheet | Upload a spreadsheet file (Excel) via multipart/form-data
 *IrregularityApi* | [**createIrregularity**](docs/Api/IrregularityApi.md#createirregularity) | **POST** /irregularity/set | Create a irregularity
 *IrregularityApi* | [**deleteIrregularity**](docs/Api/IrregularityApi.md#deleteirregularity) | **DELETE** /irregularity/{irregularityId} | Delete a irregularity
@@ -241,6 +256,8 @@ Class | Method | HTTP request | Description
 *NotificationcategoryApi* | [**updateNotificationCategory**](docs/Api/NotificationcategoryApi.md#updatenotificationcategory) | **PUT** /notification-category/{notification-categoryId} | Update a specific NotificationCategory object
 *PackagelineApi* | [**createPackageLine**](docs/Api/PackagelineApi.md#createpackageline) | **POST** /package-line | Create or update an Package Line
 *PackagelineApi* | [**deletePackageLine**](docs/Api/PackagelineApi.md#deletepackageline) | **DELETE** /package-line/{packageLineId} | Delete an package-line
+*PackagelineApi* | [**forceDeletePackageLine**](docs/Api/PackagelineApi.md#forcedeletepackageline) | **POST** /package-line/force-delete/{id} | Permanently delete a soft-deleted PackageLine
+*PackagelineApi* | [**restorePackageLine**](docs/Api/PackagelineApi.md#restorepackageline) | **POST** /package-line/restore/{id} | Restore a soft-deleted PackageLine
 *PackagelineApi* | [**retrieveListPackageLine**](docs/Api/PackagelineApi.md#retrievelistpackageline) | **PUT** /package-line | Retrieve List of PackageLines
 *PackagelineApi* | [**retrievePackageLine**](docs/Api/PackagelineApi.md#retrievepackageline) | **GET** /package-line/{packageLineId} | Find package-line by ID
 *PackagelineApi* | [**setPackageLine**](docs/Api/PackagelineApi.md#setpackageline) | **POST** /package-line/set | Set (create or update) an PackageLine
@@ -406,14 +423,18 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
 *RouteApi* | [**detachRoutesFromRecurrence**](docs/Api/RouteApi.md#detachroutesfromrecurrence) | **POST** /route/detach-from-recurrence | detach routes from specified recurrence
 *RouteApi* | [**duplicateRoutes**](docs/Api/RouteApi.md#duplicateroutes) | **POST** /route/duplicate | Bulk duplicate routes
+*RouteApi* | [**forceDeleteRoute**](docs/Api/RouteApi.md#forcedeleteroute) | **POST** /route/force-delete/{id} | Permanently delete a soft-deleted Route
 *RouteApi* | [**getExecutableActivities**](docs/Api/RouteApi.md#getexecutableactivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
 *RouteApi* | [**getRouteDuplicateStatus**](docs/Api/RouteApi.md#getrouteduplicatestatus) | **GET** /route/duplicate/status/{token} | Check route duplication job status
+*RouteApi* | [**restoreRoute**](docs/Api/RouteApi.md#restoreroute) | **POST** /route/restore/{id} | Restore a soft-deleted Route
 *RouteApi* | [**retrieveListRoute**](docs/Api/RouteApi.md#retrievelistroute) | **PUT** /route | Retrieve List of Routes
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
 *RouteApi* | [**routeStoreGeoLocations**](docs/Api/RouteApi.md#routestoregeolocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
 *RouteApi* | [**setRoute**](docs/Api/RouteApi.md#setroute) | **POST** /route/set | Set (create or update) an Route
 *RouteApi* | [**unblockRoutes**](docs/Api/RouteApi.md#unblockroutes) | **POST** /route/unblock-routes | Unblock routes which satisfy set filters
 *RouteApi* | [**updateRoute**](docs/Api/RouteApi.md#updateroute) | **PUT** /route/{routeId} | Update a Route
+*RoutecapacitystatisticApi* | [**retrieveListRouteCapacityStatistic**](docs/Api/RoutecapacitystatisticApi.md#retrievelistroutecapacitystatistic) | **PUT** /route-capacity-statistic | Retrieve List of RouteCapacityStatistics
+*RoutecapacitystatisticApi* | [**retrieveRouteCapacityStatistic**](docs/Api/RoutecapacitystatisticApi.md#retrieveroutecapacitystatistic) | **GET** /route-capacity-statistic/{routeCapacityStatisticId} | Find RouteCapacityStatistic by ID
 *RoutepointsApi* | [**retrieveListRoutePoints**](docs/Api/RoutepointsApi.md#retrievelistroutepoints) | **PUT** /route-points | Find Route Points for multiple routes by route ID
 *RoutepointsApi* | [**retrieveRoutePoints**](docs/Api/RoutepointsApi.md#retrieveroutepoints) | **GET** /route-points/{routeId} | Find Route Points by route ID
 *ServicewindowApi* | [**retrieveListServiceWindow**](docs/Api/ServicewindowApi.md#retrievelistservicewindow) | **PUT** /service-window | Retrieve a list of service windows
@@ -429,6 +450,10 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
 *SettingsApi* | [**setSetting**](docs/Api/SettingsApi.md#setsetting) | **POST** /settings/set | Set (update) Setting value
 *SettingsApi* | [**updateSettings**](docs/Api/SettingsApi.md#updatesettings) | **PUT** /settings/{settingsId} | Update a Settings
+*SettingvalueApi* | [**retrieveListSetting**](docs/Api/SettingvalueApi.md#retrievelistsetting) | **PUT** /setting-value | Retrieve list of settings
+*SettingvalueApi* | [**retrieveSetting**](docs/Api/SettingvalueApi.md#retrievesetting) | **GET** /setting-value/{key} | Retrieve a setting by key
+*SettingvalueApi* | [**retrieveSettingOptions**](docs/Api/SettingvalueApi.md#retrievesettingoptions) | **PUT** /setting-value/{key}/options | Retrieve possible option values for a setting
+*SettingvalueApi* | [**setSetting**](docs/Api/SettingvalueApi.md#setsetting) | **POST** /setting-value/set | Set (create or update) a setting value
 *StatushistoryApi* | [**retrieveStatusHistoryActivity**](docs/Api/StatushistoryApi.md#retrievestatushistoryactivity) | **POST** /status-history/activity | Retrieve the status history of an activity
 *StatushistoryApi* | [**retrieveStatusHistoryRoute**](docs/Api/StatushistoryApi.md#retrievestatushistoryroute) | **POST** /status-history/route | Retrieve the status history of a route
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
@@ -482,6 +507,8 @@ Class | Method | HTTP request | Description
 *UseraccessoverrideApi* | [**updateUserAccessOverride**](docs/Api/UseraccessoverrideApi.md#updateuseraccessoverride) | **PUT** /user-access-override/{userAccessOverrideId} | Update a user access override
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
 *UsersApi* | [**deleteUser**](docs/Api/UsersApi.md#deleteuser) | **DELETE** /users/{userId} | Delete a user
+*UsersApi* | [**forceDeleteUser**](docs/Api/UsersApi.md#forcedeleteuser) | **POST** /users/force-delete/{id} | Permanently delete a soft-deleted User
+*UsersApi* | [**restoreUser**](docs/Api/UsersApi.md#restoreuser) | **POST** /users/restore/{id} | Restore a soft-deleted User
 *UsersApi* | [**retrieveListUserNotification**](docs/Api/UsersApi.md#retrievelistusernotification) | **PUT** /users/notification | Retrieve List of UserNotification
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{userId} | Retrieve a Users
@@ -490,6 +517,8 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{userId} | Update a Users
 *VehicleApi* | [**createVehicle**](docs/Api/VehicleApi.md#createvehicle) | **POST** /vehicle | Add a new vehicle
 *VehicleApi* | [**deleteVehicle**](docs/Api/VehicleApi.md#deletevehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle entry
+*VehicleApi* | [**forceDeleteVehicle**](docs/Api/VehicleApi.md#forcedeletevehicle) | **POST** /vehicle/force-delete/{id} | Permanently delete a soft-deleted Vehicle
+*VehicleApi* | [**restoreVehicle**](docs/Api/VehicleApi.md#restorevehicle) | **POST** /vehicle/restore/{id} | Restore a soft-deleted Vehicle
 *VehicleApi* | [**retrieveListVehicle**](docs/Api/VehicleApi.md#retrievelistvehicle) | **PUT** /vehicle | Retrieve List of Vehicles
 *VehicleApi* | [**retrieveVehicle**](docs/Api/VehicleApi.md#retrievevehicle) | **GET** /vehicle/{vehicleId} | Find vehicle by ID
 *VehicleApi* | [**setVehicle**](docs/Api/VehicleApi.md#setvehicle) | **POST** /vehicle/set | Set (create or update) a vehicle
@@ -520,6 +549,11 @@ Class | Method | HTTP request | Description
  - [ActivityBulkUpdateTagDataModel](docs/Model/ActivityBulkUpdateTagDataModel.md)
  - [ActivityBulkUpdateTimeSlotArgumentsModel](docs/Model/ActivityBulkUpdateTimeSlotArgumentsModel.md)
  - [ActivityBulkUpdateTimeSlotDataModel](docs/Model/ActivityBulkUpdateTimeSlotDataModel.md)
+ - [ActivityCapacityStatistic](docs/Model/ActivityCapacityStatistic.md)
+ - [ActivityCapacityStatisticFiltersModel](docs/Model/ActivityCapacityStatisticFiltersModel.md)
+ - [ActivityCapacityStatisticListResponse](docs/Model/ActivityCapacityStatisticListResponse.md)
+ - [ActivityCapacityStatisticOptionsModel](docs/Model/ActivityCapacityStatisticOptionsModel.md)
+ - [ActivityCapacityStatisticRetrieveListArguments](docs/Model/ActivityCapacityStatisticRetrieveListArguments.md)
  - [ActivityDetachFromRecurrenceArguments](docs/Model/ActivityDetachFromRecurrenceArguments.md)
  - [ActivityDuplicateArgumentsModel](docs/Model/ActivityDuplicateArgumentsModel.md)
  - [ActivityDuplicateOptionsModel](docs/Model/ActivityDuplicateOptionsModel.md)
@@ -667,6 +701,10 @@ Class | Method | HTTP request | Description
  - [BrandOptionsModel](docs/Model/BrandOptionsModel.md)
  - [BrandRetrieveListArguments](docs/Model/BrandRetrieveListArguments.md)
  - [CapacityModel](docs/Model/CapacityModel.md)
+ - [CapacityPlanningThresholdFiltersModel](docs/Model/CapacityPlanningThresholdFiltersModel.md)
+ - [CapacityPlanningThresholdModel](docs/Model/CapacityPlanningThresholdModel.md)
+ - [CapacityPlanningThresholdOptionsModel](docs/Model/CapacityPlanningThresholdOptionsModel.md)
+ - [CapacityPlanningThresholdRetrieveListArguments](docs/Model/CapacityPlanningThresholdRetrieveListArguments.md)
  - [CapacityTypeFiltersModel](docs/Model/CapacityTypeFiltersModel.md)
  - [CapacityTypeListResponse](docs/Model/CapacityTypeListResponse.md)
  - [CapacityTypeModel](docs/Model/CapacityTypeModel.md)
@@ -732,6 +770,7 @@ Class | Method | HTTP request | Description
  - [ConfigModel](docs/Model/ConfigModel.md)
  - [ConfigSetModel](docs/Model/ConfigSetModel.md)
  - [CredentialsModel](docs/Model/CredentialsModel.md)
+ - [DocumentUploadArguments](docs/Model/DocumentUploadArguments.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)
  - [DriverListResponse](docs/Model/DriverListResponse.md)
  - [DriverModel](docs/Model/DriverModel.md)
@@ -781,8 +820,10 @@ Class | Method | HTTP request | Description
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
+ - [InlineResponse2003](docs/Model/InlineResponse2003.md)
  - [InlineResponse200Data](docs/Model/InlineResponse200Data.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
+ - [IrregularitiesArguments](docs/Model/IrregularitiesArguments.md)
  - [IrregularityCategoryFiltersModel](docs/Model/IrregularityCategoryFiltersModel.md)
  - [IrregularityCategoryListResponse](docs/Model/IrregularityCategoryListResponse.md)
  - [IrregularityCategoryModel](docs/Model/IrregularityCategoryModel.md)
@@ -808,6 +849,7 @@ Class | Method | HTTP request | Description
  - [LinkModel](docs/Model/LinkModel.md)
  - [LinkOptionsModel](docs/Model/LinkOptionsModel.md)
  - [LinkRetrieveListArguments](docs/Model/LinkRetrieveListArguments.md)
+ - [LoadingListArguments](docs/Model/LoadingListArguments.md)
  - [LogFiltersModel](docs/Model/LogFiltersModel.md)
  - [LogListResponse](docs/Model/LogListResponse.md)
  - [LogModel](docs/Model/LogModel.md)
@@ -852,6 +894,7 @@ Class | Method | HTTP request | Description
  - [PackageTypeModel](docs/Model/PackageTypeModel.md)
  - [PackageTypeOptionsModel](docs/Model/PackageTypeOptionsModel.md)
  - [PackageTypeRetrieveListArguments](docs/Model/PackageTypeRetrieveListArguments.md)
+ - [PackagelinesArguments](docs/Model/PackagelinesArguments.md)
  - [PartyFiltersModel](docs/Model/PartyFiltersModel.md)
  - [PartyListResponse](docs/Model/PartyListResponse.md)
  - [PartyModel](docs/Model/PartyModel.md)
@@ -1008,7 +1051,14 @@ Class | Method | HTTP request | Description
  - [RolePermissionListResponse](docs/Model/RolePermissionListResponse.md)
  - [RolePermissionModel](docs/Model/RolePermissionModel.md)
  - [RolePermissionRetrieveListArguments](docs/Model/RolePermissionRetrieveListArguments.md)
+ - [RouteArguments](docs/Model/RouteArguments.md)
  - [RouteCapacitiesModel](docs/Model/RouteCapacitiesModel.md)
+ - [RouteCapacityFilterModel](docs/Model/RouteCapacityFilterModel.md)
+ - [RouteCapacityStatistic](docs/Model/RouteCapacityStatistic.md)
+ - [RouteCapacityStatisticFiltersModel](docs/Model/RouteCapacityStatisticFiltersModel.md)
+ - [RouteCapacityStatisticListResponse](docs/Model/RouteCapacityStatisticListResponse.md)
+ - [RouteCapacityStatisticOptionsModel](docs/Model/RouteCapacityStatisticOptionsModel.md)
+ - [RouteCapacityStatisticRetrieveListArguments](docs/Model/RouteCapacityStatisticRetrieveListArguments.md)
  - [RouteDetachFromRecurrenceArguments](docs/Model/RouteDetachFromRecurrenceArguments.md)
  - [RouteDuplicateArgumentsModel](docs/Model/RouteDuplicateArgumentsModel.md)
  - [RouteDuplicateOptionsModel](docs/Model/RouteDuplicateOptionsModel.md)
@@ -1043,6 +1093,15 @@ Class | Method | HTTP request | Description
  - [ServiceWindowsSchemeOptionsModel](docs/Model/ServiceWindowsSchemeOptionsModel.md)
  - [ServiceWindowsSchemeRetrieveListArguments](docs/Model/ServiceWindowsSchemeRetrieveListArguments.md)
  - [ServiceWindowsSchemeSetModel](docs/Model/ServiceWindowsSchemeSetModel.md)
+ - [SettingCategoryModel](docs/Model/SettingCategoryModel.md)
+ - [SettingDefinitionModel](docs/Model/SettingDefinitionModel.md)
+ - [SettingFiltersModel](docs/Model/SettingFiltersModel.md)
+ - [SettingListResponse](docs/Model/SettingListResponse.md)
+ - [SettingModel](docs/Model/SettingModel.md)
+ - [SettingOptionsArguments](docs/Model/SettingOptionsArguments.md)
+ - [SettingOptionsModel](docs/Model/SettingOptionsModel.md)
+ - [SettingRetrieveListArguments](docs/Model/SettingRetrieveListArguments.md)
+ - [SettingValueSetModel](docs/Model/SettingValueSetModel.md)
  - [SettingsFiltersModel](docs/Model/SettingsFiltersModel.md)
  - [SettingsGetConstantsResponse](docs/Model/SettingsGetConstantsResponse.md)
  - [SettingsGetConstantsReversedResponse](docs/Model/SettingsGetConstantsReversedResponse.md)

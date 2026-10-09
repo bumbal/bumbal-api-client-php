@@ -335,4 +335,18 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTags()
     {
     }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
 }

@@ -59,7 +59,9 @@ class VehicleFiltersModel implements ArrayAccess
         'links' => 'object[]',
         'tag_names' => 'string[]',
         'updated_at_since' => '\DateTime',
-        'updated_at_till' => '\DateTime'
+        'updated_at_till' => '\DateTime',
+        'active' => 'int[]',
+        'removed' => 'int[]'
     ];
 
     /**
@@ -72,7 +74,9 @@ class VehicleFiltersModel implements ArrayAccess
         'links' => null,
         'tag_names' => null,
         'updated_at_since' => 'date-time',
-        'updated_at_till' => 'date-time'
+        'updated_at_till' => 'date-time',
+        'active' => null,
+        'removed' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +99,9 @@ class VehicleFiltersModel implements ArrayAccess
         'links' => 'links',
         'tag_names' => 'tag_names',
         'updated_at_since' => 'updated_at_since',
-        'updated_at_till' => 'updated_at_till'
+        'updated_at_till' => 'updated_at_till',
+        'active' => 'active',
+        'removed' => 'removed'
     ];
 
 
@@ -109,7 +115,9 @@ class VehicleFiltersModel implements ArrayAccess
         'links' => 'setLinks',
         'tag_names' => 'setTagNames',
         'updated_at_since' => 'setUpdatedAtSince',
-        'updated_at_till' => 'setUpdatedAtTill'
+        'updated_at_till' => 'setUpdatedAtTill',
+        'active' => 'setActive',
+        'removed' => 'setRemoved'
     ];
 
 
@@ -123,7 +131,9 @@ class VehicleFiltersModel implements ArrayAccess
         'links' => 'getLinks',
         'tag_names' => 'getTagNames',
         'updated_at_since' => 'getUpdatedAtSince',
-        'updated_at_till' => 'getUpdatedAtTill'
+        'updated_at_till' => 'getUpdatedAtTill',
+        'active' => 'getActive',
+        'removed' => 'getRemoved'
     ];
 
     public static function attributeMap()
@@ -163,6 +173,8 @@ class VehicleFiltersModel implements ArrayAccess
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -312,6 +324,48 @@ class VehicleFiltersModel implements ArrayAccess
     public function setUpdatedAtTill($updated_at_till)
     {
         $this->container['updated_at_till'] = $updated_at_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return int[]
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int[] $active Active status of Vehicle, 0 values represent soft-deleted vehicles
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return int[]
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param int[] $removed Removed status of Vehicle
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
 
         return $this;
     }

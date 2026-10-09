@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /users/check-credentials | Checks the credentials of a User
 [**deleteUser**](UsersApi.md#deleteUser) | **DELETE** /users/{userId} | Delete a user
+[**forceDeleteUser**](UsersApi.md#forceDeleteUser) | **POST** /users/force-delete/{id} | Permanently delete a soft-deleted User
+[**restoreUser**](UsersApi.md#restoreUser) | **POST** /users/restore/{id} | Restore a soft-deleted User
 [**retrieveListUserNotification**](UsersApi.md#retrieveListUserNotification) | **PUT** /users/notification | Retrieve List of UserNotification
 [**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Users
 [**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{userId} | Retrieve a Users
@@ -121,6 +123,94 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, application/xml
  - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **forceDeleteUser**
+> forceDeleteUser($id)
+
+Permanently delete a soft-deleted User
+
+Permanently deletes a soft-deleted User  by setting active=0, removed=1
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\UsersApi();
+$id = 56; // int | ID of User to permanently delete
+
+try {
+    $api_instance->forceDeleteUser($id);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->forceDeleteUser: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of User to permanently delete |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **restoreUser**
+> restoreUser($id)
+
+Restore a soft-deleted User
+
+Restores a soft-deleted User  back to active state (active=1, removed=0)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\UsersApi();
+$id = 56; // int | ID of User to restore
+
+try {
+    $api_instance->restoreUser($id);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->restoreUser: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of User to restore |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

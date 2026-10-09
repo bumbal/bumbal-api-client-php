@@ -61,7 +61,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_name' => 'string',
         'uom' => '\BumbalClient\Model\UomModel',
         'values_uom' => '\BumbalClient\Model\UomModel',
-        'sys' => 'bool'
+        'sys' => 'bool',
+        'display_order' => 'int'
     ];
 
     /**
@@ -76,7 +77,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_name' => null,
         'uom' => null,
         'values_uom' => null,
-        'sys' => null
+        'sys' => null,
+        'display_order' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_name' => 'uom_name',
         'uom' => 'uom',
         'values_uom' => 'values_uom',
-        'sys' => 'sys'
+        'sys' => 'sys',
+        'display_order' => 'display_order'
     ];
 
 
@@ -117,7 +120,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_name' => 'setUomName',
         'uom' => 'setUom',
         'values_uom' => 'setValuesUom',
-        'sys' => 'setSys'
+        'sys' => 'setSys',
+        'display_order' => 'setDisplayOrder'
     ];
 
 
@@ -133,7 +137,8 @@ class CapacityTypeModel implements ArrayAccess
         'uom_name' => 'getUomName',
         'uom' => 'getUom',
         'values_uom' => 'getValuesUom',
-        'sys' => 'getSys'
+        'sys' => 'getSys',
+        'display_order' => 'getDisplayOrder'
     ];
 
     public static function attributeMap()
@@ -175,6 +180,7 @@ class CapacityTypeModel implements ArrayAccess
         $this->container['uom'] = isset($data['uom']) ? $data['uom'] : null;
         $this->container['values_uom'] = isset($data['values_uom']) ? $data['values_uom'] : null;
         $this->container['sys'] = isset($data['sys']) ? $data['sys'] : null;
+        $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
     }
 
     /**
@@ -369,11 +375,33 @@ class CapacityTypeModel implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets display_order
+     * @return int
+     */
+    public function getDisplayOrder()
+    {
+        return $this->container['display_order'];
+    }
+
+    /**
+     * Sets display_order
+     * @param int $display_order Display order for sorting capacity types in views and forms
+     * @return $this
+     */
+    public function setDisplayOrder($display_order)
+    {
+        $this->container['display_order'] = $display_order;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -384,6 +412,7 @@ class CapacityTypeModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -395,6 +424,7 @@ class CapacityTypeModel implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -409,6 +439,7 @@ class CapacityTypeModel implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
